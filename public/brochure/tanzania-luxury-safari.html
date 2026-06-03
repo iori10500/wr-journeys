@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>坦桑尼亚野奢之旅 · 酒店介绍手册</title>
+<style>
+@page { size: A4; margin: 0; }
+
+body {
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin: 0; color: #2d2d2d; background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 210mm; height: 297mm;
+  background: linear-gradient(160deg, #0a0f1e 0%, #111d3a 30%, #0d2247 60%, #0a1628 100%);
+  color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; position: relative; overflow: hidden;
+  page-break-after: always;
+}
+.cover::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(212,168,83,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(212,168,83,0.06) 0%, transparent 60%);
+}
+.cover .brand { font-size: 11px; letter-spacing: 5px; opacity: 0.45; margin-bottom: 60px; position: relative; z-index: 1; }
+.cover .route { font-size: 13px; letter-spacing: 3px; opacity: 0.5; margin-bottom: 30px; position: relative; z-index: 1; }
+.cover h1 { font-size: 44px; font-weight: 300; letter-spacing: 6px; margin: 0 0 16px 0; position: relative; z-index: 1; line-height: 1.2; }
+.cover .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 4px; opacity: 0.7; position: relative; z-index: 1; }
+.cover .accent { width: 80px; height: 2px; background: #d4a853; margin: 32px auto; position: relative; z-index: 1; }
+.cover .meta { position: relative; z-index: 1; font-size: 13px; opacity: 0.55; line-height: 2.2; letter-spacing: 1px; }
+.cover .hotels { position: relative; z-index: 1; font-size: 12px; opacity: 0.5; margin-top: 36px; line-height: 2; letter-spacing: 1px; }
+
+/* ===== PAGE ===== */
+.page {
+  width: 210mm; min-height: 297mm;
+  padding: 22mm 18mm;
+  box-sizing: border-box;
+  page-break-after: always;
+  position: relative;
+}
+.page:last-child { page-break-after: avoid; }
+
+/* ===== SECTION HEADERS ===== */
+h2 {
+  font-size: 26px; font-weight: 300; letter-spacing: 3px;
+  margin: 0 0 8px 0; text-align: center;
+}
+h2 .num { font-size: 12px; letter-spacing: 2px; opacity: 0.5; display: block; margin-bottom: 6px; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; margin: 14px auto 0; }
+
+/* — Chem Chem theme — */
+.page-chemchem h2 { color: #1a3a2a; }
+.page-chemchem h2::after { background: #d4a853; }
+.page-chemchem .accent-color { color: #d4a853; }
+.page-chemchem .stat-num { color: #1a3a2a; }
+.page-chemchem .card-icon { background: #1a3a2a; color: #d4a853; }
+.page-chemchem .quote-block { background: #1a3a2a; }
+.page-chemchem .itinerary-badge { border-left-color: #d4a853; }
+.page-chemchem .itinerary-badge .dates { color: #d4a853; }
+
+/* — Sabora theme — */
+.page-sabora h2 { color: #5a3a1a; }
+.page-sabora h2::after { background: #c4a35a; }
+.page-sabora .accent-color { color: #c4a35a; }
+.page-sabora .stat-num { color: #5a3a1a; }
+.page-sabora .card-icon { background: #5a3a1a; color: #c4a35a; }
+.page-sabora .quote-block { background: #5a3a1a; }
+.page-sabora .itinerary-badge { border-left-color: #c4a35a; }
+.page-sabora .itinerary-badge .dates { color: #c4a35a; }
+
+/* — Sasakwa theme — */
+.page-sasakwa h2 { color: #2c3e6b; }
+.page-sasakwa h2::after { background: #b8945c; }
+.page-sasakwa .accent-color { color: #b8945c; }
+.page-sasakwa .stat-num { color: #2c3e6b; }
+.page-sasakwa .card-icon { background: #2c3e6b; color: #b8945c; }
+.page-sasakwa .quote-block { background: #2c3e6b; }
+.page-sasakwa .itinerary-badge { border-left-color: #b8945c; }
+.page-sasakwa .itinerary-badge .dates { color: #b8945c; }
+
+/* ===== OVERVIEW TABLE ===== */
+.overview-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 12px; }
+.overview-table th { background: #0f3460; color: #fff; padding: 11px 14px; text-align: left; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+.overview-table td { padding: 11px 14px; border-bottom: 1px solid #e8e8e8; }
+.overview-table tr:nth-child(even) td { background: #fafaf9; }
+.overview-table .highlight-col { font-weight: 600; color: #0f3460; }
+
+/* ===== HERO IMAGE ===== */
+.hero-img { width: 100%; border-radius: 3px; margin: 20px 0; max-height: 280px; object-fit: cover; }
+
+/* ===== ITINERARY BADGE ===== */
+.itinerary-badge { background: #fafaf9; border-left: 4px solid; padding: 14px 18px; margin: 18px 0; border-radius: 0 3px 3px 0; }
+.itinerary-badge .dates { font-size: 12px; font-weight: 600; letter-spacing: 1px; margin-bottom: 3px; }
+.itinerary-badge .info { font-size: 12px; color: #777; }
+
+/* ===== INTRO TEXT ===== */
+.intro { font-size: 13px; line-height: 1.9; color: #666; text-align: center; max-width: 620px; margin: 14px auto 0; }
+
+/* ===== STATS ===== */
+.stats-row { display: flex; justify-content: center; gap: 50px; margin: 28px 0; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 30px; font-weight: 300; letter-spacing: 1px; }
+.stat-item .label { font-size: 10px; color: #aaa; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
+
+/* ===== IMAGE GRID ===== */
+.img-row { display: flex; gap: 14px; margin: 18px 0; }
+.img-row img { width: 50%; border-radius: 3px; object-fit: cover; aspect-ratio: 4/3; }
+.img-full { width: 100%; border-radius: 3px; margin: 18px 0; }
+
+/* ===== FEATURE CARDS ===== */
+.card-grid { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0; }
+.card { flex: 0 0 calc(50% - 7px); background: #fafaf9; border-radius: 3px; padding: 18px 20px; box-sizing: border-box; }
+.card h4 { font-size: 13px; margin: 0 0 5px 0; letter-spacing: 1px; }
+.card p { font-size: 11px; color: #999; line-height: 1.6; margin: 0; }
+
+/* ===== ACTIVITIES ===== */
+.activity { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid #eee; align-items: flex-start; }
+.activity .icon { flex: 0 0 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.activity h4 { font-size: 13px; margin: 0 0 3px 0; }
+.activity p { font-size: 11px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== QUOTE ===== */
+.quote-block { color: #fff; padding: 36px 48px; border-radius: 3px; text-align: center; margin: 24px 0; }
+.quote-block p { font-size: 16px; font-weight: 300; line-height: 1.8; letter-spacing: 1px; margin: 0; }
+.quote-block .author { font-size: 11px; opacity: 0.55; margin-top: 12px; letter-spacing: 2px; }
+
+/* ===== HIGHLIGHTS GRID (overview page) ===== */
+.hl-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+.hl-item { flex: 0 0 calc(33.33% - 8px); background: #fafaf9; padding: 16px; border-radius: 3px; border-left: 3px solid #d4a853; box-sizing: border-box; }
+.hl-item h4 { font-size: 12px; color: #0f3460; margin: 0 0 4px 0; }
+.hl-item p { font-size: 10px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; margin: 24px 0; padding-left: 24px; border-left: 2px solid #e8e8e8; }
+.timeline-item { position: relative; margin-bottom: 20px; padding-left: 20px; }
+.timeline-item::before { content: ''; position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #d4a853; }
+.timeline-item .tl-date { font-size: 11px; font-weight: 600; letter-spacing: 1px; margin-bottom: 2px; }
+.timeline-item .tl-title { font-size: 14px; font-weight: 500; color: #0f3460; }
+.timeline-item .tl-desc { font-size: 11px; color: #999; margin-top: 2px; line-height: 1.5; }
+
+/* ===== FOOTER NOTE ===== */
+.footer-note { font-size: 9px; color: #ccc; text-align: center; margin-top: 32px; padding-top: 14px; border-top: 1px solid #eee; line-height: 1.8; }
+
+/* ===== OVERVIEW PAGE ===== */
+.page-overview h2 { color: #0f3460; }
+.page-overview h2::after { background: #d4a853; }
+
+/* ===== MAP PLACEHOLDER ===== */
+.map-box { background: #f5f4f0; border-radius: 3px; padding: 40px; text-align: center; margin: 20px 0; }
+.map-box .route-line { font-size: 14px; letter-spacing: 2px; color: #0f3460; line-height: 2.5; }
+
+/* ===== SUMMARY PAGE ===== */
+.page-summary { background: #0f3460; color: #fff; }
+.page-summary h2 { color: #fff; }
+.page-summary h2::after { background: #d4a853; }
+.page-summary .journey-text { font-size: 15px; font-weight: 300; line-height: 2.2; letter-spacing: 1px; text-align: center; max-width: 520px; margin: 40px auto; }
+.page-summary .footer-note { color: rgba(255,255,255,0.4); border-top-color: rgba(255,255,255,0.15); }
+
+@media screen and (max-width: 640px) {
+  .cover, .page { width: 100%; min-height: auto; height: auto; padding: 32px 20px; }
+  .cover { padding: 56px 20px; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 28px; letter-spacing: 3px; }
+  .cover .subtitle { font-size: 14px; letter-spacing: 2px; }
+  .cover .brand { font-size: 10px; letter-spacing: 3px; margin-bottom: 32px; }
+  .cover .route { font-size: 11px; margin-bottom: 18px; }
+  .cover .meta { font-size: 11px; }
+  .cover .hotels { font-size: 10px; margin-top: 20px; }
+  .cover .accent { margin: 20px auto; }
+  h2 { font-size: 20px; letter-spacing: 2px; }
+  h2 .num { font-size: 11px; }
+  .intro { font-size: 12px; padding: 0 8px; }
+  .overview-table { font-size: 10px; }
+  .overview-table th, .overview-table td { padding: 6px 8px; }
+  .stats-row { gap: 24px; }
+  .stat-item .num { font-size: 24px; }
+  .img-row { flex-direction: column; gap: 10px; }
+  .img-row img { width: 100%; }
+  .card-grid { flex-direction: column; }
+  .card { flex: 1 1 auto; }
+  .hl-grid { flex-direction: column; }
+  .hl-item { flex: 1 1 auto; }
+  .activity { flex-direction: column; }
+  .quote-block { padding: 24px 20px; }
+  .quote-block p { font-size: 14px; }
+  .timeline { padding-left: 16px; }
+  .timeline-item { padding-left: 12px; }
+  .page-summary .journey-text { font-size: 13px; margin: 24px auto; }
+  .overview-table { display: block; overflow-x: auto; }
+  .hero-img { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div class="brand">WILDROAD TRAVEL · 野路逸行</div>
+  <div class="route">TARANGIRE → SERENGETI</div>
+  <h1>坦桑尼亚<br>野奢之旅</h1>
+  <div class="subtitle">TANZANIA LUXURY SAFARI</div>
+  <div class="accent"></div>
+  <div class="meta">
+    2026年6月13日 – 20日 · 8天7晚<br>
+    2人同行
+  </div>
+  <div class="hotels">
+    Little Chem Chem &nbsp;→&nbsp; Singita Sabora &nbsp;→&nbsp; Singita Sasakwa
+  </div>
+</div>
+
+<!-- ═══════════ OVERVIEW ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">01</span>行程总览</h2>
+
+  <table class="overview-table">
+    <tr><th>日期</th><th>住宿</th><th>位置</th><th>房型</th><th>晚数</th></tr>
+    <tr>
+      <td class="highlight-col">6月13日–15日</td>
+      <td>Little Chem Chem</td>
+      <td>Burunge WMA · Tarangire</td>
+      <td>Vintage Tent</td>
+      <td class="highlight-col">2晚</td>
+    </tr>
+    <tr>
+      <td class="highlight-col">6月15日–18日</td>
+      <td>Singita Sabora Tented Camp</td>
+      <td>Grumeti Reserve · Serengeti</td>
+      <td>One-Bedroom Tent</td>
+      <td class="highlight-col">3晚</td>
+    </tr>
+    <tr>
+      <td class="highlight-col">6月18日–20日</td>
+      <td>Singita Sasakwa Lodge</td>
+      <td>Grumeti Reserve · Serengeti</td>
+      <td>One-Bedroom Cottage</td>
+      <td class="highlight-col">2晚</td>
+    </tr>
+  </table>
+
+  <p style="font-size:13px;color:#0f3460;text-align:center;margin:18px 0;">
+    <strong>总费用：USD 40,007（2人合住，人均 USD 20,003.5）</strong><br>
+    <span style="font-size:10px;color:#bbb;">含 Little Chem Chem &amp; Singita 营地 15% 特别折扣</span>
+  </p>
+
+  <div class="map-box">
+    <div class="route-line">
+      ✈ 阿鲁沙 → 🏕️ Little Chem Chem（Tarangire）<br>
+      ↓ 轻型飞机接驳<br>
+      🏕️ Singita Sabora（Serengeti草原）<br>
+      ↓ 20分钟车程<br>
+      🏰 Singita Sasakwa（Serengeti山巅）
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:20px;">
+    <p style="font-size:12px;color:#0f3460;letter-spacing:2px;font-weight:500;">
+      从帐篷到庄园 · 从草原到山巅 · 层层升级
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ LITTLE CHEM CHEM ═══════════ -->
+<div class="page page-chemchem">
+  <h2><span class="num">02</span>Little Chem Chem</h2>
+  <p class="intro">
+    "Slow Safari" 慢野奢发源地。坐落于 Burunge 野生动物管理区 Tarangire 一侧，
+    以巨大的 Tusker 长牙象闻名。55,000英亩私人保护区，仅6顶复古帐篷，极致私密。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">6月13日 – 15日 · 2晚 · Vintage Tent</div>
+    <div class="info">全包式 · 含每日Game Drive、夜间Safari、所有餐饮及酒水</div>
+  </div>
+
+  <img class="hero-img" src="/images/tanzania/chemchem_p1_img0.png" alt="Little Chem Chem">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">6</div><div class="label">复古帐篷</div></div>
+    <div class="stat-item"><div class="num stat-num">55,000</div><div class="label">英亩保护区</div></div>
+    <div class="stat-item"><div class="num stat-num">1,200m</div><div class="label">海拔</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>复古帆布帐篷</h4>
+      <p>每顶约45㎡，独立卫浴+户外淋浴+私人露台，1920年代殖民风格内饰，黄铜浴缸与古董写字台。</p>
+    </div>
+    <div class="card">
+      <h4>私人管家</h4>
+      <p>每顶帐篷配备专属管家，从清晨咖啡到夜床服务，全程贴心照料。</p>
+    </div>
+    <div class="card">
+      <h4>开放式主帐区</h4>
+      <p>图书馆、酒吧和用餐区，俯瞰Sangalwe平原，日落时分是最佳鸡尾酒时段。</p>
+    </div>
+    <div class="card">
+      <h4>无围栏设计</h4>
+      <p>营地完全开放，野生动物自由穿行。夜间马赛护卫陪同，确保安全的同时保留荒野沉浸感。</p>
+    </div>
+  </div>
+</div>
+
+<div class="page page-chemchem">
+  <h2 style="font-size:22px;">特色体验</h2>
+
+  <div class="activity">
+    <div class="icon card-icon">🌙</div>
+    <div>
+      <h4>夜间Safari <span class="accent-color">— 坦桑尼亚独家</span></h4>
+      <p>仅 Little &amp; Forest Chem Chem 提供。日落之后，红外探照灯追踪豹、土狼、薮猫、夜鹰等夜行动物——国家公园内完全不可能的体验。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🥾</div>
+    <div>
+      <h4>徒步追踪</h4>
+      <p>持枪向导+马赛追踪者陪同，步行探索丛林。解读足迹、粪便、气味——将Safari从"看"升华为"读"。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🍸</div>
+    <div>
+      <h4>Sangalwe 平原日落鸡尾酒</h4>
+      <p>招牌体验。在Sangalwe高地上，手持G&amp;T，目送夕阳沉入东非大裂谷的壮美地平线。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏘️</div>
+    <div>
+      <h4>马赛村落探访</h4>
+      <p>走进邻近的马赛村落，了解游牧传统、珠饰工艺和与野生动物共存的智慧。Chem Chem协会直接支持这些村落的教育和医疗。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🐘</div>
+    <div>
+      <h4>Tusker 大象追踪</h4>
+      <p>Tarangire地区以巨大长牙象闻名。在私人保护区内，近距离观察这些温和巨人，不被其他游客打扰。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🧘</div>
+    <div>
+      <h4>日出瑜伽 &amp; 丛林早餐</h4>
+      <p>清晨金合欢树下瑜伽冥想，随后在丛林深处享用现做热早餐——"Slow Safari"的完美早晨。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"每一次入住，都是对非洲荒野未来的直接投资。"</p>
+    <div class="author">— CHEM CHEM ASSOCIATION</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/tanzania/chemchem_p4_img0.png" alt="帐篷景观">
+    <img src="/images/tanzania/chemchem_p5_img0.png" alt="Sangalwe平原日落">
+  </div>
+</div>
+
+<!-- ═══════════ SINGITA SABORA ═══════════ -->
+<div class="page page-sabora">
+  <h2><span class="num">03</span>Singita Sabora<br>Tented Camp</h2>
+  <p class="intro">
+    塞伦盖蒂大草原腹地，与迁徙兽群视线平齐。9顶奢华帐篷套房直接安扎在草原上——
+    你与百万角马之间只有帐篷帆布。Singita 连续多年全球最佳酒店品牌，Sabora 是其皇冠上的明珠。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">6月15日 – 18日 · 3晚 · One-Bedroom Tent</div>
+    <div class="info">全包式 · 含每日Game Drive、Guest Deli、所有餐饮及premium酒水</div>
+  </div>
+
+  <img class="hero-img" src="/images/tanzania/sabora_hero_tent_exterior.jpg" alt="Singita Sabora">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">9</div><div class="label">奢华帐篷套房</div></div>
+    <div class="stat-item"><div class="num stat-num">350,000</div><div class="label">英亩私人保护区</div></div>
+    <div class="stat-item"><div class="num stat-num">1,300m</div><div class="label">海拔</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>奢华帐篷套房</h4>
+      <p>每顶约55㎡，独立卫浴（双洗手台+浴缸+室内外淋浴）、私人冥想露台、户外sala日榻、步入式衣帽间。</p>
+    </div>
+    <div class="card">
+      <h4>水源地景观</h4>
+      <p>9顶帐篷沿两处天然水源地排布，野生动物全天候前来饮水，提供不间断的"阳台Safari"。</p>
+    </div>
+    <div class="card">
+      <h4>1920年代探险风格</h4>
+      <p>复古皮箱、黄铜灯具、古董指南针、皮质地图箱、手工马赛珠饰——当代非洲设计与探险精神的融合。</p>
+    </div>
+    <div class="card">
+      <h4>Guest Deli</h4>
+      <p>住客可自由选取食材和饮品，打包野餐篮，在草原上自选地点享用私密午餐——Sabora独有体验。</p>
+    </div>
+  </div>
+
+  <img class="img-full" src="/images/tanzania/sabora_zebra_herd.jpg" alt="草原斑马群">
+</div>
+
+<div class="page page-sabora">
+  <h2 style="font-size:22px;">特色体验</h2>
+
+  <div class="activity">
+    <div class="icon card-icon">🦁</div>
+    <div>
+      <h4>私人保护区 Game Drive</h4>
+      <p>350,000英亩 Singita Grumeti 保护区独家进入权——只有Singita住客。专业向导+追踪者带你近距离接触狮子、花豹、猎豹、大象和水牛。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🎈</div>
+    <div>
+      <h4>热气球Safari <span class="accent-color">— 一生一次</span></h4>
+      <p>日出时分升空，从云端俯瞰塞伦盖蒂无垠草原和迁徙兽群。落地后在丛林深处享用香槟早餐（额外费用）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏕️</div>
+    <div>
+      <h4>Guest Deli 野餐</h4>
+      <p>从自助熟食柜挑选食材和饮品，打包野餐篮，在草原上选一处最美的角落，享受二人私密午餐——Sabora独有。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌅</div>
+    <div>
+      <h4>私人冥想露台 &amp; Sundowner</h4>
+      <p>每顶帐篷的私人露台是观赏草原日落的最佳席位。经典Sundowner——草原高地上手持鸡尾酒，目送夕阳沉入地平线。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🔭</div>
+    <div>
+      <h4>星空观测</h4>
+      <p>远离光污染的塞伦盖蒂夜空，南十字星与银河的完美展示。营地提供天文望远镜，向导为你讲解星座传说。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏛️</div>
+    <div>
+      <h4>Grumeti Fund 保护项目参访</h4>
+      <p>走进反盗猎指挥中心，了解无人机巡逻、K9警犬队和社区发展项目——你的住宿如何直接改变这片土地。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"在最具标志性的非洲荒野中，<br>创造改变人生的体验，同时为后代保护这些土地。"</p>
+    <div class="author">— SINGITA 100-YEAR PURPOSE</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/tanzania/sabora_suite_interior.jpg" alt="帐篷套房内部">
+    <img src="/images/tanzania/sabora_p5_img0.jpeg" alt="塞伦盖蒂草原">
+  </div>
+</div>
+
+<!-- ═══════════ SINGITA SASAKWA ═══════════ -->
+<div class="page page-sasakwa">
+  <h2><span class="num">04</span>Singita Sasakwa<br>Lodge</h2>
+  <p class="intro">
+    爱德华时代庄园风格，傲踞 Sasakwa 山丘之巅。10座私人Cottage，每座配无边泳池。
+    从环廊俯瞰塞伦盖蒂无垠平原——银烛台与古董家具，将殖民时代的优雅与非洲荒野融为一体。
+    本次旅程的压轴升华。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">6月18日 – 20日 · 2晚 · One-Bedroom Cottage</div>
+    <div class="info">全包式 · 含每日Game Drive、网球/健身、所有餐饮及premium酒水</div>
+  </div>
+
+  <img class="hero-img" src="/images/tanzania/sasakwa_hero_lodge_exterior.jpg" alt="Singita Sasakwa Lodge">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">10</div><div class="label">私人庄园Cottage</div></div>
+    <div class="stat-item"><div class="num stat-num">10</div><div class="label">座无边泳池</div></div>
+    <div class="stat-item"><div class="num stat-num">1,500m</div><div class="label">海拔</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>私人庄园Cottage</h4>
+      <p>每座约120㎡，独立起居室+卧室+豪华浴室（双洗手台+独立浴缸+步入式淋浴）+私人环廊+无边泳池+户外日榻。</p>
+    </div>
+    <div class="card">
+      <h4>私人无边泳池</h4>
+      <p>每座Cottage配独立无边泳池，池水与塞伦盖蒂地平线相接。正午清凉，夜晚星空倒影——Sasakwa最标志性体验。</p>
+    </div>
+    <div class="card">
+      <h4>爱德华时代庄园</h4>
+      <p>主楼以英式庄园为蓝本——银烛台、古董地球仪、皮质沙发、水晶吊灯和壁炉。殖民优雅与非洲粗犷的交融。</p>
+    </div>
+    <div class="card">
+      <h4>全景环廊</h4>
+      <p>山巅位置提供360度塞伦盖蒂全景。从日出到日落，光影在平原上流动，野生动物在脚下大地穿行。</p>
+    </div>
+  </div>
+
+  <img class="img-full" src="/images/tanzania/sasakwa_elephant_herd.jpg" alt="Sasakwa象群">
+</div>
+
+<div class="page page-sasakwa">
+  <h2 style="font-size:22px;">特色体验</h2>
+
+  <div class="activity">
+    <div class="icon card-icon">🏊</div>
+    <div>
+      <h4>私人无边泳池</h4>
+      <p>每座Cottage的无边泳池是Sasakwa最标志性的体验。正午跳入池中，池水与地平线融为一体，脚下是塞伦盖蒂无垠平原。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🎾</div>
+    <div>
+      <h4>网球场 &amp; 健身中心</h4>
+      <p>荒野中罕有的全设施体验——标准网球场、设备齐全的健身中心、槌球草坪。Sasakwa重新定义了"野奢"的上限。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌟</div>
+    <div>
+      <h4>星空庭院晚餐</h4>
+      <p>银烛台、水晶杯、白色桌布与银河交相辉映。五道式品鉴菜单搭配Singita酒窖典藏——非洲荒野中最优雅的晚餐。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🦅</div>
+    <div>
+      <h4>山丘之巅 Game Drive</h4>
+      <p>从Sasakwa山丘出发，深入Grumeti保护区的不同生态区——从开阔平原到河岸林地，追寻狮子、花豹、猎豹和犀牛。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏘️</div>
+    <div>
+      <h4>社区参访 &amp; 保护讲座</h4>
+      <p>走访Grumeti Fund支持的周边社区，了解旅游如何创造就业、资助教育和保护野生动物。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🍷</div>
+    <div>
+      <h4>酒窖品鉴 &amp; 庄园下午茶</h4>
+      <p>庄园主楼酒窖中，Sommelier带领品鉴南非顶级年份。或在环廊上享用英式下午茶——司康、凝脂奶油和坦桑尼亚红茶。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"Sasakwa的存在本身就是一种保护宣言——<br>以最少的房间，创造最大的保护价值。"</p>
+    <div class="author">— SINGITA GRUMETI FUND</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/tanzania/sasakwa_bedroom.jpg" alt="Cottage卧室">
+    <img src="/images/tanzania/sasakwa_p7_img0.jpeg" alt="Sasakwa全景">
+  </div>
+</div>
+
+<!-- ═══════════ HIGHLIGHTS ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">05</span>行程亮点</h2>
+
+  <div class="hl-grid">
+    <div class="hl-item">
+      <h4>Slow Safari 哲学</h4>
+      <p>从Chem Chem到Singita，三家营地均强调"慢下来"——不赶景点，让野生动物走向你。</p>
+    </div>
+    <div class="hl-item">
+      <h4>私人保护区</h4>
+      <p>Little Chem Chem 55,000英亩 + Singita Grumeti 350,000英亩 = 独家野生动物观赏，无游客拥挤。</p>
+    </div>
+    <div class="hl-item">
+      <h4>大迁徙季节</h4>
+      <p>6月中旬正值迁徙季开端，百万角马+斑马横穿塞伦盖蒂，Singita提供前排席位。</p>
+    </div>
+    <div class="hl-item">
+      <h4>On-Site 保护基金</h4>
+      <p>Chem Chem Association + Grumeti Fund — 你的住宿直接支持野生动物保护和社区发展。</p>
+    </div>
+    <div class="hl-item">
+      <h4>全包式奢华</h4>
+      <p>三餐+premium酒水+game drives+洗衣，全部包含。三家营地均提供全包式服务。</p>
+    </div>
+    <div class="hl-item">
+      <h4>三营地无缝衔接</h4>
+      <p>Tarangire → Serengeti平原 → Serengeti高地，从帐篷到庄园，层层升级。</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:20px;margin-top:32px;">餐饮与服务对比</h2>
+  <table class="overview-table" style="margin-top:14px;">
+    <tr><th></th><th>Little Chem Chem</th><th>Singita Sabora</th><th>Singita Sasakwa</th></tr>
+    <tr><td>餐饮风格</td><td>丛林野趣 · 烛光晚餐</td><td>Guest Deli · 草原野餐</td><td>银烛台庄园晚宴</td></tr>
+    <tr><td>酒水</td><td>全含（premium wines）</td><td>全含（Singita酒窖）</td><td>全含（旗舰酒窖）</td></tr>
+    <tr><td>特色餐饮</td><td>丛林早餐 · 日落鸡尾酒</td><td>自助野餐篮 · 草原Sundowner</td><td>无边泳池早午餐 · 英式下午茶</td></tr>
+    <tr><td>私人管家</td><td>✓ 每帐篷专属</td><td>✓ 每帐篷专属</td><td>✓ 每Cottage专属</td></tr>
+    <tr><td>洗衣服务</td><td>✓ 全含</td><td>✓ 全含</td><td>✓ 全含</td></tr>
+    <tr><td>WiFi</td><td>主帐区</td><td>全营地</td><td>全营地</td></tr>
+  </table>
+</div>
+
+<!-- ═══════════ SUMMARY ═══════════ -->
+<div class="page page-summary">
+  <h2><span class="num" style="color:rgba(255,255,255,0.5);">06</span>旅途终章</h2>
+
+  <div class="journey-text">
+    从 Little Chem Chem 的复古帐篷<br>
+    到 Sabora 的草原帆布<br>
+    到 Sasakwa 的山顶庄园<br>
+    <br>
+    三座营地 · 三重境界 · 层层升华<br>
+    <br>
+    <span style="font-size:13px;opacity:0.7;">
+      荒野不是用来征服的<br>
+      而是用来沉浸的
+    </span>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <div style="font-size:11px;opacity:0.4;letter-spacing:3px;margin-bottom:20px;">行程路线</div>
+    <div style="font-size:14px;font-weight:300;letter-spacing:2px;line-height:2.5;">
+      ✈ 阿鲁沙<br>
+      ↓ 2.5h车程 / 45min轻型飞机<br>
+      🏕️ Little Chem Chem · 2晚<br>
+      ↓ 1.5h轻型飞机<br>
+      🏕️ Singita Sabora · 3晚<br>
+      ↓ 20min车程<br>
+      🏰 Singita Sasakwa · 2晚<br>
+      ↓ 轻型飞机返回<br>
+      ✈ 阿鲁沙
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Wildroad Travel · 野路逸行<br>
+    坦桑尼亚野奢之旅 · 2026年6月13日–20日<br>
+    本手册价格包含15%营地特别折扣，实际价格以最终人数、日期、房态二次确认为准。<br>
+    三家营地均为全包式：三餐+酒水（含premium wines/spirits）+ game drives + 洗衣<br>
+    Little Chem Chem 额外包含：夜间Safari、徒步追踪、马赛村落探访
+  </div>
+</div>
+
+</body>
+</html>

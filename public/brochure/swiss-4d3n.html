@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>苏黎世+卢塞恩 4天3晚 - 万德旅行 WanderWay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f0f4f0;
+    color: #2d3a2d;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .cover-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(30, 60, 40, 0.55), rgba(20, 40, 30, 0.45));
+  }
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    max-width: 820px;
+  }
+  .cover-badge {
+    display: inline-block;
+    background: rgba(107, 155, 122, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    letter-spacing: 4px;
+  }
+  .cover-subtitle {
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 8px;
+    letter-spacing: 6px;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+    margin: 20px auto;
+  }
+  .cover-price {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .cover-price strong {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f0d080;
+  }
+  .cover-brand {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  /* ===== PAGE ===== */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== BRAND BAR ===== */
+  .brand-bar {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: #fff;
+    position: relative;
+  }
+  .brand-bar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6b9b7a, transparent);
+  }
+  .brand-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #3d5a3d;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+  .brand-bar p {
+    color: #6b9b7a;
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+
+  /* ===== SECTION ===== */
+  .section {
+    margin: 40px 0;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #3d5a3d;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+  }
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #6b9b7a;
+  }
+  .section-title p {
+    color: #6b9b7a;
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+  }
+
+  /* ===== HIGHLIGHTS GRID ===== */
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .highlight-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(74, 128, 88, 0.06);
+    border: 1px solid rgba(107, 155, 122, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(74, 128, 88, 0.12);
+  }
+  .highlight-card .icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .highlight-card h3 {
+    font-size: 16px;
+    color: #4a8058;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .highlight-card p {
+    font-size: 14px;
+    color: #4a5a4a;
+    line-height: 1.7;
+  }
+
+  /* ===== ITINERARY ===== */
+  .day-card {
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(74, 128, 88, 0.08);
+    border: 1px solid rgba(107, 155, 122, 0.1);
+  }
+  .day-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+  .day-body {
+    padding: 28px 32px;
+  }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .day-badge {
+    background: linear-gradient(135deg, #6b9b7a, #4a8058);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+  .day-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #3d5a3d;
+    font-weight: 600;
+  }
+  .day-details {
+    list-style: none;
+    padding: 0;
+  }
+  .day-details li {
+    padding: 6px 0;
+    font-size: 15px;
+    color: #3d4a3d;
+    border-bottom: 1px solid rgba(107, 155, 122, 0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .day-details li:last-child {
+    border-bottom: none;
+  }
+  .day-quote {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #e8f0e8;
+    border-left: 4px solid #6b9b7a;
+    border-radius: 0 10px 10px 0;
+    font-size: 14px;
+    color: #4a6a4a;
+    font-style: italic;
+  }
+
+  /* ===== HOTELS ===== */
+  .hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 10px 0;
+  }
+  .hotel-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(74, 128, 88, 0.06);
+    border: 1px solid rgba(107, 155, 122, 0.08);
+    transition: transform 0.3s ease;
+  }
+  .hotel-card:hover {
+    transform: translateY(-4px);
+  }
+  .hotel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .hotel-card-body {
+    padding: 20px;
+  }
+  .hotel-card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #3d5a3d;
+    margin-bottom: 2px;
+  }
+  .hotel-card-body .subtitle {
+    color: #6b9b7a;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .hotel-card-body p {
+    color: #4a5a4a;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .hotel-price {
+    display: inline-block;
+    background: #e8f0e8;
+    color: #4a8058;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  /* ===== PRICE TABLE ===== */
+  .price-section {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 4px 24px rgba(74, 128, 88, 0.08);
+    border: 1px solid rgba(107, 155, 122, 0.1);
+    margin: 40px 0;
+  }
+  .price-main {
+    text-align: center;
+    padding-bottom: 28px;
+    border-bottom: 1px dashed rgba(107, 155, 122, 0.2);
+    margin-bottom: 28px;
+  }
+  .price-main .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #4a8058;
+    font-weight: 700;
+  }
+  .price-main .per {
+    font-size: 16px;
+    color: #6b9b7a;
+  }
+  .price-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .price-col {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .price-col.include {
+    background: #e8f0e8;
+  }
+  .price-col.exclude {
+    background: #fff8f0;
+    border: 1px solid rgba(200,150,80,0.15);
+  }
+  .price-col h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .price-col.include h4 { color: #4a8058; }
+  .price-col.exclude h4 { color: #b8860b; }
+  .price-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .price-col li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #3d4a3d;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .price-col.include li::before {
+    content: '✅';
+    font-size: 14px;
+  }
+  .price-col.exclude li::before {
+    content: '❌';
+    font-size: 14px;
+  }
+  .car-cost {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: #f0f6f0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #4a6a4a;
+    text-align: center;
+  }
+
+  /* ===== NOTES ===== */
+  .notes {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    margin: 40px 0;
+    box-shadow: 0 4px 24px rgba(74, 128, 88, 0.08);
+    border: 1px solid rgba(107, 155, 122, 0.1);
+  }
+  .notes h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #3d5a3d;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .notes ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .notes li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #4a5a4a;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid rgba(107, 155, 122, 0.06);
+  }
+  .notes li:last-child { border-bottom: none; }
+  .notes li::before {
+    content: '📌';
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #2d3a2d;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+  }
+  .footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+  }
+  .footer p {
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  .footer .highlight {
+    color: #f0d080;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .day-body { padding: 20px; }
+    .price-cols { grid-template-columns: 1fr; }
+    .price-section { padding: 24px; }
+    .cover { min-height: 500px; }
+    .hotel-grid { grid-template-columns: 1fr; }
+    .day-image { height: 200px; }
+  }
+  @media (max-width: 480px) {
+    .page { padding: 0 12px; }
+    .cover h1 { font-size: 28px; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <img src="/images/swiss/zurich_lake.jpg" alt="苏黎世湖">
+  <div class="cover-overlay"></div>
+  <div class="cover-content">
+    <div class="cover-badge">Switzerland · 2026</div>
+    <h1>苏黎世 + 卢塞恩</h1>
+    <div class="cover-subtitle">4天3晚 · 湖光山色与百年传奇</div>
+    <div class="cover-divider"></div>
+    <div class="cover-price">
+      尊享价 <strong>¥23,800</strong> / 人起
+    </div>
+  </div>
+  <div class="cover-brand">万德旅行 WanderWay</div>
+</div>
+
+<!-- ===== BRAND BAR ===== -->
+<div class="brand-bar">
+  <h2>万德旅行 WanderWay</h2>
+  <p>瑞士经典双城 · 奢华深度之旅</p>
+</div>
+
+<div class="page">
+
+  <!-- ===== HIGHLIGHTS ===== -->
+  <div class="section">
+    <div class="section-title fade-in">
+      <h2>行程亮点</h2>
+      <p>高光时刻一览</p>
+    </div>
+    <div class="highlights">
+      <div class="highlight-card fade-in">
+        <div class="icon">🏨</div>
+        <h3>奢华住宿</h3>
+        <p>多尔德大酒店 + 布尔根施托克宫殿酒店<br>+ 博安湖畔酒店</p>
+      </div>
+      <div class="highlight-card fade-in">
+        <div class="icon">🍽️</div>
+        <h3>特色体验</h3>
+        <p>传统奶酪火锅制作品尝</p>
+      </div>
+      <div class="highlight-card fade-in">
+        <div class="icon">🚂</div>
+        <h3>金色环游</h3>
+        <p>琉森湖游船 + 世界最陡齿轨火车<br>+ 御龙高空缆车</p>
+      </div>
+      <div class="highlight-card fade-in">
+        <div class="icon">🚐</div>
+        <h3>全程用车</h3>
+        <p>奔驰商务车 · 专属司导服务</p>
+      </div>
+      <div class="highlight-card fade-in">
+        <div class="icon">🎭</div>
+        <h3>人文足迹</h3>
+        <p>达达主义发源地 · 列宁故居<br>百年传奇咖啡馆</p>
+      </div>
+      <div class="highlight-card fade-in">
+        <div class="icon">🏊</div>
+        <h3>绝美体验</h3>
+        <p>赫本结婚同款酒店<br>阿尔卑斯无边泳池</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ITINERARY ===== -->
+  <div class="section">
+    <div class="section-title fade-in">
+      <h2>每日行程</h2>
+      <p>Day by Day 精致安排</p>
+    </div>
+
+    <!-- D1 -->
+    <div class="day-card fade-in">
+      <img class="day-image" src="/images/swiss/zurich_oldtown.jpg" alt="苏黎世老城">
+      <div class="day-body">
+        <div class="day-header">
+          <span class="day-badge">D1</span>
+          <h3>苏黎世 — 老城文化与艺术</h3>
+        </div>
+        <ul class="day-details">
+          <li><span>🏨</span> 瑞士苏黎世多尔德大酒店 The Dolder Grand（高级升套房，€870/间.晚）</li>
+          <li><span>🏛</span> 卡佩尔廊桥 · 八角水塔</li>
+          <li><span>🦁</span> 狮子纪念碑</li>
+          <li><span>📸</span> 网红打卡：火车总站-盖亚母亲树、守护天使nana、全球最漂亮警察局门厅-贾科梅蒂门厅</li>
+          <li><span>⛪</span> Grossmünster 苏黎世双塔教堂（可登塔看全城）</li>
+          <li><span>🎨</span> Cabaret Voltaire（达达主义发源地）</li>
+          <li><span>📖</span> Spiegelgasse 列宁故居</li>
+          <li><span>🧀</span> 传统奶酪火锅制作品尝</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day-card fade-in">
+      <img class="day-image" src="/images/swiss/lucerne_lake.jpg" alt="琉森湖">
+      <div class="day-body">
+        <div class="day-header">
+          <span class="day-badge">D2</span>
+          <h3>苏黎世 → 卢塞恩 — 琉森湖仙境</h3>
+        </div>
+        <ul class="day-details">
+          <li><span>🏨</span> 布尔根施托克度假村 · 宫殿酒店 Bürgenstock Hotels & Resort - Palace（€1,220/间.晚）</li>
+          <li><span>🚢</span> 琉森湖游船 + 仙境缆车（凭Bürgenstock预订单可享游船+上山小火车）</li>
+          <li><span>💍</span> 入住赫本结婚同款酒店，享受无边泳池</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day-card fade-in">
+      <img class="day-image" src="/images/swiss/pilatus.jpg" alt="皮拉图斯山">
+      <div class="day-body">
+        <div class="day-header">
+          <span class="day-badge">D3</span>
+          <h3>卢塞恩 → 苏黎世 — 金色环游皮拉图斯山</h3>
+        </div>
+        <ul class="day-details">
+          <li><span>🏨</span> 苏黎世博安湖畔酒店 Hotel Baur au Lac（€1,256/间.晚）</li>
+          <li><span>🚢</span> 游船：Luzern Bahnhofquai → Alpnachstad</li>
+          <li><span>🚂</span> 世界上最陡齿轨火车（坡度48%）→ Pilatus Kulm</li>
+          <li><span>🚡</span> 御龙高空缆车 Dragon Ride 全景玻璃舱 → Frakmuntegg</li>
+          <li><span>🪂</span> 小缆车 → Kriens</li>
+          <li><span>🚌</span> 巴士返回卢塞恩</li>
+          <li><span>🏆</span> 金色环游完整体验</li>
+        </ul>
+        <div class="day-quote">金色环游是卢塞恩最经典的全景观光线，游船 + 齿轨火车 + 缆车一站体验阿尔卑斯壮丽景色</div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day-card fade-in">
+      <img class="day-image" src="/images/swiss/zurich_bahnhofstrasse.jpg" alt="班霍夫大街">
+      <div class="day-body">
+        <div class="day-header">
+          <span class="day-badge">D4</span>
+          <h3>苏黎世 — 购物与告别</h3>
+        </div>
+        <ul class="day-details">
+          <li><span>🛍</span> 班霍夫大街 Bahnhofstrasse 自由购物</li>
+          <li><span>☕</span> Café Bar ODEON（百年传奇咖啡馆，列宁/爱因斯坦/墨索里尼常客）</li>
+          <li><span>🛥</span> 可选：Hotel Baur au Lac私享游船午餐</li>
+          <li><span>🚐</span> 送机，结束美好旅程</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOTELS ===== -->
+  <div class="section">
+    <div class="section-title fade-in">
+      <h2>甄选酒店</h2>
+      <p>三晚极致奢享体验</p>
+    </div>
+    <div class="hotel-grid">
+      <div class="hotel-card fade-in">
+        <img src="/images/swiss/dolder_grand.jpg" alt="多尔德大酒店">
+        <div class="hotel-card-body">
+          <h3>多尔德大酒店</h3>
+          <div class="subtitle">The Dolder Grand · D1</div>
+          <p>苏黎世传奇五星酒店，高级升套房，坐拥城市与湖景</p>
+          <div class="hotel-price">€870/间.晚</div>
+        </div>
+      </div>
+      <div class="hotel-card fade-in">
+        <img src="/images/swiss/buergenstock.jpg" alt="布尔根施托克宫殿酒店">
+        <div class="hotel-card-body">
+          <h3>布尔根施托克宫殿酒店</h3>
+          <div class="subtitle">Bürgenstock Palace · D2</div>
+          <p>赫本结婚同款，琉森湖畔仙境，无边泳池俯瞰阿尔卑斯</p>
+          <div class="hotel-price">€1,220/间.晚</div>
+        </div>
+      </div>
+      <div class="hotel-card fade-in">
+        <img src="/images/swiss/baur_au_lac.jpg" alt="博安湖畔酒店">
+        <div class="hotel-card-body">
+          <h3>博安湖畔酒店</h3>
+          <div class="subtitle">Hotel Baur au Lac · D3</div>
+          <p>苏黎世湖畔百年经典，私享游船午餐可选</p>
+          <div class="hotel-price">€1,256/间.晚</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRICE ===== -->
+  <div class="price-section fade-in">
+    <div class="price-main">
+      <div class="amount">¥23,800</div>
+      <div class="per">/ 人起</div>
+    </div>
+    <div class="price-cols">
+      <div class="price-col include">
+        <h4>费用包含</h4>
+        <ul>
+          <li>全程3晚五星级酒店住宿（含早）</li>
+          <li>奔驰商务车 D1-D4用车</li>
+          <li>金色环游皮拉图斯山全套体验（游船+齿轨火车+缆车+巴士）</li>
+          <li>琉森湖仙境缆车</li>
+          <li>传统奶酪火锅制作品尝体验</li>
+          <li>专属中文司导服务</li>
+        </ul>
+      </div>
+      <div class="price-col exclude">
+        <h4>费用不含</h4>
+        <ul>
+          <li>国际往返机票</li>
+          <li>签证费用</li>
+          <li>个人消费及小费</li>
+          <li>未提及的餐饮</li>
+          <li>旅行保险</li>
+        </ul>
+      </div>
+    </div>
+    <div class="car-cost">🚐 用车安排：奔驰商务车 D1-D3各€540/天，D4送机€130，合计€1,750</div>
+  </div>
+
+  <!-- ===== NOTES ===== -->
+  <div class="notes fade-in">
+    <h3>温馨提示</h3>
+    <ul>
+      <li>本行程为定制建议方案，可根据您的需求灵活调整</li>
+      <li>酒店价格随季节波动，请以实际预订确认为准</li>
+      <li>金色环游受天气影响，如遇恶劣天气可能调整顺序</li>
+      <li>建议提前办理瑞士申根签证，预留至少2周时间</li>
+      <li>如需升级航班舱位或延长行程，请咨询您的专属旅行顾问</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <h3>万德旅行 WanderWay</h3>
+  <p>咨询热线：<span class="highlight">400-xxx-xxxx</span> ｜ 微信：<span class="highlight">wanderway_swiss</span></p>
+  <p>邮箱：info@wanderway.ch ｜ 官网：wanderway.ch</p>
+  <p style="margin-top:16px;opacity:0.5;font-size:12px;">© 2026 Wildroad Group. All rights reserved.</p>
+</div>
+
+<script>
+// Fade-in animation on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

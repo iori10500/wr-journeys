@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>伦敦巴黎双城记 · 9天奢华之旅</title>
+<style>
+@page { size: A4; margin: 0; }
+body {
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin: 0; color: #2d2d2d; background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 210mm; height: 297mm;
+  background: linear-gradient(160deg, #0c1929 0%, #142b44 30%, #1a3858 60%, #0c1929 100%);
+  color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; position: relative; overflow: hidden;
+  page-break-after: always;
+}
+.cover::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(197,160,90,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(197,160,90,0.06) 0%, transparent 60%);
+}
+.cover .brand { font-size: 11px; letter-spacing: 5px; opacity: 0.45; margin-bottom: 60px; position: relative; z-index: 1; }
+.cover .route { font-size: 13px; letter-spacing: 3px; opacity: 0.5; margin-bottom: 30px; position: relative; z-index: 1; }
+.cover h1 { font-size: 44px; font-weight: 300; letter-spacing: 6px; margin: 0 0 16px 0; position: relative; z-index: 1; line-height: 1.2; }
+.cover .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 4px; opacity: 0.7; position: relative; z-index: 1; }
+.cover .accent { width: 80px; height: 2px; background: #c5a05a; margin: 32px auto; position: relative; z-index: 1; }
+.cover .meta { position: relative; z-index: 1; font-size: 13px; opacity: 0.55; line-height: 2.2; letter-spacing: 1px; }
+.cover .hotels { position: relative; z-index: 1; font-size: 12px; opacity: 0.5; margin-top: 36px; line-height: 2; letter-spacing: 1px; }
+
+/* ===== PAGE ===== */
+.page {
+  width: 210mm; min-height: 297mm;
+  padding: 22mm 18mm;
+  box-sizing: border-box;
+  page-break-after: always;
+  position: relative;
+}
+.page:last-child { page-break-after: avoid; }
+
+h2 { font-size: 26px; font-weight: 300; letter-spacing: 3px; margin: 0 0 8px 0; text-align: center; color: #1a3858; }
+h2 .num { font-size: 12px; letter-spacing: 2px; opacity: 0.5; display: block; margin-bottom: 6px; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; background: #c5a05a; margin: 14px auto 0; }
+
+/* ===== OVERVIEW TABLE ===== */
+.overview-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 12px; }
+.overview-table th { background: #1a3858; color: #fff; padding: 10px 12px; text-align: left; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+.overview-table td { padding: 10px 12px; border-bottom: 1px solid #e8e8e8; }
+.overview-table tr:nth-child(even) td { background: #fafaf9; }
+
+/* ===== HERO IMAGE ===== */
+.hero-img { width: 100%; border-radius: 3px; margin: 16px 0; max-height: 260px; object-fit: cover; }
+
+/* ===== STATS ===== */
+.stats-row { display: flex; justify-content: center; gap: 50px; margin: 24px 0; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 30px; font-weight: 300; color: #1a3858; letter-spacing: 1px; }
+.stat-item .label { font-size: 10px; color: #aaa; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
+
+/* ===== DAY CARDS ===== */
+.day-card { margin: 16px 0; border-radius: 3px; overflow: hidden; border: 1px solid #eee; }
+.day-card-header { background: #1a3858; color: #fff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; }
+.day-card-header .day-label { font-size: 14px; font-weight: 500; letter-spacing: 1px; }
+.day-card-header .day-theme { font-size: 11px; opacity: 0.7; letter-spacing: 1px; }
+.day-card-body { padding: 14px 18px; background: #fff; }
+.day-card-body table { width: 100%; border-collapse: collapse; }
+.day-card-body td { padding: 6px 8px; font-size: 11px; border-bottom: 1px solid #f5f5f5; vertical-align: top; line-height: 1.5; }
+.day-card-body td:first-child { color: #c5a05a; font-weight: 600; white-space: nowrap; width: 90px; font-size: 10px; letter-spacing: 0.5px; }
+.day-card-body td:last-child { color: #555; }
+
+.img-row { display: flex; gap: 14px; margin: 16px 0; }
+.img-row img { width: 50%; border-radius: 3px; object-fit: cover; aspect-ratio: 16/10; }
+
+/* ===== HOTEL CARD ===== */
+.hotel-card { display: flex; gap: 18px; margin: 16px 0; background: #fafaf9; border-radius: 3px; padding: 18px; align-items: center; }
+.hotel-card img { width: 180px; height: 120px; border-radius: 3px; object-fit: cover; }
+.hotel-card .hotel-info h4 { font-size: 15px; color: #1a3858; margin: 0 0 4px 0; letter-spacing: 1px; }
+.hotel-card .hotel-info p { font-size: 11px; color: #999; margin: 0; line-height: 1.6; }
+.hotel-card .hotel-info .stars { color: #c5a05a; font-size: 12px; letter-spacing: 2px; }
+
+/* ===== ITINERARY BADGE ===== */
+.itinerary-badge { background: #fafaf9; border-left: 4px solid #c5a05a; padding: 14px 18px; margin: 16px 0; border-radius: 0 3px 3px 0; }
+.itinerary-badge .dates { font-size: 12px; color: #c5a05a; font-weight: 600; letter-spacing: 1px; margin-bottom: 3px; }
+.itinerary-badge .info { font-size: 12px; color: #777; }
+
+/* ===== INTRO ===== */
+.intro { font-size: 13px; line-height: 1.9; color: #666; text-align: center; max-width: 620px; margin: 14px auto 0; }
+
+/* ===== QUOTE ===== */
+.quote-block { background: #1a3858; color: #fff; padding: 36px 48px; border-radius: 3px; text-align: center; margin: 20px 0; }
+.quote-block p { font-size: 16px; font-weight: 300; line-height: 1.8; letter-spacing: 1px; margin: 0; }
+.quote-block .author { font-size: 11px; opacity: 0.55; margin-top: 12px; letter-spacing: 2px; }
+
+/* ===== HIGHLIGHTS ===== */
+.hl-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+.hl-item { flex: 0 0 calc(33.33% - 8px); background: #fafaf9; padding: 16px; border-radius: 3px; border-left: 3px solid #c5a05a; box-sizing: border-box; }
+.hl-item h4 { font-size: 12px; color: #1a3858; margin: 0 0 4px 0; }
+.hl-item p { font-size: 10px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== TRANSPORT ===== */
+.transport-row { display: flex; gap: 14px; margin: 16px 0; }
+.transport-item { flex: 1; background: #fafaf9; border-radius: 3px; padding: 16px; text-align: center; }
+.transport-item .icon { font-size: 28px; margin-bottom: 8px; }
+.transport-item .t-title { font-size: 12px; font-weight: 600; color: #1a3858; letter-spacing: 1px; margin-bottom: 4px; }
+.transport-item .t-detail { font-size: 11px; color: #999; line-height: 1.5; }
+
+/* ===== MAP ===== */
+.map-box { background: #f5f4f0; border-radius: 3px; padding: 32px; text-align: center; margin: 16px 0; }
+.map-box .route-line { font-size: 13px; letter-spacing: 2px; color: #1a3858; line-height: 2.5; }
+
+/* ===== FOOTER ===== */
+.footer-note { font-size: 9px; color: #ccc; text-align: center; margin-top: 32px; padding-top: 14px; border-top: 1px solid #eee; line-height: 1.8; }
+
+/* ===== SUMMARY ===== */
+.page-summary { background: #1a3858; color: #fff; }
+.page-summary h2 { color: #fff; }
+.page-summary h2::after { background: #c5a05a; }
+.page-summary .journey-text { font-size: 15px; font-weight: 300; line-height: 2.2; letter-spacing: 1px; text-align: center; max-width: 520px; margin: 40px auto; }
+.page-summary .footer-note { color: rgba(255,255,255,0.4); border-top-color: rgba(255,255,255,0.15); }
+
+.page-overview h2 { color: #1a3858; }
+.page-overview h2::after { background: #c5a05a; }
+
+@media screen and (max-width: 640px) {
+  .cover, .page { width: 100%; min-height: auto; height: auto; padding: 32px 20px; }
+  .cover { padding: 56px 20px; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 28px; letter-spacing: 3px; }
+  .cover .subtitle { font-size: 14px; letter-spacing: 2px; }
+  .cover .brand { font-size: 10px; letter-spacing: 3px; margin-bottom: 32px; }
+  .cover .route { font-size: 11px; margin-bottom: 18px; }
+  .cover .meta { font-size: 11px; }
+  .cover .hotels { font-size: 10px; margin-top: 20px; }
+  .cover .accent { margin: 20px auto; }
+  h2 { font-size: 20px; letter-spacing: 2px; }
+  h2 .num { font-size: 11px; }
+  .intro { font-size: 12px; padding: 0 8px; }
+  .overview-table { font-size: 10px; display: block; overflow-x: auto; }
+  .overview-table th, .overview-table td { padding: 6px 8px; }
+  .stats-row { gap: 24px; }
+  .stat-item .num { font-size: 24px; }
+  .img-row { flex-direction: column; gap: 10px; }
+  .img-row img { width: 100%; }
+  .day-card-body td:first-child { width: 70px; min-width: 70px; }
+  .day-card-body td { font-size: 10px; }
+  .day-card-header .day-label { font-size: 12px; }
+  .hotel-card { flex-direction: column; }
+  .hotel-card img { width: 100%; }
+  .quote-block { padding: 24px 20px; }
+  .quote-block p { font-size: 14px; }
+  .page-summary .journey-text { font-size: 13px; margin: 24px auto; }
+  .hero-img { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div class="brand">WILDROAD TRAVEL · 野路逸行</div>
+  <div class="route">LONDON → PARIS</div>
+  <h1>伦敦巴黎<br>双城记</h1>
+  <div class="subtitle">LONDON & PARIS · 9 DAYS LUXURY</div>
+  <div class="accent"></div>
+  <div class="meta">
+    2026年6月21日 – 29日 · 9天8晚<br>
+    2人同行
+  </div>
+  <div class="hotels">
+    🏨 伦敦半岛酒店 &nbsp;+&nbsp; 🏨 巴黎文华东方酒店
+  </div>
+</div>
+
+<!-- ═══════════ OVERVIEW ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">01</span>行程总览</h2>
+
+  <div class="transport-row">
+    <div class="transport-item">
+      <div class="icon">✈️</div>
+      <div class="t-title">去程</div>
+      <div class="t-detail">CA847 · 6/21<br>北京 → 伦敦 LHR<br>约07:00到达</div>
+    </div>
+    <div class="transport-item">
+      <div class="icon">🚄</div>
+      <div class="t-title">欧洲之星</div>
+      <div class="t-detail">ES9022 · 6/25<br>伦敦 St Pancras<br>11:31 → 13:46<br>巴黎 Gare du Nord</div>
+    </div>
+    <div class="transport-item">
+      <div class="icon">✈️</div>
+      <div class="t-title">回程</div>
+      <div class="t-detail">CA934 · 6/29<br>巴黎 CDG → 北京<br>约20:20起飞</div>
+    </div>
+  </div>
+
+  <table class="overview-table">
+    <tr><th>日期</th><th>城市</th><th>酒店</th><th>亮点</th></tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/21（日）</td>
+      <td>伦敦</td>
+      <td>半岛酒店</td>
+      <td>到达日 · 白金汉宫 → 大本钟 → 唐人街 → 考文特花园</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/22（一）</td>
+      <td>伦敦</td>
+      <td>半岛酒店</td>
+      <td>伦敦眼 · Borough Market · Tower Bridge · 南岸</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/23（二）</td>
+      <td>剑桥</td>
+      <td>半岛酒店</td>
+      <td>🚗 包车一日游 · 国王学院 · 剑河撑船 · 三一学院</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/24（三）</td>
+      <td>伦敦</td>
+      <td>半岛酒店</td>
+      <td>大英博物馆 · 海德公园</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/25（四）</td>
+      <td>伦敦→巴黎</td>
+      <td>文华东方</td>
+      <td>🚄 欧洲之星 · 杜乐丽花园 · 凯旋门日落</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/26（五）</td>
+      <td>巴黎</td>
+      <td>文华东方</td>
+      <td>埃菲尔铁塔 · 卢浮宫（含周五晚场）</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/27（六）</td>
+      <td>凡尔赛</td>
+      <td>文华东方</td>
+      <td>🚗 包车 · 凡尔赛宫 · 雪夫勒谷 · Saint-Cloud</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/28（日）</td>
+      <td>巴黎</td>
+      <td>文华东方</td>
+      <td>蒙马特 · 圣母院 · 全景巴士晚餐</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#1a3858;">6/29（一）</td>
+      <td>巴黎</td>
+      <td>—</td>
+      <td>玛黑区 · 老佛爷屋顶 · 晚机回国</td>
+    </tr>
+  </table>
+
+  <div class="map-box">
+    <div class="route-line">
+      ✈ 北京 → 伦敦 LHR<br>
+      🏨 伦敦半岛酒店 · 4晚<br>
+      🚄 欧洲之星 → 巴黎<br>
+      🏨 巴黎文华东方酒店 · 4晚<br>
+      ✈ 巴黎 CDG → 北京
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ HOTELS ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">02</span>酒店介绍</h2>
+
+  <div class="hotel-card">
+    <img src="/images/london-paris/buckingham_palace.jpg" alt="伦敦半岛酒店">
+    <div class="hotel-info">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <h4>伦敦半岛酒店 · The Peninsula London</h4>
+      <p>2023年开业，伦敦最新奢华酒店地标。坐落于海德公园角，紧邻绿园与白金汉宫。客房面积伦敦最大之一，标志性半岛下午茶、屋顶餐厅与无边际泳池俯瞰伦敦天际线。</p>
+      <p style="margin-top:4px;color:#c5a05a;">6月21日–25日 · 4晚</p>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="/images/london-paris/eiffel_tower.jpg" alt="巴黎文华东方酒店">
+    <div class="hotel-info">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <h4>巴黎文华东方酒店 · Mandarin Oriental, Paris</h4>
+      <p>位于圣奥诺雷街（Rue Saint-Honoré），巴黎最时尚的第一区心脏地带。步行至卢浮宫7分钟、杜乐丽花园2分钟。内庭花园、米其林二星Sur Mesure餐厅、巴黎最大的酒店套房之一。</p>
+      <p style="margin-top:4px;color:#c5a05a;">6月25日–29日 · 4晚</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"两座城市，两家传奇酒店。<br>从海德公园到杜乐丽花园，从半岛到文华东方。"</p>
+    <div class="author">— WILDROAD TRAVEL</div>
+  </div>
+</div>
+
+<!-- ═══════════ DAY 1-2 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">03</span>伦敦 · 第1–2天</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 1 · 6/21（日）</span>
+      <span class="day-theme">到达日 · 皇家伦敦初印象</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>07:00</td><td>落地 LHR，入境取行李</td></tr>
+        <tr><td>08:30</td><td>🚕 出租车到半岛酒店，寄存行李</td></tr>
+        <tr><td>09:00–10:00</td><td>☕ 酒店早餐</td></tr>
+        <tr><td>10:00–11:30</td><td>穿过绿园 → 白金汉宫 → St James's Park → Westminster</td></tr>
+        <tr><td>11:30–12:00</td><td>大本钟 / 国会大厦（Westminster Bridge 拍全景）</td></tr>
+        <tr><td>12:00–13:30</td><td>🥟 唐人街午餐</td></tr>
+        <tr><td>13:30–16:00</td><td>考文特花园逛集市 + 街头艺人表演</td></tr>
+        <tr><td>16:00–17:00</td><td>回酒店 check-in、休整</td></tr>
+        <tr><td>18:00+</td><td>🍸 酒店晚餐 / 倒时差早休息</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 2 · 6/22（一）</span>
+      <span class="day-theme">泰晤士河南岸 · 经典天际线</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>09:30–11:00</td><td>🎡 伦敦眼（提前订票，俯瞰全景）</td></tr>
+        <tr><td>11:00–13:30</td><td>🥘 Borough Market 午餐 + 逛吃（伦敦最古老美食市场）</td></tr>
+        <tr><td>13:30–15:00</td><td>🌉 Tower Bridge + 伦敦塔（桥上玻璃步道）</td></tr>
+        <tr><td>15:00–17:00</td><td>南岸散步回程，路过 Tate Modern 美术馆</td></tr>
+        <tr><td>晚上</td><td>自由活动</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/big_ben.jpg" alt="大本钟" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/tower_bridge.jpg" alt="Tower Bridge" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 3 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">04</span>剑桥一日游 · 第3天</h2>
+
+  <div class="itinerary-badge">
+    <div class="dates">6月23日（二）· 🚗 包车往返</div>
+    <div class="info">08:00 半岛酒店出发 → 16:30 返程 → 18:00 回到伦敦 · 车程约1.5小时</div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 3 · 6/23（二）</span>
+      <span class="day-theme">剑桥 · 八百年学术荣光</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>08:00–08:15</td><td>🚗 半岛酒店出发（包车司机来接）</td></tr>
+        <tr><td>08:15–09:45</td><td>➡️ M11高速到剑桥</td></tr>
+        <tr><td>09:45–11:00</td><td>🏛️ 国王学院（King's College Chapel 必进，都铎式建筑巅峰）</td></tr>
+        <tr><td>11:00–12:15</td><td>🌿 康河畔（The Backs）漫步 + 数学桥</td></tr>
+        <tr><td>12:15–13:30</td><td>🛶 剑河撑船（Punting）—— 剑桥最经典体验</td></tr>
+        <tr><td>13:30–14:30</td><td>🍺 The Eagle 酒吧午餐（Watson & Crick 宣布 DNA 双螺旋结构之地）</td></tr>
+        <tr><td>14:30–15:45</td><td>三一学院 + 牛顿苹果树 → 圣约翰学院 + 叹息桥</td></tr>
+        <tr><td>15:45–16:30</td><td>🎁 剑桥市场逛逛</td></tr>
+        <tr><td>16:30–18:00</td><td>🚗 回伦敦</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/cambridge_kings.jpg" alt="剑桥国王学院" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/cambridge_punting.jpg" alt="剑桥撑船" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 4 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">05</span>伦敦 · 第4–5天</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 4 · 6/24（三）</span>
+      <span class="day-theme">大英博物馆 · 海德公园</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>10:00–13:00</td><td>🏛️ 大英博物馆（罗塞塔石碑 / 埃及馆 / 中国馆 / 帕特农神庙浮雕）</td></tr>
+        <tr><td>13:00–14:30</td><td>🥟 唐人街午餐</td></tr>
+        <tr><td>15:00–17:00</td><td>🌳 海德公园散步（半岛酒店紧邻公园，步行回酒店）</td></tr>
+        <tr><td>晚上</td><td>自由活动</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 5 · 6/25（四）</span>
+      <span class="day-theme">🚄 欧洲之星 → 巴黎</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>08:00–09:00</td><td>半岛酒店退房</td></tr>
+        <tr><td>09:00–09:30</td><td>🚕 到 St Pancras 国际车站</td></tr>
+        <tr><td>09:30–11:30</td><td>安检、通关、候车</td></tr>
+        <tr><td>11:31–13:46</td><td>🚄 ES9022 → 巴黎 Gare du Nord（2h15m）</td></tr>
+        <tr><td>~14:30</td><td>🚕 到巴黎文华东方酒店</td></tr>
+        <tr><td>16:00–18:00</td><td>杜乐丽花园 → 协和广场 → 香榭丽舍大街</td></tr>
+        <tr><td>18:00–19:30</td><td>🗼 凯旋门登顶看日落（360° 巴黎全景）</td></tr>
+        <tr><td>20:00</td><td>酒店附近晚餐</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/british_museum.jpg" alt="大英博物馆" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/eurostar.jpg" alt="欧洲之星" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 6 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">06</span>巴黎 · 第6天</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 6 · 6/26（五）</span>
+      <span class="day-theme">铁塔 + 卢浮宫晚场 🌙</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>09:30–10:00</td><td>🚇 Trocadéro 广场拍铁塔全景（最佳机位）</td></tr>
+        <tr><td>10:00–12:00</td><td>🗼 埃菲尔铁塔登顶（提前订票，建议 Summit 顶层）</td></tr>
+        <tr><td>12:00–13:30</td><td>铁塔附近午餐</td></tr>
+        <tr><td>14:00–17:00</td><td>🖼️ 卢浮宫（步行7分钟，看蒙娜丽莎 / 维纳斯 / 胜利女神）</td></tr>
+        <tr><td>17:00–19:00</td><td>晚餐休息</td></tr>
+        <tr><td>19:00–21:45</td><td>🌙 卢浮宫周五晚场（人少，补看没逛到的展厅）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/eiffel_tower.jpg" alt="埃菲尔铁塔" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/louvre.jpg" alt="卢浮宫" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 7 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">07</span>凡尔赛 · 第7天</h2>
+
+  <div class="itinerary-badge">
+    <div class="dates">6月27日（六）· 🚗 包车一日游</div>
+    <div class="info">08:30 文华东方出发 → 17:00 回到酒店</div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 7 · 6/27（六）</span>
+      <span class="day-theme">凡尔赛宫 + 雪夫勒勒谷 · 法国乡村</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>08:30–09:10</td><td>🚗 文华东方出发</td></tr>
+        <tr><td>09:10–09:50</td><td>到凡尔赛宫，停 Place d'Armes</td></tr>
+        <tr><td>09:50–12:00</td><td>👑 凡尔赛宫（镜厅 / 国王套房 / 战争厅，提前订票免排队）</td></tr>
+        <tr><td>12:00–13:00</td><td>🌳 凡尔赛花园 + 大小特里亚农宫 + 王后农庄</td></tr>
+        <tr><td>13:00–14:00</td><td>🍽️ 凡尔赛镇上午餐</td></tr>
+        <tr><td>14:00–14:15</td><td>🚗 凡尔赛 → 雪夫勒谷自然公园（向西15分钟）</td></tr>
+        <tr><td>14:15–16:00</td><td>🌿 Dampierre-en-Yvelines 等法国乡村小镇，路边停拍、喝咖啡</td></tr>
+        <tr><td>16:00–16:45</td><td>🚗 回程经停 Saint-Cloud 公园平台看巴黎天际线全景</td></tr>
+        <tr><td>17:00</td><td>🏨 回酒店休息</td></tr>
+        <tr><td>晚上</td><td>自由活动（推荐圣日耳曼区晚餐）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/versailles.jpg" alt="凡尔赛宫" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/versailles_garden.jpg" alt="凡尔赛花园" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 8-9 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">08</span>巴黎 · 第8–9天</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 8 · 6/28（日）</span>
+      <span class="day-theme">蒙马特 · 圣母院 · 巴士晚宴 🚌</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>09:30–12:30</td><td>🎨 蒙马特高地（圣心大教堂 + 画家广场 + 爱墙）</td></tr>
+        <tr><td>12:30–14:00</td><td>蒙马特午餐</td></tr>
+        <tr><td>15:00–16:30</td><td>⛪ 巴黎圣母院（外观/重建后可入内）+ 圣礼拜堂（彩绘玻璃震撼）</td></tr>
+        <tr><td>16:30–17:30</td><td>📚 莎士比亚书店 + 拉丁区漫步</td></tr>
+        <tr><td>19:00–22:00</td><td>🌙🚌 Bustronome 全景巴士晚餐夜游巴黎（提前1周订！）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 9 · 6/29（一）</span>
+      <span class="day-theme">最后一天 · 玛黑区 → 回家 ✈️</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>上午</td><td>玛黑区（Le Marais）逛街买手信，巴黎最潮街区</td></tr>
+        <tr><td>中午</td><td>老佛爷屋顶免费看巴黎全景</td></tr>
+        <tr><td>15:00</td><td>回酒店取行李</td></tr>
+        <tr><td>15:30–16:30</td><td>🚕 到 CDG 机场</td></tr>
+        <tr><td>~20:20</td><td>✈️ CA934 → 北京 起飞</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/london-paris/montmartre.jpg" alt="蒙马特圣心大教堂" style="aspect-ratio:16/10;">
+    <img src="/images/london-paris/notre_dame.jpg" alt="巴黎圣母院" style="aspect-ratio:16/10;">
+  </div>
+</div>
+
+<!-- ═══════════ HIGHLIGHTS ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">09</span>行程亮点</h2>
+
+  <div class="hl-grid">
+    <div class="hl-item">
+      <h4>双城双酒店</h4>
+      <p>伦敦半岛（2023新开业）+ 巴黎文华东方（圣奥诺雷街心脏），两家均为当地最新/最奢华的酒店之一。</p>
+    </div>
+    <div class="hl-item">
+      <h4>欧洲之星头等舱</h4>
+      <p>2小时15分钟穿越英吉利海峡，从伦敦心脏到巴黎心脏，比飞机更优雅的城际穿行。</p>
+    </div>
+    <div class="hl-item">
+      <h4>剑桥包车一日</h4>
+      <p>专属司机+向导，国王学院、剑河撑船、The Eagle酒吧——八百年学术荣光，一日尽览。</p>
+    </div>
+    <div class="hl-item">
+      <h4>卢浮宫周五晚场</h4>
+      <p>避开白天人潮，在相对安静的夜晚欣赏蒙娜丽莎——只有懂行的人才这么安排。</p>
+    </div>
+    <div class="hl-item">
+      <h4>凡尔赛+雪夫勒谷</h4>
+      <p>上午宫殿，下午法国乡村——Dampierre-en-Yvelines 小镇、Saint-Cloud 全景，巴黎人自己的周末路线。</p>
+    </div>
+    <div class="hl-item">
+      <h4>Bustronome 巴士晚宴</h4>
+      <p>全景玻璃巴士，五道式法餐配香槟，夜游巴黎所有地标——一次体验，终身难忘。</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:20px;margin-top:28px;">实用贴士</h2>
+  <table class="overview-table" style="margin-top:12px;">
+    <tr><th>类别</th><th>伦敦</th><th>巴黎</th></tr>
+    <tr><td>时差</td><td>GMT+1（夏令时），比北京晚7小时</td><td>CEST，比北京晚6小时</td></tr>
+    <tr><td>货币</td><td>英镑 £</td><td>欧元 €</td></tr>
+    <tr><td>交通</td><td>出租车 + 步行（景点集中）</td><td>出租车 + 地铁</td></tr>
+    <tr><td>必须预订</td><td>伦敦眼、剑桥包车</td><td>铁塔登顶、卢浮宫、凡尔赛宫、Bustronome</td></tr>
+    <tr><td>6月天气</td><td>15–22°C，偶有阵雨，带薄外套</td><td>16–25°C，阳光充足，注意防晒</td></tr>
+    <tr><td>着装</td><td>Smart casual，半岛下午茶建议正装</td><td>Chic casual，巴黎人讲究 effortless elegance</td></tr>
+  </table>
+</div>
+
+<!-- ═══════════ SUMMARY ═══════════ -->
+<div class="page page-summary">
+  <h2><span class="num" style="color:rgba(255,255,255,0.5);">10</span>旅途终章</h2>
+
+  <div class="journey-text">
+    从海德公园的晨雾到杜乐丽花园的落日<br>
+    从国王学院的尖塔到凡尔赛的镜厅<br>
+    从伦敦半岛的优雅到巴黎文华东方的精致<br>
+    <br>
+    两座城市 · 两家传奇酒店 · 九天八夜<br>
+    <br>
+    <span style="font-size:13px;opacity:0.7;">
+      伦敦教会我们克制与秩序<br>
+      巴黎教会我们自由与美的力量
+    </span>
+  </div>
+
+  <div class="footer-note">
+    Wildroad Travel · 野路逸行<br>
+    伦敦+巴黎双城记 · 2026年6月21日–29日<br>
+    本手册为定制行程，实际安排以最终确认为准。<br>
+    建议提前预订：伦敦眼、欧洲之星、卢浮宫、铁塔登顶、凡尔赛宫、Bustronome巴士晚宴
+  </div>
+</div>
+
+</body>
+</html>

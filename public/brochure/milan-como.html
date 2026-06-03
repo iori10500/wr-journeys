@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Zen Hei", "Microsoft YaHei", sans-serif;
+  background: #fff;
+  color: #2c2c2c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.page { width: 750px; margin: 0 auto; background: #fff; }
+
+/* COVER */
+.cover {
+  position: relative; width: 750px; height: 560px;
+  overflow: hidden; page-break-after: always;
+}
+.cover-bg {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+}
+.cover-overlay {
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%);
+  display: flex; flex-direction: column;
+  justify-content: flex-end; padding: 50px 60px;
+}
+.cover-brand {
+  position: absolute; top:28px; right:40px;
+  color:#fff; font-size:12px; letter-spacing:3px; opacity:0.9;
+}
+.cover-title {
+  color:#fff; font-size:38px; font-weight:700;
+  letter-spacing:6px; line-height:1.3; margin-bottom:12px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.cover-sub {
+  color:rgba(255,255,255,0.82); font-size:13px;
+  letter-spacing:3px; font-weight:300;
+}
+
+/* BRAND PAGE */
+.brand-page { page-break-after:always; }
+.brand-page img { width:100%; display:block; }
+
+/* GOLD LINE */
+.gold-line {
+  width:100%; height:2px;
+  background: linear-gradient(to right, transparent, #c8a96e, transparent);
+}
+
+/* SECTION BLOCK */
+.sec { padding: 36px 60px; }
+.sec-hd { display:flex; align-items:baseline; gap:14px; margin-bottom:20px; }
+.sec-num { font-size:40px; font-weight:200; color:#c8a96e; line-height:1; min-width:52px; }
+.sec-title { font-size:16px; font-weight:700; letter-spacing:2px; color:#1a1a1a;
+              border-bottom:2px solid #c8a96e; padding-bottom:5px; }
+.sec-en { font-size:10px; color:#999; letter-spacing:3px; margin-top:3px; }
+
+/* CHECKLIST */
+.checklist {
+  background:#fafafa; border-left:3px solid #c8a96e;
+  padding:18px 22px; margin:14px 0;
+}
+.checklist ul { list-style:none; columns:2; gap:16px; }
+.checklist li { padding:3px 0; font-size:12.5px; color:#444; }
+.checklist li::before { content:"□ "; color:#c8a96e; font-weight:bold; }
+
+/* CAR */
+.car-box {
+  display:flex; gap:18px; background:#f8f6f2;
+  padding:18px; border-radius:4px; margin:14px 0;
+  align-items:flex-start;
+}
+.car-box img { width:260px; height:168px; object-fit:cover; border-radius:4px; flex-shrink:0; }
+.car-text h3 { font-size:14px; font-weight:700; margin-bottom:8px; color:#1a1a1a; }
+.car-text p { font-size:12px; color:#555; line-height:1.8; }
+.car-note { font-size:11px; color:#888; margin-top:8px; font-style:italic; }
+
+/* ITINERARY TABLE */
+.itable { width:100%; border-collapse:collapse; margin:14px 0; }
+.itable th {
+  background:#1a1a1a; color:#c8a96e;
+  padding:9px 13px; font-size:11.5px; letter-spacing:2px;
+  text-align:left; font-weight:400;
+}
+.itable td {
+  padding:9px 13px; font-size:12px; border-bottom:1px solid #eee;
+  vertical-align:top; color:#333;
+}
+.itable tr:nth-child(even) td { background:#fafafa; }
+.day-badge {
+  display:inline-block; background:#c8a96e; color:#fff;
+  font-size:11px; padding:2px 7px; border-radius:2px;
+  font-weight:600; letter-spacing:1px;
+}
+.htl-note { font-size:10.5px; color:#999; margin-top:3px; }
+
+/* INCLUDES */
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:14px 0; }
+.inc-box { padding:16px 18px; border-radius:4px; }
+.inc-box.g { background:#f0f7f0; border-left:3px solid #5a9a5a; }
+.inc-box.r { background:#fdf2f0; border-left:3px solid #c05050; }
+.inc-box h4 { font-size:12.5px; font-weight:700; margin-bottom:8px; color:#1a1a1a; }
+.inc-box ul { list-style:none; }
+.inc-box li { font-size:11.5px; color:#444; padding:2px 0; line-height:1.6; }
+.inc-box.g li::before { content:"✓ "; color:#5a9a5a; }
+.inc-box.r li::before { content:"✗ "; color:#c05050; }
+
+/* HOTEL CARD */
+.htl-label {
+  background:#1a1a1a; color:#c8a96e; font-size:11px;
+  letter-spacing:3px; padding:8px 60px; text-align:center;
+}
+.htl-card { display:flex; height:320px; overflow:hidden; }
+.htl-img { width:55%; overflow:hidden; }
+.htl-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.htl-info {
+  width:45%; padding:28px 32px; background:#fff;
+  display:flex; flex-direction:column; justify-content:center;
+  border-left:1px solid #eee;
+}
+.htl-stars { color:#c8a96e; font-size:15px; letter-spacing:2px; margin-bottom:8px; }
+.htl-name { font-size:17px; font-weight:700; color:#1a1a1a; line-height:1.4; margin-bottom:5px; }
+.htl-name-en { font-size:10.5px; color:#999; letter-spacing:1px; margin-bottom:14px; }
+.htl-div { width:36px; height:2px; background:#c8a96e; margin-bottom:14px; }
+.htl-desc { font-size:11.5px; color:#555; line-height:1.9; }
+.htl-tag {
+  display:inline-block; background:#f5f0e8; color:#9a7840;
+  font-size:10px; padding:2px 7px; border-radius:2px;
+  margin:7px 2px 0; letter-spacing:1px;
+}
+.htl-photos { padding:0 60px 24px; }
+.htl-photos-row { display:flex; gap:14px; }
+.htl-photos-row img { width:50%; height:210px; object-fit:cover; border-radius:3px; }
+
+/* DAY PAGE */
+.day-page { page-break-before:always; }
+.day-hd {
+  background:#1a1a1a; color:#fff;
+  padding:20px 60px; display:flex; align-items:center; gap:18px;
+}
+.day-num { font-size:44px; font-weight:200; color:#c8a96e; line-height:1; }
+.day-ttl { font-size:17px; font-weight:600; letter-spacing:3px; margin-bottom:3px; }
+.day-sub { font-size:10.5px; color:#aaa; letter-spacing:2px; }
+.day-hotel {
+  background:#f5f0e8; padding:9px 60px; font-size:11px;
+  color:#7a5c30; letter-spacing:1px;
+}
+.day-intro { padding:18px 60px 0; font-size:12.5px; color:#555; line-height:1.85; }
+
+/* SPOTS GRID */
+.spots { display:grid; grid-template-columns:1fr 1fr; gap:0; padding:0 60px; margin:20px 0; }
+.spot { padding:14px; border-bottom:1px solid #f0f0f0; }
+.spot:nth-child(odd) { border-right:1px solid #f0f0f0; }
+.spot img { width:100%; height:155px; object-fit:cover; border-radius:3px; margin-bottom:9px; display:block; }
+.spot-name { font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:3px; }
+.spot-transit { font-size:11px; color:#c8a96e; margin-bottom:5px; }
+.spot-desc { font-size:11.5px; color:#555; line-height:1.75; }
+
+/* FULL WIDTH SPOT */
+.spot-wide { padding:0 60px; margin-bottom:18px; display:flex; gap:18px; align-items:flex-start; }
+.spot-wide img { width:295px; height:195px; object-fit:cover; border-radius:3px; flex-shrink:0; display:block; }
+.spot-wide-txt .spot-name { font-size:14.5px; }
+.spot-wide-txt .spot-desc { font-size:12px; line-height:1.85; margin-top:6px; }
+
+/* TIPS */
+.tips {
+  margin:0 60px 22px; background:#fef9f0;
+  border:1px solid #e8d8b0; border-radius:4px; padding:13px 17px;
+}
+.tips h4 { font-size:11.5px; color:#9a7840; font-weight:700; margin-bottom:7px; letter-spacing:1px; }
+.tips ul { list-style:none; }
+.tips li { font-size:11px; color:#666; line-height:1.8; }
+.tips li::before { content:"• "; color:#c8a96e; }
+
+/* NOTES */
+.notes { padding:38px 60px; page-break-before:always; }
+.notes-title {
+  font-size:15px; font-weight:700; letter-spacing:3px; color:#1a1a1a;
+  border-bottom:2px solid #c8a96e; padding-bottom:9px; margin-bottom:18px;
+}
+.notes ol { list-style:none; counter-reset:notes; }
+.notes ol li {
+  counter-increment:notes; padding:9px 0 9px 28px;
+  font-size:12px; color:#444; line-height:1.8;
+  border-bottom:1px solid #f5f5f5; position:relative;
+}
+.notes ol li::before {
+  content:counter(notes, decimal-leading-zero);
+  position:absolute; left:0; color:#c8a96e;
+  font-weight:700; font-size:11.5px; top:10px;
+}
+
+/* ABOUT */
+.about { page-break-before:always; }
+.about-img { width:100%; height:500px; object-fit:cover; display:block; }
+.about-ft {
+  background:#1a1a1a; padding:28px 60px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.about-info h3 {
+  color:#c8a96e; font-size:17px; font-weight:700;
+  letter-spacing:4px; margin-bottom:8px;
+}
+.about-info p { font-size:11.5px; line-height:1.8; color:#aaa; }
+.about-qr img {
+  width:85px; height:85px; background:#fff; padding:4px; display:block;
+}
+.about-qr p { color:#888; font-size:10px; margin-top:5px; letter-spacing:1px; text-align:center; }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <img class="cover-bg" src="/images/armani_lobby.jpg">
+  <div class="cover-overlay">
+    <div class="cover-brand">万德旅行 WanderWay</div>
+    <div class="cover-title">一城一湖<br>米兰与科莫湖</div>
+    <div class="cover-sub">MILAN &amp; LAKE COMO · 4晚5天 · 奢华定制行程</div>
+  </div>
+</div>
+
+<!-- BRAND PAGE -->
+<div class="brand-page">
+  <img src="/images/wanderway_brand.jpg" style="max-height:450px;object-fit:contain;">
+</div>
+
+<!-- SECTION 01: 必带物品 + 用车 + 行程 -->
+<div class="sec">
+  <div class="sec-hd">
+    <div class="sec-num">01</div>
+    <div>
+      <div class="sec-title">必带物品</div>
+      <div class="sec-en">出行前请仔细检查</div>
+    </div>
+  </div>
+  <div class="checklist">
+    <ul>
+      <li>高倍数防晒霜</li>
+      <li>遮阳帽、防晒衣</li>
+      <li>创口贴、止泻药</li>
+      <li>止痛药、过敏药</li>
+      <li>电话卡</li>
+      <li>多国转换插头</li>
+      <li>充电宝</li>
+      <li>相机防水罩</li>
+      <li>少量现金（当地可取款）</li>
+      <li>信用卡</li>
+    </ul>
+  </div>
+
+  <div class="sec-hd" style="margin-top:26px;">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-title">关于用车</div>
+      <div class="sec-en">ABOUT CAR USAGE</div>
+    </div>
+  </div>
+  <div class="car-box">
+    <img src="/images/car_service.jpg">
+    <div class="car-text">
+      <h3>奔驰商务7座车</h3>
+      <p>行程第1–4天中文司机10小时包车服务</p>
+      <p style="margin-top:8px;">除去安排的行程可以自行和司机沟通去想去的地方。</p>
+      <p class="car-note">※ 包车司机默认一旦送回酒店离开，即结束服务</p>
+    </div>
+  </div>
+
+  <div class="sec-hd" style="margin-top:26px;">
+    <div class="sec-num">03</div>
+    <div>
+      <div class="sec-title">行程概览</div>
+      <div class="sec-en">CALENDAR</div>
+    </div>
+  </div>
+  <table class="itable">
+    <thead>
+      <tr>
+        <th style="width:55px;">行程</th>
+        <th style="width:70px;">日期</th>
+        <th>地点</th>
+        <th style="width:175px;">住宿</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="day-badge">D1</span></td>
+        <td>第一天</td>
+        <td>专属接机 · 米兰大教堂 · 斯福尔扎城堡 · 蒙特拿破仑大街 · 运河区</td>
+        <td>米兰阿玛尼酒店<div class="htl-note">奢华客房 双早</div></td>
+      </tr>
+      <tr>
+        <td><span class="day-badge">D2</span></td>
+        <td>第二天</td>
+        <td>前往科莫 · 游船至瓦伦纳 · 莫纳斯特罗别墅 · 维齐奥城堡</td>
+        <td>威尼斯宫殿<div class="htl-note">豪华客房 双早</div></td>
+      </tr>
+      <tr>
+        <td><span class="day-badge">D3</span></td>
+        <td>第三天</td>
+        <td>布鲁纳特缆车登顶 · 科莫主教座堂 · 维多利亚花园 · 返回米兰</td>
+        <td>米兰阿玛尼酒店<div class="htl-note">奢华客房 双早</div></td>
+      </tr>
+      <tr>
+        <td><span class="day-badge">D4</span></td>
+        <td>第四天</td>
+        <td>圣西罗球场 · 布雷拉区 · 埃马努埃莱二世长廊</td>
+        <td>米兰阿玛尼酒店<div class="htl-note">奢华客房 双早</div></td>
+      </tr>
+      <tr>
+        <td><span class="day-badge">D5</span></td>
+        <td>第五天</td>
+        <td>酒店早餐 · 退房 · 返程</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="inc-grid">
+    <div class="inc-box g">
+      <h4>行程费用包含</h4>
+      <ul>
+        <li>双人米兰大教堂+屋顶通道门票</li>
+        <li>科莫游船一日票</li>
+        <li>莫纳斯特罗别墅博物馆与植物园门票</li>
+        <li>维齐奥城堡门票</li>
+        <li>圣西罗球场标准联票（球场+博物馆）</li>
+        <li>行程第1–4天中文司机包车服务</li>
+        <li>赠送双人旅游意外险</li>
+      </ul>
+    </div>
+    <div class="inc-box r">
+      <h4>行程费用不包含</h4>
+      <ul>
+        <li>机票</li>
+        <li>餐食费用</li>
+        <li>个人消费</li>
+        <li>城市税</li>
+        <li>接送机服务（如需可安排）</li>
+        <li>门票售罄需加价购买或替换景点</li>
+        <li>上述未提及事项</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="gold-line"></div>
+
+<!-- SECTION 04: 酒店 -->
+<div class="sec" style="padding-bottom:20px;">
+  <div class="sec-hd">
+    <div class="sec-num">04</div>
+    <div>
+      <div class="sec-title">酒店介绍</div>
+      <div class="sec-en">HOTEL</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hotel 1 -->
+<div class="htl-label">01 米兰阿玛尼酒店｜奢华客房 双早</div>
+<div class="htl-card">
+  <div class="htl-img"><img src="/images/armani_lobby.jpg"></div>
+  <div class="htl-info">
+    <div class="htl-stars">★★★★★</div>
+    <div class="htl-name">米兰阿玛尼酒店</div>
+    <div class="htl-name-en">Armani Hotel Milano</div>
+    <div class="htl-div"></div>
+    <div class="htl-desc">
+      2011年开业，全球仅两家阿玛尼酒店之一，95间客房/套房，坐落于时尚心脏黄金四角区，由 Giorgio Armani 亲自打造，将极简美学与意式顶奢服务融为一体。步行可达大教堂、斯卡拉歌剧院与名牌大街，客房全配 Armani/Casa 定制家具，顶层 SPA 俯瞰城市美景。
+    </div>
+    <div>
+      <span class="htl-tag">黄金四角区</span>
+      <span class="htl-tag">顶层SPA</span>
+      <span class="htl-tag">Armani定制</span>
+    </div>
+  </div>
+</div>
+<div class="htl-photos">
+  <div class="htl-photos-row">
+    <img src="/images/armani_room.jpg">
+    <img src="/images/armani_lobby.jpg" style="filter:brightness(0.9);">
+  </div>
+</div>
+
+<div class="gold-line"></div>
+<div style="height:20px;"></div>
+
+<!-- Hotel 2 -->
+<div class="htl-label">02 威尼斯宫殿｜豪华客房 双早</div>
+<div class="htl-card">
+  <div class="htl-img"><img src="/images/palazzo_venezia_ext.jpg"></div>
+  <div class="htl-info">
+    <div class="htl-stars">★★★★★</div>
+    <div class="htl-name">威尼斯宫殿</div>
+    <div class="htl-name-en">Palazzo Venezia Lake Como</div>
+    <div class="htl-div"></div>
+    <div class="htl-desc">
+      科莫湖老城中心顶级湖畔酒店，出门即湖岸、教堂、缆车，逛老城极方便。19世纪威尼斯新哥特式宫殿改建，仅18间私密客房，坐拥湖景与山景，顶楼露台餐厅俯瞰全城，步行可达湖岸、教堂与缆车，是体验科莫湖优雅与便利的理想之选。
+    </div>
+    <div>
+      <span class="htl-tag">湖景客房</span>
+      <span class="htl-tag">老城中心</span>
+      <span class="htl-tag">19世纪宫殿</span>
+    </div>
+  </div>
+</div>
+<div class="htl-photos">
+  <div class="htl-photos-row">
+    <img src="/images/palazzo_venezia_room.jpg">
+    <img src="/images/como_lakeside.jpg">
+  </div>
+</div>
+
+<!-- DAY 1 -->
+<div class="day-page">
+  <div class="day-hd">
+    <div class="day-num">D1</div>
+    <div>
+      <div class="day-ttl">抵达米兰 · 城市探索</div>
+      <div class="day-sub">米兰三大机场 / 米兰中央火车站 → 专属接机 → 入住米兰阿玛尼</div>
+    </div>
+  </div>
+  <div class="day-hotel">🏨 入住：米兰阿玛尼酒店｜奢华客房 双早</div>
+  <div class="day-intro">
+    如需要可以安排抵达米兰后的专属接送服务，安排专业司机前往机场、火车站等各大公共交通枢纽点对点专车接驳，省心畅行全城。
+  </div>
+  <div class="spots">
+    <div class="spot">
+      <img src="/images/milan_cathedral.jpg">
+      <div class="spot-name">米兰大教堂</div>
+      <div class="spot-transit">🚗 车程约20分钟</div>
+      <div class="spot-desc">世界最大哥特式教堂，通体纯白大理石筑就，历时六个世纪完工。登顶可漫步于尖塔森林，俯瞰米兰全景；内部彩绘花窗与神圣圣钉震撼人心，拿破仑加冕之地。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/sforza_castle.jpg">
+      <div class="spot-name">斯福尔扎城堡</div>
+      <div class="spot-transit">🚗 车程预计10分钟，可步行</div>
+      <div class="spot-desc">米兰权力与艺术的心脏，中世纪堡垒+文艺复兴宫殿+顶级博物馆群，藏有米开朗基罗最后未完成雕塑与达芬奇痕迹，免费庭院超好拍。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/monte_napoleone.jpg">
+      <div class="spot-name">蒙特拿破仑大街</div>
+      <div class="spot-transit">🚗 车程10分钟</div>
+      <div class="spot-desc">米兰时尚四边形的核心，全球顶奢密度最高的传奇大街。Chanel、Hermès、LV、Prada等一线品牌旗舰店云集，橱窗艺术与建筑美学交相辉映。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/navigli.jpg">
+      <div class="spot-name">运河街区 Navigli</div>
+      <div class="spot-transit">🚶 步行可达</div>
+      <div class="spot-desc">米兰最具生活气息的文艺水畔街区，两岸复古建筑、露天餐厅、街头艺术相映成趣，是米兰本地人最爱的餐前酒胜地。<br><strong>推荐：Aperitivo（餐前酒体验）</strong></div>
+    </div>
+  </div>
+  <div class="tips">
+    <h4>TIPS 温馨提示</h4>
+    <ul>
+      <li>斯福尔扎城堡门票约5欧，可一次性参观八个博物馆，可按需购买</li>
+      <li>具体行程时间按照米兰大教堂门票预约时间调整</li>
+      <li>后续可按照自身需求调整，专属司机全程就近待命等候，随走随停</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 2 -->
+<div class="day-page">
+  <div class="day-hd">
+    <div class="day-num">D2</div>
+    <div>
+      <div class="day-ttl">前往科莫湖 · 游船瓦伦纳</div>
+      <div class="day-sub">米兰阿玛尼退房 → 科莫镇（车程约50分钟）→ 游船 → 瓦伦纳</div>
+    </div>
+  </div>
+  <div class="day-hotel">🏨 入住：威尼斯宫殿 · 科莫老城中心｜豪华客房 双早</div>
+  <div class="day-intro">酒店用完早餐后出发，乘包车约50分钟抵达科莫镇，开启湖畔浪漫之旅。</div>
+  <div class="spots">
+    <div class="spot">
+      <img src="/images/como_lakeside.jpg">
+      <div class="spot-name">科莫镇</div>
+      <div class="spot-transit">🚗 车程约50分钟</div>
+      <div class="spot-desc">科莫湖的门户与文化中心，这座湖畔老城拥有历经三百年建成的科莫大教堂、沿湖风光无限的湖畔步道，以及7分钟直达山顶的布鲁纳特缆车，是进入科莫湖世界的完美起点。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/varenna.jpg">
+      <div class="spot-name">瓦伦纳</div>
+      <div class="spot-transit">⛵ 游船约1小时</div>
+      <div class="spot-desc">科莫湖东岸最静谧浪漫的童话小镇，被公认为科莫湖上最浪漫、最迷人的湖畔小镇。彩色石屋沿湖错落，相比热闹的贝拉焦更安静、更原生、更出片。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/villa_monastero.jpg">
+      <div class="spot-name">莫纳斯特罗别墅</div>
+      <div class="spot-transit">🚶 步行约2分钟</div>
+      <div class="spot-desc">由12世纪古老修道院改建，2公里湖景植物园层层叠叠，鲜花、绿植与雕塑相映成趣，可直面湖山全景。室内博物馆保留百年古董陈设，典雅静谧。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/castello_vezio.jpg">
+      <div class="spot-name">维齐奥城堡</div>
+      <div class="spot-transit">🚗 车程约12分钟</div>
+      <div class="spot-desc">坐落于瓦伦纳山顶的中世纪古堡，俯瞰科莫湖全景的绝佳制高点。登顶可将Y字形湖湾、贝拉焦半岛与阿尔卑斯山景一网打尽，城堡内还可观赏精彩的鹰猎表演。</div>
+    </div>
+  </div>
+  <div class="tips">
+    <h4>TIPS 温馨提示</h4>
+    <ul>
+      <li>科莫游船有皮划艇环湖、电动小船自驾、日落私船巡航、公共游船等可供选择</li>
+      <li>具体行程时间按照门票预约时间调整</li>
+      <li>晚上可以去体验私酿葡萄酒</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 3 -->
+<div class="day-page">
+  <div class="day-hd">
+    <div class="day-num">D3</div>
+    <div>
+      <div class="day-ttl">科莫漫游 · 返回米兰</div>
+      <div class="day-sub">威尼斯宫殿退房 → 布鲁纳特缆车 → 科莫主教座堂 → 维多利亚花园 → 返回米兰</div>
+    </div>
+  </div>
+  <div class="day-hotel">🏨 入住：米兰阿玛尼酒店｜奢华客房 双早（回程约1小时）</div>
+  <div class="day-intro">退房后继续探索科莫老城，乘坐百年缆车登顶布鲁纳特，俯瞰阿尔卑斯阳台美景，再漫步至科莫主教座堂与湖畔步道，打卡维多利亚花园酒店后返回米兰。</div>
+  <div class="spots">
+    <div class="spot">
+      <img src="/images/brunate_cable.jpg">
+      <div class="spot-name">布鲁纳特缆车</div>
+      <div class="spot-transit">🚶 步行约5分钟</div>
+      <div class="spot-desc">科莫镇百年观景缆车，7分钟即可登上被誉为"阿尔卑斯阳台"的布鲁纳特山顶，俯瞰整座科莫湖、老城与阿尔卑斯山全景。<br><span style="color:#c8a96e;font-size:10.5px;">※ 缆车仅能现场购票，约7.2欧/人</span></div>
+    </div>
+    <div class="spot">
+      <img src="/images/como_duomo.jpg">
+      <div class="spot-name">科莫主教座堂</div>
+      <div class="spot-transit">🚶 步行可达</div>
+      <div class="spot-desc">意大利北部重要的哥特式大教堂，被誉为"意大利最后一座哥特式主教座堂"。始建于1396年，历时近400年完工，融合哥特、文艺复兴与巴洛克风格，内部藏有珍贵挂毯与壁画。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/hotel_victoria.jpg">
+      <div class="spot-name">维多利亚花园酒店 Beach Club</div>
+      <div class="spot-transit">📸 打卡推荐</div>
+      <div class="spot-desc">开放5–10月，非住客可付费进入，户外泳池、湖景躺椅、吧台、小食。泳池+湖+贝拉焦同框，极为出片，是科莫湖畔不可错过的网红打卡地。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/como_lakeside.jpg">
+      <div class="spot-name">Life Electric 海上雕塑 &amp; 湖畔步道</div>
+      <div class="spot-transit">🚶 湖畔步道散步</div>
+      <div class="spot-desc">科莫湖畔著名的达芬奇纪念雕塑 Life Electric，坐落于湖边步道旁，造型独特极具视觉冲击力，是湖畔漫步途中不可错过的艺术地标。</div>
+    </div>
+  </div>
+  <div class="tips">
+    <h4>TIPS 温馨提示</h4>
+    <ul>
+      <li>具体时间安排根据门票预约时间调整</li>
+      <li>返回米兰车程约1小时</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 4 -->
+<div class="day-page">
+  <div class="day-hd">
+    <div class="day-num">D4</div>
+    <div>
+      <div class="day-ttl">米兰深度游</div>
+      <div class="day-sub">圣西罗球场 → 布雷拉区 → 埃马努埃莱二世长廊</div>
+    </div>
+  </div>
+  <div class="day-hotel">🏨 入住：米兰阿玛尼酒店｜奢华客房 双早</div>
+  <div class="day-intro">酒店享用早餐后，深度探索米兰的另一面——足球圣殿、文艺街区与世界最美商业拱廊。</div>
+  <div class="spots">
+    <div class="spot">
+      <img src="/images/san_siro.jpg">
+      <div class="spot-name">圣西罗球场</div>
+      <div class="spot-transit">🚗 车程约25分钟</div>
+      <div class="spot-desc">米兰足球圣殿，AC米兰与国际米兰共用主场，意大利最大球场。红色钢架顶棚+螺旋混凝土塔成为米兰西部地标。付费可参观博物馆、更衣室、球员通道及草坪。</div>
+    </div>
+    <div class="spot">
+      <img src="/images/brera.jpg">
+      <div class="spot-name">布雷拉区</div>
+      <div class="spot-transit">🚗 车程约20分钟</div>
+      <div class="spot-desc">米兰的文艺心脏，被誉为"米兰的蒙马特"，遍布画廊、古董店、手工工坊与高端咖啡馆。核心地标布雷拉宫内含顶级美术馆与市中心隐秘植物园。</div>
+    </div>
+  </div>
+  <div class="spot-wide">
+    <img src="/images/galleria.jpg">
+    <div class="spot-wide-txt">
+      <div class="spot-name" style="font-size:14.5px;">埃马努埃莱二世长廊</div>
+      <div class="spot-transit" style="font-size:11px;color:#c8a96e;margin:4px 0;">🚶 步行约12分钟</div>
+      <div class="spot-desc" style="font-size:12px;line-height:1.85;margin-top:4px;">世界最古老的现代购物中心之一，被誉为欧洲最美商业拱廊。中央八角圆顶高悬，免费开放，可打卡穹顶全景、踩公牛转运、欣赏顶级奢侈品橱窗，或在百年咖啡馆小憩，感受米兰古典奢华与现代时尚的完美交融。</div>
+    </div>
+  </div>
+  <div class="tips">
+    <h4>TIPS 温馨提示</h4>
+    <ul>
+      <li>具体时间安排根据门票预约时间调整</li>
+      <li>这一天可按照自身需求调整，专属司机全程就近待命等候，随走随停</li>
+      <li>如有兴致，可前往斯卡拉歌剧院（Teatro alla Scala）欣赏一场本地歌剧，或参观博物馆</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 5 -->
+<div class="day-page">
+  <div class="day-hd">
+    <div class="day-num">D5</div>
+    <div>
+      <div class="day-ttl">退房 · 返程</div>
+      <div class="day-sub">米兰阿玛尼酒店退房 → 米兰三大机场 / 米兰中央火车站</div>
+    </div>
+  </div>
+  <div style="padding:36px 60px;display:flex;gap:22px;align-items:flex-start;">
+    <img src="/images/airport.jpg" style="width:320px;height:210px;object-fit:cover;border-radius:4px;flex-shrink:0;display:block;">
+    <div>
+      <div style="font-size:14.5px;font-weight:700;margin-bottom:10px;color:#1a1a1a;">专属送机服务</div>
+      <p style="font-size:12.5px;color:#555;line-height:1.9;">如需出行接送服务，我们可专属安排专业司机，前往机场、火车站等各大公共交通枢纽点对点专车接驳，省心畅行全城。</p>
+      <p style="font-size:11.5px;color:#c8a96e;margin-top:14px;font-weight:600;">※ 返程时间请提前沟通确定</p>
+    </div>
+  </div>
+</div>
+
+<!-- NOTES -->
+<div class="notes">
+  <div class="sec-hd">
+    <div class="sec-num">05</div>
+    <div>
+      <div class="sec-title">温馨提示</div>
+      <div class="sec-en">NOTE</div>
+    </div>
+  </div>
+  <ol>
+    <li>行程时间需临时改动，如碰到交通堵车等情况，请第一时间告知我们，我们告知商家并进行协调。</li>
+    <li>如遇门票已售罄，需加价购买或替换其他景点。</li>
+    <li>方案中所列车程时间均为预估参考时间，实际行驶时长将根据当日路况、天气及交通情况而定。因为路况复杂、堵车严重且时间不可控，为了确保您能准时参加预约活动，我们会按预约时间提前半小时抵达来安排。如果抵达时间稍早，麻烦您耐心等候一下。</li>
+    <li>预订成功后，除天气等不可抗力因素外，费用不予退换；改期需以商家政策为准。</li>
+    <li>行程中如因自身原因无法前往，项目一概不退款；如需再次体验，需自行支付费用。酒店不退不改。</li>
+    <li>行程中，如果需要额外游玩或用餐推荐，司机熟悉当地情况，可以为您提供实用建议。也请您结合自身口味、预算、行程时间，以及提前在点评/地图上查看评价，综合甄别后再做决定，体验会更稳妥。</li>
+    <li>酒店权益中赠送的活动和项目，请自行与酒店管家预约，我们不另行安排；若有感兴趣的付费项目，可自行付费体验。</li>
+    <li>凡通过我司代预订由酒店方直接提供的住宿、接送机、餐饮、活动及其他相关服务，如在服务使用过程中出现任何问题（包括但不限于设施故障、服务质量、餐食问题、行程变动、人身意外等），均由酒店承担解决，我司协助处理，不承担任何责任。</li>
+  </ol>
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+  <img class="about-img" src="/images/wanderway_ad.jpg">
+  <div class="about-ft">
+    <div class="about-info">
+      <h3>万德旅行 WanderWay</h3>
+      <p>微信号｜xttpyq</p>
+      <p>自媒体｜徐太太爱住酒店</p>
+      <p style="margin-top:10px;color:#888;font-size:11px;">度假型生活方式 · Virtuoso Member · 专业规划团队服务</p>
+      <p style="color:#888;font-size:11px;">全球奢华酒店直签 · 私人定制行程 · 24小时旅行管家服务</p>
+    </div>
+    <div class="about-qr">
+      <img src="/images/wechat_qr.jpg">
+      <p>扫码联系</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- end .page -->
+</body>
+</html>

@@ -9,15 +9,6 @@ const PORT = 3099;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Disable browser caching
-app.disable('etag');
-app.use((req, res, next) => {
-  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-  res.set('Pragma', 'no-cache');
-  res.set('Expires', '0');
-  next();
-});
-
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 

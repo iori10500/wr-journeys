@@ -2,6 +2,21 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
+function extractBrochureContent(html) {
+  // Extract <style> blocks (may be multiple)
+  const styleMatches = html.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || [];
+  let styles = styleMatches.join('\n');
+
+  // Scope :root to .brochure-content to avoid CSS variable conflicts
+  styles = styles.replace(/:root\s*\{/g, '.brochure-content {');
+
+  // Extract <body> inner content
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+  const bodyContent = bodyMatch ? bodyMatch[1] : html;
+
+  return { styles, bodyContent };
+}
+
 const app = express();
 const PORT = 3099;
 
@@ -75,10 +90,15 @@ app.get('/:id', (req, res) => {
   } catch (err) {
     console.error(`Failed to read brochure ${brochurePath}:`, err.message);
   }
-  
+
+  let brochureContent = null;
+  if (brochureHtml) {
+    brochureContent = extractBrochureContent(brochureHtml);
+  }
+
   res.render('itinerary', {
     itinerary: itinerary,
-    brochureHtml: brochureHtml,
+    brochureContent: brochureContent,
     title: itinerary.title + ' - WR Travel'
   });
 });

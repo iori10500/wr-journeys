@@ -121,7 +121,7 @@
       padding: 24px 16px 60px;
     }
     
-    <% if (brochureHtml) { %>
+    <% if (brochureContent) { %>
     .brochure-frame {
       width: 100%;
       background: #fff;
@@ -129,12 +129,15 @@
       box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       overflow: hidden;
     }
-    .brochure-frame iframe {
-      width: 100%;
-      border: none;
-      display: block;
-      min-height: 600px;
+    .brochure-content .cover,
+    .brochure-content .page {
+      width: 100% !important;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .brochure-content .cover {
       height: auto;
+      min-height: 400px;
     }
     <% } else { %>
     .not-found {
@@ -175,7 +178,7 @@
       .meta-bar { padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 6px; }
       .brochure-wrapper { padding: 0 0 40px; max-width: 100%; }
       .brochure-frame { border-radius: 0; }
-      .brochure-frame iframe { min-height: 400px; }
+      .brochure-content .cover { min-height: 300px; }
     }
   </style>
 </head>
@@ -216,27 +219,13 @@
 
   <!-- BROCHURE CONTENT -->
   <div class="brochure-wrapper">
-    <% if (brochureHtml) { %>
+    <% if (brochureContent) { %>
       <div class="brochure-frame">
-        <iframe id="brochureIframe" srcdoc="<%= brochureHtml.replace(/`/g, '\\`').replace(/\$/g, '\\$') %>" style="min-height:600px;"></iframe>
+        <div class="brochure-content">
+          <%- brochureContent.styles %>
+          <%- brochureContent.bodyContent %>
+        </div>
       </div>
-      <script>
-        // Auto-resize iframe to fit content
-        const iframe = document.getElementById('brochureIframe');
-        function resizeIframe() {
-          try {
-            const doc = iframe.contentDocument || iframe.contentWindow.document;
-            const height = doc.documentElement.scrollHeight || doc.body.scrollHeight;
-            if (height > 200) {
-              iframe.style.height = height + 'px';
-            }
-          } catch(e) {
-            iframe.style.height = '80vh';
-          }
-        }
-        iframe.addEventListener('load', resizeIframe);
-        window.addEventListener('resize', resizeIframe);
-      </script>
     <% } else { %>
       <div class="not-found">
         <h2>行程未找到</h2>

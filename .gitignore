@@ -1,3 +1,5 @@
 node_modules/
 .DS_Store
 *.log
+CLAUDE.md
+行程手册制作指南.md

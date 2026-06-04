@@ -1,74 +1,49 @@
-# WR Travel 行程手册展示站点
+# WR Travel · 行程手册
 
-在线展示万德旅行 / Wildroad Travel 的奢华定制行程手册，支持搜索过滤和 A4 打印优化。
+精選全球奢華定制行程的在線展示平台，為高端旅行品牌提供精美的 HTML 行程手冊瀏覽與 PDF 下載。
 
-**域名**: [itinerary.wildroadgroup.com](https://itinerary.wildroadgroup.com)
+## 技術棧
 
-## 技术栈
-
-- **后端**: Express (Node.js)，端口 3099
+- **後端**: Express (Node.js)
 - **模板引擎**: EJS
-- **部署**: PM2，bare Git repo + post-receive hook 自动部署
-- **服务器**: 47.238.43.48
+- **部署**: PM2 + Git post-receive hook 自動部署
 
-## 本地开发
+## 行程列表
+
+| 行程 | 天數 | 品牌 |
+|------|------|------|
+| 一城一湖·米蘭與科莫湖 | 5天 | 萬德旅行 WanderWay |
+| 蘇黎世+盧塞恩 | 4天 | 萬德旅行 WanderWay |
+| 瑞士經典環線 | 7天 | 萬德旅行 WanderWay |
+| 坦桑尼亞野奢之旅 | 8天 | Wildroad Travel · 野路逸行 |
+| 倫敦巴黎雙城記 | 9天 | Wildroad Travel · 野路逸行 |
+| CMBI 2026 巴厘島激勵之旅 | 4天 | Wildroad Travel · 野路逸行 |
+
+## 本地運行
 
 ```bash
 npm install
 npm start
-# 访问 http://localhost:3099
 ```
 
-## 部署
+訪問 http://localhost:3099
 
-```bash
-git push origin main
-# post-receive hook 自动执行 checkout → npm install → pm2 restart
-```
-
-## 项目结构
+## 項目結構
 
 ```
-├── app.js               # Express 应用入口
+├── app.js                  # Express 服務入口
 ├── data/
-│   └── itineraries.json # 行程数据（标题、标签、封面图、brochure 路径等）
+│   └── itineraries.json    # 行程數據
 ├── views/
-│   ├── index.ejs        # 首页（搜索 + 卡片网格）
-│   └── itinerary.ejs    # 行程详情页（内联 brochure HTML）
+│   ├── index.ejs           # 首頁模板
+│   └── itinerary.ejs       # 行程詳情頁模板
 ├── public/
-│   ├── brochure/        # 各行程的 HTML 手册
-│   ├── images/          # 行程图片
-│   └── pdfs/            # 生成的 PDF 文件
-├── generate-pdfs.sh     # 批量生成 PDF 脚本
-└── 行程手册制作指南.md    # 制作新行程手册的标准流程
+│   ├── images/             # 行程圖片
+│   ├── brochure/           # HTML 行程手冊
+│   └── pdfs/               # PDF 行程手冊
+└── package.json
 ```
 
-## 搜索 API
+## 許可證
 
-```
-GET /api/itineraries?q=关键词
-```
-
-支持按标题、标签、目的地、副标题搜索。不传 `q` 返回全部行程。
-
-## 已有行程
-
-| 行程 | 天数 | 目的地 | 品牌 |
-|------|------|--------|------|
-| 一城一湖·米兰与科莫湖 | 5天 | 意大利 | 万德旅行 |
-| 苏黎世+卢塞恩 | 4天 | 瑞士 | 万德旅行 |
-| 瑞士经典环线 | 7天 | 瑞士 | 万德旅行 |
-| 坦桑尼亚野奢之旅 | 8天 | 坦桑尼亚 | Wildroad Travel |
-| 伦敦巴黎双城记 | 9天 | 英国/法国 | Wildroad Travel |
-| CMBI 巴厘岛激励之旅 | 4天 | 印尼 | Wildroad Travel |
-
-## 添加新行程
-
-详见 `行程手册制作指南.md`，标准流程：
-
-1. 制作 HTML brochure（A4 打印 + 网页兼容）
-2. 搜索下载真实图片 → 压缩（sips，1400px，85% quality）
-3. 复制 HTML 到 `public/brochure/`，图片到 `public/images/<id>/`
-4. 注册到 `data/itineraries.json`
-5. 生成 PDF（Chrome headless）
-6. `git push origin main` 自动部署
+MIT License

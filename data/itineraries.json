@@ -90,7 +90,7 @@
     "regions": ["印度尼西亚", "巴厘岛", "Canggu", "Ubud", "Seminyak"],
     "tags": ["巴厘岛", "激励旅行", "ATV", "漂流", "沙滩俱乐部", "私人别墅", "国泰直飞"],
     "description": "丛林ATV驰骋、T河激流勇进、土豆头沙滩日落——四天三夜巴厘岛热带冒险，国泰直飞，三栋私人别墅。",
-    "coverImage": "https://picsum.photos/seed/bali-overview/800/400",
+    "coverImage": "images/bali/bali-overview.jpg",
     "brochurePath": "brochure/cmbi-bali-2026.html",
     "createdAt": "2026-06-04",
     "versions": ["行程手册"]

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CMBI 2026 巴厘岛激励之旅</title>
+<style>
+@page { size: A4; margin: 0; }
+body {
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin: 0; color: #2d2d2d; background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 210mm; height: 297mm;
+  background: linear-gradient(160deg, #0a1f14 0%, #0f2e1f 30%, #0d2518 60%, #061510 100%);
+  color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; position: relative; overflow: hidden;
+  page-break-after: always;
+}
+.cover::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(196,163,90,0.10) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(196,163,90,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 50%, rgba(26,92,42,0.15) 0%, transparent 70%);
+}
+.cover .brand { font-size: 11px; letter-spacing: 5px; opacity: 0.45; margin-bottom: 60px; position: relative; z-index: 1; }
+.cover .route { font-size: 13px; letter-spacing: 3px; opacity: 0.5; margin-bottom: 30px; position: relative; z-index: 1; }
+.cover h1 { font-size: 42px; font-weight: 300; letter-spacing: 6px; margin: 0 0 16px 0; position: relative; z-index: 1; line-height: 1.3; }
+.cover .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 4px; opacity: 0.7; position: relative; z-index: 1; }
+.cover .accent { width: 80px; height: 2px; background: #c4a35a; margin: 32px auto; position: relative; z-index: 1; }
+.cover .meta { position: relative; z-index: 1; font-size: 13px; opacity: 0.55; line-height: 2.2; letter-spacing: 1px; }
+.cover .hotels { position: relative; z-index: 1; font-size: 12px; opacity: 0.5; margin-top: 36px; line-height: 2; letter-spacing: 1px; }
+
+/* ===== PAGE ===== */
+.page {
+  width: 210mm; min-height: 297mm;
+  padding: 22mm 18mm;
+  box-sizing: border-box;
+  page-break-after: always;
+  position: relative;
+}
+.page:last-child { page-break-after: avoid; }
+
+h2 { font-size: 26px; font-weight: 300; letter-spacing: 3px; margin: 0 0 8px 0; text-align: center; color: #12522b; }
+h2 .num { font-size: 12px; letter-spacing: 2px; opacity: 0.5; display: block; margin-bottom: 6px; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; background: #c4a35a; margin: 14px auto 0; }
+
+/* ===== OVERVIEW TABLE ===== */
+.overview-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 12px; }
+.overview-table th { background: #12522b; color: #fff; padding: 10px 12px; text-align: left; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+.overview-table td { padding: 10px 12px; border-bottom: 1px solid #e8e8e8; }
+.overview-table tr:nth-child(even) td { background: #fafaf9; }
+
+/* ===== HERO IMAGE ===== */
+.hero-img { width: 100%; border-radius: 3px; margin: 16px 0; max-height: 260px; object-fit: cover; }
+
+/* ===== STATS ===== */
+.stats-row { display: flex; justify-content: center; gap: 50px; margin: 24px 0; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 30px; font-weight: 300; color: #12522b; letter-spacing: 1px; }
+.stat-item .label { font-size: 10px; color: #aaa; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
+
+/* ===== DAY CARDS ===== */
+.day-card { margin: 16px 0; border-radius: 3px; overflow: hidden; border: 1px solid #e0e0d8; }
+.day-card-header { background: #12522b; color: #fff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; }
+.day-card-header .day-label { font-size: 14px; font-weight: 500; letter-spacing: 1px; }
+.day-card-header .day-theme { font-size: 11px; opacity: 0.7; letter-spacing: 1px; }
+.day-card-body { padding: 14px 18px; background: #fff; }
+.day-card-body table { width: 100%; border-collapse: collapse; }
+.day-card-body td { padding: 6px 8px; font-size: 11px; border-bottom: 1px solid #f5f5f5; vertical-align: top; line-height: 1.5; }
+.day-card-body td:first-child { color: #c4a35a; font-weight: 600; white-space: nowrap; width: 100px; font-size: 10px; letter-spacing: 0.5px; }
+.day-card-body td:last-child { color: #555; }
+
+.img-row { display: flex; gap: 14px; margin: 16px 0; }
+.img-row img { width: 50%; border-radius: 3px; object-fit: cover; aspect-ratio: 16/10; }
+
+/* ===== HOTEL CARD ===== */
+.hotel-card { display: flex; gap: 18px; margin: 14px 0; background: #fafaf9; border-radius: 3px; padding: 16px; align-items: center; }
+.hotel-card img { width: 160px; height: 110px; border-radius: 3px; object-fit: cover; flex-shrink: 0; }
+.hotel-card .hotel-info h4 { font-size: 14px; color: #12522b; margin: 0 0 4px 0; letter-spacing: 1px; }
+.hotel-card .hotel-info p { font-size: 11px; color: #999; margin: 0; line-height: 1.6; }
+.hotel-card .hotel-info .villa-tag { font-size: 10px; color: #c4a35a; letter-spacing: 1px; }
+
+/* ===== ITINERARY BADGE ===== */
+.itinerary-badge { background: #f6f8f4; border-left: 4px solid #c4a35a; padding: 14px 18px; margin: 16px 0; border-radius: 0 3px 3px 0; }
+.itinerary-badge .dates { font-size: 12px; color: #c4a35a; font-weight: 600; letter-spacing: 1px; margin-bottom: 3px; }
+.itinerary-badge .info { font-size: 12px; color: #777; }
+
+/* ===== INTRO ===== */
+.intro { font-size: 13px; line-height: 1.9; color: #666; text-align: center; max-width: 620px; margin: 14px auto 0; }
+
+/* ===== TRANSPORT ===== */
+.transport-row { display: flex; gap: 14px; margin: 16px 0; }
+.transport-item { flex: 1; background: #fafaf9; border-radius: 3px; padding: 16px; text-align: center; }
+.transport-item .icon { font-size: 28px; margin-bottom: 8px; }
+.transport-item .t-title { font-size: 12px; font-weight: 600; color: #12522b; letter-spacing: 1px; margin-bottom: 4px; }
+.transport-item .t-detail { font-size: 11px; color: #999; line-height: 1.5; }
+
+/* ===== QUOTE ===== */
+.quote-block { background: #12522b; color: #fff; padding: 36px 48px; border-radius: 3px; text-align: center; margin: 20px 0; }
+.quote-block p { font-size: 16px; font-weight: 300; line-height: 1.8; letter-spacing: 1px; margin: 0; }
+.quote-block .author { font-size: 11px; opacity: 0.55; margin-top: 12px; letter-spacing: 2px; }
+
+/* ===== HIGHLIGHTS ===== */
+.hl-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+.hl-item { flex: 0 0 calc(33.33% - 8px); background: #fafaf9; padding: 16px; border-radius: 3px; border-left: 3px solid #c4a35a; box-sizing: border-box; }
+.hl-item h4 { font-size: 12px; color: #12522b; margin: 0 0 4px 0; }
+.hl-item p { font-size: 10px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== COST TABLE ===== */
+.cost-summary { background: #f6f8f4; border-radius: 3px; padding: 20px 24px; margin: 20px 0; text-align: center; }
+.cost-summary .total { font-size: 32px; font-weight: 300; color: #12522b; letter-spacing: 1px; }
+.cost-summary .total-label { font-size: 11px; color: #999; letter-spacing: 2px; margin-bottom: 4px; }
+.cost-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 11px; }
+.cost-table th { background: #12522b; color: #fff; padding: 8px 12px; text-align: left; font-weight: 400; letter-spacing: 1px; font-size: 10px; }
+.cost-table td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+.cost-table .section-header td { background: #f6f8f4; font-weight: 600; color: #12522b; font-size: 11px; letter-spacing: 1px; padding-top: 12px; }
+.cost-table .subtotal td { font-weight: 600; color: #12522b; border-top: 2px solid #c4a35a; }
+.cost-table .grand-total td { font-weight: 600; color: #12522b; font-size: 13px; background: #f6f8f4; border-top: 2px solid #12522b; }
+.cost-table td:last-child { text-align: right; font-weight: 500; }
+
+/* ===== FOOTER ===== */
+.footer-note { font-size: 9px; color: #ccc; text-align: center; margin-top: 32px; padding-top: 14px; border-top: 1px solid #eee; line-height: 1.8; }
+
+/* ===== SUMMARY ===== */
+.page-summary { background: #12522b; color: #fff; }
+.page-summary h2 { color: #fff; }
+.page-summary h2::after { background: #c4a35a; }
+.page-summary .journey-text { font-size: 15px; font-weight: 300; line-height: 2.2; letter-spacing: 1px; text-align: center; max-width: 520px; margin: 40px auto; }
+.page-summary .footer-note { color: rgba(255,255,255,0.4); border-top-color: rgba(255,255,255,0.15); }
+
+/* ===== MAP ===== */
+.map-box { background: #f5f4f0; border-radius: 3px; padding: 32px; text-align: center; margin: 16px 0; }
+.map-box .route-line { font-size: 13px; letter-spacing: 2px; color: #12522b; line-height: 2.5; }
+
+/* Accommodation page uses same h2 */
+.page-overview h2 { color: #12522b; }
+.page-overview h2::after { background: #c4a35a; }
+
+/* Activity tags */
+.activity-tag { display: inline-block; background: #f6f8f4; color: #12522b; font-size: 9px; padding: 2px 8px; border-radius: 10px; letter-spacing: 1px; margin-right: 4px; }
+
+@media screen and (max-width: 640px) {
+  .cover, .page { width: 100%; min-height: auto; height: auto; padding: 32px 20px; }
+  .cover { padding: 56px 20px; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 28px; letter-spacing: 3px; }
+  .cover .subtitle { font-size: 14px; letter-spacing: 2px; }
+  .cover .brand { font-size: 10px; letter-spacing: 3px; margin-bottom: 32px; }
+  .cover .route { font-size: 11px; margin-bottom: 18px; }
+  .cover .meta { font-size: 11px; }
+  .cover .hotels { font-size: 10px; margin-top: 20px; }
+  .cover .accent { margin: 20px auto; }
+  h2 { font-size: 20px; letter-spacing: 2px; }
+  h2 .num { font-size: 11px; }
+  .intro { font-size: 12px; padding: 0 8px; }
+  .overview-table { font-size: 10px; display: block; overflow-x: auto; }
+  .overview-table th, .overview-table td { padding: 6px 8px; }
+  .stats-row { gap: 24px; }
+  .stat-item .num { font-size: 24px; }
+  .img-row { flex-direction: column; gap: 10px; }
+  .img-row img { width: 100%; }
+  .day-card-body td:first-child { width: 70px; min-width: 70px; }
+  .day-card-body td { font-size: 10px; }
+  .day-card-header .day-label { font-size: 12px; }
+  .hotel-card { flex-direction: column; }
+  .hotel-card img { width: 100%; height: auto; }
+  .quote-block { padding: 24px 20px; }
+  .quote-block p { font-size: 14px; }
+  .hl-grid { flex-direction: column; }
+  .hl-item { flex: 1 1 auto; }
+  .page-summary .journey-text { font-size: 13px; margin: 24px auto; }
+  .hero-img { max-height: 200px; }
+  .transport-row { flex-direction: column; }
+  .cost-summary .total { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div class="brand">WILDROAD TRAVEL · 野路逸行</div>
+  <div class="route">HONG KONG → BALI</div>
+  <h1>CMBI 2026<br>巴厘岛激励之旅</h1>
+  <div class="subtitle">BALI INCENTIVE TOUR · 4 DAYS 3 NIGHTS</div>
+  <div class="accent"></div>
+  <div class="meta">
+    2026年8月28日 – 31日 · 4天3晚<br>
+    19人同行
+  </div>
+  <div class="hotels">
+    Dea Villas · Canggu &nbsp;|&nbsp; CX 国泰航空直飞
+  </div>
+</div>
+
+<!-- ═══════════ OVERVIEW ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">01</span>行程总览</h2>
+
+  <div class="transport-row">
+    <div class="transport-item">
+      <div class="icon">✈️</div>
+      <div class="t-title">去程</div>
+      <div class="t-detail">CX785 · 8/28<br>香港 HKG → 巴厘岛 DPS<br>国泰航空</div>
+    </div>
+    <div class="transport-item">
+      <div class="icon">🏠</div>
+      <div class="t-title">住宿</div>
+      <div class="t-detail">Dea Villas<br>Canggu 仓古区<br>3栋私人别墅</div>
+    </div>
+    <div class="transport-item">
+      <div class="icon">✈️</div>
+      <div class="t-title">回程</div>
+      <div class="t-detail">CX784 · 8/31<br>巴厘岛 DPS → 香港 HKG<br>国泰航空</div>
+    </div>
+  </div>
+
+  <table class="overview-table">
+    <tr><th>日期</th><th>星期</th><th>区域</th><th>核心体验</th></tr>
+    <tr>
+      <td style="font-weight:600;color:#12522b;">8/28</td>
+      <td>周四</td>
+      <td>Canggu</td>
+      <td>抵达入住 · 巴厘岛海鲜烧烤欢迎晚宴</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#12522b;">8/29</td>
+      <td>周五</td>
+      <td>Ubud → Seminyak</td>
+      <td>丛林ATV越野 · 土豆头Beach Club日落</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#12522b;">8/30</td>
+      <td>周六</td>
+      <td>Ubud → Seminyak</td>
+      <td>T河漂流 · Santanera Bali晚餐</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;color:#12522b;">8/31</td>
+      <td>周日</td>
+      <td>Canggu</td>
+      <td>自由Brunch · 返程</td>
+    </tr>
+  </table>
+
+  <div class="map-box">
+    <div class="route-line">
+      ✈ 香港 HKG → 巴厘岛 DPS<br>
+      🏠 Dea Villas · Canggu 仓古 · 3晚<br>
+      🌿 Ubud 乌布探险（ATV + 漂流）<br>
+      🌅 Seminyak 水明漾（沙滩俱乐部 + 晚餐）<br>
+      ✈ 巴厘岛 DPS → 香港 HKG
+    </div>
+  </div>
+
+  <img class="hero-img" src="https://picsum.photos/seed/bali-overview/800/400" alt="巴厘岛全景">
+</div>
+
+<!-- ═══════════ ACCOMMODATION ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">02</span>住宿介绍 · Dea Villas</h2>
+  <p class="intro">
+    坐落于 Canggu 仓古区的私人别墅群，三栋别墅毗邻而居。<br>热带庭院、私人泳池、开放式起居——巴厘岛最地道的度假生活方式。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">8月28日 – 31日 · 3晚 · Canggu 仓古</div>
+    <div class="info">含每日别墅早餐、Day1 海鲜烧烤晚宴、别墅3日软饮畅饮</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num">3</div><div class="label">私人别墅</div></div>
+    <div class="stat-item"><div class="num">11</div><div class="label">卧房总数</div></div>
+    <div class="stat-item"><div class="num">19</div><div class="label">入住人数</div></div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="https://picsum.photos/seed/dea-sarasvat/400/300" alt="Sarasvat Villa">
+    <div class="hotel-info">
+      <div class="villa-tag">Villa 1</div>
+      <h4>Dea Villas – Sarasvat</h4>
+      <p>4间卧室（2间大床 + 2间双床），最多可容纳8人。宽敞的热带花园、私人泳池与开放式凉亭，典型的巴厘岛现代别墅设计。</p>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="https://picsum.photos/seed/dea-amy/400/300" alt="Amy Villa">
+    <div class="hotel-info">
+      <div class="villa-tag">Villa 2</div>
+      <h4>Dea Villas – Amy</h4>
+      <p>3间卧室（2间大床 + 1间双床），最多可容纳6人。温馨私密的空间布局，适合小团体休憩。</p>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img src="https://picsum.photos/seed/dea-sati/400/300" alt="Sati Villa">
+    <div class="hotel-info">
+      <div class="villa-tag">Villa 3</div>
+      <h4>Dea Villas – Sati</h4>
+      <p>4间卧室（3间大床 + 1间双床），最多可容纳8人。最大的一栋，带独立凉亭与户外用餐区。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"三栋别墅，一片热带庭院。<br>长谷仓古的稻田海风，巴厘岛最纯粹的样子。"</p>
+    <div class="author">— WILDROAD TRAVEL</div>
+  </div>
+</div>
+
+<!-- ═══════════ DAY 1-2 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">03</span>第1–2天 · 抵达 &amp; 丛林驰骋</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 1 · 8/28（周四）</span>
+      <span class="day-theme">抵达 · 海鲜烧烤晚宴</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>上午</td><td>✈️ 搭乘国泰航空 CX785 航班（香港 → 巴厘岛）</td></tr>
+        <tr><td>下午</td><td>🛬 抵达 DPS 机场，专车接机（2辆 Toyota Hiace + 1行李车）</td></tr>
+        <tr><td>下午</td><td>🏠 入住 Dea Villas · 别墅休整</td></tr>
+        <tr><td>19:00</td><td>🦞 别墅海鲜烧烤欢迎晚宴 + 软饮畅饮</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="https://picsum.photos/seed/bali-bbq/800/500" alt="海鲜烧烤晚宴">
+    <img src="https://picsum.photos/seed/bali-villa-pool/800/500" alt="别墅泳池">
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 2 · 8/29（周五）</span>
+      <span class="day-theme">丛林ATV越野 · 土豆头沙滩日落</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>上午</td><td>🌿 别墅早餐，自由放松</td></tr>
+        <tr><td>11:30–12:00</td><td>🚐 出发前往 Ubud 乌布</td></tr>
+        <tr><td>13:30–15:00</td><td>🏍️ Kuber ATV Pack A · 1.5小时丛林越野<br><span style="font-size:10px;color:#999;">穿越隧道、瀑布、稻田、趣味下山小径 | 含安全培训 + 防护装备 + 专业向导 + 午餐</span></td></tr>
+        <tr><td>15:00–16:00</td><td>🚿 淋浴更衣，出发前往 Seminyak</td></tr>
+        <tr><td>16:30起</td><td>🍸 土豆头 Beach Club · 沙滩躺椅 ×4组<br><span style="font-size:10px;color:#999;">World 50 Best Bar &amp; Hotel | 含 F&amp;B Credit IDR 2,000,000/组 · 红酒一瓶 · 混合拼盘</span></td></tr>
+        <tr><td>日落至晚间</td><td>🌅 沙滩日落 + 自由晚餐（使用餐饮 Credit）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="https://picsum.photos/seed/bali-atv/800/500" alt="巴厘岛ATV越野">
+    <img src="https://picsum.photos/seed/potato-head/800/500" alt="土豆头Beach Club">
+  </div>
+</div>
+
+<!-- ═══════════ DAY 3-4 ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">04</span>第3–4天 · 激流勇进 &amp; 返程</h2>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 3 · 8/30（周六）</span>
+      <span class="day-theme">T河漂流 · Santanera 晚餐</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>上午</td><td>🌿 别墅早餐，自由放松</td></tr>
+        <tr><td>10:00–10:30</td><td>🚐 出发前往漂流起点</td></tr>
+        <tr><td>上午–下午</td><td>🌊 The Green Adventure · T河漂流 2.5小时<br><span style="font-size:10px;color:#999;">含欢迎饮品、河流向导、毛巾、淋浴、午餐、保险 | 中途瀑布停留 | 终点免费泳池</span></td></tr>
+        <tr><td>傍晚</td><td>🚿 冲洗更衣，前往 Seminyak</td></tr>
+        <tr><td>晚间</td><td>🍽️ Santanera Bali 晚餐<br><span style="font-size:10px;color:#999;">巴厘岛知名现代融合餐厅</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="img-row">
+    <img src="https://picsum.photos/seed/bali-rafting/800/500" alt="巴厘岛T河漂流">
+    <img src="https://picsum.photos/seed/santanera/800/500" alt="Santanera Bali">
+  </div>
+
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-label">DAY 4 · 8/31（周日）</span>
+      <span class="day-theme">自由时光 · 返程</span>
+    </div>
+    <div class="day-card-body">
+      <table>
+        <tr><td>上午</td><td>🍳 别墅Brunch，自由活动</td></tr>
+        <tr><td>下午</td><td>🚐 专车送机（2辆 Toyota Hiace + 1行李车）</td></tr>
+        <tr><td>下午</td><td>✈️ 搭乘国泰航空 CX784 航班返程（巴厘岛 → 香港）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="map-box" style="margin-top:20px;">
+    <div class="route-line" style="font-size:12px;">
+      🌊 巴厘岛四大经典体验 · 一趟旅程全部解锁<br><br>
+      🏍️ 丛林ATV &nbsp;→&nbsp; 🌅 沙滩日落 &nbsp;→&nbsp; 🌊 激情漂流 &nbsp;→&nbsp; 🍽️ 融合美食
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ HIGHLIGHTS ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">05</span>行程亮点</h2>
+
+  <img class="hero-img" src="https://picsum.photos/seed/bali-highlights/800/400" alt="巴厘岛亮点" style="margin-bottom:20px;">
+
+  <div class="hl-grid">
+    <div class="hl-item">
+      <h4>Kuber ATV Pack A</h4>
+      <p>1.5小时丛林驰骋，穿越隧道、瀑布、稻田和趣味下山小径。专业向导全程陪伴，含安全培训、全套防护装备及午餐。</p>
+    </div>
+    <div class="hl-item">
+      <h4>土豆头 Beach Club</h4>
+      <p>荣登 World 50 Best Bar & Hotel 榜单的巴厘岛传奇沙滩俱乐部。日落时分、沙滩躺椅、音乐、美酒——完美的热带黄昏。</p>
+    </div>
+    <div class="hl-item">
+      <h4>T河漂流</h4>
+      <p>巴厘岛最刺激的漂流体验之一，2.5小时穿越热带雨林峡谷，中途在瀑布处停留。专业河流向导 + 全险覆盖。</p>
+    </div>
+    <div class="hl-item">
+      <h4>Santanera Bali</h4>
+      <p>巴厘岛当红现代融合餐厅，主厨将拉美与东南亚风味巧妙结合，是美食爱好者的必访之地。</p>
+    </div>
+    <div class="hl-item">
+      <h4>私人别墅群</h4>
+      <p>三栋毗邻的 Dea Villas 别墅，兼具隐私与共享空间。私人泳池、热带花园、每日早餐、别墅烧烤晚宴。</p>
+    </div>
+    <div class="hl-item">
+      <h4>国泰直飞</h4>
+      <p>香港直飞巴厘岛，舒适便捷。全程专车接送机，2辆 Toyota Hiace + 专用行李车。</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:20px;margin-top:28px;">实用贴士</h2>
+  <table class="overview-table" style="margin-top:12px;">
+    <tr><th>类别</th><th>详情</th></tr>
+    <tr><td>时差</td><td>巴厘岛与香港/北京无时差（GMT+8）</td></tr>
+    <tr><td>货币</td><td>印尼盾 IDR（建议携带少量现金 + 信用卡，大部分场所支持刷卡）</td></tr>
+    <tr><td>交通</td><td>全程专车接送，Ubud 区域单程约1–1.5小时</td></tr>
+    <tr><td>8月天气</td><td>25–30°C，干季，阳光充足。偶有阵雨，建议携带防晒和薄外套</td></tr>
+    <tr><td>着装</td><td>热带度假风，ATV/漂流建议速干运动服 + 防晒装备。沙滩俱乐部 smart casual</td></tr>
+    <tr><td>必备物品</td><td>高倍防晒霜、墨镜、泳衣、驱蚊液、防水手机袋（漂流用）</td></tr>
+  </table>
+</div>
+
+<!-- ═══════════ COST BREAKDOWN ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">06</span>费用明细</h2>
+
+  <div class="cost-summary">
+    <div class="total-label">团队总计（19人）</div>
+    <div class="total">HKD 192,836</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">含 Agency Service Charge 10%</div>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>项目</th><th style="text-align:right;">单价 HKD</th><th style="text-align:center;width:50px;">数量</th><th style="text-align:right;">合计 HKD</th></tr>
+
+    <tr class="section-header"><td colspan="4">交通</td></tr>
+    <tr><td>接送机（2×Hiace + 行李车）</td><td style="text-align:right;">1,424.50</td><td style="text-align:center;">2</td><td style="text-align:right;">2,849</td></tr>
+    <tr><td>ATV 17人接送</td><td style="text-align:right;">50</td><td style="text-align:center;">17</td><td style="text-align:right;">850</td></tr>
+
+    <tr class="section-header"><td colspan="4">住宿</td></tr>
+    <tr><td>Dea Villas 三栋别墅（3晚）</td><td style="text-align:right;">59,594.65</td><td style="text-align:center;">1</td><td style="text-align:right;">59,595</td></tr>
+    <tr><td>别墅杂费（Cafe + Foot Massage）</td><td style="text-align:right;">726.52</td><td style="text-align:center;">1</td><td style="text-align:right;">727</td></tr>
+
+    <tr class="section-header"><td colspan="4">活动体验</td></tr>
+    <tr><td>Kuber ATV Pack A 单人车</td><td style="text-align:right;">620</td><td style="text-align:center;">5</td><td style="text-align:right;">3,100</td></tr>
+    <tr><td>Kuber ATV Pack A 双人车</td><td style="text-align:right;">800</td><td style="text-align:center;">6</td><td style="text-align:right;">4,800</td></tr>
+    <tr><td>T河漂流 The Green Adventure</td><td style="text-align:right;">230</td><td style="text-align:center;">13</td><td style="text-align:right;">2,990</td></tr>
+
+    <tr class="section-header"><td colspan="4">餐饮</td></tr>
+    <tr><td>Day1 海鲜烧烤晚宴 + 别墅3日软饮</td><td style="text-align:right;">8,406</td><td style="text-align:center;">1</td><td style="text-align:right;">8,406</td></tr>
+    <tr><td>Day2 土豆头 Beach Club（5人/组×4）</td><td style="text-align:right;">2,100</td><td style="text-align:center;">4</td><td style="text-align:right;">8,400</td></tr>
+    <tr><td>Day3 Santanera Bali 预约订金</td><td style="text-align:right;">1,453</td><td style="text-align:center;">1</td><td style="text-align:right;">1,453</td></tr>
+
+    <tr class="section-header"><td colspan="4">机票 &amp; 保险</td></tr>
+    <tr><td>机票 CX785 / CX784（19人）</td><td style="text-align:right;">4,603</td><td style="text-align:center;">19</td><td style="text-align:right;">87,457</td></tr>
+    <tr><td>机票退票（3人）</td><td style="text-align:right;">-4,603</td><td style="text-align:center;">3</td><td style="text-align:right;">-13,809</td></tr>
+    <tr><td>机票退票手续费</td><td style="text-align:right;">4,308.93</td><td style="text-align:center;">1</td><td style="text-align:right;">4,309</td></tr>
+    <tr><td>旅行保险（19人）</td><td style="text-align:right;">220</td><td style="text-align:center;">19</td><td style="text-align:right;">4,180</td></tr>
+
+    <tr class="subtotal"><td colspan="3">小计</td><td style="text-align:right;">175,306</td></tr>
+    <tr><td colspan="3" style="color:#999;">Agency Service Charge 10%</td><td style="text-align:right;">17,530</td></tr>
+    <tr class="grand-total"><td colspan="3">总计</td><td style="text-align:right;">HKD 192,836</td></tr>
+  </table>
+
+  <div class="footer-note" style="margin-top:16px;">
+    * 以上费用为团队总计，含税及服务费。<br>
+    * 机票退票及手续费按实际发生计算。
+  </div>
+</div>
+
+<!-- ═══════════ SUMMARY ═══════════ -->
+<div class="page page-summary">
+  <h2><span class="num" style="color:rgba(255,255,255,0.5);">07</span>旅途终章</h2>
+
+  <div class="journey-text">
+    从仓古稻田的晨光到水明漾的落日余晖<br>
+    从丛林 ATV 的引擎轰鸣到 T 河的激流勇进<br>
+    从别墅烧烤的烟火气到土豆头的沙滩旋律<br>
+    <br>
+    四天三夜 · 十九人同行 · 一座岛屿<br>
+    <br>
+    <span style="font-size:13px;opacity:0.7;">
+      巴厘岛教会我们放慢脚步<br>
+      也教会我们纵情驰骋
+    </span>
+  </div>
+
+  <div class="footer-note">
+    Wildroad Travel · 野路逸行<br>
+    CMBI 2026 巴厘岛激励之旅 · 2026年8月28日–31日<br>
+    本手册为定制行程，实际安排以最终确认为准。<br>
+    ATV、漂流活动请听从专业向导安排，确保安全。
+  </div>
+</div>
+
+</body>
+</html>

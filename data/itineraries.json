@@ -78,5 +78,21 @@
     "brochurePath": "brochure/london-paris-9d.html",
     "createdAt": "2026-06-03",
     "versions": ["行程手册"]
+  },
+  {
+    "id": "cmbi-bali-2026",
+    "title": "CMBI 2026 巴厘岛激励之旅",
+    "subtitle": "BALI INCENTIVE TOUR · 4天3晚 · 19人同行",
+    "days": 4,
+    "price": null,
+    "priceNote": "团队定制 · HKD 192,836（19人总计）",
+    "brand": "Wildroad Travel · 野路逸行",
+    "regions": ["印度尼西亚", "巴厘岛", "Canggu", "Ubud", "Seminyak"],
+    "tags": ["巴厘岛", "激励旅行", "ATV", "漂流", "沙滩俱乐部", "私人别墅", "国泰直飞"],
+    "description": "丛林ATV驰骋、T河激流勇进、土豆头沙滩日落——四天三夜巴厘岛热带冒险，国泰直飞，三栋私人别墅。",
+    "coverImage": "https://picsum.photos/seed/bali-overview/800/400",
+    "brochurePath": "brochure/cmbi-bali-2026.html",
+    "createdAt": "2026-06-04",
+    "versions": ["行程手册"]
   }
 ]

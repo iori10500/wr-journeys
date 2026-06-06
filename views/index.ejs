@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'en' ? 'Curated global luxury custom itineraries. Direct hotel contracts, private journeys, 24/7 concierge.' : '精選全球奢華定制行程，奢華酒店直簽，私人定制，24小時旅行管家服務。' %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= lang === 'en' ? 'Curated global luxury custom itineraries.' : '精選全球奢華定制行程，奢華酒店直簽，私人定制。' %>">
+  <meta property="og:image" content="https://itinerary.wildroadgroup.com/<%= itineraries[0] ? itineraries[0].coverImage : '' %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/<%= lang === 'en' ? '?lang=en' : '' %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WR Travel">
+  <meta property="og:locale" content="<%= lang === 'en' ? 'en_US' : 'zh_CN' %>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= lang === 'en' ? 'Curated global luxury custom itineraries.' : '精選全球奢華定制行程。' %>">
+  <meta name="twitter:image" content="https://itinerary.wildroadgroup.com/<%= itineraries[0] ? itineraries[0].coverImage : '' %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/">
+  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">

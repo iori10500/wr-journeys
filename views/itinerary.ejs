@@ -4,6 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+  <meta name="description" content="<%= itinerary ? (lang === 'en' ? (itinerary.description_en || '') : itinerary.description) : '' %>">
+  <% if (itinerary) { %>
+  <meta property="og:title" content="<%= lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title %> - WR Travel">
+  <meta property="og:description" content="<%= lang === 'en' ? (itinerary.description_en || '') : itinerary.description %>">
+  <meta property="og:image" content="https://itinerary.wildroadgroup.com/<%= itinerary.coverImage %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/<%= itinerary.id %><%= lang === 'en' ? '?lang=en' : '' %>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title %> - WR Travel">
+  <meta name="twitter:description" content="<%= lang === 'en' ? (itinerary.description_en || '') : itinerary.description %>">
+  <meta name="twitter:image" content="https://itinerary.wildroadgroup.com/<%= itinerary.coverImage %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/<%= itinerary.id %>">
+  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/<%= itinerary.id %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/<%= itinerary.id %>?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/<%= itinerary.id %>">
+  <% } %>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WR Travel">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">

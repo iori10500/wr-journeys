@@ -106,6 +106,29 @@ app.get('/api/itineraries', (req, res) => {
   res.json(filtered);
 });
 
+// Sitemap
+app.get('/sitemap.xml', (req, res) => {
+  const baseUrl = 'https://itinerary.wildroadgroup.com';
+  const pages = [
+    { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'weekly' },
+    { loc: `${baseUrl}/?lang=en`, priority: '0.9', changefreq: 'weekly' },
+  ];
+  itineraries.forEach(item => {
+    pages.push({ loc: `${baseUrl}/${item.id}`, priority: '0.8', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/${item.id}?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  });
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${pages.map(p => `  <url>
+    <loc>${p.loc}</loc>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+  res.type('application/xml').send(xml);
+});
+
 // Homepage route
 app.get('/', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';

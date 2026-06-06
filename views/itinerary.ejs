@@ -22,6 +22,27 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WR Travel">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <% if (itinerary) { %>
+  <script type="application/ld+json">
+  <%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title,
+    "description": lang === 'en' ? (itinerary.description_en || itinerary.description) : itinerary.description,
+    "touristType": "Luxury",
+    "duration": itinerary.days + "D" + (itinerary.days - 1) + "N",
+    "image": "https://itinerary.wildroadgroup.com/" + itinerary.coverImage,
+    "url": "https://itinerary.wildroadgroup.com/" + itinerary.id,
+    "provider": {
+      "@type": "TravelAgency",
+      "name": itinerary.brand,
+      "url": "https://wr-travel.com"
+    },
+    "areaServed": (lang === 'en' ? (itinerary.regions_en || itinerary.regions) : itinerary.regions).map(function(r) { return { "@type": "City", "name": r } }),
+    "includes": (lang === 'en' ? (itinerary.tags_en || itinerary.tags) : itinerary.tags).map(function(t) { return { "@type": "TouristAttraction", "name": t } })
+  }) %>
+  </script>
+  <% } %>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">

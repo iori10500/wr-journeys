@@ -502,10 +502,11 @@
       },
       t(key) { return this.strings[this.current][key] || key; },
       toggle() {
-        this.current = this.current === 'zh' ? 'en' : 'zh';
-        localStorage.setItem('wr_lang', this.current);
-        applyTranslations();
-        updateSearchCount();
+        const next = this.current === 'zh' ? 'en' : 'zh';
+        localStorage.setItem('wr_lang', next);
+        const url = new URL(window.location);
+        url.searchParams.set('lang', next);
+        window.location = url.toString();
       }
     };
 

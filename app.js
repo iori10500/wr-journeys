@@ -105,28 +105,32 @@ app.get('/api/itineraries', (req, res) => {
 
 // Homepage route
 app.get('/', (req, res) => {
-  res.render('index', { 
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  res.render('index', {
     itineraries: itineraries,
-    title: 'WR Travel · 行程手册'
+    title: lang === 'en' ? 'WR Travel · Itineraries' : 'WR Travel · 行程手册',
+    lang: lang
   });
 });
 
 // Individual itinerary page
 app.get('/:id', (req, res) => {
   const id = req.params.id;
-  
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+
   // Skip requests for static assets and API
   if (id.startsWith('api/') || id.includes('.')) {
     return res.status(404).send('Not found');
   }
-  
+
   const itinerary = itineraries.find(item => item.id === id);
-  
+
   if (!itinerary) {
     return res.status(404).render('itinerary', {
       itinerary: null,
       brochureHtml: null,
-      title: '未找到 - WR Travel'
+      title: lang === 'en' ? 'Not Found - WR Travel' : '未找到 - WR Travel',
+      lang: lang
     });
   }
   
@@ -147,7 +151,8 @@ app.get('/:id', (req, res) => {
   res.render('itinerary', {
     itinerary: itinerary,
     brochureContent: brochureContent,
-    title: itinerary.title + ' - WR Travel'
+    title: itinerary.title + ' - WR Travel',
+    lang: lang
   });
 });
 

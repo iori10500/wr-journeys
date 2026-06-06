@@ -214,14 +214,14 @@
 <body>
 
   <!-- Language Toggle -->
-  <button id="langToggle" onclick="toggleLang()" class="lang-toggle" data-i18n-attr="textContent:lang_switch">EN</button>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" data-i18n="back_to_list">← 返回列表</a>
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? '← Back to list' : '← 返回列表' %></a>
     <span class="title"><%= itinerary ? (lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title) : (lang === 'en' ? 'Not Found' : '未找到行程') %></span>
     <% if (itinerary) { %>
-    <a href="/pdfs/<%= itinerary.id %>.pdf" class="download-btn" download data-i18n="download_pdf">📥 下载PDF</a>
+    <a href="/pdfs/<%= itinerary.id %>.pdf" class="download-btn" download><%= lang === 'en' ? '📥 Download PDF' : '📥 下载PDF' %></a>
     <% } else { %>
     <span></span>
     <% } %>
@@ -268,70 +268,25 @@
       </div>
     <% } else { %>
       <div class="not-found">
-        <h2 data-i18n="not_found_title">行程未找到</h2>
-        <p data-i18n="not_found_desc">该行程手册不存在或已被移除</p>
-        <a href="/" data-i18n="back_to_home">← 返回首页浏览其他行程</a>
+        <h2><%= lang === 'en' ? 'Itinerary Not Found' : '行程未找到' %></h2>
+        <p><%= lang === 'en' ? 'This itinerary does not exist or has been removed' : '该行程手册不存在或已被移除' %></p>
+        <a href="/<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? '← Back to home' : '← 返回首页浏览其他行程' %></a>
       </div>
     <% } %>
   </div>
 
   <div class="footer">
-    <strong>WanderWay Travel</strong> · <span data-i18n="itinerary_footer">全球奢华定制旅行</span>
+    <strong>WanderWay Travel</strong> · <%= lang === 'en' ? 'Global Luxury Custom Travel' : '全球奢华定制旅行' %>
   </div>
 
 <script>
-  // =========== i18n ===========
-  const i18n = {
-    current: (() => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const fromUrl = urlParams.get('lang');
-      if (fromUrl) { localStorage.setItem('wr_lang', fromUrl); return fromUrl; }
-      return localStorage.getItem('wr_lang') || 'zh';
-    })(),
-    strings: {
-      zh: {
-        back_to_list: '← 返回列表',
-        download_pdf: '📥 下载PDF',
-        not_found_title: '行程未找到',
-        not_found_desc: '该行程手册不存在或已被移除',
-        back_to_home: '← 返回首页浏览其他行程',
-        itinerary_footer: '全球奢华定制旅行',
-        lang_switch: 'EN',
-      },
-      en: {
-        back_to_list: '← Back to list',
-        download_pdf: '📥 Download PDF',
-        not_found_title: 'Itinerary Not Found',
-        not_found_desc: 'This itinerary does not exist or has been removed',
-        back_to_home: '← Back to home',
-        itinerary_footer: 'Global Luxury Custom Travel',
-        lang_switch: '中',
-      }
-    },
-    t(key) { return this.strings[this.current][key] || key; },
-    toggle() {
-      const next = this.current === 'zh' ? 'en' : 'zh';
-      localStorage.setItem('wr_lang', next);
-      const url = new URL(window.location);
-      url.searchParams.set('lang', next);
-      window.location = url.toString();
-    }
-  };
-
-  function toggleLang() { i18n.toggle(); }
-
-  function applyTranslations() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (key) el.textContent = i18n.t(key);
-    });
-    document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-      const parts = el.getAttribute('data-i18n-attr').split(':');
-      if (parts.length === 2) el[parts[0]] = i18n.t(parts[1]);
-    });
+  function toggleLang() {
+    const url = new URL(window.location);
+    const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
+    localStorage.setItem('wr_lang', next);
+    url.searchParams.set('lang', next);
+    window.location = url.toString();
   }
-
-  applyTranslations();
 </script>
 
 </body>

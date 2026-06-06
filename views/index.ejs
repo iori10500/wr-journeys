@@ -394,14 +394,14 @@
 <body>
 
   <!-- Language Toggle -->
-  <button id="langToggle" onclick="toggleLang()" class="lang-toggle" data-i18n-attr="textContent:lang_switch">EN</button>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-brand">WanderWay Travel</div>
-      <h1 class="hero-title" data-i18n="hero_title">行程手册</h1>
-      <p class="hero-sub" data-i18n="hero_sub">精選全球奢華定制行程 · 開啟您的非凡旅行</p>
+      <h1 class="hero-title"><%= lang === 'en' ? 'Itineraries' : '行程手册' %></h1>
+      <p class="hero-sub"><%= lang === 'en' ? 'Curated Global Luxury Journeys · Begin Your Extraordinary Travel' : '精選全球奢華定制行程 · 開啟您的非凡旅行' %></p>
     </div>
   </section>
 
@@ -409,7 +409,7 @@
   <div class="search-section">
     <div class="search-wrapper">
       <span class="icon">🔍</span>
-      <input type="text" id="searchInput" data-i18n-attr="placeholder:search_placeholder" placeholder="搜索行程（标题、标签、目的地）" autocomplete="off">
+      <input type="text" id="searchInput" placeholder="<%= lang === 'en' ? 'Search itineraries (title, tags, destinations)' : '搜索行程（标题、标签、目的地）' %>" autocomplete="off">
       <button class="clear-btn" id="clearBtn">✕</button>
     </div>
     <div class="search-count" id="searchCount"><%= lang === 'en' ? itineraries.length + ' itineraries' : '共 ' + itineraries.length + ' 个行程' %></div>
@@ -455,7 +455,7 @@
                 <span class="card-tag"><%= tag %></span>
               <% }); %>
             </div>
-            <div class="card-cta" data-i18n="view_details">查看详情</div>
+            <div class="card-cta"><%= lang === 'en' ? 'View Details' : '查看详情' %></div>
           </div>
         </a>
       <% }); %>
@@ -464,81 +464,43 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    <strong>WanderWay Travel</strong> &middot; <span data-i18n="footer_tagline">全球奢华酒店直签 · 私人定制行程 · 24小时旅行管家服务</span>
+    <strong>WanderWay Travel</strong> &middot; <%= lang === 'en' ? 'Direct Luxury Hotel Contracts · Custom Itineraries · 24/7 Travel Concierge' : '全球奢华酒店直签 · 私人定制行程 · 24小时旅行管家服务' %>
   </div>
 
   <script>
-    // =========== i18n ===========
-    const i18n = {
-      current: (() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const fromUrl = urlParams.get('lang');
-        if (fromUrl) { localStorage.setItem('wr_lang', fromUrl); return fromUrl; }
-        return localStorage.getItem('wr_lang') || 'zh';
-      })(),
-      strings: {
-        zh: {
-          hero_title: '行程手册',
-          hero_sub: '精選全球奢華定制行程 · 開啟您的非凡旅行',
-          search_placeholder: '搜索行程（标题、标签、目的地）',
-          itinerary_count: '共 ${count} 个行程',
-          view_details: '查看详情',
-          footer_tagline: '全球奢华酒店直签 · 私人定制行程 · 24小时旅行管家服务',
-          no_results_title: '未找到相关行程',
-          no_results_desc: '请尝试其他搜索词，如"米兰"、"瑞士"、"奢华"等',
-          lang_switch: 'EN',
-        },
-        en: {
-          hero_title: 'Itineraries',
-          hero_sub: 'Curated Global Luxury Journeys · Begin Your Extraordinary Travel',
-          search_placeholder: 'Search itineraries (title, tags, destinations)',
-          itinerary_count: '${count} itineraries',
-          view_details: 'View Details',
-          footer_tagline: 'Direct Luxury Hotel Contracts · Custom Itineraries · 24/7 Travel Concierge',
-          no_results_title: 'No Results Found',
-          no_results_desc: 'Try other keywords like "Milan", "Switzerland", "Luxury"',
-          lang_switch: '中',
-        }
+    // Lightweight i18n for dynamic content (search filtering)
+    const LANG = '<%= lang %>';
+    const I18N = {
+      zh: {
+        itinerary_count: '共 ${count} 个行程',
+        no_results_title: '未找到相关行程',
+        no_results_desc: '请尝试其他搜索词，如"米兰"、"瑞士"、"奢华"等',
       },
-      t(key) { return this.strings[this.current][key] || key; },
-      toggle() {
-        const next = this.current === 'zh' ? 'en' : 'zh';
-        localStorage.setItem('wr_lang', next);
-        const url = new URL(window.location);
-        url.searchParams.set('lang', next);
-        window.location = url.toString();
+      en: {
+        itinerary_count: '${count} itineraries',
+        no_results_title: 'No Results Found',
+        no_results_desc: 'Try other keywords like "Milan", "Switzerland", "Luxury"',
       }
     };
-
+    function t(key) { return I18N[LANG][key] || key; }
     function tpl(key, vars) {
-      let s = i18n.t(key);
+      let s = t(key);
       if (vars) for (const [k, v] of Object.entries(vars)) s = s.replace('${' + k + '}', v);
       return s;
     }
 
-    function toggleLang() { i18n.toggle(); }
-
-    function applyTranslations() {
-      // data-i18n for textContent
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (key) el.textContent = i18n.t(key);
-      });
-      // data-i18n-attr for attributes like placeholder
-      document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-        const parts = el.getAttribute('data-i18n-attr').split(':');
-        if (parts.length === 2) el[parts[0]] = i18n.t(parts[1]);
-      });
+    function toggleLang() {
+      const next = LANG === 'zh' ? 'en' : 'zh';
+      localStorage.setItem('wr_lang', next);
+      const url = new URL(window.location);
+      url.searchParams.set('lang', next);
+      window.location = url.toString();
     }
 
     function updateSearchCount() {
       const visible = cards.filter(c => c.style.display !== 'none').length;
       searchCount.textContent = tpl('itinerary_count', { count: visible });
     }
-
-    applyTranslations();
-    updateSearchCount();
-    // =========== end i18n ===========
 
     const searchInput = document.getElementById('searchInput');
     const clearBtn = document.getElementById('clearBtn');
@@ -570,7 +532,7 @@
       if (count === 0) {
         emptyState = document.createElement('div');
         emptyState.className = 'empty-state';
-        emptyState.innerHTML = '<span class="emoji">🔎</span><h3>' + i18n.t('no_results_title') + '</h3><p>' + i18n.t('no_results_desc') + '</p>';
+        emptyState.innerHTML = '<span class="emoji">🔎</span><h3>' + t('no_results_title') + '</h3><p>' + t('no_results_desc') + '</p>';
         grid.appendChild(emptyState);
       }
 

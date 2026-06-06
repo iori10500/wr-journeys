@@ -201,10 +201,17 @@
     <div class="meta-item">
       📅 <strong><%= itinerary.days %>天<%= itinerary.days - 1 %>晚</strong>
     </div>
-    <% if (itinerary.price) { %>
+    <% 
+    var price = formatPrice(itinerary);
+    if (price.text) { %>
     <div class="meta-item">
-      💰 <strong><%= itinerary.price %></strong><%= itinerary.priceNote || '' %>
+      💰 <strong><%= price.text %></strong> <span style="font-size:12px;color:var(--text-light);"><%= price.sub %></span>
     </div>
+    <% if (price.discount) { %>
+    <div class="meta-item">
+      🏷️ <span class="tag" style="background:rgba(200,169,110,0.15);"><%= price.discount %></span>
+    </div>
+    <% } %>
     <% } %>
     <div class="meta-item">
       🏷️ 

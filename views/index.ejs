@@ -397,10 +397,15 @@
             <div class="gradient"></div>
             <div class="badge-days"><%= item.days %>天<%= item.days - 1 %>晚</div>
             <div class="brand-tag"><%= item.brand %></div>
-            <% if (item.price) { %>
-              <div class="price-tag"><%= item.price %><small><%= item.priceNote || '' %></small></div>
-            <% } else if (item.priceNote) { %>
-              <div class="price-tag" style="font-size:14px;font-weight:500;"><%= item.priceNote %></div>
+            <% 
+            var price = formatPrice(item);
+            if (price.text) { 
+              var priceClass = item.priceType === 'custom' ? 'font-size:14px;font-weight:500;' : '';
+            %>
+              <div class="price-tag" style="<%= priceClass %>"><%= price.text %><small> <%= price.sub %></small></div>
+              <% if (price.discount) { %>
+                <div class="price-tag" style="top:auto;bottom:48px;font-size:11px;background:rgba(200,169,110,0.85);padding:3px 10px;border-radius:20px;right:16px;color:#fff;text-shadow:none;font-weight:600;"><%= price.discount %></div>
+              <% } %>
             <% } %>
           </div>
           <div class="card-body">

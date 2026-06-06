@@ -412,7 +412,7 @@
       <input type="text" id="searchInput" data-i18n-attr="placeholder:search_placeholder" placeholder="搜索行程（标题、标签、目的地）" autocomplete="off">
       <button class="clear-btn" id="clearBtn">✕</button>
     </div>
-    <div class="search-count" id="searchCount" data-i18n="itinerary_count">共 <%= itineraries.length %> 个行程</div>
+    <div class="search-count" id="searchCount"><%= lang === 'en' ? itineraries.length + ' itineraries' : '共 ' + itineraries.length + ' 个行程' %></div>
   </div>
 
   <!-- GRID -->

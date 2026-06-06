@@ -418,19 +418,25 @@
   <!-- GRID -->
   <div class="container">
     <div class="grid" id="itineraryGrid">
-      <% itineraries.forEach(function(item) { %>
-        <a class="card" href="/<%= item.id %>" 
-           data-title="<%= item.title %>" 
-           data-tags="<%= (item.tags || []).join(',') %>"
-           data-regions="<%= (item.regions || []).join(',') %>">
+      <% itineraries.forEach(function(item) {
+        var isEn = lang === 'en';
+        var cardTitle = isEn ? (item.title_en || item.title) : item.title;
+        var cardSubtitle = isEn ? (item.subtitle_en || item.subtitle) : item.subtitle;
+        var cardDesc = isEn ? (item.description_en || item.description) : item.description;
+        var cardTags = isEn ? (item.tags_en || item.tags) : item.tags;
+      %>
+        <a class="card" href="/<%= item.id %><%= isEn ? '?lang=en' : '' %>"
+           data-title="<%= item.title %> <%= item.title_en || '' %>"
+           data-tags="<%= (item.tags || []).join(',') %>,<%= (item.tags_en || []).join(',') %>"
+           data-regions="<%= (item.regions || []).join(',') %>,<%= (item.regions_en || []).join(',') %>">
           <div class="card-image">
-            <img src="/<%= item.coverImage %>" alt="<%= item.title %>" loading="lazy"
+            <img src="/<%= item.coverImage %>" alt="<%= cardTitle %>" loading="lazy"
                  onerror="this.style.display='none'">
             <div class="gradient"></div>
-            <div class="badge-days"><%= item.days %>天<%= item.days - 1 %>晚</div>
+            <div class="badge-days"><%= isEn ? item.days + 'D ' + (item.days - 1) + 'N' : item.days + '天' + (item.days - 1) + '晚' %></div>
             <div class="brand-tag"><%= item.brand %></div>
-            <% 
-            var price = formatPrice(item);
+            <%
+            var price = formatPrice(item, lang);
             if (price.text) { 
               var priceClass = item.priceType === 'custom' ? 'font-size:14px;font-weight:500;' : '';
             %>
@@ -441,11 +447,11 @@
             <% } %>
           </div>
           <div class="card-body">
-            <div class="card-title"><%= item.title %></div>
-            <div class="card-subtitle"><%= item.subtitle %></div>
-            <div class="card-desc"><%= item.description %></div>
+            <div class="card-title"><%= cardTitle %></div>
+            <div class="card-subtitle"><%= cardSubtitle %></div>
+            <div class="card-desc"><%= cardDesc %></div>
             <div class="card-tags">
-              <% (item.tags || []).slice(0, 4).forEach(function(tag) { %>
+              <% (cardTags || []).slice(0, 4).forEach(function(tag) { %>
                 <span class="card-tag"><%= tag %></span>
               <% }); %>
             </div>

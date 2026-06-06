@@ -218,8 +218,8 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    <a href="/" data-i18n="back_to_list">← 返回列表</a>
-    <span class="title"><%= itinerary ? itinerary.title : (lang === 'en' ? 'Not Found' : '未找到行程') %></span>
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" data-i18n="back_to_list">← 返回列表</a>
+    <span class="title"><%= itinerary ? (lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title) : (lang === 'en' ? 'Not Found' : '未找到行程') %></span>
     <% if (itinerary) { %>
     <a href="/pdfs/<%= itinerary.id %>.pdf" class="download-btn" download data-i18n="download_pdf">📥 下载PDF</a>
     <% } else { %>
@@ -231,10 +231,10 @@
   <!-- METADATA BAR -->
   <div class="meta-bar">
     <div class="meta-item">
-      📅 <strong><%= itinerary.days %>天<%= itinerary.days - 1 %>晚</strong>
+      📅 <strong><%= lang === 'en' ? itinerary.days + 'D ' + (itinerary.days - 1) + 'N' : itinerary.days + '天' + (itinerary.days - 1) + '晚' %></strong>
     </div>
-    <% 
-    var price = formatPrice(itinerary);
+    <%
+    var price = formatPrice(itinerary, lang);
     if (price.text) { %>
     <div class="meta-item">
       💰 <strong><%= price.text %></strong> <span style="font-size:12px;color:var(--text-light);"><%= price.sub %></span>
@@ -248,7 +248,8 @@
     <div class="meta-item">
       🏷️ 
       <div class="tags">
-        <% (itinerary.tags || []).forEach(function(tag) { %>
+        <% var detailTags = lang === 'en' ? (itinerary.tags_en || itinerary.tags) : itinerary.tags;
+        (detailTags || []).forEach(function(tag) { %>
           <span class="tag"><%= tag %></span>
         <% }); %>
       </div>

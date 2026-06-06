@@ -28,32 +28,35 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Format price for display
-function formatPrice(itinerary) {
+function formatPrice(itinerary, lang) {
   if (!itinerary || itinerary.priceType === 'custom') {
-    return { text: '定制报价', sub: 'Custom Quote', discount: null };
+    return lang === 'en'
+      ? { text: 'Custom Quote', sub: '', discount: null }
+      : { text: '定制报价', sub: 'Custom Quote', discount: null };
   }
 
   const v = itinerary.priceValue;
   const curr = itinerary.priceCurrency;
+  const en = lang === 'en';
   let text = '';
   let sub = '';
   let discount = null;
 
   if (itinerary.priceDiscount) {
-    discount = `含 ${Math.round(itinerary.priceDiscount * 100)}% 折扣`;
+    const pct = Math.round(itinerary.priceDiscount * 100);
+    discount = en ? `${pct}% off` : `含 ${pct}% 折扣`;
   }
 
   if (curr === 'CNY') {
     const formatted = v.toLocaleString('zh-CN');
     if (itinerary.priceType === 'perPerson') {
-      text = `¥${formatted}/人起`;
+      text = en ? `¥${formatted}/person` : `¥${formatted}/人起`;
       sub = `from ¥${formatted}/person`;
     } else {
-      text = `¥${formatted}/团${itinerary.priceGroupSize ? ` (${itinerary.priceGroupSize}人)` : ''}`;
+      text = `¥${formatted}${en ? '/group' : '/团'}${itinerary.priceGroupSize ? ` (${itinerary.priceGroupSize}${en ? 'pax' : '人'})` : ''}`;
       sub = text;
     }
   } else {
-    // Convert to CNY display
     const rates = { USD: 6.7961, HKD: 0.8673 };
     const rate = rates[curr] || 1;
     const cnyValue = Math.round(v * rate);
@@ -61,10 +64,10 @@ function formatPrice(itinerary) {
     const origFormatted = v.toLocaleString('zh-CN');
 
     if (itinerary.priceType === 'perPerson') {
-      text = `≈¥${cnyFormatted}/人起`;
+      text = `≈¥${cnyFormatted}${en ? '/person' : '/人起'}`;
       sub = `${curr} ${origFormatted}/person`;
     } else {
-      text = `≈¥${cnyFormatted}/团${itinerary.priceGroupSize ? ` (${itinerary.priceGroupSize}人)` : ''}`;
+      text = `≈¥${cnyFormatted}${en ? '/group' : '/团'}${itinerary.priceGroupSize ? ` (${itinerary.priceGroupSize}${en ? 'pax' : '人'})` : ''}`;
       sub = `${curr} ${origFormatted}`;
     }
   }
@@ -72,7 +75,7 @@ function formatPrice(itinerary) {
   return { text, sub, discount };
 }
 
-// Make helper available in templates
+// Make helper available in templates — accepts optional lang param
 app.locals.formatPrice = formatPrice;
 
 // Load itineraries data

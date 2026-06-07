@@ -118,6 +118,14 @@ app.get('/sitemap.xml', (req, res) => {
     pages.push({ loc: `${baseUrl}/${item.id}`, priority: '0.8', changefreq: 'monthly' });
     pages.push({ loc: `${baseUrl}/${item.id}?lang=en`, priority: '0.7', changefreq: 'monthly' });
   });
+  // Add destinations
+  const countries = getCountries();
+  pages.push({ loc: `${baseUrl}/destinations`, priority: '0.9', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/destinations?lang=en`, priority: '0.8', changefreq: 'monthly' });
+  countries.forEach(c => {
+    pages.push({ loc: `${baseUrl}/destinations/${c.slug}`, priority: '0.8', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/destinations/${c.slug}?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -207,7 +215,51 @@ app.get('/destinations/:country', (req, res) => {
   });
 });
 
+// Themes listing
+app.get('/themes', (req, res) => {
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const themeMap = {
+    'luxury': { zh: '奢华旅行', en: 'Luxury Travel', icon: '💎' },
+    'safari': { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁' },
+    'cultural': { zh: '人文探索', en: 'Cultural', icon: '🏛️' },
+    'adventure': { zh: '户外冒险', en: 'Adventure', icon: '🏔️' },
+    'island': { zh: '海岛度假', en: 'Island Getaway', icon: '🏝️' },
+    'city': { zh: '城市观光', en: 'City Tour', icon: '🏙️' },
+  };
+  const themes = Object.entries(themeMap).map(([slug, info]) => {
+    const trips = itineraries.filter(t =>
+      (t.tags || []).some(tag => tag.toLowerCase().includes(slug)) ||
+      (t.tags_en || []).some(tag => tag.toLowerCase().includes(slug))
+    );
+    return { slug, ...info, count: trips.length };
+  }).filter(t => t.count > 0);
+  res.render('themes', { themes, lang, title: lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' });
+});
+
+// Theme detail
+app.get('/themes/:theme', (req, res) => {
+  const theme = req.params.theme;
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const themeMap = {
+    'luxury': { zh: '奢华旅行', en: 'Luxury Travel' },
+    'safari': { zh: 'Safari 探险', en: 'Safari Adventure' },
+    'cultural': { zh: '人文探索', en: 'Cultural' },
+    'adventure': { zh: '户外冒险', en: 'Adventure' },
+    'island': { zh: '海岛度假', en: 'Island Getaway' },
+    'city': { zh: '城市观光', en: 'City Tour' },
+  };
+  const info = themeMap[theme];
+  if (!info) return res.status(404).send('Not found');
+  const trips = itineraries.filter(t =>
+    (t.tags || []).some(tag => tag.toLowerCase().includes(theme)) ||
+    (t.tags_en || []).some(tag => tag.toLowerCase().includes(theme))
+  );
+  if (!trips.length) return res.status(404).send('No trips found');
+  res.render('theme-detail', { theme, info, trips, lang, title: (lang === 'en' ? info.en : info.zh) + ' | WR Travel' });
+});
+
 // Homepage route
+
 app.get('/', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   res.render('index', {

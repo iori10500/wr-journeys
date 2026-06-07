@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' %></title>
+  <meta name="description" content="<%= lang === 'en' ? 'Explore WR Travel curated itineraries by theme — safari, cultural, honeymoon & more' : '按主题探索野路逸行精选行程 — 野奢探险、人文探索、蜜月之旅等' %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/themes">
+  <meta property="og:title" content="<%= lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/themes">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <style>
+    .theme-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); padding: 60px 24px 48px; text-align: center; margin-bottom: 40px; }
+    .theme-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 36px; margin-bottom: 8px; }
+    .theme-hero p { color: rgba(255,255,255,0.6); font-size: 14px; }
+    .theme-grid { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .theme-card { background: #fff; border-radius: 14px; padding: 30px 24px; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: transform 0.2s; }
+    .theme-card:hover { transform: translateY(-4px); }
+    .theme-card .icon { font-size: 48px; margin-bottom: 12px; }
+    .theme-card h3 { font-size: 18px; margin: 0 0 4px; }
+    .theme-card p { font-size: 13px; color: #888; margin: 0; }
+  </style>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <div class="theme-hero">
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <h1><%= lang === 'en' ? 'Travel Themes' : '旅行主题' %></h1>
+    <p><%= lang === 'en' ? 'Discover our curated itineraries by theme' : '按主题探索我们的精选行程' %></p>
+  </div>
+
+  <div class="theme-grid">
+    <% themes.forEach(function(t) { %>
+      <a href="/themes/<%= t.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="theme-card">
+        <div class="icon"><%= t.icon %></div>
+        <h3><%= lang === 'en' ? t.en : t.zh %></h3>
+        <p><%= t.count %> <%= lang === 'en' ? 'itineraries' : '个行程' %></p>
+      </a>
+    <% }); %>
+  </div>
+
+  <%- include("partials/footer") %>
+  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+</body>
+</html>

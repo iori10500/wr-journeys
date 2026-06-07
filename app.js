@@ -130,6 +130,83 @@ ${pages.map(p => `  <url>
   res.type('application/xml').send(xml);
 });
 
+// Load destinations data
+const destinationsPath = path.join(__dirname, 'data', 'destinations.json');
+let destinationsData = {};
+try {
+  destinationsData = JSON.parse(fs.readFileSync(destinationsPath, 'utf-8'));
+} catch (err) {
+  console.error('Failed to load destinations:', err.message);
+}
+
+// Extract unique countries from itineraries
+function getCountries() {
+  const countryMap = {
+    switzerland: { zh: '瑞士', en: 'Switzerland', flag: '🇨🇭' },
+    tanzania: { zh: '坦桑尼亚', en: 'Tanzania', flag: '🇹🇿' },
+    italy: { zh: '意大利', en: 'Italy', flag: '🇮🇹' },
+    uk: { zh: '英国', en: 'United Kingdom', flag: '🇬🇧' },
+    france: { zh: '法国', en: 'France', flag: '🇫🇷' },
+    indonesia: { zh: '印度尼西亚', en: 'Indonesia', flag: '🇮🇩' },
+    thailand: { zh: '泰国', en: 'Thailand', flag: '🇹🇭' },
+  };
+  const found = {};
+  itineraries.forEach(item => {
+    (item.regions || []).forEach(r => {
+      const slug = r.toLowerCase().replace(/\s+/g, '-');
+      if (countryMap[slug] && !found[slug]) {
+        found[slug] = {
+          slug: slug,
+          name_zh: countryMap[slug].zh,
+          name_en: countryMap[slug].en,
+          flag: countryMap[slug].flag,
+          count: itineraries.filter(i => (i.regions || []).some(ir => ir.toLowerCase().replace(/\s+/g, '-') === slug)).length
+        };
+      }
+    });
+  });
+  // Add countries from destinations.json even if no trips yet
+  Object.keys(destinationsData).forEach(slug => {
+    if (!found[slug] && countryMap[slug]) {
+      found[slug] = { slug, name_zh: countryMap[slug].zh, name_en: countryMap[slug].en, flag: countryMap[slug].flag, count: 0 };
+    }
+  });
+  return Object.values(found).sort((a,b) => b.count - a.count);
+}
+
+// Destinations listing
+app.get('/destinations', (req, res) => {
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const countries = getCountries();
+  res.render('destinations', { countries, lang, title: lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' });
+});
+
+// Destination detail
+app.get('/destinations/:country', (req, res) => {
+  const country = req.params.country.toLowerCase().replace(/\s+/g, '-');
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const destDesc = destinationsData[country];
+  if (!destDesc) return res.status(404).send('Not found');
+
+  const countryTrips = itineraries.filter(item =>
+    (item.regions || []).some(r => r.toLowerCase().replace(/\s+/g, '-') === country)
+  );
+  const countries = getCountries();
+  const dest = countries.find(c => c.slug === country);
+  const destination = {
+    slug: country,
+    name_zh: dest ? dest.name_zh : country,
+    name_en: dest ? dest.name_en : country,
+    description_zh: destDesc.zh,
+    description_en: destDesc.en,
+  };
+
+  res.render('destination-detail', {
+    destination, trips: countryTrips, lang,
+    title: (lang === 'en' ? destination.name_en : destination.name_zh) + ' | WR Travel'
+  });
+});
+
 // Homepage route
 app.get('/', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';

@@ -66,6 +66,7 @@
   <link rel="stylesheet" href="/detail.css">
 </head>
 <body>
+  <%- include("partials/header") %>
 
   <!-- Language Toggle -->
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
@@ -82,6 +83,11 @@
   </div>
 
   <% if (itinerary) { %>
+  <div class="breadcrumb-nav" style="max-width:820px;margin:0 auto;padding:12px 16px;font-size:12px;color:#888;">
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:#c8a96e;text-decoration:none;"><%= lang === 'en' ? 'Itineraries' : '行程手册' %></a>
+    <span style="margin:0 6px;">›</span>
+    <span><%= lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title %></span>
+  </div>
   <!-- METADATA BAR -->
   <div class="meta-bar">
     <div class="meta-item">
@@ -149,7 +155,8 @@
   </div>
   <% } %>
 
-  <div class="footer">
+  <%- include("partials/footer") %>
+  <div class="footer" style="display:none;">
     <strong>WanderWay Travel</strong> · <%= lang === 'en' ? 'Global Luxury Custom Travel' : '全球奢华定制旅行' %>
   </div>
 

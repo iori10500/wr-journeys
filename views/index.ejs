@@ -54,6 +54,7 @@
   <link rel="stylesheet" href="/main.css">
 </head>
 <body>
+  <%- include("partials/header") %>
 
   <!-- Language Toggle -->
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
@@ -128,7 +129,8 @@
   </div>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <%- include("partials/footer") %>
+  <div class="footer" style="display:none;">
     <strong>WanderWay Travel</strong> &middot; <%= lang === 'en' ? 'Direct Luxury Hotel Contracts · Custom Itineraries · 24/7 Travel Concierge' : '全球奢华酒店直签 · 私人定制行程 · 24小时旅行管家服务' %>
   </div>
 

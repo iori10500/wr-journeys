@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' %></title>
+  <meta name="description" content="<%= lang === 'en' ? 'Explore curated luxury travel destinations — Switzerland, Tanzania, Italy, and more' : '探索野路逸行精选奢华旅行目的地 — 瑞士、坦桑尼亚、意大利等' %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/destinations">
+  <meta property="og:title" content="<%= lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/destinations">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <script type="application/ld+json">
+  <%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": lang === 'en' ? 'Itineraries' : '行程手册', "item": "https://itinerary.wildroadgroup.com/" },
+      { "@type": "ListItem", "position": 2, "name": lang === 'en' ? 'Destinations' : '目的地', "item": "https://itinerary.wildroadgroup.com/destinations" }
+    ]
+  }) %>
+  </script>
+  <script type="application/ld+json">
+  <%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": lang === 'en' ? 'Travel Destinations' : '旅行目的地',
+    "numberOfItems": countries.length,
+    "itemListElement": countries.map(function(c, i) { return {
+      "@type": "ListItem", "position": i + 1,
+      "url": "https://itinerary.wildroadgroup.com/destinations/" + c.slug,
+      "name": lang === 'en' ? c.name_en : c.name_zh
+    }})
+  }) %>
+  </script>
+  <style>
+    .dest-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+      padding: 60px 24px 48px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .dest-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 36px; margin-bottom: 8px; }
+    .dest-hero p { color: rgba(255,255,255,0.6); font-size: 14px; }
+    .dest-grid { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .dest-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: transform 0.2s; }
+    .dest-card:hover { transform: translateY(-4px); }
+    .dest-card-header { height: 120px; background: linear-gradient(135deg, #1a1a2e, #c8a96e); display: flex; align-items: center; justify-content: center; }
+    .dest-card-header span { font-family: 'Playfair Display',serif; font-size: 48px; color: rgba(255,255,255,0.3); }
+    .dest-card-body { padding: 20px; }
+    .dest-card-body h3 { font-size: 18px; margin: 0 0 4px; }
+    .dest-card-body p { font-size: 13px; color: #888; margin: 0; }
+  </style>
+</head>
+<body>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <div class="dest-hero">
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <h1><%= lang === 'en' ? 'Destinations' : '探索目的地' %></h1>
+    <p><%= lang === 'en' ? 'Discover our curated travel destinations' : '发现我们精选的奢华旅行目的地' %></p>
+  </div>
+
+  <div class="dest-grid">
+    <% countries.forEach(function(c) { %>
+      <a href="/destinations/<%= c.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="dest-card">
+        <div class="dest-card-header"><span><%= c.flag %></span></div>
+        <div class="dest-card-body">
+          <h3><%= lang === 'en' ? c.name_en : c.name_zh %></h3>
+          <p><%= c.count %> <%= lang === 'en' ? 'itineraries' : '个行程' %></p>
+        </div>
+      </a>
+    <% }); %>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
+      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+    }
+  </script>
+</body>
+</html>

@@ -34,7 +34,7 @@
     "name": lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title,
     "description": lang === 'en' ? (itinerary.description_en || itinerary.description) : itinerary.description,
     "touristType": "Luxury",
-    "duration": itinerary.days + "D" + (itinerary.days - 1) + "N",
+    "duration": "P" + itinerary.days + "D",
     "image": "https://itinerary.wildroadgroup.com/" + itinerary.coverImage,
     "url": "https://itinerary.wildroadgroup.com/" + itinerary.id,
     "datePublished": itinerary.createdAt,

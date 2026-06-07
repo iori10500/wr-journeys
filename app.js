@@ -18,6 +18,7 @@ function extractBrochureContent(html) {
 }
 
 const app = express();
+app.disable('x-powered-by');
 const PORT = 3099;
 
 // Set EJS as view engine

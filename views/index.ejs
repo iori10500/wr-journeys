@@ -447,8 +447,11 @@
            data-tags="<%= (item.tags || []).join(',') %>,<%= (item.tags_en || []).join(',') %>"
            data-regions="<%= (item.regions || []).join(',') %>,<%= (item.regions_en || []).join(',') %>">
           <div class="card-image">
-            <img src="/<%= item.coverImage %>" alt="<%= cardTitle %>" loading="lazy" decoding="async"
-                 onerror="this.style.display='none'">
+            <picture>
+              <source srcset="/<%= item.coverImage.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
+              <img src="/<%= item.coverImage %>" alt="<%= cardTitle %>" loading="lazy" decoding="async"
+                   onerror="this.style.display='none'">
+            </picture>
             <div class="gradient"></div>
             <div class="badge-days"><%= isEn ? item.days + 'D ' + (item.days - 1) + 'N' : item.days + '天' + (item.days - 1) + '晚' %></div>
             <div class="brand-tag"><%= item.brand %></div>

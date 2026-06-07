@@ -156,7 +156,8 @@ app.get('/:id', (req, res) => {
       itinerary: null,
       brochureHtml: null,
       title: lang === 'en' ? 'Not Found - WR Travel' : '未找到 - WR Travel',
-      lang: lang
+      lang: lang,
+      itineraries: itineraries
     });
   }
   
@@ -178,7 +179,8 @@ app.get('/:id', (req, res) => {
     itinerary: itinerary,
     brochureContent: brochureContent,
     title: itinerary.title + ' - WR Travel',
-    lang: lang
+    lang: lang,
+    itineraries: itineraries
   });
 });
 

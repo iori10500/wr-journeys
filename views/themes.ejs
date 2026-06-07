@@ -12,6 +12,25 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "<%= lang === 'en' ? 'Travel Themes' : '旅行主题' %>",
+    "description": "<%= lang === 'en' ? 'Explore WR Travel curated itineraries by theme' : '按主题探索野路逸行精选行程' %>",
+    "numberOfItems": <%= themes.length %>,
+    "itemListElement": [
+      <% themes.forEach((theme, i) => { %>
+        {
+          "@type": "ListItem",
+          "position": <%= i + 1 %>,
+          "url": "https://itinerary.wildroadgroup.com/themes/<%= theme.slug %>",
+          "name": "<%= lang === 'en' ? theme.en : theme.zh %>"
+        }<%= i < themes.length - 1 ? ',' : '' %>
+      <% }) %>
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">

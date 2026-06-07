@@ -126,6 +126,20 @@ app.get('/sitemap.xml', (req, res) => {
     pages.push({ loc: `${baseUrl}/destinations/${c.slug}`, priority: '0.8', changefreq: 'monthly' });
     pages.push({ loc: `${baseUrl}/destinations/${c.slug}?lang=en`, priority: '0.7', changefreq: 'monthly' });
   });
+  // Themes
+  const themeSlugs = ['luxury', 'safari', 'cultural', 'adventure', 'island', 'city'];
+  pages.push({ loc: `${baseUrl}/themes`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/themes?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  themeSlugs.forEach(slug => {
+    const hasTrips = itineraries.some(t =>
+      (t.tags || []).some(tag => tag.toLowerCase().includes(slug)) ||
+      (t.tags_en || []).some(tag => tag.toLowerCase().includes(slug))
+    );
+    if (hasTrips) {
+      pages.push({ loc: `${baseUrl}/themes/${slug}`, priority: '0.7', changefreq: 'monthly' });
+      pages.push({ loc: `${baseUrl}/themes/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    }
+  });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">

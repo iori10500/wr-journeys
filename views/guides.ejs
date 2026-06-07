@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Travel Inspiration | WR Travel' : '旅行灵感 | 野路逸行' %></title>
+  <meta name="description" content="<%= lang === 'en' ? 'Explore travel guides, tips, and inspiration for your next luxury journey — Switzerland, Tanzania, Italy, and more' : '探索旅行指南、实用攻略与灵感，为您的下一次奢华旅程做准备 — 瑞士、坦桑尼亚、意大利等' %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/guides">
+  <meta property="og:title" content="<%= lang === 'en' ? 'Travel Inspiration | WR Travel' : '旅行灵感 | 野路逸行' %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/guides">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <script type="application/ld+json">
+  <%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": lang === 'en' ? 'Itineraries' : '行程手册', "item": "https://itinerary.wildroadgroup.com/" },
+      { "@type": "ListItem", "position": 2, "name": lang === 'en' ? 'Travel Inspiration' : '旅行灵感', "item": "https://itinerary.wildroadgroup.com/guides" }
+    ]
+  }) %>
+  </script>
+  <script type="application/ld+json">
+  <%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": lang === 'en' ? 'Travel Guides & Inspiration' : '旅行指南与灵感',
+    "numberOfItems": Object.keys(grouped).reduce(function(sum, k) { return sum + grouped[k].length; }, 0),
+    "itemListElement": Object.keys(grouped).reduce(function(arr, dest) {
+      return arr.concat(grouped[dest].map(function(g, i) {
+        return { "@type": "ListItem", "position": arr.length + i + 1, "url": "https://itinerary.wildroadgroup.com/guides/" + g.slug, "name": lang === 'en' ? g.title_en : g.title_zh };
+      }));
+    }, [])
+  }) %>
+  </script>
+  <style>
+    .guides-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+      padding: 60px 24px 48px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .guides-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 36px; margin-bottom: 8px; }
+    .guides-hero p { color: rgba(255,255,255,0.6); font-size: 14px; }
+    .guides-container { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+    .guides-group { margin-bottom: 40px; }
+    .guides-group-title {
+      font-size: 22px; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 2px solid #e8e0d0; display: flex; align-items: center; gap: 8px;
+    }
+    .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .guide-card {
+      background: #fff; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-decoration: none; color: inherit;
+      transition: transform 0.2s; display: flex; flex-direction: column;
+    }
+    .guide-card:hover { transform: translateY(-4px); }
+    .guide-card-banner {
+      height: 80px; display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display',serif; font-size: 28px; color: rgba(255,255,255,0.4);
+    }
+    .guide-card-body { padding: 16px 20px; flex: 1; display: flex; flex-direction: column; }
+    .guide-card-body h3 { font-size: 15px; margin: 0 0 8px; line-height: 1.5; flex: 1; }
+    .guide-card-body .guide-type {
+      display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px;
+      border-radius: 12px; background: #f0ece4; color: #8b7355; text-transform: uppercase;
+      letter-spacing: 0.5px; align-self: flex-start;
+    }
+    /* Banner colors by destination */
+    .banner-switzerland { background: linear-gradient(135deg, #2c5f7c, #a8d0e6); }
+    .banner-tanzania { background: linear-gradient(135deg, #5c6e3a, #c8b860); }
+    .banner-italy { background: linear-gradient(135deg, #8b4513, #daa520); }
+    .banner-uk { background: linear-gradient(135deg, #1a1a5e, #4a4a8a); }
+    .banner-france { background: linear-gradient(135deg, #2c2c54, #8e7cc3); }
+    .banner-indonesia { background: linear-gradient(135deg, #1a6b3c, #6bc5a0); }
+    .banner-thailand { background: linear-gradient(135deg, #8b0000, #e8a020); }
+  </style>
+</head>
+<body>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <div class="guides-hero">
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <h1><%= lang === 'en' ? 'Travel Inspiration' : '旅行灵感' %></h1>
+    <p><%= lang === 'en' ? 'Curated guides & tips for your next luxury journey' : '为您的下一次旅程精选指南与攻略' %></p>
+  </div>
+
+  <div class="guides-container">
+    <% var destNames = { switzerland: { zh: '瑞士', en: 'Switzerland' }, tanzania: { zh: '坦桑尼亚', en: 'Tanzania' }, italy: { zh: '意大利', en: 'Italy' }, uk: { zh: '英国', en: 'United Kingdom' }, france: { zh: '法国', en: 'France' }, indonesia: { zh: '印度尼西亚', en: 'Indonesia' }, thailand: { zh: '泰国', en: 'Thailand' } }; %>
+    <% var typeLabels = { seasonal: { zh: '季节指南', en: 'Seasonal' }, budget: { zh: '预算', en: 'Budget' }, wildlife: { zh: '野生动物', en: 'Wildlife' }, beach: { zh: '海滩', en: 'Beach' }, destination: { zh: '目的地', en: 'Destination' }, luxury: { zh: '奢华', en: 'Luxury' }, romance: { zh: '浪漫', en: 'Romance' }, culture: { zh: '文化', en: 'Culture' }, wellness: { zh: '康养', en: 'Wellness' }, adventure: { zh: '冒险', en: 'Adventure' }, food: { zh: '美食', en: 'Food' }, tips: { zh: '攻略', en: 'Tips' } }; %>
+    <% Object.keys(grouped).forEach(function(dest) { %>
+      <div class="guides-group">
+        <h2 class="guides-group-title">
+          <span><%= destNames[dest] ? (lang === 'en' ? destNames[dest].en : destNames[dest].zh) : dest %></span>
+        </h2>
+        <div class="guides-grid">
+          <% grouped[dest].forEach(function(g) { %>
+            <a href="/guides/<%= g.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="guide-card">
+              <div class="guide-card-banner banner-<%= g.destination %>">
+                <span><%= destNames[g.destination] ? destNames[g.destination].zh.charAt(0) : '' %></span>
+              </div>
+              <div class="guide-card-body">
+                <h3><%= lang === 'en' ? g.title_en : g.title_zh %></h3>
+                <span class="guide-type"><%= typeLabels[g.type] ? (lang === 'en' ? typeLabels[g.type].en : typeLabels[g.type].zh) : g.type %></span>
+              </div>
+            </a>
+          <% }); %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
+      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+    }
+  </script>
+</body>
+</html>

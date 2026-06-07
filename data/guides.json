@@ -1,0 +1,16 @@
+[
+  { "slug": "best-time-to-visit-switzerland", "destination": "switzerland", "title_zh": "什么时候去瑞士最好？四季旅行指南", "title_en": "Best Time to Visit Switzerland: Seasonal Travel Guide", "type": "seasonal" },
+  { "slug": "switzerland-budget-guide", "destination": "switzerland", "title_zh": "瑞士旅行预算指南：奢华体验不花冤枉钱", "title_en": "Switzerland Budget Guide: Luxury Without Overpaying", "type": "budget" },
+  { "slug": "swiss-alps-hiking-guide", "destination": "switzerland", "title_zh": "瑞士阿尔卑斯徒步路线推荐", "title_en": "Swiss Alps Hiking Routes Guide", "type": "adventure" },
+  { "slug": "serengeti-migration-guide", "destination": "tanzania", "title_zh": "塞伦盖蒂角马大迁徙完全指南", "title_en": "Complete Guide to the Great Migration in Serengeti", "type": "wildlife" },
+  { "slug": "zanzibar-beach-guide", "destination": "tanzania", "title_zh": "桑给巴尔岛海滩度假指南", "title_en": "Zanzibar Beach Holiday Guide", "type": "beach" },
+  { "slug": "tanzania-safari-tips", "destination": "tanzania", "title_zh": "坦桑尼亚 Safari 实用攻略", "title_en": "Tanzania Safari Practical Tips", "type": "tips" },
+  { "slug": "milan-lake-como-guide", "destination": "italy", "title_zh": "米兰与科莫湖深度游玩指南", "title_en": "Milan & Lake Como In-Depth Travel Guide", "type": "destination" },
+  { "slug": "london-luxury-travel-guide", "destination": "uk", "title_zh": "伦敦奢华旅行指南：顶级酒店与私享体验", "title_en": "London Luxury Travel Guide: Top Hotels & Private Experiences", "type": "luxury" },
+  { "slug": "paris-romantic-getaway", "destination": "france", "title_zh": "巴黎浪漫之旅：情侣专属行程推荐", "title_en": "Paris Romantic Getaway: Couples Itinerary", "type": "romance" },
+  { "slug": "paris-art-culture-guide", "destination": "france", "title_zh": "巴黎艺术文化深度游", "title_en": "Paris Art & Culture In-Depth Guide", "type": "culture" },
+  { "slug": "bali-wellness-retreat", "destination": "indonesia", "title_zh": "巴厘岛康养度假指南", "title_en": "Bali Wellness Retreat Guide", "type": "wellness" },
+  { "slug": "bali-adventure-guide", "destination": "indonesia", "title_zh": "巴厘岛户外冒险指南", "title_en": "Bali Adventure Guide", "type": "adventure" },
+  { "slug": "bangkok-food-guide", "destination": "thailand", "title_zh": "曼谷美食指南：从街头小吃到米其林餐厅", "title_en": "Bangkok Food Guide: Street Food to Michelin Stars", "type": "food" },
+  { "slug": "thailand-island-hopping", "destination": "thailand", "title_zh": "泰国跳岛游攻略", "title_en": "Thailand Island Hopping Guide", "type": "beach" }
+]

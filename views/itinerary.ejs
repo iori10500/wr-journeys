@@ -83,11 +83,18 @@
   </div>
 
   <% if (itinerary) { %>
-  <div class="breadcrumb-nav" style="max-width:820px;margin:0 auto;padding:12px 16px;font-size:12px;color:#888;">
-    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:#c8a96e;text-decoration:none;"><%= lang === 'en' ? 'Itineraries' : '行程手册' %></a>
-    <span style="margin:0 6px;">›</span>
-    <span><%= lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title %></span>
-  </div>
+  <nav aria-label="面包屑" style="max-width:820px;margin:0 auto;padding:12px 16px;font-size:12px;color:#666;">
+    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:#c8a96e;text-decoration:none;"><%= lang === 'en' ? 'Home' : '首页' %></a>
+    <span style="margin:0 6px;">/</span>
+    <% if (itinerary.regions_en && itinerary.regions_en.length > 0) { %>
+    <% var bSlug = itinerary.regions_en[0].toLowerCase().replace(/\s+/g, '-') %>
+    <a href="/destinations/<%= bSlug %><%= lang === 'en' ? '?lang=en' : '' %>" style="color:#c8a96e;text-decoration:none;">
+      <%= lang === 'en' ? itinerary.regions_en[0] : itinerary.regions[0] %>
+    </a>
+    <span style="margin:0 6px;">/</span>
+    <% } %>
+    <span style="color:rgba(255,255,255,0.7);"><%= lang === 'en' ? (itinerary.title_en || itinerary.title) : itinerary.title %></span>
+  </nav>
   <!-- METADATA BAR -->
   <div class="meta-bar">
     <div class="meta-item">
@@ -115,6 +122,22 @@
       </div>
     </div>
   </div>
+  <% } %>
+
+  <!-- 目的地简介 -->
+  <% if (itinerary.regions_en && itinerary.regions_en.length > 0) { %>
+  <% var countrySlug = itinerary.regions_en[0].toLowerCase().replace(/\s+/g, '-') %>
+  <% var destInfo = destinations && destinations[countrySlug] %>
+  <% if (destInfo) { %>
+  <section style="max-width:820px;margin:0 auto 24px;padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
+    <h2 style="font-size:18px;font-weight:300;margin-bottom:12px;color:#fff;">
+      <%- lang === 'en' ? itinerary.regions_en[0] : itinerary.regions[0] %>
+    </h2>
+    <p style="color:rgba(255,255,255,0.7);line-height:1.8;">
+      <%- lang === 'en' && destInfo.en ? destInfo.en : destInfo.zh %>
+    </p>
+  </section>
+  <% } %>
   <% } %>
 
   <!-- BROCHURE CONTENT -->

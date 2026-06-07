@@ -324,7 +324,8 @@ app.get('/:id', (req, res) => {
     brochureContent: brochureContent,
     title: itinerary.title + ' - WR Travel',
     lang: lang,
-    itineraries: itineraries
+    itineraries: itineraries,
+    destinations: destinationsData
   });
 });
 

@@ -29,13 +29,26 @@
   </script>
   <style>
     .dest-detail-hero {
-      background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
-      padding: 50px 24px 40px;
+      position: relative;
+      padding: 80px 24px 60px;
       text-align: center;
+      overflow: hidden;
     }
-    .dest-detail-hero .back-link { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; display: block; margin-bottom: 16px; }
-    .dest-detail-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 34px; margin: 0 0 8px; }
-    .dest-detail-hero .desc { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+    .dest-detail-hero .hero-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .dest-detail-hero .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(26,26,46,0.6), rgba(26,26,46,0.85));
+    }
+    .dest-detail-hero .back-link { position:relative; z-index:1; color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; display: block; margin-bottom: 16px; }
+    .dest-detail-hero h1 { position:relative; z-index:1; color: #fff; font-family: 'Playfair Display',serif; font-size: 34px; margin: 0 0 8px; }
+    .dest-detail-hero .desc { position:relative; z-index:1; color: rgba(255,255,255,0.75); font-size: 14px; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+    .gallery-section { max-width: 1200px; margin: 0 auto; padding: 40px 24px 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; transition: transform 0.3s; cursor: pointer; }
+    .gallery-grid img:hover { transform: scale(1.03); }
     .trips-section { max-width: 1200px; margin: 40px auto; padding: 0 24px 80px; }
     .trips-section h2 { font-size: 22px; margin-bottom: 20px; color: #333; }
   </style>
@@ -44,10 +57,28 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="dest-detail-hero">
+    <% if (destination.coverImage) { %>
+    <div class="hero-bg" style="background-image:url('/<%= destination.coverImage %>');"></div>
+    <% } else { %>
+    <div class="hero-bg" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%);"></div>
+    <% } %>
     <a href="/destinations<%= lang === 'en' ? '?lang=en' : '' %>" class="back-link"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
     <h1><%= lang === 'en' ? destination.name_en : destination.name_zh %></h1>
     <p class="desc"><%= lang === 'en' ? destination.description_en : destination.description_zh %></p>
   </div>
+
+  <% if (destination.gallery && destination.gallery.length > 0) { %>
+  <div class="gallery-section">
+    <div class="gallery-grid">
+      <% destination.gallery.forEach(function(img) { %>
+        <picture>
+          <source srcset="/<%= img.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
+          <img src="/<%= img %>" alt="<%= lang === 'en' ? destination.name_en : destination.name_zh %>" loading="lazy" decoding="async">
+        </picture>
+      <% }); %>
+    </div>
+  </div>
+  <% } %>
 
   <div class="trips-section">
     <h2><%= lang === 'en' ? 'Itineraries in ' + destination.name_en : destination.name_zh + ' 的行程' %></h2>

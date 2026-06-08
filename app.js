@@ -497,6 +497,8 @@ app.get('/destinations/:country', (req, res) => {
     name_en: dest ? dest.name_en : country,
     description_zh: destDesc.zh,
     description_en: destDesc.en,
+    coverImage: destDesc.coverImage || null,
+    gallery: destDesc.gallery || [],
   };
 
   res.render('destination-detail', {

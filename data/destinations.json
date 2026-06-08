@@ -29,22 +29,62 @@
   },
   "maldives": {
     "zh": "印度洋上的珍珠项链，1200座珊瑚岛组成的人间天堂。水上别墅、私人沙洲、海底餐厅——马尔代夫重新定义了奢华度假。",
-    "en": "A string of 1,200 coral islands in the Indian Ocean. Overwater villas, private sandbanks, and underwater restaurants — the Maldives redefines luxury."
+    "en": "A string of 1,200 coral islands in the Indian Ocean. Overwater villas, private sandbanks, and underwater restaurants — the Maldives redefines luxury.",
+    "coverImage": "images/maldives/maldives-overwater-villa.jpg",
+    "gallery": [
+      "images/maldives/maldives-overwater-villa.jpg",
+      "images/maldives/maldives-beach-sunset.jpg",
+      "images/maldives/maldives-coral-reef.jpg",
+      "images/maldives/maldives-seaplane.jpg",
+      "images/maldives/maldives-underwater-restaurant.jpg"
+    ]
   },
   "japan": {
     "zh": "从东京的霓虹闪烁到京都的千年古韵，从北海道的粉雪到冲绳的碧海。日本用极致的细节诠释待客之道。",
-    "en": "From Tokyo's neon glow to Kyoto's timeless temples, from Hokkaido's powder snow to Okinawa's turquoise waters. Japan defines hospitality through exquisite detail."
+    "en": "From Tokyo's neon glow to Kyoto's timeless temples, from Hokkaido's powder snow to Okinawa's turquoise waters. Japan defines hospitality through exquisite detail.",
+    "coverImage": "images/japan/japan-mount-fuji.jpg",
+    "gallery": [
+      "images/japan/japan-mount-fuji.jpg",
+      "images/japan/japan-kyoto-torii.jpg",
+      "images/japan/japan-tokyo-skyline.jpg",
+      "images/japan/japan-onsen-ryokan.jpg",
+      "images/japan/japan-cherry-blossom.jpg"
+    ]
   },
   "dubai": {
     "zh": "沙漠中崛起的未来之城，迪拜用超乎想象的建筑、七星级服务和无边界的奢华体验，重新定义旅行的上限。",
-    "en": "A futuristic city rising from the desert. Dubai redefines the limits of travel with extraordinary architecture, seven-star service, and boundless luxury."
+    "en": "A futuristic city rising from the desert. Dubai redefines the limits of travel with extraordinary architecture, seven-star service, and boundless luxury.",
+    "coverImage": "images/dubai/dubai-burj-khalifa.jpg",
+    "gallery": [
+      "images/dubai/dubai-burj-khalifa.jpg",
+      "images/dubai/dubai-palm-jumeirah.jpg",
+      "images/dubai/dubai-desert-safari.jpg",
+      "images/dubai/dubai-fountain.jpg",
+      "images/dubai/dubai-burj-al-arab.jpg"
+    ]
   },
   "greece": {
     "zh": "爱琴海的蓝白梦境。圣托里尼的日落、米克诺斯的风车、雅典的千年文明——希腊是浪漫与历史的完美交汇。",
-    "en": "A blue-and-white dream on the Aegean Sea. Santorini sunsets, Mykonos windmills, and Athens' millennia of civilization — where romance meets history."
+    "en": "A blue-and-white dream on the Aegean Sea. Santorini sunsets, Mykonos windmills, and Athens' millennia of civilization — where romance meets history.",
+    "coverImage": "images/greece/greece-santorini-blue-dome.jpg",
+    "gallery": [
+      "images/greece/greece-santorini-blue-dome.jpg",
+      "images/greece/greece-mykonos-windmill.jpg",
+      "images/greece/greece-parthenon.jpg",
+      "images/greece/greece-aegean-yacht.jpg",
+      "images/greece/greece-island-sunset.jpg"
+    ]
   },
   "morocco": {
     "zh": "北非的异域花园。马拉喀什的红色城墙、撒哈拉的金色沙丘、菲斯的千年迷宫——摩洛哥是一场感官的盛宴。",
-    "en": "An exotic garden in North Africa. Marrakech's red walls, the Sahara's golden dunes, Fes' ancient labyrinth — Morocco is a feast for the senses."
+    "en": "An exotic garden in North Africa. Marrakech's red walls, the Sahara's golden dunes, Fes' ancient labyrinth — Morocco is a feast for the senses.",
+    "coverImage": "images/morocco/morocco-marrakech-medina.jpg",
+    "gallery": [
+      "images/morocco/morocco-marrakech-medina.jpg",
+      "images/morocco/morocco-sahara-camp.jpg",
+      "images/morocco/morocco-chefchaouen.jpg",
+      "images/morocco/morocco-fes-tannery.jpg",
+      "images/morocco/morocco-riad-courtyard.jpg"
+    ]
   }
 }

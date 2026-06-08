@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>西南秘境·成都大理丽江 14天13晚</title>
+<style>
+@page { size: A4; margin: 0; }
+
+body {
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  margin: 0; color: #2d2d2d; background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== COVER ===== */
+.cover {
+  width: 100%; max-width: 820px; min-height: 297mm;
+  background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.52)), url('/images/chengdu-dali-lijiang-14d/cover.jpg') center/cover no-repeat;
+  color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; position: relative; overflow: hidden;
+  page-break-after: always;
+}
+.cover::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(212,168,83,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(212,168,83,0.06) 0%, transparent 60%);
+}
+.cover .brand { font-size: 11px; letter-spacing: 5px; opacity: 0.45; margin-bottom: 60px; position: relative; z-index: 1; }
+.cover .route { font-size: 13px; letter-spacing: 3px; opacity: 0.5; margin-bottom: 30px; position: relative; z-index: 1; }
+.cover h1 { font-size: 44px; font-weight: 300; letter-spacing: 6px; margin: 0 0 16px 0; position: relative; z-index: 1; line-height: 1.2; }
+.cover .subtitle { font-size: 18px; font-weight: 300; letter-spacing: 4px; opacity: 0.7; position: relative; z-index: 1; }
+.cover .accent { width: 80px; height: 2px; background: #d4a853; margin: 32px auto; position: relative; z-index: 1; }
+.cover .meta { position: relative; z-index: 1; font-size: 13px; opacity: 0.55; line-height: 2.2; letter-spacing: 1px; }
+.cover .hotels { position: relative; z-index: 1; font-size: 12px; opacity: 0.5; margin-top: 36px; line-height: 2; letter-spacing: 1px; }
+
+/* ===== PAGE ===== */
+.page {
+  width: 210mm; min-height: 297mm;
+  padding: 22mm 18mm;
+  box-sizing: border-box;
+  page-break-after: always;
+  position: relative;
+}
+.page:last-child { page-break-after: avoid; }
+
+/* ===== SECTION HEADERS ===== */
+h2 {
+  font-size: 26px; font-weight: 300; letter-spacing: 3px;
+  margin: 0 0 8px 0; text-align: center;
+}
+h2 .num { font-size: 12px; letter-spacing: 2px; opacity: 0.5; display: block; margin-bottom: 6px; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; margin: 14px auto 0; }
+
+/* ===== THEME COLORS ===== */
+/* Overview */
+.page-overview h2 { color: #0f3460; }
+.page-overview h2::after { background: #d4a853; }
+
+/* Six Senses 成都：深林绿 */
+.page-sixsenses h2 { color: #1e3d2a; }
+.page-sixsenses h2::after { background: #d4a853; }
+.page-sixsenses .accent-color { color: #d4a853; }
+.page-sixsenses .stat-num { color: #1e3d2a; }
+.page-sixsenses .card-icon { background: #1e3d2a; color: #d4a853; }
+.page-sixsenses .quote-block { background: #1e3d2a; }
+.page-sixsenses .itinerary-badge { border-left-color: #d4a853; }
+.page-sixsenses .itinerary-badge .dates { color: #1e3d2a; }
+.page-sixsenses .day-header { background: #1e3d2a; }
+
+/* 大理：苍山蓝 */
+.page-dali h2 { color: #1e3a5a; }
+.page-dali h2::after { background: #7aabcc; }
+.page-dali .accent-color { color: #7aabcc; }
+.page-dali .stat-num { color: #1e3a5a; }
+.page-dali .card-icon { background: #1e3a5a; color: #7aabcc; }
+.page-dali .quote-block { background: #1e3a5a; }
+.page-dali .itinerary-badge { border-left-color: #7aabcc; }
+.page-dali .itinerary-badge .dates { color: #1e3a5a; }
+.page-dali .day-header { background: #1e3a5a; }
+
+/* 丽江安缦：暖赭红 */
+.page-aman h2 { color: #5a2d1a; }
+.page-aman h2::after { background: #c4854a; }
+.page-aman .accent-color { color: #c4854a; }
+.page-aman .stat-num { color: #5a2d1a; }
+.page-aman .card-icon { background: #5a2d1a; color: #c4854a; }
+.page-aman .quote-block { background: #5a2d1a; }
+.page-aman .itinerary-badge { border-left-color: #c4854a; }
+.page-aman .itinerary-badge .dates { color: #5a2d1a; }
+.page-aman .day-header { background: #5a2d1a; }
+
+/* 成都博舍：都市深蓝 */
+.page-upperhouse h2 { color: #1a2a4a; }
+.page-upperhouse h2::after { background: #d4a853; }
+.page-upperhouse .accent-color { color: #d4a853; }
+.page-upperhouse .stat-num { color: #1a2a4a; }
+.page-upperhouse .card-icon { background: #1a2a4a; color: #d4a853; }
+.page-upperhouse .quote-block { background: #1a2a4a; }
+.page-upperhouse .itinerary-badge { border-left-color: #d4a853; }
+.page-upperhouse .itinerary-badge .dates { color: #1a2a4a; }
+.page-upperhouse .day-header { background: #1a2a4a; }
+
+/* ===== OVERVIEW TABLE ===== */
+.overview-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 12px; }
+.overview-table th { background: #0f3460; color: #fff; padding: 11px 14px; text-align: left; font-weight: 400; letter-spacing: 1px; font-size: 11px; }
+.overview-table td { padding: 11px 14px; border-bottom: 1px solid #e8e8e8; }
+.overview-table tr:nth-child(even) td { background: #fafaf9; }
+.overview-table .highlight-col { font-weight: 600; color: #0f3460; }
+
+/* ===== HERO IMAGE ===== */
+.hero-img { width: 100%; border-radius: 3px; margin: 20px 0; max-height: 280px; object-fit: cover; }
+
+/* ===== ITINERARY BADGE ===== */
+.itinerary-badge { background: #fafaf9; border-left: 4px solid; padding: 14px 18px; margin: 18px 0; border-radius: 0 3px 3px 0; }
+.itinerary-badge .dates { font-size: 12px; font-weight: 600; letter-spacing: 1px; margin-bottom: 3px; }
+.itinerary-badge .info { font-size: 12px; color: #777; }
+
+/* ===== DAY HEADER ===== */
+.day-header {
+  color: #fff; padding: 10px 16px; border-radius: 3px;
+  margin: 20px 0 10px 0; font-size: 13px; letter-spacing: 1px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.day-header .day-num { font-size: 20px; font-weight: 300; margin-right: 12px; }
+.day-header .day-info { flex: 1; }
+.day-header .day-title { font-weight: 500; font-size: 14px; }
+.day-header .day-date { font-size: 11px; opacity: 0.7; margin-top: 2px; }
+
+/* ===== INTRO TEXT ===== */
+.intro { font-size: 13px; line-height: 1.9; color: #666; text-align: center; max-width: 620px; margin: 14px auto 0; }
+
+/* ===== STATS ===== */
+.stats-row { display: flex; justify-content: center; gap: 50px; margin: 28px 0; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 30px; font-weight: 300; letter-spacing: 1px; }
+.stat-item .label { font-size: 10px; color: #aaa; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
+
+/* ===== IMAGE GRID ===== */
+.img-row { display: flex; gap: 14px; margin: 18px 0; }
+.img-row img { width: 50%; border-radius: 3px; object-fit: cover; aspect-ratio: 4/3; }
+.img-full { width: 100%; border-radius: 3px; margin: 18px 0; }
+
+/* ===== FEATURE CARDS ===== */
+.card-grid { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0; }
+.card { flex: 0 0 calc(50% - 7px); background: #fafaf9; border-radius: 3px; padding: 18px 20px; box-sizing: border-box; }
+.card h4 { font-size: 13px; margin: 0 0 5px 0; letter-spacing: 1px; }
+.card p { font-size: 11px; color: #999; line-height: 1.6; margin: 0; }
+
+/* ===== ACTIVITIES ===== */
+.activity { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid #eee; align-items: flex-start; }
+.activity .icon { flex: 0 0 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.activity h4 { font-size: 13px; margin: 0 0 3px 0; }
+.activity p { font-size: 11px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== QUOTE ===== */
+.quote-block { color: #fff; padding: 36px 48px; border-radius: 3px; text-align: center; margin: 24px 0; }
+.quote-block p { font-size: 16px; font-weight: 300; line-height: 1.8; letter-spacing: 1px; margin: 0; }
+.quote-block .author { font-size: 11px; opacity: 0.55; margin-top: 12px; letter-spacing: 2px; }
+
+/* ===== HIGHLIGHTS GRID ===== */
+.hl-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+.hl-item { flex: 0 0 calc(33.33% - 8px); background: #fafaf9; padding: 16px; border-radius: 3px; border-left: 3px solid #d4a853; box-sizing: border-box; }
+.hl-item h4 { font-size: 12px; color: #0f3460; margin: 0 0 4px 0; }
+.hl-item p { font-size: 10px; color: #999; margin: 0; line-height: 1.5; }
+
+/* ===== MAP BOX ===== */
+.map-box { background: #f5f4f0; border-radius: 3px; padding: 40px; text-align: center; margin: 20px 0; }
+.map-box .route-line { font-size: 14px; letter-spacing: 2px; color: #0f3460; line-height: 2.5; }
+
+/* ===== SUMMARY PAGE ===== */
+.page-summary { background: #1e3d2a; color: #fff; }
+.page-summary h2 { color: #fff; }
+.page-summary h2::after { background: #d4a853; }
+.page-summary .journey-text { font-size: 15px; font-weight: 300; line-height: 2.2; letter-spacing: 1px; text-align: center; max-width: 520px; margin: 40px auto; }
+.page-summary .footer-note { color: rgba(255,255,255,0.4); border-top-color: rgba(255,255,255,0.15); }
+
+/* ===== FOOTER NOTE ===== */
+.footer-note { font-size: 9px; color: #ccc; text-align: center; margin-top: 32px; padding-top: 14px; border-top: 1px solid #eee; line-height: 1.8; }
+
+@media screen and (max-width: 640px) {
+  .cover, .page { width: 100%; min-height: auto; height: auto; padding: 32px 20px; }
+  .cover { padding: 56px 20px; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 28px; letter-spacing: 3px; }
+  .cover .subtitle { font-size: 14px; letter-spacing: 2px; }
+  .cover .brand { font-size: 10px; letter-spacing: 3px; margin-bottom: 32px; }
+  .cover .route { font-size: 11px; margin-bottom: 18px; }
+  .cover .meta { font-size: 11px; }
+  .cover .hotels { font-size: 10px; margin-top: 20px; }
+  .cover .accent { margin: 20px auto; }
+  h2 { font-size: 20px; letter-spacing: 2px; }
+  h2 .num { font-size: 11px; }
+  .intro { font-size: 12px; padding: 0 8px; }
+  .overview-table { font-size: 10px; }
+  .overview-table th, .overview-table td { padding: 6px 8px; }
+  .stats-row { gap: 24px; }
+  .stat-item .num { font-size: 24px; }
+  .img-row { flex-direction: column; gap: 10px; }
+  .img-row img { width: 100%; }
+  .card-grid { flex-direction: column; }
+  .card { flex: 1 1 auto; }
+  .hl-grid { flex-direction: column; }
+  .hl-item { flex: 1 1 auto; }
+  .activity { flex-direction: column; }
+  .quote-block { padding: 24px 20px; }
+  .quote-block p { font-size: 14px; }
+  .page-summary .journey-text { font-size: 13px; margin: 24px auto; }
+  .overview-table { display: block; overflow-x: auto; }
+  .hero-img { max-height: 200px; }
+  .day-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div class="brand">WILDROAD TRAVEL · 野路逸行</div>
+  <div class="route">CHENGDU → DALI → LIJIANG → CHENGDU</div>
+  <h1>西南秘境<br>成都·大理·丽江</h1>
+  <div class="subtitle">SICHUAN & YUNNAN · 14天13晚</div>
+  <div class="accent"></div>
+  <div class="meta">
+    2026年9月12日 – 25日<br>
+    10人同行 · 新加坡出发
+  </div>
+  <div class="hotels">
+    Six Senses Qingcheng Mountain &nbsp;→&nbsp; The Dali Edition &nbsp;→&nbsp; Aman Lijiang &nbsp;→&nbsp; Upper House Chengdu
+  </div>
+</div>
+
+<!-- ═══════════ OVERVIEW ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">01</span>行程总览</h2>
+
+  <table class="overview-table">
+    <tr><th>日期</th><th>住宿</th><th>地点</th><th>房型</th><th>晚数</th></tr>
+    <tr>
+      <td class="highlight-col">9月12日–15日</td>
+      <td>成都六善青城山酒店<br><span style="font-size:10px;color:#aaa;">Six Senses Qingcheng Mountain</span></td>
+      <td>青城山 · 成都</td>
+      <td>Hot Spring Suite / King Suite</td>
+      <td class="highlight-col">3晚</td>
+    </tr>
+    <tr>
+      <td class="highlight-col">9月15日–18日</td>
+      <td>大理艾迪逊酒店<br><span style="font-size:10px;color:#aaa;">The Dali Edition</span></td>
+      <td>洱海边 · 大理</td>
+      <td>洱海景观套房 / 洱海景观双床房</td>
+      <td class="highlight-col">3晚</td>
+    </tr>
+    <tr>
+      <td class="highlight-col">9月18日–22日</td>
+      <td>丽江安缦<br><span style="font-size:10px;color:#aaa;">Aman Lijiang</span></td>
+      <td>古城 · 丽江</td>
+      <td>庭院套房 Courtyard Suite</td>
+      <td class="highlight-col">4晚</td>
+    </tr>
+    <tr>
+      <td class="highlight-col">9月22日–25日</td>
+      <td>成都博舍（The Upper House）<br><span style="font-size:10px;color:#aaa;">Temple House Chengdu</span></td>
+      <td>太古里 · 成都</td>
+      <td>Studio Suite</td>
+      <td class="highlight-col">3晚</td>
+    </tr>
+  </table>
+
+  <div class="map-box">
+    <div class="route-line">
+      ✈ 新加坡出发<br>
+      ↓ 飞往成都<br>
+      🌿 六善青城山（成都）· 3晚<br>
+      ↓ 飞往大理（约1.5小时）<br>
+      🏔 大理艾迪逊（大理）· 3晚<br>
+      ↓ 驾车前往丽江（约3小时）<br>
+      🏛 丽江安缦（丽江）· 4晚<br>
+      ↓ 飞往成都（约1.5小时）<br>
+      🏙 上院博舍（成都）· 3晚<br>
+      ↓ 飞回新加坡<br>
+      ✈ 返抵新加坡
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:20px;">
+    <p style="font-size:12px;color:#0f3460;letter-spacing:2px;font-weight:500;">
+      从山野禅境到洱海苍山 · 从纳西古城到天府都市 · 四城四境
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ SIX SENSES CHENGDU ═══════════ -->
+<div class="page page-sixsenses">
+  <h2><span class="num">02</span>六善青城山<br>Six Senses Qingcheng Mountain</h2>
+  <p class="intro">
+    道教圣地腹地，IHG旗下顶奢品牌。青城山古松环抱，温泉蒸腾，竹林听雨——
+    六善以"身心修复"为哲学，这里不是酒店，是一次东方疗愈的沉浸仪式。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">9月12日 – 15日 · 3晚 · Hot Spring Suite / King Suite</div>
+    <div class="info">含温泉体验 · 邻近都江堰水利工程与青城山 · 专属定制小熊猫体验</div>
+  </div>
+
+  <img src="/images/chengdu-dali-lijiang-14d/six-senses-1.jpg" alt="六善青城山" class="hero-img">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">79㎡</div><div class="label">King Suite 面积</div></div>
+    <div class="stat-item"><div class="num stat-num">130km</div><div class="label">距成都市区</div></div>
+    <div class="stat-item"><div class="num stat-num">3晚</div><div class="label">山中时光</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>六善温泉套房</h4>
+      <p>室内私人温泉浴池，青城山矿泉水直引，含矿物质丰富。落地窗框住竹林绿意，泡汤即是风景。</p>
+    </div>
+    <div class="card">
+      <h4>六善大床王套</h4>
+      <p>79㎡宽阔居所，独立起居区与卧室，原木与石材的东方禅意设计，私人露台望山。</p>
+    </div>
+    <div class="card">
+      <h4>六善 Spa 与身心修复</h4>
+      <p>六善品牌核心体验——GX疗法、经络按摩、草药浴缸。专业医师量身定制调理方案，真正的身心重置。</p>
+    </div>
+    <div class="card">
+      <h4>六善有机餐饮</h4>
+      <p>酒店自有农场直供有机食材，中餐与西餐均有。清晨在竹林间享用早餐，傍晚温泉前来一杯茶——节奏由你定义。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Six Senses 活动页 -->
+<div class="page page-sixsenses">
+  <h2 style="font-size:22px;">成都段 · 特色体验</h2>
+
+  <div class="day-header">
+    <div class="day-num">D1</div>
+    <div class="day-info">
+      <div class="day-title">抵达成都 · 六善青城山</div>
+      <div class="day-date">9月12日（六）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">✈️</div>
+    <div>
+      <h4>专车接机</h4>
+      <p>14座升级版奔驰大巴恭候，全程专属。前往六善青城山约1.5小时（130公里）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌊</div>
+    <div>
+      <h4>都江堰水利工程（可选）<span class="accent-color"> — 提前抵达专属</span></h4>
+      <p>如下午5点前到达，可顺道游览2000年前的古代水利奇迹——世界遗产都江堰，全球最早的无坝引水工程，至今仍在灌溉成都平原。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D2</div>
+    <div class="day-info">
+      <div class="day-title">大熊猫义工体验 + 青城山徒步</div>
+      <div class="day-date">9月13日（日）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🐼</div>
+    <div>
+      <h4>都江堰熊猫苑大熊猫志愿者 <span class="accent-color">— 全球唯一可合影抱抱</span></h4>
+      <p>含喂食、清洁、陪伴全流程义工体验。最迟9:00开始（熊猫仅上午活跃）。全国仅此一处提供合影抱抱机会，1,200元/人。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌿</div>
+    <div>
+      <h4>青城山深度徒步</h4>
+      <p>避开人流密集路线，探访道教文化发源地。古松、石阶、隐庵——双语向导带你读懂这座山，108元/人。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D3</div>
+    <div class="day-info">
+      <div class="day-title">六善定制 · 小熊猫深度体验</div>
+      <div class="day-date">9月14日（一）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🦊</div>
+    <div>
+      <h4>六善独家小熊猫探索体验 <span class="accent-color">— 酒店定制</span></h4>
+      <p>六善青城山特别策划的小熊猫（Red Panda）深度体验，近距离接触这种濒危的神秘生物，配专业讲解，2,566元/人。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">♨️</div>
+    <div>
+      <h4>温泉自由时间</h4>
+      <p>体验结束后，午后时光完全属于你——私汤、Spa或在竹林里什么都不做。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"在青城山的竹影松涛间，<br>时间自会放慢脚步。"</p>
+    <div class="author">— SIX SENSES QINGCHENG MOUNTAIN</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/chengdu-dali-lijiang-14d/panda-volunteer.jpg" alt="大熊猫义工体验" loading="lazy">
+    <img src="/images/chengdu-dali-lijiang-14d/six-senses-2.jpg" alt="六善青城山" loading="lazy">
+  </div>
+</div>
+
+<!-- ═══════════ DALI ═══════════ -->
+<div class="page page-dali">
+  <h2><span class="num">03</span>大理艾迪逊酒店<br>The Dali Edition</h2>
+  <p class="intro">
+    苍山雪 · 洱海月 · 下关风 · 上关花——大理四绝在这里汇聚成一帧。
+    万豪旗下 Edition 品牌以当代奢华重新定义大理，洱海景观客房直面苍山，
+    Ian Schrager 设计哲学与白族文化在此碰撞交融。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">9月15日 – 18日 · 3晚 · 洱海景观套房 / 洱海景观双床房</div>
+    <div class="info">洱海畔 · 万福北路 · Marriott Edition · 苍山洱海双向景观</div>
+  </div>
+
+  <img src="/images/chengdu-dali-lijiang-14d/dali-edition-1.jpg" alt="大理艾迪逊酒店" class="hero-img">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">3晚</div><div class="label">洱海时光</div></div>
+    <div class="stat-item"><div class="num stat-num">4,122m</div><div class="label">苍山最高峰</div></div>
+    <div class="stat-item"><div class="num stat-num">Edition</div><div class="label">万豪旗舰品牌</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>洱海景观套房</h4>
+      <p>落地窗正对洱海，清晨薄雾中苍山隐现，傍晚金光铺满海面。Edition 标志性的简约奢华设计，每一刻都是天然画框。</p>
+    </div>
+    <div class="card">
+      <h4>Ian Schrager 设计美学</h4>
+      <p>Edition 品牌创始人 Ian Schrager 以极简现代主义回应大理山水，融入白族传统纹样与本地石材，低调而有力量。</p>
+    </div>
+    <div class="card">
+      <h4>洱海观景泳池</h4>
+      <p>苍山为背景，洱海为前景，无边泳池与大理天空融为一体。9月蓝天白云，正是最美的大理季节。</p>
+    </div>
+    <div class="card">
+      <h4>大理风味餐饮</h4>
+      <p>Edition 餐厅以本地食材重新演绎——乳扇、松茸、洱海鱼，搭配精选云南葡萄酒，一餐尽得苍山洱海滋味。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 大理活动页 -->
+<div class="page page-dali">
+  <h2 style="font-size:22px;">大理段 · 特色体验</h2>
+
+  <div class="day-header">
+    <div class="day-num">D4</div>
+    <div class="day-info">
+      <div class="day-title">飞往大理 · 入住洱海</div>
+      <div class="day-date">9月15日（二）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">✈️</div>
+    <div>
+      <h4>成都飞大理</h4>
+      <p>飞行约1.5小时，落地后专车接驳前往酒店，沿途苍山初见，约70分钟车程（60公里）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌊</div>
+    <div>
+      <h4>入住 · 初见洱海</h4>
+      <p>放下行李，赤脚踩沙，在洱海边迎接第一个大理傍晚。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D5</div>
+    <div class="day-info">
+      <div class="day-title">喜洲古镇 · 白族深度游</div>
+      <div class="day-date">9月16日（三）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏘️</div>
+    <div>
+      <h4>喜洲古镇深度游 <span class="accent-color">— 避开旅游团路线</span></h4>
+      <p>探访保存最完好的白族民居聚落，含6个子景点。体验白族扎染工艺、品喜洲粑粑、走访百年商帮大院，150元/人。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🎨</div>
+    <div>
+      <h4>白族扎染体验</h4>
+      <p>手工染布工坊，亲手扎、染、晒，带走一块独一无二的大理印记。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D6</div>
+    <div class="day-info">
+      <div class="day-title">苍山缆车 + 寂照庵禅意下午茶</div>
+      <div class="day-date">9月17日（四）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🚡</div>
+    <div>
+      <h4>苍山大索道 · 云端之上</h4>
+      <p>乘大索道直升苍山，云雾中洱海银亮如镜。秋季晴好，视野可达数百里，约320元往返/人。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🍵</div>
+    <div>
+      <h4>寂照庵 · 禅意下午茶 <span class="accent-color">— 大理最美隐秘空间</span></h4>
+      <p>隐于苍山半腰的百年尼庵，下午茶配山泉普洱，耳畔松风鸟鸣。大理的另一种美，安静，深远，20元/人。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D7</div>
+    <div class="day-info">
+      <div class="day-title">洱海环湖 → 前往丽江</div>
+      <div class="day-date">9月18日（五）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🚗</div>
+    <div>
+      <h4>洱海环湖自驾 <span class="accent-color">— 小众观景台</span></h4>
+      <p>含自驾向导，探访网红之外的秘密角度——双廊古镇轻游、无名观景台、渔村码头。约2小时，随后驱车前往丽江。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"苍山不墨千秋画<br>洱海无弦万古琴"</p>
+    <div class="author">— 大理传统对联</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/chengdu-dali-lijiang-14d/xizhou-bai.jpg" alt="喜洲白族古镇" loading="lazy">
+    <img src="/images/chengdu-dali-lijiang-14d/cangshan-cable.jpg" alt="苍山缆车" loading="lazy">
+  </div>
+</div>
+
+<!-- ═══════════ AMAN LIJIANG ═══════════ -->
+<div class="page page-aman">
+  <h2><span class="num">04</span>丽江安缦<br>Aman Lijiang</h2>
+  <p class="intro">
+    世界上最安静的奢华。安缦丽江以纳西传统建筑为蓝本，40座独立院落散落古城边缘，
+    飞檐翘角，流水庭院——Aman从不与景区竞争，它本身就是景致。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">9月18日 – 22日 · 4晚 · 庭院套房 Courtyard Suite 72㎡</div>
+    <div class="info">独立院落 · 私人庭院 · 邻近丽江古城 · 步行可达玉龙雪山景区服务中心</div>
+  </div>
+
+  <img src="/images/chengdu-dali-lijiang-14d/aman-1.jpg" alt="丽江安缦庭院" class="hero-img">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">40</div><div class="label">独立院落</div></div>
+    <div class="stat-item"><div class="num stat-num">72㎡</div><div class="label">庭院套房</div></div>
+    <div class="stat-item"><div class="num stat-num">4晚</div><div class="label">纳西时光</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>庭院套房</h4>
+      <p>72㎡独立院落，纳西传统围合式建筑，私人庭院内流水潺潺，仰可见玉龙雪山，俯有花木扶疏。卧室、起居室完全分隔。</p>
+    </div>
+    <div class="card">
+      <h4>Aman Spa</h4>
+      <p>以东巴文化为灵感，纳西草药浴、香道仪式、热石按摩——Aman的疗愈哲学与丽江山水完美共鸣。</p>
+    </div>
+    <div class="card">
+      <h4>私人向导文化深访</h4>
+      <p>Aman配备纳西文化学者向导，带你进入古城深处——最后一批纳西东巴象形文字传承人的工作室，不对外公开。</p>
+    </div>
+    <div class="card">
+      <h4>酒吧与烛光晚宴</h4>
+      <p>院落中心的主楼藏书阁酒吧，纳西乐团现场演奏，推荐在此享用晚餐——玉龙雪山雪水冰镇的本地白酒，别处喝不到。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 安缦活动页 -->
+<div class="page page-aman">
+  <h2 style="font-size:22px;">丽江段 · 特色体验</h2>
+
+  <div class="day-header">
+    <div class="day-num">D8</div>
+    <div class="day-info">
+      <div class="day-title">白沙古镇 + 玉湖村探秘</div>
+      <div class="day-date">9月19日（六）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏛️</div>
+    <div>
+      <h4>白沙古镇 · 壁画与刺绣</h4>
+      <p>丽江最古老的集市，明代壁画完好保存至今。走访纳西刺绣学校，与传承人面对面。约3-4小时，800元/人。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">💎</div>
+    <div>
+      <h4>玉湖村 · 洛克故居</h4>
+      <p>美国探险家、植物学家约瑟夫·洛克在此居住多年，并记录了丽江最初的模样。村落宁静原始，旅游未及之处。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D9</div>
+    <div class="day-info">
+      <div class="day-title">虎跳峡徒步 · 世界最深峡谷之一</div>
+      <div class="day-date">9月20日（日）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🥾</div>
+    <div>
+      <h4>虎跳峡中虎跳段徒步 <span class="accent-color">— 中等难度</span></h4>
+      <p>世界最深峡谷之一，金沙江奔涌于玉龙、哈巴双雪山之间。中虎跳路线约5小时，含专业徒步向导，不走悬崖栈道，安全舒适，1,550元/人。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D10</div>
+    <div class="day-info">
+      <div class="day-title">玉龙雪山 + 蓝月谷 + 印象丽江</div>
+      <div class="day-date">9月21日（一）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">⛰️</div>
+    <div>
+      <h4>玉龙雪山主大索道 <span class="accent-color">— 海拔4,506米</span></h4>
+      <p>乘大索道直达雪线，云雾时隐时现，脚下是南中国最南端的现代冰川。9月正值蓝天好季，1,970元/人（含门票、索道）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">💙</div>
+    <div>
+      <h4>蓝月谷 · 蓝到不真实</h4>
+      <p>玉龙雪山融雪形成的五彩湖泊群，蓝色来自矿物质与天光交汇，任何滤镜都无法还原这种蓝。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🎭</div>
+    <div>
+      <h4>《印象·丽江》VIP观演</h4>
+      <p>张艺谋执导，500名纳西、藏族、彝族演员，玉龙雪山为天然舞台。VIP席位，260元/人。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"Aman的意义不是豪华，<br>而是让你真正停下来。"</p>
+    <div class="author">— AMAN RESORTS</div>
+  </div>
+
+  <div class="img-row">
+    <img src="/images/chengdu-dali-lijiang-14d/tiger-leaping-gorge.jpg" alt="虎跳峡" loading="lazy">
+    <img src="/images/chengdu-dali-lijiang-14d/aman-2.jpg" alt="丽江安缦" loading="lazy">
+  </div>
+</div>
+
+<!-- ═══════════ UPPER HOUSE CHENGDU ═══════════ -->
+<div class="page page-upperhouse">
+  <h2><span class="num">05</span>成都博舍<br>The Upper House Chengdu</h2>
+  <p class="intro">
+    太古里心脏地带，大慈寺千年古刹为邻。博舍以"当代成都"为主题，
+    Anouska Hempel设计，将巴蜀文化基因植入每一个角落——
+    这不是结束，这是成都告诉你，它还有太多故事没讲完。
+  </p>
+
+  <div class="itinerary-badge">
+    <div class="dates">9月22日 – 25日 · 3晚 · Studio Suite 60-96㎡</div>
+    <div class="info">太古里 · 大慈寺对望 · 成都最佳城市地址 · Virtuoso会员酒店</div>
+  </div>
+
+  <img src="/images/chengdu-dali-lijiang-14d/upper-house-1.jpg" alt="成都博舍" class="hero-img">
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="num stat-num">96㎡</div><div class="label">Studio Suite 面积</div></div>
+    <div class="stat-item"><div class="num stat-num">1∶4</div><div class="label">员工/客房比</div></div>
+    <div class="stat-item"><div class="num stat-num">3晚</div><div class="label">都市收尾</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>Studio Suite</h4>
+      <p>60-96㎡超宽居所，落地窗对望大慈寺或太古里屋顶。竹帘、银杏木、苏绣装饰——Anouska Hempel赋予它独特的成都气质。</p>
+    </div>
+    <div class="card">
+      <h4>Narita 餐厅</h4>
+      <p>博舍旗舰餐厅，以川菜、粤菜与日本料理三线融合著称。主厨菜单每季更换，是成都美食圈的风向标。</p>
+    </div>
+    <div class="card">
+      <h4>屋顶无边泳池</h4>
+      <p>俯瞰大慈寺古柏与太古里玻璃屋顶，古今成都在同一视野中。清晨6点泳池最静，阳光最好。</p>
+    </div>
+    <div class="card">
+      <h4>Virtuoso 精英礼遇</h4>
+      <p>通过WR预订享有Virtuoso会员专属礼遇：房型升级优先权、每日早餐、额外100美元消费额度、欢迎礼遇。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 博舍活动页 -->
+<div class="page page-upperhouse">
+  <h2 style="font-size:22px;">成都尾段 · 特色体验</h2>
+
+  <div class="day-header">
+    <div class="day-num">D11</div>
+    <div class="day-info">
+      <div class="day-title">丽江飞成都 · 入住博舍</div>
+      <div class="day-date">9月22日（二）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">✈️</div>
+    <div>
+      <h4>飞往成都</h4>
+      <p>丽江飞成都约1.5小时，专车接驳前往博舍（双流机场约300元，天府机场约600元）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🏙️</div>
+    <div>
+      <h4>太古里 · 夜游</h4>
+      <p>入住后漫步太古里，成都最会玩的街区——潮牌、精品咖啡、本地酒吧，在古寺的倒影里点一杯夜晚。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D12</div>
+    <div class="day-info">
+      <div class="day-title">熊猫基地 + 成都文艺地标</div>
+      <div class="day-date">9月23日（三）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🐼</div>
+    <div>
+      <h4>成都大熊猫繁育研究基地 · 幼崽晨间互动</h4>
+      <p>全球最大的大熊猫繁育基地，早晨8点进场，幼崽活跃期，含专业讲解员解说，300元/人（无抱抱，观赏和互动讲解）。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🎨</div>
+    <div>
+      <h4>东郊记忆 / 玉林路 · 成都文艺魂</h4>
+      <p>前苏联援建工业遗址改造的文创园区——地下乐队排练室、独立胶片相馆、成都最老的茶馆、赵雷歌词里的玉林路。双语向导带你读懂这座城的内心。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D13</div>
+    <div class="day-info">
+      <div class="day-title">宽窄巷子 · 成都最后一天</div>
+      <div class="day-date">9月24日（四）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🫖</div>
+    <div>
+      <h4>宽窄巷子 · 老成都时光</h4>
+      <p>清代古街改造，竹椅盖碗茶、糖油果子、龙抄手——最后一个下午，慢下来，把成都装进行李箱。</p>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">🌶️</div>
+    <div>
+      <h4>成都火锅告别宴</h4>
+      <p>正宗成都火锅——红汤沸腾，毛肚打底，一桌人围炉，为这趟西南之行画上最辣的句号。</p>
+    </div>
+  </div>
+
+  <div class="day-header" style="margin-top:18px;">
+    <div class="day-num">D14</div>
+    <div class="day-info">
+      <div class="day-title">返回新加坡</div>
+      <div class="day-date">9月25日（五）</div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="icon card-icon">✈️</div>
+    <div>
+      <h4>送机 · 返抵新加坡</h4>
+      <p>专车送机，道别成都。西南的山水、熊猫的眼睛、安缦的寂静、洱海的蓝——带不走的，都留在记忆里。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"成都不是一个你匆匆路过的城市，<br>它会让你想要留下来。"</p>
+    <div class="author">— THE UPPER HOUSE CHENGDU</div>
+  </div>
+</div>
+
+<!-- ═══════════ HIGHLIGHTS ═══════════ -->
+<div class="page page-overview">
+  <h2><span class="num">06</span>行程亮点</h2>
+
+  <div class="hl-grid">
+    <div class="hl-item">
+      <h4>🐼 全球唯一抱熊猫</h4>
+      <p>都江堰熊猫苑义工体验，全国仅此一处提供合影抱抱，1,200元/人，含喂食与清洁全流程。</p>
+    </div>
+    <div class="hl-item">
+      <h4>🦊 六善小熊猫定制</h4>
+      <p>六善青城山专属Red Panda探索体验，濒危物种近距离接触，全国极少见的体验。</p>
+    </div>
+    <div class="hl-item">
+      <h4>🏔 虎跳峡深度徒步</h4>
+      <p>世界最深峡谷之一，专业向导陪同，中等难度约5小时，不走高危栈道，安全舒适。</p>
+    </div>
+    <div class="hl-item">
+      <h4>⛰ 玉龙雪山雪线</h4>
+      <p>索道直达4,506米，南中国最南端冰川近在眼前，蓝月谷五彩湖泊如梦似幻。</p>
+    </div>
+    <div class="hl-item">
+      <h4>🏛 四座顶级酒店</h4>
+      <p>六善 · 艾迪逊 · Aman · 博舍——中国最具代表性的奢华酒店品牌，四座四境，每一站均为目的地本身。</p>
+    </div>
+    <div class="hl-item">
+      <h4>🚌 14座专属专车</h4>
+      <p>全程豪华升级版奔驰大巴，双语（中英）专业导游陪同，私密定制，不与任何团体共车。</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:20px;margin-top:32px;">行程核心体验对比</h2>
+  <table class="overview-table" style="margin-top:14px;">
+    <tr><th>目的地</th><th>自然体验</th><th>文化体验</th><th>酒店亮点</th></tr>
+    <tr>
+      <td><strong>成都·青城山</strong></td>
+      <td>青城山道教古道</td>
+      <td>都江堰水利工程·白族民居</td>
+      <td>六善温泉·Spa</td>
+    </tr>
+    <tr>
+      <td><strong>大理</strong></td>
+      <td>苍山缆车·洱海环湖</td>
+      <td>喜洲古镇·寂照庵禅茶</td>
+      <td>洱海景观无边泳池</td>
+    </tr>
+    <tr>
+      <td><strong>丽江</strong></td>
+      <td>虎跳峡·玉龙雪山·蓝月谷</td>
+      <td>白沙壁画·东巴文化·印象丽江</td>
+      <td>安缦40座独立院落</td>
+    </tr>
+    <tr>
+      <td><strong>成都·市区</strong></td>
+      <td>熊猫基地幼崽</td>
+      <td>东郊记忆·玉林路·宽窄巷子</td>
+      <td>博舍屋顶泳池·大慈寺</td>
+    </tr>
+  </table>
+
+  <div style="margin-top:24px;background:#fafaf9;border-radius:3px;padding:18px 20px;">
+    <p style="font-size:12px;color:#0f3460;font-weight:600;margin:0 0 8px 0;">费用说明</p>
+    <p style="font-size:11px;color:#999;line-height:1.8;margin:0;">
+      · 本报价以 <strong>10人同行</strong>为基础，实际价格以最终人数、日期、房态二次确认为准<br>
+      · 含：全程专属14座奔驰大巴、双语导游、所有列明门票与活动、接送机服务<br>
+      · 不含：国际机票（新加坡↔成都）、国内联程机票、签证、旅游保险、个人消费及未列明餐饮<br>
+      · 汇率：1 SGD ≈ 5.36 CNY（报价时参考）
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ SUMMARY ═══════════ -->
+<div class="page page-summary">
+  <h2><span class="num" style="color:rgba(255,255,255,0.5);">07</span>旅途终章</h2>
+
+  <div class="journey-text">
+    从青城山的竹林温泉<br>
+    到大理苍山洱海的苍茫<br>
+    到丽江安缦的纳西庭院<br>
+    到成都太古里的都市脉搏<br>
+    <br>
+    四城四境 · 十四天 · 一次西南<br>
+    <br>
+    <span style="font-size:13px;opacity:0.7;">
+      山水不只是风景<br>
+      它们是时间留下来的另一种方式
+    </span>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <div style="font-size:11px;opacity:0.4;letter-spacing:3px;margin-bottom:20px;">行程路线</div>
+    <div style="font-size:14px;font-weight:300;letter-spacing:2px;line-height:2.5;">
+      ✈ 新加坡<br>
+      ↓ 飞往成都<br>
+      🌿 六善青城山 · 3晚<br>
+      ↓ 飞往大理（约1.5H）<br>
+      🏔 大理艾迪逊 · 3晚<br>
+      ↓ 驾车前往丽江（约3H）<br>
+      🏛 丽江安缦 · 4晚<br>
+      ↓ 飞往成都（约1.5H）<br>
+      🏙 成都博舍 · 3晚<br>
+      ↓ 飞回新加坡<br>
+      ✈ 新加坡
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Wildroad Travel · 野路逸行<br>
+    西南秘境·成都大理丽江 · 2026年9月12日–25日 · 14天13晚 · 10人同行<br>
+    本手册价格以最终人数、日期、房态二次确认为准。行程安排可根据航班及实际情况微调。<br>
+    全程：14座升级版豪华奔驰大巴 + 双语（中/英）专业导游 + 专属接送机
+  </div>
+</div>
+
+</body>
+</html>

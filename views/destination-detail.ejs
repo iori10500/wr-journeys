@@ -51,6 +51,7 @@
 
   <div class="trips-section">
     <h2><%= lang === 'en' ? 'Itineraries in ' + destination.name_en : destination.name_zh + ' 的行程' %></h2>
+    <% if (trips.length > 0) { %>
     <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;">
       <% trips.forEach(function(item) {
         var isEn = lang === 'en';
@@ -72,6 +73,12 @@
         </a>
       <% }); %>
     </div>
+    <% } else { %>
+    <div style="text-align:center;padding:60px 24px;">
+      <p style="font-size:18px;color:#888;margin-bottom:24px;"><%= lang === 'en' ? 'Coming Soon — Custom itineraries for ' + destination.name_en : destination.name_zh + ' 定制行程即将推出' %></p>
+      <a href="https://wr-travel.com/contact" target="_blank" rel="noopener" style="display:inline-block;background:linear-gradient(135deg,#c8a96e,#b08d4a);color:#fff;font-size:16px;font-weight:600;padding:14px 32px;border-radius:8px;text-decoration:none;"><%= lang === 'en' ? 'Consult a Travel Advisor' : '咨询旅行顾问' %></a>
+    </div>
+    <% } %>
   </div>
 
   <script>

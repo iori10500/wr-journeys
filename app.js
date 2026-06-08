@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const { marked } = require('marked');
 
 function extractBrochureContent(html) {
   // Extract <style> blocks (may be multiple)
@@ -190,7 +191,11 @@ const guideTypeLabels = {
   wellness: { zh: '康养度假', en: 'Wellness Guide' },
   adventure: { zh: '户外冒险', en: 'Adventure Guide' },
   food: { zh: '美食指南', en: 'Food Guide' },
-  tips: { zh: '实用攻略', en: 'Practical Tips' }
+  tips: { zh: '实用攻略', en: 'Practical Tips' },
+  honeymoon: { zh: '蜜月指南', en: 'Honeymoon Guide' },
+  family: { zh: '亲子旅行', en: 'Family Travel' },
+  shopping: { zh: '购物指南', en: 'Shopping Guide' },
+  fashion: { zh: '时装周', en: 'Fashion Week' }
 };
 
 // Generate content HTML based on guide type
@@ -437,6 +442,11 @@ function getCountries() {
     france: { zh: '法国', en: 'France', flag: '🇫🇷' },
     indonesia: { zh: '印度尼西亚', en: 'Indonesia', flag: '🇮🇩' },
     thailand: { zh: '泰国', en: 'Thailand', flag: '🇹🇭' },
+    maldives: { zh: '马尔代夫', en: 'Maldives', flag: '🇲🇻' },
+    japan: { zh: '日本', en: 'Japan', flag: '🇯🇵' },
+    dubai: { zh: '迪拜', en: 'Dubai', flag: '🇦🇪' },
+    greece: { zh: '希腊', en: 'Greece', flag: '🇬🇷' },
+    morocco: { zh: '摩洛哥', en: 'Morocco', flag: '🇲🇦' },
   };
   const found = {};
   itineraries.forEach(item => {
@@ -499,7 +509,7 @@ app.get('/destinations/:country', (req, res) => {
 app.get('/guides', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const grouped = {};
-  const destOrder = ['switzerland', 'tanzania', 'italy', 'uk', 'france', 'indonesia', 'thailand'];
+  const destOrder = ['switzerland', 'tanzania', 'italy', 'uk', 'france', 'indonesia', 'thailand', 'maldives', 'japan', 'dubai', 'greece', 'morocco'];
   destOrder.forEach(d => { grouped[d] = []; });
   guidesData.forEach(g => {
     if (!grouped[g.destination]) grouped[g.destination] = [];
@@ -523,7 +533,9 @@ app.get('/guides/:slug', (req, res) => {
     (t.regions || []).some(r => r.toLowerCase().replace(/\s+/g, '-') === guide.destination)
   );
 
-  const contentHtml = generateGuideContent(guide, destInfo, lang);
+  const contentHtml = guide.content_zh || guide.content_en
+    ? marked.parse(lang === 'en' ? (guide.content_en || guide.content_zh) : (guide.content_zh || guide.content_en))
+    : generateGuideContent(guide, destInfo, lang);
   const faqItems = generateFaqItems(guide, destInfo, lang);
 
   res.render('guide-detail', {

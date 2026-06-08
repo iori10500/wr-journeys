@@ -26,5 +26,25 @@
   "thailand": {
     "zh": "泰国是东南亚最迷人的旅行目的地之一。曼谷融合古老寺庙与现代奢华，丽思卡尔顿酒店坐落于湄南河畔，融合泰式优雅与现代奢华。从大皇宫的金碧辉煌到水上市场的热闹喧嚣，从泰式按摩到米其林街头美食——曼谷是一个永远不会让人厌倦的城市。",
     "en": "Thailand is one of Southeast Asia's most enchanting travel destinations. Bangkok blends ancient temples with modern luxury — The Ritz-Carlton sits along the Chao Phraya River, merging Thai elegance with contemporary luxury. From the Grand Palace's splendor to floating market bustle, from Thai massage to Michelin street food — Bangkok is a city that never grows old."
+  },
+  "maldives": {
+    "zh": "印度洋上的珍珠项链，1200座珊瑚岛组成的人间天堂。水上别墅、私人沙洲、海底餐厅——马尔代夫重新定义了奢华度假。",
+    "en": "A string of 1,200 coral islands in the Indian Ocean. Overwater villas, private sandbanks, and underwater restaurants — the Maldives redefines luxury."
+  },
+  "japan": {
+    "zh": "从东京的霓虹闪烁到京都的千年古韵，从北海道的粉雪到冲绳的碧海。日本用极致的细节诠释待客之道。",
+    "en": "From Tokyo's neon glow to Kyoto's timeless temples, from Hokkaido's powder snow to Okinawa's turquoise waters. Japan defines hospitality through exquisite detail."
+  },
+  "dubai": {
+    "zh": "沙漠中崛起的未来之城，迪拜用超乎想象的建筑、七星级服务和无边界的奢华体验，重新定义旅行的上限。",
+    "en": "A futuristic city rising from the desert. Dubai redefines the limits of travel with extraordinary architecture, seven-star service, and boundless luxury."
+  },
+  "greece": {
+    "zh": "爱琴海的蓝白梦境。圣托里尼的日落、米克诺斯的风车、雅典的千年文明——希腊是浪漫与历史的完美交汇。",
+    "en": "A blue-and-white dream on the Aegean Sea. Santorini sunsets, Mykonos windmills, and Athens' millennia of civilization — where romance meets history."
+  },
+  "morocco": {
+    "zh": "北非的异域花园。马拉喀什的红色城墙、撒哈拉的金色沙丘、菲斯的千年迷宫——摩洛哥是一场感官的盛宴。",
+    "en": "An exotic garden in North Africa. Marrakech's red walls, the Sahara's golden dunes, Fes' ancient labyrinth — Morocco is a feast for the senses."
   }
 }

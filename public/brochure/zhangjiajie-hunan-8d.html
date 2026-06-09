@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖南秘境·张家界与凤凰古城 8天7晚 | Zhangjiajie & Fenghuang 8 Days</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', 'STSong', serif; background: #f5f0eb; }
+
+  @page { size: A4; margin: 0; }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: #1a1a2e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .cover-image {
+    width: 100%;
+    height: 70mm;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+  }
+  .cover-body {
+    flex: 1;
+    padding: 12mm 14mm 10mm;
+    background: linear-gradient(160deg, #1a2a1a 0%, #2d1f0e 60%, #1a1a2e 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cover-brand {
+    font-size: 8pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c8a96e;
+    margin-bottom: 8mm;
+  }
+  .cover-title-zh {
+    font-size: 28pt;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 3mm;
+  }
+  .cover-title-en {
+    font-size: 11pt;
+    letter-spacing: 2px;
+    color: #c8a96e;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .cover-subtitle {
+    font-size: 8.5pt;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    margin-bottom: 8mm;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 8mm;
+    flex-wrap: wrap;
+  }
+  .cover-badge {
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.4);
+    color: #c8a96e;
+    padding: 3mm 5mm;
+    font-size: 7pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .cover-desc {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-style: italic;
+    margin-top: 8mm;
+    border-top: 1px solid rgba(200,169,110,0.25);
+    padding-top: 6mm;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-header {
+    padding: 8mm 14mm 6mm;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 6mm;
+  }
+  .section-label {
+    font-size: 7pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+    opacity: 0.7;
+  }
+  .section-title-zh {
+    font-size: 18pt;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1mm;
+  }
+  .section-title-en {
+    font-size: 9pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  /* ===== OVERVIEW PAGE ===== */
+  .overview-page {
+    padding: 0;
+  }
+  .overview-header {
+    background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%);
+    color: #fff;
+    padding: 10mm 14mm 8mm;
+  }
+  .overview-header .section-label { color: #a8c8a8; }
+  .overview-header .section-title-zh { color: #fff; font-size: 20pt; }
+  .overview-header .section-title-en { color: rgba(255,255,255,0.5); }
+  .overview-body { padding: 6mm 14mm; }
+
+  .route-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 6mm;
+    background: #f8f5f0;
+    padding: 4mm 5mm;
+    border-radius: 2mm;
+  }
+  .route-city {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #2d4a2d;
+    white-space: nowrap;
+  }
+  .route-arrow {
+    color: #c8a96e;
+    font-size: 9pt;
+    margin: 0 2mm;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin-bottom: 6mm;
+  }
+  .overview-card {
+    background: #f8f5f0;
+    border-left: 3px solid #2d4a2d;
+    padding: 3mm 4mm;
+  }
+  .overview-card-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin-bottom: 1.5mm;
+  }
+  .overview-card-value {
+    font-size: 9pt;
+    color: #1a1a1a;
+    line-height: 1.5;
+  }
+  .overview-card-en {
+    font-size: 7.5pt;
+    color: #666;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .highlights-box {
+    background: linear-gradient(135deg, #f8f0e0 0%, #fff8ee 100%);
+    border: 1px solid #e8d5aa;
+    padding: 5mm 6mm;
+    margin-bottom: 4mm;
+  }
+  .highlights-box-title {
+    font-size: 8pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8b6914;
+    margin-bottom: 3mm;
+  }
+  .highlight-item {
+    display: flex;
+    gap: 2mm;
+    margin-bottom: 2mm;
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.5;
+  }
+  .highlight-dot { color: #c8a96e; flex-shrink: 0; margin-top: 1px; }
+  .highlight-en { color: #777; font-style: italic; font-size: 7.5pt; }
+
+  /* ===== DAILY ITINERARY ===== */
+  .daily-page { padding: 0; }
+  .daily-header {
+    padding: 8mm 14mm 6mm;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  .daily-header.green { background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%); }
+  .daily-header.forest { background: linear-gradient(135deg, #0d2b1a 0%, #1a4a2d 100%); }
+  .daily-header.terracotta { background: linear-gradient(135deg, #2d1a0d 0%, #4a2d1a 100%); }
+  .daily-header .section-label { color: rgba(200,169,110,0.8); }
+  .daily-header .section-title-zh { color: #fff; font-size: 18pt; }
+  .daily-header .section-title-en { color: rgba(255,255,255,0.5); }
+
+  .days-grid { padding: 5mm 14mm; }
+
+  .day-block {
+    display: flex;
+    gap: 4mm;
+    margin-bottom: 5mm;
+    padding-bottom: 5mm;
+    border-bottom: 1px solid #ede8e0;
+  }
+  .day-block:last-child { border-bottom: none; margin-bottom: 0; }
+  .day-num {
+    flex-shrink: 0;
+    width: 18mm;
+    text-align: center;
+    padding-top: 1mm;
+  }
+  .day-num-num {
+    font-size: 22pt;
+    font-weight: 900;
+    line-height: 1;
+    color: #2d4a2d;
+  }
+  .day-num-label {
+    font-size: 6.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+  }
+  .day-content { flex: 1; }
+  .day-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1mm;
+  }
+  .day-title-en {
+    font-size: 8pt;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 2mm;
+  }
+  .day-desc {
+    font-size: 8pt;
+    color: #444;
+    line-height: 1.7;
+  }
+  .day-tags {
+    margin-top: 2mm;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm;
+  }
+  .day-tag {
+    background: #f0ede6;
+    color: #666;
+    font-size: 6.5pt;
+    padding: 1mm 2.5mm;
+    border-radius: 1mm;
+  }
+
+  /* ===== HOTEL SECTION ===== */
+  .hotel-section { padding: 0; }
+  .hotel-hero {
+    width: 100%;
+    height: 55mm;
+    object-fit: cover;
+    display: block;
+  }
+  .hotel-body { padding: 6mm 14mm; }
+  .hotel-name-zh {
+    font-size: 16pt;
+    font-weight: 900;
+    margin-bottom: 1mm;
+  }
+  .hotel-name-en {
+    font-size: 9pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 4mm;
+  }
+  .hotel-rating {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    margin-bottom: 4mm;
+  }
+  .hotel-stars { color: #c8a96e; font-size: 10pt; }
+  .hotel-class { font-size: 7.5pt; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+  .hotel-desc {
+    font-size: 8.5pt;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 5mm;
+  }
+  .hotel-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+    margin-bottom: 5mm;
+  }
+  .hotel-feature {
+    background: #f8f5f0;
+    padding: 3mm 4mm;
+    text-align: center;
+    border-top: 2px solid #c8a96e;
+  }
+  .hotel-feature-icon { font-size: 12pt; margin-bottom: 1mm; }
+  .hotel-feature-label { font-size: 7pt; color: #666; line-height: 1.4; }
+  .hotel-img-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+    margin-top: 4mm;
+  }
+  .hotel-img-row img {
+    width: 100%;
+    height: 35mm;
+    object-fit: cover;
+  }
+
+  /* ===== SCENERY SECTION ===== */
+  .scenery-page { padding: 0; }
+  .scenery-header {
+    background: linear-gradient(135deg, #0d1f2d 0%, #1a3a4a 100%);
+    color: #fff;
+    padding: 8mm 14mm 6mm;
+  }
+  .scenery-header .section-label { color: rgba(200,169,110,0.8); }
+  .scenery-header .section-title-zh { color: #fff; font-size: 18pt; }
+  .scenery-header .section-title-en { color: rgba(255,255,255,0.5); }
+  .scenery-grid { padding: 5mm 14mm; display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .scenery-card { position: relative; overflow: hidden; }
+  .scenery-card img { width: 100%; height: 42mm; object-fit: cover; display: block; }
+  .scenery-card-caption {
+    padding: 3mm;
+    background: #f8f5f0;
+    border-left: 3px solid #1a3a4a;
+  }
+  .scenery-card-title { font-size: 9pt; font-weight: 700; color: #1a1a1a; margin-bottom: 1mm; }
+  .scenery-card-title-en { font-size: 7.5pt; color: #888; font-style: italic; margin-bottom: 1.5mm; }
+  .scenery-card-desc { font-size: 7.5pt; color: #555; line-height: 1.6; }
+
+  /* ===== PRACTICAL INFO ===== */
+  .practical-page { padding: 0; }
+  .practical-header {
+    background: linear-gradient(135deg, #2a1a0d 0%, #4a3020 100%);
+    color: #fff;
+    padding: 8mm 14mm 6mm;
+  }
+  .practical-header .section-label { color: rgba(200,169,110,0.8); }
+  .practical-header .section-title-zh { color: #fff; font-size: 18pt; }
+  .practical-header .section-title-en { color: rgba(255,255,255,0.5); }
+  .practical-body { padding: 5mm 14mm; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin-bottom: 5mm;
+  }
+  .info-card {
+    background: #f8f5f0;
+    border-top: 3px solid #c8a96e;
+    padding: 4mm 5mm;
+  }
+  .info-card-title { font-size: 8pt; font-weight: 700; color: #4a3020; margin-bottom: 2mm; letter-spacing: 0.5px; }
+  .info-card-title-en { font-size: 7pt; color: #999; font-style: italic; margin-bottom: 2mm; }
+  .info-item { font-size: 8pt; color: #444; line-height: 1.7; }
+  .info-item-en { font-size: 7.5pt; color: #777; font-style: italic; line-height: 1.6; }
+
+  .inclusion-box {
+    background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+    border: 1px solid #a8d8a8;
+    padding: 5mm 6mm;
+    margin-bottom: 4mm;
+  }
+  .inclusion-title { font-size: 8pt; font-weight: 700; color: #1a4a1a; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3mm; }
+  .inclusion-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .inclusion-item { font-size: 8pt; color: #333; line-height: 1.7; padding-left: 3mm; border-left: 2px solid #a8d8a8; }
+  .exclusion-box {
+    background: #fff8f5;
+    border: 1px solid #f0c8b8;
+    padding: 4mm 6mm;
+  }
+  .exclusion-title { font-size: 8pt; font-weight: 700; color: #8b2a1a; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2mm; }
+  .exclusion-item { font-size: 8pt; color: #555; line-height: 1.7; }
+
+  /* ===== BACK COVER ===== */
+  .back-cover {
+    background: linear-gradient(160deg, #0d1f0d 0%, #1a2a1a 50%, #2d1a0d 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20mm;
+    min-height: 297mm;
+  }
+  .back-cover-logo { font-size: 10pt; letter-spacing: 4px; text-transform: uppercase; color: #c8a96e; margin-bottom: 6mm; }
+  .back-cover-title { font-size: 24pt; font-weight: 900; color: #fff; margin-bottom: 3mm; }
+  .back-cover-en { font-size: 11pt; letter-spacing: 2px; color: #c8a96e; text-transform: uppercase; margin-bottom: 12mm; }
+  .back-cover-quote {
+    font-size: 10pt;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    max-width: 130mm;
+    line-height: 1.9;
+    margin-bottom: 14mm;
+  }
+  .back-cover-divider { width: 30mm; height: 1px; background: rgba(200,169,110,0.4); margin-bottom: 10mm; }
+  .back-cover-contact { font-size: 8.5pt; color: rgba(255,255,255,0.5); line-height: 2; letter-spacing: 0.5px; }
+  .back-cover-tagline { font-size: 8pt; color: rgba(200,169,110,0.6); letter-spacing: 2px; margin-top: 10mm; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page cover">
+  <img class="cover-image" src="/images/zhangjiajie-hunan-8d/zhangjiajie-pillars.jpg" alt="张家界">
+  <div class="cover-body">
+    <div>
+      <div class="cover-brand">Wildroad Travel · 野路逸行</div>
+      <div class="cover-title-zh">湖南秘境</div>
+      <div class="cover-title-zh" style="font-size:18pt; margin-top:-2mm; margin-bottom:3mm;">张家界 · 凤凰古城</div>
+      <div class="cover-title-en">Zhangjiajie &amp; Fenghuang · Hunan Unveiled</div>
+      <div class="cover-subtitle">
+        ZHANGJIAJIE · FENGHUANG · CHANGSHA · 8 Days 7 Nights · Private Tailor-Made<br>
+        张家界 · 凤凰 · 长沙 · 8天7晚 · 私享定制 · 新加坡出发
+      </div>
+      <div class="cover-meta">
+        <div class="cover-badge">8 Days · 8天</div>
+        <div class="cover-badge">Private · 专属包车</div>
+        <div class="cover-badge">5★ Hotels</div>
+        <div class="cover-badge">October Window</div>
+      </div>
+    </div>
+    <div class="cover-desc">
+      Hovering stone pillars draped in mist. A living city of stilt houses clinging to a clifftop river. Hunan is where China keeps its oldest secrets — and this eight-day private journey reveals them without the crowds.<br><br>
+      云雾缭绕的悬浮砂岩柱，悬崖边沿的土家吊脚楼，沱江倒影里千年不变的古城光影。湖南藏着中国最古老的秘密，这趟八天私享之旅，带你在人潮退去后独享她的静谧。
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: OVERVIEW ==================== -->
+<div class="page overview-page">
+  <div class="overview-header">
+    <div class="section-label">Journey Overview · 行程总览</div>
+    <div class="section-title-zh" style="color:#fff; font-size:20pt;">8天7晚精华路线</div>
+    <div class="section-title-en">8-Day Private Itinerary · Singapore Departure</div>
+  </div>
+  <div class="overview-body">
+
+    <div class="route-flow">
+      <span class="route-city">新加坡</span>
+      <span class="route-arrow">✈</span>
+      <span class="route-city">长沙</span>
+      <span class="route-arrow">→</span>
+      <span class="route-city">张家界/武陵源</span>
+      <span class="route-arrow">→</span>
+      <span class="route-city">凤凰古城</span>
+      <span class="route-arrow">→</span>
+      <span class="route-city">长沙</span>
+      <span class="route-arrow">✈</span>
+      <span class="route-city">新加坡</span>
+    </div>
+
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">出发/返回 · Departure</div>
+        <div class="overview-card-value">新加坡 Singapore (SIN)</div>
+        <div class="overview-card-en">Direct / 1-stop to Changsha CSX</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">最佳出行时间 · Best Season</div>
+        <div class="overview-card-value">十月黄金窗口期</div>
+        <div class="overview-card-en">Oct 9–26 (post-Golden Week, clear skies)</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">旅行人数 · Party Size</div>
+        <div class="overview-card-value">2人同行</div>
+        <div class="overview-card-en">Couple / 2 pax, fully private</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">交通 · Transport</div>
+        <div class="overview-card-value">专属私家车全程</div>
+        <div class="overview-card-en">Private driver throughout, no group tours</div>
+      </div>
+    </div>
+
+    <div class="highlights-box">
+      <div class="highlights-box-title">✦ Highlights · 行程亮点</div>
+      <div class="highlight-item">
+        <span class="highlight-dot">◆</span>
+        <div>
+          <strong>阿凡达取景地</strong> 武陵源核心景区，私人进场避开黄金周人潮<br>
+          <span class="highlight-en">Wulingyuan Scenic Area — Avatar's Hallelujah Mountains in eerie morning mist</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-dot">◆</span>
+        <div>
+          <strong>悦榕庄张家界</strong> 无边际泳池别墅，俯瞰峡谷云海<br>
+          <span class="highlight-en">Banyan Tree Zhangjiajie — infinity pool villa cantilevered over canyon mist</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-dot">◆</span>
+        <div>
+          <strong>天门山玻璃栈道</strong> 俯瞰云层之上的悬空走廊，全长1600米<br>
+          <span class="highlight-en">Tianmen Mountain Glass Skywalk — 1600m of glass-floored terror above the clouds</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-dot">◆</span>
+        <div>
+          <strong>凤凰古城</strong> 沱江夜泛，朱砂古镇，苗族银饰定制<br>
+          <span class="highlight-en">Fenghuang — twilight boat on the Tuojiang River, Miao silverwork, ancient vermilion lanes</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-dot">◆</span>
+        <div>
+          <strong>尼依格罗长沙</strong> 长沙文化首发地，屋顶日落鸡尾酒<br>
+          <span class="highlight-en">Niccolo Changsha — rooftop sundowners overlooking Meixi Lake at golden hour</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-grid">
+      <div class="overview-card" style="border-left-color:#8b6914;">
+        <div class="overview-card-label">酒店总览 · Hotels</div>
+        <div class="overview-card-value">长沙：尼依格罗 (1晚)</div>
+        <div class="overview-card-value">张家界：悦榕庄 (4晚)</div>
+        <div class="overview-card-value">凤凰：精品民宿 (2晚)</div>
+      </div>
+      <div class="overview-card" style="border-left-color:#8b6914;">
+        <div class="overview-card-label">行程节奏 · Pace</div>
+        <div class="overview-card-value">舒适节奏，非赶景</div>
+        <div class="overview-card-en">Slow travel — 2-3 sites per day max, long lunches, private pace</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: DAYS 1-2 ==================== -->
+<div class="page daily-page">
+  <div class="daily-header green">
+    <div class="section-label">Day by Day · 逐日行程</div>
+    <div class="section-title-zh">第1–2天 · 长沙</div>
+    <div class="section-title-en">Days 1–2 · Changsha Arrival &amp; Culture</div>
+  </div>
+  <div class="days-grid">
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#2d4a2d;">D1</div>
+        <div class="day-num-label">Day 1</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">新加坡 → 长沙 · 抵达 &amp; 入住尼依格罗</div>
+        <div class="day-title-en">Singapore → Changsha · Arrival at Niccolo</div>
+        <div class="day-desc">
+          乘航班飞抵长沙黄花国际机场，专车接机前往梅溪湖畔的<strong>尼依格罗酒店</strong>（梅溪湖国际文化艺术中心旁）。下午在梅溪湖畔散步，傍晚前往<strong>屋顶酒吧</strong>欣赏金色夕阳与城市天际线。晚餐可选酒店米其林主厨料理。<br><br>
+          Arrive Changsha Huanghua Airport, private transfer to <strong>Niccolo Changsha</strong> on Meixi Lake. Afternoon stroll along the lake promenade. Sundowner cocktails at the rooftop bar as the city lights up. Optional Michelin-level dinner in-house.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">私家车接机</span>
+          <span class="day-tag">尼依格罗入住</span>
+          <span class="day-tag">梅溪湖</span>
+          <span class="day-tag">屋顶日落</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#2d4a2d;">D2</div>
+        <div class="day-num-label">Day 2</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">长沙文化半日 · 驱车前往张家界</div>
+        <div class="day-title-en">Changsha Culture Morning → Drive to Zhangjiajie</div>
+        <div class="day-desc">
+          上午漫步<strong>橘子洲头</strong>（毛泽东青年雕像，湘江对望），或探访超级文和友市集体验本地街食文化。午后驱车约4小时前往武陵源，沿途欣赏湘西丘陵地貌。傍晚抵达<strong>悦榕庄张家界</strong>，晚餐于无边际泳池畔就餐，首次感受砂岩峰林的轮廓线。<br><br>
+          Morning at <strong>Orange Isle</strong> (Young Mao sculpture, panoramic Xiangjiang views) or local culture at Chaoyang cultural market. ~4-hour private drive through the Xiangxi hills to Wulingyuan. Check in at <strong>Banyan Tree Zhangjiajie</strong>, dinner by the infinity pool as the pillar mountains fade into silhouette.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">橘子洲</span>
+          <span class="day-tag">专车4小时</span>
+          <span class="day-tag">悦榕庄入住</span>
+          <span class="day-tag">泳池晚餐</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#1a3a2d;">D3</div>
+        <div class="day-num-label">Day 3</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">武陵源核心区 · 阿凡达山峰</div>
+        <div class="day-title-en">Wulingyuan Core Area · Avatar Mountains</div>
+        <div class="day-desc">
+          清晨搭乘<strong>百龙天梯</strong>（世界最高户外电梯，326米）登顶观景台，感受云海中砂岩柱林的震撼全景。上午步行<strong>十里画廊</strong>（电动观光车穿越峰林长廊）。下午乘坐缆车游览<strong>天子山</strong>，俯瞰"神堂湾"地貌。傍晚返回悦榕庄，SPA放松。<br><br>
+          Take the <strong>Bailong Elevator</strong> (world's tallest outdoor lift, 326m) to sunrise at the summit. Walk the <strong>Ten-Mile Gallery</strong> by electric tram through pillar-lined corridors. Afternoon cable car to <strong>Tianzi Mountain</strong> and the Shentang Valley panorama. Evening Banyan Tree Spa.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">百龙天梯</span>
+          <span class="day-tag">十里画廊</span>
+          <span class="day-tag">天子山</span>
+          <span class="day-tag">悦榕庄SPA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#1a3a2d;">D4</div>
+        <div class="day-num-label">Day 4</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">黄龙洞 · 金鞭溪徒步</div>
+        <div class="day-title-en">Yellow Dragon Cave · Golden Whip Stream Hike</div>
+        <div class="day-desc">
+          上午探秘<strong>黄龙洞</strong>，国家4A级溶洞群，地下宫殿般的石笋石柱（全程约1.5小时）。下午享受最轻松惬意的<strong>金鞭溪步道</strong>（7.5公里，溪边漫步穿越峰林，偶遇野生猕猴）。返回酒店享用悦榕庄星级晚餐。<br><br>
+          Morning: <strong>Yellow Dragon Cave</strong> — vast underground halls of stalactites and stalagmites (1.5h tour). Afternoon: the gentle <strong>Golden Whip Stream</strong> trail (7.5km, flat, creek-side walk through the pillars, wild macaques likely spotted). Banyan Tree gourmet dinner.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">黄龙洞</span>
+          <span class="day-tag">金鞭溪</span>
+          <span class="day-tag">野生猕猴</span>
+          <span class="day-tag">星级晚餐</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: DAYS 5-6 (TIANMEN + FENGHUANG) ==================== -->
+<div class="page daily-page">
+  <div class="daily-header forest">
+    <div class="section-label">Day by Day · 逐日行程</div>
+    <div class="section-title-zh">第5–6天 · 天门山 &amp; 凤凰</div>
+    <div class="section-title-en">Days 5–6 · Tianmen Mountain &amp; Fenghuang Ancient Town</div>
+  </div>
+  <div class="days-grid">
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#1a4a2d;">D5</div>
+        <div class="day-num-label">Day 5</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">天门山玻璃栈道 → 下午出发凤凰</div>
+        <div class="day-title-en">Tianmen Mountain Glass Skywalk → Drive to Fenghuang</div>
+        <div class="day-desc">
+          上午前往张家界市区，乘坐世界最长索道（7455米）上<strong>天门山</strong>。挑战<strong>玻璃栈道</strong>（1600米悬挂式玻璃步道，深渊俯瞰）；漫步<strong>云梯</strong>（1000余台阶穿云而上），感受天门洞的壮阔。午后驱车约2.5小时抵达<strong>凤凰古城</strong>，办理入住精品沱江民宿，黄昏沿虹桥漫步。<br><br>
+          Take the world's longest cable car (7,455m) up <strong>Tianmen Mountain</strong>. Walk the <strong>Glass Skywalk</strong> (1,600m glass-floored cliff walk) and ascend the <strong>Cloud Ladder</strong> through mist. Drive ~2.5h to <strong>Fenghuang Ancient Town</strong>. Check in at boutique Tuojiang riverside inn. Twilight stroll across Rainbow Bridge.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">天门山索道</span>
+          <span class="day-tag">玻璃栈道</span>
+          <span class="day-tag">专车凤凰</span>
+          <span class="day-tag">沱江民宿入住</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#1a4a2d;">D6</div>
+        <div class="day-num-label">Day 6</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">凤凰古城深度游 · 沱江夜泛</div>
+        <div class="day-title-en">Fenghuang In Depth · Evening Boat on Tuojiang</div>
+        <div class="day-desc">
+          上午8点前在<strong>朱砂古镇</strong>晨光中感受老街空巷（避开旅游人潮的最佳时段）。参观<strong>沈从文故居</strong>，感受《边城》文字背后的湘西气息。下午在苗族银匠铺体验<strong>手工银饰定制</strong>，可在苗族刺绣铺选购纹样。傍晚登上城楼观赏落霞，<strong>夜乘乌篷船</strong>游览华灯初上的沱江，灯火倒影令人难忘。<br><br>
+          Early morning in <strong>Zhusha Ancient Town</strong> before crowds arrive. Visit <strong>Shen Congwen's Former Residence</strong> (China's greatest Hunan author). Afternoon: Miao <strong>silverwork workshop</strong> — custom pendant or bracelet made while you watch. Sunset from the city walls, then an <strong>evening punt</strong> along the lantern-lit Tuojiang.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">朱砂古镇</span>
+          <span class="day-tag">沈从文故居</span>
+          <span class="day-tag">苗银定制</span>
+          <span class="day-tag">沱江夜泛</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#2d3a1a;">D7</div>
+        <div class="day-num-label">Day 7</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">凤凰 → 长沙 · 文化尾声</div>
+        <div class="day-title-en">Fenghuang → Changsha · Cultural Finale</div>
+        <div class="day-desc">
+          上午在古城闲逛，早市采购凤凰姜糖、苗族腊肉等特产。午后专车约3.5小时返回长沙，抵达后前往<strong>湖南省博物馆</strong>（辛追娭毑汉代文物，马王堆出土丝绸，高度推荐）或在太平街拍照留念。晚餐必选<strong>长沙臭豆腐 + 辣椒炒肉</strong>，感受湘菜真正的辣度。<br><br>
+          Morning browsing the old market (ginger candy, Miao cured meats). Drive ~3.5h to Changsha. Visit the <strong>Hunan Provincial Museum</strong> (Lady Dai's 2,000-year-old intact mummy and Han-dynasty silk burial garments — unmissable). Evening: street food finale at Taiping Street — stinky tofu and pork with chilies.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">古城早市</span>
+          <span class="day-tag">专车长沙</span>
+          <span class="day-tag">湖南省博物馆</span>
+          <span class="day-tag">湘菜晚餐</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num">
+        <div class="day-num-num" style="color:#4a2d1a;">D8</div>
+        <div class="day-num-label">Day 8</div>
+      </div>
+      <div class="day-content">
+        <div class="day-title">长沙 → 新加坡 · 返程</div>
+        <div class="day-title-en">Changsha → Singapore · Departure</div>
+        <div class="day-desc">
+          根据航班时间，上午可在梅溪湖附近悠然享用早餐，或前往步步高广场购物。专车送往长沙黄花国际机场，乘航班返回新加坡。此刻行囊里已装满了悬浮山峰的照片、苗族银饰、以及凤凰古城傍晚的记忆。<br><br>
+          Morning at leisure near Meixi Lake — final breakfast, last-minute souvenirs. Private transfer to Changsha Huanghua Airport. Fly home to Singapore, bags full of photos of floating mountains, Miao silver, and the memory of lantern light on the Tuojiang River.
+        </div>
+        <div class="day-tags">
+          <span class="day-tag">悠闲早晨</span>
+          <span class="day-tag">专车送机</span>
+          <span class="day-tag">返回新加坡</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 5: HOTEL - NICCOLO CHANGSHA ==================== -->
+<div class="page hotel-section">
+  <img class="hotel-hero" src="/images/zhangjiajie-hunan-8d/niccolo-1.jpg" alt="尼依格罗长沙">
+  <div class="hotel-body">
+    <div class="section-label" style="color:#999; font-size:7pt; letter-spacing:2px; text-transform:uppercase; margin-bottom:2mm;">长沙 · 第1晚 · Changsha Night 1</div>
+    <div class="hotel-name-zh" style="color:#1a2a4a;">尼依格罗酒店 长沙</div>
+    <div class="hotel-name-en">Niccolo Changsha</div>
+    <div class="hotel-rating">
+      <span class="hotel-stars">★★★★★</span>
+      <span class="hotel-class">Five Star · International Luxury · Meixi Lake</span>
+    </div>
+    <div class="hotel-desc">
+      由全球顶尖设计师操刀，尼依格罗长沙坐落于梅溪湖畔，毗邻扎哈·哈迪德设计的长沙梅溪湖国际文化艺术中心。客房通透落地窗将梅溪湖全景引入室内，屋顶酒吧是长沙最具格调的日落观赏地。米其林餐厅与下午茶让味蕾同步升级。<br><br>
+      Adjacent to Zaha Hadid's Meixi Lake International Arts Centre, Niccolo Changsha offers floor-to-ceiling lake views, a rooftop bar celebrated as the city's finest sunset spot, and Michelin-calibre dining. The perfect soft landing for first-time visitors to China.
+    </div>
+    <div class="hotel-features">
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🏊</div>
+        <div class="hotel-feature-label">室内泳池<br>Indoor Pool</div>
+      </div>
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🍷</div>
+        <div class="hotel-feature-label">屋顶酒吧<br>Rooftop Bar</div>
+      </div>
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🌊</div>
+        <div class="hotel-feature-label">梅溪湖景<br>Lake View</div>
+      </div>
+    </div>
+    <div class="hotel-img-row">
+      <img src="/images/zhangjiajie-hunan-8d/niccolo-1.jpg" alt="尼依格罗长沙">
+      <img src="/images/zhangjiajie-hunan-8d/niccolo-2.jpg" alt="尼依格罗长沙客房">
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 6: HOTEL - BANYAN TREE ZHANGJIAJIE ==================== -->
+<div class="page hotel-section">
+  <img class="hotel-hero" src="/images/zhangjiajie-hunan-8d/zhangjiajie-forest.jpg" alt="悦榕庄张家界">
+  <div class="hotel-body">
+    <div class="section-label" style="color:#999; font-size:7pt; letter-spacing:2px; text-transform:uppercase; margin-bottom:2mm;">张家界 · 第2–5晚 · Zhangjiajie Nights 2–5</div>
+    <div class="hotel-name-zh" style="color:#1a3a1a;">悦榕庄 张家界</div>
+    <div class="hotel-name-en">Banyan Tree Zhangjiajie</div>
+    <div class="hotel-rating">
+      <span class="hotel-stars">★★★★★</span>
+      <span class="hotel-class">Five Star · Pool Villa · UNESCO Scenic Area</span>
+    </div>
+    <div class="hotel-desc">
+      悦榕庄张家界是中国最戏剧化的度假村之一——无边际泳池别墅镶嵌在武陵源峡谷边缘，清晨推开窗帘便是云雾中托起的砂岩峰林。每栋别墅均配有私人泳池，可在砂岩峰林的视野中静泡。悦榕庄品牌标志性Rainforest SPA结合湘西草药，是深度放松的最佳选择。<br><br>
+      Perched on the canyon edge of Wulingyuan, Banyan Tree Zhangjiajie's infinity-pool villas stare directly into the Avatar mountains. Open your curtains to mist-shrouded sandstone pillars. The brand's signature Rainforest Spa incorporates local Xiangxi herbal traditions. Four nights here feel deliberately unhurried.
+    </div>
+    <div class="hotel-features">
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🌊</div>
+        <div class="hotel-feature-label">私人无边泳池<br>Private Infinity Pool</div>
+      </div>
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🏔️</div>
+        <div class="hotel-feature-label">峰林全景<br>Peak Forest View</div>
+      </div>
+      <div class="hotel-feature">
+        <div class="hotel-feature-icon">🌿</div>
+        <div class="hotel-feature-label">Rainforest SPA<br>雨林水疗</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 7: SCENERY ==================== -->
+<div class="page scenery-page">
+  <div class="scenery-header">
+    <div class="section-label">Landscapes · 自然奇观</div>
+    <div class="section-title-zh">湖南的山河秘境</div>
+    <div class="section-title-en">Hunan's Hidden Natural Wonders</div>
+  </div>
+  <div class="scenery-grid">
+    <div class="scenery-card">
+      <img src="/images/zhangjiajie-hunan-8d/zhangjiajie-pillars.jpg" alt="张家界砂岩柱">
+      <div class="scenery-card-caption">
+        <div class="scenery-card-title">武陵源砂岩峰林</div>
+        <div class="scenery-card-title-en">Wulingyuan Sandstone Pillars</div>
+        <div class="scenery-card-desc">超过3,000根砂岩柱群，原型启发电影《阿凡达》。被誉为"地球上最像外星的景观"。Inspiration for Avatar's Hallelujah Mountains — 3,000+ sandstone columns rising from subtropical forest.</div>
+      </div>
+    </div>
+    <div class="scenery-card">
+      <img src="/images/zhangjiajie-hunan-8d/tianmen-glass.jpg" alt="天门山玻璃栈道">
+      <div class="scenery-card-caption">
+        <div class="scenery-card-title">天门山玻璃栈道</div>
+        <div class="scenery-card-title-en">Tianmen Glass Skywalk</div>
+        <div class="scenery-card-desc">悬挂于海拔1400米峭壁上的玻璃步道，总长1600米。脚下是千米深渊。1,600m of glass-floored walkway at 1,400m altitude — one of the world's most vertiginous walks.</div>
+      </div>
+    </div>
+    <div class="scenery-card">
+      <img src="/images/zhangjiajie-hunan-8d/fenghuang-town.jpg" alt="凤凰古城">
+      <div class="scenery-card-caption">
+        <div class="scenery-card-title">凤凰古城</div>
+        <div class="scenery-card-title-en">Fenghuang Ancient Town</div>
+        <div class="scenery-card-desc">中国保存最完好的苗族聚居古城，以沱江两岸的吊脚楼闻名。作家沈从文的故乡。China's finest preserved Miao-minority ancient town, immortalised by novelist Shen Congwen.</div>
+      </div>
+    </div>
+    <div class="scenery-card">
+      <img src="/images/zhangjiajie-hunan-8d/fenghuang-river.jpg" alt="沱江">
+      <div class="scenery-card-caption">
+        <div class="scenery-card-title">沱江夜色</div>
+        <div class="scenery-card-title-en">The Tuojiang River at Night</div>
+        <div class="scenery-card-desc">华灯初上，红灯笼与吊脚楼倒映沱江，乘乌篷船穿越灯火，是凤凰最动人的时刻。Lanterns and stilt houses reflected on the Tuojiang — best experienced from a slow wooden punt at dusk.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 8: PRACTICAL INFO ==================== -->
+<div class="page practical-page">
+  <div class="practical-header">
+    <div class="section-label">Travel Notes · 旅行须知</div>
+    <div class="section-title-zh">实用信息 &amp; 旅程亮点</div>
+    <div class="section-title-en">Practical Information &amp; Journey Details</div>
+  </div>
+  <div class="practical-body">
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-title">✈ 航班建议 · Flights</div>
+        <div class="info-card-title-en">Singapore → Changsha CSX</div>
+        <div class="info-item">新加坡→长沙，约3.5小时（直飞）或经广州/深圳中转。建议到长沙后再订国内段。</div>
+        <div class="info-item-en">~3.5h direct or via Guangzhou. Silk Air / Scoot / China Southern operate the route. Book well ahead for October.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">📅 最佳时机 · Best Time</div>
+        <div class="info-card-title-en">October Window (Post-Golden Week)</div>
+        <div class="info-item">十月黄金周后（10月9日起）：天气晴朗，雾气适度，人潮已散，秋色开始染林。</div>
+        <div class="info-item-en">Oct 9–26: clear autumn skies, morning mist still present, foliage beginning to turn, crowds gone.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">📋 签证 · Visa</div>
+        <div class="info-card-title-en">Singapore Passport Holders</div>
+        <div class="info-item">新加坡护照持有人享中国免签（2024年政策，30天内免签入境）。无需提前申请。</div>
+        <div class="info-item-en">Singapore passport: China visa-free entry (up to 30 days), no advance application needed as of 2024 policy.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">💬 语言 · Language</div>
+        <div class="info-card-title-en">Mandarin / Dialect Area</div>
+        <div class="info-item">张家界/凤凰地区方言较重，专属英语导游随行。主要景区有英文标识。</div>
+        <div class="info-item-en">English-speaking private guide throughout. Major sites have bilingual signage. Google Translate offline pack recommended.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">🚗 交通 · Transport</div>
+        <div class="info-card-title-en">Private Driver All Days</div>
+        <div class="info-item">全程专属私家车+司机（无群体拼车），支持随时停车拍照，行程灵活调整。</div>
+        <div class="info-item-en">Dedicated private vehicle + driver every day. Stop wherever you want, adjust pace freely. No shared coaches.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">📱 网络 · Connectivity</div>
+        <div class="info-card-title-en">China SIM / VPN</div>
+        <div class="info-item">建议购买中国大陆流量卡。WhatsApp/Google/Instagram需VPN（国内下载受限，请出发前配置好）。</div>
+        <div class="info-item-en">Buy a mainland SIM on arrival. Configure your VPN before departure — apps cannot be downloaded in China.</div>
+      </div>
+    </div>
+
+    <div class="inclusion-box">
+      <div class="inclusion-title">✓ 费用包含 · Included</div>
+      <div class="inclusion-cols">
+        <div>
+          <div class="inclusion-item">全程专属私家车接送</div>
+          <div class="inclusion-item">7晚精选酒店（含早餐）</div>
+          <div class="inclusion-item">中英文随行导游服务</div>
+          <div class="inclusion-item">武陵源景区门票</div>
+          <div class="inclusion-item">百龙天梯 + 缆车票</div>
+        </div>
+        <div>
+          <div class="inclusion-item">天门山索道票</div>
+          <div class="inclusion-item">黄龙洞门票</div>
+          <div class="inclusion-item">沱江夜泛船票</div>
+          <div class="inclusion-item">行程全程策划服务</div>
+          <div class="inclusion-item">24小时紧急联络支持</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exclusion-box">
+      <div class="exclusion-title">✗ 费用不含 · Excluded</div>
+      <div class="inclusion-cols">
+        <div>
+          <div class="exclusion-item">新加坡往返国际机票</div>
+          <div class="exclusion-item">个人餐饮（早餐含，午晚餐自理）</div>
+        </div>
+        <div>
+          <div class="exclusion-item">个人购物及纪念品</div>
+          <div class="exclusion-item">旅游保险（强烈建议购买）</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 9: BACK COVER ==================== -->
+<div class="page back-cover">
+  <div class="back-cover-logo">Wildroad Travel · 野路逸行</div>
+  <div class="back-cover-title">湖南秘境</div>
+  <div class="back-cover-en">Zhangjiajie &amp; Fenghuang · Hunan Unveiled</div>
+  <div class="back-cover-quote">
+    "Some places don't reveal themselves at first glance. Hunan is one of them — you have to earn it by staying slow, arriving early, and letting the mist decide what you see."
+    <br><br>
+    有些地方，不在第一眼里。湖南就是这样——你要慢下来，早一点到，让云雾来决定今天的风景。
+  </div>
+  <div class="back-cover-divider"></div>
+  <div class="back-cover-contact">
+    Wildroad Travel · 野路逸行<br>
+    www.wildroadtravel.com<br>
+    WeChat · WhatsApp · Email available on request<br>
+    <br>
+    Tailor-made itineraries for discerning travellers<br>
+    为懂旅行的人，设计不一样的旅程
+  </div>
+  <div class="back-cover-tagline">Private · Premium · Personal</div>
+</div>
+
+</body>
+</html>

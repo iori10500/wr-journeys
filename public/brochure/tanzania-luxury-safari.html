@@ -107,8 +107,9 @@ h2::after { content: ''; display: block; width: 50px; height: 2px; margin: 14px 
 .stat-item .label { font-size: 10px; color: #aaa; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
 
 /* ===== IMAGE GRID ===== */
-.img-row { display: flex; gap: 14px; margin: 18px 0; }
-.img-row img { width: 50%; border-radius: 3px; object-fit: cover; aspect-ratio: 4/3; }
+.img-row { display: flex; gap: 14px; margin: 18px 0; width: 100%; }
+.img-row > picture, .img-row > img { flex: 1 1 0; min-width: 0; display: block; }
+.img-row img { width: 100%; height: auto; border-radius: 3px; object-fit: cover; aspect-ratio: 4/3; }
 .img-full { width: 100%; border-radius: 3px; margin: 18px 0; }
 
 /* ===== FEATURE CARDS ===== */

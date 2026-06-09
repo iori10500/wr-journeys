@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhangjiajie & Fenghuang · Hunan Unveiled · 8 Days 7 Nights</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: #f5f0eb; }
+
+  @page { size: A4; margin: 0; }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    margin: 0 auto 20px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  /* ===== COVER ===== */
+  .cover { background: #1a2a1a; color: #fff; display: flex; flex-direction: column; }
+  .cover-image { width: 100%; height: 68mm; object-fit: cover; display: block; filter: brightness(0.8); }
+  .cover-body {
+    flex: 1; padding: 12mm 14mm 10mm;
+    background: linear-gradient(160deg, #0d1f0d 0%, #1a2a1a 50%, #2a1a0d 100%);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .cover-brand { font-size: 8pt; letter-spacing: 3px; text-transform: uppercase; color: #c8a96e; margin-bottom: 7mm; }
+  .cover-title-main { font-size: 28pt; font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 2mm; }
+  .cover-title-sub { font-size: 13pt; font-weight: 400; letter-spacing: 1.5px; color: #c8a96e; margin-bottom: 5mm; }
+  .cover-meta { display: flex; gap: 6mm; flex-wrap: wrap; margin-bottom: 9mm; }
+  .cover-badge {
+    background: rgba(200,169,110,0.12); border: 1px solid rgba(200,169,110,0.35);
+    color: #c8a96e; padding: 2.5mm 4.5mm; font-size: 7pt; letter-spacing: 1px;
+  }
+  .cover-quote {
+    font-size: 9.5pt; color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.9;
+    border-top: 1px solid rgba(200,169,110,0.2); padding-top: 6mm;
+  }
+
+  /* ===== COMMON ===== */
+  .page-header { padding: 8mm 14mm 6mm; color: #fff; }
+  .ph-label { font-size: 7pt; letter-spacing: 3px; text-transform: uppercase; color: rgba(200,169,110,0.75); margin-bottom: 2mm; }
+  .ph-title { font-size: 19pt; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 1.5mm; }
+  .ph-sub { font-size: 8.5pt; color: rgba(255,255,255,0.45); letter-spacing: 1px; }
+
+  .bg-forest { background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%); }
+  .bg-dark-forest { background: linear-gradient(135deg, #0d2010 0%, #1a3a20 100%); }
+  .bg-slate { background: linear-gradient(135deg, #0d1f2d 0%, #1a3050 100%); }
+  .bg-earth { background: linear-gradient(135deg, #2a1a0d 0%, #4a3020 100%); }
+
+  /* ===== OVERVIEW ===== */
+  .overview-body { padding: 6mm 14mm 8mm; }
+  .route-bar {
+    display: flex; align-items: center; flex-wrap: wrap;
+    background: #f8f5f0; padding: 3.5mm 5mm; margin-bottom: 6mm;
+    border-left: 3px solid #2d4a2d;
+  }
+  .route-city { font-size: 8.5pt; font-weight: 700; color: #1a2a1a; white-space: nowrap; }
+  .route-arrow { color: #c8a96e; font-size: 9pt; margin: 0 2mm; }
+
+  .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 6mm; }
+  .ov-card { background: #f8f5f0; border-left: 3px solid #2d4a2d; padding: 3mm 4mm; }
+  .ov-label { font-size: 6.5pt; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 1.5mm; }
+  .ov-value { font-size: 8.5pt; color: #1a1a1a; line-height: 1.65; }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #f8f0e0, #fff8ee);
+    border: 1px solid #e8d5aa; padding: 5mm 6mm;
+  }
+  .hl-title { font-size: 7.5pt; letter-spacing: 2px; text-transform: uppercase; color: #8b6914; margin-bottom: 3mm; font-weight: 700; }
+  .hl-item { display: flex; gap: 2.5mm; margin-bottom: 2.5mm; font-size: 8.5pt; color: #333; line-height: 1.65; }
+  .hl-dot { color: #c8a96e; flex-shrink: 0; }
+
+  /* ===== DAILY ===== */
+  .days-body { padding: 5mm 14mm; }
+  .day-block { display: flex; gap: 4mm; margin-bottom: 5mm; padding-bottom: 5mm; border-bottom: 1px solid #ede8e0; }
+  .day-block:last-child { border-bottom: none; margin-bottom: 0; }
+  .day-num { flex-shrink: 0; width: 16mm; text-align: center; padding-top: 1mm; }
+  .day-n { font-size: 22pt; font-weight: 900; line-height: 1; color: #2d4a2d; }
+  .day-lbl { font-size: 6pt; text-transform: uppercase; letter-spacing: 1px; color: #aaa; }
+  .day-content { flex: 1; }
+  .day-title { font-size: 10.5pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2mm; line-height: 1.4; }
+  .day-desc { font-size: 8.5pt; color: #444; line-height: 1.75; }
+  .day-tags { margin-top: 2.5mm; display: flex; flex-wrap: wrap; gap: 1.5mm; }
+  .tag { background: #f0ede6; color: #666; font-size: 6.5pt; padding: 1mm 2.5mm; border-radius: 1mm; }
+
+  /* ===== HOTEL ===== */
+  .hotel-hero { width: 100%; height: 55mm; object-fit: cover; display: block; }
+  .hotel-body { padding: 6mm 14mm; }
+  .hotel-location { font-size: 6.5pt; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 2mm; }
+  .hotel-name { font-size: 17pt; font-weight: 900; margin-bottom: 1mm; }
+  .hotel-stars { color: #c8a96e; font-size: 10pt; margin-bottom: 4mm; }
+  .hotel-desc { font-size: 8.5pt; color: #444; line-height: 1.8; margin-bottom: 5mm; }
+  .hotel-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-bottom: 5mm; }
+  .hf { background: #f8f5f0; padding: 3mm 4mm; text-align: center; border-top: 2px solid #c8a96e; }
+  .hf-icon { font-size: 12pt; margin-bottom: 1.5mm; }
+  .hf-label { font-size: 7pt; color: #555; line-height: 1.4; }
+  .hotel-img-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .hotel-img-row img { width: 100%; height: 35mm; object-fit: cover; }
+
+  /* ===== SCENERY ===== */
+  .scenery-grid { padding: 5mm 14mm; display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .sc-card { overflow: hidden; }
+  .sc-card img { width: 100%; height: 43mm; object-fit: cover; display: block; }
+  .sc-caption { padding: 3mm; background: #f8f5f0; border-left: 3px solid #1a3050; }
+  .sc-title { font-size: 9.5pt; font-weight: 700; color: #1a1a1a; margin-bottom: 1.5mm; }
+  .sc-desc { font-size: 7.5pt; color: #555; line-height: 1.65; }
+
+  /* ===== PRACTICAL ===== */
+  .practical-body { padding: 5mm 14mm; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 5mm; }
+  .info-card { background: #f8f5f0; border-top: 3px solid #c8a96e; padding: 4mm 5mm; }
+  .info-title { font-size: 8.5pt; font-weight: 700; color: #3a2010; margin-bottom: 2.5mm; }
+  .info-item { font-size: 8pt; color: #444; line-height: 1.75; }
+
+  .incl-box { background: linear-gradient(135deg, #f0f8f0, #e8f5e8); border: 1px solid #a8d8a8; padding: 5mm 6mm; margin-bottom: 4mm; }
+  .incl-title { font-size: 8pt; font-weight: 700; color: #1a4a1a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3mm; }
+  .incl-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .incl-item { font-size: 8pt; color: #333; line-height: 1.75; padding-left: 3mm; border-left: 2px solid #a8d8a8; }
+
+  .excl-box { background: #fff8f5; border: 1px solid #f0c8b8; padding: 4mm 6mm; }
+  .excl-title { font-size: 8pt; font-weight: 700; color: #8b2a1a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2mm; }
+  .excl-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+
+  /* ===== BACK COVER ===== */
+  .back-cover {
+    background: linear-gradient(160deg, #0d1f0d 0%, #1a2a1a 50%, #2d1a0d 100%);
+    color: #fff; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; padding: 20mm; min-height: 297mm;
+  }
+  .bc-brand { font-size: 8.5pt; letter-spacing: 4px; text-transform: uppercase; color: #c8a96e; margin-bottom: 7mm; }
+  .bc-title { font-size: 24pt; font-weight: 900; color: #fff; margin-bottom: 2mm; }
+  .bc-sub { font-size: 10pt; letter-spacing: 2px; color: #c8a96e; text-transform: uppercase; margin-bottom: 12mm; }
+  .bc-quote { font-size: 9.5pt; color: rgba(255,255,255,0.6); font-style: italic; max-width: 130mm; line-height: 2; margin-bottom: 14mm; }
+  .bc-divider { width: 30mm; height: 1px; background: rgba(200,169,110,0.35); margin-bottom: 10mm; }
+  .bc-contact { font-size: 8.5pt; color: rgba(255,255,255,0.45); line-height: 2; letter-spacing: 0.5px; }
+  .bc-tagline { font-size: 7.5pt; color: rgba(200,169,110,0.55); letter-spacing: 3px; margin-top: 10mm; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page cover">
+  <img class="cover-image" src="/images/zhangjiajie-hunan-8d/zhangjiajie-pillars.jpg" alt="Zhangjiajie">
+  <div class="cover-body">
+    <div>
+      <div class="cover-brand">Wildroad Travel</div>
+      <div class="cover-title-main">Zhangjiajie<br>&amp; Fenghuang</div>
+      <div class="cover-title-sub">Hunan Unveiled · 8 Days 7 Nights</div>
+      <div class="cover-meta">
+        <div class="cover-badge">8 Days</div>
+        <div class="cover-badge">Fully Private</div>
+        <div class="cover-badge">5-Star Hotels</div>
+        <div class="cover-badge">From Singapore</div>
+      </div>
+    </div>
+    <div class="cover-quote">
+      Hovering sandstone pillars draped in mist. A living town of stilt houses clinging to a clifftop river.<br>
+      Hunan is where China keeps its oldest secrets — and this eight-day private journey reveals them without the crowds.
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: OVERVIEW ==================== -->
+<div class="page">
+  <div class="page-header bg-forest">
+    <div class="ph-label">Journey Overview</div>
+    <div class="ph-title">8-Day Private Itinerary</div>
+    <div class="ph-sub">Changsha · Zhangjiajie · Fenghuang · From Singapore</div>
+  </div>
+  <div class="overview-body">
+
+    <div class="route-bar">
+      <span class="route-city">Singapore</span><span class="route-arrow">✈</span>
+      <span class="route-city">Changsha</span><span class="route-arrow">→</span>
+      <span class="route-city">Zhangjiajie / Wulingyuan</span><span class="route-arrow">→</span>
+      <span class="route-city">Fenghuang</span><span class="route-arrow">→</span>
+      <span class="route-city">Changsha</span><span class="route-arrow">✈</span>
+      <span class="route-city">Singapore</span>
+    </div>
+
+    <div class="overview-grid">
+      <div class="ov-card">
+        <div class="ov-label">Departure / Arrival</div>
+        <div class="ov-value">Singapore Changi (SIN) → Changsha Huanghua (CSX)<br>Direct flight ~5 hrs · Scoot / China Southern</div>
+      </div>
+      <div class="ov-card">
+        <div class="ov-label">Best Travel Window</div>
+        <div class="ov-value">October 9–26 (post-Golden Week)<br>Clear skies, morning mist, low crowds, early autumn colour</div>
+      </div>
+      <div class="ov-card">
+        <div class="ov-label">Party Size · Style</div>
+        <div class="ov-value">2 pax (couple) · Fully private<br>No group tours, no shared coaches</div>
+      </div>
+      <div class="ov-card">
+        <div class="ov-label">Changsha ↔ Zhangjiajie</div>
+        <div class="ov-value">High-speed rail ~2.5 hrs (scenic hill country)<br>Zhangjiajie ↔ Fenghuang: private car ~2.5 hrs</div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="hl-title">✦ Journey Highlights</div>
+      <div class="hl-item"><span class="hl-dot">◆</span><div><strong>Avatar's Hallelujah Mountains</strong> — walk among the real floating pillars of Wulingyuan, the landscape that inspired James Cameron's Avatar. Private guide, early entry.</div></div>
+      <div class="hl-item"><span class="hl-dot">◆</span><div><strong>Yuanjiajie &amp; Hundred Dragon Elevator</strong> — the world's tallest outdoor glass elevator (326m), built into a sheer cliff face for a 2-minute vertical descent through the mist.</div></div>
+      <div class="hl-item"><span class="hl-dot">◆</span><div><strong>Tianmen Mountain Glass Skywalk</strong> — 1,600m of glass-floored walkway bolted to the cliff at 1,400m altitude, reached by the world's longest cable car (7.5 km).</div></div>
+      <div class="hl-item"><span class="hl-dot">◆</span><div><strong>Fenghuang Ancient Town at dusk</strong> — thousands of red lanterns reflected in the Tuojiang River, explored by traditional wooden punt at nightfall.</div></div>
+      <div class="hl-item"><span class="hl-dot">◆</span><div><strong>Niccolo Changsha · Pullman Zhangjiajie</strong> — international 5-star brands throughout; English-speaking staff, no language barriers.</div></div>
+    </div>
+
+    <div class="overview-grid" style="margin-bottom:0;">
+      <div class="ov-card" style="border-left-color:#8b6914;">
+        <div class="ov-label">Hotels</div>
+        <div class="ov-value">
+          Night 1 — Niccolo Changsha<br>
+          Nights 2–5 — Pullman Zhangjiajie<br>
+          Nights 6–7 — Boutique riverside inn, Fenghuang
+        </div>
+      </div>
+      <div class="ov-card" style="border-left-color:#8b6914;">
+        <div class="ov-label">Pace &amp; Style</div>
+        <div class="ov-value">
+          Relaxed — 2 to 3 sites per day<br>
+          English-speaking private guide throughout<br>
+          Flexible; schedule adjusts to your pace
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: DAYS 1–4 ==================== -->
+<div class="page">
+  <div class="page-header bg-dark-forest">
+    <div class="ph-label">Day by Day</div>
+    <div class="ph-title">Days 1–4</div>
+    <div class="ph-sub">Arrival in Changsha → Into Zhangjiajie / Wulingyuan</div>
+  </div>
+  <div class="days-body">
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n">D1</div><div class="day-lbl">Day 1</div></div>
+      <div class="day-content">
+        <div class="day-title">Singapore → Changsha · Arrival at Niccolo</div>
+        <div class="day-desc">
+          Fly into Changsha Huanghua International Airport. Private transfer to <strong>Niccolo Changsha</strong>, perched atop the city's IFS tower beside Zaha Hadid's Meixi Lake International Arts Centre. Afternoon stroll along the Xiang River or a first taste of Hunan street food at Taiping Old Street. Sundowners at the rooftop bar overlooking the city skyline. Optional Michelin-calibre dinner in-house — a gentle, comfortable introduction to China.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Private airport transfer</span><span class="tag">Niccolo check-in</span><span class="tag">Rooftop sundowner</span><span class="tag">Hunan cuisine first taste</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n">D2</div><div class="day-lbl">Day 2</div></div>
+      <div class="day-content">
+        <div class="day-title">Changsha Morning Culture → High-Speed Rail to Zhangjiajie</div>
+        <div class="day-desc">
+          Morning visit to <strong>Orange Isle</strong> — the famous Young Mao Zedong sculpture set mid-river, with panoramic views of the Xiang River. Transfer to Changsha South Station for the <strong>high-speed rail to Zhangjiajie West (~2.5 hrs)</strong>, with scenic views of Hunan's rolling hill country. On arrival, a gentle afternoon introduction at <strong>Baofeng Lake</strong> — a serene alpine lake explored by private boat, a beautiful warm-up before the big park days ahead. Check in at Pullman Zhangjiajie; dinner at the hotel.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Orange Isle</span><span class="tag">High-speed rail 2.5h</span><span class="tag">Baofeng Lake boat</span><span class="tag">Pullman check-in</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n">D3</div><div class="day-lbl">Day 3</div></div>
+      <div class="day-content">
+        <div class="day-title">Zhangjiajie National Forest Park · Golden Whip Stream &amp; Yellow Stone Village</div>
+        <div class="day-desc">
+          Full day in the <strong>Zhangjiajie National Forest Park</strong> (UNESCO World Heritage core zone) with a private English-speaking guide. Morning: hike the <strong>Golden Whip Stream</strong> — a 7.5 km flat trail winding along a crystalline creek through towering sandstone pillars, with wild macaques likely spotted along the way. Widely regarded as one of China's most beautiful short hikes. Afternoon: cable car up <strong>Yellow Stone Village</strong> for a 360° panorama over karst peaks and deep valleys — less crowded than Yuanjiajie, and arguably more dramatic. Evening spa at Pullman.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Golden Whip Stream hike</span><span class="tag">Yellow Stone Village cable car</span><span class="tag">Wild macaques</span><span class="tag">Pullman spa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n">D4</div><div class="day-lbl">Day 4</div></div>
+      <div class="day-content">
+        <div class="day-title">Yuanjiajie · Tianzi Mountain · Hundred Dragon Elevator — The Core Day</div>
+        <div class="day-desc">
+          The day Zhangjiajie was made for. Morning in <strong>Yuanjiajie Scenic Area</strong>: stand before the <strong>Avatar Hallelujah Mountain</strong> (the pillar that became a floating mountain in the film); cross the <strong>First Bridge Under Heaven</strong> (a natural rock arch over a deep gorge); descend by the <strong>Hundred Dragon Elevator</strong> — the world's tallest outdoor glass elevator, a vertiginous 2-minute ride down 326 metres of sheer cliff. Afternoon cable car up <strong>Tianzi Mountain</strong> for the park's single most expansive panorama — a sea of stone pillars stretching to the horizon under shifting cloud. Optional <strong>Ten-Mile Gallery</strong> electric tram on the way back.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Avatar Hallelujah Mountain</span><span class="tag">Hundred Dragon Elevator</span><span class="tag">Tianzi Mountain</span><span class="tag">Ten-Mile Gallery (optional)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: DAYS 5–8 ==================== -->
+<div class="page">
+  <div class="page-header bg-slate">
+    <div class="ph-label">Day by Day</div>
+    <div class="ph-title">Days 5–8</div>
+    <div class="ph-sub">Tianmen Mountain → Fenghuang Ancient Town → Return</div>
+  </div>
+  <div class="days-body">
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n" style="color:#1a3a5a;">D5</div><div class="day-lbl">Day 5</div></div>
+      <div class="day-content">
+        <div class="day-title">Tianmen Mountain · Glass Skywalk · Heaven's Gate</div>
+        <div class="day-desc">
+          Drive ~40 minutes to Zhangjiajie city. Board the <strong>world's longest cable car</strong> (7,455m, ~30 minutes) rising through cloud layers to the summit of <strong>Tianmen Mountain</strong> — the ride itself is an attraction. Walk the <strong>Glass Skywalk</strong>, a transparent walkway cantilevered from the cliff face at 1,400m altitude (bring your nerve). Visit <strong>Tianmen Cave (Heaven's Gate)</strong> — a 130m-high natural arch in the mountain; climb the 999 steps or take the escalator to stand beneath the arch and peer through at open sky. Return to Wulingyuan; farewell Tujia ethnic dinner before tomorrow's departure.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Tianmen cable car</span><span class="tag">Glass Skywalk</span><span class="tag">Heaven's Gate arch</span><span class="tag">Tujia farewell dinner</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n" style="color:#1a3a5a;">D6</div><div class="day-lbl">Day 6</div></div>
+      <div class="day-content">
+        <div class="day-title">Zhangjiajie → Fenghuang Ancient Town · First Evening</div>
+        <div class="day-desc">
+          Optional morning stop at a <strong>Tujia minority cultural village</strong> en route. Private car ~2.5 hours through the Xiangxi highlands to <strong>Fenghuang Ancient Town</strong> — a 1,300-year-old riverside settlement of stilted wooden houses, stone bridges, and lantern-lit alleyways, widely considered one of China's most photogenic small towns. Check in to a boutique riverside inn with direct Tuojiang River views. Evening walking tour: cross the stepping-stone bridges, follow the old city walls, and watch the town transform after dark as thousands of red lanterns ignite over the water. Dinner at a riverside restaurant.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Private car 2.5h</span><span class="tag">Fenghuang check-in</span><span class="tag">Stepping-stone bridges</span><span class="tag">Lantern-lit evening</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n" style="color:#1a3a5a;">D7</div><div class="day-lbl">Day 7</div></div>
+      <div class="day-content">
+        <div class="day-title">Fenghuang In Depth · Miao Silverwork · Evening Punt</div>
+        <div class="day-desc">
+          Early morning in the old town before 8am — empty streets, golden light, the town as it was. Visit the <strong>former residence of Shen Congwen</strong>, China's most beloved country-life novelist, born here; his novella Border Town made Fenghuang famous throughout the Chinese-speaking world. Explore the <strong>East Gate Tower</strong> and old city walls. Afternoon: step into a Miao silversmith workshop for a <strong>custom silver piece</strong> made while you watch. As evening falls, board a traditional wooden sampan for a <strong>night punt along the Tuojiang</strong> — drifting under ancient bridges while the lanterns multiply on the water above and below. The evening that stays with you longest.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Shen Congwen residence</span><span class="tag">East Gate Tower</span><span class="tag">Miao silverwork workshop</span><span class="tag">Tuojiang night punt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-num"><div class="day-n" style="color:#4a3020;">D8</div><div class="day-lbl">Day 8</div></div>
+      <div class="day-content">
+        <div class="day-title">Fenghuang Dawn → High-Speed Rail → Singapore</div>
+        <div class="day-desc">
+          A sunrise walk along the Tuojiang is highly recommended — mist rising off the water, women washing clothes at the stone steps, the town slowly waking to birdsong. Morning market browse for ginger candy and Miao cured specialities. Transfer to Huaihua South Station or Jishou for the <strong>high-speed rail back to Changsha (~2.5 hrs)</strong>. Connect to Changsha Huanghua Airport for your evening flight home to Singapore. The journey ends; the memory of floating mountains and lantern-lit water does not.
+        </div>
+        <div class="day-tags">
+          <span class="tag">Tuojiang dawn walk</span><span class="tag">Morning market</span><span class="tag">High-speed rail to Changsha</span><span class="tag">Return to Singapore</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 5: HOTEL - NICCOLO CHANGSHA ==================== -->
+<div class="page">
+  <img class="hotel-hero" src="/images/zhangjiajie-hunan-8d/niccolo-1.jpg" alt="Niccolo Changsha">
+  <div class="hotel-body">
+    <div class="hotel-location">Changsha · Night 1</div>
+    <div class="hotel-name" style="color:#1a2a4a;">Niccolo Changsha</div>
+    <div class="hotel-stars">★★★★★ · Five-Star · International Luxury</div>
+    <div class="hotel-desc">
+      Occupying the upper floors of Changsha's IFS tower, Niccolo Changsha sits adjacent to Zaha Hadid's landmark Meixi Lake International Arts Centre. Floor-to-ceiling windows frame the full sweep of Meixi Lake in every room. The rooftop bar is widely regarded as the city's finest sunset vantage point; the restaurant delivers Michelin-calibre Chinese and international cuisine. For first-time visitors to China, Niccolo's fully international service standard — fluent English throughout — makes it the ideal landing pad. Walking distance to the Xiang River promenade and Mao Zedong's iconic Orange Isle.
+    </div>
+    <div class="hotel-features">
+      <div class="hf"><div class="hf-icon">🏊</div><div class="hf-label">Indoor Pool</div></div>
+      <div class="hf"><div class="hf-icon">🍸</div><div class="hf-label">Rooftop Bar<br>Best sunset in the city</div></div>
+      <div class="hf"><div class="hf-icon">🌊</div><div class="hf-label">Meixi Lake Views<br>Floor-to-ceiling windows</div></div>
+    </div>
+    <div class="hotel-img-row">
+      <img src="/images/zhangjiajie-hunan-8d/niccolo-1.jpg" alt="Niccolo Changsha">
+      <img src="/images/zhangjiajie-hunan-8d/niccolo-2.jpg" alt="Niccolo Changsha Room">
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 6: HOTEL - PULLMAN ZHANGJIAJIE ==================== -->
+<div class="page">
+  <img class="hotel-hero" src="/images/zhangjiajie-hunan-8d/zhangjiajie-forest.jpg" alt="Pullman Zhangjiajie">
+  <div class="hotel-body">
+    <div class="hotel-location">Wulingyuan, Zhangjiajie · Nights 2–5</div>
+    <div class="hotel-name" style="color:#1a3a1a;">Pullman Zhangjiajie</div>
+    <div class="hotel-stars">★★★★★ · Accor Premium · UNESCO Buffer Zone</div>
+    <div class="hotel-desc">
+      Part of Accor's premium Pullman brand, this is the highest-quality international hotel in the Zhangjiajie area and the closest to the Wulingyuan core scenic area entrance — a genuine convenience when your days begin and end in the park. Scenic-view rooms look directly out over the sandstone pillar formations; open the curtains at dawn to find the mountains already in mist. All-day dining in both Chinese and Western styles, a fitness centre, and the consistent international service standard that makes Pullman the reliable choice for premium travellers. Four nights here feels exactly right — long enough to pace the park without rushing, short enough to want to return.
+    </div>
+    <div class="hotel-features">
+      <div class="hf"><div class="hf-icon">🏔️</div><div class="hf-label">Pillar Forest Views<br>Dawn mist from bed</div></div>
+      <div class="hf"><div class="hf-icon">🍽️</div><div class="hf-label">All-Day Dining<br>Chinese &amp; Western</div></div>
+      <div class="hf"><div class="hf-icon">📍</div><div class="hf-label">Walking Distance<br>to Park Entrance</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 7: SCENERY ==================== -->
+<div class="page">
+  <div class="page-header bg-slate">
+    <div class="ph-label">Natural Wonders</div>
+    <div class="ph-title">Hunan's Hidden Landscapes</div>
+    <div class="ph-sub">Four places · Four kinds of extraordinary</div>
+  </div>
+  <div class="scenery-grid">
+    <div class="sc-card">
+      <img src="/images/zhangjiajie-hunan-8d/zhangjiajie-pillars.jpg" alt="Wulingyuan Sandstone Pillars">
+      <div class="sc-caption">
+        <div class="sc-title">Wulingyuan Sandstone Pillars</div>
+        <div class="sc-desc">Over 3,000 quartz-sandstone columns, some exceeding 1,000 metres, perpetually wreathed in cloud and mist — the real-world landscape that inspired Avatar's Hallelujah Mountains. UNESCO World Heritage Site.</div>
+      </div>
+    </div>
+    <div class="sc-card">
+      <img src="/images/zhangjiajie-hunan-8d/tianmen-glass.jpg" alt="Tianmen Glass Skywalk">
+      <div class="sc-caption">
+        <div class="sc-title">Tianmen Mountain Glass Skywalk</div>
+        <div class="sc-desc">A transparent walkway cantilevered from the cliff at 1,400m altitude with nothing but air beneath your feet. Reached by the world's longest cable car (7.5 km) — the approach is as dramatic as the destination.</div>
+      </div>
+    </div>
+    <div class="sc-card">
+      <img src="/images/zhangjiajie-hunan-8d/fenghuang-town.jpg" alt="Fenghuang Ancient Town">
+      <div class="sc-caption">
+        <div class="sc-title">Fenghuang Ancient Town</div>
+        <div class="sc-desc">China's finest preserved Miao-minority riverside town, 1,300 years old. Stilted wooden houses line both banks of the Tuojiang River — immortalised by novelist Shen Congwen in Border Town.</div>
+      </div>
+    </div>
+    <div class="sc-card">
+      <img src="/images/zhangjiajie-hunan-8d/fenghuang-river.jpg" alt="The Tuojiang at Night">
+      <div class="sc-caption">
+        <div class="sc-title">The Tuojiang River at Night</div>
+        <div class="sc-desc">As darkness falls, thousands of red lanterns illuminate the stilt houses and their mirror image in the water below. Best experienced from a slow wooden punt drifting under ancient stone bridges.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 8: PRACTICAL INFO ==================== -->
+<div class="page">
+  <div class="page-header bg-earth">
+    <div class="ph-label">Travel Notes</div>
+    <div class="ph-title">Practical Information</div>
+    <div class="ph-sub">What to know before you go</div>
+  </div>
+  <div class="practical-body">
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-title">✈ Flights</div>
+        <div class="info-item">Singapore (SIN) → Changsha Huanghua (CSX). Direct ~5 hrs via Scoot or China Southern. Multiple daily departures. Book 2–3 months ahead for October — prices rise sharply closer to the date.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">📅 Best Travel Window</div>
+        <div class="info-item"><strong>October 9–26</strong> (post-Golden Week). Temperatures 18–25°C, low humidity, clear skies with morning mist (which enhances Zhangjiajie dramatically). Crowds drop sharply after Oct 7. Avoid Oct 1–7 entirely.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">📋 Visa</div>
+        <div class="info-item">Most Western passport holders require a Chinese tourist visa (L visa). Singapore residents apply through the Chinese Visa Application Service Centre — typically 4–5 business days. Several EU nationalities now enjoy 15-day visa-free entry; verify current policy for your specific passport.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">📱 Connectivity</div>
+        <div class="info-item">Purchase a China mainland SIM card on arrival. WhatsApp, Google, and Instagram require a VPN — <strong>configure yours before departure</strong>, as apps cannot be downloaded inside China. Alipay / WeChat Pay are ubiquitous; carry some cash RMB for small vendors in Fenghuang.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">🚗 Getting Around</div>
+        <div class="info-item">All inter-city transfers by high-speed rail or private car. Within each destination, your private driver is on call. All cable cars, elevators, and park transport included. No shared coaches or group buses on this itinerary.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">👗 What to Wear</div>
+        <div class="info-item">October mountain temperatures range 18–25°C by day, dropping to 10–12°C at night — a light down or fleece layer is essential. Bring proper walking shoes for the park trails. The Tianmen Glass Skywalk may close in strong wind or dense fog; we build in flexibility for this.</div>
+      </div>
+    </div>
+
+    <div class="incl-box">
+      <div class="incl-title">✓ Included</div>
+      <div class="incl-cols">
+        <div>
+          <div class="incl-item">Private vehicle &amp; chauffeur throughout</div>
+          <div class="incl-item">High-speed rail tickets (all segments)</div>
+          <div class="incl-item">7 nights accommodation (breakfast daily)</div>
+          <div class="incl-item">English-speaking private guide</div>
+          <div class="incl-item">Wulingyuan park entrance (2 days)</div>
+        </div>
+        <div>
+          <div class="incl-item">Hundred Dragon Elevator + all cable cars</div>
+          <div class="incl-item">Tianmen Mountain cable car (return)</div>
+          <div class="incl-item">Fenghuang Tuojiang evening punt</div>
+          <div class="incl-item">Airport meet &amp; greet, departure transfer</div>
+          <div class="incl-item">24/7 WR Travel emergency support</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="excl-box">
+      <div class="excl-title">✗ Not Included</div>
+      <div class="excl-cols">
+        <div>
+          <div class="incl-item" style="border-left-color:#f0c8b8; color:#555;">International flights (SIN ↔ CSX)</div>
+          <div class="incl-item" style="border-left-color:#f0c8b8; color:#555;">Chinese tourist visa (where applicable)</div>
+        </div>
+        <div>
+          <div class="incl-item" style="border-left-color:#f0c8b8; color:#555;">Travel insurance (strongly recommended)</div>
+          <div class="incl-item" style="border-left-color:#f0c8b8; color:#555;">Meals (except daily breakfast) · Shopping · Gratuities</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== PAGE 9: BACK COVER ==================== -->
+<div class="page back-cover">
+  <div class="bc-brand">Wildroad Travel</div>
+  <div class="bc-title">Hunan Unveiled</div>
+  <div class="bc-sub">Zhangjiajie &amp; Fenghuang · 8 Days</div>
+  <div class="bc-quote">
+    Some places don't reveal themselves at first glance.<br>
+    Hunan is one of them — you have to earn it by staying slow,<br>
+    arriving early, and letting the mist decide what you see.
+  </div>
+  <div class="bc-divider"></div>
+  <div class="bc-contact">
+    Wildroad Travel<br>
+    www.wildroadtravel.com<br>
+    WeChat · WhatsApp · Email on request<br>
+    <br>
+    Tailor-made journeys for discerning travellers
+  </div>
+  <div class="bc-tagline">Private · Premium · Personal</div>
+</div>
+
+</body>
+</html>

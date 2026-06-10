@@ -624,13 +624,24 @@ app.get('/:id', (req, res) => {
     });
   }
   
-  // Try to read the brochure HTML file
-  const brochurePath = path.join(__dirname, 'public', itinerary.brochurePath);
+  // Try to read the brochure HTML file — prefer locale-specific version if available
+  const localizedBrochurePath = (lang === 'en' && itinerary.brochurePath_en)
+    ? itinerary.brochurePath_en
+    : itinerary.brochurePath;
+  const brochurePath = path.join(__dirname, 'public', localizedBrochurePath);
   let brochureHtml = null;
   try {
     brochureHtml = fs.readFileSync(brochurePath, 'utf-8');
   } catch (err) {
     console.error(`Failed to read brochure ${brochurePath}:`, err.message);
+    // Fallback to default brochure if locale-specific one is missing
+    if (localizedBrochurePath !== itinerary.brochurePath) {
+      try {
+        brochureHtml = fs.readFileSync(path.join(__dirname, 'public', itinerary.brochurePath), 'utf-8');
+      } catch (err2) {
+        console.error(`Fallback brochure also failed:`, err2.message);
+      }
+    }
   }
 
   let brochureContent = null;

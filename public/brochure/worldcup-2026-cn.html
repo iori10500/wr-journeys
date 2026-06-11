@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 FIFA World Cup · Premium Tickets</title>
+<title>2026世界杯 · 尊享门票</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -81,53 +81,53 @@ body{background:var(--navy);color:var(--text);font-family:'Inter','Noto Sans SC'
 <body>
 
 <section class="hero">
-  <div class="hero-badge">USA · Mexico · Canada</div>
-  <h1>2026 FIFA World Cup</h1>
-  <h2>Premium Match Tickets & Hospitality Packages</h2>
+  <div class="hero-badge">美国 · 墨西哥 · 加拿大</div>
+  <h1>2026 世界杯</h1>
+  <h2>尊享赛事门票 & 豪华款待套票</h2>
   <div class="hero-meta">
-    <span>June 11 — July 19, 2026</span>
-    <span>30+ Matches Available</span>
-    <span>Electronic Ticket · APP Transfer</span>
+    <span>2026年6月11日 — 7月19日</span>
+    <span>30+ 场次可选</span>
+    <span>电子票 · APP转赠</span>
   </div>
 </section>
 
 <section class="section">
   <div class="highlight-row">
-    <div class="highlight-card"><div class="icon">🏟️</div><h3>Group Stage</h3><p>Argentina · England · Brazil · Spain · France · Germany — front-row blocks, rows 1–4</p></div>
-    <div class="highlight-card"><div class="icon">🏆</div><h3>Knockout Stage</h3><p>Round of 16 → Quarterfinals → Semifinals → Bronze → Grand Final</p></div>
-    <div class="highlight-card"><div class="icon">🥂</div><h3>Hospitality Suite</h3><p>Luxury suite packages: VIP entrance, private lounge, catering & premium viewing</p></div>
-    <div class="highlight-card"><div class="icon">📱</div><h3>Seamless Delivery</h3><p>100% electronic. Download app, transfer directly. No paper, no hassle.</p></div>
+    <div class="highlight-card"><div class="icon">🏟️</div><h3>小组赛</h3><p>阿根廷 · 英格兰 · 巴西 · 西班牙 · 法国 · 德国等热门场次，前排 1-4 排</p></div>
+    <div class="highlight-card"><div class="icon">🏆</div><h3>淘汰赛</h3><p>16强 → 1/4决赛 → 半决赛 → 三四名 → 决赛，尊享席位已锁定</p></div>
+    <div class="highlight-card"><div class="icon">🥂</div><h3>款待套票</h3><p>豪华包厢：VIP入场 · 专属酒廊 · 餐饮款待 · 私人观赛空间</p></div>
+    <div class="highlight-card"><div class="icon">📱</div><h3>便捷出票</h3><p>100%电子票，下载APP直接转赠到手机，无需纸质票</p></div>
   </div>
 </section>
 
 <section class="section">
-  <div class="section-title">Group Stage</div>
-  <div class="section-sub">June 11 — June 27 · 16 Matches</div>
+  <div class="section-title">小组赛</div>
+  <div class="section-sub">6月11日 — 6月27日 · 16场</div>
   <div class="match-grid" id="group-stage"></div>
 </section>
 
 <section class="section">
-  <div class="section-title">Knockout Stage</div>
-  <div class="section-sub">July 4 — July 19 · 10 Matches</div>
+  <div class="section-title">淘汰赛</div>
+  <div class="section-sub">7月4日 — 7月19日 · 10场</div>
   <div class="match-grid" id="knockout-stage"></div>
 </section>
 
 <section class="section">
-  <div class="section-title">Stadium Seating Charts</div>
-  <div class="section-sub">Official FIFA 2026 · 16 Host Venues · Cat1/2/3/4 Zones</div>
+  <div class="section-title">场馆座位等级图</div>
+  <div class="section-sub">FIFA 2026 官方 · 16座主办场馆 · Cat1/2/3/4 分区</div>
   <div class="seat-gallery" id="seat-gallery"></div>
 </section>
 
 <section class="section">
-  <div class="section-title">Host Cities</div>
-  <div class="section-sub">USA · Mexico · Canada</div>
+  <div class="section-title">主办城市</div>
+  <div class="section-sub">美国 · 墨西哥 · 加拿大</div>
   <div class="stadium-grid" id="cities"></div>
 </section>
 
 <section class="cta">
-  <h2>Secure Your Seats</h2>
-  <p>Tell us which match, how many tickets — we'll make it happen.</p>
-  <a href="mailto:iori.shan@wildroadgroup.com" class="cta-btn">Contact WR Travel</a>
+  <h2>锁定您的席位</h2>
+  <p>告诉我哪场比赛、要几张票，帮您搞定</p>
+  <a href="mailto:iori.shan@wildroadgroup.com" class="cta-btn">联系 WR Travel</a>
 </section>
 
 <footer class="footer">
@@ -148,38 +148,38 @@ const seatPageMap={'guadalajara':13,'toronto':5,'losangeles':7,'houston':12,'atl
 function getSeatPage(v){const k=v.toLowerCase().replace(/[\\/\s]/g,'').replace('newyork/nj','newyork');return seatPageMap[k]||null;}
 
 const groupMatches=[
-  {id:'M2',date:'Jun 11',teams:['South Korea 🇰🇷','Czech Republic 🇨🇿'],venue:'Guadalajara',seats:[{block:'BLOCK T1-36',row:'C',qty:2}]},
-  {id:'M3',date:'Jun 12',teams:['Canada 🇨🇦','Bosnia 🇧🇦'],venue:'Toronto',seats:[{block:'BLOCK 111',row:'12',qty:2},{block:'BLOCK 210',row:'17',qty:4}]},
-  {id:'M4',date:'Jun 12',teams:['USA 🇺🇸','Paraguay 🇵🇾'],venue:'Los Angeles',seats:[{block:'BLOCK C-136',row:'9',qty:5},{block:'BLOCK C-135',row:'3/6/8',qty:8},{block:'BLOCK C-129',row:'2',qty:2}]},
-  {id:'M10',date:'Jun 14',teams:['Germany 🇩🇪','Curaçao 🇨🇼'],venue:'Houston',seats:[{block:'BLOCK 107',row:'C',qty:2},{block:'BLOCK 128',row:'B',qty:2},{block:'BLOCK 130',row:'D',qty:4}]},
-  {id:'M14',date:'Jun 15',teams:['Spain 🇪🇸','Cape Verde 🇨🇻'],venue:'Atlanta',seats:[{block:'VIP Lounge',row:'—',qty:1},{block:'BLOCK 106',row:'12',qty:4},{block:'BLOCK 107',row:'12/13',qty:8},{block:'BLOCK 112C',row:'1',qty:1},{block:'BLOCK 114',row:'12',qty:2}]},
-  {id:'M19',date:'Jun 16',teams:['Argentina 🇦🇷','Algeria 🇩🇿'],venue:'Kansas City',seats:[{block:'BLOCK 134',row:'12',qty:4},{block:'BLOCK 135',row:'12',qty:4}]},
-  {id:'M22',date:'Jun 17',teams:['England 🏴','Croatia 🇭🇷'],venue:'Mexico City',seats:[{block:'BLOCK C-107',row:'3',qty:2},{block:'BLOCK C-115',row:'3',qty:2}]},
-  {id:'M29',date:'Jun 19',teams:['Brazil 🇧🇷','Haiti 🇭🇹'],venue:'Philadelphia',seats:[{block:'BLOCK 117',row:'2',qty:2},{block:'BLOCK 122',row:'3',qty:4}]},
-  {id:'M38',date:'Jun 21',teams:['Spain 🇪🇸','Saudi Arabia 🇸🇦'],venue:'Atlanta',seats:[{block:'BLOCK 107',row:'13',qty:4},{block:'BLOCK 114',row:'12',qty:4}]},
-  {id:'M42',date:'Jun 22',teams:['France 🇫🇷','Iraq 🇮🇶'],venue:'Philadelphia',seats:[{block:'BLOCK 122',row:'1',qty:4}]},
-  {id:'M43',date:'Jun 22',teams:['Argentina 🇦🇷','Austria 🇦🇹'],venue:'Dallas',seats:[{block:'BLOCK 103',row:'2/3/4',qty:12}],note:'Suite $1,500/ticket'},
-  {id:'M45',date:'Jun 23',teams:['England 🏴','Ghana 🇬🇭'],venue:'Boston',seats:[{block:'BLOCK 107',row:'1',qty:4},{block:'BLOCK 112',row:'1',qty:4}]},
-  {id:'M57',date:'Jun 25',teams:['Japan 🇯🇵','Sweden 🇸🇪'],venue:'Dallas',seats:[{block:'BLOCK C-113',row:'2',qty:2}]},
-  {id:'M59',date:'Jun 25',teams:['Turkey 🇹🇷','USA 🇺🇸'],venue:'Los Angeles',seats:[{block:'307区',row:'15',qty:4}]},
-  {id:'M66',date:'Jun 26',teams:['Uruguay 🇺🇾','Spain 🇪🇸'],venue:'Guadalajara',seats:[{block:'BLOCK T1-23',row:'A/C',qty:7},{block:'BLOCK T1-22',row:'B',qty:3}]},
-  {id:'M70',date:'Jun 27',teams:['Jordan 🇯🇴','Argentina 🇦🇷'],venue:'Dallas',seats:[{block:'BLOCK 106',row:'12',qty:2},{block:'BLOCK C-108',row:'1',qty:6},{block:'BLOCK C-109',row:'1/2',qty:4},{block:'BLOCK C-112',row:'4/5',qty:8},{block:'BLOCK C-113',row:'1',qty:4}]},
+  {id:'M2',date:'6月11日',teams:['韩国 🇰🇷','捷克 🇨🇿'],venue:'Guadalajara',cn:'瓜达拉哈拉',seats:[{block:'BLOCK T1-36',row:'C排',qty:2}]},
+  {id:'M3',date:'6月12日',teams:['加拿大 🇨🇦','波黑 🇧🇦'],venue:'Toronto',cn:'多伦多',seats:[{block:'BLOCK 111',row:'12排',qty:2},{block:'BLOCK 210',row:'17排',qty:4}]},
+  {id:'M4',date:'6月12日',teams:['美国 🇺🇸','巴拉圭 🇵🇾'],venue:'Los Angeles',cn:'洛杉矶',seats:[{block:'BLOCK C-136',row:'9排',qty:5},{block:'BLOCK C-135',row:'3/6/8排',qty:8},{block:'BLOCK C-129',row:'2排',qty:2}]},
+  {id:'M10',date:'6月14日',teams:['德国 🇩🇪','库拉索 🇨🇼'],venue:'Houston',cn:'休斯顿',seats:[{block:'BLOCK 107',row:'C排',qty:2},{block:'BLOCK 128',row:'B排',qty:2},{block:'BLOCK 130',row:'D排',qty:4}]},
+  {id:'M14',date:'6月15日',teams:['西班牙 🇪🇸','佛得角 🇨🇻'],venue:'Atlanta',cn:'亚特兰大',seats:[{block:'VIP Lounge',row:'—',qty:1},{block:'BLOCK 106',row:'12排',qty:4},{block:'BLOCK 107',row:'12/13排',qty:8},{block:'BLOCK 112C',row:'1排',qty:1},{block:'BLOCK 114',row:'12排',qty:2}]},
+  {id:'M19',date:'6月16日',teams:['阿根廷 🇦🇷','阿尔及利亚 🇩🇿'],venue:'Kansas City',cn:'堪萨斯城',seats:[{block:'BLOCK 134',row:'12排',qty:4},{block:'BLOCK 135',row:'12排',qty:4}]},
+  {id:'M22',date:'6月17日',teams:['英格兰 🏴','克罗地亚 🇭🇷'],venue:'Mexico City',cn:'墨西哥城',seats:[{block:'BLOCK C-107',row:'3排',qty:2},{block:'BLOCK C-115',row:'3排',qty:2}]},
+  {id:'M29',date:'6月19日',teams:['巴西 🇧🇷','海地 🇭🇹'],venue:'Philadelphia',cn:'费城',seats:[{block:'BLOCK 117',row:'2排',qty:2},{block:'BLOCK 122',row:'3排',qty:4}]},
+  {id:'M38',date:'6月21日',teams:['西班牙 🇪🇸','沙特 🇸🇦'],venue:'Atlanta',cn:'亚特兰大',seats:[{block:'BLOCK 107',row:'13排',qty:4},{block:'BLOCK 114',row:'12排',qty:4}]},
+  {id:'M42',date:'6月22日',teams:['法国 🇫🇷','伊拉克 🇮🇶'],venue:'Philadelphia',cn:'费城',seats:[{block:'BLOCK 122',row:'1排',qty:4}]},
+  {id:'M43',date:'6月22日',teams:['阿根廷 🇦🇷','奥地利 🇦🇹'],venue:'Dallas',cn:'达拉斯',seats:[{block:'BLOCK 103',row:'2/3/4排',qty:12}],note:'Suite款待 $1,500/张'},
+  {id:'M45',date:'6月23日',teams:['英格兰 🏴','加纳 🇬🇭'],venue:'Boston',cn:'波士顿',seats:[{block:'BLOCK 107',row:'1排',qty:4},{block:'BLOCK 112',row:'1排',qty:4}]},
+  {id:'M57',date:'6月25日',teams:['日本 🇯🇵','瑞典 🇸🇪'],venue:'Dallas',cn:'达拉斯',seats:[{block:'BLOCK C-113',row:'2排',qty:2}]},
+  {id:'M59',date:'6月25日',teams:['土耳其 🇹🇷','美国 🇺🇸'],venue:'Los Angeles',cn:'洛杉矶',seats:[{block:'307区',row:'15排',qty:4}]},
+  {id:'M66',date:'6月26日',teams:['乌拉圭 🇺🇾','西班牙 🇪🇸'],venue:'Guadalajara',cn:'瓜达拉哈拉',seats:[{block:'BLOCK T1-23',row:'A/C排',qty:7},{block:'BLOCK T1-22',row:'B排',qty:3}]},
+  {id:'M70',date:'6月27日',teams:['约旦 🇯🇴','阿根廷 🇦🇷'],venue:'Dallas',cn:'达拉斯',seats:[{block:'BLOCK 106',row:'12排',qty:2},{block:'BLOCK C-108',row:'1排',qty:6},{block:'BLOCK C-109',row:'1/2排',qty:4},{block:'BLOCK C-112',row:'4/5排',qty:8},{block:'BLOCK C-113',row:'1排',qty:4}]},
 ];
 
 const knockoutMatches=[
-  {id:'M90',date:'Jul 4',teams:['Round of 16'],venue:'Houston',stage:'r16',seats:[{block:'BLOCK 102',row:'H',qty:1}]},
-  {id:'M91',date:'Jul 5',teams:['Round of 16'],venue:'New York / NJ',stage:'r16',seats:[{block:'BLOCK 109',row:'13',qty:1}]},
-  {id:'M94',date:'Jul 6',teams:['Round of 16'],venue:'Seattle',stage:'r16',seats:[{block:'BLOCK 106/112/113',row:'A/E',qty:3}]},
-  {id:'M97',date:'Jul 9',teams:['Quarterfinal'],venue:'Boston',stage:'qf',seats:[{block:'BLOCK 136',row:'1',qty:2}]},
-  {id:'M98',date:'Jul 10',teams:['Quarterfinal'],venue:'Los Angeles',stage:'qf',seats:[{block:'BLOCK C-117/127/137',row:'5',qty:6}]},
-  {id:'M99',date:'Jul 11',teams:['Quarterfinal'],venue:'Miami',stage:'qf',seats:[{block:'BLOCK 134',row:'1',qty:2}]},
-  {id:'M101',date:'Jul 14',teams:['Semifinal'],venue:'Dallas',stage:'sf',seats:[{block:'BLOCK 120/121/226/227',row:'4-15',qty:7}]},
-  {id:'M102',date:'Jul 15',teams:['Semifinal'],venue:'Atlanta',stage:'sf',seats:[{block:'BLOCK 123/133',row:'12',qty:6}]},
-  {id:'M103',date:'Jul 18',teams:['3rd Place'],venue:'Miami',stage:'sf',seats:[{block:'BLOCK 107/115',row:'1/2',qty:2}]},
-  {id:'M104',date:'Jul 19',teams:['Grand Final 🏆'],venue:'New York / NJ',stage:'final',seats:[{block:'BLOCK 129',row:'4',qty:1}]},
+  {id:'M90',date:'7月4日',teams:['16强赛'],venue:'Houston',cn:'休斯顿',stage:'r16',seats:[{block:'BLOCK 102',row:'H排',qty:1}]},
+  {id:'M91',date:'7月5日',teams:['16强赛'],venue:'New York / NJ',cn:'纽约',stage:'r16',seats:[{block:'BLOCK 109',row:'13排',qty:1}]},
+  {id:'M94',date:'7月6日',teams:['16强赛'],venue:'Seattle',cn:'西雅图',stage:'r16',seats:[{block:'BLOCK 106/112/113',row:'A/E排',qty:3}]},
+  {id:'M97',date:'7月9日',teams:['1/4决赛'],venue:'Boston',cn:'波士顿',stage:'qf',seats:[{block:'BLOCK 136',row:'1排',qty:2}]},
+  {id:'M98',date:'7月10日',teams:['1/4决赛'],venue:'Los Angeles',cn:'洛杉矶',stage:'qf',seats:[{block:'BLOCK C-117/127/137',row:'5排',qty:6}]},
+  {id:'M99',date:'7月11日',teams:['1/4决赛'],venue:'Miami',cn:'迈阿密',stage:'qf',seats:[{block:'BLOCK 134',row:'1排',qty:2}]},
+  {id:'M101',date:'7月14日',teams:['半决赛'],venue:'Dallas',cn:'达拉斯',stage:'sf',seats:[{block:'BLOCK 120/121/226/227',row:'4-15排',qty:7}]},
+  {id:'M102',date:'7月15日',teams:['半决赛'],venue:'Atlanta',cn:'亚特兰大',stage:'sf',seats:[{block:'BLOCK 123/133',row:'12排',qty:6}]},
+  {id:'M103',date:'7月18日',teams:['三四名决赛'],venue:'Miami',cn:'迈阿密',stage:'sf',seats:[{block:'BLOCK 107/115',row:'1/2排',qty:2}]},
+  {id:'M104',date:'7月19日',teams:['总决赛 🏆'],venue:'New York / NJ',cn:'纽约',stage:'final',seats:[{block:'BLOCK 129',row:'4排',qty:1}]},
 ];
 
-const stageLabels={group:'Group Stage',r16:'Round of 16',qf:'Quarterfinal',sf:'Semi / 3rd Place',final:'Grand Final'};
+const stageLabels={group:'小组赛',r16:'16强赛',qf:'1/4决赛',sf:'半决赛',final:'总决赛'};
 
 function renderCard(m){
   const stage=m.stage||'group';
@@ -187,25 +187,25 @@ function renderCard(m){
   const totalQty=m.seats.reduce((a,s)=>a+s.qty,0);
   const note=m.note?'<div style="color:var(--gold);font-size:13px;margin-bottom:10px;font-weight:600">'+m.note+'</div>':'';
   const sp=getSeatPage(m.venue);
-  const seatLink=sp?'<a class="venue-link" onclick="openLightbox('+(sp-1)+')"><span>🗺️</span>Seating Chart</a>':'';
-  return '<div class="match-card"><div class="match-top"><div class="match-code">'+m.id+'</div><div class="match-stage stage-'+stage+'">'+stageLabels[stage]+'</div></div><div class="match-teams">'+teams+'</div>'+note+'<div class="match-venue">'+seatLink+'<span style="font-size:12px;color:var(--muted)">📍 '+m.venue+'</span></div><div class="match-info"><span>📅 '+m.date+'</span></div><div class="ticket-count"><span class="ticket-icon">🎟️</span><span class="ticket-num">'+totalQty+'</span><span class="ticket-label">TICKETS</span></div><div class="match-seats">'+m.seats.map(s=>'<span class="seat-tag">'+s.block+' · Row '+s.row+' <span class="qty">×'+s.qty+'</span></span>').join('')+'</div></div>';
+  const seatLink=sp?'<a class="venue-link" onclick="openLightbox('+(sp-1)+')"><span>🗺️</span>座位图</a>':'';
+  return '<div class="match-card"><div class="match-top"><div class="match-code">'+m.id+'</div><div class="match-stage stage-'+stage+'">'+stageLabels[stage]+'</div></div><div class="match-teams">'+teams+'</div>'+note+'<div class="match-venue">'+seatLink+'<span style="font-size:12px;color:var(--muted)">📍 '+m.cn+'</span></div><div class="match-info"><span>📅 '+m.date+'</span></div><div class="ticket-count"><span class="ticket-icon">🎟️</span><span class="ticket-num">'+totalQty+'</span><span class="ticket-label">张余票</span></div><div class="match-seats">'+m.seats.map(s=>'<span class="seat-tag">'+s.block+' · '+s.row+' <span class="qty">×'+s.qty+'</span></span>').join('')+'</div></div>';
 }
 
 const cities=[
-  {city:'Dallas',m:'M43·M57·M70·M101',flag:'🇺🇸'},{city:'Los Angeles',m:'M4·M59·M98',flag:'🇺🇸'},
-  {city:'Atlanta',m:'M14·M38·M102',flag:'🇺🇸'},{city:'New York / NJ',m:'M91·M104',flag:'🇺🇸'},
-  {city:'Philadelphia',m:'M29·M42',flag:'🇺🇸'},{city:'Houston',m:'M10·M90',flag:'🇺🇸'},
-  {city:'Boston',m:'M45·M97',flag:'🇺🇸'},{city:'Seattle',m:'M94',flag:'🇺🇸'},
-  {city:'Miami',m:'M99·M103',flag:'🇺🇸'},{city:'Kansas City',m:'M19',flag:'🇺🇸'},
-  {city:'Guadalajara',m:'M2·M66',flag:'🇲🇽'},{city:'Mexico City',m:'M22',flag:'🇲🇽'},
-  {city:'Toronto',m:'M3',flag:'🇨🇦'},
+  {city:'达拉斯',m:'M43·M57·M70·M101',flag:'🇺🇸'},{city:'洛杉矶',m:'M4·M59·M98',flag:'🇺🇸'},
+  {city:'亚特兰大',m:'M14·M38·M102',flag:'🇺🇸'},{city:'纽约',m:'M91·M104',flag:'🇺🇸'},
+  {city:'费城',m:'M29·M42',flag:'🇺🇸'},{city:'休斯顿',m:'M10·M90',flag:'🇺🇸'},
+  {city:'波士顿',m:'M45·M97',flag:'🇺🇸'},{city:'西雅图',m:'M94',flag:'🇺🇸'},
+  {city:'迈阿密',m:'M99·M103',flag:'🇺🇸'},{city:'堪萨斯城',m:'M19',flag:'🇺🇸'},
+  {city:'瓜达拉哈拉',m:'M2·M66',flag:'🇲🇽'},{city:'墨西哥城',m:'M22',flag:'🇲🇽'},
+  {city:'多伦多',m:'M3',flag:'🇨🇦'},
 ];
 
-const seatNames=['Vancouver','Monterrey','Kansas City','San Francisco','Toronto','Boston','Los Angeles','Seattle','Mexico City','Dallas','Miami','Houston','Guadalajara','Philadelphia','New York / NJ','Atlanta'];
+const seatNames=['温哥华','蒙特雷','堪萨斯城','旧金山','多伦多','波士顿','洛杉矶','西雅图','墨西哥城','达拉斯','迈阿密','休斯顿','瓜达拉哈拉','费城','纽约/新泽西','亚特兰大'];
 const seatPages=[];
 for(let i=1;i<=16;i++) seatPages.push('../images/worldcup-2026/seating-'+String(i).padStart(2,'0'));
 
-document.getElementById('seat-gallery').innerHTML=seatPages.map((src,i)=>'<div class="seat-card" onclick="openLightbox('+i+')"><picture><source srcset="'+src+'.webp" type="image/webp"><img src="'+src+'.jpg" alt="'+seatNames[i]+' Seating Chart" loading="lazy"></picture><div class="label">'+seatNames[i]+'</div></div>').join('');
+document.getElementById('seat-gallery').innerHTML=seatPages.map((src,i)=>'<div class="seat-card" onclick="openLightbox('+i+')"><picture><source srcset="'+src+'.webp" type="image/webp"><img src="'+src+'.jpg" alt="'+seatNames[i]+'座位图" loading="lazy"></picture><div class="label">'+seatNames[i]+'</div></div>').join('');
 
 document.getElementById('group-stage').innerHTML=groupMatches.map(renderCard).join('');
 document.getElementById('knockout-stage').innerHTML=knockoutMatches.map(renderCard).join('');

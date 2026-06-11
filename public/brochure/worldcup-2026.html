@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 FIFA World Cup · Premium Tickets</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a0e1a;--gold:#d4a853;--gold-light:#e8c478;
+  --cream:#faf7f2;--text:#f0ece4;--muted:#8a8578;
+  --accent:#c0392b;--green:#27ae60;--blue:#2980b9;
+}
+body{background:var(--navy);color:var(--text);font-family:'Inter','Noto Sans SC',sans-serif;overflow-x:hidden}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 20px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(212,168,83,.12) 0%,transparent 70%)}
+.hero-badge{display:inline-block;padding:6px 20px;border:1px solid var(--gold);border-radius:20px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,8vw,90px);font-weight:700;line-height:1.05;margin-bottom:12px;background:linear-gradient(135deg,#fff 0%,var(--gold) 50%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h2{font-family:'Playfair Display',serif;font-size:clamp(18px,3vw,28px);font-weight:400;font-style:italic;color:var(--muted);margin-bottom:32px}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;font-size:14px;color:var(--muted);letter-spacing:1px}
+.hero-meta span::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+
+/* SECTION */
+.section{max-width:1200px;margin:0 auto;padding:60px 20px}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;text-align:center;margin-bottom:8px;color:var(--gold)}
+.section-sub{text-align:center;color:var(--muted);font-size:14px;margin-bottom:40px;letter-spacing:1px}
+
+/* MATCH GRID */
+.match-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.match-card{background:rgba(255,255,255,.04);border:1px solid rgba(212,168,83,.15);border-radius:12px;padding:24px;transition:all .3s ease;position:relative;overflow:hidden}
+.match-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 40px rgba(212,168,83,.12)}
+.match-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.match-card:hover::before{opacity:1}
+
+.match-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.match-code{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold)}
+.match-stage{font-size:11px;padding:3px 10px;border-radius:10px;font-weight:600;letter-spacing:.5px}
+.stage-group{background:rgba(39,174,96,.15);color:var(--green)}
+.stage-r16{background:rgba(41,128,185,.2);color:var(--blue)}
+.stage-qf{background:rgba(212,168,83,.15);color:var(--gold)}
+.stage-sf{background:rgba(192,57,43,.2);color:#e74c3c}
+.stage-final{background:rgba(192,57,43,.35);color:#ff6b6b;font-weight:700}
+
+.match-teams{font-size:18px;font-weight:600;margin-bottom:8px;line-height:1.3}
+.match-teams .vs{color:var(--gold);font-weight:400;font-size:14px;margin:0 6px}
+.match-info{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:16px}
+.match-info span{display:flex;align-items:center;gap:4px}
+.match-seats{display:flex;flex-wrap:wrap;gap:6px}
+.seat-tag{font-size:11px;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--text);white-space:nowrap}
+.seat-tag .qty{color:var(--gold);font-weight:600;margin-left:2px}
+
+/* HIGHLIGHT CARDS */
+.highlight-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:40px}
+.highlight-card{text-align:center;padding:32px 20px;border-radius:12px;background:rgba(255,255,255,.03)}
+.highlight-card .icon{font-size:36px;margin-bottom:12px}
+.highlight-card h3{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--gold)}
+.highlight-card p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* CTA */
+.cta{text-align:center;padding:80px 20px;background:linear-gradient(180deg,transparent 0%,rgba(212,168,83,.06) 100%)}
+.cta h2{font-family:'Playfair Display',serif;font-size:32px;margin-bottom:12px}
+.cta p{color:var(--muted);margin-bottom:24px;font-size:15px}
+.cta-btn{display:inline-block;padding:14px 40px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-weight:700;font-size:15px;border-radius:8px;text-decoration:none;letter-spacing:1px;transition:transform .2s,box-shadow .2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(212,168,83,.3)}
+
+/* FOOTER */
+.footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,.06);font-size:12px;color:var(--muted)}
+.footer .brand{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold);margin-bottom:8px}
+
+/* STADIUM MAP SECTION */
+.stadium-note{max-width:800px;margin:0 auto 40px;text-align:center;font-size:13px;color:var(--muted);line-height:1.8;padding:0 20px}
+.stadium-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.stadium-item{text-align:center;padding:20px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+.stadium-item .city{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);margin-bottom:4px}
+.stadium-item .matches{font-size:12px;color:var(--muted)}
+
+@media(max-width:600px){
+  .match-grid{grid-template-columns:1fr}
+  .hero-meta{gap:16px;font-size:12px}
+  .match-teams{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">USA · Mexico · Canada</div>
+  <h1>2026 FIFA World Cup</h1>
+  <h2>Premium Match Tickets & Hospitality Packages</h2>
+  <div class="hero-meta">
+    <span>June 11 — July 19, 2026</span>
+    <span>30+ Matches Available</span>
+    <span>Electronic Ticket · APP Transfer</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="highlight-row">
+    <div class="highlight-card">
+      <div class="icon">🏟️</div>
+      <h3>Group Stage</h3>
+      <p>Argentina · England · Brazil · Spain · France · Germany and more — front-row blocks, rows 1–4</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🏆</div>
+      <h3>Knockout Stage</h3>
+      <p>Round of 16 → Quarterfinals → Semifinals → Bronze → Grand Final. Premium seats secured.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🥂</div>
+      <h3>Hospitality Suite</h3>
+      <p>Luxury suite packages with VIP entrance, lounge access, catering & private viewing experience.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">📱</div>
+      <h3>Seamless Delivery</h3>
+      <p>100% electronic tickets. Download app, transfer directly to your phone. No paper, no hassle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP STAGE -->
+<section class="section">
+  <div class="section-title">Group Stage</div>
+  <div class="section-sub">June 11 — June 25 · 20 Matches</div>
+  <div class="match-grid" id="group-stage"></div>
+</section>
+
+<!-- KNOCKOUT -->
+<section class="section">
+  <div class="section-title">Knockout Stage</div>
+  <div class="section-sub">July 4 — July 19 · 10 Matches</div>
+  <div class="match-grid" id="knockout-stage"></div>
+</section>
+
+<!-- HOST CITIES -->
+<section class="section">
+  <div class="section-title">Host Cities</div>
+  <div class="section-sub">USA · Mexico · Canada</div>
+  <div class="stadium-grid" id="cities"></div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Secure Your Seats</h2>
+  <p>Tell us which match, how many tickets — we'll make it happen.</p>
+  <a href="mailto:iori.shan@wildroadgroup.com" class="cta-btn">Contact WR Travel</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="brand">WR Travel · 野路逸行</div>
+  <p>IATA 96096711 · info@wildroadgroup.com<br>Wildroad International Holdings Ltd, Hong Kong</p>
+</footer>
+
+<script>
+const groupMatches = [
+  {id:'M2',date:'Jun 11',teams:['South Korea 🇰🇷','Czech Republic 🇨🇿'],venue:'Guadalajara',country:'Mexico',seats:[{block:'BLOCK T1-36',row:'C',qty:2}]},
+  {id:'M3',date:'Jun 12',teams:['Canada 🇨🇦','Bosnia 🇧🇦'],venue:'Toronto',country:'Canada',seats:[{block:'BLOCK 111',row:'12',qty:2},{block:'BLOCK 210',row:'17',qty:4}]},
+  {id:'M4',date:'Jun 12',teams:['USA 🇺🇸','Paraguay 🇵🇾'],venue:'Los Angeles',country:'USA',seats:[{block:'BLOCK C-136',row:'9',qty:5},{block:'BLOCK C-135',row:'3/6/8',qty:8},{block:'BLOCK C-129',row:'2',qty:2}]},
+  {id:'M10',date:'Jun 14',teams:['Germany 🇩🇪','Curaçao 🇨🇼'],venue:'Houston',country:'USA',seats:[{block:'BLOCK 107',row:'C',qty:2},{block:'BLOCK 128',row:'B',qty:2},{block:'BLOCK 130',row:'D',qty:4}]},
+  {id:'M14',date:'Jun 15',teams:['Spain 🇪🇸','Cape Verde 🇨🇻'],venue:'Atlanta',country:'USA',seats:[{block:'VIP Lounge',row:'—',qty:1},{block:'BLOCK 106',row:'12',qty:4},{block:'BLOCK 107',row:'12/13',qty:8},{block:'BLOCK 112C',row:'1',qty:1},{block:'BLOCK 114',row:'12',qty:2}]},
+  {id:'M19',date:'Jun 16',teams:['Argentina 🇦🇷','Algeria 🇩🇿'],venue:'Kansas City',country:'USA',seats:[{block:'BLOCK 134',row:'12',qty:4},{block:'BLOCK 135',row:'12',qty:4}]},
+  {id:'M22',date:'Jun 17',teams:['England 🏴','Croatia 🇭🇷'],venue:'Mexico City',country:'Mexico',seats:[{block:'BLOCK C-107',row:'3',qty:2},{block:'BLOCK C-115',row:'3',qty:2}]},
+  {id:'M29',date:'Jun 19',teams:['Brazil 🇧🇷','Haiti 🇭🇹'],venue:'Philadelphia',country:'USA',seats:[{block:'BLOCK 117',row:'2',qty:2},{block:'BLOCK 122',row:'3',qty:4}]},
+  {id:'M38',date:'Jun 21',teams:['Spain 🇪🇸','Saudi Arabia 🇸🇦'],venue:'Atlanta',country:'USA',seats:[{block:'BLOCK 107',row:'13',qty:4},{block:'BLOCK 114',row:'12',qty:4}]},
+  {id:'M42',date:'Jun 22',teams:['France 🇫🇷','Iraq 🇮🇶'],venue:'Philadelphia',country:'USA',seats:[{block:'BLOCK 122',row:'1',qty:4}]},
+  {id:'M43',date:'Jun 22',teams:['Argentina 🇦🇷','Austria 🇦🇹'],venue:'Dallas',country:'USA',seats:[{block:'BLOCK 103',row:'2/3/4',qty:12}],note:'Suite $1,500/ticket'},
+  {id:'M45',date:'Jun 23',teams:['England 🏴','Ghana 🇬🇭'],venue:'Boston',country:'USA',seats:[{block:'BLOCK 107',row:'1',qty:4},{block:'BLOCK 112',row:'1',qty:4}]},
+  {id:'M57',date:'Jun 25',teams:['Japan 🇯🇵','Sweden 🇸🇪'],venue:'Dallas',country:'USA',seats:[{block:'BLOCK C-113',row:'2',qty:2}]},
+  {id:'M59',date:'Jun 25',teams:['Turkey 🇹🇷','USA 🇺🇸'],venue:'Los Angeles',country:'USA',seats:[{block:'307区',row:'15',qty:4}]},
+  {id:'M66',date:'Jun 26',teams:['Uruguay 🇺🇾','Spain 🇪🇸'],venue:'Guadalajara',country:'Mexico',seats:[{block:'BLOCK T1-23',row:'A/C',qty:7},{block:'BLOCK T1-22',row:'B',qty:3}]},
+  {id:'M70',date:'Jun 27',teams:['Jordan 🇯🇴','Argentina 🇦🇷'],venue:'Dallas',country:'USA',seats:[{block:'BLOCK 106',row:'12',qty:2},{block:'BLOCK C-108',row:'1',qty:6},{block:'BLOCK C-109',row:'1/2',qty:4},{block:'BLOCK C-112',row:'4/5',qty:8},{block:'BLOCK C-113',row:'1',qty:4}]},
+];
+
+const knockoutMatches = [
+  {id:'M90',date:'Jul 4',teams:['Round of 16'],venue:'Houston',country:'USA',stage:'r16',seats:[{block:'BLOCK 102',row:'H',qty:1}]},
+  {id:'M91',date:'Jul 5',teams:['Round of 16'],venue:'New York / NJ',country:'USA',stage:'r16',seats:[{block:'BLOCK 109',row:'13',qty:1}]},
+  {id:'M94',date:'Jul 6',teams:['Round of 16'],venue:'Seattle',country:'USA',stage:'r16',seats:[{block:'BLOCK 106',row:'A',qty:1},{block:'BLOCK 112',row:'A',qty:1},{block:'BLOCK 113',row:'E',qty:1}]},
+  {id:'M97',date:'Jul 9',teams:['Quarterfinal'],venue:'Boston',country:'USA',stage:'qf',seats:[{block:'BLOCK 136',row:'1',qty:2}]},
+  {id:'M98',date:'Jul 10',teams:['Quarterfinal'],venue:'Los Angeles',country:'USA',stage:'qf',seats:[{block:'BLOCK C-117/127/137',row:'5',qty:6}]},
+  {id:'M99',date:'Jul 11',teams:['Quarterfinal'],venue:'Miami',country:'USA',stage:'qf',seats:[{block:'BLOCK 134',row:'1',qty:2}]},
+  {id:'M101',date:'Jul 14',teams:['Semifinal'],venue:'Dallas',country:'USA',stage:'sf',seats:[{block:'BLOCK 120',row:'4',qty:2},{block:'BLOCK 121',row:'8',qty:2},{block:'BLOCK 226',row:'12',qty:2},{block:'BLOCK 227',row:'15',qty:1}]},
+  {id:'M102',date:'Jul 15',teams:['Semifinal'],venue:'Atlanta',country:'USA',stage:'sf',seats:[{block:'BLOCK 123',row:'12',qty:2},{block:'BLOCK 133',row:'12',qty:4}]},
+  {id:'M103',date:'Jul 18',teams:['3rd Place'],venue:'Miami',country:'USA',stage:'sf',seats:[{block:'BLOCK 107',row:'1',qty:1},{block:'BLOCK 115',row:'2',qty:1}]},
+  {id:'M104',date:'Jul 19',teams:['Grand Final'],venue:'New York / NJ',country:'USA',stage:'final',seats:[{block:'BLOCK 129',row:'4',qty:1}]},
+];
+
+const cities = [
+  {city:'Dallas',matches:'M43 · M57 · M70 · M101',flag:'🇺🇸'},
+  {city:'Los Angeles',matches:'M4 · M59 · M98',flag:'🇺🇸'},
+  {city:'Atlanta',matches:'M14 · M38 · M102',flag:'🇺🇸'},
+  {city:'New York / NJ',matches:'M91 · M104',flag:'🇺🇸'},
+  {city:'Philadelphia',matches:'M29 · M42',flag:'🇺🇸'},
+  {city:'Houston',matches:'M10 · M90',flag:'🇺🇸'},
+  {city:'Boston',matches:'M45 · M97',flag:'🇺🇸'},
+  {city:'Seattle',matches:'M94',flag:'🇺🇸'},
+  {city:'Miami',matches:'M99 · M103',flag:'🇺🇸'},
+  {city:'Kansas City',matches:'M19',flag:'🇺🇸'},
+  {city:'Guadalajara',matches:'M2 · M66',flag:'🇲🇽'},
+  {city:'Mexico City',matches:'M22',flag:'🇲🇽'},
+  {city:'Toronto',matches:'M3',flag:'🇨🇦'},
+];
+
+const stageLabels = {group:'Group Stage',r16:'Round of 16',qf:'Quarterfinal',sf:'Semifinal / 3rd Place',final:'Grand Final'};
+const stageClass = s => s||'group';
+
+function renderCard(m){
+  const stage = m.stage || 'group';
+  const teams = m.teams.length === 2 ? `${m.teams[0]} <span class="vs">vs</span> ${m.teams[1]}` : m.teams[0];
+  const totalQty = m.seats.reduce((a,s)=>a+(typeof s.qty==='number'?s.qty:0),0);
+  const note = m.note ? `<div style="color:var(--gold);font-size:12px;margin-bottom:12px;font-weight:600">${m.note}</div>` : '';
+  return `
+  <div class="match-card">
+    <div class="match-top">
+      <div class="match-code">${m.id}</div>
+      <div class="match-stage stage-${stage}">${stageLabels[stage]||'Group Stage'}</div>
+    </div>
+    <div class="match-teams">${teams}</div>
+    ${note}
+    <div class="match-info">
+      <span>📅 ${m.date}</span>
+      <span>📍 ${m.venue}</span>
+      <span>🎟️ ${totalQty} tickets</span>
+    </div>
+    <div class="match-seats">
+      ${m.seats.map(s=>`<span class="seat-tag">${s.block} · Row ${s.row} <span class="qty">×${s.qty}</span></span>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderCity(c){
+  return `<div class="stadium-item"><div class="city">${c.flag} ${c.city}</div><div class="matches">${c.matches}</div></div>`;
+}
+
+document.getElementById('group-stage').innerHTML = groupMatches.map(renderCard).join('');
+document.getElementById('knockout-stage').innerHTML = knockoutMatches.map(renderCard).join('');
+document.getElementById('cities').innerHTML = cities.map(renderCity).join('');
+</script>
+</body>
+</html>

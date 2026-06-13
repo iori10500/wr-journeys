@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>罗者 LUOZHE — 山海观景客房</title>
-<meta name="description" content="罗者 LUOZHE 系列山海观景客房 — 180°全景旗舰大床房、阳台山海观景大床房、独立露台山海观景大床房">
+<title>木夕大里·夥山飯店 — 罗者 & 寸箐 房型</title>
+<meta name="description" content="木夕大里·夥山飯店 — 罗者系列山海观景客房 & 寸箐系列静谧庭院客房">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -49,18 +49,18 @@ body {
 }
 .nav-left { display:flex; align-items:center; gap:2rem; }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   text-decoration: none;
   transition: color 0.4s;
 }
 .nav.scrolled .nav-logo { color: var(--navy); }
-.nav-links { display:flex; gap:2rem; }
+.nav-links { display:flex; gap:1.5rem; }
 .nav-links a {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -71,11 +71,8 @@ body {
 .nav.scrolled .nav-links a { color: var(--text-muted); }
 .nav-links a:hover { color: var(--gold); }
 
-/* Lang switcher */
 .lang-switch {
   display: flex;
-  align-items: center;
-  gap: 0;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 4px;
   overflow: hidden;
@@ -95,13 +92,8 @@ body {
   font-family: 'Inter', sans-serif;
 }
 .nav.scrolled .lang-switch button { color: var(--text-muted); }
-.lang-switch button.active {
-  background: var(--gold);
-  color: var(--navy);
-}
-.lang-switch button:hover:not(.active) {
-  color: var(--white);
-}
+.lang-switch button.active { background: var(--gold); color: var(--navy); }
+.lang-switch button:hover:not(.active) { color: var(--white); }
 .nav.scrolled .lang-switch button:hover:not(.active) { color: var(--text); }
 
 /* ========== HERO ========== */
@@ -120,7 +112,7 @@ body {
   position: absolute;
   inset: 0;
   background: url('images/luozhe/3-2-01.webp') center/cover no-repeat;
-  filter: brightness(0.5);
+  filter: brightness(0.45);
   transform: scale(1.02);
   transition: transform 8s ease-out;
 }
@@ -128,7 +120,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 750px;
   padding: 2rem;
 }
 .hero-eyebrow {
@@ -140,21 +132,21 @@ body {
   margin-bottom: 1.5rem;
 }
 .hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: clamp(2.8rem, 6.5vw, 4.5rem);
   font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.08em;
-  line-height: 1.15;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
   margin-bottom: 0.6rem;
 }
 .hero-title-en {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
   font-weight: 400;
   font-style: italic;
-  color: rgba(255,255,255,0.6);
-  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.1em;
   margin-bottom: 2rem;
 }
 .hero-divider {
@@ -167,8 +159,23 @@ body {
   font-size: 1.05rem;
   color: rgba(255,255,255,0.75);
   line-height: 1.8;
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
+}
+.hero-series-tags {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.hero-series-tag {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid rgba(200,169,110,0.5);
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
 }
 .hero-scroll {
   position: absolute;
@@ -186,11 +193,7 @@ body {
   text-transform: uppercase;
   animation: float 2.5s ease-in-out infinite;
 }
-.hero-scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-}
+.hero-scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, var(--gold), transparent); }
 @keyframes float {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
@@ -211,7 +214,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 700;
   color: var(--navy);
@@ -224,11 +227,35 @@ body {
   color: var(--text-muted);
   margin-bottom: 3rem;
 }
-.gold-line {
-  width: 40px;
+.gold-line { width:40px; height:2px; background:var(--gold); margin:1rem 0 1.5rem; }
+
+/* Series divider */
+.series-divider {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.series-name {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+.series-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+.series-line {
+  width: 30px;
   height: 2px;
   background: var(--gold);
-  margin: 1rem 0 1.5rem;
+  margin: 1rem auto 0;
 }
 
 /* ========== ROOM CARDS ========== */
@@ -352,7 +379,7 @@ body {
   color: var(--white);
 }
 .compare-inner {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .compare-title {
@@ -366,39 +393,49 @@ body {
   font-style: italic;
   text-align: center;
   color: rgba(255,255,255,0.5);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+.compare-series-label {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(200,169,110,0.2);
 }
 .compare-table {
   width: 100%;
   border-collapse: collapse;
 }
 .compare-table th {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
-  padding: 1rem 1.2rem;
+  padding: 0.8rem 1rem;
   text-align: left;
   border-bottom: 1px solid rgba(200,169,110,0.3);
   font-weight: 600;
 }
 .compare-table td {
-  padding: 1.2rem 1.2rem;
+  padding: 1rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.8);
   vertical-align: top;
 }
-.compare-table tr:hover td {
-  background: rgba(200,169,110,0.05);
-}
-.compare-table .room-label {
+.compare-table tr:hover td { background: rgba(200,169,110,0.05); }
+.compare-table .room-label { font-weight:600; color:var(--white); }
+.compare-table .highlight-cell { color:var(--gold-light); font-weight:500; }
+.compare-table .series-header td {
+  padding: 1.2rem 1rem 0.6rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--white);
-}
-.compare-table .highlight-cell {
-  color: var(--gold-light);
-  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(200,169,110,0.2);
 }
 
 /* ========== FOOTER ========== */
@@ -409,11 +446,11 @@ body {
   border-top: 1px solid rgba(200,169,110,0.15);
 }
 .footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
 }
 .footer-tagline {
@@ -444,8 +481,9 @@ body {
   .nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
   .hero-title { letter-spacing: 0.04em; }
-  .compare-table { font-size: 0.8rem; }
-  .compare-table th, .compare-table td { padding: 0.8rem; }
+  .hero-series-tags { flex-direction: column; align-items: center; }
+  .compare-table { font-size: 0.75rem; }
+  .compare-table th, .compare-table td { padding: 0.6rem; }
 }
 </style>
 </head>
@@ -454,9 +492,10 @@ body {
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-left">
-    <a href="#" class="nav-logo">LUOZHE</a>
+    <a href="#" class="nav-logo" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</a>
     <div class="nav-links">
-      <a href="#rooms" data-zh="客房" data-en="Rooms">客房</a>
+      <a href="#luozhe" data-zh="罗者" data-en="Luozhe">罗者</a>
+      <a href="#cunqing" data-zh="寸箐" data-en="Cunqing">寸箐</a>
       <a href="#compare" data-zh="对比" data-en="Compare">对比</a>
     </div>
   </div>
@@ -470,11 +509,15 @@ body {
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow" data-zh="Mountain & Sea · Luxury Retreat" data-en="Mountain & Sea · Luxury Retreat">Mountain & Sea · Luxury Retreat</div>
-    <h1 class="hero-title" data-zh="罗 者" data-en="LUOZHE">罗 者</h1>
-    <div class="hero-title-en">LUOZHE Series</div>
+    <div class="hero-eyebrow">Dali · Mountain & Sea Retreat</div>
+    <h1 class="hero-title" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</h1>
+    <div class="hero-title-en" data-zh="MUXI Dali · Huoshan Hotel" data-en="大理 · 山与海的避世之所">MUXI Dali · Huoshan Hotel</div>
     <div class="hero-divider"></div>
-    <p class="hero-subtitle" data-zh="山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间" data-en="Where mountains meet the sea — three exquisitely designed view rooms that bring nature into every corner of your living space">山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间</p>
+    <p class="hero-subtitle" data-zh="苍山脚下，洱海之畔，山海之间的避世之所。罗者系列拥揽山海关阔，寸箐系列静守庭院清幽。" data-en="At the foot of Cangshan Mountain, beside Erhai Lake — a retreat between peaks and sea. The Luozhe series commands panoramic mountain-and-sea views; the Cunqing series offers tranquil courtyard serenity.">苍山脚下，洱海之畔，山海之间的避世之所。罗者系列拥揽山海关阔，寸箐系列静守庭院清幽。</p>
+    <div class="hero-series-tags">
+      <span class="hero-series-tag">LUOZHE Series</span>
+      <span class="hero-series-tag">CUNQING Series</span>
+    </div>
   </div>
   <div class="hero-scroll">
     <span data-zh="探索" data-en="Explore">探索</span>
@@ -482,12 +525,12 @@ body {
   </div>
 </section>
 
-<!-- ROOMS -->
-<section class="section" id="rooms">
-  <div class="numeral">01 — Rooms</div>
-  <h2 class="section-title" data-zh="山海观景客房" data-en="Mountain & Sea View Rooms">山海观景客房</h2>
+<!-- ==================== LUOZHE SERIES ==================== -->
+<section class="section" id="luozhe">
+  <div class="numeral">01</div>
+  <h2 class="section-title" data-zh="罗者系列" data-en="Luozhe Series">罗者系列</h2>
   <div class="gold-line"></div>
-  <p class="section-subtitle" data-zh="Mountain & Sea View Guest Rooms" data-en="Mountain & Sea View Guest Rooms">Mountain & Sea View Guest Rooms</p>
+  <p class="section-subtitle" data-zh="山海观景客房 · Mountain & Sea View" data-en="Mountain & Sea View Rooms">山海观景客房 · Mountain & Sea View</p>
 
   <div class="rooms-grid">
 
@@ -576,56 +619,133 @@ body {
   </div>
 </section>
 
-<!-- COMPARISON TABLE -->
+<!-- ==================== CUNQING SERIES ==================== -->
+<div class="series-divider" id="cunqing">
+  <div class="numeral" style="margin-bottom:0.8rem">02</div>
+  <div class="series-name" data-zh="寸箐系列" data-en="Cunqing Series">寸箐系列</div>
+  <div class="series-name-en" data-zh="静谧庭院客房 · Courtyard View" data-en="Tranquil Courtyard Rooms · Courtyard View">静谧庭院客房 · Courtyard View</div>
+  <div class="series-line"></div>
+</div>
+
+<section class="section" style="padding-top:0">
+  <div class="rooms-grid">
+
+    <!-- Room 2-4 / 2-5: Courtyard Twin -->
+    <div class="room-card">
+      <div class="room-gallery">
+        <img class="room-gallery-main" id="gallery-2-4" src="images/cunqing/2-4-01.webp" alt="Tranquil Courtyard Twin Room">
+        <div class="room-thumbs">
+          <img src="images/cunqing/2-4-01.webp" alt="" data-gallery="gallery-2-4" class="active">
+          <img src="images/cunqing/2-4-02.webp" alt="" data-gallery="gallery-2-4">
+          <img src="images/cunqing/2-4-03.webp" alt="" data-gallery="gallery-2-4">
+        </div>
+      </div>
+      <div class="room-info">
+        <div>
+          <span class="room-badge" data-zh="庭院" data-en="Courtyard">庭院</span>
+          <span class="room-sqm">75 sqm</span>
+        </div>
+        <h3 class="room-name-zh" data-zh="寸箐·2-4 / 2-5" data-en="Cunqing · 2-4 / 2-5">寸箐·2-4 / 2-5</h3>
+        <p class="room-name-en">Tranquil Courtyard Twin Room (with internal balcony)</p>
+        <p class="room-desc" data-zh="静谧庭院双床房，内置阳台将庭院景致引入室内。双床设计适合好友同行或家庭出游，庭院中四季花草更迭，推窗即是满目绿意与宁静。2-4 与 2-5 为同款房型。" data-en="A tranquil courtyard-facing twin room with an internal balcony that brings the garden scenery indoors. The twin-bed layout is ideal for friends or family travel. Seasonal flora fills the courtyard — open the window to lush greenery and serenity. Rooms 2-4 and 2-5 share the same layout.">静谧庭院双床房，内置阳台将庭院景致引入室内。双床设计适合好友同行或家庭出游，庭院中四季花草更迭，推窗即是满目绿意与宁静。2-4 与 2-5 为同款房型。</p>
+        <ul class="room-features">
+          <li data-zh="Twin 双床" data-en="Twin Beds">Twin 双床</li>
+          <li data-zh="庭院景观 (Courtyard View)" data-en="Courtyard View">庭院景观 (Courtyard View)</li>
+          <li data-zh="内置阳台 (Internal Balcony)" data-en="Internal Balcony">内置阳台 (Internal Balcony)</li>
+          <li data-zh="静谧私享" data-en="Quiet & Private">静谧私享</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== COMPARISON TABLE ==================== -->
 <section class="compare-section" id="compare">
   <div class="compare-inner">
-    <h2 class="compare-title" data-zh="房型对比" data-en="Room Comparison">房型对比</h2>
-    <p class="compare-subtitle">Room Comparison</p>
+    <h2 class="compare-title" data-zh="房型总览" data-en="Room Comparison">房型总览</h2>
+    <p class="compare-subtitle" data-zh="罗者系列 · 寸箐系列" data-en="Luozhe Series · Cunqing Series">罗者系列 · 寸箐系列</p>
+
     <table class="compare-table">
       <thead>
         <tr>
           <th></th>
-          <th data-zh="罗者·3-2 旗舰" data-en="Luozhe · 3-2 Flagship">罗者·3-2 旗舰</th>
-          <th data-zh="罗者·3-6 阳台" data-en="Luozhe · 3-6 Balcony">罗者·3-6 阳台</th>
-          <th data-zh="罗者·1-6 独立露台" data-en="Luozhe · 1-6 Private Terrace">罗者·1-6 独立露台</th>
+          <th data-zh="罗者·3-2" data-en="Luozhe · 3-2">罗者·3-2</th>
+          <th data-zh="罗者·3-6" data-en="Luozhe · 3-6">罗者·3-6</th>
+          <th data-zh="罗者·1-6" data-en="Luozhe · 1-6">罗者·1-6</th>
+          <th data-zh="寸箐·2-4/2-5" data-en="Cunqing · 2-4/2-5">寸箐·2-4/2-5</th>
         </tr>
       </thead>
       <tbody>
+        <tr class="series-header">
+          <td colspan="5" data-zh="LUOZHE · 罗者系列" data-en="LUOZHE SERIES">LUOZHE · 罗者系列</td>
+        </tr>
         <tr>
-          <td class="room-label" data-zh="床型" data-en="Bed Type">床型</td>
+          <td class="room-label" data-zh="床型" data-en="Bed">床型</td>
           <td>King</td>
           <td>King</td>
           <td>King</td>
+          <td style="opacity:0.3">—</td>
         </tr>
         <tr>
           <td class="room-label" data-zh="面积" data-en="Area">面积</td>
           <td>110 sqm</td>
           <td>115 sqm</td>
           <td>113 sqm</td>
+          <td style="opacity:0.3">—</td>
         </tr>
         <tr>
           <td class="room-label" data-zh="景观" data-en="View">景观</td>
-          <td data-zh="山海全景" data-en="Panoramic Mountain & Sea">山海全景</td>
-          <td data-zh="山海景观" data-en="Mountain & Sea">山海景观</td>
-          <td data-zh="山海景观" data-en="Mountain & Sea">山海景观</td>
+          <td data-zh="山海全景" data-en="Panoramic Mtn & Sea">山海全景</td>
+          <td data-zh="山海景观" data-en="Mtn & Sea">山海景观</td>
+          <td data-zh="山海景观" data-en="Mtn & Sea">山海景观</td>
+          <td style="opacity:0.3">—</td>
         </tr>
         <tr>
-          <td class="room-label" data-zh="户外空间" data-en="Outdoor Space">户外空间</td>
-          <td class="highlight-cell" data-zh="Terrace 露台" data-en="Terrace">Terrace 露台</td>
-          <td data-zh="Balcony 阳台" data-en="Balcony">Balcony 阳台</td>
-          <td class="highlight-cell" data-zh="Private Terrace 独立露台" data-en="Private Terrace">Private Terrace 独立露台</td>
+          <td class="room-label" data-zh="户外空间" data-en="Outdoor">户外空间</td>
+          <td class="highlight-cell">Terrace</td>
+          <td>Balcony</td>
+          <td class="highlight-cell">Private Terrace</td>
+          <td style="opacity:0.3">—</td>
         </tr>
         <tr>
-          <td class="room-label" data-zh="视野" data-en="Sightline">视野</td>
-          <td class="highlight-cell" data-zh="180° 全景" data-en="180° Panoramic">180° 全景</td>
-          <td data-zh="开阔视野" data-en="Open View">开阔视野</td>
-          <td data-zh="开阔视野" data-en="Open View">开阔视野</td>
+          <td class="room-label" data-zh="布局" data-en="Layout">布局</td>
+          <td data-zh="开放式" data-en="Open Plan">开放式</td>
+          <td data-zh="标准" data-en="Standard">标准</td>
+          <td data-zh="半独立起居" data-en="Semi-Separate">半独立起居</td>
+          <td style="opacity:0.3">—</td>
+        </tr>
+
+        <tr class="series-header">
+          <td colspan="5" data-zh="CUNQING · 寸箐系列" data-en="CUNQING SERIES">CUNQING · 寸箐系列</td>
         </tr>
         <tr>
-          <td class="room-label" data-zh="私密性" data-en="Privacy">私密性</td>
-          <td>★★★★</td>
-          <td>★★★</td>
-          <td class="highlight-cell">★★★★★</td>
+          <td class="room-label" data-zh="床型" data-en="Bed">床型</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td>Twin</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="面积" data-en="Area">面积</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td>75 sqm</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="景观" data-en="View">景观</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td class="highlight-cell" data-zh="庭院" data-en="Courtyard">庭院</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="阳台" data-en="Balcony">阳台</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td style="opacity:0.3">—</td>
+          <td class="highlight-cell" data-zh="内置阳台" data-en="Internal Balcony">内置阳台</td>
         </tr>
       </tbody>
     </table>
@@ -634,9 +754,9 @@ body {
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-logo">罗 者 LUOZHE</div>
+  <div class="footer-logo" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</div>
   <div class="footer-tagline">Where mountains meet the sea</div>
-  <div class="footer-copy">© 2026 LUOZHE Series. All rights reserved.</div>
+  <div class="footer-copy">© 2026 木夕大里·夥山飯店. All rights reserved.</div>
 </footer>
 
 <script>
@@ -645,54 +765,40 @@ let currentLang = 'zh';
 
 function switchLang(lang) {
   currentLang = lang;
-  const html = document.documentElement;
-
-  // Toggle buttons
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.title = lang === 'zh' ? '木夕大里·夥山飯店 — 罗者 & 寸箐 房型' : 'MUXI Dali · Huoshan Hotel — Room Types';
 
-  // Update html lang
-  html.lang = lang === 'zh' ? 'zh-CN' : 'en';
-
-  // Update page title
-  document.title = lang === 'zh' ? '罗者 LUOZHE — 山海观景客房' : 'LUOZHE — Mountain & Sea View Rooms';
-
-  // Update all elements with data-zh / data-en
   document.querySelectorAll('[data-zh][data-en]').forEach(el => {
     const text = el.getAttribute('data-' + lang);
     if (text) el.textContent = text;
   });
 }
 
-// ======== Nav scroll effect ========
+// ======== Nav scroll ========
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-// ======== Gallery: 3 thumbs + main image ========
+// ======== Gallery ========
 document.querySelectorAll('.room-thumbs img').forEach(thumb => {
   thumb.addEventListener('click', () => {
     const galleryId = thumb.dataset.gallery;
     const mainImg = document.getElementById(galleryId);
     if (!mainImg) return;
-
-    // Update main image
     mainImg.src = thumb.src;
-
-    // Update active state for all thumbs in this gallery
     thumb.parentElement.querySelectorAll('img').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
   });
 });
 
-// Click main image to cycle through all 3
 document.querySelectorAll('.room-gallery-main').forEach(main => {
   main.addEventListener('click', () => {
     const thumbs = main.parentElement.querySelectorAll('.room-thumbs img');
     const activeIdx = Array.from(thumbs).findIndex(t => t.classList.contains('active'));
     const nextIdx = (activeIdx + 1) % thumbs.length;
-
     main.src = thumbs[nextIdx].src;
     thumbs.forEach(t => t.classList.remove('active'));
     thumbs[nextIdx].classList.add('active');

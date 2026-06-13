@@ -194,6 +194,21 @@ body {
   animation: float 2.5s ease-in-out infinite;
 }
 .hero-scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, var(--gold), transparent); }
+
+/* Hero logo badge */
+.hero-logo-badge {
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  z-index: 3;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+}
+.hero-logo-badge:hover { opacity: 0.9; }
+.hero-logo-badge img {
+  height: 60px;
+  width: auto;
+}
 @keyframes float {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
@@ -508,6 +523,9 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
+  <div class="hero-logo-badge">
+    <img src="images/narelia-logo.webp" alt="NARELIA LUXURY">
+  </div>
   <div class="hero-content">
     <div class="hero-eyebrow">Dali · Mountain & Sea Retreat</div>
     <h1 class="hero-title" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</h1>
@@ -756,7 +774,10 @@ body {
 <footer class="footer">
   <div class="footer-logo" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</div>
   <div class="footer-tagline">Where mountains meet the sea</div>
-  <div class="footer-copy">© 2026 木夕大里·夥山飯店. All rights reserved.</div>
+  <div style="margin:1.5rem auto 0; opacity:0.5;">
+    <img src="images/narelia-logo.webp" alt="NARELIA LUXURY" style="height:50px; width:auto;">
+  </div>
+  <div class="footer-copy" style="margin-top:1.5rem;">© 2026 木夕大里·夥山飯店. All rights reserved.</div>
 </footer>
 
 <script>

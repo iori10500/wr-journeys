@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>罗者 LUOZHE — 山海观景客房</title>
+<meta name="description" content="罗者 LUOZHE 系列山海观景客房 — 180°全景旗舰大床房、阳台山海观景大床房、独立露台山海观景大床房">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --navy: #1a1a1a;
+  --gold: #c8a96e;
+  --gold-light: #e0c995;
+  --cream: #faf7f2;
+  --text: #2c2c2c;
+  --text-muted: #6b6b6b;
+  --white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled {
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.nav.scrolled .nav-logo { color: var(--navy); }
+.nav-links { display:flex; gap:2rem; }
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav.scrolled .nav-links a { color: var(--text-muted); }
+.nav-links a:hover { color: var(--gold); }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: var(--navy);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/luozhe/3-2-01.webp') center/cover no-repeat;
+  filter: brightness(0.5);
+  transform: scale(1.02);
+  transition: transform 8s ease-out;
+}
+.hero:hover .hero-bg { transform: scale(1.06); }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.hero-title-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+}
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 2rem;
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: float 2.5s ease-in-out infinite;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ========== SECTION COMMON ========== */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.numeral {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+.gold-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem 0 1.5rem;
+}
+
+/* ========== ROOM CARDS ========== */
+.rooms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.room-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.room-card:nth-child(even) { direction: rtl; }
+.room-card:nth-child(even) > * { direction: ltr; }
+
+.room-gallery {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #eee;
+}
+.room-gallery-main {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+.room-thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.room-thumbs img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.room-thumbs img:hover,
+.room-thumbs img.active { opacity: 1; }
+
+.room-info { padding: 1rem 0; }
+.room-name-zh {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+}
+.room-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.room-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+}
+.room-desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+.room-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style: none;
+}
+.room-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.room-features li::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ========== COMPARISON TABLE ========== */
+.compare-section {
+  background: var(--navy);
+  padding: 5rem 2rem;
+  color: var(--white);
+}
+.compare-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.compare-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.compare-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 3rem;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.compare-table th {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(200,169,110,0.3);
+  font-weight: 600;
+}
+.compare-table td {
+  padding: 1.2rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  vertical-align: top;
+}
+.compare-table tr:hover td {
+  background: rgba(200,169,110,0.05);
+}
+.compare-table .room-label {
+  font-weight: 600;
+  color: var(--white);
+}
+.compare-table .highlight-cell {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--navy);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(200,169,110,0.15);
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .room-card,
+  .room-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 2rem;
+  }
+  .section { padding: 4rem 1.5rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.75rem; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero-title { letter-spacing: 0.04em; }
+  .compare-table { font-size: 0.8rem; }
+  .compare-table th, .compare-table td { padding: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">LUOZHE</a>
+  <div class="nav-links">
+    <a href="#rooms">客房</a>
+    <a href="#compare">对比</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Mountain & Sea · Luxury Retreat</div>
+    <h1 class="hero-title">罗 者</h1>
+    <div class="hero-title-en">LUOZHE Series</div>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间</p>
+  </div>
+  <div class="hero-scroll">
+    <span>探索</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="section" id="rooms">
+  <div class="numeral">01 — Rooms</div>
+  <h2 class="section-title">山海观景客房</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Mountain & Sea View Guest Rooms</p>
+
+  <div class="rooms-grid">
+
+    <!-- Room 3-2: Flagship -->
+    <div class="room-card">
+      <div class="room-gallery">
+        <img class="room-gallery-main" id="gallery-3-2" src="images/luozhe/3-2-01.webp" alt="180° Panoramic Mountain & Sea View Flagship King Room">
+        <div class="room-thumbs">
+          <img src="images/luozhe/3-2-02.webp" alt="" data-target="gallery-3-2" data-src="images/luozhe/3-2-02.webp" class="active">
+          <img src="images/luozhe/3-2-03.webp" alt="" data-target="gallery-3-2" data-src="images/luozhe/3-2-03.webp">
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-badge">旗舰</div>
+        <h3 class="room-name-zh">罗者·3-2</h3>
+        <p class="room-name-en">180° Panoramic Mountain & Sea View Flagship King Room</p>
+        <p class="room-desc">
+          位于建筑最高视野点的旗舰客房，270°超大全景落地窗将山峦叠嶂与碧波万顷尽收眼底。
+          宽敞的起居空间融入精心设计的休憩区域，让每一次驻足都成为与自然的对话。
+        </p>
+        <ul class="room-features">
+          <li>King 大床</li>
+          <li>180° 全景落地窗</li>
+          <li>山海全景露台 (Terrace)</li>
+          <li>独立起居空间</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Room 3-6: Balcony -->
+    <div class="room-card">
+      <div class="room-gallery">
+        <img class="room-gallery-main" id="gallery-3-6" src="images/luozhe/3-6-01.webp" alt="Balcony Mountain & Sea View King Room">
+        <div class="room-thumbs">
+          <img src="images/luozhe/3-6-02.webp" alt="" data-target="gallery-3-6" data-src="images/luozhe/3-6-02.webp" class="active">
+          <img src="images/luozhe/3-6-03.webp" alt="" data-target="gallery-3-6" data-src="images/luozhe/3-6-03.webp">
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-badge">阳台</div>
+        <h3 class="room-name-zh">罗者·3-6</h3>
+        <p class="room-name-en">Balcony Mountain & Sea View King Room</p>
+        <p class="room-desc">
+          私密阳台与室内空间巧妙衔接，推门即是山风海韵。清晨在阳台享用一杯咖啡，
+          看薄雾从山间缓缓升起，感受山海之间的宁静时刻。
+        </p>
+        <ul class="room-features">
+          <li>King 大床</li>
+          <li>景观阳台 (Balcony)</li>
+          <li>山海景观</li>
+          <li>精致家居配置</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Room 1-6: Private Terrace -->
+    <div class="room-card">
+      <div class="room-gallery">
+        <img class="room-gallery-main" id="gallery-1-6" src="images/luozhe/1-6-01.webp" alt="Private Terrace Mountain & Sea View King Room">
+        <div class="room-thumbs">
+          <img src="images/luozhe/1-6-02.webp" alt="" data-target="gallery-1-6" data-src="images/luozhe/1-6-02.webp" class="active">
+          <img src="images/luozhe/1-6-03.webp" alt="" data-target="gallery-1-6" data-src="images/luozhe/1-6-03.webp">
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-badge">独立露台</div>
+        <h3 class="room-name-zh">罗者·1-6</h3>
+        <p class="room-name-en">Private Terrace Mountain & Sea View King Room</p>
+        <p class="room-desc">
+          独享宽敞的私人露台空间，将室内生活延伸至户外自然。独立露台设计提供更多私密性，
+          是沉浸式体验山海之美的理想选择——日落时分，在露台静候天际线被染成金色。
+        </p>
+        <ul class="room-features">
+          <li>King 大床</li>
+          <li>独立私人露台 (Private Terrace)</li>
+          <li>山海景观</li>
+          <li>户外休憩家具</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="compare-section" id="compare">
+  <div class="compare-inner">
+    <h2 class="compare-title">房型对比</h2>
+    <p class="compare-subtitle">Room Comparison</p>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>罗者·3-2 旗舰</th>
+          <th>罗者·3-6 阳台</th>
+          <th>罗者·1-6 独立露台</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="room-label">床型</td>
+          <td>King</td>
+          <td>King</td>
+          <td>King</td>
+        </tr>
+        <tr>
+          <td class="room-label">景观</td>
+          <td>山海全景</td>
+          <td>山海景观</td>
+          <td>山海景观</td>
+        </tr>
+        <tr>
+          <td class="room-label">户外空间</td>
+          <td class="highlight-cell">Terrace 露台</td>
+          <td>Balcony 阳台</td>
+          <td class="highlight-cell">Private Terrace 独立露台</td>
+        </tr>
+        <tr>
+          <td class="room-label">视野</td>
+          <td class="highlight-cell">180° 全景</td>
+          <td>开阔视野</td>
+          <td>开阔视野</td>
+        </tr>
+        <tr>
+          <td class="room-label">私密性</td>
+          <td>★★★★</td>
+          <td>★★★</td>
+          <td class="highlight-cell">★★★★★</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">罗 者 LUOZHE</div>
+  <div class="footer-tagline">Where mountains meet the sea</div>
+  <div class="footer-copy">© 2026 LUOZHE Series. All rights reserved.</div>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+// Gallery thumbnail click
+document.querySelectorAll('.room-thumbs img').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const targetId = thumb.dataset.target;
+    const mainImg = document.getElementById(targetId);
+    if (mainImg) {
+      mainImg.src = thumb.dataset.src;
+      // Update active state
+      thumb.parentElement.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    }
+  });
+});
+
+// Also clicking main image cycles to next
+document.querySelectorAll('.room-gallery-main').forEach(main => {
+  main.addEventListener('click', () => {
+    const thumbs = main.parentElement.querySelectorAll('.room-thumbs img');
+    const activeIdx = Array.from(thumbs).findIndex(t => t.classList.contains('active'));
+    // Cycle: if active is last, go to 0; also include the main image itself
+    // Just cycle through thumbnails
+    const nextIdx = (activeIdx + 1) % thumbs.length;
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[nextIdx].classList.add('active');
+    main.src = thumbs[nextIdx].dataset.src;
+  });
+  main.style.cursor = 'pointer';
+});
+</script>
+
+</body>
+</html>

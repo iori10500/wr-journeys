@@ -47,6 +47,7 @@ body {
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
 }
+.nav-left { display:flex; align-items:center; gap:2rem; }
 .nav-logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
@@ -69,6 +70,39 @@ body {
 }
 .nav.scrolled .nav-links a { color: var(--text-muted); }
 .nav-links a:hover { color: var(--gold); }
+
+/* Lang switcher */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+.nav.scrolled .lang-switch { border-color: rgba(0,0,0,0.15); }
+.lang-switch button {
+  background: none;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+.nav.scrolled .lang-switch button { color: var(--text-muted); }
+.lang-switch button.active {
+  background: var(--gold);
+  color: var(--navy);
+}
+.lang-switch button:hover:not(.active) {
+  color: var(--white);
+}
+.nav.scrolled .lang-switch button:hover:not(.active) { color: var(--text); }
 
 /* ========== HERO ========== */
 .hero {
@@ -223,10 +257,12 @@ body {
   aspect-ratio: 16/10;
   object-fit: cover;
   display: block;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 .room-thumbs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
 }
 .room-thumbs img {
@@ -235,7 +271,7 @@ body {
   object-fit: cover;
   display: block;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.5;
   transition: opacity 0.3s;
 }
 .room-thumbs img:hover,
@@ -267,6 +303,18 @@ body {
   text-transform: uppercase;
   border-radius: 3px;
   margin-bottom: 1.5rem;
+}
+.room-sqm {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+  margin-left: 0.6rem;
+  vertical-align: middle;
 }
 .room-desc {
   font-size: 0.95rem;
@@ -393,7 +441,7 @@ body {
   .nav-links a { font-size: 0.75rem; }
 }
 @media (max-width: 600px) {
-  .nav { padding: 1rem 1.5rem; }
+  .nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
   .hero-title { letter-spacing: 0.04em; }
   .compare-table { font-size: 0.8rem; }
@@ -405,10 +453,16 @@ body {
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo">LUOZHE</a>
-  <div class="nav-links">
-    <a href="#rooms">客房</a>
-    <a href="#compare">对比</a>
+  <div class="nav-left">
+    <a href="#" class="nav-logo">LUOZHE</a>
+    <div class="nav-links">
+      <a href="#rooms" data-zh="客房" data-en="Rooms">客房</a>
+      <a href="#compare" data-zh="对比" data-en="Compare">对比</a>
+    </div>
+  </div>
+  <div class="lang-switch">
+    <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+    <button id="btn-en" onclick="switchLang('en')">EN</button>
   </div>
 </nav>
 
@@ -416,14 +470,14 @@ body {
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Mountain & Sea · Luxury Retreat</div>
-    <h1 class="hero-title">罗 者</h1>
+    <div class="hero-eyebrow" data-zh="Mountain & Sea · Luxury Retreat" data-en="Mountain & Sea · Luxury Retreat">Mountain & Sea · Luxury Retreat</div>
+    <h1 class="hero-title" data-zh="罗 者" data-en="LUOZHE">罗 者</h1>
     <div class="hero-title-en">LUOZHE Series</div>
     <div class="hero-divider"></div>
-    <p class="hero-subtitle">山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间</p>
+    <p class="hero-subtitle" data-zh="山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间" data-en="Where mountains meet the sea — three exquisitely designed view rooms that bring nature into every corner of your living space">山与海的交汇之处，三款精心设计的观景客房，将自然风光引入每一寸居住空间</p>
   </div>
   <div class="hero-scroll">
-    <span>探索</span>
+    <span data-zh="探索" data-en="Explore">探索</span>
     <div class="hero-scroll-line"></div>
   </div>
 </section>
@@ -431,9 +485,9 @@ body {
 <!-- ROOMS -->
 <section class="section" id="rooms">
   <div class="numeral">01 — Rooms</div>
-  <h2 class="section-title">山海观景客房</h2>
+  <h2 class="section-title" data-zh="山海观景客房" data-en="Mountain & Sea View Rooms">山海观景客房</h2>
   <div class="gold-line"></div>
-  <p class="section-subtitle">Mountain & Sea View Guest Rooms</p>
+  <p class="section-subtitle" data-zh="Mountain & Sea View Guest Rooms" data-en="Mountain & Sea View Guest Rooms">Mountain & Sea View Guest Rooms</p>
 
   <div class="rooms-grid">
 
@@ -442,23 +496,24 @@ body {
       <div class="room-gallery">
         <img class="room-gallery-main" id="gallery-3-2" src="images/luozhe/3-2-01.webp" alt="180° Panoramic Mountain & Sea View Flagship King Room">
         <div class="room-thumbs">
-          <img src="images/luozhe/3-2-02.webp" alt="" data-target="gallery-3-2" data-src="images/luozhe/3-2-02.webp" class="active">
-          <img src="images/luozhe/3-2-03.webp" alt="" data-target="gallery-3-2" data-src="images/luozhe/3-2-03.webp">
+          <img src="images/luozhe/3-2-01.webp" alt="" data-gallery="gallery-3-2" class="active">
+          <img src="images/luozhe/3-2-02.webp" alt="" data-gallery="gallery-3-2">
+          <img src="images/luozhe/3-2-03.webp" alt="" data-gallery="gallery-3-2">
         </div>
       </div>
       <div class="room-info">
-        <div class="room-badge">旗舰</div>
-        <h3 class="room-name-zh">罗者·3-2</h3>
+        <div>
+          <span class="room-badge" data-zh="旗舰" data-en="Flagship">旗舰</span>
+          <span class="room-sqm">110 sqm</span>
+        </div>
+        <h3 class="room-name-zh" data-zh="罗者·3-2" data-en="Luozhe · 3-2">罗者·3-2</h3>
         <p class="room-name-en">180° Panoramic Mountain & Sea View Flagship King Room</p>
-        <p class="room-desc">
-          位于建筑最高视野点的旗舰客房，270°超大全景落地窗将山峦叠嶂与碧波万顷尽收眼底。
-          宽敞的起居空间融入精心设计的休憩区域，让每一次驻足都成为与自然的对话。
-        </p>
+        <p class="room-desc" data-zh="位于建筑最高视野点的旗舰客房，180°超大全景落地窗将山峦叠嶂与碧波万顷尽收眼底。宽敞的起居空间融入精心设计的休憩区域，让每一次驻足都成为与自然的对话。" data-en="The flagship room perched at the building's finest vantage point, where 180° panoramic floor-to-ceiling windows frame endless mountain ridges and vast seas. A generous living space with thoughtfully designed lounge areas transforms every moment into a dialogue with nature.">位于建筑最高视野点的旗舰客房，180°超大全景落地窗将山峦叠嶂与碧波万顷尽收眼底。宽敞的起居空间融入精心设计的休憩区域，让每一次驻足都成为与自然的对话。</p>
         <ul class="room-features">
-          <li>King 大床</li>
-          <li>180° 全景落地窗</li>
-          <li>山海全景露台 (Terrace)</li>
-          <li>独立起居空间</li>
+          <li data-zh="King 大床" data-en="King Bed">King 大床</li>
+          <li data-zh="180° 全景落地窗" data-en="180° Panoramic Floor-to-Ceiling Windows">180° 全景落地窗</li>
+          <li data-zh="山海全景露台 (Terrace)" data-en="Mountain & Sea Panoramic Terrace">山海全景露台 (Terrace)</li>
+          <li data-zh="独立起居空间" data-en="Separate Living Area">独立起居空间</li>
         </ul>
       </div>
     </div>
@@ -468,23 +523,24 @@ body {
       <div class="room-gallery">
         <img class="room-gallery-main" id="gallery-3-6" src="images/luozhe/3-6-01.webp" alt="Balcony Mountain & Sea View King Room">
         <div class="room-thumbs">
-          <img src="images/luozhe/3-6-02.webp" alt="" data-target="gallery-3-6" data-src="images/luozhe/3-6-02.webp" class="active">
-          <img src="images/luozhe/3-6-03.webp" alt="" data-target="gallery-3-6" data-src="images/luozhe/3-6-03.webp">
+          <img src="images/luozhe/3-6-01.webp" alt="" data-gallery="gallery-3-6" class="active">
+          <img src="images/luozhe/3-6-02.webp" alt="" data-gallery="gallery-3-6">
+          <img src="images/luozhe/3-6-03.webp" alt="" data-gallery="gallery-3-6">
         </div>
       </div>
       <div class="room-info">
-        <div class="room-badge">阳台</div>
-        <h3 class="room-name-zh">罗者·3-6</h3>
+        <div>
+          <span class="room-badge" data-zh="阳台" data-en="Balcony">阳台</span>
+          <span class="room-sqm">115 sqm</span>
+        </div>
+        <h3 class="room-name-zh" data-zh="罗者·3-6" data-en="Luozhe · 3-6">罗者·3-6</h3>
         <p class="room-name-en">Balcony Mountain & Sea View King Room</p>
-        <p class="room-desc">
-          私密阳台与室内空间巧妙衔接，推门即是山风海韵。清晨在阳台享用一杯咖啡，
-          看薄雾从山间缓缓升起，感受山海之间的宁静时刻。
-        </p>
+        <p class="room-desc" data-zh="私密阳台与室内空间巧妙衔接，推门即是山风海韵。清晨在阳台享用一杯咖啡，看薄雾从山间缓缓升起，感受山海之间的宁静时刻。" data-en="A private balcony seamlessly extends the interior space — open the door to mountain breezes and sea air. Savor morning coffee on the balcony as mist gently rises from the mountains, embracing the tranquility between peaks and waves.">私密阳台与室内空间巧妙衔接，推门即是山风海韵。清晨在阳台享用一杯咖啡，看薄雾从山间缓缓升起，感受山海之间的宁静时刻。</p>
         <ul class="room-features">
-          <li>King 大床</li>
-          <li>景观阳台 (Balcony)</li>
-          <li>山海景观</li>
-          <li>精致家居配置</li>
+          <li data-zh="King 大床" data-en="King Bed">King 大床</li>
+          <li data-zh="景观阳台 (Balcony)" data-en="Scenic Balcony">景观阳台 (Balcony)</li>
+          <li data-zh="山海景观" data-en="Mountain & Sea View">山海景观</li>
+          <li data-zh="精致家居配置" data-en="Curated Furnishings">精致家居配置</li>
         </ul>
       </div>
     </div>
@@ -494,23 +550,24 @@ body {
       <div class="room-gallery">
         <img class="room-gallery-main" id="gallery-1-6" src="images/luozhe/1-6-01.webp" alt="Private Terrace Mountain & Sea View King Room">
         <div class="room-thumbs">
-          <img src="images/luozhe/1-6-02.webp" alt="" data-target="gallery-1-6" data-src="images/luozhe/1-6-02.webp" class="active">
-          <img src="images/luozhe/1-6-03.webp" alt="" data-target="gallery-1-6" data-src="images/luozhe/1-6-03.webp">
+          <img src="images/luozhe/1-6-01.webp" alt="" data-gallery="gallery-1-6" class="active">
+          <img src="images/luozhe/1-6-02.webp" alt="" data-gallery="gallery-1-6">
+          <img src="images/luozhe/1-6-03.webp" alt="" data-gallery="gallery-1-6">
         </div>
       </div>
       <div class="room-info">
-        <div class="room-badge">独立露台</div>
-        <h3 class="room-name-zh">罗者·1-6</h3>
+        <div>
+          <span class="room-badge" data-zh="独立露台" data-en="Private Terrace">独立露台</span>
+          <span class="room-sqm">113 sqm</span>
+        </div>
+        <h3 class="room-name-zh" data-zh="罗者·1-6" data-en="Luozhe · 1-6">罗者·1-6</h3>
         <p class="room-name-en">Private Terrace Mountain & Sea View King Room</p>
-        <p class="room-desc">
-          独享宽敞的私人露台空间，将室内生活延伸至户外自然。独立露台设计提供更多私密性，
-          是沉浸式体验山海之美的理想选择——日落时分，在露台静候天际线被染成金色。
-        </p>
+        <p class="room-desc" data-zh="独享宽敞的私人露台空间，将室内生活延伸至户外自然。独立露台设计提供更多私密性，是沉浸式体验山海之美的理想选择——日落时分，在露台静候天际线被染成金色。" data-en="An expansive private terrace extends indoor living into the outdoors. Designed for maximum privacy, it is the ideal choice for an immersive mountain-and-sea experience — at sunset, watch the horizon turn gold from your own terrace.">独享宽敞的私人露台空间，将室内生活延伸至户外自然。独立露台设计提供更多私密性，是沉浸式体验山海之美的理想选择——日落时分，在露台静候天际线被染成金色。</p>
         <ul class="room-features">
-          <li>King 大床</li>
-          <li>独立私人露台 (Private Terrace)</li>
-          <li>山海景观</li>
-          <li>户外休憩家具</li>
+          <li data-zh="King 大床" data-en="King Bed">King 大床</li>
+          <li data-zh="独立私人露台 (Private Terrace)" data-en="Private Terrace">独立私人露台 (Private Terrace)</li>
+          <li data-zh="山海景观" data-en="Mountain & Sea View">山海景观</li>
+          <li data-zh="户外休憩家具" data-en="Outdoor Lounge Furniture">户外休憩家具</li>
         </ul>
       </div>
     </div>
@@ -521,44 +578,50 @@ body {
 <!-- COMPARISON TABLE -->
 <section class="compare-section" id="compare">
   <div class="compare-inner">
-    <h2 class="compare-title">房型对比</h2>
+    <h2 class="compare-title" data-zh="房型对比" data-en="Room Comparison">房型对比</h2>
     <p class="compare-subtitle">Room Comparison</p>
     <table class="compare-table">
       <thead>
         <tr>
           <th></th>
-          <th>罗者·3-2 旗舰</th>
-          <th>罗者·3-6 阳台</th>
-          <th>罗者·1-6 独立露台</th>
+          <th data-zh="罗者·3-2 旗舰" data-en="Luozhe · 3-2 Flagship">罗者·3-2 旗舰</th>
+          <th data-zh="罗者·3-6 阳台" data-en="Luozhe · 3-6 Balcony">罗者·3-6 阳台</th>
+          <th data-zh="罗者·1-6 独立露台" data-en="Luozhe · 1-6 Private Terrace">罗者·1-6 独立露台</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="room-label">床型</td>
+          <td class="room-label" data-zh="床型" data-en="Bed Type">床型</td>
           <td>King</td>
           <td>King</td>
           <td>King</td>
         </tr>
         <tr>
-          <td class="room-label">景观</td>
-          <td>山海全景</td>
-          <td>山海景观</td>
-          <td>山海景观</td>
+          <td class="room-label" data-zh="面积" data-en="Area">面积</td>
+          <td>110 sqm</td>
+          <td>115 sqm</td>
+          <td>113 sqm</td>
         </tr>
         <tr>
-          <td class="room-label">户外空间</td>
-          <td class="highlight-cell">Terrace 露台</td>
-          <td>Balcony 阳台</td>
-          <td class="highlight-cell">Private Terrace 独立露台</td>
+          <td class="room-label" data-zh="景观" data-en="View">景观</td>
+          <td data-zh="山海全景" data-en="Panoramic Mountain & Sea">山海全景</td>
+          <td data-zh="山海景观" data-en="Mountain & Sea">山海景观</td>
+          <td data-zh="山海景观" data-en="Mountain & Sea">山海景观</td>
         </tr>
         <tr>
-          <td class="room-label">视野</td>
-          <td class="highlight-cell">180° 全景</td>
-          <td>开阔视野</td>
-          <td>开阔视野</td>
+          <td class="room-label" data-zh="户外空间" data-en="Outdoor Space">户外空间</td>
+          <td class="highlight-cell" data-zh="Terrace 露台" data-en="Terrace">Terrace 露台</td>
+          <td data-zh="Balcony 阳台" data-en="Balcony">Balcony 阳台</td>
+          <td class="highlight-cell" data-zh="Private Terrace 独立露台" data-en="Private Terrace">Private Terrace 独立露台</td>
         </tr>
         <tr>
-          <td class="room-label">私密性</td>
+          <td class="room-label" data-zh="视野" data-en="Sightline">视野</td>
+          <td class="highlight-cell" data-zh="180° 全景" data-en="180° Panoramic">180° 全景</td>
+          <td data-zh="开阔视野" data-en="Open View">开阔视野</td>
+          <td data-zh="开阔视野" data-en="Open View">开阔视野</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="私密性" data-en="Privacy">私密性</td>
           <td>★★★★</td>
           <td>★★★</td>
           <td class="highlight-cell">★★★★★</td>
@@ -576,39 +639,63 @@ body {
 </footer>
 
 <script>
-// Nav scroll effect
+// ======== Language Switch ========
+let currentLang = 'zh';
+
+function switchLang(lang) {
+  currentLang = lang;
+  const html = document.documentElement;
+
+  // Toggle buttons
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+  // Update html lang
+  html.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+  // Update page title
+  document.title = lang === 'zh' ? '罗者 LUOZHE — 山海观景客房' : 'LUOZHE — Mountain & Sea View Rooms';
+
+  // Update all elements with data-zh / data-en
+  document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) el.textContent = text;
+  });
+}
+
+// ======== Nav scroll effect ========
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-// Gallery thumbnail click
+// ======== Gallery: 3 thumbs + main image ========
 document.querySelectorAll('.room-thumbs img').forEach(thumb => {
   thumb.addEventListener('click', () => {
-    const targetId = thumb.dataset.target;
-    const mainImg = document.getElementById(targetId);
-    if (mainImg) {
-      mainImg.src = thumb.dataset.src;
-      // Update active state
-      thumb.parentElement.querySelectorAll('img').forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-    }
+    const galleryId = thumb.dataset.gallery;
+    const mainImg = document.getElementById(galleryId);
+    if (!mainImg) return;
+
+    // Update main image
+    mainImg.src = thumb.src;
+
+    // Update active state for all thumbs in this gallery
+    thumb.parentElement.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
   });
 });
 
-// Also clicking main image cycles to next
+// Click main image to cycle through all 3
 document.querySelectorAll('.room-gallery-main').forEach(main => {
   main.addEventListener('click', () => {
     const thumbs = main.parentElement.querySelectorAll('.room-thumbs img');
     const activeIdx = Array.from(thumbs).findIndex(t => t.classList.contains('active'));
-    // Cycle: if active is last, go to 0; also include the main image itself
-    // Just cycle through thumbnails
     const nextIdx = (activeIdx + 1) % thumbs.length;
+
+    main.src = thumbs[nextIdx].src;
     thumbs.forEach(t => t.classList.remove('active'));
     thumbs[nextIdx].classList.add('active');
-    main.src = thumbs[nextIdx].dataset.src;
   });
-  main.style.cursor = 'pointer';
 });
 </script>
 

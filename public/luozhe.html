@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>罗者系列 · 房型说明 — 木夕大里·夥山飯店</title>
+<meta name="description" content="木夕大里·夥山飯店 — 罗者系列山海观景客房房型说明">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --navy: #1a1a1a;
+  --gold: #c8a96e;
+  --gold-light: #e0c995;
+  --cream: #faf7f2;
+  --text: #2c2c2c;
+  --text-muted: #6b6b6b;
+  --white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled {
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-left { display:flex; align-items:center; gap:2rem; }
+.nav-logo {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.nav.scrolled .nav-logo { color: var(--navy); }
+.nav-links { display:flex; gap:1.5rem; }
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav.scrolled .nav-links a { color: var(--text-muted); }
+.nav-links a:hover { color: var(--gold); }
+.lang-switch {
+  display: flex;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+.nav.scrolled .lang-switch { border-color: rgba(0,0,0,0.15); }
+.lang-switch button {
+  background: none; border: none;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+.nav.scrolled .lang-switch button { color: var(--text-muted); }
+.lang-switch button.active { background: var(--gold); color: var(--navy); }
+.lang-switch button:hover:not(.active) { color: var(--white); }
+.nav.scrolled .lang-switch button:hover:not(.active) { color: var(--text); }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: var(--navy);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/luozhe/3-2-01.webp') center/cover no-repeat;
+  filter: brightness(0.42);
+  transform: scale(1.02);
+  transition: transform 8s ease-out;
+}
+.hero:hover .hero-bg { transform: scale(1.06); }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 2rem;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: clamp(2.8rem, 6.5vw, 4.5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.hero-title-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+.hero-divider {
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: 0 auto 2rem;
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.hero-series-tag {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid rgba(200,169,110,0.5);
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: float 2.5s ease-in-out infinite;
+}
+.hero-scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, var(--gold), transparent); }
+@keyframes float {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ========== SECTION COMMON ========== */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.numeral {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.section-title {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+.gold-line { width:40px; height:2px; background:var(--gold); margin:1rem 0 1.5rem; }
+
+/* ========== ROOM CARDS ========== */
+.rooms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.room-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.room-card:nth-child(even) { direction: rtl; }
+.room-card:nth-child(even) > * { direction: ltr; }
+
+.room-gallery {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #eee;
+}
+.room-gallery-main {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.room-thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+.room-thumbs picture,
+.room-thumbs img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.room-thumbs img:hover,
+.room-thumbs img.active { opacity: 1; }
+
+.room-info { padding: 1rem 0; }
+.room-code {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.room-name-zh {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.room-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.room-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.room-badge {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.room-badge.dark {
+  background: var(--navy);
+  color: var(--gold-light);
+  border-color: var(--navy);
+}
+.room-desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+.room-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  list-style: none;
+}
+.room-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.room-features li::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ========== COMPARISON TABLE ========== */
+.compare-section {
+  background: var(--navy);
+  padding: 5rem 2rem;
+  color: var(--white);
+}
+.compare-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.compare-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.compare-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2.5rem;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.compare-table th {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(200,169,110,0.3);
+  font-weight: 600;
+}
+.compare-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  vertical-align: top;
+}
+.compare-table tr:hover td { background: rgba(200,169,110,0.05); }
+.compare-table .room-label { font-weight:600; color:var(--white); }
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--navy);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(200,169,110,0.15);
+}
+.footer-logo {
+  font-family: 'Playfair Display', 'Noto Sans SC', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .room-card,
+  .room-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 2rem;
+  }
+  .section { padding: 4rem 1.5rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.75rem; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 1rem 1.2rem; }
+  .nav-links { display: none; }
+  .hero-title { letter-spacing: 0.04em; }
+  .compare-table { font-size: 0.75rem; }
+  .compare-table th, .compare-table td { padding: 0.6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-left">
+    <a href="#" class="nav-logo" data-zh="罗者系列" data-en="LUOZHE Series">罗者系列</a>
+    <div class="nav-links">
+      <a href="#room-3-2" data-zh="3-2 旗舰" data-en="3-2 Flagship">3-2 旗舰</a>
+      <a href="#room-3-6" data-zh="3-6 阳台" data-en="3-6 Balcony">3-6 阳台</a>
+      <a href="#room-1-6" data-zh="1-6 露台" data-en="1-6 Terrace">1-6 露台</a>
+      <a href="#compare" data-zh="对比" data-en="Compare">对比</a>
+    </div>
+  </div>
+  <div class="lang-switch">
+    <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+    <button id="btn-en" onclick="switchLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Dali · Mountain & Sea Retreat</div>
+    <h1 class="hero-title" data-zh="罗者系列" data-en="LUOZHE Series">罗者系列</h1>
+    <div class="hero-title-en" data-zh="LUOZHE Series" data-en="罗者系列">LUOZHE Series</div>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle" data-zh="苍山为屏，洱海为镜。罗者系列三款客房，皆拥揽180度山海全景，以原木与石材构筑沉静的避世之境。" data-en="Cangshan Mountain as screen, Erhai Lake as mirror. Three rooms in the Luozhe series, each embracing a 180° panoramic mountain-and-sea view, crafted in warm wood and stone into a tranquil retreat.">苍山为屏，洱海为镜。罗者系列三款客房，皆拥揽180度山海全景，以原木与石材构筑沉静的避世之境。</p>
+    <div><span class="hero-series-tag" data-zh="山海观景 · 原木极简" data-en="Mountain & Sea · Minimalist Wood">山海观景 · 原木极简</span></div>
+  </div>
+  <div class="hero-scroll">
+    <span data-zh="探索房型" data-en="Explore Rooms">探索房型</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ==================== ROOM CARDS ==================== -->
+<section class="section">
+  <div class="numeral">01 — 03</div>
+  <h2 class="section-title" data-zh="山海观景客房" data-en="Mountain & Sea View Rooms">山海观景客房</h2>
+  <div class="gold-line"></div>
+  <div class="section-subtitle" data-zh="三种尺度，同一片山海" data-en="Three scales, one horizon">三种尺度，同一片山海</div>
+
+  <div class="rooms-grid">
+
+    <!-- ROOM 3-2 -->
+    <div class="room-card" id="room-3-2">
+      <div class="room-gallery">
+        <picture><source srcset="images/luozhe/3-2-01.webp" type="image/webp"><img class="room-gallery-main" data-room="3-2" data-idx="0" src="images/luozhe/3-2-01.png" alt="3-2 客厅全景"></picture>
+        <div class="room-thumbs">
+          <picture><source srcset="images/luozhe/3-2-01.webp" type="image/webp"><img data-room="3-2" data-idx="0" src="images/luozhe/3-2-01.png" alt="3-2 客厅" class="active"></picture>
+          <picture><source srcset="images/luozhe/3-2-02.webp" type="image/webp"><img data-room="3-2" data-idx="1" src="images/luozhe/3-2-02.png" alt="3-2 卧室"></picture>
+          <picture><source srcset="images/luozhe/3-2-03.webp" type="image/webp"><img data-room="3-2" data-idx="2" src="images/luozhe/3-2-03.png" alt="3-2 露台"></picture>
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-code">罗者 · 3-2</div>
+        <h3 class="room-name-zh" data-zh="180度山海观景旗舰大床房" data-en="180° Panoramic Mountain & Sea View Flagship King Room">180度山海观景旗舰大床房</h3>
+        <div class="room-name-en" data-zh="180° Panoramic Mountain & Sea View Flagship King Room" data-en="180度山海观景旗舰大床房">180° Panoramic Mountain & Sea View Flagship King Room</div>
+        <div class="room-badges">
+          <span class="room-badge dark">110 m²</span>
+          <span class="room-badge">King Bed</span>
+          <span class="room-badge">Terrace</span>
+          <span class="room-badge">Mountain & Sea</span>
+        </div>
+        <p class="room-desc" data-zh="罗者系列旗舰之作。110平方米阔朗空间，客厅270度落地玻璃将苍山洱海尽收眼底。原木吊顶、深色石质地面、复古极简家具，营造沉静而温暖的山居质感。独立露台配备户外躺椅，晨曦暮色中独享天地。" data-en="The flagship of the Luozhe series. A generous 110 m² living space where floor-to-ceiling glass frames Cangshan Mountain and Erhai Lake in a single panorama. Warm wood ceilings, dark stone floors, and minimalist mid-century furnishings create a grounded, serene atmosphere. A private terrace with outdoor lounge chairs invites quiet contemplation at dawn and dusk.">罗者系列旗舰之作。110平方米阔朗空间，客厅270度落地玻璃将苍山洱海尽收眼底。原木吊顶、深色石质地面、复古极简家具，营造沉静而温暖的山居质感。独立露台配备户外躺椅，晨曦暮色中独享天地。</p>
+        <ul class="room-features">
+          <li data-zh="110 m² 开放式布局" data-en="110 m² open-plan layout">110 m² 开放式布局</li>
+          <li data-zh="180° 全景落地窗" data-en="180° panoramic floor-to-ceiling windows">180° 全景落地窗</li>
+          <li data-zh="King 大床 · 高级床品" data-en="King bed · premium linens">King 大床 · 高级床品</li>
+          <li data-zh="独立露台 · 户外休闲椅" data-en="Private terrace · outdoor lounge chairs">独立露台 · 户外休闲椅</li>
+          <li data-zh="原木背景墙 · 定制灯具" data-en="Wood-paneled accent wall · designer lighting">原木背景墙 · 定制灯具</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROOM 3-6 -->
+    <div class="room-card" id="room-3-6">
+      <div class="room-gallery">
+        <picture><source srcset="images/luozhe/3-6-01.webp" type="image/webp"><img class="room-gallery-main" data-room="3-6" data-idx="0" src="images/luozhe/3-6-01.png" alt="3-6 客厅全景"></picture>
+        <div class="room-thumbs">
+          <picture><source srcset="images/luozhe/3-6-01.webp" type="image/webp"><img data-room="3-6" data-idx="0" src="images/luozhe/3-6-01.png" alt="3-6 客厅" class="active"></picture>
+          <picture><source srcset="images/luozhe/3-6-02.webp" type="image/webp"><img data-room="3-6" data-idx="1" src="images/luozhe/3-6-02.png" alt="3-6 细节"></picture>
+          <picture><source srcset="images/luozhe/3-6-03.webp" type="image/webp"><img data-room="3-6" data-idx="2" src="images/luozhe/3-6-03.png" alt="3-6 景观"></picture>
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-code">罗者 · 3-6</div>
+        <h3 class="room-name-zh" data-zh="阳台山海观景大床房" data-en="Balcony Mountain & Sea View King Room">阳台山海观景大床房</h3>
+        <div class="room-name-en" data-zh="Balcony Mountain & Sea View King Room" data-en="阳台山海观景大床房">Balcony Mountain & Sea View King Room</div>
+        <div class="room-badges">
+          <span class="room-badge dark">115 m²</span>
+          <span class="room-badge">King Bed</span>
+          <span class="room-badge">Balcony</span>
+          <span class="room-badge">Mountain & Sea</span>
+        </div>
+        <p class="room-desc" data-zh="115平方米宽敞空间，落地玻璃引山海关入室内。深色布艺沙发与暖色原木构筑沉静起居区，法式双开门通向景观阳台，将苍翠绿意引入卧室。定制木格栅背景墙配暖光灯带，在夜色中勾勒出温暖的居所轮廓。" data-en="A spacious 115 m² retreat where panoramic glass walls bring the mountain-and-sea vista indoors. A deep-toned sofa and warm wood define the serene living area; French doors open to a scenic balcony framing lush greenery. Custom wood-lattice accent walls with warm LED strips trace a cozy silhouette at night.">115平方米宽敞空间，落地玻璃引山海关入室内。深色布艺沙发与暖色原木构筑沉静起居区，法式双开门通向景观阳台，将苍翠绿意引入卧室。定制木格栅背景墙配暖光灯带，在夜色中勾勒出温暖的居所轮廓。</p>
+        <ul class="room-features">
+          <li data-zh="115 m² 开放式布局" data-en="115 m² open-plan layout">115 m² 开放式布局</li>
+          <li data-zh="景观阳台 · 法式双开门" data-en="Scenic balcony · French double doors">景观阳台 · 法式双开门</li>
+          <li data-zh="King 大床 · 高级床品" data-en="King bed · premium linens">King 大床 · 高级床品</li>
+          <li data-zh="定制木格栅背景墙" data-en="Custom wood-lattice accent wall">定制木格栅背景墙</li>
+          <li data-zh="暖光 LED 灯带 · 氛围照明" data-en="Warm LED strip · ambient lighting">暖光 LED 灯带 · 氛围照明</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROOM 1-6 -->
+    <div class="room-card" id="room-1-6">
+      <div class="room-gallery">
+        <picture><source srcset="images/luozhe/1-6-01.webp" type="image/webp"><img class="room-gallery-main" data-room="1-6" data-idx="0" src="images/luozhe/1-6-01.png" alt="1-6 客厅全景"></picture>
+        <div class="room-thumbs">
+          <picture><source srcset="images/luozhe/1-6-01.webp" type="image/webp"><img data-room="1-6" data-idx="0" src="images/luozhe/1-6-01.png" alt="1-6 客厅" class="active"></picture>
+          <picture><source srcset="images/luozhe/1-6-02.webp" type="image/webp"><img data-room="1-6" data-idx="1" src="images/luozhe/1-6-02.png" alt="1-6 套房"></picture>
+          <picture><source srcset="images/luozhe/1-6-03.webp" type="image/webp"><img data-room="1-6" data-idx="2" src="images/luozhe/1-6-03.png" alt="1-6 细节"></picture>
+        </div>
+      </div>
+      <div class="room-info">
+        <div class="room-code">罗者 · 1-6</div>
+        <h3 class="room-name-zh" data-zh="独立露台山海观景大床房" data-en="Private Terrace Mountain & Sea View King Room">独立露台山海观景大床房</h3>
+        <div class="room-name-en" data-zh="Private Terrace Mountain & Sea View King Room" data-en="独立露台山海观景大床房">Private Terrace Mountain & Sea View King Room</div>
+        <div class="room-badges">
+          <span class="room-badge dark">113 m²</span>
+          <span class="room-badge">King Bed</span>
+          <span class="room-badge">Private Terrace</span>
+          <span class="room-badge">Mountain & Sea</span>
+        </div>
+        <p class="room-desc" data-zh="113平方米通透套间，卧室与起居区一体化设计。独立露台以黑色钢框玻璃围合，山景湖光一览无余。沙发区配工作台，适合静修与创作。原木背板墙、编织地毯、雕塑感落地灯——每一处细节都在述说山居的从容与精致。" data-en="A luminous 113 m² suite with an integrated bedroom-living layout. The private terrace, enclosed in black steel-framed glass, offers unobstructed mountain and lake views. A sofa lounge with a dedicated work desk suits both retreat and creative work. Wood-paneled walls, woven rugs, and sculptural floor lamps — every detail speaks of unhurried mountain refinement.">113平方米通透套间，卧室与起居区一体化设计。独立露台以黑色钢框玻璃围合，山景湖光一览无余。沙发区配工作台，适合静修与创作。原木背板墙、编织地毯、雕塑感落地灯——每一处细节都在述说山居的从容与精致。</p>
+        <ul class="room-features">
+          <li data-zh="113 m² 一体化套间" data-en="113 m² integrated suite">113 m² 一体化套间</li>
+          <li data-zh="独立露台 · 钢框玻璃围合" data-en="Private terrace · steel-framed glass enclosure">独立露台 · 钢框玻璃围合</li>
+          <li data-zh="King 大床 · 高级床品" data-en="King bed · premium linens">King 大床 · 高级床品</li>
+          <li data-zh="起居区 · 工作台" data-en="Living area · work desk">起居区 · 工作台</li>
+          <li data-zh="半独立起居区 · 雕塑灯具" data-en="Semi-separate living area · sculptural lighting">半独立起居区 · 雕塑灯具</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== COMPARISON ==================== -->
+<section class="compare-section" id="compare">
+  <div class="compare-inner">
+    <h2 class="compare-title" data-zh="房型一览" data-en="Room Comparison">房型一览</h2>
+    <p class="compare-subtitle" data-zh="罗者系列 · 三款对比" data-en="LUOZHE Series · Side by Side">罗者系列 · 三款对比</p>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th data-zh="房型" data-en="Room">房型</th>
+          <th data-zh="面积" data-en="Area">面积</th>
+          <th data-zh="床型" data-en="Bed">床型</th>
+          <th data-zh="景观" data-en="View">景观</th>
+          <th data-zh="户外空间" data-en="Outdoor">户外空间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="room-label" data-zh="罗者·3-2 旗舰大床房" data-en="3-2 Flagship King">罗者·3-2 旗舰大床房</td>
+          <td>110 m²</td>
+          <td>King</td>
+          <td data-zh="山海全景" data-en="Mountain & Sea">山海全景</td>
+          <td data-zh="露台" data-en="Terrace">露台</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="罗者·3-6 阳台大床房" data-en="3-6 Balcony King">罗者·3-6 阳台大床房</td>
+          <td>115 m²</td>
+          <td>King</td>
+          <td data-zh="山海全景" data-en="Mountain & Sea">山海全景</td>
+          <td data-zh="阳台" data-en="Balcony">阳台</td>
+        </tr>
+        <tr>
+          <td class="room-label" data-zh="罗者·1-6 独立露台大床房" data-en="1-6 Private Terrace King">罗者·1-6 独立露台大床房</td>
+          <td>113 m²</td>
+          <td>King</td>
+          <td data-zh="山海全景" data-en="Mountain & Sea">山海全景</td>
+          <td data-zh="独立露台" data-en="Private Terrace">独立露台</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo" data-zh="木夕大里·夥山飯店" data-en="MUXI Dali · Huoshan Hotel">木夕大里·夥山飯店</div>
+  <div class="footer-tagline" data-zh="大理 · 苍山洱海之间的避世之所" data-en="Dali · A retreat between Cangshan & Erhai">大理 · 苍山洱海之间的避世之所</div>
+  <div class="footer-copy">© 2026 MUXI Dali · LUOZHE Series</div>
+</footer>
+
+<script>
+// ===== Nav scroll effect =====
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ===== Gallery thumbnail switching =====
+document.querySelectorAll('.room-thumbs img').forEach(thumb => {
+  thumb.addEventListener('click', function() {
+    const room = this.dataset.room;
+    const idx = parseInt(this.dataset.idx);
+    const card = this.closest('.room-card');
+    const main = card.querySelector('.room-gallery-main');
+    const thumbs = card.querySelectorAll('.room-thumbs img');
+    // swap main image
+    const srcPng = this.src;
+    const srcWebp = this.closest('picture').querySelector('source').srcset;
+    const tmpImg = new Image();
+    tmpImg.onload = () => {
+      main.src = srcPng;
+    };
+    tmpImg.src = srcPng;
+    // update active states
+    thumbs.forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ===== Language switching =====
+function switchLang(lang) {
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-zh]').forEach(el => {
+    const text = el.dataset[lang];
+    if (text) el.textContent = text;
+  });
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+}
+</script>
+
+</body>
+</html>

@@ -86,6 +86,7 @@
     .gd-related h2 { font-size: 20px; font-weight: 700; margin: 0 0 20px; color: #1a1a2e; }
     .gd-related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
   </style>
+<%- include('partials/ga') %>
 </head>
 <body>
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>

@@ -47,7 +47,7 @@
     <% }); %>
 
     <% if (typeof routes !== 'undefined' && routes && routes.length) { %>
-    <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Curated Routes (' + routes.length + ')' : '策展线路（' + routes.length + ' 条）' %></h2>
+    <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Curated Routes (' + routes.length + ')' : '甄选线路（' + routes.length + ' 条）' %></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-bottom:32px;">
       <% routes.forEach(function(r) { %>
       <a href="/routes/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.06);transition:transform 0.2s;display:block;">

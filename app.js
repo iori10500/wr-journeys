@@ -245,12 +245,28 @@ const modeMap = {
     body_zh: '邮轮慢游用另一种方式实现 slow stay — 你睡觉时船在移动，醒来在新的港口，住宿和位移合二为一。WR Journeys 主推 Explora Journeys 与 Silversea 等慢奢系列。\n\nExplora 是 MSC 集团的高端线，地中海与北欧线路为主，餐饮与水疗投入对标顶级度假村，没有传统邮轮的赌场和大型剧场。我们正在接入 Explora 2026 春夏季航线，欢迎留下联系方式让顾问回复。',
     body_en: 'Cruise is another expression of slow stay — the ship moves while you sleep, you wake in a new port, accommodation and movement become one. WR Journeys recommends slow-luxury lines: Explora Journeys, Silversea and similar.\n\nExplora is MSC group\'s premium brand, focused on Mediterranean and Northern Europe routes, with dining and spa investment on par with top resorts and none of the traditional casino-and-mega-theater clutter. We\'re onboarding 2026 spring/summer Explora routes — leave your contact and our advisor will follow up.',
   },
-  'safari':        { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁', themeTag: 'safari' },
-  'heritage':      { zh: '人文遗产', en: 'Heritage & Culture', icon: '🏛️', themeTag: 'cultural' },
+  'safari': {
+    zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁', themeTag: 'safari',
+    body_zh: '真正的 safari 不是开车看动物，而是让自己融入生态系统的节奏 — 凌晨四点半起床去看狮群猎食，午后在帐篷里听河马打哈欠，晚上跟 Maasai 营地经理在篝火边喝啤酒。WR Journeys 主推 Andbeyond、Singita、Asilia、Wilderness Safaris 等顶奢系列，覆盖东非塞伦盖蒂、马赛马拉、博茨瓦纳奥卡万戈三角洲、纳米比亚埃托沙。\n\n我们做的每条 safari 都至少 3 个保护区联动，避免在一个 lodge 困死；交通用 light aircraft 转场，把车程压到最低。',
+    body_en: 'Real safari isn\'t game-drive box-ticking — it\'s letting yourself slip into the ecosystem\'s rhythm: 4:30am rising for a lion hunt, an afternoon nap in your tent while hippos yawn in the river, an evening beer by the fire with your Maasai camp manager. We anchor on top-tier lodges from Andbeyond, Singita, Asilia and Wilderness Safaris — across the Serengeti, Masai Mara, Okavango Delta and Etosha.\n\nEvery safari we build threads at least three reserves to avoid lodge-lock, with light aircraft transfers to keep drive-time to a minimum.'
+  },
+  'heritage': {
+    zh: '人文遗产', en: 'Heritage & Culture', icon: '🏛️', themeTag: 'cultural',
+    body_zh: '人文遗产线路面向想被一座城市/一个村寨真正改变一次的人。我们偏好慢节奏的文化深度 — 跟着佛罗伦萨的修复师走访 Uffizi 库房、在京都跟老师上三天茶道课、在西藏寺院听一位活佛讲哲学。住宿都是带文化叙事的精品酒店，如京都俵屋、Aman Kyoto、佛罗伦萨四季宫、爱丁堡 Witchery。\n\n我们的人文线路有一条硬规矩：每个目的地至少安排一次"非典型遭遇" — 不在 TripAdvisor 上能查到的真实在地体验。',
+    body_en: 'Heritage journeys are for travellers who want a place to actually change them. We favour cultural depth at a slow pace — an Uffizi restoration vault with a Florentine conservator, three days of tea ceremony with a Kyoto master, an afternoon of philosophy with a Lama in a Tibetan monastery. Lodging is always culturally-anchored boutique: Tawaraya Kyoto, Aman Kyoto, Four Seasons Florence, The Witchery in Edinburgh.\n\nOne house rule: every destination on a Heritage route includes at least one "atypical encounter" — a real local experience you won\'t find on TripAdvisor.'
+  },
   'private-villa': { zh: '私人别墅', en: 'Private Villa', icon: '🏝️', themeTag: null,
     external: 'https://ai-test.wildroadgroup.com/villas' },
-  'adventure':     { zh: '户外冒险', en: 'Adventure', icon: '🏔️', themeTag: 'adventure' },
-  'island':        { zh: '海岛度假', en: 'Island Getaway', icon: '🏝️', themeTag: 'island' },
+  'adventure': {
+    zh: '户外冒险', en: 'Adventure', icon: '🏔️', themeTag: 'adventure',
+    body_zh: '户外冒险覆盖徒步、骑行、滑雪、潜水、攀岩、滑翔伞等所有把身体交出去的玩法。我们偏好"白天硬核 + 夜晚精致"的组合 — 白天 5 小时阿尔卑斯徒步，晚上回到 Aman St. Moritz 泡温泉吃米其林；白天潜水看鬼蝠鲼，晚上回到 Soneva Fushi 的 Star Bed 看银河。\n\n所有 adventure 线路都搭配持证向导，强度按 family / couple / solo 分级；保险与紧急撤离方案随行程附上。',
+    body_en: 'Adventure journeys span hiking, cycling, skiing, diving, climbing and paragliding — anything that hands the day over to your body. We favour a "hard day, soft night" rhythm: a 5-hour Alpine hike followed by an evening at Aman St. Moritz, a manta-ray dive followed by a Star Bed under the Milky Way at Soneva Fushi.\n\nEvery adventure route ships with certified guides, difficulty graded by family / couple / solo profile, plus insurance and emergency-evacuation plan attached.'
+  },
+  'island': {
+    zh: '海岛度假', en: 'Island Getaway', icon: '🏝️', themeTag: 'island',
+    body_zh: '海岛度假在我们这里是 slow stay 的另一种形态 — 一座岛、一个度假村、5 到 10 晚不挪窝。马尔代夫 Soneva Fushi / Cheval Blanc Randheli / One&Only Reethi Rah；普吉 Aman / Six Senses Yao Noi；巴厘 Aman Villas / Como Shambhala；塞舌尔 Four Seasons Desroches。每一个都不是大众选择，但都是为了"什么都不做"而精心准备好的地方。\n\n我们和这些品牌都有 sub-agent 关系，能拿到非公开的 promo + 升级 + 餐饮 credit + 水疗折扣的组合。',
+    body_en: 'Island getaways here mean another expression of slow stay — one island, one resort, five to ten nights, no transfers. The Maldives\' Soneva Fushi / Cheval Blanc Randheli / One&Only Reethi Rah; Phuket\'s Aman / Six Senses Yao Noi; Bali\'s Aman Villas / Como Shambhala; Seychelles\' Four Seasons Desroches. None are mainstream choices, but every one is set up beautifully for doing nothing at all.\n\nWe hold sub-agent status with all these brands — non-public promo + upgrade + dining credit + spa discount stacks are standard.'
+  },
 };
 // Old /themes/:slug → new /modes/:slug
 const themeToMode = {
@@ -730,7 +746,7 @@ app.get('/brands/:slug', (req, res) => {
           name: lang === 'en' ? r.title_en : r.title_zh,
           url: `/routes/${r.slug}`,
         })),
-        lang === 'en' ? `${brand.name_en} curated routes` : `${brand.name_zh} 策展线路`
+        lang === 'en' ? `${brand.name_en} curated routes` : `${brand.name_zh} 甄选线路`
       )] : []),
     ],
   });

@@ -533,43 +533,75 @@ function generateFaqItems(guide, destInfo, lang) {
 }
 
 // Extract unique countries from itineraries
-function getCountries() {
-  const countryMap = {
-    switzerland: { zh: '瑞士', en: 'Switzerland', flag: '🇨🇭' },
-    tanzania: { zh: '坦桑尼亚', en: 'Tanzania', flag: '🇹🇿' },
-    italy: { zh: '意大利', en: 'Italy', flag: '🇮🇹' },
-    uk: { zh: '英国', en: 'United Kingdom', flag: '🇬🇧' },
-    france: { zh: '法国', en: 'France', flag: '🇫🇷' },
-    indonesia: { zh: '印度尼西亚', en: 'Indonesia', flag: '🇮🇩' },
-    thailand: { zh: '泰国', en: 'Thailand', flag: '🇹🇭' },
-    maldives: { zh: '马尔代夫', en: 'Maldives', flag: '🇲🇻' },
-    japan: { zh: '日本', en: 'Japan', flag: '🇯🇵' },
-    dubai: { zh: '迪拜', en: 'Dubai', flag: '🇦🇪' },
-    greece: { zh: '希腊', en: 'Greece', flag: '🇬🇷' },
-    morocco: { zh: '摩洛哥', en: 'Morocco', flag: '🇲🇦' },
-  };
-  const found = {};
-  itineraries.forEach(item => {
-    (item.regions || []).forEach(r => {
-      const slug = r.toLowerCase().replace(/\s+/g, '-');
-      if (countryMap[slug] && !found[slug]) {
-        found[slug] = {
-          slug: slug,
-          name_zh: countryMap[slug].zh,
-          name_en: countryMap[slug].en,
-          flag: countryMap[slug].flag,
-          count: itineraries.filter(i => (i.regions || []).some(ir => ir.toLowerCase().replace(/\s+/g, '-') === slug)).length
-        };
-      }
-    });
+const COUNTRY_MAP = {
+  switzerland: { zh: '瑞士', en: 'Switzerland', flag: '🇨🇭' },
+  tanzania:    { zh: '坦桑尼亚', en: 'Tanzania', flag: '🇹🇿' },
+  italy:       { zh: '意大利', en: 'Italy', flag: '🇮🇹' },
+  uk:          { zh: '英国', en: 'United Kingdom', flag: '🇬🇧', aliases: ['england','britain','great britain'] },
+  france:      { zh: '法国', en: 'France', flag: '🇫🇷' },
+  indonesia:   { zh: '印度尼西亚', en: 'Indonesia', flag: '🇮🇩', aliases: ['印尼','巴厘','bali'] },
+  thailand:    { zh: '泰国', en: 'Thailand', flag: '🇹🇭' },
+  maldives:    { zh: '马尔代夫', en: 'Maldives', flag: '🇲🇻' },
+  japan:       { zh: '日本', en: 'Japan', flag: '🇯🇵' },
+  dubai:       { zh: '迪拜', en: 'Dubai', flag: '🇦🇪', aliases: ['uae','阿联酋'] },
+  greece:      { zh: '希腊', en: 'Greece', flag: '🇬🇷' },
+  morocco:     { zh: '摩洛哥', en: 'Morocco', flag: '🇲🇦' },
+};
+// Reverse lookup: any region label (zh / en / slug / alias) → slug
+const REGION_TO_SLUG = {};
+Object.entries(COUNTRY_MAP).forEach(([slug, info]) => {
+  REGION_TO_SLUG[slug] = slug;
+  REGION_TO_SLUG[info.zh.toLowerCase()] = slug;
+  REGION_TO_SLUG[info.en.toLowerCase()] = slug;
+  (info.aliases || []).forEach(a => { REGION_TO_SLUG[a.toLowerCase()] = slug; });
+});
+
+function regionsToCountrySlugs(regions) {
+  const out = new Set();
+  (regions || []).forEach(r => {
+    const slug = REGION_TO_SLUG[r.toLowerCase()];
+    if (slug) out.add(slug);
   });
-  // Add countries from destinations.json even if no trips yet
+  return out;
+}
+
+function tripsForCountry(slug) {
+  return itineraries.filter(item => {
+    const slugs = regionsToCountrySlugs([...(item.regions || []), ...(item.regions_en || [])]);
+    return slugs.has(slug);
+  });
+}
+
+function getCountries() {
+  const found = {};
+  // Seed from destinations.json so even 0-trip countries appear
   Object.keys(destinationsData).forEach(slug => {
-    if (!found[slug] && countryMap[slug]) {
-      found[slug] = { slug, name_zh: countryMap[slug].zh, name_en: countryMap[slug].en, flag: countryMap[slug].flag, count: 0 };
+    if (COUNTRY_MAP[slug]) {
+      found[slug] = {
+        slug,
+        name_zh: COUNTRY_MAP[slug].zh,
+        name_en: COUNTRY_MAP[slug].en,
+        flag: COUNTRY_MAP[slug].flag,
+        count: 0,
+      };
     }
   });
-  return Object.values(found).sort((a,b) => b.count - a.count);
+  // Count trips per country via REGION_TO_SLUG
+  itineraries.forEach(item => {
+    regionsToCountrySlugs([...(item.regions || []), ...(item.regions_en || [])]).forEach(slug => {
+      if (!found[slug] && COUNTRY_MAP[slug]) {
+        found[slug] = {
+          slug,
+          name_zh: COUNTRY_MAP[slug].zh,
+          name_en: COUNTRY_MAP[slug].en,
+          flag: COUNTRY_MAP[slug].flag,
+          count: 0,
+        };
+      }
+      if (found[slug]) found[slug].count++;
+    });
+  });
+  return Object.values(found).sort((a, b) => b.count - a.count);
 }
 
 // Destinations listing
@@ -586,9 +618,7 @@ app.get('/destinations/:country', (req, res) => {
   const destDesc = destinationsData[country];
   if (!destDesc) return res.status(404).send('Not found');
 
-  const countryTrips = itineraries.filter(item =>
-    (item.regions || []).some(r => r.toLowerCase().replace(/\s+/g, '-') === country)
-  );
+  const countryTrips = tripsForCountry(country);
   const countries = getCountries();
   const dest = countries.find(c => c.slug === country);
   const destination = {

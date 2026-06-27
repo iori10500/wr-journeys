@@ -1,7 +1,7 @@
 {
-  "name": "itinerary-site",
-  "version": "1.0.0",
-  "description": "WR Travel itinerary brochures showcase",
+  "name": "wr-journeys",
+  "version": "2.0.0",
+  "description": "WR Journeys — slow-luxury 多品牌策展之家 (itinerary.wildroadgroup.com)",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

@@ -467,5 +467,9 @@
     "shaga/dining.jpg",
     "shaga/pool-day.jpg",
     "shaga/aerial2.jpg"
+  ],
+  "lodges": [
+    "cunxiao",
+    "shaga"
   ]
 }

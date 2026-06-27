@@ -46,7 +46,20 @@
     .r-cta h3 { font-family:'Playfair Display',serif; font-size:24px; margin:0 0 10px; }
     .r-cta p { color:rgba(255,255,255,0.75); margin:0 0 22px; font-size:15px; }
     .r-cta a { display:inline-block; background:linear-gradient(135deg,#c8a96e 0%,#b08d4a 100%); color:#fff; text-decoration:none; padding:12px 28px; border-radius:50px; font-weight:600; font-size:14px; }
-    @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } }
+    /* Lodge gallery */
+    .lodge-block { margin:0 0 48px; padding:24px; background:#fafaf7; border-radius:12px; }
+    .lodge-head { margin-bottom:18px; }
+    .lodge-region { font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:#c8a96e; font-weight:600; }
+    .lodge-name { font-family:'Playfair Display',serif; font-size:22px; color:#1a1a2e; margin:4px 0 6px; }
+    .lodge-tagline { font-size:14px; color:#666; margin:0; line-height:1.6; }
+    .lodge-gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin-top:14px; }
+    .lodge-shot { margin:0; border-radius:8px; overflow:hidden; background:#1a1a2e; position:relative; }
+    .lodge-shot picture, .lodge-shot img { display:block; width:100%; height:160px; object-fit:cover; transition:transform 0.4s; }
+    .lodge-shot:hover img { transform:scale(1.05); }
+    .lodge-shot-hero picture, .lodge-shot-hero img { height:240px; }
+    .lodge-shot-hero { grid-column:1 / -1; }
+    .lodge-shot figcaption { font-size:11px; color:rgba(255,255,255,0.85); background:rgba(0,0,0,0.55); padding:6px 10px; position:absolute; bottom:0; left:0; right:0; }
+    @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } .lodge-shot picture, .lodge-shot img { height:140px; } .lodge-shot-hero picture, .lodge-shot-hero img { height:200px; } }
   </style>
 <%- include('partials/ga') %>
 </head>
@@ -87,6 +100,32 @@
     </div>
 
     <div class="r-intro"><%= lang === 'en' ? route.intro_en : route.intro_zh %></div>
+
+    <% if (typeof lodgesWithGallery !== 'undefined' && lodgesWithGallery && lodgesWithGallery.length) { %>
+    <h2 class="r-section-title"><%= lang === 'en' ? 'Where You Stay' : '住宿巡礼' %></h2>
+    <% lodgesWithGallery.forEach(function(lodge) { %>
+    <div class="lodge-block">
+      <div class="lodge-head">
+        <div class="lodge-region"><%= lang === 'en' ? lodge.region_en : lodge.region_zh %></div>
+        <h3 class="lodge-name"><%= lang === 'en' ? lodge.name_en : lodge.name_zh %></h3>
+        <p class="lodge-tagline"><%= lang === 'en' ? lodge.tagline_en : lodge.tagline_zh %></p>
+      </div>
+      <% if (lodge.gallery && lodge.gallery.length) { %>
+      <div class="lodge-gallery">
+        <% lodge.gallery.forEach(function(g, idx) { %>
+        <figure class="lodge-shot<%= idx === 0 ? ' lodge-shot-hero' : '' %>">
+          <picture>
+            <source srcset="<%= g.path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
+            <img src="<%= g.path %>" alt="<%= lang === 'en' ? g.caption_en : g.caption_zh %>" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><%= lang === 'en' ? g.caption_en : g.caption_zh %></figcaption>
+        </figure>
+        <% }); %>
+      </div>
+      <% } %>
+    </div>
+    <% }); %>
+    <% } %>
 
     <% if (route.overview && route.overview.length) { %>
     <h2 class="r-section-title"><%= lang === 'en' ? 'Day-by-Day' : '行程概览' %></h2>

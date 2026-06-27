@@ -1,0 +1,119 @@
+{
+  "cunxiao": {
+    "name_zh": "匠庐·村晓",
+    "name_en": "Jianglu Cunxiao",
+    "region_zh": "贵州 · 安顺",
+    "region_en": "Guizhou · Anshun",
+    "tagline_zh": "600 年布依石头城堡",
+    "tagline_en": "A 600-year-old Buyi stone village retreat",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "石头城堡夜景", "caption_en": "Stone village at night" },
+      { "file": "01.jpg", "caption_zh": "航拍全景", "caption_en": "Aerial view" }
+    ]
+  },
+  "gengdudi": {
+    "name_zh": "匠庐·耕读第",
+    "name_en": "Jianglu Gengdudi",
+    "region_zh": "贵州 · 黔东南",
+    "region_en": "Guizhou · Southeast Qiandongnan",
+    "tagline_zh": "苗乡耕读山居",
+    "tagline_en": "Reading-and-farming retreat in Miao country",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "山间外观", "caption_en": "Mountain exterior" },
+      { "file": "01.jpg", "caption_zh": "航拍视角", "caption_en": "Aerial view" },
+      { "file": "02.jpg", "caption_zh": "外观细部", "caption_en": "Exterior detail" },
+      { "file": "03.jpg", "caption_zh": "公共空间", "caption_en": "Public area" }
+    ]
+  },
+  "miwan": {
+    "name_zh": "匠庐·蜜湾",
+    "name_en": "Jianglu Miwan",
+    "region_zh": "云南 · 大理金梭岛",
+    "region_en": "Yunnan · Dali Jinsuo Island",
+    "tagline_zh": "洱海上的隐居小岛",
+    "tagline_en": "A hidden island lodge on Erhai Lake",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "湖畔公区", "caption_en": "Lakeside lounge" },
+      { "file": "01.jpg", "caption_zh": "公区一角", "caption_en": "Public area" },
+      { "file": "02.jpg", "caption_zh": "餐饮空间", "caption_en": "Dining space" }
+    ]
+  },
+  "saiduo": {
+    "name_zh": "匠庐·赛朵游牧",
+    "name_en": "Jianglu Saiduo Nomadic",
+    "region_zh": "云南 · 香格里拉",
+    "region_en": "Yunnan · Shangri-la",
+    "tagline_zh": "游牧叙事的高原山居",
+    "tagline_en": "Plateau lodge in a nomadic narrative",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "高原山居", "caption_en": "Plateau retreat" },
+      { "file": "01.jpg", "caption_zh": "高原风景", "caption_en": "Plateau landscape" },
+      { "file": "02.jpg", "caption_zh": "户外公区", "caption_en": "Outdoor lounge" },
+      { "file": "03.jpg", "caption_zh": "大堂", "caption_en": "Lobby" },
+      { "file": "04.jpg", "caption_zh": "餐厅", "caption_en": "Restaurant" },
+      { "file": "05.jpg", "caption_zh": "餐饮空间", "caption_en": "Dining" },
+      { "file": "06.jpg", "caption_zh": "夜色灯阵", "caption_en": "Light installation at dusk" },
+      { "file": "07.jpg", "caption_zh": "户外餐区", "caption_en": "Outdoor dining" }
+    ]
+  },
+  "wunongding": {
+    "name_zh": "匠庐·雾浓顶",
+    "name_en": "Jianglu Wunongding",
+    "region_zh": "云南 · 梅里雪山",
+    "region_en": "Yunnan · Meili Snow Mountain",
+    "tagline_zh": "面朝梅里十三峰",
+    "tagline_en": "Facing the thirteen peaks of Meili",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "面对梅里", "caption_en": "Facing Meili" },
+      { "file": "01.jpg", "caption_zh": "顶层酒吧", "caption_en": "Rooftop bar" },
+      { "file": "02.jpg", "caption_zh": "餐厅", "caption_en": "Restaurant" },
+      { "file": "03.jpg", "caption_zh": "一楼公区", "caption_en": "Ground-floor lounge" }
+    ]
+  },
+  "yalugu": {
+    "name_zh": "匠庐·雅路古",
+    "name_en": "Jianglu Yalugu",
+    "region_zh": "贵州",
+    "region_en": "Guizhou",
+    "tagline_zh": "山林间的隐居小馆",
+    "tagline_en": "A secluded retreat in the forest",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "山林山居", "caption_en": "Forest retreat" },
+      { "file": "01.jpg", "caption_zh": "公共空间", "caption_en": "Public area" }
+    ]
+  },
+  "yueshan": {
+    "name_zh": "匠庐·阅山",
+    "name_en": "Jianglu Yueshan",
+    "region_zh": "贵州",
+    "region_en": "Guizhou",
+    "tagline_zh": "集装箱山野美宿",
+    "tagline_en": "A container-architecture wilderness lodge",
+    "gallery": [
+      { "file": "hero.jpg", "caption_zh": "山间集装箱", "caption_en": "Container retreat in the mountains" },
+      { "file": "01.jpg", "caption_zh": "航拍视角", "caption_en": "Aerial view" },
+      { "file": "02.jpg", "caption_zh": "公共空间", "caption_en": "Public area" },
+      { "file": "03.jpg", "caption_zh": "集装箱客房", "caption_en": "Container room" },
+      { "file": "04.jpg", "caption_zh": "集装箱细部", "caption_en": "Container detail" },
+      { "file": "05.jpg", "caption_zh": "配套设施", "caption_en": "Amenities" }
+    ]
+  },
+  "shaga": {
+    "name_zh": "匠庐·沙嘎",
+    "name_en": "Jianglu Shaga",
+    "region_zh": "贵州 · 六盘水",
+    "region_en": "Guizhou · Liupanshui",
+    "tagline_zh": "彝乡高原山居",
+    "tagline_en": "Yi-highland plateau retreat",
+    "gallery": [
+      { "file": "pool-day.jpg", "caption_zh": "白天的山间泳池", "caption_en": "Daylight pool" },
+      { "file": "aerial.jpg",   "caption_zh": "航拍全景", "caption_en": "Aerial view" },
+      { "file": "aerial2.jpg",  "caption_zh": "航拍 · 雾色", "caption_en": "Aerial · misty" },
+      { "file": "lobby.jpg",    "caption_zh": "大堂", "caption_en": "Lobby" },
+      { "file": "public.jpg",   "caption_zh": "公共空间", "caption_en": "Public area" },
+      { "file": "public2.jpg",  "caption_zh": "公共空间 · 茶室", "caption_en": "Public area · tea room" },
+      { "file": "dining.jpg",   "caption_zh": "餐厅", "caption_en": "Restaurant" },
+      { "file": "tea.jpg",      "caption_zh": "茶歇空间", "caption_en": "Tea pavilion" }
+    ]
+  }
+}

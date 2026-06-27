@@ -470,5 +470,10 @@
     "jianglu-yueshan/g03-集装箱1.jpg",
     "jianglu-yueshan/g04-集装箱2.jpg",
     "jianglu-yueshan/g05-配套.jpg"
+  ],
+  "lodges": [
+    "yueshan",
+    "shaga",
+    "yalugu"
   ]
 }

@@ -388,5 +388,8 @@
   "poster_image": "时光的戍所.jpg",
   "lodge_images": [
     "jianglu-cunxiao/g01-航拍.jpg"
+  ],
+  "lodges": [
+    "cunxiao"
   ]
 }

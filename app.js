@@ -194,6 +194,20 @@ try {
   console.error('Failed to load brands:', err.message);
 }
 
+// Load lodges metadata (per-brand)
+const lodgesByBrand = {}; // { brandSlug: { lodgeSlug: { name_zh, gallery: [...] } } }
+try {
+  const lodgesDir = path.join(__dirname, 'data', 'lodges');
+  if (fs.existsSync(lodgesDir)) {
+    fs.readdirSync(lodgesDir).filter(f => f.endsWith('.json')).forEach(f => {
+      const brandSlug = path.basename(f, '.json');
+      lodgesByBrand[brandSlug] = JSON.parse(fs.readFileSync(path.join(lodgesDir, f), 'utf-8'));
+    });
+  }
+} catch (err) {
+  console.error('Failed to load lodges:', err.message);
+}
+
 // Load brand-routes data (per-brand curated routes)
 const brandRoutes = {}; // { brandSlug: [routeObj, ...] }
 const routesIndex = {}; // { routeSlug: { ...route, brand: brandSlug } }
@@ -728,8 +742,22 @@ app.get('/routes/:slug', (req, res) => {
   if (!route) return res.status(404).send('Route not found');
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const brand = brandsData.find(b => b.slug === route.brand) || { slug: route.brand, name_zh: route.brand, name_en: route.brand };
+  // Resolve lodges with gallery for this route
+  const brandLodges = lodgesByBrand[brand.slug] || {};
+  const lodgesWithGallery = (route.lodges || []).map(lodgeSlug => {
+    const meta = brandLodges[lodgeSlug];
+    if (!meta) return null;
+    return {
+      slug: lodgeSlug,
+      ...meta,
+      gallery: (meta.gallery || []).map(g => ({
+        ...g,
+        path: `/images/brands/${brand.slug}/lodges/${lodgeSlug}/${g.file}`,
+      })),
+    };
+  }).filter(Boolean);
   res.render('route-detail', {
-    route, brand, lang,
+    route, brand, lang, lodgesWithGallery,
     schemas: [
       schemas.touristTrip(route, brand, lang),
       schemas.breadcrumbList([

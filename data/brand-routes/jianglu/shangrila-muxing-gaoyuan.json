@@ -374,5 +374,9 @@
     "jianglu-wunongding/g01-4楼酒吧.jpg",
     "jianglu-wunongding/g02-餐厅.jpg",
     "jianglu-wunongding/g03-1楼.jpg"
+  ],
+  "lodges": [
+    "saiduo",
+    "wunongding"
   ]
 }

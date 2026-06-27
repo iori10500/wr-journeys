@@ -356,5 +356,8 @@
     "jianglu-saiduo/g05-餐饮.jpg",
     "jianglu-saiduo/g06-灯阵.jpg",
     "jianglu-saiduo/g07-户外餐区.jpg"
+  ],
+  "lodges": [
+    "saiduo"
   ]
 }

@@ -358,5 +358,8 @@
   "lodge_images": [
     "jianglu-miwan/g01-公区.jpg",
     "jianglu-miwan/g02-餐饮.jpg"
+  ],
+  "lodges": [
+    "miwan"
   ]
 }

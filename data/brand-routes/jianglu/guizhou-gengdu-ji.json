@@ -415,5 +415,8 @@
     "jianglu-gengdudi/g01-航拍.jpg",
     "jianglu-gengdudi/g02-外观.jpg",
     "jianglu-gengdudi/g03-公区.jpg"
+  ],
+  "lodges": [
+    "gengdudi"
   ]
 }

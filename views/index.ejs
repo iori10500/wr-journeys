@@ -63,11 +63,60 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-brand">WanderWay Travel</div>
-      <h1 class="hero-title"><%= lang === 'en' ? 'Itineraries' : '行程手册' %></h1>
-      <p class="hero-sub"><%= lang === 'en' ? 'Curated Global Luxury Journeys · Begin Your Extraordinary Travel' : '精選全球奢華定制行程 · 開啟您的非凡旅行' %></p>
+      <div class="hero-brand">WR Journeys</div>
+      <h1 class="hero-title"><%= lang === 'en' ? 'A Slow-Luxury Brand House' : '慢奢策展之家' %></h1>
+      <p class="hero-sub"><%= lang === 'en' ? 'Slow stays, deep stories, hand-picked brands — curated by Wildroad &amp; Wanderway.' : '慢栖、深度叙事、精选品牌 — 由野路逸行与万德策展。' %></p>
     </div>
   </section>
+
+  <!-- BRAND HOUSE (Featured Brands strip) -->
+  <section class="brand-house">
+    <div class="bh-inner">
+      <div class="bh-head">
+        <div class="bh-kicker"><%= lang === 'en' ? 'BRAND HOUSE' : '品牌矩阵' %></div>
+        <h2 class="bh-title"><%= lang === 'en' ? 'Hand-picked names, one curatorial standard.' : '精挑细选，统一的策展标准。' %></h2>
+        <a class="bh-more" href="/brands<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'See all brands →' : '查看全部品牌 →' %></a>
+      </div>
+      <div class="bh-grid">
+        <% [
+          { slug:'wildroad',  name_zh:'野路逸行', name_en:'Wildroad',  tag_zh:'中国入境定制旗舰',  tag_en:'Inbound China bespoke',     type_zh:'自营', type_en:'Own' },
+          { slug:'wanderway', name_zh:'万德',     name_en:'Wanderway', tag_zh:'全球出境定制',       tag_en:'Outbound bespoke worldwide', type_zh:'自营', type_en:'Own' },
+          { slug:'jianglu',   name_zh:'匠庐',     name_en:'Jianglu',   tag_zh:'中国精品酒店 · 9 条线路', tag_en:'CN boutique · 9 routes',  type_zh:'精选合作', type_en:'Curated' },
+          { slug:'songtsam',  name_zh:'松赞',     name_en:'Songtsam',  tag_zh:'川滇藏精品酒店',     tag_en:'Tibetan plateau hotels',     type_zh:'精选合作', type_en:'Curated' }
+        ].forEach(function(b) { %>
+        <a class="bh-card" href="/brands/<%= b.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+          <div class="bh-card-type"><%= lang === 'en' ? b.type_en : b.type_zh %></div>
+          <div class="bh-card-name"><%= lang === 'en' ? b.name_en : b.name_zh %></div>
+          <div class="bh-card-tag"><%= lang === 'en' ? b.tag_en : b.tag_zh %></div>
+        </a>
+        <% }); %>
+      </div>
+      <div class="bh-cta">
+        <span class="bh-cta-text"><%= lang === 'en' ? 'Planning a journey? Talk to a real advisor.' : '想策划一段旅程？联系真人顾问。' %></span>
+        <a class="bh-cta-btn" href="https://wr-travel.com/contact" target="_blank" rel="noopener"><%= lang === 'en' ? 'Contact Advisor →' : '联系顾问 →' %></a>
+      </div>
+    </div>
+  </section>
+  <style>
+    .brand-house { background:#0e0e1a; padding:48px 24px 56px; border-top:1px solid rgba(200,169,110,0.15); border-bottom:1px solid rgba(200,169,110,0.15); }
+    .bh-inner { max-width:1200px; margin:0 auto; }
+    .bh-head { display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; margin-bottom:24px; }
+    .bh-kicker { color:#c8a96e; font-size:11px; letter-spacing:0.2em; font-weight:600; }
+    .bh-title { color:#fff; font-family:'Playfair Display',serif; font-size:24px; font-weight:400; margin:0; flex:1; min-width:220px; }
+    .bh-more { color:#c8a96e; font-size:13px; text-decoration:none; white-space:nowrap; }
+    .bh-more:hover { color:#e0c290; }
+    .bh-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px; }
+    .bh-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:20px; text-decoration:none; color:inherit; transition:transform 0.2s, border-color 0.2s; display:flex; flex-direction:column; gap:6px; }
+    .bh-card:hover { transform:translateY(-3px); border-color:rgba(200,169,110,0.5); }
+    .bh-card-type { color:#c8a96e; font-size:10px; letter-spacing:0.15em; font-weight:600; text-transform:uppercase; }
+    .bh-card-name { color:#fff; font-family:'Playfair Display',serif; font-size:20px; font-weight:500; }
+    .bh-card-tag { color:rgba(255,255,255,0.6); font-size:13px; line-height:1.5; }
+    .bh-cta { margin-top:28px; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; padding:18px 24px; background:rgba(200,169,110,0.06); border-radius:10px; }
+    .bh-cta-text { color:rgba(255,255,255,0.75); font-size:14px; }
+    .bh-cta-btn { background:linear-gradient(135deg,#c8a96e 0%,#b08d4a 100%); color:#fff; text-decoration:none; padding:10px 20px; border-radius:50px; font-size:14px; font-weight:600; transition:transform 0.2s; }
+    .bh-cta-btn:hover { transform:scale(1.04); }
+    @media (max-width:640px) { .bh-title { font-size:20px; } .bh-card-name { font-size:18px; } }
+  </style>
 
   <!-- SEARCH -->
   <div class="search-section">

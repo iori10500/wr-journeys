@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= lang === 'en' ? info.en : info.zh %> · <%= lang === 'en' ? 'WR Travel' : '野路逸行' %></title>
   <meta name="description" content="<%= lang === 'en' ? 'Explore ' + info.en + ' itineraries curated by WR Travel' : '探索野路逸行精选' + info.zh + '行程' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/modes/<%= theme %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/modes/<%= theme %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/modes/<%= theme %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/modes/<%= theme %>">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/modes/<%= theme %>">
   <meta property="og:title" content="<%= lang === 'en' ? info.en : info.zh %> · WR Travel">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -38,7 +41,7 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="th-hero">
-    <a href="/modes<%= lang === 'en' ? '?lang=en' : '' %>" class="back"><%= lang === 'en' ? '← All themes' : '← 全部主题' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/modes" class="back"><%= lang === 'en' ? '← All themes' : '← 全部主题' %></a>
     <h1><%= lang === 'en' ? info.en : info.zh %></h1>
   </div>
 
@@ -63,7 +66,7 @@
         var cardTitle = isEn ? (item.title_en || item.title) : item.title;
         var cardDesc = isEn ? (item.description_en || item.description) : item.description;
       %>
-        <a href="/<%= item.id %><%= isEn ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
+        <a href="<%= isEn ? '/en' : '' %>/<%= item.id %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
           <div style="position:relative;height:200px;overflow:hidden;">
             <picture>
               <source srcset="/<%= item.coverImage.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
@@ -78,6 +81,6 @@
   </div>
 
   <%- include("partials/footer") %>
-  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+  <script>function toggleLang(){const u=new URL(window.location);const p=u.pathname;const isEn=p==="/en"||p.startsWith("/en/");const np=isEn?(p==="/en"?"/":p.substring(3)):(p==="/"?"/en":"/en"+p);localStorage.setItem("wr_lang",isEn?"zh":"en");u.pathname=np;u.searchParams.delete("lang");window.location=u.toString()}</script>
 </body>
 </html>

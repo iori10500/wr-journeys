@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' %></title>
   <meta name="description" content="<%= lang === 'en' ? 'Explore curated luxury travel destinations — Switzerland, Tanzania, Italy, and more' : '探索野路逸行精选奢华旅行目的地 — 瑞士、坦桑尼亚、意大利等' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/destinations">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/destinations">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/destinations">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/destinations">
   <meta property="og:title" content="<%= lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/destinations">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -62,14 +65,14 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="dest-hero">
-    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
     <h1><%= lang === 'en' ? 'Destinations' : '探索目的地' %></h1>
     <p><%= lang === 'en' ? 'Discover our curated travel destinations' : '发现我们精选的奢华旅行目的地' %></p>
   </div>
 
   <!-- China hub feature card -->
   <div style="max-width:1200px;margin:0 auto;padding:0 24px 8px;">
-    <a href="/destinations/china<%= lang === 'en' ? '?lang=en' : '' %>" style="display:block;background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%);border-radius:14px;padding:28px 28px;color:#fff;text-decoration:none;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-left:4px solid #c8a96e;transition:transform 0.2s;">
+    <a href="<%= lang === 'en' ? '/en' : '' %>/destinations/china" style="display:block;background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%);border-radius:14px;padding:28px 28px;color:#fff;text-decoration:none;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-left:4px solid #c8a96e;transition:transform 0.2s;">
       <div style="font-size:11px;letter-spacing:0.22em;color:#c8a96e;font-weight:600;text-transform:uppercase;margin-bottom:6px;">★ <%= lang === 'en' ? 'Inbound China · Curated Hub' : '中国 · 入境精选之家' %></div>
       <h2 style="font-family:'Playfair Display',serif;font-size:24px;margin:0 0 6px;color:#fff;"><%= lang === 'en' ? 'China — the value frontier of slow luxury' : '中国 — slow-luxury 的价值洼地' %></h2>
       <p style="font-size:14px;color:rgba(255,255,255,0.75);margin:0;"><%= lang === 'en' ? '9 curated routes across Guizhou, Yunnan, Shangri-la — anchored on Jianglu, Songtsam.' : '贵州、云南、香格里拉 9 条甄选线路 — 由匠庐、松赞支撑。' %> →</p>
@@ -78,7 +81,7 @@
 
   <div class="dest-grid">
     <% countries.forEach(function(c) { %>
-      <a href="/destinations/<%= c.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="dest-card">
+      <a href="<%= lang === 'en' ? '/en' : '' %>/destinations/<%= c.slug %>" class="dest-card">
         <div class="dest-card-header"><span><%= c.flag %></span></div>
         <div class="dest-card-body">
           <h3><%= lang === 'en' ? c.name_en : c.name_zh %></h3>
@@ -90,8 +93,14 @@
 
   <script>
     function toggleLang() {
-      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
-      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+      const u = new URL(window.location);
+      const p = u.pathname;
+      const isEn = p === "/en" || p.startsWith("/en/");
+      const np = isEn ? (p === "/en" ? "/" : p.substring(3)) : (p === "/" ? "/en" : "/en" + p);
+      localStorage.setItem("wr_lang", isEn ? "zh" : "en");
+      u.pathname = np;
+      u.searchParams.delete("lang");
+      window.location = u.toString();
     }
   </script>
 </body>

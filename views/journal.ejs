@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= lang === 'en' ? 'Travel Inspiration | WR Travel' : '旅行灵感 | 野路逸行' %></title>
   <meta name="description" content="<%= lang === 'en' ? 'Explore travel guides, tips, and inspiration for your next luxury journey — Switzerland, Tanzania, Italy, and more' : '探索旅行指南、实用攻略与灵感，为您的下一次奢华旅程做准备 — 瑞士、坦桑尼亚、意大利等' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/journal">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/journal">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/journal">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/journal">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/journal">
   <meta property="og:title" content="<%= lang === 'en' ? 'Travel Inspiration | WR Travel' : '旅行灵感 | 野路逸行' %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/journal">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/journal">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -86,7 +89,7 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="guides-hero">
-    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
     <h1><%= lang === 'en' ? 'Travel Inspiration' : '旅行灵感' %></h1>
     <p><%= lang === 'en' ? 'Curated guides & tips for your next luxury journey' : '为您的下一次旅程精选指南与攻略' %></p>
   </div>
@@ -101,7 +104,7 @@
         </h2>
         <div class="guides-grid">
           <% grouped[dest].forEach(function(g) { %>
-            <a href="/journal/<%= g.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="journal-card">
+            <a href="<%= lang === 'en' ? '/en' : '' %>/journal/<%= g.slug %>" class="journal-card">
               <div class="journal-card-banner banner-<%= g.destination %>">
                 <span><%= destNames[g.destination] ? destNames[g.destination].zh.charAt(0) : '' %></span>
               </div>
@@ -118,8 +121,14 @@
 
   <script>
     function toggleLang() {
-      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
-      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+      const u = new URL(window.location);
+      const p = u.pathname;
+      const isEn = p === "/en" || p.startsWith("/en/");
+      const np = isEn ? (p === "/en" ? "/" : p.substring(3)) : (p === "/" ? "/en" : "/en" + p);
+      localStorage.setItem("wr_lang", isEn ? "zh" : "en");
+      u.pathname = np;
+      u.searchParams.delete("lang");
+      window.location = u.toString();
     }
   </script>
 </body>

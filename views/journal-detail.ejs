@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= lang === 'en' ? guide.title_en : guide.title_zh %> | WR Travel</title>
   <meta name="description" content="<%= lang === 'en' ? guide.title_en + ' — expert travel guide by WR Travel' : guide.title_zh + ' — 野路逸行专业旅行指南' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>">
-  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>">
-  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>?lang=en">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/journal/<%= guide.slug %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/journal/<%= guide.slug %>">
   <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>">
   <meta property="og:title" content="<%= lang === 'en' ? guide.title_en : guide.title_zh %> | WR Travel">
   <meta property="og:description" content="<%= lang === 'en' ? guide.title_en + ' — expert travel guide by WR Travel' : guide.title_zh + ' — 野路逸行专业旅行指南' %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/journal/<%= guide.slug %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/journal/<%= guide.slug %>">
   <meta property="og:type" content="article">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -92,7 +92,7 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="gd-hero">
-    <a href="/journal<%= lang === 'en' ? '?lang=en' : '' %>" class="back-link"><%= lang === 'en' ? '← All Guides' : '← 全部指南' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/journal" class="back-link"><%= lang === 'en' ? '← All Guides' : '← 全部指南' %></a>
     <h1><%= lang === 'en' ? guide.title_en : guide.title_zh %></h1>
     <span class="gd-type-badge"><%= typeLabel %></span>
   </div>
@@ -129,7 +129,7 @@
       <h2><%= lang === 'en' ? 'Related Itineraries' : '相关行程推荐' %></h2>
       <div class="gd-related-grid">
         <% relatedTrips.forEach(function(item) { %>
-          <a class="card" href="/<%= item.id %><%= lang === 'en' ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
+          <a class="card" href="<%= lang === 'en' ? '/en' : '' %>/<%= item.id %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
             <div style="position:relative;height:180px;overflow:hidden;">
               <picture>
                 <source srcset="/<%= item.coverImage.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
@@ -149,8 +149,14 @@
 
   <script>
     function toggleLang() {
-      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
-      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+      const u = new URL(window.location);
+      const p = u.pathname;
+      const isEn = p === "/en" || p.startsWith("/en/");
+      const np = isEn ? (p === "/en" ? "/" : p.substring(3)) : (p === "/" ? "/en" : "/en" + p);
+      localStorage.setItem("wr_lang", isEn ? "zh" : "en");
+      u.pathname = np;
+      u.searchParams.delete("lang");
+      window.location = u.toString();
     }
   </script>
 </body>

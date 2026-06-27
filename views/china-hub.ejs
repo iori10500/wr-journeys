@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
   <meta name="description" content="<%= lang === 'en' ? china.headline_en : china.headline_zh %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/destinations/china">
-  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/destinations/china">
-  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/destinations/china?lang=en">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations/china">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/destinations/china">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/destinations/china">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/destinations/china">
   <meta property="og:title" content="<%= title %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/destinations/china">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations/china">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -53,7 +54,7 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <section class="ch-hero">
-    <a href="/destinations<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;display:block;margin-bottom:14px;"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/destinations" style="color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;display:block;margin-bottom:14px;"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
     <div class="kicker"><%= lang === 'en' ? 'Inbound China · Curated' : '中国 · 入境精选' %></div>
     <h1><%= lang === 'en' ? china.headline_en : china.headline_zh %></h1>
     <p class="sub"><%= lang === 'en' ? 'Hand-picked routes across Guizhou, Yunnan, Shangri-la and Sichuan — anchored on Jianglu, Songtsam, MUXI.' : '贵州、云南、香格里拉、四川的精选线路 — 由匠庐、松赞、木夕大里支撑。' %></p>
@@ -69,7 +70,7 @@
     <h2 class="ch-section-title"><%= lang === 'en' ? 'Sub-regions' : '子区域' %></h2>
     <div class="ch-region-grid">
       <% subRegions.forEach(function(r) { %>
-      <a class="ch-region-card" href="/destinations/china/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+      <a class="ch-region-card" href="<%= lang === 'en' ? '/en' : '' %>/destinations/china/<%= r.slug %>">
         <div class="name"><%= lang === 'en' ? r.name_en : r.name_zh %></div>
         <div class="headline"><%= lang === 'en' ? r.headline_en : r.headline_zh %></div>
         <div class="meta"><% if (r.routeCount > 0) { %><%= r.routeCount %> <%= lang === 'en' ? 'curated routes' : '条甄选线路' %><% } else { %><%= lang === 'en' ? 'Bespoke / in development' : '一事一议 / 开发中' %><% } %> →</div>
@@ -83,7 +84,7 @@
     <h2 class="ch-section-title"><%= lang === 'en' ? 'Featured Routes' : '精选线路' %></h2>
     <div class="ch-featured-grid">
       <% featuredRoutes.forEach(function(r) { %>
-      <a class="ch-route-card" href="/routes/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+      <a class="ch-route-card" href="<%= lang === 'en' ? '/en' : '' %>/routes/<%= r.slug %>">
         <div class="img">
           <picture>
             <source srcset="<%= r.hero_path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
@@ -103,6 +104,6 @@
   <% } %>
 
   <%- include("partials/footer") %>
-  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+  <script>function toggleLang(){const u=new URL(window.location);const p=u.pathname;const isEn=p==="/en"||p.startsWith("/en/");const np=isEn?(p==="/en"?"/":p.substring(3)):(p==="/"?"/en":"/en"+p);localStorage.setItem("wr_lang",isEn?"zh":"en");u.pathname=np;u.searchParams.delete("lang");window.location=u.toString()}</script>
 </body>
 </html>

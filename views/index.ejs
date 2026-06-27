@@ -8,7 +8,7 @@
   <meta property="og:title" content="<%= title %>">
   <meta property="og:description" content="<%= lang === 'en' ? 'Curated global luxury custom itineraries.' : '精選全球奢華定制行程，奢華酒店直簽，私人定制。' %>">
   <meta property="og:image" content="https://itinerary.wildroadgroup.com/<%= itineraries[0] ? itineraries[0].coverImage : '' %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/<%= lang === 'en' ? '?lang=en' : '' %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WR Travel">
   <meta property="og:locale" content="<%= lang === 'en' ? 'en_US' : 'zh_CN' %>">
@@ -16,9 +16,9 @@
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%= lang === 'en' ? 'Curated global luxury custom itineraries.' : '精選全球奢華定制行程。' %>">
   <meta name="twitter:image" content="https://itinerary.wildroadgroup.com/<%= itineraries[0] ? itineraries[0].coverImage : '' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/">
-  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/">
-  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/?lang=en">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -75,7 +75,7 @@
       <div class="bh-head">
         <div class="bh-kicker"><%= lang === 'en' ? 'BRAND HOUSE' : '品牌矩阵' %></div>
         <h2 class="bh-title"><%= lang === 'en' ? 'Hand-picked names, one curatorial standard.' : '精挑细选，统一的甄选标准。' %></h2>
-        <a class="bh-more" href="/brands<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'See all brands →' : '查看全部品牌 →' %></a>
+        <a class="bh-more" href="<%= lang === 'en' ? '/en' : '' %>/brands"><%= lang === 'en' ? 'See all brands →' : '查看全部品牌 →' %></a>
       </div>
       <div class="bh-grid">
         <% [
@@ -84,7 +84,7 @@
           { slug:'jianglu',   name_zh:'匠庐',     name_en:'Jianglu',   tag_zh:'中国精品酒店 · 9 条线路', tag_en:'CN boutique · 9 routes',  type_zh:'精选合作', type_en:'Curated' },
           { slug:'songtsam',  name_zh:'松赞',     name_en:'Songtsam',  tag_zh:'川滇藏精品酒店',     tag_en:'Tibetan plateau hotels',     type_zh:'精选合作', type_en:'Curated' }
         ].forEach(function(b) { %>
-        <a class="bh-card" href="/brands/<%= b.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+        <a class="bh-card" href="<%= lang === 'en' ? '/en' : '' %>/brands/<%= b.slug %>">
           <div class="bh-card-type"><%= lang === 'en' ? b.type_en : b.type_zh %></div>
           <div class="bh-card-name"><%= lang === 'en' ? b.name_en : b.name_zh %></div>
           <div class="bh-card-tag"><%= lang === 'en' ? b.tag_en : b.tag_zh %></div>
@@ -138,7 +138,7 @@
         var cardDesc = isEn ? (item.description_en || item.description) : item.description;
         var cardTags = isEn ? (item.tags_en || item.tags) : item.tags;
       %>
-        <a class="card" href="/<%= item.id %><%= isEn ? '?lang=en' : '' %>"
+        <a class="card" href="<%= isEn ? '/en' : '' %>/<%= item.id %>"
            data-title="<%= item.title %> <%= item.title_en || '' %>"
            data-tags="<%= (item.tags || []).join(',') %>,<%= (item.tags_en || []).join(',') %>"
            data-regions="<%= (item.regions || []).join(',') %>,<%= (item.regions_en || []).join(',') %>">
@@ -232,6 +232,16 @@
     }
 
     function toggleLang() {
+      const u = new URL(window.location);
+      const p = u.pathname;
+      const isEn = p === "/en" || p.startsWith("/en/");
+      const np = isEn ? (p === "/en" ? "/" : p.substring(3)) : (p === "/" ? "/en" : "/en" + p);
+      localStorage.setItem("wr_lang", isEn ? "zh" : "en");
+      u.pathname = np;
+      u.searchParams.delete("lang");
+      window.location = u.toString();
+      return;
+      // (kept for parser — old logic below is unreachable)
       const next = LANG === 'zh' ? 'en' : 'zh';
       localStorage.setItem('wr_lang', next);
       const url = new URL(window.location);

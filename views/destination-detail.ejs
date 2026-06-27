@@ -7,9 +7,12 @@
   <meta name="description" content="<%= lang === 'en' ? destination.description_en : destination.description_zh %>">
   <meta property="og:title" content="<%= lang === 'en' ? destination.name_en : destination.name_zh %> · WR Travel">
   <meta property="og:description" content="<%= lang === 'en' ? destination.description_en : destination.description_zh %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/destinations/<%= destination.slug %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations/<%= destination.slug %>">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/destinations/<%= destination.slug %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/destinations/<%= destination.slug %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/destinations/<%= destination.slug %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/destinations/<%= destination.slug %>">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/destinations/<%= destination.slug %>">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -63,7 +66,7 @@
     <% } else { %>
     <div class="hero-bg" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%);"></div>
     <% } %>
-    <a href="/destinations<%= lang === 'en' ? '?lang=en' : '' %>" class="back-link"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/destinations" class="back-link"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
     <h1><%= lang === 'en' ? destination.name_en : destination.name_zh %></h1>
     <p class="desc"><%= lang === 'en' ? destination.description_en : destination.description_zh %></p>
   </div>
@@ -90,7 +93,7 @@
         var cardTitle = isEn ? (item.title_en || item.title) : item.title;
         var cardDesc = isEn ? (item.description_en || item.description) : item.description;
       %>
-        <a class="card" href="/<%= item.id %><%= isEn ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
+        <a class="card" href="<%= isEn ? '/en' : '' %>/<%= item.id %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
           <div style="position:relative;height:200px;overflow:hidden;">
             <picture>
               <source srcset="/<%= item.coverImage.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
@@ -115,8 +118,14 @@
 
   <script>
     function toggleLang() {
-      const url = new URL(window.location); const next = url.searchParams.get('lang') === 'en' ? 'zh' : 'en';
-      localStorage.setItem('wr_lang', next); url.searchParams.set('lang', next); window.location = url.toString();
+      const u = new URL(window.location);
+      const p = u.pathname;
+      const isEn = p === "/en" || p.startsWith("/en/");
+      const np = isEn ? (p === "/en" ? "/" : p.substring(3)) : (p === "/" ? "/en" : "/en" + p);
+      localStorage.setItem("wr_lang", isEn ? "zh" : "en");
+      u.pathname = np;
+      u.searchParams.delete("lang");
+      window.location = u.toString();
     }
   </script>
 </body>

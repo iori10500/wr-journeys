@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= (lang === 'en' ? route.title_en : route.title_zh) %> | WR Journeys</title>
   <meta name="description" content="<%= lang === 'en' ? route.subtitle_en : route.subtitle_zh %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
-  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
-  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>?lang=en">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/routes/<%= route.slug %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/routes/<%= route.slug %>">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
   <meta property="og:title" content="<%= (lang === 'en' ? route.title_en : route.title_zh) %> | WR Journeys">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/routes/<%= route.slug %>">
   <meta property="og:image" content="https://itinerary.wildroadgroup.com<%= route.hero_path %>">
   <meta property="og:type" content="article">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -75,8 +76,8 @@
     <div class="scrim"></div>
     <div class="inner">
       <div class="breadcrumb">
-        <a href="/<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'Home' : '首页' %></a>
-        &nbsp;·&nbsp; <a href="/brands/<%= brand.slug %><%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? brand.name_en : brand.name_zh %></a>
+        <a href="<%= lang === 'en' ? '/en' : '' %>/"><%= lang === 'en' ? 'Home' : '首页' %></a>
+        &nbsp;·&nbsp; <a href="<%= lang === 'en' ? '/en' : '' %>/brands/<%= brand.slug %>"><%= lang === 'en' ? brand.name_en : brand.name_zh %></a>
         &nbsp;·&nbsp; <%= lang === 'en' ? route.region_en : route.region_zh %>
       </div>
       <h1><%= lang === 'en' ? route.title_en : route.title_zh %></h1>
@@ -150,6 +151,6 @@
   </div>
 
   <%- include("partials/footer") %>
-  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+  <script>function toggleLang(){const u=new URL(window.location);const p=u.pathname;const isEn=p==="/en"||p.startsWith("/en/");const np=isEn?(p==="/en"?"/":p.substring(3)):(p==="/"?"/en":"/en"+p);localStorage.setItem("wr_lang",isEn?"zh":"en");u.pathname=np;u.searchParams.delete("lang");window.location=u.toString()}</script>
 </body>
 </html>

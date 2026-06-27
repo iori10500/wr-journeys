@@ -27,6 +27,39 @@ const PORT = 3099;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// --- i18n middleware (must come BEFORE static + handlers) ---
+// URL pattern: /en/<path> for English, /<path> (default) for Chinese.
+// Backwards compat: legacy ?lang=en → 301 redirect to /en/<path>.
+app.use((req, res, next) => {
+  if (req.path === '/en' || req.path.startsWith('/en/')) {
+    req.lang = 'en';
+    // Rewrite req.url to strip /en prefix (so existing handlers still match)
+    const stripped = req.path === '/en' ? '/' : req.path.substring(3);
+    const qsIdx = req.url.indexOf('?');
+    req.url = stripped + (qsIdx >= 0 ? req.url.substring(qsIdx) : '');
+    res.locals.canonicalPath = stripped;
+  } else {
+    req.lang = req.query.lang === 'en' ? 'en' : 'zh';
+    // 301: legacy ?lang=en → /en/<path>
+    if (req.query.lang === 'en') {
+      const cleanQuery = { ...req.query };
+      delete cleanQuery.lang;
+      const qs = Object.keys(cleanQuery).length ? '?' + new URLSearchParams(cleanQuery).toString() : '';
+      return res.redirect(301, '/en' + req.path + qs);
+    }
+    res.locals.canonicalPath = req.path;
+  }
+  res.locals.lang = req.lang;
+  next();
+});
+
+// Template helper: build URL with lang prefix
+app.locals.urlFor = function(p, lang) {
+  if (lang === 'en') return p === '/' ? '/en' : '/en' + p;
+  return p;
+};
+app.locals.SITE_URL = 'https://itinerary.wildroadgroup.com';
+
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -114,53 +147,53 @@ app.get('/sitemap.xml', (req, res) => {
   const baseUrl = 'https://itinerary.wildroadgroup.com';
   const pages = [
     { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'weekly' },
-    { loc: `${baseUrl}/?lang=en`, priority: '0.9', changefreq: 'weekly' },
+    { loc: `${baseUrl}/en`, priority: '0.9', changefreq: 'weekly' },
   ];
   itineraries.forEach(item => {
     pages.push({ loc: `${baseUrl}/${item.id}`, priority: '0.8', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/${item.id}?lang=en`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/${item.id}`, priority: '0.7', changefreq: 'monthly' });
   });
   // Add destinations
   const countries = getCountries();
   pages.push({ loc: `${baseUrl}/destinations`, priority: '0.9', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/destinations?lang=en`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/en/destinations`, priority: '0.8', changefreq: 'monthly' });
   countries.forEach(c => {
     pages.push({ loc: `${baseUrl}/destinations/${c.slug}`, priority: '0.8', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/destinations/${c.slug}?lang=en`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/destinations/${c.slug}`, priority: '0.7', changefreq: 'monthly' });
   });
   // Modes (IA v2)
   pages.push({ loc: `${baseUrl}/modes`, priority: '0.8', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/modes?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/en/modes`, priority: '0.7', changefreq: 'monthly' });
   Object.entries(modeMap).forEach(([slug, info]) => {
     if (info.external) return; // private-villa → external
     pages.push({ loc: `${baseUrl}/modes/${slug}`, priority: '0.7', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/modes/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/modes/${slug}`, priority: '0.6', changefreq: 'monthly' });
   });
   // Journal (IA v2)
   pages.push({ loc: `${baseUrl}/journal`, priority: '0.8', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/journal?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/en/journal`, priority: '0.7', changefreq: 'monthly' });
   guidesData.forEach(g => {
     pages.push({ loc: `${baseUrl}/journal/${g.slug}`, priority: '0.7', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/journal/${g.slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/journal/${g.slug}`, priority: '0.6', changefreq: 'monthly' });
   });
   // Brands (IA v2)
   pages.push({ loc: `${baseUrl}/brands`, priority: '0.8', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/brands?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/en/brands`, priority: '0.7', changefreq: 'monthly' });
   brandsData.filter(b => !b.external).forEach(b => {
     pages.push({ loc: `${baseUrl}/brands/${b.slug}`, priority: '0.6', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/brands/${b.slug}?lang=en`, priority: '0.5', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/brands/${b.slug}`, priority: '0.5', changefreq: 'monthly' });
   });
   // China hub (IA v2)
   pages.push({ loc: `${baseUrl}/destinations/china`, priority: '0.9', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/destinations/china?lang=en`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/en/destinations/china`, priority: '0.8', changefreq: 'monthly' });
   Object.entries(chinaRegionsData).filter(([s, r]) => r.parent === 'china').forEach(([slug]) => {
     pages.push({ loc: `${baseUrl}/destinations/china/${slug}`, priority: '0.7', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/destinations/china/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/destinations/china/${slug}`, priority: '0.6', changefreq: 'monthly' });
   });
   // Brand-routes (IA v2 — /routes/<slug>)
   Object.values(routesIndex).forEach(r => {
     pages.push({ loc: `${baseUrl}/routes/${r.slug}`, priority: '0.7', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/routes/${r.slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/en/routes/${r.slug}`, priority: '0.6', changefreq: 'monthly' });
   });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -622,14 +655,14 @@ function getCountries() {
 
 // Destinations listing
 app.get('/destinations', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const countries = getCountries();
   res.render('destinations', { countries, lang, title: lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' });
 });
 
 // China hub (parent landing)
 app.get('/destinations/china', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const china = chinaRegionsData.china;
   if (!china) return res.status(404).send('Not found');
   // For each child region, count routes that match
@@ -664,7 +697,7 @@ app.get('/destinations/china', (req, res) => {
 
 // China sub-region (yunnan / guizhou / shangri-la / sichuan)
 app.get('/destinations/china/:region', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const region = chinaRegionsData[req.params.region];
   if (!region || region.parent !== 'china') return res.status(404).send('Not found');
   const matchTags = (region.matchTags || []).map(t => t.toLowerCase());
@@ -689,7 +722,7 @@ app.get('/destinations/china/:region', (req, res) => {
 // Destination detail
 app.get('/destinations/:country', (req, res) => {
   const country = req.params.country.toLowerCase().replace(/\s+/g, '-');
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const destDesc = destinationsData[country];
   if (!destDesc) return res.status(404).send('Not found');
 
@@ -714,7 +747,7 @@ app.get('/destinations/:country', (req, res) => {
 
 // Journal listing (IA v2 canonical; /guides 301 → here)
 app.get('/journal', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const grouped = {};
   const destOrder = ['switzerland', 'tanzania', 'italy', 'uk', 'france', 'indonesia', 'thailand', 'maldives', 'japan', 'dubai', 'greece', 'morocco'];
   destOrder.forEach(d => { grouped[d] = []; });
@@ -730,7 +763,7 @@ app.get('/journal', (req, res) => {
 app.get('/journal/:slug', (req, res) => {
   const guide = guidesData.find(g => g.slug === req.params.slug);
   if (!guide) return res.status(404).render('404');
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const destInfo = destinationsData[guide.destination] || {};
   const typeInfo = guideTypeLabels[guide.type] || { zh: guide.type, en: guide.type };
   const typeLabel = lang === 'en' ? typeInfo.en : typeInfo.zh;
@@ -754,15 +787,15 @@ app.get('/journal/:slug', (req, res) => {
 
 // 301: /guides → /journal
 app.get('/guides', (req, res) => {
-  res.redirect(301, '/journal' + (req.query.lang === 'en' ? '?lang=en' : ''));
+  res.redirect(301, (req.lang === 'en' ? '/en' : '') + '/journal');
 });
 app.get('/guides/:slug', (req, res) => {
-  res.redirect(301, '/journal/' + req.params.slug + (req.query.lang === 'en' ? '?lang=en' : ''));
+  res.redirect(301, (req.lang === 'en' ? '/en' : '') + '/journal/' + req.params.slug);
 });
 
 // Modes listing (IA v2 canonical; /themes 301 → here)
 app.get('/modes', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const themes = Object.entries(modeMap).map(([slug, info]) => {
     let count = 0;
     if (info.themeTag) {
@@ -779,7 +812,7 @@ app.get('/modes', (req, res) => {
 // Mode detail
 app.get('/modes/:theme', (req, res) => {
   const slug = req.params.theme;
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const info = modeMap[slug];
   if (!info) return res.status(404).send('Not found');
   if (info.external) return res.redirect(302, info.external);
@@ -801,16 +834,16 @@ app.get('/modes/:theme', (req, res) => {
 
 // 301: /themes → /modes
 app.get('/themes', (req, res) => {
-  res.redirect(301, '/modes' + (req.query.lang === 'en' ? '?lang=en' : ''));
+  res.redirect(301, (req.lang === 'en' ? '/en' : '') + '/modes');
 });
 app.get('/themes/:theme', (req, res) => {
   const newSlug = themeToMode[req.params.theme] || req.params.theme;
-  res.redirect(301, '/modes/' + newSlug + (req.query.lang === 'en' ? '?lang=en' : ''));
+  res.redirect(301, (req.lang === 'en' ? '/en' : '') + '/modes/' + newSlug);
 });
 
 // Brands listing (IA v2 — new)
 app.get('/brands', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const items = brandsData.map(b => ({
     name: lang === 'en' ? b.name_en : b.name_zh,
     url: b.external && b.external_url ? b.external_url : `/brands/${b.slug}`,
@@ -834,7 +867,7 @@ app.get('/brands', (req, res) => {
 app.get('/brands/:slug', (req, res) => {
   const brand = brandsData.find(b => b.slug === req.params.slug);
   if (!brand) return res.status(404).send('Brand not found');
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   if (brand.external && brand.external_url) return res.redirect(302, brand.external_url);
   const routes = brandRoutes[brand.slug] || [];
   res.render('brand-detail', {
@@ -861,7 +894,7 @@ app.get('/brands/:slug', (req, res) => {
 app.get('/routes/:slug', (req, res) => {
   const route = routesIndex[req.params.slug];
   if (!route) return res.status(404).send('Route not found');
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   const brand = brandsData.find(b => b.slug === route.brand) || { slug: route.brand, name_zh: route.brand, name_en: route.brand };
   // Resolve lodges with gallery for this route
   const brandLodges = lodgesByBrand[brand.slug] || {};
@@ -893,7 +926,7 @@ app.get('/routes/:slug', (req, res) => {
 // Homepage route
 
 app.get('/', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
   res.render('index', {
     itineraries: itineraries,
     title: lang === 'en' ? 'WR Travel · Itineraries' : 'WR Travel · 行程手册',
@@ -904,7 +937,7 @@ app.get('/', (req, res) => {
 // Individual itinerary page
 app.get('/:id', (req, res) => {
   const id = req.params.id;
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const lang = req.lang;
 
   // Skip requests for static assets and API
   if (id.startsWith('api/') || id.includes('.')) {

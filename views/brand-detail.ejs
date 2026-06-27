@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= (lang === 'en' ? brand.name_en : brand.name_zh) %> | <%= lang === 'en' ? 'WR Journeys' : 'WR Journeys' %></title>
   <meta name="description" content="<%= lang === 'en' ? brand.summary_en : brand.summary_zh %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/brands/<%= brand.slug %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/brands/<%= brand.slug %>">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
   <meta property="og:title" content="<%= (lang === 'en' ? brand.name_en : brand.name_zh) %> | WR Journeys">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/brands/<%= brand.slug %>">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -34,7 +37,7 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="brand-detail-hero">
-    <a href="/brands<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← All brands' : '← 全部品牌' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/brands" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← All brands' : '← 全部品牌' %></a>
     <div class="kicker"><%= lang === 'en' ? (brand.type === 'own' ? 'Own brand' : 'Curated partner') : (brand.type === 'own' ? '自营品牌' : '精选合作') %></div>
     <h1><%= lang === 'en' ? brand.name_en : brand.name_zh %></h1>
     <p class="tagline"><%= lang === 'en' ? brand.tagline_en : brand.tagline_zh %></p>
@@ -50,7 +53,7 @@
     <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Curated Routes (' + routes.length + ')' : '甄选线路（' + routes.length + ' 条）' %></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-bottom:32px;">
       <% routes.forEach(function(r) { %>
-      <a href="/routes/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.06);transition:transform 0.2s;display:block;">
+      <a href="<%= lang === 'en' ? '/en' : '' %>/routes/<%= r.slug %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.06);transition:transform 0.2s;display:block;">
         <div style="position:relative;height:170px;overflow:hidden;background:#1a1a2e;">
           <picture>
             <source srcset="<%= r.hero_path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
@@ -79,6 +82,6 @@
   </div>
 
   <%- include("partials/footer") %>
-  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+  <script>function toggleLang(){const u=new URL(window.location);const p=u.pathname;const isEn=p==="/en"||p.startsWith("/en/");const np=isEn?(p==="/en"?"/":p.substring(3)):(p==="/"?"/en":"/en"+p);localStorage.setItem("wr_lang",isEn?"zh":"en");u.pathname=np;u.searchParams.delete("lang");window.location=u.toString()}</script>
 </body>
 </html>

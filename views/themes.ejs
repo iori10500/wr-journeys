@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' %></title>
   <meta name="description" content="<%= lang === 'en' ? 'Explore WR Travel curated itineraries by theme — safari, cultural, honeymoon & more' : '按主题探索野路逸行精选行程 — 野奢探险、人文探索、蜜月之旅等' %>">
-  <link rel="canonical" href="https://itinerary.wildroadgroup.com/themes">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/themes">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/themes">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/themes">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/themes">
   <meta property="og:title" content="<%= lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' %>">
-  <meta property="og:url" content="https://itinerary.wildroadgroup.com/themes">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/themes">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -52,14 +55,14 @@
   <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
 
   <div class="theme-hero">
-    <a href="/<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
+    <a href="<%= lang === 'en' ? '/en' : '' %>/" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← Back to itineraries' : '← 返回行程列表' %></a>
     <h1><%= lang === 'en' ? 'Travel Themes' : '旅行主题' %></h1>
     <p><%= lang === 'en' ? 'Discover our curated itineraries by theme' : '按主题探索我们的精选行程' %></p>
   </div>
 
   <div class="theme-grid">
     <% themes.forEach(function(t) { %>
-      <a href="/themes/<%= t.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="theme-card">
+      <a href="<%= lang === 'en' ? '/en' : '' %>/themes/<%= t.slug %>" class="theme-card">
         <div class="icon"><%= t.icon %></div>
         <h3><%= lang === 'en' ? t.en : t.zh %></h3>
         <p><%= t.count %> <%= lang === 'en' ? 'itineraries' : '个行程' %></p>
@@ -68,6 +71,6 @@
   </div>
 
   <%- include("partials/footer") %>
-  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+  <script>function toggleLang(){const u=new URL(window.location);const p=u.pathname;const isEn=p==="/en"||p.startsWith("/en/");const np=isEn?(p==="/en"?"/":p.substring(3)):(p==="/"?"/en":"/en"+p);localStorage.setItem("wr_lang",isEn?"zh":"en");u.pathname=np;u.searchParams.delete("lang");window.location=u.toString()}</script>
 </body>
 </html>

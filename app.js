@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const { marked } = require('marked');
+const schemas = require('./lib/schemas');
 
 function extractBrochureContent(html) {
   // Extract <style> blocks (may be multiple)
@@ -675,7 +676,23 @@ app.get('/themes/:theme', (req, res) => {
 // Brands listing (IA v2 — new)
 app.get('/brands', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
-  res.render('brands', { brands: brandsData, lang, title: lang === 'en' ? 'Brand House | WR Journeys' : '品牌矩阵 | WR Journeys' });
+  const items = brandsData.map(b => ({
+    name: lang === 'en' ? b.name_en : b.name_zh,
+    url: b.external && b.external_url ? b.external_url : `/brands/${b.slug}`,
+  }));
+  res.render('brands', {
+    brands: brandsData, lang,
+    title: lang === 'en' ? 'Brand House | WR Journeys' : '品牌矩阵 | WR Journeys',
+    schemas: [
+      schemas.website(),
+      schemas.travelAgency(),
+      schemas.itemList(items, lang === 'en' ? 'WR Journeys Brand House' : 'WR Journeys 品牌矩阵'),
+      schemas.breadcrumbList([
+        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
+        { name: lang === 'en' ? 'Brands' : '品牌矩阵', path: '/brands' },
+      ]),
+    ],
+  });
 });
 
 // Brand detail (with optional routes grid)
@@ -685,7 +702,24 @@ app.get('/brands/:slug', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   if (brand.external && brand.external_url) return res.redirect(302, brand.external_url);
   const routes = brandRoutes[brand.slug] || [];
-  res.render('brand-detail', { brand, routes, lang });
+  res.render('brand-detail', {
+    brand, routes, lang,
+    schemas: [
+      schemas.brandOrganization(brand),
+      schemas.breadcrumbList([
+        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
+        { name: lang === 'en' ? 'Brands' : '品牌矩阵', path: '/brands' },
+        { name: lang === 'en' ? brand.name_en : brand.name_zh, path: `/brands/${brand.slug}` },
+      ]),
+      ...(routes.length ? [schemas.itemList(
+        routes.map(r => ({
+          name: lang === 'en' ? r.title_en : r.title_zh,
+          url: `/routes/${r.slug}`,
+        })),
+        lang === 'en' ? `${brand.name_en} curated routes` : `${brand.name_zh} 策展线路`
+      )] : []),
+    ],
+  });
 });
 
 // Route detail (per-brand curated route, e.g. /routes/guizhou-liangdu-shishi)
@@ -694,7 +728,17 @@ app.get('/routes/:slug', (req, res) => {
   if (!route) return res.status(404).send('Route not found');
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const brand = brandsData.find(b => b.slug === route.brand) || { slug: route.brand, name_zh: route.brand, name_en: route.brand };
-  res.render('route-detail', { route, brand, lang });
+  res.render('route-detail', {
+    route, brand, lang,
+    schemas: [
+      schemas.touristTrip(route, brand, lang),
+      schemas.breadcrumbList([
+        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
+        { name: lang === 'en' ? brand.name_en : brand.name_zh, path: `/brands/${brand.slug}` },
+        { name: lang === 'en' ? route.title_en : route.title_zh, path: `/routes/${route.slug}` },
+      ]),
+    ],
+  });
 });
 
 // Homepage route

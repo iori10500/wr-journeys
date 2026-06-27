@@ -1,0 +1,3 @@
+<% (typeof schemas !== 'undefined' && schemas ? schemas : []).forEach(function(s) { %>
+<script type="application/ld+json"><%- JSON.stringify(s) %></script>
+<% }); %>

@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "wildroad",
+    "name_zh": "野路逸行",
+    "name_en": "Wildroad",
+    "type": "own",
+    "tagline_zh": "中国入境定制旗舰",
+    "tagline_en": "Curated inbound China",
+    "summary_zh": "为海外旅人量身定制的中国深度行程，从云贵高原到香格里拉，由匠庐、松赞等顶级合作伙伴落地。",
+    "summary_en": "Bespoke inbound journeys across China — from the Yunnan-Guizhou plateau to Shangri-la, anchored by Jianglu, Songtsam and curated partners.",
+    "external": false
+  },
+  {
+    "slug": "wanderway",
+    "name_zh": "万德",
+    "name_en": "Wanderway",
+    "type": "own",
+    "tagline_zh": "全球出境定制",
+    "tagline_en": "Outbound bespoke worldwide",
+    "summary_zh": "面向国内高净值客户的全球出境定制，覆盖欧亚非美主流目的地及小众秘境。",
+    "summary_en": "Outbound bespoke travel for China's high-net-worth travellers across Europe, Asia, Africa and the Americas.",
+    "external": false
+  },
+  {
+    "slug": "jianglu",
+    "name_zh": "匠庐",
+    "name_en": "Jianglu",
+    "type": "partner-curated",
+    "tagline_zh": "中国精品酒店与9条策展线路",
+    "tagline_en": "Chinese boutique hotels & 9 curated routes",
+    "summary_zh": "深耕中国西南的精品酒店品牌，9 条主题线路覆盖贵州、云南、广西。",
+    "summary_en": "Boutique hotel collection in southwest China with 9 curated thematic routes across Guizhou, Yunnan and Guangxi.",
+    "external": false
+  },
+  {
+    "slug": "songtsam",
+    "name_zh": "松赞",
+    "name_en": "Songtsam",
+    "type": "partner-curated",
+    "tagline_zh": "川滇藏精品酒店",
+    "tagline_en": "Tibetan plateau boutique hotels",
+    "summary_zh": "扎根藏区文化的精品酒店与小环线，覆盖梅里、香格里拉、稻城亚丁。",
+    "summary_en": "Tibet-rooted boutique hotels and small-group circuits across Meili, Shangri-la and Yading.",
+    "external": false
+  },
+  {
+    "slug": "explora",
+    "name_zh": "Explora Journeys",
+    "name_en": "Explora Journeys",
+    "type": "partner-curated",
+    "tagline_zh": "慢奢邮轮",
+    "tagline_en": "Slow-luxury ocean journeys",
+    "summary_zh": "MSC 集团旗下顶级邮轮品牌，地中海与极地航线，以 slow stay 哲学重新定义海上奢华。",
+    "summary_en": "MSC group's slow-luxury ocean brand, Mediterranean and polar routes redefining the cruise experience.",
+    "external": false
+  },
+  {
+    "slug": "elite-havens",
+    "name_zh": "Elite Havens",
+    "name_en": "Elite Havens",
+    "type": "partner-external",
+    "tagline_zh": "东南亚私人别墅龙头",
+    "tagline_en": "Southeast Asia private villa leader",
+    "summary_zh": "巴厘岛、普吉、苏梅等东南亚顶级私人别墅运营商，250+ 套带管家服务的整租别墅。",
+    "summary_en": "Top private villa operator across Bali, Phuket, Samui — 250+ fully-staffed villas.",
+    "external": true,
+    "external_url": "https://ai-test.wildroadgroup.com/villas"
+  },
+  {
+    "slug": "nisade",
+    "name_zh": "Nisade",
+    "name_en": "Nisade",
+    "type": "partner-external",
+    "tagline_zh": "北海道二世谷雪季别墅",
+    "tagline_en": "Niseko ski-season private villas",
+    "summary_zh": "北海道二世谷区域顶级雪季别墅运营商，70+ 套滑雪季整租别墅。",
+    "summary_en": "Premier Niseko ski-season villa operator — 70+ chalets across Hirafu, Hanazono and Annupuri.",
+    "external": true,
+    "external_url": "https://ai-test.wildroadgroup.com/villas"
+  },
+  {
+    "slug": "muxi-dali",
+    "name_zh": "木夕大里伙山",
+    "name_en": "MUXI Dali Houshan",
+    "type": "partner-external",
+    "tagline_zh": "云南大里精品酒店",
+    "tagline_en": "Dali boutique retreat",
+    "summary_zh": "苍山洱海之间的精品酒店，由建筑师主理的当代白族美学空间。",
+    "summary_en": "Boutique retreat between Cangshan and Erhai, contemporary Bai-architecture by a master architect.",
+    "external": true,
+    "external_url": "https://ai-test.wildroadgroup.com/dreamisland/"
+  }
+]

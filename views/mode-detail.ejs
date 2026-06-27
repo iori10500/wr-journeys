@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? info.en : info.zh %> · <%= lang === 'en' ? 'WR Travel' : '野路逸行' %></title>
+  <meta name="description" content="<%= lang === 'en' ? 'Explore ' + info.en + ' itineraries curated by WR Travel' : '探索野路逸行精选' + info.zh + '行程' %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/modes/<%= theme %>">
+  <meta property="og:title" content="<%= lang === 'en' ? info.en : info.zh %> · WR Travel">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <script type="application/ld+json"><%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": (lang === 'en' ? info.en : info.zh) + " — WR Travel",
+    "numberOfItems": trips.length,
+    "itemListElement": trips.map(function(t, i) { return {
+      "@type": "ListItem", "position": i+1,
+      "url": "https://itinerary.wildroadgroup.com/" + t.id,
+      "name": lang === 'en' ? (t.title_en || t.title) : t.title
+    }})
+  }) %></script>
+  <style>
+    .th-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); padding: 50px 24px 40px; text-align: center; }
+    .th-hero .back { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; display: block; margin-bottom: 16px; }
+    .th-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 34px; margin: 0; }
+    .th-trips { max-width: 1200px; margin: 40px auto; padding: 0 24px 80px; }
+    .th-trips h2 { font-size: 22px; margin-bottom: 20px; color: #333; }
+  </style>
+<%- include('partials/ga') %>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <div class="th-hero">
+    <a href="/modes<%= lang === 'en' ? '?lang=en' : '' %>" class="back"><%= lang === 'en' ? '← All themes' : '← 全部主题' %></a>
+    <h1><%= lang === 'en' ? info.en : info.zh %></h1>
+  </div>
+
+  <div class="th-trips">
+    <% if (typeof stub !== 'undefined' && stub) { %>
+    <div style="background:#fffbeb;border-left:3px solid #f59e0b;padding:16px 20px;margin-bottom:24px;font-size:13px;color:#92400e;border-radius:4px;">
+      <%= lang === 'en' ? 'This mode is being curated. Routes will appear here as we collect them — meanwhile, contact the advisor to plan one.' : '本模式正在策展中，线路陆续上线。即刻预约可联系我们的旅行顾问定制。' %>
+    </div>
+    <% } %>
+    <h2><%= trips.length %> <%= lang === 'en' ? 'itineraries' : '个行程' %></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;">
+      <% trips.forEach(function(item) {
+        var isEn = lang === 'en';
+        var cardTitle = isEn ? (item.title_en || item.title) : item.title;
+        var cardDesc = isEn ? (item.description_en || item.description) : item.description;
+      %>
+        <a href="/<%= item.id %><%= isEn ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s;">
+          <div style="position:relative;height:200px;overflow:hidden;">
+            <picture>
+              <source srcset="/<%= item.coverImage.replace(/\.(jpg|jpeg|png)$/i, '.webp') %>" type="image/webp">
+              <img src="/<%= item.coverImage %>" alt="<%= cardTitle %>" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+            </picture>
+            <div style="position:absolute;top:16px;left:16px;background:rgba(0,0,0,0.55);color:#fff;font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;"><%= isEn ? item.days + 'D ' + (item.days-1) + 'N' : item.days + '天' + (item.days-1) + '晚' %></div>
+          </div>
+          <div style="padding:16px;"><h3 style="font-size:16px;margin:0 0 4px;"><%= cardTitle %></h3><p style="font-size:13px;color:#888;margin:0;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"><%= cardDesc %></p></div>
+        </a>
+      <% }); %>
+    </div>
+  </div>
+
+  <%- include("partials/footer") %>
+  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+</body>
+</html>

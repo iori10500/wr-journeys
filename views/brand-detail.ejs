@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= (lang === 'en' ? brand.name_en : brand.name_zh) %> | <%= lang === 'en' ? 'WR Journeys' : 'WR Journeys' %></title>
+  <meta name="description" content="<%= lang === 'en' ? brand.summary_en : brand.summary_zh %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
+  <meta property="og:title" content="<%= (lang === 'en' ? brand.name_en : brand.name_zh) %> | WR Journeys">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/brands/<%= brand.slug %>">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <style>
+    .brand-detail-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); padding: 60px 24px 48px; text-align: center; margin-bottom: 40px; }
+    .brand-detail-hero .kicker { color: #c9a96a; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .brand-detail-hero h1 { color: #fff; font-family: 'Playfair Display',serif; font-size: 40px; margin: 0 0 8px; }
+    .brand-detail-hero .tagline { color: rgba(255,255,255,0.7); font-size: 16px; margin: 0; }
+    .brand-body { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; font-size: 16px; line-height: 1.8; color: #333; }
+    .brand-body p { margin-bottom: 18px; }
+    .brand-cta { background: #f7f5f0; border-left: 3px solid #c9a96a; padding: 20px 24px; margin: 30px 0; border-radius: 4px; }
+    .brand-cta a { color: #c9a96a; text-decoration: none; font-weight: 500; }
+    .stub-notice { background: #fffbeb; border-left: 3px solid #f59e0b; padding: 16px 20px; margin: 24px 0; font-size: 13px; color: #92400e; border-radius: 4px; }
+  </style>
+<%- include('partials/ga') %>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <div class="brand-detail-hero">
+    <a href="/brands<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;display:block;margin-bottom:12px;"><%= lang === 'en' ? '← All brands' : '← 全部品牌' %></a>
+    <div class="kicker"><%= lang === 'en' ? (brand.type === 'own' ? 'Own brand' : 'Curated partner') : (brand.type === 'own' ? '自营品牌' : '精选合作') %></div>
+    <h1><%= lang === 'en' ? brand.name_en : brand.name_zh %></h1>
+    <p class="tagline"><%= lang === 'en' ? brand.tagline_en : brand.tagline_zh %></p>
+  </div>
+
+  <div class="brand-body">
+    <p><%= lang === 'en' ? brand.summary_en : brand.summary_zh %></p>
+
+    <div class="stub-notice">
+      <%= lang === 'en' ? 'This brand page is a stub. Full brand story, route list and visuals are being prepared.' : '此品牌页为骨架占位，完整品牌故事、线路列表与视觉物料正在准备。' %>
+    </div>
+
+    <div class="brand-cta">
+      <%= lang === 'en' ? 'Want to enquire about a journey with this brand?' : '想与该品牌策划一段旅程？' %>
+      <a href="/advisor<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'Contact the advisor →' : '联系顾问 →' %></a>
+    </div>
+  </div>
+
+  <%- include("partials/footer") %>
+  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+</body>
+</html>

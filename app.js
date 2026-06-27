@@ -127,26 +127,27 @@ app.get('/sitemap.xml', (req, res) => {
     pages.push({ loc: `${baseUrl}/destinations/${c.slug}`, priority: '0.8', changefreq: 'monthly' });
     pages.push({ loc: `${baseUrl}/destinations/${c.slug}?lang=en`, priority: '0.7', changefreq: 'monthly' });
   });
-  // Themes
-  const themeSlugs = ['luxury', 'safari', 'cultural', 'adventure', 'island', 'city'];
-  pages.push({ loc: `${baseUrl}/themes`, priority: '0.8', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/themes?lang=en`, priority: '0.7', changefreq: 'monthly' });
-  themeSlugs.forEach(slug => {
-    const hasTrips = itineraries.some(t =>
-      (t.tags || []).some(tag => tag.toLowerCase().includes(slug)) ||
-      (t.tags_en || []).some(tag => tag.toLowerCase().includes(slug))
-    );
-    if (hasTrips) {
-      pages.push({ loc: `${baseUrl}/themes/${slug}`, priority: '0.7', changefreq: 'monthly' });
-      pages.push({ loc: `${baseUrl}/themes/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
-    }
+  // Modes (IA v2)
+  pages.push({ loc: `${baseUrl}/modes`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/modes?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  Object.entries(modeMap).forEach(([slug, info]) => {
+    if (info.external) return; // private-villa → external
+    pages.push({ loc: `${baseUrl}/modes/${slug}`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/modes/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
   });
-  // Guides
-  pages.push({ loc: `${baseUrl}/guides`, priority: '0.8', changefreq: 'monthly' });
-  pages.push({ loc: `${baseUrl}/guides?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  // Journal (IA v2)
+  pages.push({ loc: `${baseUrl}/journal`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/journal?lang=en`, priority: '0.7', changefreq: 'monthly' });
   guidesData.forEach(g => {
-    pages.push({ loc: `${baseUrl}/guides/${g.slug}`, priority: '0.7', changefreq: 'monthly' });
-    pages.push({ loc: `${baseUrl}/guides/${g.slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/journal/${g.slug}`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/journal/${g.slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+  });
+  // Brands (IA v2)
+  pages.push({ loc: `${baseUrl}/brands`, priority: '0.8', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/brands?lang=en`, priority: '0.7', changefreq: 'monthly' });
+  brandsData.filter(b => !b.external).forEach(b => {
+    pages.push({ loc: `${baseUrl}/brands/${b.slug}`, priority: '0.6', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/brands/${b.slug}?lang=en`, priority: '0.5', changefreq: 'monthly' });
   });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -177,6 +178,35 @@ try {
 } catch (err) {
   console.error('Failed to load guides:', err.message);
 }
+
+// Load brands data
+const brandsPath = path.join(__dirname, 'data', 'brands.json');
+let brandsData = [];
+try {
+  brandsData = JSON.parse(fs.readFileSync(brandsPath, 'utf-8'));
+} catch (err) {
+  console.error('Failed to load brands:', err.message);
+}
+
+// Mode definitions (IA v2 — replaces /themes)
+const modeMap = {
+  'slow-stay':     { zh: '慢游慢栖', en: 'Slow Stay',         icon: '🛏️', themeTag: null,        stub: true },
+  'cruise':        { zh: '邮轮慢游', en: 'Cruise',            icon: '🛳️', themeTag: null,        stub: true },
+  'safari':        { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁', themeTag: 'safari',    stub: false },
+  'heritage':      { zh: '人文遗产', en: 'Heritage & Culture', icon: '🏛️', themeTag: 'cultural',  stub: false },
+  'private-villa': { zh: '私人别墅', en: 'Private Villa',     icon: '🏝️', themeTag: null,        external: 'https://ai-test.wildroadgroup.com/villas' },
+  'adventure':     { zh: '户外冒险', en: 'Adventure',         icon: '🏔️', themeTag: 'adventure', stub: false },
+  'island':        { zh: '海岛度假', en: 'Island Getaway',    icon: '🏝️', themeTag: 'island',    stub: false },
+};
+// Old /themes/:slug → new /modes/:slug
+const themeToMode = {
+  luxury:    'slow-stay',
+  safari:    'safari',
+  cultural:  'heritage',
+  adventure: 'adventure',
+  island:    'island',
+  city:      'heritage',
+};
 
 // Type label map
 const guideTypeLabels = {
@@ -507,8 +537,8 @@ app.get('/destinations/:country', (req, res) => {
   });
 });
 
-// Guides listing
-app.get('/guides', (req, res) => {
+// Journal listing (IA v2 canonical; /guides 301 → here)
+app.get('/journal', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const grouped = {};
   const destOrder = ['switzerland', 'tanzania', 'italy', 'uk', 'france', 'indonesia', 'thailand', 'maldives', 'japan', 'dubai', 'greece', 'morocco'];
@@ -517,13 +547,12 @@ app.get('/guides', (req, res) => {
     if (!grouped[g.destination]) grouped[g.destination] = [];
     grouped[g.destination].push(g);
   });
-  // Remove empty groups
   Object.keys(grouped).forEach(k => { if (grouped[k].length === 0) delete grouped[k]; });
-  res.render('guides', { grouped, destinations: destinationsData, lang });
+  res.render('journal', { grouped, destinations: destinationsData, lang });
 });
 
-// Guide detail
-app.get('/guides/:slug', (req, res) => {
+// Journal detail
+app.get('/journal/:slug', (req, res) => {
   const guide = guidesData.find(g => g.slug === req.params.slug);
   if (!guide) return res.status(404).render('404');
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
@@ -540,55 +569,82 @@ app.get('/guides/:slug', (req, res) => {
     : generateGuideContent(guide, destInfo, lang);
   const faqItems = generateFaqItems(guide, destInfo, lang);
 
-  res.render('guide-detail', {
+  res.render('journal-detail', {
     guide, destInfo, relatedTrips, lang, typeLabel, contentHtml, faqItems,
     destinations: destinationsData,
     baseUrl: 'https://itinerary.wildroadgroup.com',
-    title: (lang === 'en' ? guide.title_en : guide.title_zh) + ' | WR Travel'
+    title: (lang === 'en' ? guide.title_en : guide.title_zh) + ' | WR Journeys'
   });
 });
 
-// Themes listing
-app.get('/themes', (req, res) => {
-  const lang = req.query.lang === 'en' ? 'en' : 'zh';
-  const themeMap = {
-    'luxury': { zh: '奢华旅行', en: 'Luxury Travel', icon: '💎' },
-    'safari': { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁' },
-    'cultural': { zh: '人文探索', en: 'Cultural', icon: '🏛️' },
-    'adventure': { zh: '户外冒险', en: 'Adventure', icon: '🏔️' },
-    'island': { zh: '海岛度假', en: 'Island Getaway', icon: '🏝️' },
-    'city': { zh: '城市观光', en: 'City Tour', icon: '🏙️' },
-  };
-  const themes = Object.entries(themeMap).map(([slug, info]) => {
-    const trips = itineraries.filter(t =>
-      (t.tags || []).some(tag => tag.toLowerCase().includes(slug)) ||
-      (t.tags_en || []).some(tag => tag.toLowerCase().includes(slug))
-    );
-    return { slug, ...info, count: trips.length };
-  }).filter(t => t.count > 0);
-  res.render('themes', { themes, lang, title: lang === 'en' ? 'Travel Themes | WR Travel' : '旅行主题 | 野路逸行' });
+// 301: /guides → /journal
+app.get('/guides', (req, res) => {
+  res.redirect(301, '/journal' + (req.query.lang === 'en' ? '?lang=en' : ''));
+});
+app.get('/guides/:slug', (req, res) => {
+  res.redirect(301, '/journal/' + req.params.slug + (req.query.lang === 'en' ? '?lang=en' : ''));
 });
 
-// Theme detail
-app.get('/themes/:theme', (req, res) => {
-  const theme = req.params.theme;
+// Modes listing (IA v2 canonical; /themes 301 → here)
+app.get('/modes', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
-  const themeMap = {
-    'luxury': { zh: '奢华旅行', en: 'Luxury Travel' },
-    'safari': { zh: 'Safari 探险', en: 'Safari Adventure' },
-    'cultural': { zh: '人文探索', en: 'Cultural' },
-    'adventure': { zh: '户外冒险', en: 'Adventure' },
-    'island': { zh: '海岛度假', en: 'Island Getaway' },
-    'city': { zh: '城市观光', en: 'City Tour' },
-  };
-  const info = themeMap[theme];
+  const themes = Object.entries(modeMap).map(([slug, info]) => {
+    let count = 0;
+    if (info.themeTag) {
+      count = itineraries.filter(t =>
+        (t.tags || []).some(tag => tag.toLowerCase().includes(info.themeTag)) ||
+        (t.tags_en || []).some(tag => tag.toLowerCase().includes(info.themeTag))
+      ).length;
+    }
+    return { slug, zh: info.zh, en: info.en, icon: info.icon, count };
+  });
+  res.render('modes', { themes, lang, title: lang === 'en' ? 'Travel Modes | WR Journeys' : '出行模式 | WR Journeys' });
+});
+
+// Mode detail
+app.get('/modes/:theme', (req, res) => {
+  const slug = req.params.theme;
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const info = modeMap[slug];
   if (!info) return res.status(404).send('Not found');
-  const trips = itineraries.filter(t =>
-    (t.tags || []).some(tag => tag.toLowerCase().includes(theme)) ||
-    (t.tags_en || []).some(tag => tag.toLowerCase().includes(theme))
-  );
-  if (!trips.length) return res.status(404).send('No trips found');
-  res.render('theme-detail', { theme, info, trips, lang, title: (lang === 'en' ? info.en : info.zh) + ' | WR Travel' });
+  // External (private-villa → villa-site)
+  if (info.external) return res.redirect(302, info.external);
+  // Stub modes (slow-stay, cruise) — render with empty trips + stub notice
+  let trips = [];
+  if (info.themeTag) {
+    trips = itineraries.filter(t =>
+      (t.tags || []).some(tag => tag.toLowerCase().includes(info.themeTag)) ||
+      (t.tags_en || []).some(tag => tag.toLowerCase().includes(info.themeTag))
+    );
+  }
+  res.render('mode-detail', {
+    theme: slug, info: { zh: info.zh, en: info.en }, trips, lang, stub: !!info.stub,
+    title: (lang === 'en' ? info.en : info.zh) + ' | WR Journeys'
+  });
+});
+
+// 301: /themes → /modes
+app.get('/themes', (req, res) => {
+  res.redirect(301, '/modes' + (req.query.lang === 'en' ? '?lang=en' : ''));
+});
+app.get('/themes/:theme', (req, res) => {
+  const newSlug = themeToMode[req.params.theme] || req.params.theme;
+  res.redirect(301, '/modes/' + newSlug + (req.query.lang === 'en' ? '?lang=en' : ''));
+});
+
+// Brands listing (IA v2 — new)
+app.get('/brands', (req, res) => {
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  res.render('brands', { brands: brandsData, lang, title: lang === 'en' ? 'Brand House | WR Journeys' : '品牌矩阵 | WR Journeys' });
+});
+
+// Brand detail (stub)
+app.get('/brands/:slug', (req, res) => {
+  const brand = brandsData.find(b => b.slug === req.params.slug);
+  if (!brand) return res.status(404).send('Brand not found');
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  if (brand.external && brand.external_url) return res.redirect(302, brand.external_url);
+  res.render('brand-detail', { brand, lang });
 });
 
 // Homepage route

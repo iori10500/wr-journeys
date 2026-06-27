@@ -62,7 +62,7 @@
       <a href="/modes/<%= t.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="mode-card">
         <div class="icon"><%= t.icon %></div>
         <h3><%= lang === 'en' ? t.en : t.zh %></h3>
-        <p><%= t.count %> <%= lang === 'en' ? 'itineraries' : '个行程' %></p>
+        <p><% if (t.count > 0) { %><%= t.count %> <%= lang === 'en' ? 'itineraries' : '个行程' %><% } else { %><%= lang === 'en' ? 'Bespoke' : '一事一议' %><% } %></p>
       </a>
     <% }); %>
   </div>

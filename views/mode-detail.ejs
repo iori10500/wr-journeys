@@ -43,12 +43,20 @@
   </div>
 
   <div class="th-trips">
-    <% if (typeof stub !== 'undefined' && stub) { %>
-    <div style="background:#fffbeb;border-left:3px solid #f59e0b;padding:16px 20px;margin-bottom:24px;font-size:13px;color:#92400e;border-radius:4px;">
-      <%= lang === 'en' ? 'This mode is being curated. Routes will appear here as we collect them — meanwhile, contact the advisor to plan one.' : '本模式正在策展中，线路陆续上线。即刻预约可联系我们的旅行顾问定制。' %>
+    <% if (typeof body !== 'undefined' && body) {
+         body.split(/\n\n+/).forEach(function(para) { %>
+    <p style="font-size:16px;line-height:1.85;color:#444;margin:0 0 18px;"><%= para %></p>
+    <%   });
+       } %>
+
+    <% if (trips.length > 0) { %>
+    <h2 style="font-family:'Playfair Display',serif;font-size:22px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Featured Itineraries (' + trips.length + ')' : '精选行程（' + trips.length + ' 条）' %></h2>
+    <% } else { %>
+    <div style="background:#f7f5f0;border-left:3px solid #c8a96e;padding:18px 22px;margin:32px 0;border-radius:4px;">
+      <%= lang === 'en' ? 'We curate this mode bespoke. Contact the advisor to design one tailored to you.' : '该出行模式以一事一议为主，欢迎联系顾问按你的需求单独设计。' %>
+      &nbsp;<a href="https://wr-travel.com/contact" target="_blank" rel="noopener" style="color:#c8a96e;text-decoration:none;font-weight:500;"><%= lang === 'en' ? 'Contact Advisor →' : '联系顾问 →' %></a>
     </div>
     <% } %>
-    <h2><%= trips.length %> <%= lang === 'en' ? 'itineraries' : '个行程' %></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;">
       <% trips.forEach(function(item) {
         var isEn = lang === 'en';

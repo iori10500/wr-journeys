@@ -220,13 +220,22 @@ try {
 
 // Mode definitions (IA v2 — replaces /themes)
 const modeMap = {
-  'slow-stay':     { zh: '慢游慢栖', en: 'Slow Stay',         icon: '🛏️', themeTag: null,        stub: true },
-  'cruise':        { zh: '邮轮慢游', en: 'Cruise',            icon: '🛳️', themeTag: null,        stub: true },
-  'safari':        { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁', themeTag: 'safari',    stub: false },
-  'heritage':      { zh: '人文遗产', en: 'Heritage & Culture', icon: '🏛️', themeTag: 'cultural',  stub: false },
-  'private-villa': { zh: '私人别墅', en: 'Private Villa',     icon: '🏝️', themeTag: null,        external: 'https://ai-test.wildroadgroup.com/villas' },
-  'adventure':     { zh: '户外冒险', en: 'Adventure',         icon: '🏔️', themeTag: 'adventure', stub: false },
-  'island':        { zh: '海岛度假', en: 'Island Getaway',    icon: '🏝️', themeTag: 'island',    stub: false },
+  'slow-stay': {
+    zh: '慢游慢栖', en: 'Slow Stay', icon: '🛏️', themeTag: null,
+    body_zh: '慢游慢栖（Slow Stay）是 WR Journeys 的核心叙事。我们不做"5 国 10 天打卡之旅"，每条线路都在同一个目的地停足够久 — 三晚是底线，五至七晚是常态。住得久，才能在清晨听到当地的人声鼓声、在午后避开导览队伍、在夜里和酒店主理人喝一杯。\n\n我们筛选的住宿都是单家精品酒店或山居 boutique — 匠庐、松赞、Aman、Como、Six Senses。从云贵高原到香格里拉、从托斯卡纳到马尔代夫，每一处都建议你停下来，把"地方"当作"人"对待。',
+    body_en: 'Slow Stay is WR Journeys\' core narrative. We don\'t build "five-country, ten-day box-ticking" itineraries — every route lingers long enough at each destination: three nights minimum, five to seven the norm. Only when you stay this long do you start to hear the local rhythm at dawn, slip past tour groups in the afternoon, share a drink with the owner at night.\n\nOur selected lodging is single-house boutique only — Jianglu, Songtsam, Aman, Como, Six Senses. Across the Yunnan-Guizhou plateau, Shangri-la, Tuscany, the Maldives — we suggest you stop, and treat the place as a person.',
+  },
+  'cruise': {
+    zh: '邮轮慢游', en: 'Cruise', icon: '🛳️', themeTag: null,
+    body_zh: '邮轮慢游用另一种方式实现 slow stay — 你睡觉时船在移动，醒来在新的港口，住宿和位移合二为一。WR Journeys 主推 Explora Journeys 与 Silversea 等慢奢系列。\n\nExplora 是 MSC 集团的高端线，地中海与北欧线路为主，餐饮与水疗投入对标顶级度假村，没有传统邮轮的赌场和大型剧场。我们正在接入 Explora 2026 春夏季航线，欢迎留下联系方式让顾问回复。',
+    body_en: 'Cruise is another expression of slow stay — the ship moves while you sleep, you wake in a new port, accommodation and movement become one. WR Journeys recommends slow-luxury lines: Explora Journeys, Silversea and similar.\n\nExplora is MSC group\'s premium brand, focused on Mediterranean and Northern Europe routes, with dining and spa investment on par with top resorts and none of the traditional casino-and-mega-theater clutter. We\'re onboarding 2026 spring/summer Explora routes — leave your contact and our advisor will follow up.',
+  },
+  'safari':        { zh: 'Safari 探险', en: 'Safari Adventure', icon: '🦁', themeTag: 'safari' },
+  'heritage':      { zh: '人文遗产', en: 'Heritage & Culture', icon: '🏛️', themeTag: 'cultural' },
+  'private-villa': { zh: '私人别墅', en: 'Private Villa', icon: '🏝️', themeTag: null,
+    external: 'https://ai-test.wildroadgroup.com/villas' },
+  'adventure':     { zh: '户外冒险', en: 'Adventure', icon: '🏔️', themeTag: 'adventure' },
+  'island':        { zh: '海岛度假', en: 'Island Getaway', icon: '🏝️', themeTag: 'island' },
 };
 // Old /themes/:slug → new /modes/:slug
 const themeToMode = {
@@ -637,9 +646,7 @@ app.get('/modes/:theme', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const info = modeMap[slug];
   if (!info) return res.status(404).send('Not found');
-  // External (private-villa → villa-site)
   if (info.external) return res.redirect(302, info.external);
-  // Stub modes (slow-stay, cruise) — render with empty trips + stub notice
   let trips = [];
   if (info.themeTag) {
     trips = itineraries.filter(t =>
@@ -647,8 +654,11 @@ app.get('/modes/:theme', (req, res) => {
       (t.tags_en || []).some(tag => tag.toLowerCase().includes(info.themeTag))
     );
   }
+  const body = lang === 'en' ? (info.body_en || '') : (info.body_zh || '');
   res.render('mode-detail', {
-    theme: slug, info: { zh: info.zh, en: info.en }, trips, lang, stub: !!info.stub,
+    theme: slug,
+    info: { zh: info.zh, en: info.en },
+    trips, lang, body,
     title: (lang === 'en' ? info.en : info.zh) + ' | WR Journeys'
   });
 });

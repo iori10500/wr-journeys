@@ -40,7 +40,10 @@
   </div>
 
   <div class="brand-body">
-    <p><%= lang === 'en' ? brand.summary_en : brand.summary_zh %></p>
+    <% const body = lang === 'en' ? (brand.body_en || brand.summary_en) : (brand.body_zh || brand.summary_zh);
+       (body || '').split(/\n\n+/).forEach(function(para) { %>
+    <p><%= para %></p>
+    <% }); %>
 
     <% if (typeof routes !== 'undefined' && routes && routes.length) { %>
     <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Curated Routes (' + routes.length + ')' : '策展线路（' + routes.length + ' 条）' %></h2>
@@ -62,7 +65,7 @@
       </a>
       <% }); %>
     </div>
-    <% } else { %>
+    <% } else if (!brand.body_zh && !brand.body_en) { %>
     <div class="stub-notice">
       <%= lang === 'en' ? 'This brand page is a stub. Full brand story, route list and visuals are being prepared.' : '此品牌页为骨架占位，完整品牌故事、线路列表与视觉物料正在准备。' %>
     </div>

@@ -1,0 +1,474 @@
+{
+  "slug": "guizhou-tingpu-jihua",
+  "region_zh": "贵州",
+  "region_en": "Guizhou",
+  "title_zh": "听瀑计划·匠庐的贵州地理剧场",
+  "title_en": "The Waterfall Sessions — JiangLu's Geographic Theatre of Guizhou",
+  "subtitle_zh": "一程三庐，横跨三大地貌的听瀑之旅",
+  "subtitle_en": "One journey, three lodges — a waterfall pilgrimage across three landscapes",
+  "days": 7,
+  "nights": 6,
+  "duration_zh": "7天6晚",
+  "duration_en": "7 Days / 6 Nights",
+  "lodge_zh": "匠庐·阅山、匠庐·沙嘎、匠庐·雅路古",
+  "lodge_en": "JiangLu Yueshan, JiangLu Shaga, JiangLu Yalugu",
+  "hero_image": "jianglu-yueshan/hero.jpg",
+  "route_zh": "安顺/贵阳 — 坝陵河峡谷（阅山） — 织金大峡谷 — 油杉河（沙嘎） — 土城古镇·佛光岩 — 赤水大瀑布（雅路古） — 泸州",
+  "route_en": "Anshun / Guiyang — Balinghe Gorge (Yueshan) — Zhijin Grand Canyon — Youshanhe (Shaga) — Tucheng Old Town & Foguangyan — Chishui Great Waterfall (Yalugu) — Luzhou",
+  "tags": [
+    {
+      "zh": "隐奢慢旅",
+      "en": "Hidden-Luxury Slow Travel"
+    },
+    {
+      "zh": "一程三庐",
+      "en": "Three Signature Lodges"
+    },
+    {
+      "zh": "听瀑计划",
+      "en": "Waterfall Sessions"
+    },
+    {
+      "zh": "三大地貌",
+      "en": "Three Landscapes"
+    },
+    {
+      "zh": "避世远行",
+      "en": "A Journey Off the Map"
+    },
+    {
+      "zh": "专属车队司服",
+      "en": "Private Driver-Guide"
+    }
+  ],
+  "intro_zh": "当城市的喧嚣与热浪一同抵达顶点，是时候开启一场真正的避世远行。这一次，深入贵州腹地，以三家风格迥异的山野美宿为据点，开启一场横跨三大地貌的听瀑计划。七天，三庐，从喀斯特峰林到丹霞赤壁，从乌蒙秘境到土城旧梦，线路设计充分利用海拔梯度（800-1500米），夏日林间白天体感温度多在19-25℃，将“住宿”本身，升华为旅程的华彩篇章。",
+  "intro_en": "When the city's clamour and summer heat crest together, it is time to disappear — properly. This journey carries you deep into the heart of Guizhou, anchoring at three wildly different mountain retreats for a waterfall pilgrimage that spans three great landscapes. Seven days, three lodges: from karst pinnacle forests to crimson Danxia cliffs, from the secret folds of the Wumeng Mountains to the old dreams of Tucheng. The route follows an altitude gradient of 800 to 1,500 metres, where summer days in the forest hover at a comfortable 19–25°C — turning the act of staying itself into the journey's most luminous chapter.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "安顺/贵阳接机接站 · 入住匠庐·阅山",
+          "title_en": "Arrival in Anshun / Guiyang · Check in at JiangLu Yueshan",
+          "desc_zh": "于安顺或贵阳接机接站，专车送往坝陵河峡谷崖壁上的匠庐·阅山（车程49-159km，约1-2小时，视接站接机地点而定）。",
+          "desc_en": "Met on arrival at Anshun or Guiyang and transferred by private car to JiangLu Yueshan, perched on the cliffs of Balinghe Gorge (49–159 km, roughly 1–2 hours depending on the pickup point)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "野性滴水滩瀑布 · 布依石韵原乡石头寨 · 续住匠庐·阅山",
+          "title_en": "Wild Dishuitan Waterfall · Bouyei stone village of Shitouzhai · Second night at JiangLu Yueshan",
+          "desc_zh": "探访野性磅礴的滴水滩瀑布，走进布依石韵原乡——石头寨，傍晚返回阅山续住（往返车程35km，约1.5小时）。",
+          "desc_en": "Explore the thunderous, untamed Dishuitan Waterfall, then wander the Bouyei stone village of Shitouzhai before returning to Yueshan for a second night (35 km round trip, about 1.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "探秘织金大峡谷 · 入住匠庐·沙嘎",
+          "title_en": "Zhijin Grand Canyon · Check in at JiangLu Shaga",
+          "desc_zh": "深入鬼斧神工的织金大峡谷，午后转场至彝寨深处的匠庐·沙嘎入住（车程200km，约3小时）。",
+          "desc_en": "Descend into the sculpted depths of Zhijin Grand Canyon, then transfer to JiangLu Shaga, set within an ancient Yi mountain village (200 km, about 3 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "“小张家界”油杉河 · 续住匠庐·沙嘎",
+          "title_en": "Youshanhe, Guizhou's 'little Zhangjiajie' · Second night at JiangLu Shaga",
+          "desc_zh": "游览有“贵州张家界”之称的油杉河绝壁峰林，傍晚回到沙嘎寨，在彝家合院的故事里安然入梦（往返车程80km，约2.5小时）。",
+          "desc_en": "Take in the soaring cliffs and pinnacle forests of Youshanhe — Guizhou's answer to Zhangjiajie — then return to Shaga to drift off amid the stories of the Yi courtyard (80 km round trip, about 2.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第五天",
+      "day_en": "Day 5",
+      "items": [
+        {
+          "title_zh": "土城古镇 · 佛光岩丹霞奇观 · 入住匠庐·雅路古",
+          "title_en": "Tucheng Old Town · Foguangyan Danxia wonder · Check in at JiangLu Yalugu",
+          "desc_zh": "行走于“千年商埠+红色圣地”土城古镇，震撼于佛光岩那面巨大的赤壁天书，入住依丹霞岩洞而筑的匠庐·雅路古（车程247km，约3.5小时）。",
+          "desc_en": "Walk Tucheng Old Town — a thousand-year trading port and revolutionary landmark — then stand before the vast crimson cliff-scripture of Foguangyan, before checking in to JiangLu Yalugu, built into a Danxia cave (247 km, about 3.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第六天",
+      "day_en": "Day 6",
+      "items": [
+        {
+          "title_zh": "“丹霞第一瀑”赤水大瀑布 · 续住匠庐·雅路古",
+          "title_en": "Chishui Great Waterfall, the 'first waterfall of Danxia' · Second night at JiangLu Yalugu",
+          "desc_zh": "浸润在“丹霞第一瀑”赤水大瀑布的清凉水雾之中，傍晚回到雅路古，在洞穴里枕着瀑布声与星河入眠（往返车程50km，约1.5小时）。",
+          "desc_en": "Cool off in the spray of Chishui Great Waterfall, the 'first waterfall of Danxia', then return to Yalugu to sleep within the cave, lulled by falling water and the river of stars (50 km round trip, about 1.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第七天",
+      "day_en": "Day 7",
+      "items": [
+        {
+          "title_zh": "返程泸州送站送机",
+          "title_en": "Departure transfer to Luzhou",
+          "desc_zh": "专车送往泸州，搭乘航班或高铁返程（车程86-95km，视送站送机地点而定）。",
+          "desc_en": "Private transfer to Luzhou for your onward flight or high-speed train (86–95 km, depending on the drop-off point)."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·阅山 / 匠庐·沙嘎 / 匠庐·雅路古",
+    "name_en": "JiangLu Yueshan / JiangLu Shaga / JiangLu Yalugu",
+    "positioning_zh": "云贵山河间的隐奢度假目的地",
+    "positioning_en": "Hidden-luxury retreats woven into the mountains and rivers of southwest China",
+    "desc_zh": "匠庐以云贵为开端，不断踏上征途，探寻山河之美，致力于度假酒店及民宿的开发与运营，专注发掘小而美的隐奢度假之地。每一个匠庐都是“旅行目的地”——它不仅是一个居所，更容纳着数以万计旅居者对美好旅行的期待。我们不断探索和创新，为每一位到达匠庐的朋友呈现跨越千年、历久弥新的在地生活，与一场慢速印象美学。",
+    "desc_en": "JiangLu began in the Yunnan–Guizhou highlands and has been journeying ever since in search of beautiful land and water. Devoted to designing and running resort hotels and boutique inns, the brand seeks out small, exquisite retreats of hidden luxury. Every JiangLu is a destination in its own right — not merely a place to stay, but a vessel for the hopes that tens of thousands of travellers bring to a good journey. Through constant exploration and reinvention, JiangLu offers each guest a way of living rooted in place — one that reaches across a thousand years yet feels forever new — and an aesthetic of unhurried impressions.",
+    "stats": [
+      {
+        "label_zh": "山居美宿",
+        "label_en": "Signature Lodges",
+        "value": "3"
+      },
+      {
+        "label_zh": "贵州地貌",
+        "label_en": "Landscapes",
+        "value": "3"
+      },
+      {
+        "label_zh": "住宿夜数",
+        "label_en": "Nights",
+        "value": "6"
+      },
+      {
+        "label_zh": "海拔梯度",
+        "label_en": "Altitude Range",
+        "value": "800–1500m"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "阅山 · 崖壁醒来，270°山水画卷",
+      "title_en": "Yueshan — Waking on the Cliff's Edge",
+      "desc_zh": "于坝陵河峡谷的崖壁上醒来，270°的落地窗为你框进一幅名为“山水”的动态画卷。不用赶路，窗外，就是最好的贵州。",
+      "desc_en": "Wake on the cliffs of Balinghe Gorge, where 270-degree floor-to-ceiling windows frame a living scroll of mountain and water. Nowhere to rush to — beyond the glass lies the finest of Guizhou."
+    },
+    {
+      "title_zh": "阅山 · 顶楼无边际泳池",
+      "title_en": "Yueshan — The Rooftop Infinity Pool",
+      "desc_zh": "顶楼的无边际泳池是夏日午后最诗意的注脚——身体浸入清凉，目光越过池水，与群山、云海、瀑布完成一场无言而盛大的对话。",
+      "desc_en": "The rooftop infinity pool is the most poetic footnote to a summer afternoon: body in cool water, gaze carrying past the pool's edge into a silent, sweeping dialogue with the peaks, the seas of cloud and the distant falls."
+    },
+    {
+      "title_zh": "坝陵河大桥云端漫步",
+      "title_en": "Skywalking the Balinghe Bridge",
+      "desc_zh": "有胆就去坝陵河大桥云端漫步；时间充足，还可远眺世界第一高的花江峡谷大桥。",
+      "desc_en": "For the bold, a sky-walk across the Balinghe Bridge — and with time to spare, a glimpse of the Huajiang Grand Canyon Bridge, the tallest in the world."
+    },
+    {
+      "title_zh": "沙嘎 · 彝寨千年史诗",
+      "title_en": "Shaga — A Yi Village's Thousand-Year Epic",
+      "desc_zh": "漫步沙嘎寨，聆听村寨往昔。完整的彝家老宅、宗祠与农耕体系犹存，村内黄氏祠堂曾是红军驻地，留存珍贵的革命标语。白日闲坐庭前看云卷云舒，入夜在没有光污染的星空下，与山野一同呼吸入眠。",
+      "desc_en": "Wander Shaga and listen to the village's old stories. Intact Yi homesteads, ancestral halls and farming traditions remain; the Huang family hall once sheltered the Red Army and still bears precious revolutionary slogans. Sit in the courtyard by day watching clouds gather and part; by night, beneath skies free of light pollution, breathe and sleep in rhythm with the mountains."
+    },
+    {
+      "title_zh": "沙嘎 · 漆扇与手工糯米饭",
+      "title_en": "Shaga — Lacquer Fans & Handmade Glutinous Rice",
+      "desc_zh": "在烟火小事里邂逅山野独有的悠然意趣：体验漆扇手作、亲手制作手工糯米饭（16:00-17:00，每份适用2位成人、1位儿童）。",
+      "desc_en": "Find the unhurried delight particular to these mountains in small, homely rituals — crafting a marbled lacquer fan and shaping glutinous rice by hand (16:00–17:00, each session for two adults and one child)."
+    },
+    {
+      "title_zh": "雅路古 · 国内首座岩洞野奢酒店",
+      "title_en": "Yalugu — China's First True Cave Lodge",
+      "desc_zh": "作为国内首座真正意义上的岩洞野奢酒店，雅路古依丹霞岩洞而筑，最大程度保留原始岩壁的自然肌理，带来绝无仅有的栖息体验。",
+      "desc_en": "China's first genuine cave wilderness-luxury hotel, Yalugu is built into a Danxia grotto, preserving the natural grain of the primeval rock walls for a habitat experience found nowhere else."
+    },
+    {
+      "title_zh": "雅路古 · 岩洞瀑布无边泳池",
+      "title_en": "Yalugu — The Cave Waterfall Infinity Pool",
+      "desc_zh": "最震撼的莫过于岩洞瀑布无边泳池——在亿万年形成的赤色穹顶之下，伴着飞瀑流响与氤氲水雾，与山野自然相融共生。夜深时分，在洞穴独有的空灵回响中安睡。",
+      "desc_en": "Most breathtaking of all is the cave waterfall infinity pool — beneath a crimson dome shaped over hundreds of millions of years, amid the roar of falling water and drifting mist, you merge with the wild. Late at night, sleep within the cave's singular, ethereal echo."
+    },
+    {
+      "title_zh": "雅路古 · 宋代点茶与植弥手作",
+      "title_en": "Yalugu — Song-Dynasty Tea Whisking & Botanical Craft",
+      "desc_zh": "体验宋代点茶、植弥手作（14:00-15:30，每份适用2位成人）；夜晚还可于火塘品酒（21:00-21:30）。",
+      "desc_en": "Whisk tea in the Song-dynasty manner and try a session of botanical craft (14:00–15:30, each for two adults); by night, savour a tasting by the hearth fire (21:00–21:30)."
+    },
+    {
+      "title_zh": "三庐皆有的围炉煮茶",
+      "title_en": "Tea by the Brazier at Every Lodge",
+      "desc_zh": "三店均设围炉煮茶——傍晚时分围炉而坐，回味一整天的山野美好。",
+      "desc_en": "All three lodges offer tea brewed over a glowing brazier — gather round at dusk and let the day's mountain pleasures linger."
+    },
+    {
+      "title_zh": "山野旅拍",
+      "title_en": "Mountain Photography Session",
+      "desc_zh": "于阅山、雅路古提供旅拍体验（提前一天预约，每间房3张精修），在古朴石寨与丹霞洞穴间定格山野光影。",
+      "desc_en": "Photography sessions at Yueshan and Yalugu (book one day ahead, three retouched images per room) capture the light and shadow of the wild among old stone villages and Danxia caves."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "关岭黄牛肉火锅",
+      "name_en": "Guanling Yellow-Beef Hot Pot",
+      "desc_zh": "带皮黄牛肉新鲜现切后炖煮，肥瘦相间，紧实不柴，再煮上新鲜野菜，搭配贵州灵魂蘸水，人间美味不过如此。",
+      "desc_en": "Skin-on yellow beef, freshly sliced and simmered — firm yet tender, marbled just so — joined by wild greens and the soul of Guizhou dining, its fiery dipping sauce."
+    },
+    {
+      "name_zh": "断桥青椒鱼火锅",
+      "name_en": "Duanqiao Green-Pepper Fish Hot Pot",
+      "desc_zh": "关岭断桥一带独有的做法，青椒锅底清爽不油腻，夏天吃也毫无负担，连汤都能喝光。",
+      "desc_en": "A method unique to the Duanqiao area of Guanling: a green-pepper broth that is bright and never greasy, easy to enjoy even in summer — you'll drain the bowl."
+    },
+    {
+      "name_zh": "关岭布依酸汤鱼",
+      "name_en": "Guanling Bouyei Sour-Soup Fish",
+      "desc_zh": "米汤发酵成酸汤，搭配玉米粑，贵州吃鱼，鲜得不容置疑。",
+      "desc_en": "A sour soup fermented from rice broth, served with corn cakes — proof that no one does freshwater fish quite like Guizhou."
+    },
+    {
+      "name_zh": "安顺裹卷",
+      "name_en": "Anshun Guojuan Rolls",
+      "desc_zh": "薄如蝉翼的米皮裹入丰富馅料，街头风味小吃，酸辣爽口。",
+      "desc_en": "Gossamer-thin rice wrappers folded around a generous filling — a street-side classic, tangy, fiery and refreshing."
+    },
+    {
+      "name_zh": "石烤豆腐 · 烤小肠",
+      "name_en": "Stone-Grilled Tofu & Grilled Sausage",
+      "desc_zh": "豆腐只需配辣椒就吃得停不下；烤小肠金黄焦脆，滋滋冒油，能忍住不吃的人不多。",
+      "desc_en": "Tofu that, with nothing but chilli, you simply cannot stop eating; small intestine grilled golden and crisp, sizzling with fat — few have the willpower to resist."
+    },
+    {
+      "name_zh": "灌汤猪脚",
+      "name_en": "Soup-Filled Braised Pig's Trotter",
+      "desc_zh": "皮弹肉嫩，鲜香不腻，当地人颇为喜爱。",
+      "desc_en": "Springy skin and tender meat, savoury yet never heavy — a local favourite."
+    },
+    {
+      "name_zh": "脆哨面",
+      "name_en": "Cuishao Noodles",
+      "desc_zh": "手工碱水面搭配焦香的脆哨，汤汁鲜咸回甘。",
+      "desc_en": "Hand-pulled alkaline noodles crowned with crisp, fragrant pork cracklings in a broth that turns from savoury to subtly sweet."
+    },
+    {
+      "name_zh": "豆豉火锅",
+      "name_en": "Fermented Black-Bean Hot Pot",
+      "desc_zh": "豆豉做底，“臭香”浓郁，配饭一绝。",
+      "desc_en": "A broth built on fermented black beans, pungent and deeply aromatic — unbeatable over rice."
+    },
+    {
+      "name_zh": "毕节烙锅",
+      "name_en": "Bijie Griddle Hot Pot",
+      "desc_zh": "万物皆可烙，搭配秘制辣椒蘸水，吃了就停不下来。",
+      "desc_en": "Everything goes on the griddle, paired with a secret chilli dip — one bite and there's no stopping."
+    },
+    {
+      "name_zh": "腊肉火锅",
+      "name_en": "Cured-Pork Hot Pot",
+      "desc_zh": "土猪腊肉配山野鲜笋，咸香浓郁，佐饭绝佳。",
+      "desc_en": "Farmhouse cured pork with fresh mountain bamboo shoots — richly savoury and made for rice."
+    },
+    {
+      "name_zh": "筒筒笋炖腊猪蹄",
+      "name_en": "Bamboo-Shoot & Cured Trotter Stew",
+      "desc_zh": "丹霞山珍入菜，笋鲜肉香，唇齿留香。",
+      "desc_en": "The treasures of the Danxia hills in one pot — sweet bamboo, fragrant pork, a lingering finish."
+    },
+    {
+      "name_zh": "赤水豆花",
+      "name_en": "Chishui Tofu Pudding",
+      "desc_zh": "嫩白爽滑，豆香十足，搭配特色蘸水清爽解腻。",
+      "desc_en": "Silky, snow-white and full of soybean flavour, balanced by a bright local dipping sauce."
+    },
+    {
+      "name_zh": "赤水凉糕",
+      "name_en": "Chishui Chilled Rice Cake",
+      "desc_zh": "米香醇厚，淋上红糖浆，清甜解辣。",
+      "desc_en": "Mellow with rice fragrance and drizzled with brown-sugar syrup — cool, sweet and the perfect antidote to all that chilli."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐6晚住宿：匠庐·阅山2晚（清尘·双床 / 山影·大床）、匠庐·沙嘎2晚（舒享大床 / 标间）、匠庐·雅路古2晚（竹喧·近山林语标间 / 竹喧·林语大床），以实际资源情况安排为准，如有偏好请提前咨询；",
+        "默认安排2位成人共享一间标准间或大床房。"
+      ],
+      "items_en": [
+        "Six nights at JiangLu: two nights at JiangLu Yueshan (Qingchen twin / Shanying king), two nights at JiangLu Shaga (Comfort king / standard), two nights at JiangLu Yalugu (Zhuxuan near-forest standard / Zhuxuan forest king); room types subject to availability — please advise preferences in advance;",
+        "By default, two adults share one standard or king room."
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Transport & Driver Service",
+      "items_zh": [
+        "专业旅游车队司服；",
+        "接送机站服务，独立成团默认配备5座基础车型，同行人数较多可升级商务车（更换车型请提前告知并补齐差价）；",
+        "每日外出所需往返民宿用车（首尾两天仅含民宿与机场/车站往返接送，无额外行程）。每日用车时间为9-19点，不超300公里，不含夜间用车与跨省用车，超出需另付车费。"
+      ],
+      "items_en": [
+        "A professional driver-and-vehicle fleet service;",
+        "Airport and station transfers; private departures travel by default in a 5-seat vehicle, with an upgrade to a business van available for larger parties (advise in advance and settle any difference);",
+        "Daily return transport between lodge and outings (the first and last days cover only lodge-to-airport/station transfers, with no additional itinerary). Vehicle hours are 09:00–19:00, capped at 300 km, excluding night and cross-province use; anything beyond incurs an extra charge."
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐；",
+        "免费享用欢迎水果甜品；",
+        "小冰箱内迷你吧小食饮品每日畅享；",
+        "晚安甜品。"
+      ],
+      "items_en": [
+        "Daily breakfast at each lodge;",
+        "Complimentary welcome fruit and dessert;",
+        "Unlimited daily access to the in-room mini-bar snacks and drinks;",
+        "A nightly goodnight treat."
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "In-Stay Privileges",
+      "items_zh": [
+        "三店均有围炉煮茶；",
+        "匠庐·沙嘎：漆扇制作、手工糯米饭制作（16:00-17:00，每份适用2位成人、1位儿童，前台领取）；",
+        "匠庐·雅路古：宋代点茶与植弥手作（14:00-15:30，每份2位成人）、丙安古镇门票（每间房2张，适用2名成人）、火塘品酒（21:00-21:30，每份2位成人），均于前台领取；",
+        "匠庐·阅山 / 雅路古旅拍体验（提前一天预约，每间房3张精修，不可转赠、不叠加使用，超出或额外需求请提前咨询前台）。"
+      ],
+      "items_en": [
+        "Tea brewed over a brazier at all three lodges;",
+        "JiangLu Shaga: lacquer-fan making and handmade glutinous rice (16:00–17:00, each for two adults and one child, collected at reception);",
+        "JiangLu Yalugu: Song-dynasty tea whisking and botanical craft (14:00–15:30, each for two adults), Bing'an Old Town tickets (two per room, for two adults) and a fireside tasting (21:00–21:30, for two adults), all collected at reception;",
+        "Photography session at JiangLu Yueshan / Yalugu (book one day ahead, three retouched images per room; non-transferable, non-combinable; for extras or special requests, please consult reception in advance)."
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额50万元（如需更高保额可自行投保）。"
+      ],
+      "items_en": [
+        "Personal travel accident insurance for the duration of the trip, with coverage of RMB 500,000 (higher coverage may be arranged independently)."
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "从出发地与目的地之间的往返大交通（机票、高铁票等）；",
+    "行程中除酒店早餐外的所有餐食费用；",
+    "景点门票、手工体验活动等自选项目，以及“费用包含”条款中未提及的其他费用；",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约并补齐费用；",
+    "因不可抗力因素（如自然灾害、政府政策、航班延误等）造成的额外支出；",
+    "因违约、自身过错、自由活动期间个人行为或自身疾病引起的人身和财产损失。"
+  ],
+  "exclusions_en": [
+    "Round-trip long-distance transport between your home city and the destination (flights, high-speed rail, etc.);",
+    "All meals during the trip other than lodge breakfasts;",
+    "Optional items such as attraction tickets and hands-on craft activities, and any other costs not listed under 'Inclusions';",
+    "As a self-guided product the driver provides transfers only; a dedicated guide or tour leader can be arranged in advance for an additional fee;",
+    "Additional expenses arising from force majeure (natural disasters, government policy, flight delays, etc.);",
+    "Personal injury or property loss caused by breach of contract, personal fault, individual conduct during free time, or one's own illness."
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团的单人价格。",
+    "第三人为15岁及以上者不可同住一间房；单男 / 单女无法与他人同住一间房，或孩童需单独占床时，需补齐单房差价4000元/人（有特殊房型的门店可补差入住家庭房或亲子房）。",
+    "如携带1位孩童与2位成人同住同行：6岁以下不加床2500元/人；6-14岁不加床3500元/人。",
+    "携带多位孩童出行，及其他出行人数、入住房间的组合价格，请咨询客服。",
+    "15周岁及以上入住视为成人，14周岁及以下视为孩童。"
+  ],
+  "pricing_notes_en": [
+    "Prices are per person based on a party of two.",
+    "A third guest aged 15 or over may not share a room; a single male/female guest who cannot share, or a child requiring a separate bed, must pay the single-room supplement of RMB 4,000 per person (lodges with special room types may instead upgrade to a family or parent-child room for the difference).",
+    "For one child travelling and rooming with two adults: under 6 (no extra bed) RMB 2,500 per child; ages 6–14 (no extra bed) RMB 3,500 per child.",
+    "For multiple children, other group sizes or alternative room combinations, please consult our team.",
+    "Guests aged 15 and over are treated as adults; those 14 and under as children."
+  ],
+  "cancellation_zh": [
+    "预订旅行产品须支付全款方可确认预订。",
+    "行程开始前15天及以上（不含出发当天）可申请无损取消及退款。",
+    "行程开始前8-14天（不含出发当天）申请取消，需收取订单金额的30%作为临时取消损失。",
+    "行程开始前0-7天申请取消，需收取订单金额的50%作为临时取消损失。",
+    "因不可抗力（航班取消、疾病、自然灾害、政府官方文件不可出行等）并提供证明者可无损退款，预约后退款需自行承担平台产生的手续费部分。"
+  ],
+  "cancellation_en": [
+    "A booking is confirmed only upon payment in full.",
+    "15 or more days before the trip begins (excluding the departure day): cancellation and refund without penalty.",
+    "8–14 days before the trip begins (excluding the departure day): cancellation incurs a charge of 30% of the order value as a late-cancellation loss.",
+    "0–7 days before the trip begins: cancellation incurs a charge of 50% of the order value as a late-cancellation loss.",
+    "Cancellations due to documented force majeure (flight cancellation, illness, natural disaster, official no-travel directives, etc.) are refunded without penalty; any platform processing fees on the refund are borne by the guest."
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前确认证件在有效期内。",
+    "贵州是全国唯一没有平原的省份，山地较多，各景点之间车程距离与时间相对较长，易晕车者请提前自备防晕车药品，并根据出行季节、天气备好应季衣物。",
+    "村落、古镇内多为石板路，建议穿着舒适运动鞋，不宜穿高跟鞋或皮鞋；靠近瀑布可能打湿衣鞋，有瀑布行程当天建议备好更换衣物。",
+    "贵州受季风影响、冷暖气流交汇频繁，夏季为雨季，雨来得快去得也快，需备好雨衣雨具；山区早晚温差大，需备外套。",
+    "按需自备洗护用品、充电宝、充电线、耳机、防蚊用品及常用药品（感冒药、退烧贴、肠胃药、晕车药等）。",
+    "贵州饮食整体偏酸辣，若不适应酸辣或发酵食物，点餐时可明确说明“少酸少辣”“不要太咸”。",
+    "在少数民族地区应尊重当地传统习俗与生活禁忌；逛古村古寨时，不随意触碰鼓楼、萨坛、古树、神树等被视为神圣之物。"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check in advance that they are within their validity period.",
+    "Guizhou is the only province in China with no plains; it is mountainous and drives between sights are relatively long. Those prone to motion sickness should bring remedies, and pack clothing suited to the season and weather of your travel dates.",
+    "Villages and old towns are mostly paved with stone slabs — wear comfortable trainers rather than heels or leather shoes; near waterfalls clothing and shoes may get wet, so carry a change of clothes on waterfall days.",
+    "Guizhou's monsoon climate brings frequent meetings of warm and cold air, and summer is the rainy season — showers come and go quickly, so bring rain gear; mornings and evenings in the mountains are cool, so pack a jacket.",
+    "Bring your own toiletries, power bank, charging cables, earphones, insect repellent and any personal medicines (cold medicine, fever patches, stomach remedies, motion-sickness pills, etc.) as needed.",
+    "Guizhou cuisine tends toward sour and spicy; if sour or fermented food doesn't suit you, simply ask for 'less sour, less spicy' and 'not too salty' when ordering.",
+    "In ethnic-minority areas, respect local customs and taboos; when visiting old villages, do not casually touch drum towers, sa altars, ancient trees, sacred trees or other objects held to be sacred."
+  ],
+  "faq": [
+    {
+      "q_zh": "这是跟团游还是自由行？",
+      "q_en": "Is this a group tour or a self-guided trip?",
+      "a_zh": "这是自由行产品，行程仅供参考，可根据个人偏好与当地实际情况灵活调整。匠庐仅提供住宿及车辆服务，由专业司服接送至目的地；如需额外导游领队，可提前沟通预约并补齐费用。",
+      "a_en": "This is a self-guided product. The itinerary is a suggestion and can be adjusted to suit your preferences and on-the-ground conditions. JiangLu provides accommodation and transport only, with a professional driver handling transfers; a dedicated guide or tour leader can be arranged in advance for an additional fee."
+    },
+    {
+      "q_zh": "怎么抵达？接送在哪里？",
+      "q_en": "How do I get there, and where are the transfers?",
+      "a_zh": "行程第一天于安顺或贵阳接机接站，最后一天送往泸州送站送机。大交通（机票、高铁票等）需自理，落地后由专属车队衔接全程。",
+      "a_en": "On Day 1 you are met at Anshun or Guiyang; on the final day you are transferred to Luzhou for departure. Long-distance transport (flights, high-speed rail) is at your own arrangement, after which the private fleet connects the entire journey on the ground."
+    },
+    {
+      "q_zh": "三家匠庐有什么不同？",
+      "q_en": "How do the three JiangLu lodges differ?",
+      "a_zh": "匠庐·阅山立于坝陵河峡谷崖壁，以270°山水落地窗与顶楼无边际泳池著称；匠庐·沙嘎藏于彝寨深处，是看星空、品味千年村寨史诗的静心之所；匠庐·雅路古为国内首座岩洞野奢酒店，依丹霞岩洞而筑，可在岩洞瀑布无边泳池中枕瀑布与星河入眠。",
+      "a_en": "JiangLu Yueshan stands on the cliffs of Balinghe Gorge, known for its 270-degree panoramic windows and rooftop infinity pool; JiangLu Shaga hides deep within a Yi village, a place of stillness for stargazing and a thousand-year village epic; JiangLu Yalugu is China's first cave wilderness-luxury hotel, built into a Danxia grotto, where its cave waterfall infinity pool lets you sleep beneath falling water and the stars."
+    },
+    {
+      "q_zh": "适合带孩子同行吗？",
+      "q_en": "Is this trip suitable for travelling with children?",
+      "a_zh": "适合。携带1位孩童与2位成人同住时，6岁以下（不加床）2500元/人，6-14岁（不加床）3500元/人；漆扇、手工糯米饭等部分体验每份适用2位成人与1位儿童。多位孩童或其他房型组合请咨询客服。",
+      "a_en": "Yes. For one child rooming with two adults, the rate is RMB 2,500 for children under 6 (no extra bed) and RMB 3,500 for ages 6–14 (no extra bed); several experiences, such as the lacquer fan and handmade glutinous rice, accommodate two adults and one child per session. For multiple children or other room combinations, please consult our team."
+    }
+  ],
+  "closing_zh": "七天，三庐，从喀斯特峰林到丹霞赤壁，从乌蒙秘境到土城旧梦——在这场横跨三大地貌的听瀑计划里，住宿本身已成为旅程的华彩篇章。当繁花落尽，故事才真正开始；在洞穴里，枕着瀑布声与星河入眠，这种体验，此生难忘。",
+  "closing_en": "Seven days, three lodges — from karst pinnacle forests to crimson Danxia cliffs, from the secret folds of the Wumeng Mountains to the old dreams of Tucheng. In these Waterfall Sessions across three landscapes, the stay itself becomes the journey's most luminous chapter. When the last blossoms fall, the story truly begins; and to fall asleep within a cave, lulled by the sound of the falls and the river of stars, is an experience to keep for a lifetime.",
+  "price_from": 8688,
+  "price_currency": "CNY",
+  "poster_image": "听瀑计划.jpg",
+  "lodge_images": [
+    "jianglu-yueshan/g01-航拍.jpg",
+    "jianglu-yueshan/g02-公区.jpg",
+    "jianglu-yueshan/g03-集装箱1.jpg",
+    "jianglu-yueshan/g04-集装箱2.jpg",
+    "jianglu-yueshan/g05-配套.jpg"
+  ]
+}

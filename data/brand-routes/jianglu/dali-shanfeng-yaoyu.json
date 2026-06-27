@@ -1,0 +1,377 @@
+{
+  "slug": "dali-shanfeng-yaoyu",
+  "region_zh": "大理",
+  "region_en": "Dali",
+  "title_zh": "山风窑语・苍洱闲行",
+  "title_en": "Mountain Winds & Kiln Whispers: An Unhurried Sojourn by Cangshan and Erhai",
+  "subtitle_zh": "大理轻奢旅居·人文田园线 5天4晚自由行",
+  "subtitle_en": "Dali Boutique Slow-Living · Culture & Countryside Route — 5 Days / 4 Nights, Independent Travel",
+  "days": 5,
+  "nights": 4,
+  "duration_zh": "5天4晚",
+  "duration_en": "5 Days / 4 Nights",
+  "lodge_zh": "金梭岛匠庐·蜜湾",
+  "lodge_en": "JiangLu · Honey Bay, Jinsuo Island",
+  "hero_image": "jianglu-miwan/hero.jpg",
+  "route_zh": "金梭岛匠庐·蜜湾 → 喜洲古镇·海舌公园·洱海骑行 → 敬天窑火瓦猫·云想山路极公园 → 彩虹猎人农场",
+  "route_en": "JiangLu · Honey Bay (Jinsuo Island) → Xizhou Old Town · Haishe Park · Erhai cycling → Jingtian kiln cat-tile craft · Yunxiang mountain park → Rainbow Hunter Farm",
+  "tags": [
+    {
+      "zh": "金梭岛隐奢岛居",
+      "en": "Hidden-Luxury Island Stay"
+    },
+    {
+      "zh": "喜洲白族古镇",
+      "en": "Xizhou Bai Old Town"
+    },
+    {
+      "zh": "六百年龙窑瓦猫",
+      "en": "600-Year Dragon-Kiln Craft"
+    },
+    {
+      "zh": "彩虹猎人农场",
+      "en": "Rainbow Hunter Farm"
+    },
+    {
+      "zh": "苍山洱海",
+      "en": "Cangshan & Erhai"
+    },
+    {
+      "zh": "自由行",
+      "en": "Independent Travel"
+    }
+  ],
+  "intro_zh": "世人皆念大理的风花雪月，而匠庐读懂的，是它褪去喧嚣后的本真与温润——苍山如屏，载着千年文脉的厚重，19座山峰连绵起伏，将澄澈的洱海温柔环抱。「苍山不墨千秋画，洱海无弦万古琴」的诗意秘境，更是匠庐寻觅已久的隐奢度假原乡。匠有悦人之心，庐有隐秘之美。我们避开大理人潮喧嚣，以金梭岛匠庐·蜜湾为唯一锚点，打造4晚5天自由行产品——不设固定日程，不追求「走马观花的热闹」，只愿你能真正「住进大理」，与山海、与文化、与自己温柔相遇，解锁匠庐式隐奢度假的终极浪漫。",
+  "intro_en": "The world dreams of Dali's wind, flowers, snow and moon — but what JiangLu truly understands is the gentle authenticity that remains once the noise falls away. Cangshan rises like a folding screen, carrying a millennium of cultural weight: nineteen peaks roll one into the next, cradling the clear blue waters of Erhai in a tender embrace. \"Cangshan, an inkless scroll of a thousand autumns; Erhai, a stringless lute of ten thousand ages\" — this poetic, half-hidden land is the very homeland of quiet luxury JiangLu has long been searching for. The craft delights the eye; the lodge keeps its secrets. Stepping away from Dali's crowds, we anchor the entire journey on a single point — JiangLu · Honey Bay on Jinsuo Island — and shape it as a 5-day, 4-night independent-travel experience. No fixed schedule, no rush to tick off sights. We ask only that you truly \"live in Dali,\" meeting the mountains and sea, the culture, and your own self with quiet tenderness — and unlock the ultimate romance of a JiangLu hidden-luxury escape.",
+  "overview": [
+    {
+      "day_zh": "D1",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "接机接站，入住匠庐·蜜湾",
+          "title_en": "Airport / High-Speed Rail Pickup, Check in at JiangLu · Honey Bay",
+          "desc_zh": "大理凤仪机场/大理高铁站接机接站，入住匠庐·蜜湾。车程15km/17km，约30-40分钟抵达塔村渡口，后换乘轮渡上岛。",
+          "desc_en": "Private transfer from Dali Fengyi Airport or Dali High-Speed Rail Station to JiangLu · Honey Bay. The drive (15 km / 17 km) takes roughly 30-40 minutes to Tacun ferry pier, where you board the ferry across to the island."
+        }
+      ]
+    },
+    {
+      "day_zh": "D2",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "喜洲古镇 - 海舌公园 - 洱海边骑行",
+          "title_en": "Xizhou Old Town · Haishe Park · Lakeside Cycling",
+          "desc_zh": "喜洲古镇漫步、海舌公园观海、洱海边骑行，入住匠庐·蜜湾。往返车程约130km，约2.5小时；离岛与回岛均需搭乘轮渡。",
+          "desc_en": "Wander the lanes of Xizhou Old Town, take in the lake views at Haishe Park, and cycle along the Erhai shoreline, then return to JiangLu · Honey Bay. Round-trip drive about 130 km / 2.5 hours; the ferry is required both leaving and returning to the island."
+        }
+      ]
+    },
+    {
+      "day_zh": "D3",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "敬天窑火瓦猫制作 - 云想山路极主题公园",
+          "title_en": "Jingtian Kiln Cat-Tile Craft · Yunxiang Mountain Park",
+          "desc_zh": "敬天窑火非遗瓦猫制作体验、云想山路极主题公园游玩，入住匠庐·蜜湾。往返车程约60km，约2.5小时；离岛与回岛均需搭乘轮渡。",
+          "desc_en": "A hands-on intangible-heritage workshop crafting a guardian \"cat-tile\" at the Jingtian dragon kiln, followed by the Yunxiang mountain adventure park, then back to JiangLu · Honey Bay. Round-trip drive about 60 km / 2.5 hours; ferry required in both directions."
+        }
+      ]
+    },
+    {
+      "day_zh": "D4",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "彩虹猎人农场体验",
+          "title_en": "Rainbow Hunter Farm Experience",
+          "desc_zh": "彩虹猎人农场田园体验，入住匠庐·蜜湾。往返车程约70km，约2.5小时；离岛与回岛均需搭乘轮渡。",
+          "desc_en": "A day of pastoral living at Rainbow Hunter Farm, then a return to JiangLu · Honey Bay. Round-trip drive about 70 km / 2.5 hours; ferry required in both directions."
+        }
+      ]
+    },
+    {
+      "day_zh": "D5",
+      "day_en": "Day 5",
+      "items": [
+        {
+          "title_zh": "送机送站",
+          "title_en": "Airport / High-Speed Rail Departure Transfer",
+          "desc_zh": "大理凤仪机场/大理高铁站送机送站。车程15km/17km，约1小时；离岛需先搭乘轮渡。",
+          "desc_en": "Private departure transfer to Dali Fengyi Airport or Dali High-Speed Rail Station. Drive 15 km / 17 km, about 1 hour; the ferry off the island is taken first."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·蜜湾",
+    "name_en": "JiangLu · Honey Bay",
+    "positioning_zh": "金梭岛西侧、悬于洱海之上的私藏岛居秘境",
+    "positioning_en": "A private island hideaway on the western edge of Jinsuo Island, suspended above Erhai Lake",
+    "desc_zh": "匠庐・蜜湾，独踞金梭岛西侧，悬于洱海之上，是苍洱间难得的私藏岛居秘境。金梭岛为洱海最大四面环海之岛，千年白族渔耕文脉深厚，扎染世家隐于巷陌，原生在地气息浑然天成；匠庐・蜜湾便藏于此，隐而不僻、秘而不宣，非管家引路难觅其踪。历时四年匠心打磨，仅设12间客房，以极简克制的设计，将自然还给山海。精选自然质感器物与白族风物陈设，不堆砌、不张扬，打造专属私密美学空间。每室均配高级床品、海景浴缸、定制茶具与小众美学读物，引苍山光影、洱海深蓝入室，让山海成为唯一奢饰，于寸室间尽揽苍洱全景，成就匠庐独有的隐奢栖居。关于匠庐：匠庐以云贵为开端，不断踏上征途，探寻山河之美，致力于度假酒店及民宿的开发与运营，专注发掘小而美的隐奢度假之地。每一个匠庐都是「旅行目的地」。「匠庐」不仅是一个居所，它更容纳着数以万计旅居者对美好旅行的期待。我们不断探索和创新，为每一位到达匠庐的朋友体验跨越千年、历久弥新的在地生活，呈现一场慢速印象美学。",
+    "desc_en": "JiangLu · Honey Bay stands alone on the western flank of Jinsuo Island, poised above the waters of Erhai — a rare, private island retreat among the mountains and lake. Jinsuo is the largest fully encircled island on Erhai, steeped in a thousand years of Bai fishing and farming heritage; families of master tie-dyers still live tucked away in its lanes, and an unforced sense of place pervades everything. Here Honey Bay hides itself — secluded yet never remote, discreet yet never austere — so well concealed that without a butler to lead the way it is nearly impossible to find. Four years in the making, the lodge holds just 12 guest rooms. Its restrained, minimalist design hands nature back to the mountains and sea, dressed only with naturally textured objects and Bai folk pieces — never cluttered, never showy — to form an intimate, deeply personal aesthetic space. Every room is appointed with fine linens, a lake-view bathtub, a bespoke tea set and a curated shelf of art reading, drawing the play of Cangshan's light and the deep blue of Erhai indoors so that the landscape itself becomes the only adornment — the full Cang-Er panorama gathered within a single room, the very essence of JiangLu's hidden-luxury living. About JiangLu: Beginning in Yunnan and Guizhou, JiangLu has continued its journey in search of the beauty of mountains and rivers, devoted to developing and operating resort hotels and boutique lodges and to uncovering small, exquisite hidden-luxury places of escape. Every JiangLu is a \"destination\" in itself. More than a place to stay, JiangLu holds the hopes of tens of thousands of travelers for a beautiful journey. Through constant exploration and innovation, we invite every guest who arrives to experience a local way of life that spans a millennium yet feels ever new — an unhurried, impressionistic aesthetic of slow travel.",
+    "stats": [
+      {
+        "label_zh": "客房",
+        "label_en": "Rooms",
+        "value": "12"
+      },
+      {
+        "label_zh": "打磨时间",
+        "label_en": "Years in the Making",
+        "value": "4"
+      },
+      {
+        "label_zh": "位置",
+        "label_en": "Location",
+        "value": "金梭岛 / Jinsuo Island"
+      },
+      {
+        "label_zh": "轮渡船程",
+        "label_en": "Ferry Crossing",
+        "value": "约5分钟 / ~5 min"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "回望活着的文化 · 喜洲古镇",
+      "title_en": "Living Culture · Xizhou Old Town",
+      "desc_zh": "百年白族聚落，青瓦白墙映着田园光影。漫走石板街巷，看「三坊一照壁」的建筑肌理，尝现烤乳扇、喜洲粑粑，触摸白族生活本真，不赶时间，只享人间烟火。喜洲之美随四季悄然更迭，6–12月各有风韵：6-8月是宫崎骏般治愈的夏天，田畴新绿如绘，小火车穿行其间，浅色系穿搭最出片；9月底-11月是大地鎏金的丰收画卷，稻浪鎏金映着蓝天苍山，9-10月景致最佳，秋日摄影首选；12月-次年2月是静美的古镇时光，田野休耕、游客稀少，暖阳下慢逛街巷，独享安静烟火气。",
+      "desc_en": "A centuries-old Bai settlement where grey tiles and white walls catch the light of the surrounding fields. Stroll the flagstone lanes, trace the architecture of the classic \"three wings and a spirit wall\" courtyards, taste freshly grilled rushan cheese and Xizhou baba flatbread, and touch the unvarnished rhythm of Bai life — no hurry, just the warmth of everyday living. Xizhou's beauty shifts quietly with the seasons, each month from June to December carrying its own charm. June to August is a healing, Miyazaki-like summer: fresh green paddies like a painting, a little train threading through them, light-toned outfits the most photogenic. Late September to November is a gilded harvest tableau: golden waves of rice against blue sky and the Cangshan ridge — September and October at their finest, the season's first choice for photography. December to February is the old town at its serene best: fields lying fallow, few visitors, slow wanders through the lanes under a warm sun, the quiet glow of daily life all to yourself."
+    },
+    {
+      "title_zh": "耳畔追风 · 海舌公园",
+      "title_en": "Chasing the Wind · Haishe Park",
+      "desc_zh": "这座形似舌头伸入洱海的自然半岛，三面环水、古木参天，可在此静坐观海，捕捉苍山洱海的治愈光影；也可沿洱海生态廊道短途骑行，无机动车惊扰，让身心在自然间彻底舒展。",
+      "desc_en": "A natural peninsula shaped like a tongue reaching into Erhai — water on three sides, ancient trees towering overhead. Sit quietly and watch the lake, catching the healing light of Cangshan and Erhai; or take a short ride along the Erhai eco-corridor, undisturbed by traffic, letting body and mind unwind completely in nature."
+    },
+    {
+      "title_zh": "非遗造物 · 敬天窑火瓦猫制作",
+      "title_en": "Heritage Craft · Making a Guardian Cat-Tile at Jingtian Kiln",
+      "desc_zh": "隐于苍洱间的敬天村，自明代起便窑火不息，六百年柴烧龙窑薪火相传，是大理土陶技艺的根脉所在。非遗传承人董建华（第十代制陶人）返乡守艺，将古窑匠心与白族文脉相融。于工坊内揉泥塑形、刻纹上色，亲手缔造瑞兽瓦猫，在指尖与陶土的对话中，读懂古村窑火的滚烫岁月与白族祈福纳祥的美好期许。",
+      "desc_en": "Tucked among the mountains and lake, the village of Jingtian has kept its kilns burning since the Ming dynasty — six hundred years of a wood-fired dragon kiln passed from hand to hand, the very root of Dali's earthenware tradition. Intangible-heritage inheritor Dong Jianhua, a tenth-generation potter, returned home to keep the craft alive, blending the artistry of the ancient kiln with Bai cultural lineage. In the workshop you knead and shape the clay, carve patterns and apply color, and form your own auspicious \"cat-tile\" guardian beast by hand — reading, in the dialogue between fingertips and clay, the blazing years of the village kiln and the Bai people's hopes for blessing and good fortune."
+    },
+    {
+      "title_zh": "山野的速度与激情 · 云想山路极主题公园",
+      "title_en": "Speed in the Hills · Yunxiang Mountain Adventure Park",
+      "desc_zh": "山野间的轻趣之选，无动力卡丁车穿行林间，无轰鸣噪音，风过耳畔，自在松弛。若玩累，还可以在那里喝喝咖啡、吃点东西。登顶远眺，苍山洱海铺展眼底，天气好的话还能观看到日落和蓝调时刻，山野辽阔，风清云淡，动静之间尽得自然意趣。",
+      "desc_en": "A light-hearted choice among the hills: gravity-powered go-karts winding through the woods, no roaring engines — just wind past your ears and an easy sense of release. When you've had your fill, linger over coffee and a bite to eat. Reach the summit and Cangshan and Erhai unfold beneath you; on a clear day you may catch the sunset and the blue hour. Wide-open hills, light breeze and drifting cloud — between motion and stillness, the full delight of nature."
+    },
+    {
+      "title_zh": "田园归野 · 彩虹猎人农场",
+      "title_en": "Back to the Land · Rainbow Hunter Farm",
+      "desc_zh": "彩虹猎人农场是一个「长出来」的自然空间，坐落于苍山与洱海间的田野，没有招牌，只待有缘人相见。这里藏着「不急」的生活方式，农场伙伴在此耕种、酿酒、料理，分享最本真的田园生活。你可以漫步田埂，辨认香草的名字与风味；可以参与「猎人的风味梅子酒实验工作坊」，亲手酿造一瓶专属的云南风味梅子酒，封存大理的味道；也可以坐在草地上，看苍山顶的云卷云舒，品尝农场现做的有机餐食与香草茶饮，在烟火气中找回久违的松弛感。",
+      "desc_en": "Rainbow Hunter Farm is a natural space that seems to have simply \"grown\" out of the fields between Cangshan and Erhai — no signboard, waiting only for those meant to find it. Here lives an unhurried way of being: the farm's friends grow, brew, and cook, sharing the most authentic of pastoral lives. Wander the field paths and learn the names and flavors of the herbs; join the \"Hunter's Plum-Wine Flavor Lab\" workshop to brew your own bottle of Yunnan-style plum wine and seal in the taste of Dali; or simply sit on the grass watching the clouds gather and unfurl over Cangshan's peaks, savoring the farm's freshly made organic fare and herbal teas — and rediscovering a long-lost sense of ease."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "彩虹渔家·百年古院餐厅",
+      "name_en": "Rainbow Fisherman · Century-Old Courtyard Restaurant",
+      "desc_zh": "白族原住渔民经营，古院烟火气十足，主打白族酸辣鱼、薄荷排骨等洱海特色菜品。",
+      "desc_en": "Run by indigenous Bai fishing families, this old courtyard brims with everyday warmth. Signature dishes include Bai-style sour-and-spicy fish and mint-stewed pork ribs, showcasing the flavors of Erhai."
+    },
+    {
+      "name_zh": "妈妈馆子铺",
+      "name_en": "Mama's Kitchen",
+      "desc_zh": "杏树下的庭院餐馆，原生态食材打造酸辣丁桂鱼、松茸炖鸡等家常菜，藏着家的温馨滋味。",
+      "desc_en": "A courtyard eatery beneath an apricot tree, turning local, all-natural ingredients into homestyle dishes such as sour-and-spicy mandarin fish and matsutake-stewed chicken — the warm, comforting taste of home."
+    },
+    {
+      "name_zh": "白族三道茶",
+      "name_en": "Bai Three-Course Tea Ceremony",
+      "desc_zh": "白语叫「绍道兆」，是白族人待客的最高礼仪，也像是一场「人生模拟器」，用「一苦、二甜、三回味」三杯茶代表人生的三重滋味，是一种充满仪式感和人生哲理的饮茶方式。",
+      "desc_en": "Called \"Shao Dao Zhao\" in the Bai language, this is the highest courtesy the Bai people extend to guests — almost a \"simulator of life.\" Three cups — first bitter, then sweet, then lingering aftertaste — represent life's three flavors, a deeply ceremonial way of taking tea steeped in philosophy."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐·蜜湾4晚住宿",
+        "揽月·海景大床房、浮影·海景大床房、等风·海景双床房三选一，以实际资源情况安排为准；如有偏好，请提前咨询",
+        "默认安排2位成人共享一间标准间或大床房"
+      ],
+      "items_en": [
+        "4 nights at JiangLu · Honey Bay",
+        "One of three lake-view rooms: Lanyue (Moon-Gathering) King, Fuying (Floating Reflection) King, or Dengfeng (Awaiting the Wind) Twin — assigned subject to availability; please advise preferences in advance",
+        "Default arrangement is two adults sharing one standard or king room"
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Vehicle Service",
+      "items_zh": [
+        "专业旅游车队司服",
+        "接送机站用车，独立成团均为别克商务车或同级别车型；如需更换车型，请提前告知并补齐相应差价",
+        "每日外出所需往返民宿用车（首尾两天仅含民宿往返接送机站用车，无额外行程）",
+        "为安全起见，每日用车时间为9:00-19:00，不超300公里，不含夜间用车、跨省用车，超出需支付额外车费"
+      ],
+      "items_en": [
+        "Professional tour fleet with driver service",
+        "Airport / station transfers; for private (independent) groups, a Buick MPV or equivalent — to change vehicle class, please notify in advance and pay the applicable difference",
+        "Daily round-trip vehicle to and from the lodge for outings (first and last days include only the lodge-to-airport/station transfer, with no additional itinerary)",
+        "For safety, daily vehicle hours are 9:00-19:00, within 300 km; night use and cross-province use are excluded — additional charges apply for any overage"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐",
+        "赠送欢迎水果甜品",
+        "小冰箱内迷你吧小食饮品每日畅享",
+        "晚安甜品"
+      ],
+      "items_en": [
+        "Daily breakfast at the lodge",
+        "Complimentary welcome fruit and dessert",
+        "Daily complimentary in-room minibar snacks and beverages",
+        "Goodnight dessert"
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "In-Stay Privileges",
+      "items_zh": [
+        "白族三道茶：接待时间15:00-16:30，体验地点酒店茶室",
+        "甲马拓印：接待时间15:00-22:00，体验地点酒店大堂（以上两项于酒店前台领取，入住期间每人可享一次）",
+        "围炉煮茶：接待时间19:00-22:00，入住期间每晚可享，于接待时间内自行前往酒店壁炉区体验",
+        "旅拍体验：免费体验30分钟拍摄，每间房赠送三张精美初修或五张精美原片（提前一天预约，赠送张数不可转赠，每组住店客人仅赠一次、不叠加，超出/额外需求请提前咨询前台）"
+      ],
+      "items_en": [
+        "Bai Three-Course Tea: served 15:00-16:30 in the lodge tea room",
+        "Jiama woodblock printing: 15:00-22:00 in the lodge lobby (the above two are collected at the front desk; one experience per guest during the stay)",
+        "Fireside tea: 19:00-22:00, available every night of the stay; visit the lodge fireplace area on your own within these hours",
+        "Travel photo session: a complimentary 30-minute shoot, with three finely retouched images or five fine unedited images per room (book one day ahead; the gifted images are non-transferable, offered once per guest group and non-cumulative — for additional needs please consult the front desk in advance)"
+      ]
+    },
+    {
+      "category_zh": "金梭岛往返船票",
+      "category_en": "Jinsuo Island Round-Trip Ferry",
+      "items_zh": [
+        "两人次金梭岛轮渡船票，船程约5分钟，渡船运营时间6:30至23:00，约15分钟一班",
+        "需您先购买上岛船票（10元/位，不超过每间客房允许的入住人数），由我们全额报销"
+      ],
+      "items_en": [
+        "Round-trip Jinsuo Island ferry for two persons; crossing about 5 minutes, ferry operating 6:30-23:00, roughly every 15 minutes",
+        "You first purchase the boarding ticket (10 RMB/person, not exceeding each room's permitted occupancy), which we reimburse in full"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额50万元；若有更高保额需求，可根据需求自行投保"
+      ],
+      "items_en": [
+        "Personal travel accident insurance during the trip, with coverage of RMB 500,000; for higher coverage, you may purchase additional insurance as needed"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "从出发地与目的地之间的往返大交通（机票/高铁票等）",
+    "行程中除酒店早餐外的所有餐食费用",
+    "景点门票/农场体验活动等自选项目，以及「费用包含」条款中未提及的其他费用",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约补齐费用",
+    "因不可抗力因素（如自然灾害、政府政策、航班延误等）造成的额外支出",
+    "因违约、自身过错、自由活动期间内个人行为或自身疾病引起的人身和财产损失"
+  ],
+  "exclusions_en": [
+    "Long-haul transport between your origin and the destination (flights, high-speed rail tickets, etc.)",
+    "All meals during the trip other than hotel breakfast",
+    "Optional items such as attraction tickets and farm experiences, and any costs not stated in the \"Inclusions\"",
+    "This is independent travel with driver transfers to destinations; if a separate guide or tour leader is required, please arrange in advance and pay the corresponding fee",
+    "Extra expenses caused by force majeure (natural disasters, government policy, flight delays, etc.)",
+    "Personal injury or property loss arising from breach of contract, personal fault, individual conduct during free activities, or one's own illness"
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团的单人价格",
+    "第三人为15岁及以上不可同住一间房；单男/单女无法与他人同住1间房、孩童需单独占床时，需补齐单房差价2100元/人",
+    "如携带1位孩童与2成人同住同行，孩童价格：6岁以下（不加床）1000元/人；6-14岁（不加床）1500元/人",
+    "携带多位孩童出行，及其他出行人数、入住房间的组合价格，请咨询客服",
+    "15周岁及以上入住视为成人，14周岁及以下视为孩童"
+  ],
+  "pricing_notes_en": [
+    "Price shown is per person, based on a group of 2",
+    "A third guest aged 15 or above cannot share one room; for a solo male/female guest who cannot share with others, or a child requiring a separate bed, a single-room supplement of RMB 2,100/person applies",
+    "If traveling with 1 child and 2 adults sharing: child under 6 (no extra bed) RMB 1,000/person; child aged 6-14 (no extra bed) RMB 1,500/person",
+    "For multiple children, other group sizes, or different room combinations, please consult customer service",
+    "Guests aged 15 and above are treated as adults; those 14 and under as children"
+  ],
+  "cancellation_zh": [
+    "预订旅行产品须支付全款方可确认预订",
+    "行程开始前15天及以上（不含出发当天），可申请无损取消及退款",
+    "行程开始前8-14天（不含出发当天），申请取消需收取订单金额的30%作为临时取消损失",
+    "行程开始前0-7天，申请取消需收取订单金额的50%作为临时取消损失",
+    "因不可抗力原因（航班取消、疾病、自然灾害、政府官方文件不可出行等）提供证明可无损退款，退款时平台产生的手续费部分由本人自行承担"
+  ],
+  "cancellation_en": [
+    "Full payment is required to confirm a booking",
+    "15 or more days before the trip starts (excluding the departure day): cancellation and refund with no penalty",
+    "8-14 days before the trip starts (excluding the departure day): cancellation incurs 30% of the order value as a short-notice loss",
+    "0-7 days before the trip starts: cancellation incurs 50% of the order value as a short-notice loss",
+    "For force majeure (flight cancellation, illness, natural disaster, official government documents prohibiting travel, etc.) with proof, a no-penalty refund applies; any platform transaction fees on the refund are borne by the guest"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前检查证件是否在有效期内",
+    "大理素有「一雨成冬、早晚凉、午间晒」的特点，昼夜温差大且有「下关风」，早晚需加防风外套，下装以舒适长裤为主。高原紫外线极强且洱海水面反射强，即使阴天也需备好防晒霜、唇膏、墨镜、防晒面罩或魔术头巾",
+    "农场体验、运动公园、骑行及古镇漫步项目建议穿舒适运动鞋，不建议穿高跟鞋或皮鞋，运动衣物最好备速干T恤、运动外衣裤等",
+    "按需自备个人洗护用品、充电宝、充电线、耳机、防蚊用品，以及适合自身的常用药品（感冒药、退烧贴、肠胃药、晕车药等）",
+    "大理食物注重酸辣鲜香，若有忌口可在用餐前提前说明",
+    "在少数民族地区应尊重当地传统习俗与生活禁忌，避免造成误会"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check they are within their validity period before you travel",
+    "Dali is known for \"a single rain turning to winter — cool mornings and evenings, sunny middays,\" with large day-night temperature swings and the famous \"Xiaguan wind.\" Bring a windproof jacket for mornings and evenings and comfortable long trousers. Plateau UV is intense and reflects strongly off Erhai, so even on cloudy days pack sunscreen, lip balm, sunglasses, and a sun mask or buff",
+    "For farm activities, the adventure park, cycling, and old-town walks, wear comfortable sports shoes — not heels or dress shoes — and ideally quick-dry tees and athletic wear",
+    "Bring your own toiletries, power bank, charging cables, earphones, mosquito repellent, and any personal medications you may need (cold medicine, fever patches, stomach remedies, motion-sickness pills, etc.)",
+    "Dali cuisine emphasizes sour, spicy, and fresh flavors; if you have dietary restrictions, please mention them before the meal",
+    "In ethnic-minority areas, please respect local customs and taboos to avoid misunderstandings"
+  ],
+  "faq": [
+    {
+      "q_zh": "这是跟团游还是自由行？",
+      "q_en": "Is this a guided tour or independent travel?",
+      "a_zh": "这是自由行产品，不设固定日程。匠庐仅提供住宿及车辆服务，行程推荐活动仅供参考，可根据个人偏好灵活调整。涉及付费景点与活动需费用自理，如需额外导游领队请提前沟通预约。",
+      "a_en": "This is an independent-travel product with no fixed schedule. JiangLu provides accommodation and vehicle service only; the suggested activities are for reference and can be adjusted flexibly to your preferences. Paid attractions and activities are at your own expense, and if you need a separate guide or tour leader please arrange it in advance."
+    },
+    {
+      "q_zh": "怎么往返金梭岛？",
+      "q_en": "How do I get to and from Jinsuo Island?",
+      "a_zh": "酒店位于金梭岛上，离岛与回岛均需搭乘轮渡。船程约5分钟，渡船运营时间6:30至23:00，约15分钟一班。行程含两人次往返船票，需您先购买10元/位的上岛船票，由我们全额报销。",
+      "a_en": "The lodge is on Jinsuo Island, so every arrival and departure requires the ferry. The crossing takes about 5 minutes, with ferries running 6:30-23:00, roughly every 15 minutes. Round-trip ferry tickets for two are included; you first buy the 10 RMB/person boarding ticket, which we reimburse in full."
+    },
+    {
+      "q_zh": "每日用车有什么限制？",
+      "q_en": "Are there limits on daily vehicle use?",
+      "a_zh": "为安全起见，每日用车时间为9:00-19:00，单日不超过300公里，不含夜间用车与跨省用车，超出部分需支付额外车费。首尾两天仅含民宿往返接送机站用车。",
+      "a_en": "For safety, daily vehicle hours are 9:00-19:00, capped at 300 km per day, excluding night and cross-province use; any overage incurs additional charges. The first and last days include only the lodge-to-airport/station transfer."
+    },
+    {
+      "q_zh": "孩童同行如何收费？",
+      "q_en": "How are children priced?",
+      "a_zh": "15周岁及以上视为成人，14周岁及以下视为孩童。1位孩童与2成人同住时：6岁以下（不加床）1000元/人，6-14岁（不加床）1500元/人。孩童需单独占床需补单房差2100元/人。多位孩童或其他组合请咨询客服。",
+      "a_en": "Guests aged 15 and above are adults; those 14 and under are children. With 1 child sharing with 2 adults: under 6 (no extra bed) RMB 1,000/person, aged 6-14 (no extra bed) RMB 1,500/person. A child needing a separate bed pays the single-room supplement of RMB 2,100/person. For multiple children or other combinations, please consult customer service."
+    },
+    {
+      "q_zh": "什么季节来喜洲最美？",
+      "q_en": "When is the best season to visit Xizhou?",
+      "a_zh": "喜洲6-12月各有风韵：6-8月田畴新绿、治愈如夏；9月底-11月稻浪鎏金、丰收正盛，其中9-10月景致最佳，是秋日摄影首选；12月-次年2月田野休耕、游客稀少，适合安静慢逛。",
+      "a_en": "Xizhou charms from June to December. June-August brings fresh green paddies and a healing summer mood; late September-November offers golden rice waves at peak harvest, with September-October at their most beautiful and ideal for autumn photography; December-February sees fallow fields and few visitors, perfect for quiet, slow wandering."
+    }
+  ],
+  "closing_zh": "不设固定日程，不追求走马观花的热闹，只愿你真正「住进大理」。以金梭岛匠庐·蜜湾为唯一锚点，与山海、与文化、与自己温柔相遇，在苍洱之间，慢煮光阴，静享一份松弛安然的岛居闲趣。",
+  "closing_en": "No fixed schedule, no rush to skim past the sights — only the wish that you truly \"live in Dali.\" Anchored on a single point, JiangLu · Honey Bay on Jinsuo Island, meet the mountains and sea, the culture, and your own self with quiet tenderness. Here between Cangshan and Erhai, let time simmer slowly, and savor the serene, unhurried ease of island living.",
+  "price_from": 4288,
+  "price_currency": "CNY",
+  "poster_image": "山风窑语.jpg",
+  "lodge_images": [
+    "jianglu-miwan/g01-公区.jpg",
+    "jianglu-miwan/g02-餐饮.jpg"
+  ]
+}

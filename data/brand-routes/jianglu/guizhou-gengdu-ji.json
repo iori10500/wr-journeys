@@ -1,0 +1,419 @@
+{
+  "slug": "guizhou-gengdu-ji",
+  "region_zh": "贵州",
+  "region_en": "Guizhou",
+  "title_zh": "黔东南耕读记",
+  "title_en": "Chronicle of Field & Study: A Southeast Guizhou Idyll",
+  "subtitle_zh": "四日田园与民族的静谧诗篇",
+  "subtitle_en": "Four Quiet Days Among Pastoral Fields and Living Ethnic Heritage",
+  "days": 4,
+  "nights": 3,
+  "duration_zh": "4天3晚",
+  "duration_en": "4 Days / 3 Nights",
+  "lodge_zh": "匠庐·耕读第",
+  "lodge_en": "JiangLu Gengdu Di (House of Field & Study)",
+  "hero_image": "jianglu-gengdudi/hero.jpg",
+  "route_zh": "贵阳—黄平·田园牧歌—锦屏雷屯村·匠庐耕读第—隆里古城—黎平肇兴侗寨—贵阳",
+  "route_en": "Guiyang — Huangping pastoral country — JiangLu Gengdu Di at Leitun Village, Jinping — Longli Ancient Town — Zhaoxing Dong Village, Liping — Guiyang",
+  "tags": [
+    {
+      "zh": "隐奢民宿",
+      "en": "Hidden-Luxury Lodge"
+    },
+    {
+      "zh": "苗侗文化",
+      "en": "Miao & Dong Culture"
+    },
+    {
+      "zh": "田园慢旅",
+      "en": "Slow Pastoral Travel"
+    },
+    {
+      "zh": "非遗手作",
+      "en": "Intangible-Heritage Crafts"
+    },
+    {
+      "zh": "自由行",
+      "en": "Independent Journey"
+    },
+    {
+      "zh": "世界非遗侗族大歌",
+      "en": "Dong Grand Song (UNESCO Heritage)"
+    }
+  ],
+  "intro_zh": "黔东南，隐于西南腹地的人文原乡与田园诗境，是安放心灵、回归本真的理想之境。这里青山连绵叠翠，田园铺展如诗。鼓楼、风雨桥隐于山岚云雾间，古寨与梯田相映成趣，自然灵秀与人文底蕴浑然共生。作为苗侗文化的核心原乡，世界级非遗代代相传：侗族大歌婉转悠远，苗绣、银饰锻造藏着民族匠心，古老歌谣与生活智慧，在烟火日常里静静流淌。匠庐择此秘境，以耕读传家为内核，串联田园牧歌、古镇文脉与侗寨风情，引你暂别尘嚣，沉浸式触摸自然肌理、品读人文温度，读懂黔东南的烟火诗意与岁月安然。",
+  "intro_en": "Tucked deep in the heart of southwest China, Southeast Guizhou (Qiandongnan) is a homeland of living culture and a poem written in fields and hills — a place to set the mind at ease and return to the essential. Emerald mountains fold into the distance; rice terraces unspool like verse. Drum towers and wind-and-rain bridges drift among mist and cloud, ancient villages mirror the terraced slopes, and the lyric beauty of the land grows seamlessly from its human depth. As the cultural cradle of the Miao and Dong peoples, this is where world-class living heritage passes from one generation to the next: the soaring, undulating polyphony of Dong Grand Song; the quiet artisanry of Miao embroidery and silver-forging; old songs and everyday wisdom flowing softly through ordinary days. JiangLu chose this hidden country, taking the ancestral ideal of \"farming and study handed down through generations\" as its heart — weaving together pastoral idyll, the cultural lineage of old towns, and the spirit of the Dong villages. Step away from the noise of the world, touch the texture of the land, read the warmth of its people, and come to understand the poetry and serene timelessness of Southeast Guizhou.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "贵阳接站/机 · 抵达黄平 · 田园牧歌初体验 · 入住匠庐·耕读第",
+          "title_en": "Guiyang Arrival Pickup · Into Huangping · First Taste of the Pastoral Idyll · Check-in at JiangLu Gengdu Di",
+          "desc_zh": "抵达后由专车自贵阳接站/机（车程约355km，约4.5小时）前往黄平。黄平是踏入黔东南的第一处诗意驿站，田园平旷、山环水绕，保留着原生的农耕肌理与村落风貌。白墙黛瓦的民居散落其间，晨雾漫山野、暮色染炊烟，偶遇田间劳作的村民，感受最纯粹的黔东南烟火，为整段旅程埋下松弛治愈的伏笔。随后入住匠庐·耕读第。",
+          "desc_en": "On arrival, a private vehicle collects you from Guiyang railway station or airport (about 355 km, roughly 4.5 hours) and carries you to Huangping — the first poetic way-station into Southeast Guizhou. Here the land lies broad and open, ringed by mountains and water, still keeping its original farming rhythm and village character. White-walled, dark-tiled homes are scattered among the fields; morning mist rolls over the hills, dusk stains the cooking smoke, and a farmer at work in the paddies offers the purest glimpse of everyday Guizhou — setting an unhurried, restorative tone for the whole journey. Settle in for the night at JiangLu Gengdu Di."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "文化探秘 · 隆里古城 · 入住匠庐·耕读第",
+          "title_en": "Cultural Discovery · Longli Ancient Town · Night at JiangLu Gengdu Di",
+          "desc_zh": "前往隆里古城（往返车程约40km，约1小时）。隆里古城是明代军事屯堡的活化石，距今已有600余年历史，以棋盘式\"三街六巷\"格局保留着中原规制与江南匠艺，青瓦马头墙、雕花老宅间，苗侗图腾悄然生长。墙角青苔浸润时光，漫步街巷，触摸斑驳砖石古墙，只剩古朴安然，偶遇非遗手工艺人，读懂屯堡文化与市井烟火的交融。返回匠庐·耕读第入住。",
+          "desc_en": "A short transfer takes you to Longli Ancient Town (about 40 km round trip, roughly 1 hour). A living fossil of Ming-dynasty garrison architecture, Longli is more than 600 years old, its chessboard plan of \"three streets and six lanes\" preserving Central-Plains order and Jiangnan craftsmanship in a single weave. Among grey-tiled horse-head gables and carved old houses, Miao and Dong totems quietly take root. Moss steeps the corners of the walls in slow time; wandering the lanes and running a hand over the weathered brick and stone, you find only a rustic stillness — and, now and then, an encounter with a heritage artisan reveals how garrison culture and ordinary street life have grown together. Return to JiangLu Gengdu Di for the night."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "少数民族风情 · 黎平肇兴侗寨 · 入住匠庐·耕读第",
+          "title_en": "Ethnic Heart of the Region · Zhaoxing Dong Village, Liping · Night at JiangLu Gengdu Di",
+          "desc_zh": "前往黎平肇兴侗寨（往返车程约160km，约2.5小时）。肇兴侗寨素有\"侗乡第一寨\"美誉，是全国最大的侗族村寨之一，2005年获评\"中国最美的六大乡村古镇\"。四面环山、建于盆地，一条清溪穿寨而过，五座鼓楼（仁、义、礼、智、信）错落矗立，风雨桥横跨溪水，干栏式吊脚楼鳞次栉比，全杉木结构覆小青瓦，古朴实用。这里是侗族文化传承最完整的地方，可聆听世界非遗侗族大歌的婉转悠扬，观赏拦门敬酒、芦笙歌舞，体验侗锦织造、蓝靛染艺，沉浸式感受千年侗寨的人文底蕴。返回匠庐·耕读第入住。",
+          "desc_en": "Today follows the lineage of the drum towers to Zhaoxing Dong Village in Liping (about 160 km round trip, roughly 2.5 hours). Long celebrated as \"the First Village of the Dong Country,\" Zhaoxing is one of the largest Dong settlements in China and was named in 2005 among \"China's Six Most Beautiful Rural Ancient Towns.\" Cradled in a mountain-ringed basin with a clear stream threading through it, the village rises around five drum towers — named for the Confucian virtues Benevolence, Righteousness, Propriety, Wisdom, and Faith — with wind-and-rain bridges spanning the water and tiers of stilted timber houses, all cedar frames beneath small grey tiles, humble and built to last. This is where Dong culture survives most completely: listen to the soaring polyphony of the UNESCO-listed Dong Grand Song, take part in the gate-blocking welcome toast and lusheng pipe dances, and try Dong brocade weaving and indigo dyeing — an immersion in the human depth of a thousand-year village. Return to JiangLu Gengdu Di for the night."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "匠庐·耕读第 · 贵阳送站",
+          "title_en": "Farewell to JiangLu Gengdu Di · Transfer to Guiyang",
+          "desc_zh": "悠然享用早餐后退房，由专车送返贵阳站/机场（车程约330-348km，约4小时），结束这段田园与民族的静谧旅程。（沿途可视时间与喜好，自选探访清水江上的明珠——下司古镇，详见特色体验。）",
+          "desc_en": "After an unhurried breakfast and check-out, a private vehicle returns you to Guiyang railway station or airport (about 330–348 km, roughly 4 hours), bringing this quiet journey through field and heritage to a close. (Time and preference permitting, you may add an optional stop at Xiasi Ancient Town, the \"pearl of the Qingshui River\" — see Signature Experiences.)"
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·耕读第",
+    "name_en": "JiangLu Gengdu Di — House of Field & Study",
+    "positioning_zh": "黔东南锦屏县雷屯村田园村落间的隐奢民宿，由百年\"耕读第\"学堂活化而生",
+    "positioning_en": "A hidden-luxury lodge set among the pastoral villages of Leitun, Jinping County, Southeast Guizhou — reborn from a century-old \"Gengdu Di\" study hall",
+    "desc_zh": "匠庐·耕读第坐落于黔东南锦屏县雷屯村，民宿深藏田园村落间，保留百年\"耕读第\"学堂原貌，融合侗苗建筑肌理与现代极简美学。青瓦白墙、飞檐翘角，与稻田、山林、古村浑然一体，宛如从田园里生长而出。历时数年打磨，仅设十间客房，延续匠庐\"少而精\"的隐奢理念，最大限度将山野风光引入室内。客房陈设极简克制，甄选天然原木家具、棉麻织物与苗侗风物摆饰，无冗余堆砌，只留质朴高级感。每间房均配高级床品、品牌卫浴、观景露台，推窗即见稻田翻浪、青山含黛、云雾漫山，晨起听鸟鸣、暮时观落霞，把田园诗意尽收眼底。公区设有乡村书吧、露天泳池、耕读文化展示区，还原\"耕读传家\"的东方生活哲思。在这里，远离尘嚣，晨闻鸡鸣犬吠、暮伴星光晚风，可田间漫步、可茶室品茗、可手作非遗，沉浸式感受\"日出而作，日落而息\"的松弛与安然，读懂黔东南的田园诗意与人文温度。",
+    "desc_en": "JiangLu Gengdu Di rests deep among the pastoral villages of Leitun, in Jinping County of Southeast Guizhou. Grown from a century-old \"Gengdu Di\" study hall whose original form has been carefully preserved, it marries Dong and Miao building textures with a clean, modern minimalism. Grey tiles and white walls, upturned eaves and flying corners — the house sits so naturally amid the rice paddies, woodland and old village that it seems to have grown out of the fields themselves. Refined over several years and holding just ten rooms, it carries forward JiangLu's hidden-luxury creed of \"few but fine,\" drawing the mountain-and-field scenery as far indoors as it will go. Interiors are spare and restrained — natural solid-wood furniture, cotton and linen, and Miao and Dong objets — nothing piled on, only an unadorned sense of quality. Every room offers premium bedding, branded bath amenities and a view terrace; open the window to rippling rice fields, blue-green hills and drifting cloud, waking to birdsong and ending the day with the sunset. Common spaces include a village book bar, an open-air pool and a Gengdu cultural display area, reviving the Eastern philosophy of \"farming and study handed down through generations.\" Here, far from the world's noise, you wake to roosters and dogs and end the day under starlight and evening breeze — wandering the fields, taking tea in the tea room, making heritage crafts by hand — fully living the ease of \"rising with the sun and resting at dusk,\" and coming to understand the pastoral poetry and human warmth of Southeast Guizhou.",
+    "stats": [
+      {
+        "label_zh": "客房数",
+        "label_en": "Guest Rooms",
+        "value": "10"
+      },
+      {
+        "label_zh": "选址",
+        "label_en": "Location",
+        "value": "锦屏县雷屯村 / Leitun Village, Jinping"
+      },
+      {
+        "label_zh": "建筑前身",
+        "label_en": "Heritage Origin",
+        "value": "百年\"耕读第\"学堂 / Century-old study hall"
+      },
+      {
+        "label_zh": "公区配套",
+        "label_en": "Shared Facilities",
+        "value": "乡村书吧 · 露天泳池 · 耕读文化展示区 / Book bar · Open-air pool · Cultural display area"
+      },
+      {
+        "label_zh": "房型",
+        "label_en": "Room Types",
+        "value": "森系大床 / 露台双床 / Forest king · Terrace twin"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "田园牧歌·初遇黔东南（黄平）",
+      "title_en": "Pastoral Idyll — First Encounter with Southeast Guizhou (Huangping)",
+      "desc_zh": "黄平是踏入黔东南的第一处诗意驿站，田园平旷、山环水绕，保留着原生的农耕肌理与村落风貌。白墙黛瓦的民居散落其间，晨雾漫山野、暮色染炊烟，偶遇田间劳作的村民，感受最纯粹的黔东南烟火。",
+      "desc_en": "Huangping is the first poetic way-station into the region — broad open fields ringed by hills and water, still holding its original farming rhythm and village character. White-walled, dark-tiled homes scatter across the land; morning mist drapes the hills, dusk colours the cooking smoke, and a chance meeting with a farmer at work reveals the purest everyday life of Southeast Guizhou."
+    },
+    {
+      "title_zh": "走近明代军屯遗韵（隆里古城）",
+      "title_en": "Echoes of a Ming Garrison (Longli Ancient Town)",
+      "desc_zh": "隆里古城是明代军事屯堡的活化石，距今已有600余年历史，以棋盘式\"三街六巷\"格局保留着中原规制与江南匠艺，青瓦马头墙、雕花老宅间，苗侗图腾悄然生长。漫步街巷，触摸斑驳砖石古墙，偶遇非遗手工艺人，读懂屯堡文化与市井烟火的交融。",
+      "desc_en": "A living fossil of Ming-dynasty garrison towns, Longli is over 600 years old, its chessboard layout of three streets and six lanes preserving Central-Plains order alongside Jiangnan craftsmanship. Among grey-tiled horse-head gables and carved old houses, Miao and Dong totems quietly take root. Wander the lanes, touch the weathered brick and stone, and meet heritage artisans to read how garrison culture and ordinary street life have fused into one."
+    },
+    {
+      "title_zh": "循迹鼓楼文脉（黎平肇兴侗寨）",
+      "title_en": "Following the Drum-Tower Lineage (Zhaoxing Dong Village, Liping)",
+      "desc_zh": "肇兴侗寨素有\"侗乡第一寨\"美誉，是全国最大的侗族村寨之一，2005年获评\"中国最美的六大乡村古镇\"。四面环山、建于盆地，清溪穿寨，五座鼓楼（仁、义、礼、智、信）错落矗立，风雨桥横跨溪水，干栏式吊脚楼鳞次栉比。可聆听世界非遗侗族大歌，观赏拦门敬酒、芦笙歌舞，体验侗锦织造、蓝靛染艺。",
+      "desc_en": "Hailed as \"the First Village of the Dong Country\" and one of the largest Dong settlements in China, Zhaoxing was named in 2005 among the country's six most beautiful rural ancient towns. Set in a mountain-ringed basin with a clear stream running through it, the village gathers around five drum towers named for the Confucian virtues — Benevolence, Righteousness, Propriety, Wisdom and Faith — with wind-and-rain bridges and tiers of stilted timber houses. Hear the UNESCO-listed Dong Grand Song, join the gate-blocking welcome toast and lusheng dances, and try Dong brocade weaving and indigo dyeing."
+    },
+    {
+      "title_zh": "赏清江明珠（下司古镇·自选）",
+      "title_en": "Pearl of the Qingshui River (Xiasi Ancient Town · Optional)",
+      "desc_zh": "地处清水江上游，被誉为清水江上的明珠，也是世界名犬下司犬的故乡，旧时是黔东南商贸重镇，素有\"小上海\"美名。这里建筑风格多元，鼓楼、寨门极具民族特色，氛围闲适静谧。古镇景点丰富，牌坊、阳明书院、莲心桥等景致可一一游览。",
+      "desc_en": "On the upper Qingshui River sits Xiasi, the river's storied \"pearl\" and the homeland of the world-famous Xiasi hound. Once a major trading town of Southeast Guizhou, it earned the nickname \"Little Shanghai.\" Its architecture is eclectic, its drum tower and village gates richly ethnic in character, the mood unhurried and calm. The town rewards a slow stroll — memorial archways, the Yangming Academy and Lianxin Bridge among its many sights."
+    },
+    {
+      "title_zh": "非遗漆扇制作",
+      "title_en": "Intangible-Heritage Lacquer-Fan Making",
+      "desc_zh": "以黔东南千年苗侗文脉为墨，天然大漆为媒，在素扇之上描摹民族纹样与山野意趣。一柄漆扇，藏尽非遗雅致，携走独属于黔东南的草木风物与人文诗意。",
+      "desc_en": "Taking the thousand-year Miao and Dong heritage of Southeast Guizhou as its ink and natural raw lacquer as its medium, this craft lets you trace ethnic patterns and the spirit of the wild hills onto a plain fan. A single lacquer fan holds all the refinement of living heritage — carry home the flora and the poetry that belong to this land alone."
+    },
+    {
+      "title_zh": "香囊制作",
+      "title_en": "Scented-Sachet Making",
+      "desc_zh": "甄选本地艾草、藿香、佩兰等天然香草，填充绣有民族纹样的锦缎囊中，亲手缝制一枚清雅香囊，驱虫安神，亦藏黔东南草木清香。",
+      "desc_en": "Choose from local mugwort, patchouli, eupatorium and other natural herbs, fill a brocade pouch embroidered with ethnic motifs, and hand-sew an elegant little sachet — a soothing repellent that also carries the fresh, herbal scent of Southeast Guizhou."
+    },
+    {
+      "title_zh": "植物拓染",
+      "title_en": "Botanical Pounding-Dye (Eco-Print)",
+      "desc_zh": "草木为印，自然成画。以花叶肌理拓染于布，定格山野灵气，晕染诗意纹理，亲手留住草木生机与时光温柔。",
+      "desc_en": "Plants become the stamp and nature the painter. Pressing the texture of flowers and leaves onto cloth captures the spirit of the wild hills in soft, poetic patterns — a hands-on way to hold the living vitality of the plants and the gentleness of passing time."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "酸汤牛肉火锅",
+      "name_en": "Sour-Soup Beef Hot Pot",
+      "desc_zh": "匠庐餐厅推荐。酸辣开胃，是体验地道黔菜风味的首选；亦是贵州菜的灵魂之一，酸爽开胃的汤底配上鲜嫩的牛肉，能量满满。",
+      "desc_en": "A JiangLu restaurant favourite and one of the souls of Guizhou cooking. The tangy, appetite-whetting broth with tender beef is the first choice for authentic local flavour — bright, sour and deeply restorative."
+    },
+    {
+      "name_zh": "青花椒鸡",
+      "name_en": "Green-Sichuan-Pepper Chicken",
+      "desc_zh": "匠庐餐厅口味独特的推荐菜，适合喜爱麻麻辣辣口感的人群，值得一试。",
+      "desc_en": "A distinctive house recommendation at JiangLu — built for lovers of that numbing, tingling málà heat. Well worth a try."
+    },
+    {
+      "name_zh": "黄牛肉火锅",
+      "name_en": "Yellow-Beef Hot Pot",
+      "desc_zh": "匠庐餐厅推荐。适合多人分享，可以感受当地食材的醇厚风味。",
+      "desc_en": "A JiangLu restaurant dish made for sharing, showcasing the rich, full flavour of local ingredients."
+    },
+    {
+      "name_zh": "蒜香仔排",
+      "name_en": "Garlic Spare Ribs",
+      "desc_zh": "匠庐餐厅推荐。以独特的蒜香调味，排骨外酥里嫩，下饭好选。",
+      "desc_en": "A JiangLu favourite — ribs seasoned with a signature garlic note, crisp outside and tender within, a perfect partner for rice."
+    },
+    {
+      "name_zh": "时令鲜蔬",
+      "name_en": "Seasonal Fresh Vegetables",
+      "desc_zh": "匠庐餐厅推荐。根据季节提供新鲜的蔬菜拼盘，搭配主菜品尝。",
+      "desc_en": "A JiangLu offering of fresh vegetable platters that change with the season, served alongside the main dishes."
+    },
+    {
+      "name_zh": "朵咩咖啡屋",
+      "name_en": "Duomie Coffee House",
+      "desc_zh": "夏日的雷屯村带着几分慵懒的闲适，河水蜿蜒如带、温柔环抱沙洲，湖畔青草蔓生、牛群低头啃食、白鹅踱过浅滩。朵咩咖啡屋就藏在这幅动态的乡野图鉴中，咖啡豆精选云南高山豆，香气独特，另有清凉的气泡水和奶茶可选。",
+      "desc_en": "On a summer's day Leitun Village drifts into a languid ease — the river curving like a ribbon around its sandbar, grass spreading along the banks, cattle grazing and white geese pacing the shallows. Tucked into this living rural scene, Duomie Coffee House brews with select Yunnan high-mountain beans for a distinctive aroma, with cool sparkling water and milk tea also on offer."
+    },
+    {
+      "name_zh": "腤汤大肠（黄平）",
+      "name_en": "Fermented-Broth Pork Intestine (Huangping)",
+      "desc_zh": "黄平顶流，被戏称为贵州的臭豆腐，闻着臭、吃着却是回甘。腤汤是用青菜、花椒、糯米等发酵而成，搭配猪大肠一起炖煮，汤汁清醇，值得一试。",
+      "desc_en": "Huangping's star dish, jokingly called \"the stinky tofu of Guizhou\" — pungent to the nose but sweetly mellow on the palate. The fermented broth of greens, Sichuan pepper and glutinous rice is stewed with pork intestine into a clear, rounded soup. Worth braving the smell."
+    },
+    {
+      "name_zh": "苗家鸡稀饭",
+      "name_en": "Miao-Style Chicken Congee",
+      "desc_zh": "营养而美味的家常美食，用白条母鸡和糯米长时间慢炖而成。成品汤汁稠厚，色泽金黄，鸡肉软烂入味。",
+      "desc_en": "A nourishing, homely classic, slow-simmered for hours from whole hen and glutinous rice. The result is a thick, golden congee with meltingly tender, well-seasoned chicken."
+    },
+    {
+      "name_zh": "牛羊肉粉",
+      "name_en": "Beef & Mutton Rice Noodles",
+      "desc_zh": "本地人早餐首选，汤头鲜美，米粉劲道，牛羊肉香味十足，甚至不加辣椒都很好吃。",
+      "desc_en": "The local breakfast of choice — a savoury broth, springy rice noodles and richly fragrant beef and mutton, so good it needs no chilli at all."
+    },
+    {
+      "name_zh": "锅巴粉",
+      "name_en": "Crispy Rice-Crust Noodles (Guoba Fen)",
+      "desc_zh": "酥脆的锅巴吸饱了汤汁，口感丰富。",
+      "desc_en": "Crisp rice crust soaked full of broth, for a wonderfully layered texture."
+    },
+    {
+      "name_zh": "米豆腐",
+      "name_en": "Rice Tofu (Mi Doufu)",
+      "desc_zh": "当地特色小吃，口感滑嫩，可煎可凉拌，解腻优选。",
+      "desc_en": "A local specialty snack — smooth and tender, pan-fried or dressed cold, an excellent palate-cleanser between richer dishes."
+    },
+    {
+      "name_zh": "肇兴侗寨美食",
+      "name_en": "Zhaoxing Dong Village Specialties",
+      "desc_zh": "红烧稻田鱼、酱香牛排、脆皮香猪肉粉、酸汤牛肉粉等。",
+      "desc_en": "Braised paddy-field fish, savoury sauce-braised beef ribs, crispy pork rice noodles, and sour-soup beef rice noodles, among others."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐·耕读第 3 晚住宿",
+        "森系大床、露台双床二选一，以实际资源情况安排为准；如有偏好，请提前咨询",
+        "默认安排 2 位成人共享一间标准间或大床房"
+      ],
+      "items_en": [
+        "3 nights at JiangLu Gengdu Di",
+        "Choice of Forest King room or Terrace Twin room, subject to availability at the time; please advise preferences in advance",
+        "By default, two adults share one standard room or king room"
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Transport Service",
+      "items_zh": [
+        "专业旅游车队司服",
+        "接送机/站服务，独立成团默认配备 5 座基础车型；同行人数较多可升级商务车，如需更换车型请提前告知并补齐相应差价",
+        "每日外出所需往返民宿用车（首尾两天仅含民宿往返接送机/站用车，无额外行程）",
+        "为安全起见，每日用车时间为 9:00-19:00，单日不超 300 公里，不含夜间用车与跨省用车，超出需支付额外车费"
+      ],
+      "items_en": [
+        "Professional tour fleet with driver service",
+        "Airport/station transfers; independent bookings are served by a 5-seat standard vehicle as standard. Larger parties may upgrade to a business van; to change vehicle type, please advise in advance and pay the applicable difference",
+        "Daily round-trip transport between the lodge and your outings (Days 1 and 4 include only the lodge airport/station transfer, with no additional touring)",
+        "For safety, vehicle hours are 9:00–19:00 daily and no more than 300 km per day; night-time and cross-province use are not included, and any excess is charged separately"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐",
+        "赠送欢迎水果甜品",
+        "客房小冰箱迷你吧小食饮品每日畅享",
+        "晚安甜品"
+      ],
+      "items_en": [
+        "Daily breakfast at the lodge",
+        "Complimentary welcome fruit and dessert",
+        "Daily complimentary in-room mini-bar snacks and beverages",
+        "Goodnight dessert"
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "Stay Privileges",
+      "items_zh": [
+        "非遗漆扇制作（接待时间 11:30-21:29，联系酒店前台参与，入住期间每人可享一次）",
+        "香囊制作（联系酒店前台参与，入住期间每人可享一次）",
+        "植物拓染（提前一天向酒店预约，于前台领取材料包，入住期间每间房可享一次；鼓励客人到周边寻找花草，使用地点为酒店内，时间 13:00-16:00）"
+      ],
+      "items_en": [
+        "Heritage lacquer-fan making (available 11:30–21:29; arrange at the front desk, once per guest during the stay)",
+        "Scented-sachet making (arrange at the front desk, once per guest during the stay)",
+        "Botanical pounding-dye (reserve one day ahead and collect the materials kit at the front desk; once per room during the stay. Guests are encouraged to forage flowers and leaves nearby; conducted on-site, 13:00–16:00)"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额 50 万元；若有更高保额需求，可根据需求自行投保"
+      ],
+      "items_en": [
+        "Personal travel accident insurance during the itinerary, with coverage of RMB 500,000; for higher coverage, guests may purchase additional insurance as needed"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "从出发地与目的地之间的往返大交通（机票/高铁票等）",
+    "行程中除酒店早餐外的所有餐食费用",
+    "景点门票、手工体验活动等自选项目，以及\"费用包含\"条款中未提及的其他费用",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约并补齐费用",
+    "因不可抗力因素（如自然灾害、政府政策、航班延误等）造成的额外支出",
+    "因违约、自身过错、自由活动期间内个人行为或自身疾病引起的人身和财产损失"
+  ],
+  "exclusions_en": [
+    "Long-haul transport between your home city and the destination (flights, high-speed rail tickets, etc.)",
+    "All meals during the itinerary other than the lodge breakfast",
+    "Optional items such as attraction tickets and hands-on craft activities, plus any other costs not listed under \"What's Included\"",
+    "As an independent journey, the driver provides point-to-point transfers only; if a dedicated guide or tour leader is required, please arrange in advance and pay the applicable fee",
+    "Additional expenses caused by force majeure (natural disasters, government policy, flight delays, etc.)",
+    "Personal injury or property loss arising from breach of contract, personal fault, individual conduct during free time, or one's own illness"
+  ],
+  "pricing_notes_zh": [
+    "售价为 2 人成团的单人价格",
+    "第三人为 15 岁及以上者不可同住一间房；单男/单女无法与他人同住 1 间房；孩童需单独占床时，需补齐单房差价 1050 元/人（备注：有特殊房型的门店，可补差入住家庭房或亲子房等）",
+    "如携带 1 位孩童与 2 位成人同住同行，孩童价格：6 岁以下（不加床）2160 元/人；6-14 岁（不加床）2750 元/人",
+    "携带多位孩童出行，及其他出行人数、入住房间的组合价格，请咨询客服",
+    "15 周岁及以上入住视为成人，14 周岁及以下视为孩童"
+  ],
+  "pricing_notes_en": [
+    "Rates are per-person, based on a minimum party of 2 sharing",
+    "A third guest aged 15 or above may not share one room; a solo male or solo female cannot share a room with others; if a child requires a separate bed, a single-supplement of RMB 1,050 per person applies (note: at properties with special room types, the difference may instead be paid to upgrade to a family or parent-child room)",
+    "For 1 child travelling and rooming with 2 adults, child pricing is: under 6 (no extra bed) RMB 2,160 per child; ages 6–14 (no extra bed) RMB 2,750 per child",
+    "For multiple children, or other combinations of party size and rooming, please consult guest services for pricing",
+    "Guests aged 15 and above are treated as adults; those aged 14 and under as children"
+  ],
+  "cancellation_zh": [
+    "预订旅行产品须支付全款方可确认预订",
+    "行程开始前 15 天及以上（不含出发当天）可申请无损取消及退款",
+    "行程开始前 8-14 天（不含出发当天）申请取消，需收取订单金额的 30% 作为临时取消损失",
+    "行程开始前 0-7 天申请取消，需收取订单金额的 50% 作为临时取消损失",
+    "因不可抗力原因（航班取消、疾病、自然灾害、政府官方文件不可出行等）并提供证明可无损退款；退款时平台产生的手续费部分由客人自行承担"
+  ],
+  "cancellation_en": [
+    "Full payment is required to confirm a booking",
+    "15 or more days before departure (excluding the departure day): cancellation and full refund with no penalty",
+    "8–14 days before departure (excluding the departure day): a charge of 30% of the order value applies as a short-notice cancellation loss",
+    "0–7 days before departure: a charge of 50% of the order value applies as a short-notice cancellation loss",
+    "In cases of force majeure (flight cancellation, illness, natural disaster, official government notices prohibiting travel, etc.) with supporting documentation, a penalty-free refund is granted; any platform processing fees incurred on the refund are borne by the guest"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前检查证件是否在有效期内",
+    "贵州是全国唯一没有平原的省份，山地较多，各景点之间车程距离与时间相对较长，如有晕车症状请提前自备防晕车药品；并根据出行日期的季节、天气及活动项目备好应季、适宜的衣物",
+    "村落、古镇内多为石板路，建议当天穿着舒适的运动鞋，不建议穿高跟鞋或皮鞋；靠近瀑布有可能打湿衣鞋，有瀑布行程的那天建议提前备好更换衣物背在包里",
+    "贵州受季风影响，冷暖气流交汇频繁，夏季为雨季，雨来得快去得也快，需备好雨衣雨具；山区早晚温差较大、早晚较凉，要备外套",
+    "按需自备个人洗护用品、充电宝、充电线、耳机、防蚊用品，以及适合自身情况的常用药品（感冒药、退烧贴、肠胃药、晕车药等）",
+    "贵州饮食整体偏酸辣，如不适应酸辣或发酵食物，点餐时可明确说\"少酸少辣\"\"不要太咸\"",
+    "在少数民族地区应尊重当地传统习俗与生活禁忌，避免造成误会；逛古村古寨时，不随意触碰村中鼓楼、萨坛、古树、神树等被视为神圣之物"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid travel documents, and check in advance that they are within their validity period",
+    "Guizhou is the only province in China with no plains — it is largely mountainous, so drives between sights are relatively long. If you are prone to motion sickness, bring your own remedies; and pack seasonal, suitable clothing according to the weather and planned activities at your travel dates",
+    "Villages and old towns are mostly paved with flagstones — wear comfortable trainers on touring days rather than heels or leather shoes. Near waterfalls your clothes and shoes may get wet, so on any waterfall day pack a change of clothes in your bag",
+    "Influenced by the monsoon, Guizhou sees frequent clashing warm and cold air; summer is the rainy season, with rain that arrives and passes quickly, so bring a raincoat and rain gear. In these mountain areas the day-to-night temperature swing is large and mornings and evenings are cool, so bring a jacket",
+    "Bring your own toiletries, power bank, charging cables, earphones, mosquito repellent, and any personal medicines you may need (cold medicine, fever-cooling patches, stomach remedies, motion-sickness tablets, etc.)",
+    "Guizhou cuisine tends to be sour and spicy overall — if sour, spicy or fermented foods do not agree with you, simply ask for \"less sour, less spicy\" and \"not too salty\" when ordering",
+    "In ethnic-minority areas, respect local customs and taboos to avoid misunderstanding. When visiting old villages, do not casually touch the drum towers, sa altars (Sasui shrines), ancient trees, sacred trees, or other objects regarded as holy"
+  ],
+  "faq": [
+    {
+      "q_zh": "这条行程的成团人数是多少？可以一个人或带孩子出行吗？",
+      "q_en": "What is the minimum party size? Can I travel solo or with children?",
+      "a_zh": "产品以 2 人成团、单人价格计。15 周岁及以上视为成人、14 周岁及以下视为孩童。带 1 位孩童与 2 位成人同住时，孩童 6 岁以下（不加床）2160 元/人、6-14 岁（不加床）2750 元/人。单人出行或携带多位孩童的组合价格，以及单房差等事宜，请咨询客服。",
+      "a_en": "The product is priced per person on the basis of a minimum party of two sharing. Guests aged 15 and above count as adults and those 14 and under as children. With one child rooming with two adults, the child rate is RMB 2,160 (under 6, no extra bed) or RMB 2,750 (ages 6–14, no extra bed). For solo travel, multiple children, or single-supplement questions, please consult guest services."
+    },
+    {
+      "q_zh": "行程可以根据个人喜好调整吗？",
+      "q_en": "Can the itinerary be customized to my preferences?",
+      "a_zh": "可以。本行程为自由行产品，以上行程仅供参考，可根据个人偏好灵活调整。匠庐仅提供住宿及车辆服务，涉及付费景点与活动需费用自理。为安全起见，每日用车时间为 9:00-19:00、单日不超 300 公里，不含夜间及跨省用车。",
+      "a_en": "Yes. This is an independent-travel product; the itinerary above is a reference and can be adjusted flexibly to your preferences. JiangLu provides accommodation and transport only, and any paid attractions or activities are at your own expense. For safety, vehicle hours are 9:00–19:00 daily, capped at 300 km per day, with no night-time or cross-province driving."
+    },
+    {
+      "q_zh": "什么季节去黔东南最合适？",
+      "q_en": "What is the best season to visit Southeast Guizhou?",
+      "a_zh": "四季各有风景，夏季稻田翠绿、河谷清凉，尤显田园诗意，但夏季为雨季，雨来得快去得也快，需备好雨衣雨具。贵州山区早晚温差较大、早晚较凉，建议备一件外套；请根据出行日期的季节与天气，备好应季衣物。",
+      "a_en": "Each season has its own beauty. Summer brings emerald rice fields and cool river valleys, at its most idyllic — though summer is also the rainy season, with showers that come and go quickly, so pack a raincoat and rain gear. In these mountains the day-to-night temperature swing is large and mornings and evenings are cool, so a jacket is recommended; pack seasonal clothing to suit your travel dates."
+    },
+    {
+      "q_zh": "在苗侗村寨参观有哪些礼仪需要注意？",
+      "q_en": "What etiquette should I observe when visiting Miao and Dong villages?",
+      "a_zh": "应尊重当地传统习俗与生活禁忌，避免造成误会。逛古村古寨时，不要随意触碰村中鼓楼、萨坛、古树、神树等被视为神圣之物。遇拦门敬酒、芦笙歌舞等民俗活动时，遵循当地习惯礼貌参与即可。",
+      "a_en": "Respect local customs and taboos to avoid misunderstanding. When exploring the old villages, do not casually touch the drum towers, sa altars (Sasui shrines), ancient or sacred trees, or other objects considered holy. When you encounter customs such as the gate-blocking welcome toast or lusheng dances, simply join in courteously according to local practice."
+    }
+  ],
+  "closing_zh": "匠庐以云贵为开端，不断踏上征途，探寻山河之美，致力于度假酒店及民宿的开发与运营，专注发掘小而美的隐奢度假之地。每一个匠庐都是\"旅行目的地\"。\"匠庐\"不仅是一个居所，它更容纳着数以万计旅居者对美好旅行的期待。我们不断探索和创新，为每一位到达匠庐的朋友体验跨越千年、历久弥新的在地生活，呈现一场慢速印象美学。来黔东南耕读第，读懂这片土地的田园诗意与岁月安然。",
+  "closing_en": "JiangLu began in Yunnan and Guizhou and has kept journeying ever since, in search of the beauty of mountains and rivers — devoted to creating and running resort hotels and lodges, and to seeking out small, exquisite places of hidden-luxury escape. Every JiangLu is a destination in itself. More than a place to stay, JiangLu holds the hopes of tens of thousands of travellers for a beautiful journey. We explore and reinvent without pause, so that everyone who arrives can live a local life that spans a thousand years yet feels forever new — a slow, impressionist aesthetic of travel. Come to Gengdu Di in Southeast Guizhou, and read for yourself the pastoral poetry and serene timelessness of this land.",
+  "price_from": 4488,
+  "price_currency": "CNY",
+  "poster_image": "黔东南耕读记.jpg",
+  "lodge_images": [
+    "jianglu-gengdudi/g01-航拍.jpg",
+    "jianglu-gengdudi/g02-外观.jpg",
+    "jianglu-gengdudi/g03-公区.jpg"
+  ]
+}

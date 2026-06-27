@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= (lang === 'en' ? route.title_en : route.title_zh) %> | WR Journeys</title>
+  <meta name="description" content="<%= lang === 'en' ? route.subtitle_en : route.subtitle_zh %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
+  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>?lang=en">
+  <meta property="og:title" content="<%= (lang === 'en' ? route.title_en : route.title_zh) %> | WR Journeys">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/routes/<%= route.slug %>">
+  <meta property="og:image" content="https://itinerary.wildroadgroup.com<%= route.hero_path %>">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <script type="application/ld+json"><%- JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": lang === 'en' ? route.title_en : route.title_zh,
+    "description": lang === 'en' ? route.subtitle_en : route.subtitle_zh,
+    "url": "https://itinerary.wildroadgroup.com/routes/" + route.slug,
+    "image": "https://itinerary.wildroadgroup.com" + route.hero_path,
+    "duration": "P" + route.days + "D",
+    "touristType": "Slow luxury",
+    "provider": { "@type": "Organization", "name": brand.name_en, "url": "https://itinerary.wildroadgroup.com/brands/" + brand.slug }
+  }) %></script>
+  <style>
+    .r-hero { position:relative; height:62vh; min-height:380px; overflow:hidden; background:#1a1a2e; }
+    .r-hero picture, .r-hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .r-hero .scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%); }
+    .r-hero .inner { position:relative; z-index:2; max-width:980px; margin:0 auto; padding:0 24px; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:48px; color:#fff; }
+    .r-hero .breadcrumb { font-size:12px; letter-spacing:0.12em; color:rgba(255,255,255,0.7); margin-bottom:12px; }
+    .r-hero .breadcrumb a { color:#c8a96e; text-decoration:none; }
+    .r-hero h1 { font-family:'Playfair Display',serif; font-size:38px; margin:0 0 10px; line-height:1.2; }
+    .r-hero .subtitle { font-size:16px; color:rgba(255,255,255,0.85); max-width:720px; }
+    .r-meta { background:#0e0e1a; padding:18px 24px; }
+    .r-meta-inner { max-width:980px; margin:0 auto; display:flex; flex-wrap:wrap; gap:24px 36px; color:rgba(255,255,255,0.85); font-size:13px; }
+    .r-meta-inner b { color:#c8a96e; font-weight:600; margin-right:6px; }
+    .r-body { max-width:760px; margin:0 auto; padding:48px 24px 80px; font-size:16px; line-height:1.85; color:#222; }
+    .r-tags { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 28px; }
+    .r-tags span { background:#f7f5f0; color:#8a7144; padding:6px 14px; border-radius:50px; font-size:12px; }
+    .r-intro { font-size:17px; line-height:1.85; color:#444; margin-bottom:40px; padding:24px; background:#fafafa; border-left:3px solid #c8a96e; border-radius:0 8px 8px 0; }
+    .r-section-title { font-family:'Playfair Display',serif; font-size:24px; color:#1a1a2e; margin:48px 0 24px; border-bottom:1px solid #e8e5dd; padding-bottom:12px; }
+    .r-day { margin-bottom:32px; }
+    .r-day-head { font-family:'Playfair Display',serif; font-size:18px; color:#c8a96e; margin:0 0 14px; padding-left:16px; border-left:3px solid #c8a96e; }
+    .r-day-item { padding:14px 0 14px 18px; border-bottom:1px dashed #e8e5dd; }
+    .r-day-item:last-child { border-bottom:none; }
+    .r-day-item h4 { font-size:16px; color:#1a1a2e; margin:0 0 6px; font-weight:500; }
+    .r-day-item p { font-size:14px; color:#555; margin:0; line-height:1.7; }
+    .r-cta { background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%); color:#fff; padding:40px 32px; border-radius:14px; margin-top:48px; text-align:center; }
+    .r-cta h3 { font-family:'Playfair Display',serif; font-size:24px; margin:0 0 10px; }
+    .r-cta p { color:rgba(255,255,255,0.75); margin:0 0 22px; font-size:15px; }
+    .r-cta a { display:inline-block; background:linear-gradient(135deg,#c8a96e 0%,#b08d4a 100%); color:#fff; text-decoration:none; padding:12px 28px; border-radius:50px; font-weight:600; font-size:14px; }
+    @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } }
+  </style>
+<%- include('partials/ga') %>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <section class="r-hero">
+    <picture>
+      <source srcset="<%= route.hero_path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
+      <img src="<%= route.hero_path %>" alt="<%= lang === 'en' ? route.title_en : route.title_zh %>" loading="eager">
+    </picture>
+    <div class="scrim"></div>
+    <div class="inner">
+      <div class="breadcrumb">
+        <a href="/<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'Home' : '首页' %></a>
+        &nbsp;·&nbsp; <a href="/brands/<%= brand.slug %><%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? brand.name_en : brand.name_zh %></a>
+        &nbsp;·&nbsp; <%= lang === 'en' ? route.region_en : route.region_zh %>
+      </div>
+      <h1><%= lang === 'en' ? route.title_en : route.title_zh %></h1>
+      <p class="subtitle"><%= lang === 'en' ? route.subtitle_en : route.subtitle_zh %></p>
+    </div>
+  </section>
+
+  <div class="r-meta">
+    <div class="r-meta-inner">
+      <span><b><%= lang === 'en' ? 'Duration' : '时长' %></b><%= lang === 'en' ? route.duration_en : route.duration_zh %></span>
+      <span><b><%= lang === 'en' ? 'Route' : '行程路线' %></b><%= lang === 'en' ? route.route_en : route.route_zh %></span>
+      <span><b><%= lang === 'en' ? 'Lodges' : '住宿' %></b><%= lang === 'en' ? route.lodge_en : route.lodge_zh %></span>
+    </div>
+  </div>
+
+  <div class="r-body">
+    <div class="r-tags">
+      <% (route.tags || []).forEach(function(t) { %>
+      <span><%= lang === 'en' ? t.en : t.zh %></span>
+      <% }); %>
+    </div>
+
+    <div class="r-intro"><%= lang === 'en' ? route.intro_en : route.intro_zh %></div>
+
+    <% if (route.overview && route.overview.length) { %>
+    <h2 class="r-section-title"><%= lang === 'en' ? 'Day-by-Day' : '行程概览' %></h2>
+    <% route.overview.forEach(function(day) { %>
+    <div class="r-day">
+      <h3 class="r-day-head"><%= lang === 'en' ? day.day_en : day.day_zh %></h3>
+      <% (day.items || []).forEach(function(item) { %>
+      <div class="r-day-item">
+        <h4><%= lang === 'en' ? item.title_en : item.title_zh %></h4>
+        <p><%= lang === 'en' ? item.desc_en : item.desc_zh %></p>
+      </div>
+      <% }); %>
+    </div>
+    <% }); %>
+    <% } %>
+
+    <div class="r-cta">
+      <h3><%= lang === 'en' ? 'Make this journey yours' : '把这趟旅程订下来' %></h3>
+      <p><%= lang === 'en' ? 'Bespoke quote · slow-stay anchors · concierge service throughout' : '一事一议报价 · 慢栖锚定 · 全程旅程管家服务' %></p>
+      <a href="https://wr-travel.com/contact" target="_blank" rel="noopener"><%= lang === 'en' ? 'Contact Advisor →' : '联系顾问 →' %></a>
+    </div>
+  </div>
+
+  <%- include("partials/footer") %>
+  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+</body>
+</html>

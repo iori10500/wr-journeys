@@ -42,13 +42,35 @@
   <div class="brand-body">
     <p><%= lang === 'en' ? brand.summary_en : brand.summary_zh %></p>
 
+    <% if (typeof routes !== 'undefined' && routes && routes.length) { %>
+    <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#1a1a2e;margin:40px 0 20px;border-bottom:1px solid #e8e5dd;padding-bottom:10px;"><%= lang === 'en' ? 'Curated Routes (' + routes.length + ')' : '策展线路（' + routes.length + ' 条）' %></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-bottom:32px;">
+      <% routes.forEach(function(r) { %>
+      <a href="/routes/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>" style="text-decoration:none;color:inherit;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.06);transition:transform 0.2s;display:block;">
+        <div style="position:relative;height:170px;overflow:hidden;background:#1a1a2e;">
+          <picture>
+            <source srcset="<%= r.hero_path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
+            <img src="<%= r.hero_path %>" alt="<%= lang === 'en' ? r.title_en : r.title_zh %>" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </picture>
+          <div style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.55);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;"><%= lang === 'en' ? r.duration_en : r.duration_zh %></div>
+        </div>
+        <div style="padding:14px 16px 18px;">
+          <div style="font-size:11px;color:#c8a96e;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;"><%= lang === 'en' ? r.region_en : r.region_zh %></div>
+          <div style="font-size:15px;font-weight:500;line-height:1.4;color:#1a1a2e;margin-bottom:6px;"><%= lang === 'en' ? r.title_en : r.title_zh %></div>
+          <div style="font-size:12px;color:#888;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"><%= lang === 'en' ? r.subtitle_en : r.subtitle_zh %></div>
+        </div>
+      </a>
+      <% }); %>
+    </div>
+    <% } else { %>
     <div class="stub-notice">
       <%= lang === 'en' ? 'This brand page is a stub. Full brand story, route list and visuals are being prepared.' : '此品牌页为骨架占位，完整品牌故事、线路列表与视觉物料正在准备。' %>
     </div>
+    <% } %>
 
     <div class="brand-cta">
       <%= lang === 'en' ? 'Want to enquire about a journey with this brand?' : '想与该品牌策划一段旅程？' %>
-      <a href="/advisor<%= lang === 'en' ? '?lang=en' : '' %>"><%= lang === 'en' ? 'Contact the advisor →' : '联系顾问 →' %></a>
+      <a href="https://wr-travel.com/contact" target="_blank" rel="noopener"><%= lang === 'en' ? 'Contact the advisor →' : '联系顾问 →' %></a>
     </div>
   </div>
 

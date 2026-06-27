@@ -1,0 +1,392 @@
+{
+  "slug": "guizhou-shiguang-shusuo",
+  "region_zh": "贵州",
+  "region_en": "Guizhou",
+  "title_zh": "时光的戍所·倾听明代石头的耳语",
+  "title_en": "Garrison of Time: Listening to the Whispers of Ming-Dynasty Stone",
+  "subtitle_zh": "石屯慢旅 · 黔中栖居",
+  "subtitle_en": "A Slow Sojourn Among Stone Garrisons in the Heart of Guizhou",
+  "days": 5,
+  "nights": 4,
+  "duration_zh": "5天4晚",
+  "duration_en": "5 Days / 4 Nights",
+  "lodge_zh": "匠庐·村晓",
+  "lodge_en": "JiangLu · Cunxiao",
+  "hero_image": "jianglu-cunxiao/hero.jpg",
+  "route_zh": "贵阳/安顺 — 天龙屯堡 — 天台山·伍龙寺 — 安顺本寨 — 周官村 — 云峰屯堡/鲍家屯 — 天印山",
+  "route_en": "Guiyang/Anshun — Tianlong Tunpu — Mount Tiantai & Wulong Temple — Anshun Benzhai — Zhouguan Village — Yunfeng Tunpu / Baojiatun — Mount Tianyin",
+  "tags": [
+    {
+      "zh": "明代屯堡",
+      "en": "Ming Garrison Villages"
+    },
+    {
+      "zh": "石建活化石",
+      "en": "Living Stone Architecture"
+    },
+    {
+      "zh": "非遗傩雕",
+      "en": "Nuo Mask Carving"
+    },
+    {
+      "zh": "隐奢民宿",
+      "en": "Hidden-Luxury Lodge"
+    },
+    {
+      "zh": "黔中慢旅",
+      "en": "Slow Travel in Guizhou"
+    }
+  ],
+  "intro_zh": "安顺，藏于黔中腹地的明代屯堡原乡、石头筑就的时光之城。这里峰丛叠嶂、坝子平旷，六百余年明朝戍边文脉静静流淌，石屋、石墙、石街巷，一砖一石皆带着岁月沉淀的沉静。屯堡遗风、傩戏古韵、石寨古村、非遗匠心，在山水间共生。匠庐择址于此，以石筑、古建、在地文化为脉络，带你走入石头的耳语、时光的戍所，在古屯与烟火之间，慢读安顺。",
+  "intro_en": "Tucked into the heart of Guizhou, Anshun is the ancestral homeland of the Ming-dynasty tunpu garrison villages — a city of time built entirely of stone. Where karst peaks crowd the horizon and broad basins open beneath them, more than six centuries of Ming frontier culture flow on quietly. Stone houses, stone walls, stone lanes: every brick and slab carries the stillness of accumulated years. Garrison traditions, the ancient cadences of Nuo opera, fortified stone villages, and the patient hands of intangible-heritage craftsmen all live on together amid these mountains and waters. JiangLu has made its home here, weaving stonework, heritage architecture, and local culture into a single thread that leads you into the whispers of stone and the garrison of time — to read Anshun slowly, between the ancient fortress and the warmth of daily life.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "抵达接站 · 入住匠庐·村晓",
+          "title_en": "Arrival & Check-in at JiangLu · Cunxiao",
+          "desc_zh": "出发抵达贵阳或安顺，专车接站接机送往匠庐·村晓（车程41-152公里，约40分钟至1.5小时，具体视接站接机地点而定）。入住后，于石屯古村中安顿身心，开启慢旅。",
+          "desc_en": "Arrive in Guiyang or Anshun, where a private vehicle meets you and transfers you to JiangLu · Cunxiao (41–152 km, roughly 40 minutes to 1.5 hours depending on your arrival point). Settle into the ancient stone garrison village and let the slow journey begin."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "天龙屯堡 · 天台山伍龙寺 / 安顺本寨",
+          "title_en": "Tianlong Tunpu · Wulong Temple on Mount Tiantai / Anshun Benzhai",
+          "desc_zh": "探访六百年明代戍边活化石天龙屯堡，登临孤峰石刹天台山·伍龙寺，或走入原生静谧的安顺本寨（往返车程约150公里，约2.5小时）。",
+          "desc_en": "Explore Tianlong Tunpu, a six-hundred-year-old living fossil of Ming frontier defense; ascend Mount Tiantai to the cliff-set Wulong Temple; or wander the quiet, unspoiled village of Anshun Benzhai (round-trip approx. 150 km, around 2.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "周官村 · 体验傩雕匠艺",
+          "title_en": "Zhouguan Village · Nuo Mask Carving with a Master",
+          "desc_zh": "前往中国傩雕第一村周官村，在匠人作坊中由非遗传承人亲授，亲手雕琢一方傩面具，沉浸感受安顺傩文化（往返车程约165公里，约2.5小时）。",
+          "desc_en": "Travel to Zhouguan, China's foremost village of Nuo mask carving, and step into a craftsman's workshop where an intangible-heritage master guides you in carving your own Nuo mask — an immersive encounter with Anshun's Nuo culture (round-trip approx. 165 km, around 2.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "云峰屯堡 / 鲍家屯 · 天印山烧烤",
+          "title_en": "Yunfeng Tunpu / Baojiatun · Mount Tianyin Barbecue",
+          "desc_zh": "登访悬于山腰、如云上石城的云峰屯堡，或探访明代水利古村鲍家屯；傍晚于山形如印、碧水环绕的天印山，享一段炭火温香的山野烧烤时光（往返车程约136-143公里，约2.5小时）。",
+          "desc_en": "Visit Yunfeng Tunpu, a stone fortress perched on the mountainside like a city among the clouds, or Baojiatun, a Ming-era village famed for its ancient waterworks. As evening falls, gather at Mount Tianyin — seal-shaped and ringed by jade water — for a warm charcoal barbecue in the wild (round-trip approx. 136–143 km, around 2.5 hours)."
+        }
+      ]
+    },
+    {
+      "day_zh": "第五天",
+      "day_en": "Day 5",
+      "items": [
+        {
+          "title_zh": "退房送站 · 启程返程",
+          "title_en": "Check-out & Departure Transfer",
+          "desc_zh": "退房后，专车送往贵阳或安顺高铁站/机场（车程40-155公里，约50分钟至1.5小时，具体视送站送机地点而定），带着石头古屯的记忆启程返程。",
+          "desc_en": "After check-out, a private vehicle transfers you to the Guiyang or Anshun high-speed rail station or airport (40–155 km, roughly 50 minutes to 1.5 hours depending on your departure point). Set off homeward carrying the memory of the ancient stone garrison."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·村晓",
+    "name_en": "JiangLu · Cunxiao",
+    "positioning_zh": "石筑古屯里的隐奢栖居",
+    "positioning_en": "A Hidden-Luxury Retreat Within an Ancient Stone Garrison",
+    "desc_zh": "匠庐·村晓择址安顺屯堡古村，以明代石屯肌理为骨、在地文化为魂，是匠庐深耕黔中的标杆之作。民宿依托百年石屋古建改造，石墙、石瓦、石拱门、石板院完整保留屯堡建筑风貌，青瓦覆顶、木构雕花，石院错落、巷陌幽深，与山野古村浑然一体，仿佛从石头里生长而出。整体设计延续匠庐克制极简、隐奢留白的美学理念，将明代石屯的厚重与现代舒适相融。仅设少量客房，分为启·布依小屋、仕·村落石舍两类，室内以原木、棉麻、石材为主，陈设质朴高级，无冗余装饰。每间房均配备高定床品、品牌卫浴、观景露台，推窗即见石院古巷、青山田畴。公区设有石院茶亭、手作工坊、古建阅读角，可煮茶闲谈、体验非遗、静读闲书，慢品屯堡慢生活。",
+    "desc_en": "JiangLu · Cunxiao is set within an ancient tunpu garrison village in Anshun, built upon the bones of Ming-dynasty stonework and animated by the soul of local culture — a flagship of JiangLu's deep roots in central Guizhou. Restored from century-old stone dwellings, the lodge preserves the full character of garrison architecture: stone walls, stone tiles, stone archways, and slabbed courtyards, crowned with grey tiles and carved timber. Its scattered stone courts and deep lanes merge seamlessly with the village and the hills, as though the lodge had grown up out of the rock itself. The design carries forward JiangLu's restrained, minimalist aesthetic of quiet luxury and considered emptiness, marrying the weight of the Ming stone garrison with modern comfort. Only a handful of rooms are offered, in two collections — the Qi · Buyi Cottages and the Shi · Village Stone Houses — finished in raw timber, cotton-linen, and stone, with furnishings that are unadorned yet refined. Every room features bespoke bedding, premium bath amenities, and a view terrace that opens onto stone courts, old lanes, green hills, and paddy fields. The common areas hold a stone-court tea pavilion, a craft workshop, and a heritage reading nook — places to brew tea and talk at leisure, to try a heritage craft, or simply to read in stillness, savoring the slow life of the garrison.",
+    "stats": [
+      {
+        "label_zh": "选址",
+        "label_en": "Setting",
+        "value": "安顺屯堡古村 / Anshun tunpu garrison village"
+      },
+      {
+        "label_zh": "客房类型",
+        "label_en": "Room Types",
+        "value": "启·布依小屋、仕·村落石舍 / Qi · Buyi Cottages, Shi · Village Stone Houses"
+      },
+      {
+        "label_zh": "建筑",
+        "label_en": "Architecture",
+        "value": "百年石屋古建改造 / Restored century-old stone dwellings"
+      },
+      {
+        "label_zh": "公区",
+        "label_en": "Common Areas",
+        "value": "石院茶亭 · 手作工坊 · 古建阅读角 / Tea pavilion, craft workshop, reading nook"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "天台山·伍龙寺 — 孤峰藏古刹，石上佛道境",
+      "title_en": "Wulong Temple, Mount Tiantai — A Cliff-Top Temple of Stone",
+      "desc_zh": "黔中孤峰耸峙，绝壁奇峻，整山皆由巨石垒筑。山间嵌伍龙寺，为罕见佛道合一石构古建，殿宇依山凿石、青石筑就，与山岩浑然一体，被誉为黔中石建活化石。古寺藏于云雾，梵音伴山风，尽揽峰峦灵秀与千年文脉。",
+      "desc_en": "A solitary peak rises sheer above the central Guizhou plain, its entire mass built up from great stones. Into it is set Wulong Temple, a rare stone structure where Buddhism and Daoism are fused under one roof. Halls hewn from the living rock and raised in bluestone merge utterly with the cliff — earning the temple its name as a living fossil of Guizhou stone architecture. Veiled in cloud and mist, with chants carried on the mountain wind, it gathers the grace of the peaks and a millennium of cultural memory."
+    },
+    {
+      "title_zh": "天龙屯堡古镇 — 石垒戍边寨，六百年遗风",
+      "title_en": "Tianlong Tunpu — A Stone Garrison of Six Centuries",
+      "desc_zh": "六百年明代戍边活化石，石头垒筑的屯堡村寨，石屋、石墙、石巷、石拱门完整如初。屯堡人坚守明代遗风，服饰、地戏、建筑皆存江南旧韵，石板街巷蜿蜒，石墙斑驳映岁月，老妇头缠白帕、漫步古巷，戍边家国与烟火日常在此共生，一步一景皆是明代时光切片。",
+      "desc_en": "A six-hundred-year living fossil of Ming frontier defense, this garrison village of stacked stone keeps its houses, walls, lanes, and arched gateways intact. The tunpu people still hold to Ming-era ways — their dress, their dixi ground opera, and their architecture all preserve the old grace of Jiangnan. Slabbed lanes wind through the village, weathered stone walls mirror the passing years, and elderly women in white headcloths stroll the old streets. Here the loyalties of the frontier and the warmth of daily life coexist; every step reveals another slice of Ming-dynasty time."
+    },
+    {
+      "title_zh": "安顺本寨 — 石筑大宅群，原生古屯居",
+      "title_en": "Anshun Benzhai — Stone Manors of a Living Garrison",
+      "desc_zh": "本寨是云峰八寨的核心、明代武将大本营遗存，更显原生静谧、古朴深沉，是冷兵器时代最完整的石砌防御古村。以大户合院与高密度碉楼为核心，7座高层青石碉楼耸立，墙体厚实、射击孔密布，户户高墙相连、暗门相通，形成“外御强敌、内藏烟火”的闭环防御体系。建筑保留江南“四水归堂”格局，垂花门楼、隔扇门窗、精雕石础处处可见，兼具军事刚劲与江南雅致。",
+      "desc_en": "The heart of the Eight Villages of Yunfeng and the surviving base camp of a Ming military commander, Benzhai is quieter and more deeply weathered than its neighbors — the most complete stone-built defensive village from the age of cold weapons. At its core stand great courtyard compounds and a dense cluster of watchtowers: seven tall bluestone towers rise on thick walls pierced with rows of firing slits, while high walls and hidden doors link house to house, forming a closed defensive system that wards off enemies without yet shelters everyday life within. The buildings keep the Jiangnan 'four-waters-to-the-hall' layout, with pendant-flower gatehouses, latticed doors and windows, and finely carved stone plinths at every turn — martial strength and southern refinement in one."
+    },
+    {
+      "title_zh": "周官村 — 古村承傩韵，刀刻百年魂",
+      "title_en": "Zhouguan Village — Carving the Spirit of Nuo",
+      "desc_zh": "中国傩雕第一村，百年傩雕技艺代代相传，是安顺木雕与傩文化的根脉。走进匠人作坊，老木沉香、刻刀生花，非遗传承人亲授，从选材、凿坯、雕纹到上色，亲手雕琢傩面具，眉眼间藏着古傩威仪与民间祈福。指尖刻岁月，一刀一纹皆是匠心，沉浸式感受安顺傩文化的神秘与厚重。",
+      "desc_en": "China's foremost village of Nuo mask carving, where a century-old craft has passed from hand to hand — the very root of Anshun's woodcarving and Nuo culture. Step into a craftsman's workshop, fragrant with aged wood, and let the carving knife bloom under your fingers. Guided by an intangible-heritage master from selecting the timber to roughing out the form, cutting the patterns, and applying color, you carve your own Nuo mask, its brows and eyes holding both the solemnity of ancient ritual and the folk wish for blessing. Each stroke marks time itself — an immersive encounter with the mystery and depth of Anshun's Nuo tradition."
+    },
+    {
+      "title_zh": "云峰屯堡 — 云间石寨隐，半山旧戍城",
+      "title_en": "Yunfeng Tunpu — A Hidden Stone Fortress in the Clouds",
+      "desc_zh": "云深不知处，石寨隐山间，明代军屯古寨悬于山腰，石墙围寨、石屋层叠，依山势高低错落，如云上石城。寨内古街、古戏台、古宗祠保存完好，老树盘根、石径幽深，云雾来时，石寨半隐半现，恍若隔世，是藏在黔中山野里、少为人知的明代秘境。",
+      "desc_en": "Lost where the clouds run deep, this Ming military garrison clings to the mountainside — stone walls enclosing tiers of stone houses that rise and fall with the slope, like a city set among the clouds. Within, the old streets, opera stage, and ancestral hall survive intact; ancient trees grip the earth and stone paths run deep. When the mist rolls in, the fortress half-vanishes, as though belonging to another age — a little-known Ming-dynasty secret hidden in the wilds of central Guizhou."
+    },
+    {
+      "title_zh": "鲍家屯 — 古村活水绕，江南屯脉存",
+      "title_en": "Baojiatun — A Village of Living Water",
+      "desc_zh": "明代水利古村、江南屯民遗脉，六百余年古水系“水碾、水渠、水坝”完整沿用，是古代农耕水利智慧的典范。石筑水渠绕村穿田，流水潺潺、古桥卧波，石屋连片、古巷清幽，稻田平旷、风物温润。在这里，看流水滋养古村，感受“耕读传家、水利惠民”的东方生活哲思。",
+      "desc_en": "A Ming-era village of waterworks and a living lineage of Jiangnan settlers, where an ancient water system of mills, channels, and weirs has stayed in continuous use for over six hundred years — a model of classical agrarian hydraulic wisdom. Stone channels thread around the village and through the fields; water murmurs, old bridges arch over the current, stone houses cluster together, lanes lie quiet, and the broad paddies breathe a gentle abundance. Here you watch flowing water nourish an ancient village and feel the Eastern philosophy of life: 'farming and study as a family inheritance, waterworks for the people's good.'"
+    },
+    {
+      "title_zh": "天印山烧烤 — 山畔烟火暖，晚风伴山韵",
+      "title_en": "Mount Tianyin Barbecue — Firelight and Mountain Wind",
+      "desc_zh": "山形如印、碧水环绕，是安顺私藏的山野松弛地。于山畔林间，炭火温香、晚风轻拂，鲜醇本味、烟火氤氲。围坐谈笑，看山影暮色、听风过林梢，卸下尘嚣，在自然山野间，享受一段松弛自在的烟火时光。",
+      "desc_en": "Shaped like a seal and ringed by jade-green water, Mount Tianyin is Anshun's private corner of mountain ease. Among the trees at the foot of the slope, charcoal glows warm and the evening breeze drifts past, fresh flavors and woodsmoke mingling in the air. Gather and talk, watch the mountains darken at dusk, listen to the wind through the treetops — and, far from the noise of the world, savor an unhurried, open-air feast in the heart of the wild."
+    },
+    {
+      "title_zh": "非遗手工蜡染 / 扎染",
+      "title_en": "Heritage Batik & Tie-Dye",
+      "desc_zh": "以安顺蜡染千年技法，蜂蜡点染、靛蓝成韵，在白布上勾勒花纹，亲手制作一方蜡染，留住安顺的手作诗意。",
+      "desc_en": "Drawing on Anshun's thousand-year batik tradition, dot beeswax onto white cloth and steep it in indigo to draw out the pattern. Craft your own length of batik by hand and carry home a piece of Anshun's handmade poetry."
+    },
+    {
+      "title_zh": "安顺特色小吃 — 裹卷体验",
+      "title_en": "Anshun Street Food — Make Your Own Guojuan Rolls",
+      "desc_zh": "地道安顺风物，薄米皮裹鲜蔬与酱料，清爽鲜香、一口入魂。跟着本地手艺人学做裹卷，卷进黔中山水滋味，品味小城烟火。",
+      "desc_en": "A true taste of Anshun: a thin rice-flour wrapper rolled around fresh vegetables and sauce — crisp, savory, and unforgettable in a single bite. Learn to make guojuan rolls alongside a local artisan, rolling up the flavors of Guizhou's hills and waters and tasting the life of this small city."
+    },
+    {
+      "title_zh": "围炉煮茶",
+      "title_en": "Tea by the Brazier",
+      "desc_zh": "石院暖炉、炭火温茶，茶香漫染暮色，伴山野清风与古建光影，闲话慢叙，静享石寨里的松弛时光。",
+      "desc_en": "In the stone courtyard, a warm brazier and charcoal-heated tea send fragrance drifting into the dusk. With the fresh mountain breeze and the play of light across heritage walls, talk unhurriedly and let the quiet hours of the stone village unfold."
+    },
+    {
+      "title_zh": "精修旅拍",
+      "title_en": "Curated Travel Portraits",
+      "desc_zh": "石墙古巷、青瓦石院皆是天然取景框，定格人与古屯、石头与时光的温柔瞬间，每一帧都是安顺的岁月印记。",
+      "desc_en": "Stone walls, old lanes, grey-tiled courtyards — every corner is a natural frame. Capture the tender moments between traveler and garrison, stone and time, each frame an imprint of Anshun's passing years."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "山畔炭火烧烤",
+      "name_en": "Mountainside Charcoal Barbecue",
+      "desc_zh": "厚切五花肉烤到焦边流油，裹辣椒面卷生菜，香得跺脚；新鲜大虾泛着红亮油花，脆甜黄瓜片、嫩生金针菇解腻又清爽，蘸料长在贵州胃上。再配上颜值爆表的渐变色冰饮与水果拼盘。吹着山风啃烤肉，抬头是石屋的古早檐角，低头是烤盘的烟火气，这种“躲进山里吃大餐”的松弛感，治愈非常。",
+      "desc_en": "Thick-cut pork belly grilled to crisp, dripping edges, dusted with chili and wrapped in lettuce — irresistibly good. Plump prawns gleam red and oily, while crisp-sweet cucumber and tender enoki mushrooms cut the richness; the dipping sauces are pure Guizhou. Add a gorgeous gradient-colored iced drink and a fruit platter, and you have it all. Grill meat in the mountain breeze, look up to the old eaves of a stone house and down to the smoke curling off the grill — this 'feasting tucked away in the hills' is deeply restorative."
+    },
+    {
+      "name_zh": "安顺牛肉火锅",
+      "name_en": "Anshun Beef Hot Pot",
+      "desc_zh": "带皮黄牛新鲜现切后炖煮，肥瘦相间，配上新鲜野菜与贵州灵魂蘸水，堪称美味。",
+      "desc_en": "Freshly sliced skin-on yellow beef, simmered until tender with a fine balance of lean and fat, served with fresh wild greens and Guizhou's soul-stirring dipping sauce — a true delicacy."
+    },
+    {
+      "name_zh": "匠庐每日早餐与欢迎礼遇",
+      "name_en": "Daily Breakfast & Welcome Treats",
+      "desc_zh": "酒店每日早餐，并赠送欢迎水果甜品、小冰箱内迷你吧小食饮品每日畅享、晚安甜品，于石院古屯间安享在地风味。",
+      "desc_en": "Daily hotel breakfast, plus a welcome fruit-and-dessert plate, complimentary daily mini-bar snacks and drinks, and a goodnight dessert — local flavors to enjoy at ease within the stone courtyards of the ancient garrison."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐·村晓4晚住宿",
+        "启·布依小屋、仕·村落石舍二选一，以实际资源情况安排为准；如有偏好，请提前咨询",
+        "默认安排2位成人共享一间标准间或大床房"
+      ],
+      "items_en": [
+        "4 nights at JiangLu · Cunxiao",
+        "Choice of Qi · Buyi Cottage or Shi · Village Stone House, subject to availability; please advise preferences in advance",
+        "Default arrangement: 2 adults sharing one twin or king room"
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Vehicle & Transfers",
+      "items_zh": [
+        "专业旅游车队司服",
+        "接送机站服务，独立成团默认配备5座基础车型；同行人数较多可升级商务车，更换车型需提前告知并补齐差价",
+        "每日外出所需往返民宿用车（首尾两天仅含民宿与机场/车站往返接送，无额外行程）",
+        "为安全起见，每日用车时间9:00-19:00，不超300公里，不含夜间用车与跨省用车，超出需另付车费"
+      ],
+      "items_en": [
+        "Professional tour-fleet vehicle with driver",
+        "Airport/station pick-up and drop-off; private departures include a standard 5-seat vehicle by default. Larger groups may upgrade to a business van; vehicle changes require advance notice and a fare supplement",
+        "Daily round-trip transfers from the lodge for excursions (the first and last days include only the lodge–airport/station transfer, with no additional itinerary)",
+        "For safety, vehicle service runs 09:00–19:00, up to 300 km per day, excluding night-time and cross-province use; any excess incurs an additional charge"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐",
+        "赠送欢迎水果甜品",
+        "小冰箱内迷你吧小食饮品每日畅享",
+        "晚安甜品"
+      ],
+      "items_en": [
+        "Daily hotel breakfast",
+        "Complimentary welcome fruit and dessert",
+        "Complimentary daily mini-bar snacks and beverages",
+        "Goodnight dessert"
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "Stay Privileges",
+      "items_zh": [
+        "非遗手工蜡染体验（接待时间9:00-17:30）",
+        "安顺特色小吃·裹卷体验（接待时间14:30-16:00，需提前3小时预约，入住期间每间房可享一次，地点为酒店内）",
+        "围炉煮茶（接待时间16:00-20:00，联系前台参与，入住期间每人可享一次）",
+        "旅拍体验：每间房赠送三张精修照（提前一天预约，赠送张数不可转赠，每组住店客人仅享一次、不叠加，超出或额外需求请提前咨询前台）"
+      ],
+      "items_en": [
+        "Heritage hand-batik experience (available 09:00–17:30)",
+        "Anshun guojuan-roll experience (available 14:30–16:00; reserve at least 3 hours ahead; once per room during the stay; held on-site)",
+        "Tea by the brazier (available 16:00–20:00; arrange via reception; once per guest during the stay)",
+        "Travel portrait session: three retouched photos per room (reserve one day ahead; complimentary photos are non-transferable, offered once per guest party and non-cumulative; extra or special requests should be discussed with reception in advance)"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额50万元；如需更高保额，可根据需求自行投保"
+      ],
+      "items_en": [
+        "Personal travel accident insurance during the trip, with coverage of RMB 500,000; higher coverage may be arranged independently as desired"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "出发地与目的地之间的往返大交通（机票/高铁票等）",
+    "行程中除酒店早餐外的所有餐食费用",
+    "景点门票、手工体验活动等自选项目，以及“费用包含”条款中未提及的其他费用",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约并补齐费用",
+    "因不可抗力因素（如自然灾害、政府政策、航班延误等）造成的额外支出",
+    "因违约、自身过错、自由活动期间内个人行为或自身疾病引起的人身和财产损失"
+  ],
+  "exclusions_en": [
+    "Long-haul transport between your home city and the destination (flights, high-speed rail tickets, etc.)",
+    "All meals other than the hotel breakfast",
+    "Attraction tickets, hands-on craft experiences, and other optional activities, plus any costs not listed under 'Inclusions'",
+    "This is a self-guided product with driver transfers only; a dedicated guide or tour leader can be arranged in advance for an additional fee",
+    "Additional expenses caused by force majeure (natural disasters, government policy, flight delays, etc.)",
+    "Loss of person or property arising from breach of agreement, personal fault, individual conduct during free time, or one's own illness"
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团的单人价格",
+    "第三人为15岁及以上不可同住一间房；单男/单女无法与他人同住一间房、孩童需单独占床时，需补齐单房差价2000元/人（有特殊房型的门店可补差入住家庭房或亲子房等）",
+    "如携带1位孩童与2位成人同住同行：6岁以下（不加床）2000元/人，6-14岁（不加床）2688元/人",
+    "携带多位孩童出行，及其他出行人数、入住房间的组合价格，请咨询客服",
+    "15周岁及以上入住视为成人，14周岁及以下视为孩童"
+  ],
+  "pricing_notes_en": [
+    "Prices are per person based on two travelers forming one party",
+    "A third guest aged 15 or above cannot share the same room; a solo male/female unable to share with others, or a child requiring a separate bed, must pay a single-room supplement of RMB 2,000 per person (properties with suitable room types may instead upgrade to a family or parent-child room with a supplement)",
+    "When 1 child travels and shares with 2 adults: under 6 (no extra bed) RMB 2,000 per child; ages 6–14 (no extra bed) RMB 2,688 per child",
+    "For multiple children, or other combinations of party size and rooms, please consult customer service for pricing",
+    "Guests aged 15 and above are treated as adults; those 14 and under as children"
+  ],
+  "cancellation_zh": [
+    "预订旅行产品须支付全款方可确认预订",
+    "行程开始前15天及以上（不含出发当天），可申请无损取消及退款",
+    "行程开始前8-14天（不含出发当天），取消需收取订单金额的30%作为临时取消损失",
+    "行程开始前0-7天，取消需收取订单金额的50%作为临时取消损失",
+    "因不可抗力原因（航班取消、疾病、自然灾害、政府官方文件不可出行等）提供证明可无损退，退款时平台产生的手续费部分由本人自行承担"
+  ],
+  "cancellation_en": [
+    "Full payment is required to confirm a booking",
+    "15 or more days before departure (excluding the departure day): free cancellation and refund",
+    "8–14 days before departure (excluding the departure day): cancellation incurs a charge of 30% of the order value as a late-cancellation loss",
+    "0–7 days before departure: cancellation incurs a charge of 50% of the order value as a late-cancellation loss",
+    "For force majeure (flight cancellation, illness, natural disaster, official government travel restrictions, etc.) with supporting documentation, a no-penalty refund applies; any platform transaction fees on the refund are borne by the guest"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前检查证件是否在有效期内",
+    "贵州是全国唯一没有平原的省份，山地较多，各景点间车程距离与时间相对较长，如有晕车症状请提前自备防晕车药品；并根据出行季节、天气及活动项目备好应季、适宜的衣物",
+    "村落、古镇内多为石板路，建议穿着舒适运动鞋，不建议穿高跟鞋或皮鞋；靠近瀑布可能打湿衣鞋，有瀑布行程当天建议备好更换衣物背在包里",
+    "贵州受季风影响，冷暖气流交汇频繁，夏季为雨季，雨来得快去得也快，需备好雨衣雨具；山区早晚温差较大，较凉，要备外套",
+    "请按需自备洗护用品、充电宝、充电线、耳机、防蚊用品，以及适合自身的常用药品（感冒药、退烧贴、肠胃药、晕车药等）",
+    "贵州饮食整体偏酸辣，如不适应酸辣或发酵食物，点餐时可明确说“少酸少辣”“不要太咸”",
+    "在少数民族地区应尊重当地传统习俗与生活禁忌，避免误会；逛古村古寨时不随意触碰村中鼓楼、萨坛、古树、神树等被视为神圣之物"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check their validity before departure",
+    "Guizhou is China's only province with no plains; the terrain is mountainous and drives between sights are relatively long, so bring motion-sickness medication if you are prone to it, and pack clothing suited to the season, weather, and planned activities",
+    "Villages and old towns are mostly paved with stone slabs — wear comfortable trainers rather than heels or leather shoes; near waterfalls clothes and shoes may get wet, so on waterfall days pack a change of clothes in your bag",
+    "Shaped by monsoon, Guizhou sees frequent shifts of warm and cool air; summer is the rainy season with quick-coming, quick-going showers, so carry rain gear. In the mountains, mornings and evenings are cool with notable temperature swings — bring a jacket",
+    "Pack your own toiletries, power bank, charging cables, earphones, mosquito repellent, and any personal medication you may need (cold medicine, fever patches, stomach remedies, motion-sickness pills, etc.)",
+    "Guizhou cuisine tends to be sour and spicy; if sour, spicy, or fermented foods don't suit you, ask for 'less sour, less spicy' or 'not too salty' when ordering",
+    "In ethnic-minority areas, respect local customs and taboos to avoid misunderstanding; when visiting old villages and fortresses, do not casually touch drum towers, Sa altars, ancient trees, sacred trees, or other objects regarded as holy"
+  ],
+  "faq": [
+    {
+      "q_zh": "这是跟团游还是自由行？匠庐提供哪些服务？",
+      "q_en": "Is this a guided tour or a self-guided trip, and what does JiangLu provide?",
+      "a_zh": "本行程为自由行产品，匠庐提供住宿及车辆（司机接送）服务。行程中的景点与活动仅供参考，可根据个人偏好灵活调整；涉及付费景点门票与手工体验等需自理。如需额外导游领队，请提前沟通预约并补齐费用。",
+      "a_en": "This is a self-guided product; JiangLu provides accommodation and vehicle service (driver transfers). The suggested sights and activities are for reference and can be adjusted flexibly to your preferences. Paid attraction tickets and hands-on experiences are at your own expense. A dedicated guide or tour leader can be arranged in advance for an additional fee."
+    },
+    {
+      "q_zh": "每天用车有什么限制？",
+      "q_en": "Are there any limits on the daily vehicle service?",
+      "a_zh": "为安全起见，每日用车时间为9:00-19:00，单日行驶不超过300公里，不含夜间用车与跨省用车，超出部分需另付车费。首尾两天仅含民宿与机场/高铁站之间的接送，无额外行程。",
+      "a_en": "For safety, vehicle service runs from 09:00 to 19:00, up to 300 km per day, and excludes night-time and cross-province use; any excess incurs an additional charge. The first and last days include only the lodge–airport/station transfer, with no additional itinerary."
+    },
+    {
+      "q_zh": "客房有哪些类型，可以指定吗？",
+      "q_en": "What room types are available, and can I request a specific one?",
+      "a_zh": "匠庐·村晓仅设少量客房，分为启·布依小屋与仕·村落石舍两类，二选一并以实际资源情况安排为准。每间房均配有高定床品、品牌卫浴与观景露台。如有房型偏好，请提前咨询。",
+      "a_en": "JiangLu · Cunxiao offers only a small number of rooms, in two collections — Qi · Buyi Cottages and Shi · Village Stone Houses — with the choice subject to availability. Each room features bespoke bedding, premium bath amenities, and a view terrace. Please advise any room preference in advance."
+    },
+    {
+      "q_zh": "来安顺旅行有什么需要特别准备的？",
+      "q_en": "Is there anything in particular I should prepare for a trip to Anshun?",
+      "a_zh": "贵州多山地、景点间车程较长，建议备好防晕车药；古村石板路多，请穿舒适运动鞋。夏季为雨季需备雨具，山区早晚较凉应带外套。当地饮食偏酸辣，可按需提出“少酸少辣”。在少数民族地区请尊重习俗、勿触碰鼓楼、神树等神圣之物。",
+      "a_en": "Guizhou is mountainous with long drives between sights, so bring motion-sickness medication; the villages have many stone-paved paths, so wear comfortable trainers. Summer is the rainy season — pack rain gear — and mountain mornings and evenings are cool, so bring a jacket. Local food tends to be sour and spicy; ask for 'less sour, less spicy' if needed. In ethnic-minority areas, respect local customs and avoid touching drum towers, sacred trees, and other holy objects."
+    }
+  ],
+  "closing_zh": "在这里，远离喧嚣，一砖一石皆是岁月沉淀，一院一景皆藏在地风骨。匠庐·村晓以明代石屯的厚重为骨、在地文化为魂，邀你走入石头的耳语、时光的戍所，在古屯与烟火之间，慢读安顺，沉浸式感受这座石头古城的沉静、温柔与隐奢。",
+  "closing_en": "Here, far from the clamor of the world, every brick and stone holds the weight of accumulated years, and every courtyard guards the character of this land. Built on the bones of the Ming stone garrison and animated by local culture, JiangLu · Cunxiao invites you into the whispers of stone and the garrison of time — to read Anshun slowly, between the ancient fortress and the warmth of daily life, and to feel, fully and unhurried, the stillness, the tenderness, and the quiet luxury of this city of stone.",
+  "price_from": 5588,
+  "price_currency": "CNY",
+  "poster_image": "时光的戍所.jpg",
+  "lodge_images": [
+    "jianglu-cunxiao/g01-航拍.jpg"
+  ]
+}

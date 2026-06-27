@@ -1,0 +1,471 @@
+{
+  "slug": "guizhou-liangdu-shishi",
+  "region_zh": "贵州",
+  "region_en": "Guizhou",
+  "title_zh": "凉都史诗·匠庐避暑秘境巡礼",
+  "title_en": "Epic of the Cool Capital: A JiangLu Pilgrimage Through Guizhou's Summer Sanctuaries",
+  "subtitle_zh": "从瀑布到彝乡的清凉史诗，以三家山野美宿为据点的避世远行",
+  "subtitle_en": "A cool-summer odyssey from thundering falls to Yi highland villages, anchored on three contrasting JiangLu mountain retreats",
+  "days": 6,
+  "nights": 5,
+  "duration_zh": "6天5晚",
+  "duration_en": "6 Days / 5 Nights",
+  "lodge_zh": "匠庐·村晓、六盘水匠庐城市酒店、匠庐·沙嘎",
+  "lodge_en": "JiangLu Cunxiao, JiangLu City Hotel Liupanshui, JiangLu Shaga",
+  "hero_image": "liangdu-hero-pool-day.jpg",
+  "route_zh": "安顺 → 六盘水 → 毕节",
+  "route_en": "Anshun → Liupanshui → Bijie",
+  "tags": [
+    {
+      "zh": "避暑秘境",
+      "en": "Summer Escape"
+    },
+    {
+      "zh": "隐奢慢旅",
+      "en": "Hidden-Luxury Slow Travel"
+    },
+    {
+      "zh": "三宿一线",
+      "en": "Three Lodges, One Route"
+    },
+    {
+      "zh": "山水人文",
+      "en": "Landscape & Culture"
+    },
+    {
+      "zh": "民族风情",
+      "en": "Ethnic Heritage"
+    },
+    {
+      "zh": "自由行",
+      "en": "Independent Journey"
+    }
+  ],
+  "intro_zh": "当城市的喧嚣与热浪一同抵达顶点，是时候开启一场真正的避世远行。这一次，深入贵州，以三家风格迥异的山野美宿为据点，开启一场从瀑布到彝乡的清凉史诗。六天，横跨瀑布、峡谷、溶洞、高山湖泊、民族村寨五大景观体系，览尽贵州山水与人文精华。线路设计充分利用海拔梯度（1000-1800-1500 米），夏日林间白天体感温度多在 18-21℃，将“住宿”本身，升华为旅程的华彩篇章。",
+  "intro_en": "When the city's clamor and the summer heat crest together, it is time for a true retreat into the wild. This journey carries you deep into Guizhou, anchored on three boutique mountain lodges of strikingly different character, for a cool-weather epic that runs from a roaring waterfall to a Yi highland village. Across six days you traverse five great landscape systems — waterfalls, gorges, karst caverns, alpine lakes and ethnic hamlets — drinking in the finest of Guizhou's scenery and living culture. The route is built around an altitude gradient (1,000 – 1,800 – 1,500 m), so that on a summer day in the forest the air feels a gentle 18–21°C, and the act of staying overnight becomes the most luminous chapter of the trip itself.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "安顺/贵阳接机接站，入住匠庐·村晓",
+          "title_en": "Arrival & Transfer to JiangLu Cunxiao",
+          "desc_zh": "于安顺或贵阳接机接站，专车送往匠庐·村晓，住进一座 600 年的布依石头城堡。（车程约 41–152km，时间 40min–1.5h，视接站接机地点而定）",
+          "desc_en": "Meet-and-greet at Anshun or Guiyang airport / station, with a private transfer to JiangLu Cunxiao — a 600-year-old Buyi stone village turned boutique castle. (Drive approx. 41–152 km, 40 min–1.5 h depending on pickup point.)"
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "黄果树瀑布、石头寨，入住匠庐·村晓",
+          "title_en": "Huangguoshu Waterfall & Stone Village, overnight at JiangLu Cunxiao",
+          "desc_zh": "感受亚洲第一大瀑布“黄果树瀑布”的磅礴气魄，漫步布依石韵原乡——石头寨，夜宿匠庐·村晓。（往返车程约 10km，时间 0.5h）",
+          "desc_en": "Stand before the thundering power of Huangguoshu, Asia's largest waterfall, then wander Stone Village (Shitouzhai), the cradle of Buyi stone craft and batik. Second night at JiangLu Cunxiao. (Round-trip drive approx. 10 km, 0.5 h.)"
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "穿越龙脊天路前往六盘水，入住六盘水匠庐城市酒店",
+          "title_en": "Over the Dragon-Spine Sky Road to Liupanshui",
+          "desc_zh": "前往六盘水，途中穿越“魔戒风”龙脊天路，入住六盘水匠庐城市酒店，在“19℃的夏天”里享受云端中场休息。（车程约 180km，时间 4h）",
+          "desc_en": "Drive to Liupanshui, crossing the cinematic, ridge-running Dragon-Spine Sky Road along the way. Check in to the JiangLu City Hotel Liupanshui for a lofty interlude in the city of the 19°C summer. (Drive approx. 180 km, 4 h.)"
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "梅花山/千户彝寨/瑶池/阿西里西韭菜坪，入住匠庐·沙嘎",
+          "title_en": "Plum-Blossom Mountain, Yi Village & the Cloud Meadows, then to JiangLu Shaga",
+          "desc_zh": "游览梅花山、千户彝寨、瑶池，登临阿西里西韭菜坪——“贵州的云上草原”，傍晚入住匠庐·沙嘎。（车程约 300km，时间 5.5h）",
+          "desc_en": "Explore Meihua (Plum-Blossom) Mountain, the thousand-household Yi village, and the mirror-clear Yaochi lake, then ascend Axilisi Jiucaiping — Guizhou's grassland in the clouds. Evening arrival at JiangLu Shaga. (Drive approx. 300 km, 5.5 h.)"
+        }
+      ]
+    },
+    {
+      "day_zh": "第五天",
+      "day_en": "Day 5",
+      "items": [
+        {
+          "title_zh": "油杉河、藏津洞，入住匠庐·沙嘎",
+          "title_en": "Youshan River Gorge & Cangjin Cavern, overnight at JiangLu Shaga",
+          "desc_zh": "游览油杉河景区与藏津洞，徒步峰林云海，探访亿年喀斯特溶洞，夜宿匠庐·沙嘎。（往返车程约 125km，时间 3.5h）",
+          "desc_en": "Visit the Youshan River scenic area — the so-called Zhangjiajie of Guizhou — and the Cangjin Cavern, hiking among cliff-girt peaks and drifting mist and exploring an aeons-old karst cave. Second night at JiangLu Shaga. (Round-trip drive approx. 125 km, 3.5 h.)"
+        }
+      ]
+    },
+    {
+      "day_zh": "第六天",
+      "day_en": "Day 6",
+      "items": [
+        {
+          "title_zh": "途经黔西，返程贵阳送站送机",
+          "title_en": "Departure via Qianxi to Guiyang",
+          "desc_zh": "途经黔西，专车送返贵阳，送站或送机，结束清凉史诗之旅。（车程约 140–171km，视送站送机地点而定）",
+          "desc_en": "Travel back via Qianxi for a private transfer to Guiyang station or airport, closing the cool-capital epic. (Drive approx. 140–171 km depending on drop-off point.)"
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·村晓 · 六盘水匠庐城市酒店 · 匠庐·沙嘎",
+    "name_en": "JiangLu Cunxiao · JiangLu City Hotel Liupanshui · JiangLu Shaga",
+    "positioning_zh": "三家风格迥异的匠庐山野美宿，串联起从布依石村到彝族秘境的清凉史诗",
+    "positioning_en": "Three JiangLu retreats of distinct character, threading a cool-summer epic from a Buyi stone village to a Yi highland sanctuary",
+    "desc_zh": "第一幕，安顺·匠庐·村晓——一次真正的“整村入住”体验。68 栋百年布依石屋，经匠人之手化身为一座有温度的石头博物馆：脚下石板蜿蜒，身旁老门土墙斑驳，推窗揽青山叠翠，漫步街巷尽得田园悠然。第二幕，六盘水匠庐城市酒店——告别古朴村落，邂逅都市美学，在“19℃的夏天”里入住城市高空的云端栖所，空中大堂与餐厅饱览山水城景，东方意境搭配法式格调，是旅程完美的中场休息站“路拉雅”。第三幕，毕节·匠庐·沙嘎——海拔 1500 米、夏季均温 19℃，由彝族百年老宅改造而成的合院 Villa。保留完整的火塘，凝结家族记忆；夜晚灯光“歇息”后，庭院抬头便是璀璨银河，是与星空、山风和内心对话的终极场所。",
+    "desc_en": "Act One — Anshun, JiangLu Cunxiao: a true \"whole-village stay.\" Sixty-eight century-old Buyi stone houses, reworked by master craftsmen into a living museum of stone — winding flagstone lanes underfoot, weathered timber doors and earthen walls at your shoulder, layered green hills framed in every window, and pastoral ease at every turn. Act Two — JiangLu City Hotel Liupanshui: farewell to the ancient village, hello to urban poise. In the city of the 19°C summer you ascend to a cloud-perch high above the streets, where a sky lobby and restaurant survey mountain, water and cityscape, and Eastern atmosphere meets French finesse. This is \"Lulaya,\" the perfect intermission of the journey. Act Three — Bijie, JiangLu Shaga: at 1,500 m with a 19°C summer average, a courtyard villa reborn from a century-old Yi homestead. Its original hearth (huotang) endures, holding the memory and stories of generations; at night, once the lamps fall quiet, the courtyard opens onto a brilliant Milky Way — the ultimate place to commune with the stars, the mountain wind, and your own thoughts.",
+    "stats": [
+      {
+        "label_zh": "百年布依石屋",
+        "label_en": "Century-old Buyi stone houses",
+        "value": "68 栋 / 68"
+      },
+      {
+        "label_zh": "海拔梯度",
+        "label_en": "Altitude gradient",
+        "value": "1000–1800–1500 m"
+      },
+      {
+        "label_zh": "夏日体感温度",
+        "label_en": "Summer felt temperature",
+        "value": "18–21°C"
+      },
+      {
+        "label_zh": "沙嘎夏季均温",
+        "label_en": "Shaga summer average",
+        "value": "19°C"
+      },
+      {
+        "label_zh": "入住夜数",
+        "label_en": "Nights",
+        "value": "5"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "黄果树瀑布",
+      "title_en": "Huangguoshu Waterfall",
+      "desc_zh": "亚洲第一大瀑布的磅礴水势，是此行无可替代的开篇，万千飞流轰然而下，气魄撼人。",
+      "desc_en": "Asia's largest waterfall and the irreplaceable opening movement of the trip — a wall of water crashing down in thunderous, soul-shaking force."
+    },
+    {
+      "title_zh": "石头寨与布依慢生活",
+      "title_en": "Stone Village & Buyi Slow Living",
+      "desc_zh": "夏日溪流岸边散步消暑，思索石头房子层层堆叠的起源。这里是村晓所在，更是“布依族蜡染之乡”；走累了，便在村中老榕树下静坐，感受最地道的布依慢生活。",
+      "desc_en": "Stroll the cool stream banks in summer and ponder the origins of these tier-upon-tier stone dwellings. This is the home of Cunxiao and the heartland of Buyi batik; when your feet tire, sit beneath the old banyan tree and let the most authentic Buyi rhythm of life carry you."
+    },
+    {
+      "title_zh": "龙脊天路",
+      "title_en": "Dragon-Spine Sky Road",
+      "desc_zh": "海拔约 2000 米，山脊公路蜿蜒如巨龙脊背，两侧怪石嶙峋，远观超壮阔，随手拍都是“魔戒风”大片。",
+      "desc_en": "At around 2,000 m, this ridge-top road coils like the spine of a great dragon, flanked by jagged rock. The sweeping views are pure cinema — every casual snapshot looks like a frame from an epic film."
+    },
+    {
+      "title_zh": "梅花山",
+      "title_en": "Plum-Blossom Mountain (Meihua Shan)",
+      "desc_zh": "藏在乌蒙山脉的避暑秘境，春赏梅、夏避暑、秋观云海、冬可滑雪，是集自然野趣与山地度假于一体的国家 4A 级景区。",
+      "desc_en": "A summer hideaway tucked in the Wumeng range — plum blossoms in spring, cool refuge in summer, seas of cloud in autumn and skiing in winter. A national 4A-rated resort that blends wild nature with mountain leisure."
+    },
+    {
+      "title_zh": "千户彝寨",
+      "title_en": "Thousand-Household Yi Village",
+      "desc_zh": "群山环抱间，火把广场、九重宫殿与非遗风情交织，既能探秘古彝文明，亦可体验浓郁民族风情，是凉都六盘水的文化地标。",
+      "desc_en": "Cradled by mountains, where the Torch Plaza, the Ninefold Palace and intangible-heritage traditions intertwine. Uncover ancient Yi civilization and immerse in vivid ethnic culture at this cultural landmark of the cool capital, Liupanshui."
+    },
+    {
+      "title_zh": "瑶池",
+      "title_en": "Yaochi Lake",
+      "desc_zh": "乌蒙山脉里的“凉都翡翠”，湖面澄澈如镜，山林苍翠、飞鸟翩跹。漫步环湖步道，在天然氧吧里静享山野悠然。",
+      "desc_en": "The \"emerald of the cool capital\" set in the Wumeng range — a mirror-still lake ringed by deep green forest and circling birds. Walk the lakeside path and breathe deeply in this natural oxygen bar."
+    },
+    {
+      "title_zh": "阿西里西韭菜坪",
+      "title_en": "Axilisi Jiucaiping Cloud Meadows",
+      "desc_zh": "“贵州的云上草原”——阿西里西，贵州屋脊韭菜坪，登顶去做“追风追云的孩子”。",
+      "desc_en": "Guizhou's grassland in the clouds — Axilisi Jiucaiping, the roof of the province, where you can be a child again, chasing the wind and the drifting clouds."
+    },
+    {
+      "title_zh": "油杉河景区",
+      "title_en": "Youshan River Scenic Area",
+      "desc_zh": "被誉为“贵州的张家界”，拥有崔苏坝、仙宇屯等绝壁峰林，云雾缭绕时徒步其中，宛如漫步云端仙境。",
+      "desc_en": "Hailed as the Zhangjiajie of Guizhou, with the cliff-bound peak forests of Cuisuba and Xianyutun. Hike through when the mist gathers and it feels like wandering a wonderland in the clouds."
+    },
+    {
+      "title_zh": "藏津洞",
+      "title_en": "Cangjin Cavern",
+      "desc_zh": "亿年喀斯特溶洞灵秀天成，奇石清泉相映成趣；恒温洞天之内，非遗佳酿静享时光沉淀。穿行其间，细细品读悠远的古彝风情。",
+      "desc_en": "An aeons-old karst cavern of natural grace, where curious rock formations meet clear springs. Within its constant-temperature depths, intangible-heritage spirits age quietly with time. Walk through and read, line by line, the deep antiquity of Yi culture."
+    },
+    {
+      "title_zh": "沙嘎寨与彝族故事",
+      "title_en": "Shaga Village & Yi Heritage",
+      "desc_zh": "漫步村中，听彝族不仅传承民族文化，更承载“天下无不可化之人”的可贵教育观——甸国将军黄开元、熙朝儒吏黄思永……迎丰村的故事，比酒还浓。",
+      "desc_en": "Wander the village and hear how the Yi people carry not only their culture but a remarkable educational creed — that there is no one who cannot be brought to enlightenment. From General Huang Kaiyuan to the scholar-official Huang Siyong, the stories of Yingfeng village run deeper than its strongest liquor."
+    },
+    {
+      "title_zh": "围炉煮茶与火塘对话",
+      "title_en": "Tea by the Brazier & Conversations at the Hearth",
+      "desc_zh": "在村晓的石院围炉煮茶，伴着晚风与古建光影闲话度日；在沙嘎保留完整的火塘旁，夜晚抬头便是璀璨银河，与星空、山风和内心对话。",
+      "desc_en": "Simmer tea over a brazier in Cunxiao's stone courtyard, letting the evening breeze and the play of light on old architecture pass the hours; at Shaga's intact hearth, look up at night to a brilliant Milky Way and let the stars, the mountain wind and your own thoughts keep you company."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "山野烧烤",
+      "name_en": "Mountain Barbecue",
+      "desc_zh": "吹着山风啃烤肉，抬头是石屋的古早檐角，低头是烤盘的烟火气，这种“躲进山里吃大餐”的松弛感，太治愈。",
+      "desc_en": "Grill in the mountain breeze — above you the ancient eaves of stone houses, below you the sizzle and smoke of the brazier. The deep ease of feasting hidden away in the hills is pure balm for the soul."
+    },
+    {
+      "name_zh": "安顺牛肉火锅",
+      "name_en": "Anshun Beef Hotpot",
+      "desc_zh": "带皮黄牛新鲜现切后炖煮，肥瘦相间，配上新鲜野菜与贵州灵魂蘸水，堪称美味。",
+      "desc_en": "Freshly sliced skin-on yellow beef, simmered to a marbled tenderness and served with wild greens and Guizhou's soul-stirring dipping sauce — superb."
+    },
+    {
+      "name_zh": "水城烙锅",
+      "name_en": "Shuicheng Griddle Pot (Luoguo)",
+      "desc_zh": "“一锅烙万物”，铁锅烧至滚烫刷上油，肉菜片刻便香味扑鼻，配上灵魂蘸料，一口接一口完全停不下来。",
+      "desc_en": "\"One pan, all things griddled\" — the iron pan blazes hot and oiled, meat and vegetables turn fragrant in moments, and with the signature dip you simply cannot stop."
+    },
+    {
+      "name_zh": "水城羊肉粉",
+      "name_en": "Shuicheng Mutton Rice Noodles",
+      "desc_zh": "高山黑山羊浓汤做底，米粉劲道，红油与各种佐料相配，清晨一碗下肚，神清气爽。",
+      "desc_en": "A rich broth of highland black goat over springy rice noodles, finished with chili oil and an array of seasonings — a bowl at dawn and you feel clear and renewed."
+    },
+    {
+      "name_zh": "冰浆",
+      "name_en": "Bingjiang Fruit Ice",
+      "desc_zh": "新鲜水果加糯米与冰块打成绵密冰沙，口感细腻香甜。",
+      "desc_en": "Fresh fruit blended with glutinous rice and ice into a silky-smooth sorbet — fine-textured, fragrant and sweet."
+    },
+    {
+      "name_zh": "怪噜饭",
+      "name_en": "Guailu Fried Rice",
+      "desc_zh": "腊肉、酸豇豆等十余种食材与米饭一同翻炒，酸辣开胃。",
+      "desc_en": "More than a dozen ingredients — cured pork, sour long beans and more — stir-fried with rice into a tangy, appetite-rousing dish."
+    },
+    {
+      "name_zh": "灌汤猪脚",
+      "name_en": "Soup-Filled Braised Trotters",
+      "desc_zh": "皮弹肉嫩，鲜香不腻，当地人颇为喜爱。",
+      "desc_en": "Springy skin and tender meat, savory yet never greasy — a local favorite."
+    },
+    {
+      "name_zh": "脆哨面",
+      "name_en": "Cuishao Noodles",
+      "desc_zh": "手工碱水面搭配焦香的脆哨，汤汁鲜咸回甘。",
+      "desc_en": "Hand-pulled alkaline noodles topped with crisp, caramel-fragrant pork cracklings (cuishao), in a savory broth that finishes sweet."
+    },
+    {
+      "name_zh": "豆豉火锅",
+      "name_en": "Fermented Black Bean Hotpot",
+      "desc_zh": "豆豉做底，“臭香”浓郁，配饭一绝。",
+      "desc_en": "Built on a base of fermented black beans, pungent and richly aromatic — unbeatable over a bowl of rice."
+    },
+    {
+      "name_zh": "毕节烙锅",
+      "name_en": "Bijie Griddle Pot",
+      "desc_zh": "万物皆可烙，搭配秘制辣椒沾水，吃了就停不下来。",
+      "desc_en": "Anything and everything griddled, paired with a secret chili dip you won't be able to put down."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐 5 晚住宿",
+        "匠庐·村晓 2 晚（仕｜村落石舍（大床）、启｜匠选小屋（双床））",
+        "六盘水匠庐城市酒店 1 晚（大床房／标间）",
+        "匠庐·沙嘎 2 晚（舒享大床／标间）",
+        "以实际资源情况安排为准，如有偏好请提前咨询",
+        "默认安排 2 位成人共享一间标准间或大床房"
+      ],
+      "items_en": [
+        "5 nights across the three JiangLu lodges",
+        "JiangLu Cunxiao — 2 nights (Village Stone House, king; or Artisan Cabin, twin)",
+        "JiangLu City Hotel Liupanshui — 1 night (king or standard twin)",
+        "JiangLu Shaga — 2 nights (Comfort king or standard twin)",
+        "Final room category assigned per actual availability; please advise preferences in advance",
+        "By default, two adults share one standard or king room"
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Vehicle Service",
+      "items_zh": [
+        "专业旅游车队司机与服务",
+        "接送机站服务，独立成团默认配备 5 座基础车型；同行人数较多可升级商务车，更换车型需提前告知并补齐差价",
+        "每日外出所需往返民宿用车（首尾两天仅含民宿往返接送机站用车，无额外行程）",
+        "为安全计，每日用车时间 9:00–19:00，不超过 300 公里，不含夜间用车与跨省用车，超出需另付车费"
+      ],
+      "items_en": [
+        "Professional touring fleet with driver service",
+        "Airport / station transfers; private departures are assigned a standard 5-seater by default. Larger parties may upgrade to a business van — please notify in advance and settle any fare difference",
+        "Daily round-trip vehicle from the lodge for outings (first and last days include only the lodge–airport/station transfer, with no additional itinerary)",
+        "For safety, vehicle hours are 09:00–19:00, capped at 300 km/day, excluding night use and inter-provincial travel; overages incur additional charges"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐",
+        "免费欢迎水果甜品",
+        "客房迷你吧小食饮品每日畅享",
+        "晚安甜品"
+      ],
+      "items_en": [
+        "Daily breakfast at each hotel",
+        "Complimentary welcome fruit and dessert",
+        "Daily in-room mini-bar snacks and beverages",
+        "Nightly turndown sweet"
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "Stay Privileges",
+      "items_zh": [
+        "围炉煮茶",
+        "匠庐·沙嘎：漆扇制作、手工糯米饭制作（16:00–17:00），每份适用 2 位成人、1 位儿童，酒店前台领取",
+        "匠庐·村晓 — 旅拍体验：提前一天预约，每间房 3 张精修，不可转赠、不叠加，超出或额外需求请提前咨询前台",
+        "匠庐·村晓 — 非遗手工蜡染体验（9:00–17:30，联系前台参与，入住期间每人一次）",
+        "匠庐·村晓 — 安顺特色裹卷体验（14:30–16:00，需提前 3 小时预约，入住期间每间房一次，地点为酒店内）"
+      ],
+      "items_en": [
+        "Tea simmered over a brazier",
+        "JiangLu Shaga: lacquer-fan making and hand-made glutinous rice (16:00–17:00); each serving covers 2 adults and 1 child, collected at the front desk",
+        "JiangLu Cunxiao — travel photo session: book one day ahead; 3 retouched images per room, non-transferable and non-combinable; extra or additional needs by prior arrangement with the front desk",
+        "JiangLu Cunxiao — intangible-heritage batik workshop (9:00–17:30, arrange with the front desk; once per person during the stay)",
+        "JiangLu Cunxiao — Anshun guojuan spring-roll experience (14:30–16:00; book 3 hours ahead; once per room during the stay, held on-site)"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额 50 万元",
+        "如需更高保额，可根据需求自行加保"
+      ],
+      "items_en": [
+        "Personal travel accident insurance during the trip, with coverage of RMB 500,000",
+        "Higher coverage may be arranged independently as needed"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "出发地与目的地之间的往返大交通（机票／高铁票等）",
+    "行程中除酒店早餐外的所有餐食费用",
+    "景点门票、手工体验活动等自选项目，以及“费用包含”未提及的其他费用",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约并补齐费用",
+    "因不可抗力（自然灾害、政府政策、航班延误等）造成的额外支出",
+    "因违约、自身过错、自由活动期间个人行为或自身疾病引起的人身和财产损失"
+  ],
+  "exclusions_en": [
+    "Long-haul transport between your origin and the destination (flights, high-speed rail, etc.)",
+    "All meals during the trip other than hotel breakfast",
+    "Attraction tickets, hands-on workshops and other optional activities, plus any costs not listed under inclusions",
+    "This is an independent journey with driver transfers only; a dedicated guide or tour leader can be arranged in advance for an additional fee",
+    "Additional costs arising from force majeure (natural disasters, government policy, flight delays, etc.)",
+    "Personal injury or property loss arising from breach, personal fault, free-time conduct, or one's own illness"
+  ],
+  "pricing_notes_zh": [
+    "售价为 2 人成团的单人价格",
+    "第三人为 15 岁及以上不可同住一间房；单男／单女无法与他人同住一间房、孩童需单独占床时，需补齐单房差价 3500 元／人（有特殊房型的门店可补差入住家庭房或亲子房）",
+    "携带 1 位孩童与 2 位成人同住同行：6 岁以下（不加床）2150 元／人；6–14 岁（不加床）2788 元／人",
+    "携带多位孩童或其他出行人数、房间组合的价格，请咨询客服",
+    "15 周岁及以上入住视为成人，14 周岁及以下视为孩童"
+  ],
+  "pricing_notes_en": [
+    "Prices are per person based on a party of two",
+    "A third guest aged 15+ cannot share one room; for a solo male/female unable to share, or a child requiring a separate bed, a single supplement of RMB 3,500/person applies (properties with special room types may upgrade to a family or parent-child room for the difference)",
+    "One child traveling and rooming with two adults: under 6 (no extra bed) RMB 2,150/person; ages 6–14 (no extra bed) RMB 2,788/person",
+    "For multiple children, other party sizes, or different room combinations, please consult customer service",
+    "Guests aged 15+ are treated as adults; ages 14 and under as children"
+  ],
+  "cancellation_zh": [
+    "预订旅行产品须支付全款方可确认预订",
+    "行程开始前 15 天及以上（不含出发当天），可申请无损取消及退款",
+    "行程开始前 8–14 天（不含出发当天），取消收取订单金额 30% 作为临时取消损失",
+    "行程开始前 0–7 天，取消收取订单金额 50% 作为临时取消损失",
+    "因不可抗力（航班取消、疾病、自然灾害、政府官方不可出行文件等）并提供证明可无损退款；退款时平台手续费部分由本人承担"
+  ],
+  "cancellation_en": [
+    "Full payment is required to confirm a booking",
+    "15+ days before departure (excluding the departure day): free cancellation and full refund",
+    "8–14 days before departure (excluding the departure day): cancellation incurs a charge of 30% of the order value",
+    "0–7 days before departure: cancellation incurs a charge of 50% of the order value",
+    "For force majeure (flight cancellation, illness, natural disaster, official no-travel directives, etc.) with supporting proof, a no-loss refund applies; any platform processing fees on the refund are borne by the guest"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并确认证件在有效期内",
+    "贵州是全国唯一没有平原的省份，山地较多，景点间车程较长，易晕车者请自备防晕车药品；并根据季节、天气与活动备好应季衣物",
+    "村落、古镇内多为石板路，建议穿着舒适运动鞋，不建议高跟鞋或皮鞋；靠近瀑布可能打湿衣鞋，有瀑布行程当天建议背好换洗衣物",
+    "贵州夏季为雨季，“夏雨隔牛背”，雨来得快去得也快，需备雨衣雨具；山区早晚温差大，记得带外套",
+    "按需自备洗护用品、充电宝、充电线、耳机、防蚊用品，以及感冒药、退烧贴、肠胃药、晕车药等常用药品",
+    "贵州饮食偏酸辣，不适应酸辣或发酵食物者点餐时可注明“少酸少辣”“不要太咸”",
+    "在少数民族地区请尊重当地传统习俗与禁忌；逛古村古寨时勿随意触碰鼓楼、萨坛、古树、神树等被视为神圣之物"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check they are within their validity period",
+    "Guizhou is the only Chinese province without plains; it is highly mountainous and drives between sights can be long. If you are prone to motion sickness, bring your own remedy, and pack season- and weather-appropriate clothing for your activities",
+    "Villages and old towns are paved in flagstone — wear comfortable trainers rather than heels or leather shoes; spray near the waterfall may soak clothing, so on waterfall days carry a change of clothes in your bag",
+    "Summer is the rainy season in Guizhou, with showers that arrive and pass quickly — bring rain gear; mountain mornings and evenings are cool with large temperature swings, so pack a jacket",
+    "Bring your own toiletries, power bank, charging cable, earphones, mosquito repellent, and personal medicines (cold remedy, fever-cooling patches, stomach medicine, motion-sickness pills, etc.)",
+    "Guizhou cuisine tends to be sour and spicy; if you are not accustomed to sour, spicy or fermented food, ask for \"less sour, less spicy\" and \"not too salty\" when ordering",
+    "In ethnic-minority areas, respect local customs and taboos; when visiting old villages, do not casually touch drum towers, sa-altars, ancient trees, sacred trees or other objects regarded as sacred"
+  ],
+  "faq": [
+    {
+      "q_zh": "这条线路适合什么时候去？为什么强调“凉”？",
+      "q_en": "When is the best time to go, and why the emphasis on staying cool?",
+      "a_zh": "这是一条夏季避暑线路。六盘水是“中国凉都”，号称“19℃的夏天”；线路特意安排 1000–1800–1500 米的海拔梯度，夏日林间白天体感温度多在 18–21℃，正适合在城市酷暑时来此避世清凉。",
+      "a_en": "This is a summer escape. Liupanshui is China's \"Cool Capital,\" famous for its 19°C summer, and the route is deliberately built on a 1,000–1,800–1,500 m altitude gradient, so a summer day in the forest feels a gentle 18–21°C — ideal for retreating from the city's heat."
+    },
+    {
+      "q_zh": "六天为什么要换三家匠庐？",
+      "q_en": "Why move between three JiangLu lodges over six days?",
+      "a_zh": "三家美宿各成一幕：安顺·匠庐·村晓是 600 年布依石头村落的“整村入住”；六盘水匠庐城市酒店是云端都市中场休息站；毕节·匠庐·沙嘎是彝族百年老宅改造的合院 Villa，保留火塘、坐拥银河。住宿本身就是旅程的华彩篇章。",
+      "a_en": "Each lodge is its own act. JiangLu Cunxiao in Anshun is a \"whole-village stay\" in a 600-year-old Buyi stone hamlet; the JiangLu City Hotel Liupanshui is a cloud-high urban intermission; and JiangLu Shaga in Bijie is a courtyard villa reborn from a century-old Yi homestead, with its hearth intact and the Milky Way overhead. Here the stay itself is the most luminous chapter of the journey."
+    },
+    {
+      "q_zh": "行程能调整吗？包含哪些服务？",
+      "q_en": "Can the itinerary be adjusted, and what's actually included?",
+      "a_zh": "这是自由行产品，行程仅供参考，可按个人偏好与当地实际情况灵活调整。匠庐仅提供住宿及车辆服务：含 5 晚住宿、每日早餐、专车司服与往返用车、住宿礼遇及个人旅游意外险；景点门票、手工体验等自费项目及正餐需自理。",
+      "a_en": "It is an independent-travel product: the itinerary is a guide and can be adjusted to your preferences and local conditions. JiangLu provides accommodation and vehicle service only — 5 nights' stay, daily breakfast, a private driver and round-trip transfers, stay privileges and personal travel accident insurance are included; attraction tickets, hands-on workshops and main meals are at your own expense."
+    },
+    {
+      "q_zh": "带孩子或单人出行怎么算价格？",
+      "q_en": "How does pricing work for children or a solo traveler?",
+      "a_zh": "标价为 2 人成团的单人价。1 位孩童与 2 位成人同住：6 岁以下（不加床）2150 元／人，6–14 岁（不加床）2788 元／人。需单独占床、单男单女无法拼房或第三位成人不同住时，补单房差 3500 元／人。更多组合请咨询客服。",
+      "a_en": "Listed prices are per person based on a party of two. One child rooming with two adults: under 6 (no extra bed) RMB 2,150/person, ages 6–14 (no extra bed) RMB 2,788/person. A single supplement of RMB 3,500/person applies for a separate child bed, a solo guest who cannot share, or a third adult who cannot room together. For other combinations, please contact customer service."
+    }
+  ],
+  "closing_zh": "匠庐以云贵为开端，不断踏上征途，探寻山河之美，致力于度假酒店与民宿的开发运营，专注发掘小而美的隐奢度假之地。每一个匠庐都是一处“旅行目的地”——它不仅是居所，更容纳着数以万计旅居者对美好旅行的期待。我们不断探索创新，为每一位抵达匠庐的朋友呈现跨越千年、历久弥新的在地生活，奉上一场慢速印象美学。",
+  "closing_en": "Beginning in Yunnan and Guizhou, JiangLu keeps setting out anew in search of the beauty of mountains and rivers, devoted to creating and running resort hotels and boutique lodges, seeking out the small, the lovely, the hidden-luxury places to rest. Every JiangLu is a destination in itself — not merely a place to stay, but a vessel for the longing of tens of thousands of travelers for a beautiful journey. Through constant exploration and reinvention, we offer each guest who arrives a way of living rooted in place yet ever-renewed across the centuries — a slow, impressionistic aesthetic of travel.",
+  "price_from": 7588,
+  "price_currency": "CNY",
+  "poster_image": "凉都史诗.jpg",
+  "lodge_images": [
+    "shaga/aerial.jpg",
+    "shaga/lobby.jpg",
+    "shaga/public.jpg",
+    "shaga/tea.jpg",
+    "shaga/dining.jpg",
+    "shaga/pool-day.jpg",
+    "shaga/aerial2.jpg"
+  ]
+}

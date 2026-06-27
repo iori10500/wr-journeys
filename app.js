@@ -149,6 +149,11 @@ app.get('/sitemap.xml', (req, res) => {
     pages.push({ loc: `${baseUrl}/brands/${b.slug}`, priority: '0.6', changefreq: 'monthly' });
     pages.push({ loc: `${baseUrl}/brands/${b.slug}?lang=en`, priority: '0.5', changefreq: 'monthly' });
   });
+  // Brand-routes (IA v2 — /routes/<slug>)
+  Object.values(routesIndex).forEach(r => {
+    pages.push({ loc: `${baseUrl}/routes/${r.slug}`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/routes/${r.slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+  });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -186,6 +191,31 @@ try {
   brandsData = JSON.parse(fs.readFileSync(brandsPath, 'utf-8'));
 } catch (err) {
   console.error('Failed to load brands:', err.message);
+}
+
+// Load brand-routes data (per-brand curated routes)
+const brandRoutes = {}; // { brandSlug: [routeObj, ...] }
+const routesIndex = {}; // { routeSlug: { ...route, brand: brandSlug } }
+try {
+  const brandRoutesDir = path.join(__dirname, 'data', 'brand-routes');
+  if (fs.existsSync(brandRoutesDir)) {
+    fs.readdirSync(brandRoutesDir).forEach(brandSlug => {
+      const dir = path.join(brandRoutesDir, brandSlug);
+      if (!fs.statSync(dir).isDirectory()) return;
+      brandRoutes[brandSlug] = [];
+      fs.readdirSync(dir).filter(f => f.endsWith('.json')).forEach(f => {
+        const obj = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+        obj.slug = obj.slug || path.basename(f, '.json');
+        obj.brand = brandSlug;
+        // Normalize hero_path → /images/brands/<brand>/<slug>-hero.jpg
+        obj.hero_path = `/images/brands/${brandSlug}/${obj.slug}-hero.jpg`;
+        brandRoutes[brandSlug].push(obj);
+        routesIndex[obj.slug] = obj;
+      });
+    });
+  }
+} catch (err) {
+  console.error('Failed to load brand-routes:', err.message);
 }
 
 // Mode definitions (IA v2 — replaces /themes)
@@ -638,13 +668,23 @@ app.get('/brands', (req, res) => {
   res.render('brands', { brands: brandsData, lang, title: lang === 'en' ? 'Brand House | WR Journeys' : '品牌矩阵 | WR Journeys' });
 });
 
-// Brand detail (stub)
+// Brand detail (with optional routes grid)
 app.get('/brands/:slug', (req, res) => {
   const brand = brandsData.find(b => b.slug === req.params.slug);
   if (!brand) return res.status(404).send('Brand not found');
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   if (brand.external && brand.external_url) return res.redirect(302, brand.external_url);
-  res.render('brand-detail', { brand, lang });
+  const routes = brandRoutes[brand.slug] || [];
+  res.render('brand-detail', { brand, routes, lang });
+});
+
+// Route detail (per-brand curated route, e.g. /routes/guizhou-liangdu-shishi)
+app.get('/routes/:slug', (req, res) => {
+  const route = routesIndex[req.params.slug];
+  if (!route) return res.status(404).send('Route not found');
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const brand = brandsData.find(b => b.slug === route.brand) || { slug: route.brand, name_zh: route.brand, name_en: route.brand };
+  res.render('route-detail', { route, brand, lang });
 });
 
 // Homepage route

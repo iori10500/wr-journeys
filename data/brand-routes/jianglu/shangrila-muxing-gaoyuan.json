@@ -1,0 +1,378 @@
+{
+  "slug": "shangrila-muxing-gaoyuan",
+  "region_zh": "香格里拉",
+  "region_en": "Shangri-La",
+  "title_zh": "牧行高原·窑隐山野",
+  "title_en": "Herding the High Plateau, Kiln Retreat in the Wild",
+  "subtitle_zh": "香格里拉 & 梅里雪山 5 天 4 晚",
+  "subtitle_en": "Shangri-La & Meili Snow Mountain — 5 Days / 4 Nights",
+  "days": 5,
+  "nights": 4,
+  "duration_zh": "5天4晚",
+  "duration_en": "5 Days / 4 Nights",
+  "lodge_zh": "香格里拉匠庐·赛朵游牧、梅里雪山匠庐·雾浓顶",
+  "lodge_en": "JiangLu Saiduo Nomad (Shangri-La) & JiangLu Wunongding (Meili Snow Mountain)",
+  "hero_image": "jianglu-wunongding/hero.jpg",
+  "route_zh": "香格里拉 → 尼西 → 高原牧场 → 东竹林寺 → 梅里雪山 → 白马雪山 → 香格里拉",
+  "route_en": "Shangri-La → Nixi → Highland Pasture → Dongzhulin Monastery → Meili Snow Mountain → Baima Snow Mountain → Shangri-La",
+  "tags": [
+    {
+      "zh": "做客高原牧场",
+      "en": "A Day on the Highland Pasture"
+    },
+    {
+      "zh": "徒步白马雪山",
+      "en": "Trekking Baima Snow Mountain"
+    },
+    {
+      "zh": "非遗尼西黑陶",
+      "en": "Heritage Nixi Black Pottery"
+    },
+    {
+      "zh": "滇西格鲁派第一丛林",
+      "en": "Western Yunnan's Foremost Gelugpa Monastery"
+    },
+    {
+      "zh": "英力士掷弹兵越野",
+      "en": "INEOS Grenadier 4x4"
+    },
+    {
+      "zh": "一价全含",
+      "en": "All-Inclusive"
+    },
+    {
+      "zh": "专属小团",
+      "en": "Private Small-Group"
+    },
+    {
+      "zh": "野奢度假",
+      "en": "Wilderness Luxury"
+    }
+  ],
+  "intro_zh": "在海拔3300米的藏地云南，匠庐以两座野奢酒店为家，带你深入香格里拉与梅里雪山的高原腹地。乘船进入每年仅开放5个月的私人牧场，跟着藏家阿妈挤奶、做酸奶、揉糌粑；在世代相传的匠人手中揉捏一件尼西黑陶;沿白马雪山的林间步道穿行漫山杜鹃;走进滇西格鲁派第一丛林东竹林寺,感受信仰的厚重。全程英力士掷弹兵硬派越野随行,司机兼领队相伴,一价全含,专属小团,独立出行——这是一场关于慢、关于野、关于真实高原生活的隐奢之旅。",
+  "intro_en": "At 3,300 metres in the Tibetan reaches of Yunnan, JiangLu makes its home in two wilderness-luxury lodges, drawing you deep into the high country of Shangri-La and the Meili Snow Mountain. Board a boat into a private pasture open just five months a year and join a Tibetan ama to milk the herd, ferment fresh yogurt and knead tsampa by hand; shape a piece of Nixi black pottery under the hands of artisans who have passed the craft down through generations; walk the forest trails of Baima Snow Mountain through hillsides ablaze with rhododendron; and step into Dongzhulin, western Yunnan's foremost Gelugpa monastery, to feel the weight of living faith. A rugged INEOS Grenadier accompanies you throughout, with a driver who doubles as your guide. All-inclusive, privately small-group and independently scheduled — this is a hidden-luxury journey of slowness, wildness, and the true rhythm of life on the plateau.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "全国各地 — 香格里拉",
+          "title_en": "Arrival in Shangri-La",
+          "desc_zh": "抵达香格里拉机场/高铁站,专属英力士掷弹兵接驳前往酒店(车程约10公里,20分钟)。入住香格里拉匠庐·赛朵游牧,晚餐后于高原草原的清风花海间安顿身心。",
+          "desc_en": "Arrive at Shangri-La airport or high-speed rail station, where a private INEOS Grenadier transfers you to the lodge (about 10 km, 20 minutes). Check in at JiangLu Saiduo Nomad and settle in over dinner amid the wildflower meadows and cool breezes of the grassland."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "尼西黑陶手作体验",
+          "title_en": "Nixi Black Pottery Workshop",
+          "desc_zh": "跟随世代相传的藏地匠人揉泥、塑形、刻花、修坯,从一团朴素陶土到一件专属器皿,亲手带走独一无二的非遗黑陶。",
+          "desc_en": "Work alongside artisans of a generations-old lineage to wedge the clay, shape, carve and finish your piece — from a plain lump of earth to a vessel that is entirely your own, a one-of-a-kind heritage black pottery to take home."
+        },
+        {
+          "title_zh": "做客高原牧场",
+          "title_en": "A Day on the Highland Pasture",
+          "desc_zh": "乘船进入每年仅开放5个月的当地私人牧场(车程约120公里,3小时),漫步高山草甸,与藏家阿妈一起挤新鲜牛奶、发酵酸奶、揉糌粑、喝一碗刚打的酥油茶,体验最真实的牧民日常。夜宿赛朵游牧。",
+          "desc_en": "Board a boat into a private local pasture open just five months a year (about 120 km, 3 hours). Wander the alpine meadows and join a Tibetan ama to milk the herd, ferment yogurt, knead tsampa and sip a freshly churned bowl of butter tea — the truest taste of a herder's day. Overnight at Saiduo Nomad."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "东竹林寺",
+          "title_en": "Dongzhulin Monastery",
+          "desc_zh": "探访滇西格鲁派第一丛林,这里留有最本真的修行日常:壁画彩绘绚丽、唐卡熠熠生辉,三座镶嵌天珠玛瑙的立体坛城,百年不腐的活佛肉身与巨幅堆绣唐卡,承载着藏地信仰的厚重与传奇。",
+          "desc_en": "Visit western Yunnan's foremost Gelugpa monastery, where the daily life of practice endures in its purest form: brilliant murals and gleaming thangkas, three three-dimensional mandalas inlaid with dzi beads and agate, the incorrupt body of a venerated lama, and a vast appliqué thangka — all bearing the depth and legend of Tibetan faith."
+        },
+        {
+          "title_zh": "前往梅里雪山",
+          "title_en": "Onward to Meili Snow Mountain",
+          "desc_zh": "续行前往梅里雪山(车程约160公里,4小时),入住梅里雪山匠庐·雾浓顶,客房全景平视雪山,开窗即见远处巍峨群峰。",
+          "desc_en": "Continue to the Meili Snow Mountain (about 160 km, 4 hours) and check in at JiangLu Wunongding, where every room looks out level upon the snow peaks — open the window and the great mountains stand before you."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "徒步白马雪山",
+          "title_en": "Trekking Baima Snow Mountain",
+          "desc_zh": "沿林间步道缓行(车程约40公里,1小时),看层叠山峦绵延,听山风穿过林海。5月至7月正逢最美时节,漫山高山杜鹃次第绽放,红的热烈、粉的温婉、白的清雅,在雪山流云间格外灵动。夜宿雾浓顶。",
+          "desc_en": "Set out along forest trails (about 40 km, 1 hour), watching ridge after ridge unfold and listening to the wind sweep through the woods. From May to July the mountain is at its loveliest, with alpine rhododendrons blooming in waves — fierce reds, tender pinks, serene whites — vivid against the drifting clouds of the snow peaks. Overnight at Wunongding."
+        }
+      ]
+    },
+    {
+      "day_zh": "第五天",
+      "day_en": "Day 5",
+      "items": [
+        {
+          "title_zh": "返回香格里拉,送机/送站",
+          "title_en": "Return to Shangri-La, Departure",
+          "desc_zh": "早餐后返回香格里拉(车程约160公里,4小时),专车送往机场/高铁站,结束这段牧行高原的旅程。",
+          "desc_en": "After breakfast, return to Shangri-La (about 160 km, 4 hours) with a private transfer to the airport or rail station, closing this journey across the high plateau."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "香格里拉匠庐·赛朵游牧 / 梅里雪山匠庐·雾浓顶",
+    "name_en": "JiangLu Saiduo Nomad / JiangLu Wunongding",
+    "positioning_zh": "藏地野奢度假酒店",
+    "positioning_en": "Tibetan Wilderness-Luxury Lodges",
+    "desc_zh": "藏语里“赛朵”意为草原野花。匠庐·赛朵游牧的夏天,在纳帕海依拉草原的花海与清风里缓缓铺展;抬眼可见财神山与石卡雪山,水鸟轻掠湖面,牛羊悠然漫步湿地草甸。3300米高原之上,无盛夏酷暑,只剩20℃的清凉惬意。藏地深处,匠庐·雾浓顶坐落于雾浓顶观景台正中心,静静守望梅里雪山,每间客房皆可全景平视雪山,推窗即见远处巍峨群峰。",
+    "desc_en": "In Tibetan, \"Saiduo\" means the wildflowers of the grassland. Summer at JiangLu Saiduo Nomad unfolds slowly amid the blooms and breezes of the Napahai Yila grassland; look up to see the Mountain of the God of Wealth and Shika Snow Mountain, waterbirds skimming the lake, cattle and sheep wandering the wetland meadows. At 3,300 metres, there is no summer heat — only a cool, easy 20°C. Deep in the Tibetan country, JiangLu Wunongding sits at the very centre of the Wunongding viewing platform, keeping silent watch over the Meili Snow Mountain; every room faces the peaks at eye level, and opening the window brings the distant mountains close.",
+    "stats": [
+      {
+        "label_zh": "海拔",
+        "label_en": "Altitude",
+        "value": "3300m"
+      },
+      {
+        "label_zh": "酒店数量",
+        "label_en": "Lodges",
+        "value": "2"
+      },
+      {
+        "label_zh": "各连住",
+        "label_en": "Nights at Each",
+        "value": "2"
+      },
+      {
+        "label_zh": "夏季气温",
+        "label_en": "Summer Temperature",
+        "value": "~20°C"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "做客高原牧场",
+      "title_en": "A Day on the Highland Pasture",
+      "desc_zh": "乘船进入每年仅开放5个月的当地私人牧场,漫步鲜活柔软的高山草甸,沿途牛羊悠然踱步,触手可及的自然生灵满眼治愈。跟着藏家阿妈亲手挤新鲜牛奶、发酵自制酸奶、揉捏地道糌粑、喝一碗刚打出的酥油茶,在劳作中体验最地道、最真实的高原烟火与藏式生活乐趣。",
+      "desc_en": "Board a boat into a private local pasture open just five months a year and wander its soft, living alpine meadows, where cattle and sheep amble past and the gentle creatures within arm's reach soothe the eye. Join a Tibetan ama to milk the herd, ferment your own yogurt, knead authentic tsampa and drink a freshly churned bowl of butter tea — finding, in the work itself, the truest warmth and quiet joy of Tibetan plateau life."
+    },
+    {
+      "title_zh": "白马雪山徒步",
+      "title_en": "Trekking Baima Snow Mountain",
+      "desc_zh": "沿林间步道缓缓前行,看层叠山峦绵延起伏,听山风穿过林海,草木清润,空气澄澈。每年5月至7月,白马雪山迎来最美时节,漫山遍野的高山杜鹃次第绽放,一簇簇、一片片缀满山坡与山谷,红的热烈、粉的温婉、白的清雅,在雪山流云映衬下格外灵动。",
+      "desc_en": "Walk gently along forest trails, watching the layered ridges roll into the distance and listening to the wind move through the woods, the foliage fresh and the air crystalline. From May to July, Baima Snow Mountain reaches its finest hour, alpine rhododendrons opening across the slopes and valleys in clusters and sweeps — fierce reds, tender pinks, serene whites — astir against the snow peaks and their drifting clouds."
+    },
+    {
+      "title_zh": "尼西黑陶手作体验",
+      "title_en": "Nixi Black Pottery Workshop",
+      "desc_zh": "跟着世代相传的藏地匠人,揉泥、塑形、刻花、修坯,触摸黑陶的粗粝质感,从一团朴素陶土到一件专属器皿,全程亲手创作,感受传统手艺的温度与力量,带走一件属于自己的、独一无二的手作黑陶。",
+      "desc_en": "Following artisans of a generations-old Tibetan lineage, wedge the clay, shape, carve and finish it, feeling the rough grain of the black pottery beneath your hands. From a plain lump of earth to a vessel entirely your own, you create every step yourself — sensing the warmth and power of a traditional craft and carrying home a single, unrepeatable piece of your own making."
+    },
+    {
+      "title_zh": "探访东竹林寺",
+      "title_en": "Visiting Dongzhulin Monastery",
+      "desc_zh": "滇西格鲁派第一丛林,留有最本真的修行日常,偶有喇嘛辩经论道。寺内壁画彩绘绚丽、唐卡熠熠生辉,三座镶嵌天珠玛瑙的立体坛城,还有百年不腐的活佛肉身与巨幅堆绣唐卡,承载着藏地信仰的厚重与传奇。",
+      "desc_en": "Western Yunnan's foremost Gelugpa monastery preserves the daily life of practice in its purest form, monks now and then debating scripture in the courtyard. Within, brilliant murals and gleaming thangkas surround three three-dimensional mandalas inlaid with dzi beads and agate, alongside the century-old incorrupt body of a venerated lama and a vast appliqué thangka — all carrying the depth and legend of Tibetan faith."
+    },
+    {
+      "title_zh": "英力士掷弹兵高原越野",
+      "title_en": "INEOS Grenadier on the Plateau",
+      "desc_zh": "英力士掷弹兵将坚韧不拔的英伦精神与严谨的德国工程技术融合,是一款真正毫不妥协的四驱越野车。其设计、研发与制造均遵循世界级标准,专为追求可靠、适应各种路况的驾驶者打造,兼具舒适性、安全性与精致奢雅,全程随行,配司机兼行程领队服务。",
+      "desc_en": "The INEOS Grenadier fuses indomitable British spirit with rigorous German engineering into a genuinely uncompromising 4x4. Designed, developed and built to world-class standards for those who demand reliability across every kind of terrain — yet comfortable, safe and refined — it accompanies you throughout, with a driver who also serves as your trip leader."
+    },
+    {
+      "title_zh": "酒店在地体验",
+      "title_en": "In-Lodge Cultural Experiences",
+      "desc_zh": "赛朵游牧:煨桑祈福、藏装体验(赠3张简修照片)、酥油茶制作、藏文拓印、围炉夜话、手工藏香、红酒品鉴。雾浓顶:煨桑祈福、拓印经幡、藏装体验、手工咖啡皂、围炉夜话、手工藏香。",
+      "desc_en": "At Saiduo Nomad: smoke-offering blessing ceremony, Tibetan dress experience (with three lightly edited photos), butter-tea making, Tibetan-script rubbings, fireside evening talks, hand-rolled Tibetan incense and a wine tasting. At Wunongding: smoke-offering blessing, prayer-flag rubbings, Tibetan dress experience, handmade coffee soap, fireside evening talks and hand-rolled Tibetan incense."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "藏家阿妈的牧场餐桌",
+      "name_en": "The Ama's Pasture Table",
+      "desc_zh": "在高原牧场亲手挤出的新鲜牛奶、发酵的自制酸奶、揉捏的地道糌粑,以及一碗刚打出的酥油茶,从草甸到餐桌,皆是最本真的藏式风味。",
+      "desc_en": "Fresh milk drawn by your own hand on the pasture, homemade fermented yogurt, hand-kneaded tsampa and a bowl of just-churned butter tea — from meadow to table, the most authentic of Tibetan flavours."
+    },
+    {
+      "name_zh": "一价全含餐食",
+      "name_en": "All-Inclusive Dining",
+      "desc_zh": "全程含4早7正餐(Day1晚餐,Day2/3/4早中晚三餐,Day5早餐),由两座匠庐酒店悉心安排。",
+      "desc_en": "Four breakfasts and seven main meals across the journey (Day 1 dinner; breakfast, lunch and dinner on Days 2–4; Day 5 breakfast), thoughtfully prepared by the two JiangLu lodges."
+    },
+    {
+      "name_zh": "酒店全日味觉礼遇",
+      "name_en": "All-Day Lodge Indulgences",
+      "desc_zh": "酒店内下午茶、晚安甜品/夜粥、应季欢迎水果,以及客房minibar零食饮品,全日相伴。",
+      "desc_en": "Afternoon tea, goodnight desserts and late-night congee, a seasonal welcome fruit platter, and in-room minibar snacks and drinks — small pleasures throughout the day."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "香格里拉匠庐·赛朵游牧、梅里雪山匠庐·雾浓顶各连住2晚,默认2位成人共享一间标准间或大床房,所含客房随机安排,如有偏好请提前咨询,以实际资源情况为准",
+        "赛朵游牧:庭院阳台标间/大床房;侧海景阳台大床",
+        "雾浓顶:南仁·雪山观景露台双床房、热丁·雪山观景露台双床房、亚贡·雪山观景大床房/双床"
+      ],
+      "items_en": [
+        "Two consecutive nights at each of JiangLu Saiduo Nomad and JiangLu Wunongding; by default two adults share one standard twin or king room, with rooms assigned at random — please advise preferences in advance, subject to availability",
+        "Saiduo Nomad: Courtyard Balcony Twin/King; Lakeview Balcony King",
+        "Wunongding: Nanren Snow-View Terrace Twin, Reding Snow-View Terrace Twin, Yagong Snow-View King/Twin"
+      ]
+    },
+    {
+      "category_zh": "用车",
+      "category_en": "Transport",
+      "items_zh": [
+        "全程英力士掷弹兵随行,配备司机兼行程领队服务"
+      ],
+      "items_en": [
+        "INEOS Grenadier throughout, with a driver who also serves as your trip leader"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Meals",
+      "items_zh": [
+        "Day1晚餐,Day2/3/4早中晚三餐,Day5早餐,共4早7正餐",
+        "酒店内下午茶、晚安甜品/夜粥、应季欢迎水果、minibar零食饮品"
+      ],
+      "items_en": [
+        "Day 1 dinner; breakfast, lunch and dinner on Days 2–4; Day 5 breakfast — four breakfasts and seven main meals in total",
+        "In-lodge afternoon tea, goodnight desserts/late-night congee, seasonal welcome fruit, and minibar snacks and drinks"
+      ]
+    },
+    {
+      "category_zh": "体验",
+      "category_en": "Experiences",
+      "items_zh": [
+        "行程所列在地体验项目及首道门票"
+      ],
+      "items_en": [
+        "All local experiences listed in the itinerary and first-entry admission tickets"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中旅游意外险,保额50万元;若有更高保额需求可自行投保"
+      ],
+      "items_en": [
+        "Travel accident insurance during the trip with coverage of RMB 500,000; higher coverage may be arranged at your own discretion"
+      ]
+    },
+    {
+      "category_zh": "礼遇",
+      "category_en": "Privileges",
+      "items_zh": [
+        "酒店内在地体验活动",
+        "赛朵游牧:煨桑祈福(提前1天预约)、藏装体验(赠3张简修照片,不可叠加)、酥油茶制作、藏文拓印、围炉夜话、手工藏香、红酒品鉴",
+        "雾浓顶:煨桑祈福(提前1天预约)、拓印经幡、藏装体验、手工咖啡皂(提前1天预约)、围炉夜话、手工藏香"
+      ],
+      "items_en": [
+        "In-lodge cultural activities held within the hotel grounds",
+        "Saiduo Nomad: smoke-offering blessing (book 1 day ahead), Tibetan dress experience (three lightly edited photos, non-combinable), butter-tea making, Tibetan-script rubbings, fireside evening talks, hand-rolled Tibetan incense, wine tasting",
+        "Wunongding: smoke-offering blessing (book 1 day ahead), prayer-flag rubbings, Tibetan dress experience, handmade coffee soap (book 1 day ahead), fireside evening talks, hand-rolled Tibetan incense"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "出发地到行程目的地之间的往返大交通(机票/火车票)",
+    "超重行李托运费、保管费;酒店内快递收发、传真、收费电视、饮品、烟酒等个人消费;自由活动期间的用车、陪同服务",
+    "因违约、自身过错、自由活动期间个人行为或自身疾病引起的人身和财产损失",
+    "因不可抗力等客观原因及航空公司航班延误或取消等特殊情况而产生的额外费用"
+  ],
+  "exclusions_en": [
+    "Round-trip long-haul transport between your origin and the destination (flights / train tickets)",
+    "Excess baggage and storage fees; personal expenses such as in-hotel courier and fax services, pay TV, beverages, tobacco and alcohol; vehicles and accompanying services during free time",
+    "Loss of person or property arising from breach of contract, personal fault, individual conduct during free time, or one's own illness",
+    "Additional costs arising from force majeure and other objective causes, or special circumstances such as airline flight delays or cancellations"
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团出行的单人价格",
+    "第三人为15岁及以上,不可同住一间房;单男/单女无法与他人同住1间房、孩童需单独占床时,需补齐单房差价4100元/人(有特殊房型的门店,可补差入住家庭房或亲子房等)",
+    "如携带1位孩童与两成人同住:6岁以下孩童因香格里拉属高海拔、户外活动占比高,不建议出行;6-14岁孩童10290元/人(与同行人拼住,不加床,其余体验权益与成人一致)",
+    "15周岁及以上入住视为成人,14周岁及以下视为孩童",
+    "携带多位孩童出行及其他出行人数的价格,请咨询客服"
+  ],
+  "pricing_notes_en": [
+    "The listed price is per person based on a party of two travelling together",
+    "A third guest aged 15 or above cannot share a room; a single male/female unable to share with another, or a child requiring a separate bed, must pay a single supplement of RMB 4,100 per person (at properties with special room types, this supplement may instead upgrade to a family or parent-child room)",
+    "If one child shares with two adults: children under 6 are not recommended to travel, as Shangri-La is high-altitude with a high proportion of outdoor activity; children aged 6–14 are RMB 10,290 per person (sharing with travel companions, no extra bed, all other experience entitlements equal to an adult)",
+    "Guests aged 15 and above are treated as adults; those 14 and under as children",
+    "For parties travelling with multiple children or other group sizes, please consult customer service"
+  ],
+  "cancellation_zh": [
+    "旅行产品须支付全款方可确认预订,一经预约:",
+    "行程开始前15天及以上(不含出发当天),可申请无损取消及退款",
+    "行程开始前8-14天(不含出发当天),取消需收取订单金额的30%作为临时取消损失",
+    "行程开始前0-7天(不含出发当天),取消需收取订单金额的50%作为临时取消损失"
+  ],
+  "cancellation_en": [
+    "Bookings are confirmed only upon full payment; once reserved:",
+    "15 or more days before departure (excluding the departure day): cancellation and refund without penalty",
+    "8–14 days before departure (excluding the departure day): cancellation incurs 30% of the order value as a late-cancellation charge",
+    "0–7 days before departure (excluding the departure day): cancellation incurs 50% of the order value as a late-cancellation charge"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件,并提前检查是否在有效期内",
+    "香格里拉海拔约3300米,根据自身情况可于行程前一周开始服用红景天等;抵达高原后避免剧烈运动,前两天尽量不洗澡",
+    "高原早晚温差大,建议准备长袖保暖薄打底、防风防水冲锋衣、速干短袖、便于行动的休闲装,以及防滑防水徒步鞋",
+    "按需自备充电宝、充电线、耳机、护肤品,以及适合自身的常用药(感冒药、退烧贴、肠胃药、晕车药等)",
+    "高原紫外线强,备好防晒霜、润唇润肤用品、墨镜、帽子等个人物品",
+    "行程进入藏族文化浓厚的香格里拉,拍摄尤其涉及人物时须保持礼貌与尊重;在宗教、表演场所应尊重当地习俗,可拍摄处亦尽量不干扰他人"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check in advance that they are within their validity period",
+    "Shangri-La sits at about 3,300 metres; depending on your condition you may begin taking rhodiola (hongjingtian) about a week before the trip; on arrival, avoid strenuous activity and refrain from bathing for the first two days",
+    "Day-to-night temperature swings are large on the plateau; pack a thin long-sleeve warm base layer, a windproof and waterproof shell, quick-dry short sleeves, comfortable casual clothing for movement, and non-slip waterproof hiking shoes",
+    "Bring as needed a power bank, charging cables, earphones, skincare, and your usual medications (for colds, fever, stomach upset, motion sickness, etc.)",
+    "Plateau UV is intense; pack sunscreen, lip and skin moisturisers, sunglasses, a hat and other personal items",
+    "This journey enters Shangri-La, a region steeped in Tibetan culture; be courteous and respectful when photographing, especially people; at religious and performance sites, honour local customs, and even where photography is allowed, try not to disturb others"
+  ],
+  "faq": [
+    {
+      "q_zh": "香格里拉海拔多高?我会高原反应吗?如何应对?",
+      "q_en": "How high is Shangri-La, and will I get altitude sickness? How do I prepare?",
+      "a_zh": "香格里拉海拔约3300米,部分人可能有轻微高原反应。建议行程前一周根据自身情况开始服用红景天等,抵达后避免剧烈运动,前两天尽量不洗澡,多休息、多饮水。行程节奏从容,并配有50万元旅游意外险。如有心肺等基础疾病,请提前咨询医生。",
+      "a_en": "Shangri-La sits at about 3,300 metres, and some travellers may feel mild altitude effects. We suggest beginning rhodiola (hongjingtian) about a week before the trip if appropriate, avoiding strenuous activity on arrival, refraining from bathing for the first two days, and resting and hydrating well. The pace is unhurried, and travel accident insurance of RMB 500,000 is included. If you have heart, lung or other underlying conditions, please consult your doctor beforehand."
+    },
+    {
+      "q_zh": "这趟行程适合带孩子吗?",
+      "q_en": "Is this trip suitable for children?",
+      "a_zh": "因香格里拉属高海拔地带、户外活动占比高,未满6岁的孩童不建议出行。6-14岁孩童可与同行成人拼住(不加床),价格为10290元/人,体验权益与成人一致。15周岁及以上视为成人。",
+      "a_en": "As Shangri-La is high-altitude with a high proportion of outdoor activity, children under 6 are not recommended to travel. Children aged 6–14 may share with an accompanying adult (no extra bed) at RMB 10,290 per person, with experience entitlements equal to an adult's. Guests aged 15 and above are treated as adults."
+    },
+    {
+      "q_zh": "什么季节去最美?能看到杜鹃花吗?",
+      "q_en": "What is the best season to visit? Can I see the rhododendrons?",
+      "a_zh": "每年5月至7月是白马雪山最美的时节,漫山高山杜鹃次第绽放;夏季高原气温约20℃,清凉宜人,且高原牧场每年仅开放5个月,正是做客牧场的好时候。",
+      "a_en": "May to July is Baima Snow Mountain at its finest, with alpine rhododendrons blooming across the slopes; summer on the plateau is a cool, pleasant 20°C, and the highland pasture is open only five months a year — making it the ideal time to visit the herders."
+    },
+    {
+      "q_zh": "行程是独立小团吗?用什么车?",
+      "q_en": "Is this a private small-group trip, and what vehicle is used?",
+      "a_zh": "本产品为一价全含的专属小团、独立出行,以2人成团。全程由硬派越野车英力士掷弹兵随行,配备一位司机兼行程领队,深入藏地各种路况,兼顾可靠与舒适。",
+      "a_en": "This is an all-inclusive, private small-group journey on an independent schedule, formed from a party of two. A rugged INEOS Grenadier 4x4 accompanies you throughout, with a driver who also serves as your trip leader, handling the varied terrain of the Tibetan country with both reliability and comfort."
+    }
+  ],
+  "closing_zh": "牧行高原,窑隐山野。在海拔3300米的清风花海与雪山流云之间,让脚步慢下来,让生活回到最本真的模样——这是匠庐为你写下的一封藏地情书。",
+  "closing_en": "Herding the high plateau, retreating to the kiln in the wild. Between the wildflower breezes of 3,300 metres and the drifting clouds of the snow peaks, let your pace slow and life return to its truest form — a Tibetan love letter, written for you by JiangLu.",
+  "price_from": 16990,
+  "price_currency": "CNY",
+  "poster_image": "牧行高原.jpg",
+  "lodge_images": [
+    "jianglu-wunongding/g01-4楼酒吧.jpg",
+    "jianglu-wunongding/g02-餐厅.jpg",
+    "jianglu-wunongding/g03-1楼.jpg"
+  ]
+}

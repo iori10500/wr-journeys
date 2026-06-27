@@ -1,0 +1,362 @@
+{
+  "slug": "dali-yinshi-wuwei",
+  "region_zh": "大理",
+  "region_en": "Dali",
+  "title_zh": "隐世无为·苍洱慢栖",
+  "title_en": "Stillness at Wuwei: A Slow Sojourn Between Mountain and Lake",
+  "subtitle_zh": "大理4天3晚悠然慢游",
+  "subtitle_en": "Four Unhurried Days Between the Cangshan Mountains and Erhai Lake",
+  "days": 4,
+  "nights": 3,
+  "duration_zh": "4天3晚",
+  "duration_en": "4 Days / 3 Nights",
+  "lodge_zh": "匠庐·蜜湾",
+  "lodge_en": "JiangLu · Miwan",
+  "hero_image": "jianglu-miwan/hero.jpg",
+  "route_zh": "大理→匠庐·蜜湾→苍山无为寺→海舌公园→彩虹猎人农场→匠庐·蜜湾",
+  "route_en": "Dali → JiangLu · Miwan → Wuwei Temple, Cangshan → Haishe Peninsula → Rainbow Hunter Farm → JiangLu · Miwan",
+  "tags": [
+    {
+      "zh": "苍山无为寺",
+      "en": "Wuwei Temple, Cangshan"
+    },
+    {
+      "zh": "海舌半岛",
+      "en": "Haishe Peninsula"
+    },
+    {
+      "zh": "彩虹猎人农场",
+      "en": "Rainbow Hunter Farm"
+    },
+    {
+      "zh": "2人独立成行",
+      "en": "Private Trip for Two"
+    },
+    {
+      "zh": "专属用车",
+      "en": "Private Car & Driver"
+    },
+    {
+      "zh": "节奏自由可控",
+      "en": "Your Own Pace"
+    }
+  ],
+  "intro_zh": "在大理，把日子过成诗，苍洱之间，慢下来，遇见自己。我们臻选打造大理松弛度假行程，随心所至、自主安排。更悉心规划游玩参考路线，省去费心做攻略的繁琐，让您从容启程，悠然畅游大理山水之间。",
+  "intro_en": "In Dali, the days unfold like verse. Between the Cangshan range and Erhai Lake, you slow down and quietly meet yourself again. We have curated an unhurried Dali escape that moves entirely at your whim, yours to shape as you please. A suggested itinerary is thoughtfully mapped out so you can set aside the tedium of planning and travel with ease, drifting freely through Dali's landscapes of mountain and water.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "抵达接站/接机",
+          "title_en": "Arrival & Private Transfer",
+          "desc_zh": "全天。大理站 → 匠庐·蜜湾：车程约50分钟；大理机场 → 匠庐·蜜湾：车程约30分钟。",
+          "desc_en": "All day. From Dali Railway Station to JiangLu · Miwan is about a 50-minute drive; from Dali Airport, about 30 minutes. Your private driver greets you and carries you straight to the lodge."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "苍山禅意·无为寺寻踪",
+          "title_en": "Zen Among the Mountains: Tracing Wuwei Temple",
+          "desc_zh": "上午。苍洱晨光唤醒一日，享酒店早餐。探访南诏皇家古寺的禅意秘境，在古杉光影间慢走。匠庐·蜜湾 → 无为寺（40KM，行车约1小时20分钟）。",
+          "desc_en": "Morning. Wake to the first light over mountain and lake, then breakfast at the lodge. Seek out the meditative hideaway of this former royal temple of the Nanzhao Kingdom, wandering slowly beneath the dappled light of ancient cedars. JiangLu · Miwan to Wuwei Temple: 40 km, about a 1-hour-20-minute drive."
+        },
+        {
+          "title_zh": "洱海岸线·海舌私语",
+          "title_en": "Erhai's Shoreline: Whispers at Haishe",
+          "desc_zh": "下午。漫步洱海岸边静谧半岛，静赏清幽湖光，闲观山野清风。无为寺 → 海舌公园（20KM，行车约30分钟）。",
+          "desc_en": "Afternoon. Stroll the tranquil peninsula along Erhai's edge, taking in the still, luminous water and the soft wind sweeping off the hills. Wuwei Temple to Haishe Park: 20 km, about a 30-minute drive."
+        },
+        {
+          "title_zh": "返程归湾，枕苍洱晚风入眠",
+          "title_en": "Back to the Bay, Lulled by the Evening Breeze",
+          "desc_zh": "海舌公园 → 匠庐·蜜湾（63KM，行车约1小时）。",
+          "desc_en": "Haishe Park to JiangLu · Miwan: 63 km, about a 1-hour drive. Return to the lodge and let the evening breeze off the lake carry you to sleep."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "田园风物·彩虹猎人农场风物体验",
+          "title_en": "Pastoral Pleasures at Rainbow Hunter Farm",
+          "desc_zh": "全天。苍洱晨光唤醒一日，享酒店早餐。香草园探访 + 农场时令午餐 + 风味梅酒实验工作坊 + 农场本来生活体验。",
+          "desc_en": "All day. Wake to morning light over mountain and lake, then breakfast at the lodge. A visit to the herb garden, a seasonal farm-to-table lunch, a hands-on plum-wine infusion workshop, and an immersion in the farm's unhurried way of life."
+        },
+        {
+          "title_zh": "返程归湾，枕苍洱晚风入眠",
+          "title_en": "Back to the Bay, Lulled by the Evening Breeze",
+          "desc_zh": "彩虹猎人农场 → 匠庐·蜜湾（31KM，行车约1小时）。",
+          "desc_en": "Rainbow Hunter Farm to JiangLu · Miwan: 31 km, about a 1-hour drive. Return to the lodge to rest beneath the evening breeze off Erhai."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "返程送机/送站",
+          "title_en": "Departure & Private Transfer",
+          "desc_zh": "08:00-12:00。苍洱晨光唤醒一日，享酒店早餐。告别大理，带着山海与田园的记忆返程。",
+          "desc_en": "08:00–12:00. One last morning bathed in the light over mountain and lake, with breakfast at the lodge. Bid Dali farewell and journey home carrying memories of mountain, sea, and field."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "匠庐·蜜湾",
+    "name_en": "JiangLu · Miwan",
+    "positioning_zh": "枕洱海而居的隐奢海景栖居",
+    "positioning_en": "A hidden-luxury lakeside retreat overlooking Erhai",
+    "desc_zh": "匠庐·蜜湾静卧于洱海之畔，是一处枕水而居的隐奢栖居之所。客房均面朝洱海，揽月、浮影、等风三类海景房型，将苍山的青绿与洱海的湛蓝尽收窗内。在这里，三晚连住，晨起被苍洱晨光唤醒，夜来枕着洱海晚风入眠，从白族三道茶、甲马拓印到围炉煮茶，皆是慢下来的理由。",
+    "desc_en": "JiangLu · Miwan rests quietly on the shore of Erhai Lake, a hidden-luxury retreat built to live by the water. Every room faces the lake, and the three sea-view categories — Lanyue, Fuying, and Dengfeng — frame the green of the Cangshan mountains and the deep blue of Erhai within the window. Here, across three connected nights, you wake to the first light over mountain and lake and fall asleep to the evening breeze off the water. From the Bai people's Three-Course Tea to woodblock rubbing and tea brewed over a fireside hearth, every ritual is a reason to slow down.",
+    "stats": [
+      {
+        "label_zh": "连住",
+        "label_en": "Nights",
+        "value": "3"
+      },
+      {
+        "label_zh": "海景房型",
+        "label_en": "Sea-View Room Types",
+        "value": "3"
+      },
+      {
+        "label_zh": "默认入住",
+        "label_en": "Default Occupancy",
+        "value": "2"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "寻一处静心留白之地：无为寺",
+      "title_en": "A Place of Stillness and Quiet Space: Wuwei Temple",
+      "desc_zh": "沿灵鹫山牌坊拾级而上，漫步于山林溪谷间，听溪水潺潺，看罗汉雕塑分列两侧，月涵桥清泉潺潺，锦鲤悠游。寺前那株唐杉，历经千年风雨，树干中空却枯树逢春，大雄宝殿的红墙飞檐映着苍山绿意，药师殿的脊兽诉说着古老寓意，救疫泉的甘凉泉水，承载着南诏时期救疫济世的传说。午后坐在石阶上，看阳光透过枝叶洒下斑驳光影，听寺内钟声轻响。",
+      "desc_en": "Climb the stone steps from the Lingjiu Mountain memorial archway and wander through wooded valleys, the brook murmuring beside you as rows of arhat statues flank the path. At Yuehan Bridge, clear spring water trickles and koi drift idly below. Before the temple stands a Tang-dynasty cedar that has weathered a thousand years of storms — its trunk hollowed, yet greening anew. The red walls and flying eaves of the Grand Hall catch the green of the Cangshan range; the roof beasts of the Medicine Buddha Hall speak in ancient symbols; and the cool, sweet waters of the Plague-Relief Spring carry a Nanzhao-era legend of healing the afflicted. In the afternoon, sit on the stone steps as sunlight filters through the leaves in dappled light, and listen to the soft ring of the temple bell."
+    },
+    {
+      "title_zh": "奔赴洱海水岸的温柔秘境：海舌公园",
+      "title_en": "Toward Erhai's Tender Hideaway: Haishe Park",
+      "desc_zh": "骑行穿梭于洱海生态廊道，踏过蜿蜒入海的木栈道，吹吹温润洱海风，闲坐水边静观云影波光，看白鹭掠过水面，打卡经典古树取景地，寻访依偎百年的“夫妻树”。您可在半岛草坪自在躺平，或选择一份临海咖啡，把洱海的蓝“浪费”在整个下午。",
+      "desc_en": "Cycle along Erhai's ecological greenway, follow the wooden boardwalk as it winds out toward the water, and feel the lake's mild breeze on your face. Sit by the shore and watch clouds shimmer across the ripples, egrets skimming the surface; pause at the iconic ancient trees and seek out the century-old \"Husband-and-Wife Trees\" leaning into one another. Sprawl out on the peninsula's lawn, or order a coffee by the water and \"waste\" the whole afternoon on the blue of Erhai."
+    },
+    {
+      "title_zh": "自然风物研习：彩虹猎人农场",
+      "title_en": "A Study in Nature: Rainbow Hunter Farm",
+      "desc_zh": "辨认香草的名字与风味，捏碎一片马鞭草、嗅闻迷迭香的枝丫；咀嚼一颗奇妙的木姜子，破壳一粒高原野性的杜松子；感受鲜果自然发酵、沉淀醇香的奇妙过程；亲手调制一瓶你记忆中的云南风味酒。享用农场时令食材烹制的午餐，田园下午茶、土味茶点分享。与小猫、羊贵妃、和散养的鸡鸭鹅打招呼，和农场伙伴们聊天，听他们讲述土地与收获的故事。",
+      "desc_en": "Learn the names and flavors of the herbs — crush a leaf of verbena, breathe in a sprig of rosemary; chew a curious litsea berry, crack open a juniper berry wild with highland character; witness the wondrous slow alchemy of fresh fruit fermenting into something mellow and fragrant; and infuse, by your own hand, a bottle of the Yunnan flavor that lives in your memory. Sit down to a lunch cooked from the farm's seasonal harvest, followed by a pastoral afternoon tea of rustic, homemade treats. Say hello to the cats, the pampered sheep, and the free-ranging hens, ducks, and geese, and chat with the farm hands as they tell stories of the land and the harvest."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "烤乳扇",
+      "name_en": "Grilled Rushan (Bai Milk Fans)",
+      "desc_zh": "云南十八怪“牛奶做成扇子卖”。炭火慢烤后刷上玫瑰酱或炼乳，外皮微焦、内里柔韧，奶香混着清甜。",
+      "desc_en": "One of Yunnan's famed \"eighteen oddities\" — milk shaped into fans and sold by the sheet. Slow-grilled over charcoal and brushed with rose jam or condensed milk, it turns lightly charred outside and supple within, its milky richness laced with gentle sweetness."
+    },
+    {
+      "name_zh": "白族酸辣鱼",
+      "name_en": "Bai-Style Hot-and-Sour Fish",
+      "desc_zh": "洱海鲫鱼，配本地酸木瓜、糟辣椒、豆腐炖煮，汤色红亮，酸辣开胃，鱼肉细嫩，鱼汤泡饭是一绝。",
+      "desc_en": "Erhai crucian carp simmered with local sour papaya, fermented chili, and tofu. The broth glows red and bright, bracingly sour and spicy, the fish tender and delicate — and spooned over rice, the soup alone is a revelation."
+    },
+    {
+      "name_zh": "耙肉饵丝",
+      "name_en": "Pa-Rou Erhsi (Braised Pork Rice Noodles)",
+      "desc_zh": "大理人钟爱的元气早餐。饵丝软糯筋道，配上炭火烤至焦香再炖至酥烂不柴的耙肉，淋上浓郁肉汤汁，撒上葱花辣椒，饱腹又满足。",
+      "desc_en": "Dali's beloved morning pick-me-up. Soft, chewy rice noodles are topped with pork first charcoal-grilled to a fragrant char, then braised until meltingly tender, finished with a rich meaty broth and a scatter of scallion and chili — hearty and deeply satisfying."
+    },
+    {
+      "name_zh": "白族生皮",
+      "name_en": "Bai-Style Shengpi (Seared Pork)",
+      "desc_zh": "白族宴席传统名菜，选用稻草火烧猪，外皮金黄酥脆，内里三分生嫩，蘸梅子醋、野花椒特制蘸水，口感鲜甜弹牙，无腥味。",
+      "desc_en": "A traditional centerpiece of the Bai banquet. The pork is singed over a straw fire until the skin turns golden and crisp while the inside stays rare and tender; dipped in a special sauce of plum vinegar and wild peppercorn, it eats sweet, springy, and clean, with no gaminess at all."
+    },
+    {
+      "name_zh": "水性杨花（海菜花）",
+      "name_en": "Shuixing Yanghua (Wild Erhai Water Lily)",
+      "desc_zh": "洱海特产，清炒或煮芋头汤，嫩茎滑嫩，带着湖水清洌气息。",
+      "desc_en": "A specialty of Erhai Lake, lightly stir-fried or simmered in a taro soup. The tender stems are silky and smooth, carrying the clean, cool breath of the lake itself."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "匠庐·蜜湾3晚连住，可选房型：揽月·海景大床房、浮影·海景大床房、等风·海景双床房；所含客房随机安排，如有偏好请提前咨询，以实际资源情况安排为准",
+        "默认安排2位成人共享一间标准间或大床房"
+      ],
+      "items_en": [
+        "Three connected nights at JiangLu · Miwan. Room types available: Lanyue Sea-View King, Fuying Sea-View King, and Dengfeng Sea-View Twin. The included room is assigned at the lodge's discretion; if you have a preference, please enquire in advance, subject to availability.",
+        "By default, two adults share one standard or king room."
+      ]
+    },
+    {
+      "category_zh": "车辆服务",
+      "category_en": "Vehicle & Driver",
+      "items_zh": [
+        "全程安排7座别克商务或同级别车型，配备专属司机",
+        "行程推荐活动仅供参考，每日行程可根据个人喜好灵活调整；首尾两日用车为大理机场/大理站到民宿的接送",
+        "为了安全，每日用车时间9:00-19:00，不超300公里，不含夜间用车、跨省用车，超出需支付额外车费"
+      ],
+      "items_en": [
+        "A 7-seat Buick GL8 (or equivalent) with a dedicated driver throughout the trip.",
+        "The suggested activities are for reference only; each day's itinerary can be flexibly adjusted to your preferences. On the first and last days, the vehicle covers transfers between Dali Airport / Dali Railway Station and the lodge.",
+        "For safety, daily vehicle use runs 09:00–19:00 and is capped at 300 km. Night-time use and inter-provincial travel are not included; any excess incurs an additional vehicle charge."
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Dining",
+      "items_zh": [
+        "酒店每日早餐",
+        "赠送欢迎水果 + 晚安甜品 + 迷你吧小食饮品每日畅享"
+      ],
+      "items_en": [
+        "Daily breakfast at the lodge.",
+        "A complimentary welcome fruit platter, a goodnight dessert, and daily unlimited minibar snacks and beverages."
+      ]
+    },
+    {
+      "category_zh": "住宿礼遇",
+      "category_en": "In-Stay Privileges",
+      "items_zh": [
+        "白族三道茶：接待时间15:00-16:30，体验地点为酒店茶室",
+        "甲马拓印：接待时间15:00-22:00，体验地点为酒店大堂",
+        "围炉煮茶：接待时间19:00-22:00，自行前往酒店壁炉区体验",
+        "旅拍体验：免费体验30分钟拍摄，每间房赠送三张精美初修或五张精美原片",
+        "规则说明：体验项目请联系酒店前台参与，入住期间每人可享一次；旅拍需提前一天预约，赠送张数不可转赠，针对每组住店客人只送一次、不叠加使用，超出部分或额外需求请提前咨询前台"
+      ],
+      "items_en": [
+        "Bai Three-Course Tea: served 15:00–16:30 in the lodge tea room.",
+        "Jiama Woodblock Rubbing: available 15:00–22:00 in the lodge lobby.",
+        "Fireside Tea Brewing: available 19:00–22:00; guests visit the lodge's hearth lounge at their leisure.",
+        "Travel Photography Session: a complimentary 30-minute shoot, with three beautifully edited images or five select originals gifted per room.",
+        "Please note: arrange experiences with the front desk; each guest may enjoy one session per stay. The photo session requires booking one day in advance. Gifted images are non-transferable, offered once per guest party and not combinable; for anything beyond this or any special request, please enquire with the front desk in advance."
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中个人旅游意外险，保额50万元；若有更高保额需求，可根据需求自行投保"
+      ],
+      "items_en": [
+        "Personal travel accident insurance for the duration of the trip, with coverage of RMB 500,000. If you require higher coverage, you are welcome to arrange additional insurance to suit your needs."
+      ]
+    },
+    {
+      "category_zh": "船票",
+      "category_en": "Ferry Tickets",
+      "items_zh": [
+        "金梭岛往返船票：两人次金梭岛轮渡船票，船程约5分钟，渡船运营时间6:30至23:00，约15分钟一班",
+        "需您先购买上岛船票，船票10元/位，不超过每间客房允许的入住人数，由我们全额报销"
+      ],
+      "items_en": [
+        "Round-trip ferry tickets to Jinsuo Island for two: the crossing takes about 5 minutes, with ferries running 6:30–23:00 roughly every 15 minutes.",
+        "Please purchase the boarding tickets first (RMB 10 per person, up to the room's permitted occupancy); we will reimburse the full amount."
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "出发地与目的地之间的往返大交通（机票/高铁票等）",
+    "行程中除酒店早餐外的所有餐食费用",
+    "景点门票、农场体验活动等自选项目，以及费用包含条款中未提及的其他费用",
+    "自由行由司机接送至目的地，如需额外导游领队，请提前沟通预约补齐费用",
+    "因违约、自身过错、自由活动期间个人行为或自身疾病引起的人身和财产损失",
+    "因不可抗力等客观原因及航空公司航班延误或取消等特殊情况而产生的额外费用"
+  ],
+  "exclusions_en": [
+    "Round-trip long-distance transport between your origin and Dali (flights, high-speed rail tickets, etc.).",
+    "All meals during the trip other than breakfast at the lodge.",
+    "Attraction tickets, farm experience activities and other optional add-ons, along with any costs not listed under the inclusions.",
+    "This is a self-guided trip with driver transfers to each destination; if you require an additional guide or tour leader, please arrange and pay for this in advance.",
+    "Personal injury or property loss arising from breach of contract, personal fault, individual conduct during free time, or one's own illness.",
+    "Additional costs arising from force majeure or other objective circumstances, including airline flight delays or cancellations."
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团出行的单人价格",
+    "第三人为15岁及以上不可同住一间房；单男/单女无法与他人同住一间房、孩童需单独占床时，需补齐单房差价1500元/人（备注：有特殊房型的门店，可补差入住家庭房或亲子房等）",
+    "如携带1位孩童与两位成人同行同住，孩童价格说明：6岁以下孩童800元/人（与同行人拼住，不加床）；6-14岁孩童1200元/人（与同行人拼住，不加床，其余体验权益与成人一致）。15周岁及以上入住视为成人，14周岁及以下视为孩童",
+    "携带多位孩童出行，及其他出行人数的价格，请咨询客服"
+  ],
+  "pricing_notes_en": [
+    "The price shown is per person, based on two people travelling together as a private group.",
+    "A third guest aged 15 or above cannot share a room; a single male or female who cannot share a room with others, or a child requiring their own bed, must pay a single-room supplement of RMB 1,500 per person. (Note: at lodges with special room types, this supplement may instead be applied toward a family or parent-child room.)",
+    "If one child travels and shares a room with two adults, child pricing applies as follows: children under 6, RMB 800 per child (sharing with companions, no extra bed); children aged 6–14, RMB 1,200 per child (sharing with companions, no extra bed, with all other experience privileges equal to an adult's). Guests aged 15 and above are treated as adults; those 14 and under as children.",
+    "For travel with multiple children, or for other group sizes, please consult our customer service for pricing."
+  ],
+  "cancellation_zh": [
+    "旅行产品须支付全款方可确认预订，一经预约：",
+    "行程开始前15天及以上（不含出发当天），可申请无损取消及退款",
+    "行程开始前8-14天（不含出发当天），申请取消需收取订单金额的30%作为临时取消的损失",
+    "行程开始前0-7天（不含出发当天），申请取消需收取订单金额的50%作为临时取消的损失"
+  ],
+  "cancellation_en": [
+    "The trip must be paid in full to confirm the booking. Once reserved, the following applies:",
+    "15 or more days before the trip begins (excluding the departure day): cancellation and full refund with no penalty.",
+    "8–14 days before the trip begins (excluding the departure day): cancellation incurs a charge of 30% of the order value as a late-cancellation loss.",
+    "0–7 days before the trip begins (excluding the departure day): cancellation incurs a charge of 50% of the order value as a late-cancellation loss."
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前检查证件是否在有效期内",
+    "衣物准备：大理素有“一雨成冬、早晚凉、午间晒”的特点，昼夜温差大且有“下关风”，早晚需加防风外套，下装以舒适长裤为主；农场体验、公园及古镇漫步项目建议穿防滑好走的平底鞋或运动鞋，海边风大建议准备系带防风帽",
+    "按需自行准备好充电宝、充电线、耳机、晴雨两用伞、护肤品、防蚊用品，以及适合自身情况的常用药（肠胃药应对饮食辛辣、感冒药、晕车药、创可贴、过敏药等）",
+    "高原紫外线极强且洱海水面反射强，即使是阴天也需备好防晒霜、唇膏、墨镜、防晒面罩或魔术头巾",
+    "大理食物注重酸辣鲜香，若有忌口，可在用餐前提前说明",
+    "在少数民族地区应当尊重当地的传统习俗和生活禁忌，避免造成误会"
+  ],
+  "tips_en": [
+    "Before departure, please bring your ID card or other valid documents and check in advance that they are within their validity period.",
+    "What to pack: Dali is known for weather that \"turns to winter with one rain — cool mornings and evenings, sunny midday,\" with a large day-to-night temperature swing and the famous \"Xiaguan wind.\" Bring a windproof jacket for mornings and evenings and favor comfortable long trousers. For farm visits, parks, and old-town strolls, wear non-slip flat shoes or trainers; given the strong lakeside wind, a chin-strap windproof hat is recommended.",
+    "Bring, as needed, a power bank, charging cables, earphones, an all-weather umbrella, skincare, insect repellent, and your usual medications suited to your needs (stomach remedies for the spicy food, cold medicine, motion-sickness tablets, plasters, allergy medication, and so on).",
+    "Highland UV is extremely strong and the surface of Erhai reflects intensely, so even on overcast days bring sunscreen, lip balm, sunglasses, and a sun mask or buff.",
+    "Dali cuisine leans sour, spicy, fresh, and fragrant; if you have any dietary restrictions, please let us know before the meal.",
+    "In ethnic-minority areas, please respect local customs and taboos to avoid any misunderstanding."
+  ],
+  "faq": [
+    {
+      "q_zh": "这个行程最少几人出发？可以单人参加吗？",
+      "q_en": "What is the minimum group size? Can I join as a solo traveller?",
+      "a_zh": "行程按2人独立成行设计，标价为2人成团出行的单人价格，默认两位成人共享一间标准间或大床房。若单人或单男/单女无法与他人同住，需补齐单房差价1500元/人。其他出行人数请咨询客服。",
+      "a_en": "The trip is designed as a private journey for two, and the listed price is per person based on two travelling together, with two adults sharing one standard or king room by default. A solo traveller, or a single guest who cannot share a room, pays a single-room supplement of RMB 1,500 per person. For other group sizes, please consult customer service."
+    },
+    {
+      "q_zh": "每日行程可以根据我的喜好调整吗？",
+      "q_en": "Can the daily itinerary be tailored to my preferences?",
+      "a_zh": "可以。行程推荐活动仅供参考，每日安排可根据个人喜好灵活调整，全程配备7座商务车与专属司机。需注意每日用车时间为9:00-19:00，里程不超300公里，不含夜间及跨省用车，超出部分需另付车费。",
+      "a_en": "Yes. The suggested activities are for reference only and each day can be flexibly adjusted to your preferences, with a 7-seat vehicle and dedicated driver throughout. Note that daily vehicle use runs 09:00–19:00, is capped at 300 km, and excludes night-time and inter-provincial travel; any excess incurs an additional charge."
+    },
+    {
+      "q_zh": "带孩子出行如何收费？",
+      "q_en": "How are children charged?",
+      "a_zh": "若携带1位孩童与两位成人同行同住：6岁以下800元/人，6-14岁1200元/人，均与同行人拼住、不加床（6-14岁孩童其余体验权益与成人一致）。15周岁及以上视为成人，14周岁及以下视为孩童；孩童需单独占床时需补单房差1500元/人。携带多位孩童请咨询客服。",
+      "a_en": "If one child travels and shares a room with two adults: children under 6 are RMB 800 per child and those aged 6–14 are RMB 1,200 per child, both sharing with companions and with no extra bed (children 6–14 enjoy the same experience privileges as adults). Guests 15 and above are treated as adults, and those 14 and under as children. If a child needs their own bed, a single-room supplement of RMB 1,500 per person applies. For multiple children, please consult customer service."
+    },
+    {
+      "q_zh": "去大理什么季节合适？需要准备什么？",
+      "q_en": "What season suits Dali, and what should I prepare?",
+      "a_zh": "大理昼夜温差大，并有“下关风”，早晚偏凉、午间日晒强，建议备防风外套与舒适长裤。高原紫外线极强、洱海水面反射强，即便阴天也务必带好防晒霜、唇膏、墨镜与防晒面罩；漫步与农场体验建议穿防滑平底鞋或运动鞋，海边风大可备系带防风帽。",
+      "a_en": "Dali has a wide day-to-night temperature swing and the well-known \"Xiaguan wind\": mornings and evenings are cool while midday sun is strong, so pack a windproof jacket and comfortable long trousers. Highland UV is intense and Erhai's surface reflects strongly, so even on cloudy days bring sunscreen, lip balm, sunglasses, and a sun mask; for strolls and the farm visit, wear non-slip flats or trainers, and a chin-strap hat helps against the lakeside wind."
+    }
+  ],
+  "closing_zh": "在大理，把日子过成诗。苍洱之间，慢下来，遇见自己。",
+  "closing_en": "In Dali, let the days unfold like verse. Between mountain and lake, slow down — and meet yourself again.",
+  "price_from": 3180,
+  "price_currency": "CNY",
+  "poster_image": "隐世无为.jpg",
+  "lodge_images": [
+    "jianglu-miwan/g01-公区.jpg",
+    "jianglu-miwan/g02-餐饮.jpg"
+  ]
+}

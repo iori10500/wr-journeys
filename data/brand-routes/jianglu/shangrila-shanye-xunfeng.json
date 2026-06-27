@@ -1,0 +1,360 @@
+{
+  "slug": "shangrila-shanye-xunfeng",
+  "region_zh": "香格里拉",
+  "region_en": "Shangri-La",
+  "title_zh": "山野寻风・闲渡藏境",
+  "title_en": "Chasing the Mountain Wind: A Leisurely Passage Through Tibetan Lands",
+  "subtitle_zh": "香格里拉 4 天 3 晚之旅",
+  "subtitle_en": "A 4-Day, 3-Night Journey Through Shangri-La",
+  "days": 4,
+  "nights": 3,
+  "duration_zh": "4天3晚",
+  "duration_en": "4 Days / 3 Nights",
+  "lodge_zh": "香格里拉匠庐·赛朵游牧",
+  "lodge_en": "JiangLu Saiduo Nomad, Shangri-La",
+  "hero_image": "jianglu-saiduo/hero.jpg",
+  "route_zh": "全国各地 → 香格里拉 → 匠庐·赛朵游牧 → 无底湖环湖徒步 → 草原野骑 · 藏地先锋书店 → 返程",
+  "route_en": "Nationwide arrival → Shangri-La → JiangLu Saiduo Nomad → Bottomless Lake loop trek → Grassland horseback riding & Pioneer Bookstore → Departure",
+  "tags": [
+    {
+      "zh": "无底湖轻徒步",
+      "en": "Bottomless Lake gentle trek"
+    },
+    {
+      "zh": "草原策马骑行",
+      "en": "Grassland horseback riding"
+    },
+    {
+      "zh": "藏地先锋书店",
+      "en": "Tibetan Pioneer Bookstore"
+    },
+    {
+      "zh": "英力士掷弹兵越野",
+      "en": "INEOS Grenadier overland"
+    },
+    {
+      "zh": "野奢度假酒店",
+      "en": "Wilderness-luxury lodge"
+    },
+    {
+      "zh": "一价全含",
+      "en": "All-inclusive"
+    },
+    {
+      "zh": "专属小团",
+      "en": "Private small group"
+    },
+    {
+      "zh": "独立出行",
+      "en": "Independent departure"
+    }
+  ],
+  "intro_zh": "香格里拉，藏着高原最本真的诗意与辽阔。群山环抱，湖甸相依，经幡随风漫卷，是安放身心、回归山野的理想秘境。我们跳出常规观光路线，从游牧美学的松弛栖居，到无底湖的秘境徒步，再到策马奔腾的自由野趣，感受香格里拉原始纯粹的山野风情与自由格调。",
+  "intro_en": "Shangri-La holds the most authentic poetry and vastness of the high plateau. Cradled by mountains, where lakes and meadows lean into one another and prayer flags unfurl in the wind, it is the ideal hidden retreat to settle the spirit and return to the wild. We step away from the conventional sightseeing trail, moving from the unhurried dwelling of nomadic aesthetics to a secret trek around the Bottomless Lake, and onward to the unbridled freedom of riding across open grassland, immersing you in the raw, pure mountain spirit and untrammeled grace of Shangri-La.",
+  "overview": [
+    {
+      "day_zh": "第一天",
+      "day_en": "Day 1",
+      "items": [
+        {
+          "title_zh": "抵达香格里拉",
+          "title_en": "Arrival in Shangri-La",
+          "desc_zh": "从全国各地抵达香格里拉机场/高铁站，专车接驳前往酒店，车程约10公里、20分钟左右。入住香格里拉匠庐·赛朵游牧，于纳帕海依拉草原的清风花海间安顿身心。餐食含晚餐。",
+          "desc_en": "Arrive at Shangri-La's airport or high-speed rail station from anywhere in China, where a private vehicle awaits for the roughly 10-kilometre, 20-minute transfer to the lodge. Settle in at JiangLu Saiduo Nomad amid the breeze and wildflower meadows of the Napahai Yila grassland. Dinner included."
+        }
+      ]
+    },
+    {
+      "day_zh": "第二天",
+      "day_en": "Day 2",
+      "items": [
+        {
+          "title_zh": "无底湖环湖徒步",
+          "title_en": "Bottomless Lake Loop Trek",
+          "desc_zh": "驱车前往雪山深处的无底湖（车程约100公里、3小时左右），完成约4公里的轻徒步环湖。无需负重登山，跟随向导的步伐，在海拔3800米的呼吸间穿行原始冷杉林，欣赏随天光变幻的湖色。餐食含早、中、晚三餐，午餐为湖畔路餐简餐。",
+          "desc_en": "Drive deep into the snow mountains to the Bottomless Lake (about 100 km, roughly 3 hours), then complete a gentle 4-kilometre loop trek around its shore. No heavy climbing required: follow your guide's pace through primeval fir forest at 3,800 metres, watching the lake shift colour with the changing light. Breakfast, lunch and dinner included; lunch is a simple lakeside picnic."
+        }
+      ]
+    },
+    {
+      "day_zh": "第三天",
+      "day_en": "Day 3",
+      "items": [
+        {
+          "title_zh": "草原野骑 · 藏地先锋书店",
+          "title_en": "Grassland Riding & the Tibetan Pioneer Bookstore",
+          "desc_zh": "于香格里拉旷野策马骑行，以游牧民族视角俯瞰广袤草甸（车程约40公里、1小时左右）。随后造访由三栋传统藏房改造而成的藏地先锋书店，于木梁夯土间感受高原乡村的人文阅读空间。餐食含早、中、晚三餐。",
+          "desc_en": "Ride out across Shangri-La's open plains, taking in the vast meadows from a nomad's vantage (about 40 km, roughly 1 hour). Then visit the Tibetan Pioneer Bookstore, three traditional Tibetan houses reimagined as a high-plateau village reading space, where timber beams and rammed-earth walls frame a place of culture and quiet. Breakfast, lunch and dinner included."
+        }
+      ]
+    },
+    {
+      "day_zh": "第四天",
+      "day_en": "Day 4",
+      "items": [
+        {
+          "title_zh": "返程",
+          "title_en": "Departure",
+          "desc_zh": "享用早餐后退房，专车送往香格里拉机场/高铁站（车程约160公里、4小时左右），带着山野的清风与藏境的余韵踏上归途。餐食含早餐。",
+          "desc_en": "After breakfast and check-out, a private vehicle delivers you to Shangri-La's airport or rail station (about 160 km, roughly 4 hours), sending you homeward with the mountain breeze and the lingering grace of Tibetan lands. Breakfast included."
+        }
+      ]
+    }
+  ],
+  "lodge": {
+    "name_zh": "香格里拉匠庐·赛朵游牧",
+    "name_en": "JiangLu Saiduo Nomad, Shangri-La",
+    "positioning_zh": "野奢度假酒店",
+    "positioning_en": "Wilderness-luxury retreat",
+    "desc_zh": "藏语里“赛朵”意为草原野花。匠庐·赛朵游牧的夏天，便在纳帕海依拉草原的花海与清风里缓缓铺展。抬眼能看见财神山、石卡雪山，水鸟轻掠湖面，牛羊悠然漫步湿地草甸。3300米高原之上，无盛夏酷暑，只剩20℃的清凉惬意。",
+    "desc_en": "In Tibetan, \"Saiduo\" means the wildflowers of the grassland. Summer at JiangLu Saiduo Nomad unfolds slowly amid the blossoms and clear breezes of the Napahai Yila plain. Lift your eyes to Caishen Mountain and the Shika snow peak; water birds skim the lake while cattle and sheep wander the wetland meadows. At 3,300 metres there is no summer heat, only a cool and easy 20°C.",
+    "stats": [
+      {
+        "label_zh": "海拔",
+        "label_en": "Altitude",
+        "value": "3300m"
+      },
+      {
+        "label_zh": "选址",
+        "label_en": "Setting",
+        "value": "纳帕海依拉草原 / Napahai Yila grassland"
+      },
+      {
+        "label_zh": "夏季气温",
+        "label_en": "Summer temperature",
+        "value": "约20℃ / approx. 20°C"
+      },
+      {
+        "label_zh": "可选房型",
+        "label_en": "Room options",
+        "value": "庭院阳台标间/大床房；侧海景阳台大床 / Courtyard-balcony twin or king; lake-view balcony king"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title_zh": "无底湖秘境轻徒步",
+      "title_en": "Secret Gentle Trek at the Bottomless Lake",
+      "desc_zh": "初夏时节，藏在雪山深处的无底湖褪去寒凉，迎来一年中最温柔的时节。澄澈湖水凝萃雪山融水，岸边草甸次第返青，野花肆意盛放。绕湖一周约4公里，无需负重，只需跟随向导，在海拔3800米的呼吸间完成一次对自我体能的温柔挑战。穿行原始冷杉林，脚下是厚软如毯的苔藓，松萝垂落，风里都是草木与泥土的清润气息。湖水随天光变幻——晴时是透亮的蒂芙尼蓝，阴时是温润的翡翠绿，倒映远处雪山。沿途还能偶遇林间小松鼠，看牛羊在草甸慢悠悠吃草。",
+      "desc_en": "In early summer the Bottomless Lake, hidden deep among the snow mountains, sheds its chill and slips into the gentlest season of the year. Its crystalline waters are distilled snowmelt; along the shore the meadows turn green again and wildflowers run riot. The loop is about 4 kilometres with no heavy pack to carry — simply follow your guide and let the walk become a tender test of your own stamina, one breath at a time at 3,800 metres. You move through primeval fir forest over moss soft and thick as carpet, beard lichen trailing overhead, the air rich with the scent of plants and damp earth. The lake changes colour with the sky — a luminous Tiffany blue in sunshine, a soft jade green under cloud — mirroring the distant peaks. Along the way you may meet squirrels darting through the trees and watch cattle and sheep graze unhurried across the meadow."
+    },
+    {
+      "title_zh": "草原策马骑行",
+      "title_en": "Horseback Riding Across the Grassland",
+      "desc_zh": "在香格里拉的旷野之上，赴一场酣畅淋漓的户外野骑。跨上骏马，以游牧民族的视角俯瞰广袤草甸，沿着草甸与林间小路前行，风轻云淡、草木清新，偶尔遇见林间飞鸟掠过，在高原天地间感受风的自由、山的壮阔。无需担心不会骑马，向导会提前耐心讲解骑行技巧与注意事项，帮你调整马具、熟悉马匹性情，全程贴身守护。温顺的本地骏马早已适应高原地形与气候，步伐稳健，即使第一次骑马也能快速上手。",
+      "desc_en": "Out on Shangri-La's open plains, give yourself over to an exhilarating wild ride. Mount a sturdy horse and survey the vast meadows from a nomad's perspective, following grassland tracks and forest paths beneath light winds and high clouds, the air fresh with greenery, the occasional bird flashing through the trees — here, between earth and sky on the high plateau, you feel the freedom of the wind and the grandeur of the mountains. No riding experience is needed: your guide patiently explains technique and safety beforehand, adjusts your tack, helps you get to know your horse's temperament, and stays close at every step. The gentle local horses have long adapted to the plateau's terrain and climate, sure-footed and steady, so even a first-time rider quickly finds their seat and the joy of the ride."
+    },
+    {
+      "title_zh": "藏地先锋书店",
+      "title_en": "The Tibetan Pioneer Bookstore",
+      "desc_zh": "国内首个以藏族文化为主题的高原乡村书店，由三栋传统藏房改造而成，是藏地山野间颇具特色的人文阅读空间。书店保留了藏式建筑的原始结构与质朴肌理，木梁、夯土墙尽显在地风貌。店内设有藏域、雪域、滇域等特色书区，还有民族特色的“青稞书架”，分类陈列人文、旅行、艺术、藏地文化等各类书籍，同时展示本地手作、特色文创与在地风物。",
+      "desc_en": "China's first high-plateau village bookstore devoted to Tibetan culture, created from three traditional Tibetan houses — a distinctive space for reading and culture set amid the mountains of the Tibetan borderlands. The architecture keeps its original structure and unadorned texture, timber beams and rammed-earth walls expressing a deep sense of place. Inside, themed sections such as the Tibetan, Snowland and Yunnan collections sit alongside an ethnic \"highland-barley bookshelf,\" arranging works on culture, travel, art and Tibetan heritage, while local handicrafts, creative goods and regional curiosities are displayed throughout."
+    },
+    {
+      "title_zh": "高原越野之选 · 英力士掷弹兵",
+      "title_en": "Plateau Overland Choice: the INEOS Grenadier",
+      "desc_zh": "英力士掷弹兵将坚韧不拔的英伦精神与严谨的德国工程技术融合，成为一款真正展现毫不妥协性能的四驱越野车型。其设计、研发与制造均遵循世界级标准，专为需要可靠、能适应各种路况的汽车发烧友打造，同时兼具当今驾驶者所期待的舒适性、安全性、精致奢雅以及标准配置。全程随行，配备司机兼行程领队服务。",
+      "desc_en": "The INEOS Grenadier fuses an indomitable British spirit with rigorous German engineering to create a genuinely uncompromising four-wheel-drive vehicle. Designed, developed and built to world-class standards, it is made for enthusiasts who demand reliability across every kind of terrain, while delivering the comfort, safety, refined luxury and full specification today's drivers expect. It accompanies you throughout the journey, with a driver who also serves as your trip leader."
+    }
+  ],
+  "food": [
+    {
+      "name_zh": "无底湖湖畔路餐",
+      "name_en": "Bottomless Lake Picnic Lunch",
+      "desc_zh": "环湖徒步途中享用的湖畔简餐，于雪山倒映的湖光与草甸野花间补充体力，简单而惬意。",
+      "desc_en": "A simple lunch enjoyed beside the lake mid-trek, a light and easy refuel amid mirrored snow peaks, meadow and wildflowers."
+    },
+    {
+      "name_zh": "酒店下午茶",
+      "name_en": "Afternoon Tea at the Lodge",
+      "desc_zh": "于赛朵游牧酒店内享用的下午茶，在草原清风中度过悠闲午后时光。",
+      "desc_en": "Afternoon tea served within Saiduo Nomad, a leisurely interlude in the grassland breeze."
+    },
+    {
+      "name_zh": "晚安甜品 / 夜粥",
+      "name_en": "Goodnight Sweets & Evening Congee",
+      "desc_zh": "夜晚为住客准备的晚安甜品与夜粥，在高原微凉的夜里温暖收尾。",
+      "desc_en": "Goodnight sweets and a bowl of evening congee prepared for guests, a warming close to the cool plateau night."
+    },
+    {
+      "name_zh": "应季欢迎水果与迷你吧",
+      "name_en": "Seasonal Welcome Fruit & Minibar",
+      "desc_zh": "入住即奉应季欢迎水果，客房迷你吧备有零食与饮品，随时享用。",
+      "desc_en": "Seasonal welcome fruit on arrival, with the in-room minibar stocked with snacks and drinks to enjoy at any time."
+    },
+    {
+      "name_zh": "酥油茶制作",
+      "name_en": "Hand-Churned Butter Tea",
+      "desc_zh": "酒店内体验活动，10:00-11:00（提前半小时预约），亲手制作藏地酥油茶，品味高原日常滋味。",
+      "desc_en": "An in-lodge experience from 10:00-11:00 (reserve half an hour ahead): churn your own Tibetan butter tea and taste an everyday flavour of the plateau."
+    },
+    {
+      "name_zh": "红酒品鉴",
+      "name_en": "Wine Tasting",
+      "desc_zh": "酒店内体验活动，20:00-22:30 于餐厅对面户外平台举行，在星空与山风下品味佳酿。",
+      "desc_en": "An in-lodge experience held 20:00-22:30 on the outdoor terrace opposite the restaurant — savour fine wine beneath the stars and the mountain wind."
+    }
+  ],
+  "inclusions": [
+    {
+      "category_zh": "住宿",
+      "category_en": "Accommodation",
+      "items_zh": [
+        "香格里拉匠庐·赛朵游牧，默认安排2位成人共享一间标准间或大床房；所含客房随机安排，如有偏好请提前咨询，以实际资源情况为准",
+        "可选房型：庭院阳台标间/大床房；侧海景阳台大床"
+      ],
+      "items_en": [
+        "JiangLu Saiduo Nomad, Shangri-La; by default two adults share one twin or king room. The room category is assigned at random — please advise preferences in advance, subject to availability",
+        "Room options: courtyard-balcony twin or king; lake-view balcony king"
+      ]
+    },
+    {
+      "category_zh": "用车",
+      "category_en": "Transport",
+      "items_zh": [
+        "全程英力士掷弹兵随行，配备司机兼行程领队服务"
+      ],
+      "items_en": [
+        "INEOS Grenadier throughout, with a driver who also serves as trip leader"
+      ]
+    },
+    {
+      "category_zh": "餐食",
+      "category_en": "Meals",
+      "items_zh": [
+        "Day1晚餐、Day2早中晚三餐、Day3早餐，共3早5正餐；无底湖中餐为路餐简餐",
+        "酒店内下午茶、晚安甜品/夜粥、应季欢迎水果、minibar零食饮品"
+      ],
+      "items_en": [
+        "Day 1 dinner, Day 2 breakfast/lunch/dinner, Day 3 breakfast — 3 breakfasts and 5 main meals in total; the Bottomless Lake lunch is a simple picnic",
+        "In-lodge afternoon tea, goodnight sweets / evening congee, seasonal welcome fruit, and minibar snacks and drinks"
+      ]
+    },
+    {
+      "category_zh": "体验",
+      "category_en": "Experiences",
+      "items_zh": [
+        "行程所列在地体验项目及首道门票"
+      ],
+      "items_en": [
+        "All local experiences listed in the itinerary and first-entry admission tickets"
+      ]
+    },
+    {
+      "category_zh": "保险",
+      "category_en": "Insurance",
+      "items_zh": [
+        "行程中旅游意外险，保额50万元；若有更高保额需求可自行投保"
+      ],
+      "items_en": [
+        "Travel accident insurance during the trip with coverage of RMB 500,000; additional coverage may be arranged independently if desired"
+      ]
+    },
+    {
+      "category_zh": "礼遇",
+      "category_en": "In-Lodge Privileges",
+      "items_zh": [
+        "在地体验活动（使用地点为酒店内）：煨桑祈福 09:00-10:00（提前1天预约）；藏装体验（提前一天预约，赠送3张简修照片）；酥油茶制作 10:00-11:00（提前半小时预约）；藏文拓印 15:00-17:00（提前半小时预约）；围炉夜话 20:00-22:00（前台二楼彩绘室）；手工藏香 20:00-22:00（提前半小时预约）；红酒品鉴 20:00-22:30（餐厅对面户外平台）"
+      ],
+      "items_en": [
+        "Local experiences held within the lodge: sang incense blessing ritual 09:00-10:00 (book 1 day ahead); Tibetan-dress experience (book 1 day ahead, includes 3 lightly retouched photos); butter-tea making 10:00-11:00 (book 30 min ahead); Tibetan script rubbing 15:00-17:00 (book 30 min ahead); fireside evening talk 20:00-22:00 (mural room, 2nd floor above reception); handmade Tibetan incense 20:00-22:00 (book 30 min ahead); wine tasting 20:00-22:30 (outdoor terrace opposite the restaurant)"
+      ]
+    }
+  ],
+  "exclusions_zh": [
+    "出发地到行程目的地之间的往返大交通（机票/火车票）",
+    "超重行李的托运费、保管费；酒店内快递收发、传真、收费电视、饮品、烟酒等个人消费；自由活动期间的用车、陪同服务",
+    "因违约、自身过错、自由活动期间个人行为或自身疾病引起的人身和财产损失",
+    "因不可抗力等客观原因及航空公司航班延误或取消等特殊情况而产生的额外费用"
+  ],
+  "exclusions_en": [
+    "Long-haul transport between your home city and the destination (flights / train tickets)",
+    "Excess-baggage and storage fees; personal charges at the lodge such as courier, fax, pay-TV, drinks, tobacco and alcohol; vehicle and accompaniment during free time",
+    "Loss of person or property arising from breach of agreement, personal fault, individual conduct during free time, or one's own illness",
+    "Extra costs arising from force majeure or other objective causes, and from special circumstances such as airline flight delays or cancellations"
+  ],
+  "pricing_notes_zh": [
+    "售价为2人成团出行的单人价格",
+    "第三人为15岁及以上不可同住一间房；单男/单女无法与他人同住1间房、孩童需单独占床时，需补齐单房差价2700元/人（备注：有特殊房型的门店，可补差入住家庭房或亲子房等）",
+    "如携带1位孩童与两成人同住：6岁以下孩童因香格里拉属高海拔地带、户外运动占比高，不建议出行；6-14岁孩童8200元/人（与同行人拼住、不加床，其余体验权益与成人一致）",
+    "15周岁及以上入住视为成人，14周岁及以下视为孩童",
+    "携带多位孩童出行及其他出行人数的价格，请咨询客服"
+  ],
+  "pricing_notes_en": [
+    "The listed price is per person based on a 2-person departure",
+    "A third guest aged 15 or above cannot share one room; a solo male/female who cannot share with another, or a child requiring a separate bed, must pay the single-room supplement of RMB 2,700 per person (note: properties with special room types may instead offer family or parent-child rooms for a supplement)",
+    "If one child travels with two adults sharing: children under 6 are not advised to travel, as Shangri-La sits at high altitude with a high proportion of outdoor activity; children aged 6-14 are RMB 8,200 per person (sharing with travel companions, no extra bed, with all other experience entitlements equal to an adult's)",
+    "Guests aged 15 and above are treated as adults; those 14 and under are treated as children",
+    "For travel with multiple children or other group sizes, please consult customer service"
+  ],
+  "cancellation_zh": [
+    "旅行产品须支付全款方可确认预订，一经预约：",
+    "行程开始前15天及以上（不含出发当天），可申请无损取消及退款",
+    "行程开始前8-14天（不含出发当天），申请取消需收取订单金额的30%作为临时取消损失",
+    "行程开始前0-7天（不含出发当天），申请取消需收取订单金额的50%作为临时取消损失"
+  ],
+  "cancellation_en": [
+    "Bookings are confirmed only upon payment in full; once reserved:",
+    "15 or more days before the trip starts (excluding the departure day): cancellation and refund with no penalty",
+    "8-14 days before the trip starts (excluding the departure day): cancellation incurs a charge of 30% of the order amount as a short-notice loss",
+    "0-7 days before the trip starts (excluding the departure day): cancellation incurs a charge of 50% of the order amount as a short-notice loss"
+  ],
+  "tips_zh": [
+    "出行前请带齐身份证或其他有效证件，并提前检查证件是否在有效期内",
+    "香格里拉海拔约3300米，可根据自身情况于行程前一周开始服用红景天等；抵达高原地区避免剧烈运动，前两天尽量不洗澡",
+    "高原早晚温差大，建议准备长袖保暖薄打底、防风防水冲锋衣、速干短袖，穿着便于行动的休闲装与防滑防水徒步鞋",
+    "按需自行准备充电宝、充电线、耳机、护肤品，以及适合自身情况的常用药（感冒药、退烧贴、肠胃药、晕车药等）",
+    "高原紫外线强，备好防晒霜、润唇润肤用品以及墨镜、帽子等个人物品",
+    "此行进入藏族文化浓厚的香格里拉，拍摄特别是人物时请保持礼貌与尊重，尤其在宗教、表演场所需尊重当地习俗，可拍摄之处也尽量不要干扰他人",
+    "患有心脏病、高血压、哮喘、重度贫血、颈腰椎疾病者，孕妇、60周岁以上长者，以及近期有骨折、手术史或行动不便者，不宜参与骑马项目，报名前请自行确认身体状况"
+  ],
+  "tips_en": [
+    "Bring your ID card or other valid documents and check in advance that they are within their validity period",
+    "Shangri-La sits at about 3,300 metres; depending on your condition you may begin taking rhodiola (hongjingtian) and similar a week before the trip. On arrival at altitude, avoid strenuous activity and try not to bathe for the first two days",
+    "Day-to-night temperature swings are large at altitude. Pack a warm long-sleeve base layer, a windproof and waterproof shell, quick-dry short sleeves, comfortable casual clothing for easy movement, and non-slip waterproof hiking shoes",
+    "Bring as needed a power bank, charging cables, earphones, skincare, and personal medications suited to your needs (cold remedies, fever-cooling patches, stomach medicine, motion-sickness pills, etc.)",
+    "UV radiation is intense at altitude — bring sunscreen, lip and skin balm, sunglasses, a hat and similar personal items",
+    "This journey enters Shangri-La, a region rich in Tibetan culture. Be courteous and respectful when photographing, especially people; respect local customs at religious and performance sites in particular, and even where photography is allowed, try not to disturb others",
+    "Those with heart disease, high blood pressure, asthma, severe anaemia, or cervical/lumbar spine conditions, as well as pregnant women, guests over 60, and anyone with a recent fracture, surgery or limited mobility, should not take part in horseback riding. Please confirm your own physical condition before booking"
+  ],
+  "faq": [
+    {
+      "q_zh": "香格里拉海拔较高，应如何应对高原反应？",
+      "q_en": "Shangri-La is at high altitude — how should I prepare for altitude sickness?",
+      "a_zh": "香格里拉海拔约3300米，徒步的无底湖更达3800米。可根据自身情况在出行前一周开始服用红景天等；抵达后避免剧烈运动，前两天尽量不洗澡，多休息、适量饮水。患有心脏病、高血压、哮喘、重度贫血等疾病者及孕妇、60周岁以上长者出行前请务必确认身体状况。",
+      "a_en": "Shangri-La sits at about 3,300 metres, and the Bottomless Lake trek reaches 3,800 metres. Depending on your condition, you may start taking rhodiola (hongjingtian) about a week before departure. On arrival, avoid strenuous activity, try not to bathe for the first two days, rest well and stay hydrated. Guests with heart disease, high blood pressure, asthma or severe anaemia, as well as pregnant women and those over 60, should confirm their fitness to travel beforehand."
+    },
+    {
+      "q_zh": "没有骑马经验，可以参加草原野骑吗？",
+      "q_en": "Can I join the grassland ride with no horseback experience?",
+      "a_zh": "可以。向导会提前耐心讲解骑行技巧与注意事项，帮你调整马具、熟悉马匹性情，全程贴身守护。本地骏马温顺稳健、早已适应高原地形，即使第一次骑马也能快速上手。但患有相关疾病者、孕妇、长者及近期有骨折或手术史者不宜参与，请提前确认身体状况。",
+      "a_en": "Yes. Your guide patiently explains technique and safety in advance, adjusts your tack, helps you get to know your horse, and stays close throughout. The gentle, sure-footed local horses are well adapted to the plateau, so even first-time riders find their seat quickly. However, guests with relevant medical conditions, pregnant women, the elderly, and anyone with a recent fracture or surgery should not take part — please confirm your condition in advance."
+    },
+    {
+      "q_zh": "这趟行程适合带孩子出行吗？",
+      "q_en": "Is this trip suitable for travelling with children?",
+      "a_zh": "因香格里拉属高海拔地带、户外运动占比高，未满6岁孩童不建议出行。6-14岁孩童价格为8200元/人，与同行人拼住、不加床，其余体验权益与成人一致；15周岁及以上视为成人。携带多位孩童出行请咨询客服。",
+      "a_en": "Because Shangri-La is at high altitude with a high proportion of outdoor activity, children under 6 are not advised to travel. Children aged 6-14 are RMB 8,200 per person, sharing with travel companions without an extra bed, with all other experience entitlements equal to an adult's; guests 15 and above are treated as adults. For travel with multiple children, please consult customer service."
+    },
+    {
+      "q_zh": "全程的用车与餐食是怎样安排的？",
+      "q_en": "How are transport and meals arranged throughout the trip?",
+      "a_zh": "全程由英力士掷弹兵硬派越野车随行，配备司机兼行程领队服务。餐食为一价全含，包含Day1晚餐、Day2早中晚三餐、Day3早餐，共3早5正餐（无底湖午餐为路餐简餐），并享酒店内下午茶、晚安甜品/夜粥、应季欢迎水果及minibar零食饮品。",
+      "a_en": "The journey is accompanied throughout by a rugged INEOS Grenadier overland vehicle with a driver who also acts as your trip leader. Meals are all-inclusive: Day 1 dinner, Day 2 breakfast/lunch/dinner and Day 3 breakfast — 3 breakfasts and 5 main meals in total (the Bottomless Lake lunch is a simple picnic) — plus in-lodge afternoon tea, goodnight sweets / evening congee, seasonal welcome fruit, and minibar snacks and drinks."
+    }
+  ],
+  "closing_zh": "从游牧美学的松弛栖居，到无底湖的秘境徒步，再到策马奔腾的自由野趣，让我们于山野寻风、闲渡藏境，邂逅香格里拉最本真的诗意与辽阔。",
+  "closing_en": "From the unhurried dwelling of nomadic aesthetics to the secret trek around the Bottomless Lake and the unbridled joy of riding across open plains — let us chase the mountain wind and drift leisurely through Tibetan lands, meeting the most authentic poetry and vastness of Shangri-La.",
+  "price_from": 12500,
+  "price_currency": "CNY",
+  "poster_image": "山野寻风.jpg",
+  "lodge_images": [
+    "jianglu-saiduo/g01-风景.jpg",
+    "jianglu-saiduo/g02-户外公区.jpg",
+    "jianglu-saiduo/g03-大堂.jpg",
+    "jianglu-saiduo/g04-餐厅.jpg",
+    "jianglu-saiduo/g05-餐饮.jpg",
+    "jianglu-saiduo/g06-灯阵.jpg",
+    "jianglu-saiduo/g07-户外餐区.jpg"
+  ]
+}

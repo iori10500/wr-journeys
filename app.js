@@ -150,6 +150,13 @@ app.get('/sitemap.xml', (req, res) => {
     pages.push({ loc: `${baseUrl}/brands/${b.slug}`, priority: '0.6', changefreq: 'monthly' });
     pages.push({ loc: `${baseUrl}/brands/${b.slug}?lang=en`, priority: '0.5', changefreq: 'monthly' });
   });
+  // China hub (IA v2)
+  pages.push({ loc: `${baseUrl}/destinations/china`, priority: '0.9', changefreq: 'monthly' });
+  pages.push({ loc: `${baseUrl}/destinations/china?lang=en`, priority: '0.8', changefreq: 'monthly' });
+  Object.entries(chinaRegionsData).filter(([s, r]) => r.parent === 'china').forEach(([slug]) => {
+    pages.push({ loc: `${baseUrl}/destinations/china/${slug}`, priority: '0.7', changefreq: 'monthly' });
+    pages.push({ loc: `${baseUrl}/destinations/china/${slug}?lang=en`, priority: '0.6', changefreq: 'monthly' });
+  });
   // Brand-routes (IA v2 — /routes/<slug>)
   Object.values(routesIndex).forEach(r => {
     pages.push({ loc: `${baseUrl}/routes/${r.slug}`, priority: '0.7', changefreq: 'monthly' });
@@ -192,6 +199,15 @@ try {
   brandsData = JSON.parse(fs.readFileSync(brandsPath, 'utf-8'));
 } catch (err) {
   console.error('Failed to load brands:', err.message);
+}
+
+// Load China regions data
+const chinaRegionsPath = path.join(__dirname, 'data', 'china-regions.json');
+let chinaRegionsData = {};
+try {
+  chinaRegionsData = JSON.parse(fs.readFileSync(chinaRegionsPath, 'utf-8'));
+} catch (err) {
+  console.error('Failed to load china-regions:', err.message);
 }
 
 // Load lodges metadata (per-brand)
@@ -609,6 +625,65 @@ app.get('/destinations', (req, res) => {
   const lang = req.query.lang === 'en' ? 'en' : 'zh';
   const countries = getCountries();
   res.render('destinations', { countries, lang, title: lang === 'en' ? 'Destinations | WR Travel' : '探索目的地 | 野路逸行' });
+});
+
+// China hub (parent landing)
+app.get('/destinations/china', (req, res) => {
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const china = chinaRegionsData.china;
+  if (!china) return res.status(404).send('Not found');
+  // For each child region, count routes that match
+  const subRegions = china.regions.map(slug => {
+    const r = chinaRegionsData[slug];
+    if (!r) return null;
+    const matchTags = (r.matchTags || []).map(t => t.toLowerCase());
+    const routes = Object.values(routesIndex).filter(rt => {
+      const region = (rt.region_zh || rt.region_en || '').toLowerCase();
+      return matchTags.some(t => region.includes(t) || t.includes(region));
+    });
+    return { slug, ...r, routeCount: routes.length };
+  }).filter(Boolean);
+  // Featured: all jianglu routes (top-of-funnel teaser)
+  const featuredRoutes = Object.values(routesIndex).slice(0, 6);
+  res.render('china-hub', {
+    china, subRegions, featuredRoutes, lang,
+    title: lang === 'en' ? 'China · Inbound Hub | WR Journeys' : '中国 · 入境之家 | WR Journeys',
+    schemas: [
+      schemas.breadcrumbList([
+        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
+        { name: lang === 'en' ? 'Destinations' : '目的地', path: '/destinations' },
+        { name: lang === 'en' ? 'China' : '中国', path: '/destinations/china' },
+      ]),
+      schemas.itemList(
+        subRegions.map(r => ({ name: lang === 'en' ? r.name_en : r.name_zh, url: `/destinations/china/${r.slug}` })),
+        lang === 'en' ? 'China sub-regions' : '中国子区域'
+      ),
+    ],
+  });
+});
+
+// China sub-region (yunnan / guizhou / shangri-la / sichuan)
+app.get('/destinations/china/:region', (req, res) => {
+  const lang = req.query.lang === 'en' ? 'en' : 'zh';
+  const region = chinaRegionsData[req.params.region];
+  if (!region || region.parent !== 'china') return res.status(404).send('Not found');
+  const matchTags = (region.matchTags || []).map(t => t.toLowerCase());
+  const regionRoutes = Object.values(routesIndex).filter(rt => {
+    const r = (rt.region_zh || rt.region_en || '').toLowerCase();
+    return matchTags.some(t => r.includes(t) || t.includes(r));
+  });
+  res.render('china-region', {
+    region: { slug: req.params.region, ...region }, routes: regionRoutes, lang,
+    title: (lang === 'en' ? region.name_en : region.name_zh) + ' · ' + (lang === 'en' ? 'China' : '中国') + ' | WR Journeys',
+    schemas: [
+      schemas.breadcrumbList([
+        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
+        { name: lang === 'en' ? 'Destinations' : '目的地', path: '/destinations' },
+        { name: lang === 'en' ? 'China' : '中国', path: '/destinations/china' },
+        { name: lang === 'en' ? region.name_en : region.name_zh, path: `/destinations/china/${req.params.region}` },
+      ]),
+    ],
+  });
 });
 
 // Destination detail

@@ -67,6 +67,15 @@
     <p><%= lang === 'en' ? 'Discover our curated travel destinations' : '发现我们精选的奢华旅行目的地' %></p>
   </div>
 
+  <!-- China hub feature card -->
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px 8px;">
+    <a href="/destinations/china<%= lang === 'en' ? '?lang=en' : '' %>" style="display:block;background:linear-gradient(135deg,#1a1a2e 0%,#2d2d44 100%);border-radius:14px;padding:28px 28px;color:#fff;text-decoration:none;box-shadow:0 4px 24px rgba(0,0,0,0.1);border-left:4px solid #c8a96e;transition:transform 0.2s;">
+      <div style="font-size:11px;letter-spacing:0.22em;color:#c8a96e;font-weight:600;text-transform:uppercase;margin-bottom:6px;">★ <%= lang === 'en' ? 'Inbound China · Curated Hub' : '中国 · 入境精选之家' %></div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:24px;margin:0 0 6px;color:#fff;"><%= lang === 'en' ? 'China — the value frontier of slow luxury' : '中国 — slow-luxury 的价值洼地' %></h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.75);margin:0;"><%= lang === 'en' ? '9 curated routes across Guizhou, Yunnan, Shangri-la — anchored on Jianglu, Songtsam.' : '贵州、云南、香格里拉 9 条甄选线路 — 由匠庐、松赞支撑。' %> →</p>
+    </a>
+  </div>
+
   <div class="dest-grid">
     <% countries.forEach(function(c) { %>
       <a href="/destinations/<%= c.slug %><%= lang === 'en' ? '?lang=en' : '' %>" class="dest-card">

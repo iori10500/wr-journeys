@@ -1,0 +1,51 @@
+{
+  "china": {
+    "name_zh": "中国",
+    "name_en": "China",
+    "headline_zh": "中国 — slow-luxury 的价值洼地",
+    "headline_en": "China — the value frontier of slow luxury",
+    "manifesto_zh": "中国是慢奢旅行最被低估的目的地。匠庐、松赞这一批本土精品酒店，从设计语汇到服务密度都对标 Aman、Como、Soneva，但价差是供给侧便宜 + 国际品牌溢价没起来。对欧美 inbound 客来说，这是核心钩子；对中国本地高净值客户来说，是被遮蔽的近场胜地。\n\n我们目前覆盖 4 个核心区域：贵州（匠庐主场）、云南（匠庐 + 松赞 + 木夕大里）、香格里拉（松赞）、四川（待开发）。",
+    "manifesto_en": "China is the most underrated destination for slow-luxury travel. The new wave of domestic boutique brands — Jianglu, Songtsam — match Aman, Como and Soneva on design vocabulary and service density, but pricing remains a fraction. For inbound travellers, that's the core hook; for China's HNW travellers, it's the hidden home-court win.\n\nWe currently anchor on four core regions: Guizhou (Jianglu home turf), Yunnan (Jianglu + Songtsam + MUXI), Shangri-la (Songtsam), and Sichuan (in development).",
+    "regions": ["guizhou", "yunnan", "shangri-la", "sichuan"]
+  },
+  "guizhou": {
+    "name_zh": "贵州",
+    "name_en": "Guizhou",
+    "parent": "china",
+    "headline_zh": "贵州 — 山野慢栖与避暑史诗",
+    "headline_en": "Guizhou — mountain slow stays and the cool-summer epic",
+    "manifesto_zh": "贵州是 WR Journeys 中国 inbound 的开篇章节。匠庐在这里有 5 个不同形态的精品酒店 — 布依石头城堡（村晓）、彝乡高原山居（沙嘎）、苗乡耕读山居（耕读第）、集装箱山野美宿（阅山）、雅路古秘境。线路设计沿海拔梯度（1000-1800m）展开，夏日避暑、冬日观瀑、四季皆有戏。",
+    "manifesto_en": "Guizhou is the opening chapter of our inbound China programme. Jianglu operates five distinct boutiques here — a 600-year-old Buyi stone village (Cunxiao), a Yi-highland plateau retreat (Shaga), a Miao reading-and-farming retreat (Gengdudi), a container-architecture wilderness lodge (Yueshan), and the secluded Yalugu. Routes unfold along an altitude gradient (1,000–1,800m): cool-summer escapes, winter waterfalls, year-round drama.",
+    "matchTags": ["贵州", "guizhou"]
+  },
+  "yunnan": {
+    "name_zh": "云南",
+    "name_en": "Yunnan",
+    "parent": "china",
+    "headline_zh": "云南 — 苍洱之间的隐逸慢游",
+    "headline_en": "Yunnan — slow journeys between Cangshan and Erhai",
+    "manifesto_zh": "云南是中国最被旅人爱过的省份，但真正的好酒店多到难选。我们在大理（金梭岛匠庐·蜜湾、木夕大里伙山）、丽江、香格里拉沿线深挖，按你的 family / couple / solo 画像配伍线路。\n\n匠庐·蜜湾把整个金梭岛包了，洱海日出日落都在你窗外；木夕大里把白族建筑语汇做到当代极简的程度。",
+    "manifesto_en": "Yunnan is China's most romanticised province, with more good hotels than easy to choose from. We anchor on Dali (Jianglu Miwan on Jinsuo Island, MUXI Dali Houshan), Lijiang, and the Shangri-la corridor — paired to your family / couple / solo profile.\n\nJianglu Miwan occupies all of Jinsuo Island — Erhai sunrise and sunset frame your window. MUXI takes Bai-architecture vocabulary into contemporary minimalism.",
+    "matchTags": ["大理", "dali", "云南", "yunnan", "丽江", "lijiang"]
+  },
+  "shangri-la": {
+    "name_zh": "香格里拉",
+    "name_en": "Shangri-La",
+    "parent": "china",
+    "headline_zh": "香格里拉 — 雪山下的高原游牧",
+    "headline_en": "Shangri-La — plateau nomadic life under snow mountains",
+    "manifesto_zh": "香格里拉行政上属云南，但文化和地理上独立成区。我们和匠庐·赛朵游牧、匠庐·雾浓顶（梅里雪山脚下）合作，做「高原慢游」主题线路 — 看雪山、走牧场、住山居、吃藏家私房菜。冬季 12-3 月梅里日照金山是高潮场景。",
+    "manifesto_en": "Shangri-la is administratively part of Yunnan but culturally and geographically a region of its own. We work with Jianglu Saiduo Nomadic and Jianglu Wunongding (at the foot of Meili Snow Mountain) on plateau-slow-travel themed routes — snow mountains, alpine pastures, mountain lodges, Tibetan home cooking. The Dec–Mar 'Sun-on-Gold' view of Meili is the climactic scene.",
+    "matchTags": ["香格里拉", "shangri-la", "shangrila", "梅里", "meili"]
+  },
+  "sichuan": {
+    "name_zh": "四川",
+    "name_en": "Sichuan",
+    "parent": "china",
+    "headline_zh": "四川 — 川西高原的下一章（开发中）",
+    "headline_en": "Sichuan — the next chapter on the Tibetan plateau (in development)",
+    "manifesto_zh": "四川是 WR Journeys 接下来要重点接入的区域 — 松赞在川西的稻城亚丁、丹巴、康定都有项目，匠庐也在评估扩张。目前线路尚未公开，欢迎联系顾问预约定制。",
+    "manifesto_en": "Sichuan is WR Journeys' next major regional onboarding — Songtsam has projects across Yading, Danba, and Kangding; Jianglu is also evaluating expansion. Routes are not yet public — contact the advisor for a bespoke design.",
+    "matchTags": ["四川", "sichuan", "稻城", "yading", "康定", "kangding"]
+  }
+}

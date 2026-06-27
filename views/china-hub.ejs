@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="<%= lang === 'en' ? 'en' : 'zh-CN' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'en' ? china.headline_en : china.headline_zh %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com/destinations/china">
+  <link rel="alternate" hreflang="zh" href="https://itinerary.wildroadgroup.com/destinations/china">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/destinations/china?lang=en">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com/destinations/china">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <style>
+    .ch-hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); padding: 64px 24px 48px; text-align: center; }
+    .ch-hero .kicker { color: #c8a96e; font-size: 11px; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+    .ch-hero h1 { color: #fff; font-family: 'Playfair Display', serif; font-size: 38px; margin: 0 0 12px; line-height: 1.25; }
+    .ch-hero .sub { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 720px; margin: 0 auto; }
+    .ch-manifesto { max-width: 760px; margin: 0 auto; padding: 48px 24px 32px; font-size: 16px; line-height: 1.85; color: #333; }
+    .ch-manifesto p { margin: 0 0 18px; }
+    .ch-regions { max-width: 1200px; margin: 0 auto; padding: 24px 24px 60px; }
+    .ch-section-title { font-family: 'Playfair Display', serif; font-size: 26px; color: #1a1a2e; margin: 32px 0 24px; border-bottom: 1px solid #e8e5dd; padding-bottom: 12px; }
+    .ch-region-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .ch-region-card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: transform 0.2s; display: block; }
+    .ch-region-card:hover { transform: translateY(-3px); }
+    .ch-region-card .name { font-family: 'Playfair Display', serif; font-size: 22px; color: #1a1a2e; margin: 0 0 6px; }
+    .ch-region-card .headline { font-size: 14px; color: #555; line-height: 1.55; margin: 0 0 12px; }
+    .ch-region-card .meta { font-size: 12px; color: #c8a96e; font-weight: 500; }
+    .ch-featured { max-width: 1200px; margin: 0 auto; padding: 24px 24px 80px; }
+    .ch-featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .ch-route-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
+    .ch-route-card:hover { transform: translateY(-3px); }
+    .ch-route-card .img { position: relative; height: 180px; background: #1a1a2e; overflow: hidden; }
+    .ch-route-card .img picture, .ch-route-card .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ch-route-card .img .badge { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.55); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+    .ch-route-card .body { padding: 14px 18px 18px; }
+    .ch-route-card .region { font-size: 11px; color: #c8a96e; letter-spacing: 0.12em; text-transform: uppercase; }
+    .ch-route-card .title { font-size: 15px; font-weight: 500; color: #1a1a2e; margin: 4px 0 6px; line-height: 1.4; }
+    .ch-route-card .sub { font-size: 12px; color: #888; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    @media (max-width:640px) { .ch-hero h1 { font-size: 26px; } .ch-manifesto { padding: 32px 20px 24px; font-size: 15px; } }
+  </style>
+<%- include('partials/jsonld') %>
+<%- include('partials/ga') %>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <button id="langToggle" onclick="toggleLang()" class="lang-toggle"><%= lang === 'en' ? '中' : 'EN' %></button>
+
+  <section class="ch-hero">
+    <a href="/destinations<%= lang === 'en' ? '?lang=en' : '' %>" style="color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;display:block;margin-bottom:14px;"><%= lang === 'en' ? '← All destinations' : '← 全部目的地' %></a>
+    <div class="kicker"><%= lang === 'en' ? 'Inbound China · Curated' : '中国 · 入境精选' %></div>
+    <h1><%= lang === 'en' ? china.headline_en : china.headline_zh %></h1>
+    <p class="sub"><%= lang === 'en' ? 'Hand-picked routes across Guizhou, Yunnan, Shangri-la and Sichuan — anchored on Jianglu, Songtsam, MUXI.' : '贵州、云南、香格里拉、四川的精选线路 — 由匠庐、松赞、木夕大里支撑。' %></p>
+  </section>
+
+  <div class="ch-manifesto">
+    <% (lang === 'en' ? china.manifesto_en : china.manifesto_zh).split(/\n\n+/).forEach(function(para) { %>
+    <p><%= para %></p>
+    <% }); %>
+  </div>
+
+  <div class="ch-regions">
+    <h2 class="ch-section-title"><%= lang === 'en' ? 'Sub-regions' : '子区域' %></h2>
+    <div class="ch-region-grid">
+      <% subRegions.forEach(function(r) { %>
+      <a class="ch-region-card" href="/destinations/china/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+        <div class="name"><%= lang === 'en' ? r.name_en : r.name_zh %></div>
+        <div class="headline"><%= lang === 'en' ? r.headline_en : r.headline_zh %></div>
+        <div class="meta"><% if (r.routeCount > 0) { %><%= r.routeCount %> <%= lang === 'en' ? 'curated routes' : '条甄选线路' %><% } else { %><%= lang === 'en' ? 'Bespoke / in development' : '一事一议 / 开发中' %><% } %> →</div>
+      </a>
+      <% }); %>
+    </div>
+  </div>
+
+  <% if (featuredRoutes && featuredRoutes.length) { %>
+  <div class="ch-featured">
+    <h2 class="ch-section-title"><%= lang === 'en' ? 'Featured Routes' : '精选线路' %></h2>
+    <div class="ch-featured-grid">
+      <% featuredRoutes.forEach(function(r) { %>
+      <a class="ch-route-card" href="/routes/<%= r.slug %><%= lang === 'en' ? '?lang=en' : '' %>">
+        <div class="img">
+          <picture>
+            <source srcset="<%= r.hero_path.replace(/\.jpg$/, '.webp') %>" type="image/webp">
+            <img src="<%= r.hero_path %>" alt="<%= lang === 'en' ? r.title_en : r.title_zh %>" loading="lazy">
+          </picture>
+          <div class="badge"><%= lang === 'en' ? r.duration_en : r.duration_zh %></div>
+        </div>
+        <div class="body">
+          <div class="region"><%= lang === 'en' ? r.region_en : r.region_zh %></div>
+          <div class="title"><%= lang === 'en' ? r.title_en : r.title_zh %></div>
+          <div class="sub"><%= lang === 'en' ? r.subtitle_en : r.subtitle_zh %></div>
+        </div>
+      </a>
+      <% }); %>
+    </div>
+  </div>
+  <% } %>
+
+  <%- include("partials/footer") %>
+  <script>function toggleLang(){const u=new URL(window.location);const n=u.searchParams.get('lang')==='en'?'zh':'en';localStorage.setItem('wr_lang',n);u.searchParams.set('lang',n);window.location=u.toString()}</script>
+</body>
+</html>

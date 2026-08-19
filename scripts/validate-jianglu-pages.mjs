@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 
 const localOrigin = process.env.TEST_ORIGIN || 'http://127.0.0.1:3099';
 const publicOrigin = 'https://itinerary.wildroadgroup.com';
+const heroPath = '/images/brands/jianglu/lodges/wunongding/hero-2026.jpg';
 
 function attr(html, tag, name, value, target = 'content') {
   const pattern = new RegExp(`<${tag}[^>]*${name}=["']${value}["'][^>]*${target}=["']([^"']+)["'][^>]*>`, 'i');
@@ -56,7 +57,10 @@ for (const item of cases) {
   assert.equal(attr(html, 'link', 'hreflang', 'zh-CN', 'href'), `${publicOrigin}/brands/jianglu`);
   assert.equal(attr(html, 'link', 'hreflang', 'en', 'href'), `${publicOrigin}/en/brands/jianglu`);
   assert.equal(attr(html, 'link', 'hreflang', 'x-default', 'href'), `${publicOrigin}/brands/jianglu`);
+  assert.match(attr(html, 'meta', 'property', 'og:image'), /\/wunongding\/hero-2026\.jpg/);
   assert.match(html, /class="be-region"/);
+  assert.equal((html.match(/class="be-atlas-pin /g) || []).length, 3, `${item.path} must show three map pins`);
+  assert.equal((html.match(/class="be-visual-scene"/g) || []).length, 3, `${item.path} must show three visual scenes`);
   assert.equal((html.match(/class="be-lodge"/g) || []).length, 8, `${item.path} must show eight stays`);
   assert.equal((html.match(/class="be-route-card"/g) || []).length, 9, `${item.path} must show nine routes`);
   assert.equal((html.match(/class="be-faq"/g) || []).length, 4, `${item.path} must show four FAQs`);
@@ -70,6 +74,7 @@ for (const item of cases) {
   assert.equal(collection?.url, item.canonical);
   assert.equal(collection?.inLanguage, item.lang === 'en' ? 'en' : 'zh-CN');
   assert.equal(collection?.about?.['@type'], 'Brand');
+  assert.equal(collection?.primaryImageOfPage?.url, `${publicOrigin}${heroPath}`);
   assert.deepEqual(breadcrumb?.itemListElement.map(entry => new URL(entry.item).pathname), item.breadcrumbPaths);
   assert.equal(routeList?.numberOfItems, 9);
   assert.ok(routeList?.itemListElement.every(entry => entry.url.startsWith(item.routePrefix)), `${item.path} route schema URLs must match the page language`);

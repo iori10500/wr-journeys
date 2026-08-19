@@ -13,7 +13,7 @@
   <meta property="og:description" content="<%= metaDescription %>">
   <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= lang === 'en' ? '/en' : '' %>/brands/<%= brand.slug %>">
   <meta property="og:type" content="website">
-  <% if (editorial && routes && routes[0]) { %><meta property="og:image" content="<%= cdnImage(routes[0].hero_path, 1600) %>"><% } %>
+  <% if (editorial && editorialHero) { %><meta property="og:image" content="<%= cdnImage(editorialHero, 1600) %>"><% } %>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">

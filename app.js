@@ -1151,6 +1151,9 @@ app.get('/brands/:slug', (req, res) => {
     ...lodge,
     hero_path: `/images/brands/${brand.slug}/lodges/${slug}/${lodge.gallery?.[0]?.file || 'hero.jpg'}`,
   }));
+  const editorialHero = editorial
+    ? (lodges.find(lodge => lodge.slug === editorial.hero_lodge)?.hero_path || routes[0]?.hero_path || '')
+    : '';
   const languagePrefix = lang === 'en' ? '/en' : '';
   const metaDescription = editorial
     ? (lang === 'en' ? editorial.metaDescription_en : editorial.metaDescription_zh)
@@ -1159,7 +1162,7 @@ app.get('/brands/:slug', (req, res) => {
     schemas.website(),
     schemas.travelAgency(),
     editorial
-      ? schemas.brandCollectionPage(brand, lang, metaDescription, routes[0]?.hero_path || '')
+      ? schemas.brandCollectionPage(brand, lang, metaDescription, editorialHero)
       : schemas.brandOrganization(brand, lang),
     schemas.breadcrumbList([
       { name: lang === 'en' ? 'Home' : '首页', path: lang === 'en' ? '/en/' : '/' },
@@ -1176,7 +1179,7 @@ app.get('/brands/:slug', (req, res) => {
     ...(editorial?.faq?.length ? [schemas.faqPage(editorial.faq, lang)] : []),
   ];
   res.render('brand-detail', {
-    brand, routes, lodges, editorial, lang, metaDescription,
+    brand, routes, lodges, editorial, editorialHero, lang, metaDescription,
     contentGroup: ['jianglu', 'songtsam', 'wildroad'].includes(brand.slug) ? 'china_inbound' : 'wr_journeys',
     schemas: pageSchemas,
   });

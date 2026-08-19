@@ -1,7 +1,7 @@
 <style>
   .be-page { --be-ink:#18211c; --be-forest:#233b30; --be-moss:#64755e; --be-gold:#c8a96e; --be-paper:#f5f1e8; --be-line:rgba(35,59,48,.16); background:#fbfaf6; color:var(--be-ink); }
   .be-page a { color:inherit; }
-  .be-hero { min-height:620px; position:relative; display:flex; align-items:flex-end; overflow:hidden; background:#18211c; }
+  .be-hero { min-height:680px; position:relative; display:flex; align-items:flex-end; overflow:hidden; background:#18211c; border-radius:0 0 34px 34px; }
   .be-hero-media,.be-hero-media picture,.be-hero-media img { position:absolute; inset:0; width:100%; height:100%; }
   .be-hero-media img { object-fit:cover; object-position:center 58%; }
   .be-hero::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(12,20,16,.2) 0%,rgba(12,20,16,.28) 36%,rgba(12,20,16,.92) 100%); }
@@ -17,20 +17,51 @@
   .be-stat strong { display:block; font-family:'Playfair Display',serif; font-size:30px; font-weight:500; color:#fff; }
   .be-stat span { display:block; margin-top:3px; color:rgba(255,255,255,.62); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
   .be-section { width:min(1180px,calc(100% - 48px)); margin:0 auto; padding:96px 0; }
-  .be-section + .be-section { border-top:1px solid var(--be-line); }
+  .be-section + .be-section { border-top:0; }
   .be-kicker { color:#8a7143; font-size:11px; font-weight:600; letter-spacing:.19em; text-transform:uppercase; margin-bottom:18px; }
   .be-section-head { display:grid; grid-template-columns:minmax(260px,.72fr) minmax(420px,1.28fr); gap:80px; align-items:start; margin-bottom:54px; }
   .be-section h2 { font-family:'Playfair Display','Noto Sans SC',serif; font-size:clamp(34px,4.2vw,58px); line-height:1.08; font-weight:500; letter-spacing:-.025em; color:var(--be-forest); }
   .be-lead { font-size:18px; line-height:1.9; color:#4e5a52; }
   .be-context-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:25px; }
   .be-context-links a { border-bottom:1px solid #a88950; color:#6d572f; padding:3px 0; text-decoration:none; font-size:13px; }
-  .be-fit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-  .be-fit-card { background:var(--be-paper); padding:34px 32px 36px; min-height:220px; border-top:3px solid var(--be-gold); }
+  .be-fit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .be-fit-card { position:relative; overflow:hidden; background:var(--be-paper); padding:38px 34px 40px; min-height:220px; border-radius:20px; box-shadow:0 14px 42px rgba(24,33,28,.055); }
+  .be-fit-card::before { content:""; position:absolute; left:34px; top:0; width:42px; height:3px; border-radius:0 0 3px 3px; background:var(--be-gold); }
   .be-fit-card .be-num { font-family:'Playfair Display',serif; color:#a18452; font-size:14px; margin-bottom:34px; }
   .be-fit-card h3 { font-family:'Playfair Display','Noto Sans SC',serif; font-size:23px; line-height:1.25; font-weight:500; margin-bottom:14px; color:var(--be-forest); }
   .be-fit-card p { font-size:14px; line-height:1.75; color:#59635c; }
-  .be-region-stack { display:grid; gap:24px; }
-  .be-region { display:grid; grid-template-columns:220px 1fr; background:#fff; border:1px solid var(--be-line); }
+  .be-visual-story { display:grid; grid-template-columns:1.06fr .88fr 1.06fr; gap:18px; margin-top:58px; }
+  .be-visual-scene { position:relative; min-height:430px; overflow:hidden; border-radius:24px; background:#d8d5ca; box-shadow:0 22px 56px rgba(24,33,28,.08); }
+  .be-visual-scene:nth-child(2) { margin-top:42px; }
+  .be-visual-scene picture,.be-visual-scene img { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .be-visual-scene img { object-fit:cover; transition:transform .8s ease; }
+  .be-visual-scene:hover img { transform:scale(1.025); }
+  .be-visual-scene::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 42%,rgba(12,24,18,.78) 100%); }
+  .be-visual-scene figcaption { position:absolute; z-index:1; left:26px; right:24px; bottom:24px; color:#fff; }
+  .be-visual-scene figcaption span { display:block; margin-bottom:7px; color:#e5ca92; font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
+  .be-visual-scene figcaption strong { font-family:'Playfair Display','Noto Sans SC',serif; font-size:25px; line-height:1.15; font-weight:500; }
+  .be-atlas { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(280px,.45fr); min-height:500px; margin-bottom:32px; overflow:hidden; border-radius:28px; background:#1d342a; color:#fff; box-shadow:0 24px 60px rgba(24,33,28,.09); }
+  .be-atlas-map { position:relative; min-height:500px; isolation:isolate; overflow:hidden; background:radial-gradient(circle at 28% 24%,rgba(191,161,105,.13),transparent 28%),linear-gradient(145deg,#294538,#172a22); }
+  .be-atlas-map::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,transparent 0 49.8%,rgba(255,255,255,.025) 50% 50.2%,transparent 50.2%),linear-gradient(0deg,transparent 0 49.8%,rgba(255,255,255,.025) 50% 50.2%,transparent 50.2%); background-size:112px 112px; }
+  .be-atlas-lines { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+  .be-atlas-route { fill:none; stroke:#d7bd87; stroke-width:2.3; stroke-dasharray:5 8; opacity:.82; }
+  .be-atlas-contour { fill:none; stroke:rgba(255,255,255,.1); stroke-width:1; }
+  .be-atlas-pin { position:absolute; z-index:2; display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; transform:translate(-15px,-50%); }
+  .be-atlas-pin::before { content:""; flex:0 0 auto; width:13px; height:13px; border:5px solid #d7bd87; border-radius:50%; background:#1d342a; box-shadow:0 0 0 7px rgba(215,189,135,.13); transition:transform .2s ease,box-shadow .2s ease; }
+  .be-atlas-pin:hover::before,.be-atlas-pin:focus-visible::before { transform:scale(1.15); box-shadow:0 0 0 10px rgba(215,189,135,.16); }
+  .be-atlas-pin span { display:block; padding:10px 13px 9px; background:rgba(15,28,22,.78); border:1px solid rgba(255,255,255,.12); border-radius:12px; backdrop-filter:blur(8px); }
+  .be-atlas-pin strong { display:block; font-family:'Playfair Display','Noto Sans SC',serif; font-size:22px; line-height:1.1; font-weight:500; }
+  .be-atlas-pin small { display:block; margin-top:4px; color:rgba(255,255,255,.58); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+  .be-atlas-pin--shangri-la { left:29%; top:25%; }
+  .be-atlas-pin--dali { left:40%; top:66%; }
+  .be-atlas-pin--guizhou { left:76%; top:70%; }
+  .be-atlas-aside { display:flex; flex-direction:column; justify-content:space-between; padding:46px 38px 38px; background:#e9e0ce; color:var(--be-forest); }
+  .be-atlas-index { font-family:'Playfair Display',serif; color:#967744; font-size:14px; letter-spacing:.12em; }
+  .be-atlas-aside h3 { margin:28px 0 20px; font-family:'Playfair Display','Noto Sans SC',serif; font-size:35px; line-height:1.08; font-weight:500; }
+  .be-atlas-aside p { font-size:14px; line-height:1.8; color:#566259; }
+  .be-atlas-legend { margin-top:36px; padding-top:22px; border-top:1px solid rgba(35,59,48,.18); color:#7a817b; font-size:10px; line-height:1.6; letter-spacing:.1em; text-transform:uppercase; }
+  .be-region-stack { display:grid; gap:30px; }
+  .be-region { display:grid; grid-template-columns:220px 1fr; overflow:hidden; background:#fff; border:0; border-radius:24px; box-shadow:0 16px 46px rgba(24,33,28,.06); scroll-margin-top:90px; }
   .be-region-side { background:var(--be-forest); color:#fff; padding:36px 30px; display:flex; flex-direction:column; justify-content:space-between; }
   .be-region-side h3 { font-family:'Playfair Display','Noto Sans SC',serif; font-size:34px; font-weight:500; margin-bottom:9px; }
   .be-region-side p { font-size:12px; line-height:1.55; color:rgba(255,255,255,.65); }
@@ -38,7 +69,7 @@
   .be-region-main { padding:34px 38px 38px; }
   .be-region-main > p { max-width:800px; font-size:15px; line-height:1.85; color:#59635c; }
   .be-lodge-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px; }
-  .be-lodge { min-width:0; background:var(--be-paper); }
+  .be-lodge { min-width:0; overflow:hidden; background:var(--be-paper); border-radius:15px; }
   .be-lodge-media { height:150px; overflow:hidden; background:#d8d5ca; }
   .be-lodge-media picture,.be-lodge-media img { width:100%; height:100%; display:block; }
   .be-lodge-media img { object-fit:cover; transition:transform .45s ease; }
@@ -51,7 +82,7 @@
   .be-route-group-head h3 { font-family:'Playfair Display','Noto Sans SC',serif; color:var(--be-forest); font-size:31px; font-weight:500; }
   .be-route-group-head span { font-size:12px; color:#8a918b; }
   .be-route-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-  .be-route-card { display:grid; grid-template-columns:190px 1fr; min-height:196px; background:#fff; border:1px solid var(--be-line); text-decoration:none; overflow:hidden; transition:transform .25s ease,box-shadow .25s ease; }
+  .be-route-card { display:grid; grid-template-columns:190px 1fr; min-height:196px; background:#fff; border:0; border-radius:18px; text-decoration:none; overflow:hidden; box-shadow:0 12px 36px rgba(24,33,28,.055); transition:transform .25s ease,box-shadow .25s ease; }
   .be-route-card:hover { transform:translateY(-3px); box-shadow:0 15px 40px rgba(24,33,28,.09); }
   .be-route-image { min-height:196px; overflow:hidden; background:#d8d5ca; }
   .be-route-image picture,.be-route-image img { width:100%; height:100%; display:block; }
@@ -82,21 +113,26 @@
   .be-faq[open] summary::after { content:"−"; }
   .be-faq p { max-width:820px; padding:0 0 27px; font-size:15px; line-height:1.8; color:#5b655e; }
   .be-cta { width:min(1180px,calc(100% - 48px)); margin:0 auto; padding:0 0 96px; }
-  .be-cta-inner { display:grid; grid-template-columns:1fr auto; gap:36px; align-items:center; background:#e9e0ce; padding:52px 58px; }
+  .be-cta-inner { display:grid; grid-template-columns:1fr auto; gap:36px; align-items:center; overflow:hidden; border-radius:24px; background:#e9e0ce; padding:52px 58px; }
   .be-cta h2 { font-family:'Playfair Display','Noto Sans SC',serif; font-size:clamp(30px,4vw,48px); line-height:1.1; font-weight:500; color:var(--be-forest); margin-bottom:13px; }
   .be-cta p { max-width:650px; color:#5e675f; font-size:14px; line-height:1.75; }
-  .be-cta a { background:var(--be-forest); color:#fff; padding:16px 24px; min-width:190px; text-align:center; text-decoration:none; font-size:13px; letter-spacing:.04em; transition:background .2s ease; }
+  .be-cta a { background:var(--be-forest); color:#fff; padding:16px 24px; min-width:190px; border-radius:999px; text-align:center; text-decoration:none; font-size:13px; letter-spacing:.04em; transition:background .2s ease; }
   .be-cta a:hover { background:#172b22; }
   @media (max-width:900px) {
     .be-section-head { grid-template-columns:1fr; gap:24px; }
     .be-fit-grid { grid-template-columns:1fr; }
     .be-fit-card { min-height:0; }
+    .be-visual-story { grid-template-columns:1fr 1fr; }
+    .be-visual-scene { min-height:390px; }
+    .be-visual-scene:nth-child(2) { margin-top:0; }
+    .be-visual-scene:last-child { grid-column:1 / -1; min-height:360px; }
+    .be-atlas { grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr); }
     .be-region { grid-template-columns:180px 1fr; }
     .be-lodge-grid { grid-template-columns:repeat(2,1fr); }
     .be-route-grid { grid-template-columns:1fr; }
   }
   @media (max-width:620px) {
-    .be-hero { min-height:600px; }
+    .be-hero { min-height:640px; border-radius:0 0 24px 24px; }
     .be-hero-inner,.be-section,.be-cta { width:calc(100% - 32px); }
     .be-hero-inner { padding:100px 0 48px; }
     .be-breadcrumb { margin-bottom:38px; }
@@ -108,17 +144,37 @@
     .be-section-head { margin-bottom:36px; }
     .be-lead { font-size:16px; line-height:1.8; }
     .be-fit-card { padding:28px 25px; }
+    .be-fit-card::before { left:25px; }
     .be-fit-card .be-num { margin-bottom:24px; }
-    .be-region { grid-template-columns:1fr; }
+    .be-visual-story { grid-template-columns:1fr; gap:16px; margin-top:40px; }
+    .be-visual-scene,.be-visual-scene:last-child { grid-column:auto; min-height:330px; border-radius:19px; }
+    .be-visual-scene:nth-child(2) { margin-top:0; }
+    .be-visual-scene figcaption { left:21px; right:20px; bottom:20px; }
+    .be-visual-scene figcaption strong { font-size:22px; }
+    .be-atlas { grid-template-columns:1fr; min-height:0; }
+    .be-atlas-map { min-height:410px; }
+    .be-atlas-aside { padding:30px 26px; }
+    .be-atlas-aside h3 { margin:18px 0 13px; font-size:28px; }
+    .be-atlas-legend { margin-top:20px; padding-top:16px; }
+    .be-atlas-pin { gap:7px; transform:translate(-10px,-50%); }
+    .be-atlas-pin::before { width:10px; height:10px; border-width:4px; }
+    .be-atlas-pin span { padding:8px 10px 7px; }
+    .be-atlas-pin strong { font-size:17px; }
+    .be-atlas-pin small { font-size:8px; }
+    .be-atlas-pin--shangri-la { left:24%; top:24%; }
+    .be-atlas-pin--dali { left:32%; top:63%; }
+    .be-atlas-pin--guizhou { left:auto; right:18px; top:76%; transform:translateY(-50%); flex-direction:row-reverse; }
+    html[lang="en"] .be-hero h1 { font-size:44px; }
+    .be-region { grid-template-columns:1fr; border-radius:20px; }
     .be-region-side { padding:28px 26px; }
     .be-region-side a { margin-top:22px; }
     .be-region-main { padding:27px 22px 30px; }
     .be-lodge-grid { grid-template-columns:1fr; }
-    .be-lodge { display:grid; grid-template-columns:120px 1fr; }
+    .be-lodge { display:grid; grid-template-columns:120px 1fr; border-radius:13px; }
     .be-lodge-media { height:112px; }
     .be-route-groups { gap:48px; }
     .be-route-group-head { align-items:flex-end; }
-    .be-route-card { grid-template-columns:112px 1fr; min-height:180px; }
+    .be-route-card { grid-template-columns:112px 1fr; min-height:180px; border-radius:15px; }
     .be-route-image { min-height:180px; }
     .be-route-copy { padding:20px 17px; }
     .be-route-copy h4 { font-size:17px; }
@@ -132,11 +188,20 @@
     .be-cta-inner { grid-template-columns:1fr; padding:38px 28px; }
     .be-cta a { width:100%; }
   }
+  @media (prefers-reduced-motion:reduce) {
+    .be-visual-scene img,.be-lodge img,.be-route-card,.be-route-image img,.be-atlas-pin::before { transition:none; }
+    .be-visual-scene:hover img,.be-lodge:hover img,.be-route-card:hover,.be-route-card:hover .be-route-image img,.be-atlas-pin:hover::before,.be-atlas-pin:focus-visible::before { transform:none; }
+  }
 </style>
 
 <% const isEn = lang === 'en';
    const prefix = isEn ? '/en' : '';
-   const heroLodge = lodges.find(function(l) { return l.slug === 'cunxiao'; }) || lodges[0]; %>
+   const heroLodge = lodges.find(function(l) { return l.hero_path === editorialHero; }) || lodges[0];
+   const visualScenes = [
+     { slug:'cunxiao', region_zh:'贵州', region_en:'Guizhou', title_zh:'住进山野与村落', title_en:'Villages held by the mountains' },
+     { slug:'miwan', region_zh:'大理', region_en:'Dali', title_zh:'把时间留在洱海', title_en:'Time held at Erhai' },
+     { slug:'saiduo', region_zh:'香格里拉', region_en:'Shangri-La', title_zh:'循着牧场走向高原', title_en:'From pasture into the plateau' }
+   ].map(function(scene) { return { ...scene, lodge:lodges.find(function(l) { return l.slug === scene.slug; }) }; }).filter(function(scene) { return scene.lodge; }); %>
 <main class="be-page">
   <header class="be-hero">
     <div class="be-hero-media" aria-hidden="true">
@@ -185,6 +250,17 @@
       </article>
       <% }); %>
     </div>
+    <div class="be-visual-story" role="group" aria-label="<%= isEn ? 'Jianglu landscapes across three regions' : '匠庐三地风景' %>">
+      <% visualScenes.forEach(function(scene) { %>
+      <figure class="be-visual-scene">
+        <picture>
+          <source srcset="<%= cdnImage(scene.lodge.hero_path.replace(/\.(jpg|jpeg|png)$/i, '.webp'), 1000) %>" type="image/webp">
+          <img src="<%= cdnImage(scene.lodge.hero_path, 1000) %>" alt="<%= isEn ? scene.lodge.name_en : scene.lodge.name_zh %>" loading="lazy" decoding="async">
+        </picture>
+        <figcaption><span><%= isEn ? scene.region_en : scene.region_zh %></span><strong><%= isEn ? scene.title_en : scene.title_zh %></strong></figcaption>
+      </figure>
+      <% }); %>
+    </div>
   </section>
 
   <section class="be-section" aria-labelledby="be-regions-title">
@@ -195,6 +271,31 @@
       </div>
       <p class="be-lead"><%= isEn ? 'The current collection is organised around Guizhou, Dali and Shangri-La, with each cluster balancing stays, landscapes and realistic transfer time differently.' : '当前收录按贵州、大理与香格里拉组织；每个分区都以不同方式平衡住宿、山水与实际转场时间。' %></p>
     </div>
+    <nav class="be-atlas" aria-label="<%= isEn ? 'Jianglu travel clusters map' : '匠庐旅行分区地图' %>">
+      <div class="be-atlas-map">
+        <svg class="be-atlas-lines" viewBox="0 0 820 500" preserveAspectRatio="none" aria-hidden="true">
+          <path class="be-atlas-contour" d="M-35 137C85 60 198 54 283 113s177 57 255 3 190-30 305 60"/>
+          <path class="be-atlas-contour" d="M-17 182c121-68 221-57 301 9s165 68 258 8 196-36 303 25"/>
+          <path class="be-atlas-contour" d="M-26 407c108-88 225-95 330-42s176 47 258 4 181-31 284 17"/>
+          <path class="be-atlas-contour" d="M39 456c91-65 184-67 274-27s169 37 255 0 168-25 245 7"/>
+          <path class="be-atlas-route" d="M238 126C258 210 291 269 328 330C415 346 519 350 623 350"/>
+        </svg>
+        <% editorial.regions.forEach(function(region) {
+             const regionLodges = lodges.filter(function(lodge) { return lodge.cluster === region.key; }); %>
+        <a class="be-atlas-pin be-atlas-pin--<%= region.key %>" href="#region-<%= region.key %>">
+          <span><strong><%= isEn ? region.name_en : region.name_zh %></strong><small><%= regionLodges.length %> <%= isEn ? 'stays' : '家住宿' %></small></span>
+        </a>
+        <% }); %>
+      </div>
+      <div class="be-atlas-aside">
+        <div>
+          <div class="be-atlas-index">01 — 03</div>
+          <h3><%= isEn ? 'A southwest lodge atlas' : '一张西南住宿地图' %></h3>
+          <p><%= isEn ? 'Guizhou spreads across villages and highland roads. Dali slows the journey at Erhai. Shangri-La climbs gradually from pasture towards Meili. Choose a point to explore its stays and routes.' : '贵州沿村寨与高地公路展开，大理把节奏停在洱海，香格里拉则从牧场逐级走向梅里。选择一个地点，查看对应住宿与线路。' %></p>
+        </div>
+        <div class="be-atlas-legend"><%= isEn ? 'Schematic travel relationship · not to scale' : '旅行关系示意 · 非精确比例地图' %></div>
+      </div>
+    </nav>
     <div class="be-region-stack">
       <% editorial.regions.forEach(function(region) {
            const regionLodges = lodges.filter(function(lodge) { return lodge.cluster === region.key; }); %>

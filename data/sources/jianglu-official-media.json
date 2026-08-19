@@ -1,0 +1,54 @@
+{
+  "collection": "2026匠庐官图",
+  "provenance": "Official high-resolution media supplied to WR Journeys",
+  "usage": "Brand editorial hero and indexed-stay cards",
+  "derivatives": {
+    "jpeg_width": 2000,
+    "jpeg_quality": 84,
+    "webp_quality": 82,
+    "metadata_stripped": true
+  },
+  "assets": [
+    {
+      "stay": "匠庐·村晓",
+      "source_file": "黄果树匠庐·村晓/黄果树匠庐·村晓/航拍/DJI_20240905121744_0621_D.jpg",
+      "output": "public/images/brands/jianglu/lodges/cunxiao/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·耕读第",
+      "source_file": "锦屏匠庐·耕读第/匠庐耕读第（二期）/航拍/DJI_20250916113947_0145_D.jpg",
+      "output": "public/images/brands/jianglu/lodges/gengdudi/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·蜜湾",
+      "source_file": "洱海匠庐·蜜湾/公区/XYB01439_1.jpg",
+      "output": "public/images/brands/jianglu/lodges/miwan/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·赛朵游牧",
+      "source_file": "香格里拉匠庐·赛朵游牧（夏天）/选图公区/全景/DSC06756.jpg",
+      "output": "public/images/brands/jianglu/lodges/saiduo/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·雾浓顶",
+      "source_file": "梅里雪山匠庐·雾浓顶/5楼露台/香格里拉1798-HDR.jpg",
+      "output": "public/images/brands/jianglu/lodges/wunongding/hero-2026.jpg",
+      "roles": ["brand_hero", "stay_card", "open_graph"]
+    },
+    {
+      "stay": "匠庐·雅路古",
+      "source_file": "赤水匠庐·雅路古/赤水店健哥拍摄/赤水店图2/航拍/2022-10-10 233423 2.jpg",
+      "output": "public/images/brands/jianglu/lodges/yalugu/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·阅山",
+      "source_file": "黄果树匠庐·阅山/航拍/DJI_20240901120901_0558_D.jpg",
+      "output": "public/images/brands/jianglu/lodges/yueshan/hero-2026.jpg"
+    },
+    {
+      "stay": "匠庐·沙嘎",
+      "source_file": "百里杜鹃匠庐·沙嘎Villa/航拍/DJI_0712-HDR.jpg",
+      "output": "public/images/brands/jianglu/lodges/shaga/hero-2026.jpg"
+    }
+  ]
+}

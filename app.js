@@ -307,6 +307,14 @@ try {
   console.error('Failed to load brands:', err.message);
 }
 
+const brandEditorialPath = path.join(__dirname, 'data', 'brand-editorial.json');
+let brandEditorialData = {};
+try {
+  brandEditorialData = JSON.parse(fs.readFileSync(brandEditorialPath, 'utf-8'));
+} catch (err) {
+  if (err.code !== 'ENOENT') console.error('Failed to load brand editorial:', err.message);
+}
+
 // Load China regions data
 const chinaRegionsPath = path.join(__dirname, 'data', 'china-regions.json');
 let chinaRegionsData = {};
@@ -1136,23 +1144,41 @@ app.get('/brands/:slug', (req, res) => {
     }
   }
   const routes = brandRoutes[brand.slug] || [];
+  const editorial = brandEditorialData[brand.slug] || null;
+  const brandLodges = lodgesByBrand[brand.slug] || {};
+  const lodges = Object.entries(brandLodges).map(([slug, lodge]) => ({
+    slug,
+    ...lodge,
+    hero_path: `/images/brands/${brand.slug}/lodges/${slug}/${lodge.gallery?.[0]?.file || 'hero.jpg'}`,
+  }));
+  const languagePrefix = lang === 'en' ? '/en' : '';
+  const metaDescription = editorial
+    ? (lang === 'en' ? editorial.metaDescription_en : editorial.metaDescription_zh)
+    : (lang === 'en' ? brand.summary_en : brand.summary_zh);
+  const pageSchemas = [
+    schemas.website(),
+    schemas.travelAgency(),
+    editorial
+      ? schemas.brandCollectionPage(brand, lang, metaDescription, routes[0]?.hero_path || '')
+      : schemas.brandOrganization(brand, lang),
+    schemas.breadcrumbList([
+      { name: lang === 'en' ? 'Home' : '首页', path: lang === 'en' ? '/en/' : '/' },
+      { name: lang === 'en' ? 'Brands' : '品牌矩阵', path: `${languagePrefix}/brands` },
+      { name: lang === 'en' ? brand.name_en : brand.name_zh, path: `${languagePrefix}/brands/${brand.slug}` },
+    ]),
+    ...(routes.length ? [schemas.itemList(
+      routes.map(r => ({
+        name: lang === 'en' ? r.title_en : r.title_zh,
+        url: `${languagePrefix}/routes/${r.slug}`,
+      })),
+      lang === 'en' ? `${brand.name_en} curated routes` : `${brand.name_zh} 甄选线路`
+    )] : []),
+    ...(editorial?.faq?.length ? [schemas.faqPage(editorial.faq, lang)] : []),
+  ];
   res.render('brand-detail', {
-    brand, routes, lang,
-    schemas: [
-      schemas.brandOrganization(brand),
-      schemas.breadcrumbList([
-        { name: lang === 'en' ? 'Home' : '首页', path: '/' },
-        { name: lang === 'en' ? 'Brands' : '品牌矩阵', path: '/brands' },
-        { name: lang === 'en' ? brand.name_en : brand.name_zh, path: `/brands/${brand.slug}` },
-      ]),
-      ...(routes.length ? [schemas.itemList(
-        routes.map(r => ({
-          name: lang === 'en' ? r.title_en : r.title_zh,
-          url: `/routes/${r.slug}`,
-        })),
-        lang === 'en' ? `${brand.name_en} curated routes` : `${brand.name_zh} 甄选线路`
-      )] : []),
-    ],
+    brand, routes, lodges, editorial, lang, metaDescription,
+    contentGroup: ['jianglu', 'songtsam', 'wildroad'].includes(brand.slug) ? 'china_inbound' : 'wr_journeys',
+    schemas: pageSchemas,
   });
 });
 

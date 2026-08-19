@@ -1,0 +1,110 @@
+{
+  "jianglu": {
+    "metaTitle_zh": "匠庐酒店与旅行线路｜贵州、大理、香格里拉｜WR Journeys",
+    "metaTitle_en": "Jianglu Hotels: Guizhou, Dali & Shangri-La | WR Journeys",
+    "metaDescription_zh": "查看匠庐在贵州、大理与香格里拉的 8 家精选住宿、9 条慢旅行线路、适合客群、区域选择、组合方式与常见问题，由 WR 真人顾问协助定制。",
+    "metaDescription_en": "Explore eight Jianglu stays and nine curated routes across Guizhou, Dali and Shangri-La, with region guidance, traveller fit, FAQs and human trip planning.",
+    "eyebrow_zh": "中国西南 · 在地住宿索引",
+    "eyebrow_en": "Southwest China · A lodge-led travel index",
+    "intro_zh": "匠庐适合把“住在哪里”放在行程中心的人：不急着逐个打卡景点，而是从一座石头村落、一处洱海岛居或一间雪山山居出发，慢慢进入当地。WR Journeys 当前以 8 家住宿与 9 条线路，整理贵州、大理、香格里拉三个旅行分区。",
+    "intro_en": "Jianglu suits travellers who want the stay to shape the journey. Instead of collecting sights, begin with a stone-village retreat, an island lodge on Erhai or a mountain stay facing the high plateau, then explore outward at a human pace. WR Journeys currently organises eight stays and nine routes into three travel clusters: Guizhou, Dali and Shangri-La.",
+    "fit": [
+      {
+        "title_zh": "建筑与在地文化旅行者",
+        "title_en": "Architecture and local-culture travellers",
+        "body_zh": "更在意老村、地方材料、民族文化与住宿空间之间的关系，而不是只比较国际品牌配置。",
+        "body_en": "For people who care about old villages, local materials and living culture more than a familiar international-brand checklist."
+      },
+      {
+        "title_zh": "愿意慢住的情侣与朋友",
+        "title_en": "Couples and friends who can slow down",
+        "body_zh": "适合把同一地区住深、给山野和村寨留出空白时间；不适合每天换酒店的高密度打卡。",
+        "body_en": "Best when you can stay deeper in one region and leave room for weather, villages and unplanned time—not a different hotel every night."
+      },
+      {
+        "title_zh": "重视路线判断的家庭",
+        "title_en": "Families who value route judgement",
+        "body_zh": "贵州山路与香格里拉海拔需要按年龄、体力和季节调整；真人顾问会先判断转场，再决定酒店组合。",
+        "body_en": "Guizhou road time and Shangri-La altitude need to match age, energy and season. A human advisor checks the transfers before proposing hotels."
+      }
+    ],
+    "regions": [
+      {
+        "key": "guizhou",
+        "name_zh": "贵州",
+        "name_en": "Guizhou",
+        "label_zh": "石村、峡谷与高地避暑",
+        "label_en": "Stone villages, gorges and cool highlands",
+        "body_zh": "当前收录 5 家住宿、4 条线路。可围绕安顺布依村落、黔东南苗侗地区与六盘水—毕节高地组合；公路转场是体验的一部分，适合控制每天车程而不是追求覆盖最多地点。",
+        "body_en": "Five indexed stays and four routes connect Buyi villages around Anshun, Miao and Dong country in southeast Guizhou, and the cooler Liupanshui–Bijie highlands. Road time is part of the experience, so the route should optimise daily rhythm rather than the number of stops.",
+        "destination": "/destinations/china/guizhou"
+      },
+      {
+        "key": "dali",
+        "name_zh": "大理",
+        "name_en": "Dali",
+        "label_zh": "洱海岛居与苍山日常",
+        "label_en": "Erhai island life and Cangshan days",
+        "body_zh": "当前收录匠庐·蜜湾与 2 条线路。重点不是环湖赶路，而是以金梭岛为住宿锚点，在苍山、喜洲、海舌与在地手作之间留出可呼吸的节奏。",
+        "body_en": "Jianglu Miwan anchors two current routes. The point is not to race around Erhai, but to stay on Jinsuo Island and leave breathing room between Cangshan, Xizhou, Haishé and local craft encounters.",
+        "destination": "/destinations/china/yunnan"
+      },
+      {
+        "key": "shangri-la",
+        "name_zh": "香格里拉",
+        "name_en": "Shangri-La",
+        "label_zh": "高原牧场、梅里雪山与海拔递进",
+        "label_en": "Plateau pasture, Meili and gradual altitude",
+        "body_zh": "当前收录赛朵游牧、雾浓顶与 3 条线路。可从香格里拉停留适应，再延伸到梅里雪山一带；季节、路况与海拔反应比“住几家酒店”更应优先判断。",
+        "body_en": "Saiduo Nomadic and Wunongding anchor three current routes. A useful plan allows time in Shangri-La before extending towards Meili; season, road conditions and altitude response matter more than maximising the number of properties.",
+        "destination": "/destinations/china/shangri-la"
+      }
+    ],
+    "planning": [
+      {
+        "title_zh": "先选一个主分区",
+        "title_en": "Choose one primary cluster",
+        "body_zh": "第一次可在贵州、大理、香格里拉中选一个做深；若时间充裕，再加入第二分区。",
+        "body_en": "For a first journey, go deep in Guizhou, Dali or Shangri-La. Add a second cluster only when the trip has enough time."
+      },
+      {
+        "title_zh": "再按转场与海拔筛选",
+        "title_en": "Filter by transfers and altitude",
+        "body_zh": "顾问会结合航班、高铁、山路时长、同行者年龄与高原适应，把不可见的疲劳先算进去。",
+        "body_en": "We account for flights, rail, mountain-road time, traveller age and altitude adjustment before choosing the most attractive-looking route."
+      },
+      {
+        "title_zh": "最后定住宿与体验密度",
+        "title_en": "Then set stay and experience density",
+        "body_zh": "在酒店、村寨、自然与手作之间留白，让住店本身成为旅程内容，而不是只承担睡觉功能。",
+        "body_en": "Leave space between lodge, village, landscape and craft so the stay becomes part of the journey rather than merely a bed."
+      }
+    ],
+    "faq": [
+      {
+        "q_zh": "匠庐线路是固定跟团产品吗？",
+        "q_en": "Are these fixed group tours?",
+        "a_zh": "不是。页面展示的是可讨论的路线骨架。真人顾问会根据人数、日期、航班、体力与兴趣调整住宿晚数、接送和体验。",
+        "a_en": "No. The routes are starting frameworks. A human advisor adjusts nights, transfers and experiences around party size, dates, flights, energy and interests."
+      },
+      {
+        "q_zh": "贵州、大理和香格里拉可以一次连起来吗？",
+        "q_en": "Can Guizhou, Dali and Shangri-La be combined in one trip?",
+        "a_zh": "可以，但不建议为了集齐三个地区而压缩停留。通常先确定主分区，再按总天数、进出港与海拔适应决定是否加入第二段。",
+        "a_en": "They can be combined, but not at the cost of rushed stays. Start with one primary cluster, then use total trip length, gateways and altitude adjustment to decide whether a second belongs."
+      },
+      {
+        "q_zh": "带孩子或长辈适合住匠庐吗？",
+        "q_en": "Does Jianglu work for children or older travellers?",
+        "a_zh": "取决于具体酒店与线路。贵州公路时长、部分自然活动以及香格里拉海拔都需要逐项评估；顾问会按同行者情况删减而不是硬套线路。",
+        "a_en": "It depends on the property and route. Guizhou road time, some outdoor activities and Shangri-La altitude need individual review; we simplify the plan instead of forcing a standard itinerary."
+      },
+      {
+        "q_zh": "WR Journeys 与匠庐是什么关系？",
+        "q_en": "What is the relationship between WR Journeys and Jianglu?",
+        "a_zh": "这是 WR Journeys 为旅客制作的精选品牌与线路索引。我们负责理解需求、组合行程与后续协调；本页不是匠庐官方网站。",
+        "a_en": "This is a WR Journeys-curated brand and route index for travellers. We interpret the brief, shape the journey and coordinate follow-through; this page is not Jianglu's official website."
+      }
+    ]
+  }
+}

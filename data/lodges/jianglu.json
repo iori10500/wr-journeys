@@ -1,5 +1,6 @@
 {
   "cunxiao": {
+    "cluster": "guizhou",
     "name_zh": "匠庐·村晓",
     "name_en": "Jianglu Cunxiao",
     "region_zh": "贵州 · 安顺",
@@ -12,6 +13,7 @@
     ]
   },
   "gengdudi": {
+    "cluster": "guizhou",
     "name_zh": "匠庐·耕读第",
     "name_en": "Jianglu Gengdudi",
     "region_zh": "贵州 · 黔东南",
@@ -26,6 +28,7 @@
     ]
   },
   "miwan": {
+    "cluster": "dali",
     "name_zh": "匠庐·蜜湾",
     "name_en": "Jianglu Miwan",
     "region_zh": "云南 · 大理金梭岛",
@@ -39,6 +42,7 @@
     ]
   },
   "saiduo": {
+    "cluster": "shangri-la",
     "name_zh": "匠庐·赛朵游牧",
     "name_en": "Jianglu Saiduo Nomadic",
     "region_zh": "云南 · 香格里拉",
@@ -57,6 +61,7 @@
     ]
   },
   "wunongding": {
+    "cluster": "shangri-la",
     "name_zh": "匠庐·雾浓顶",
     "name_en": "Jianglu Wunongding",
     "region_zh": "云南 · 梅里雪山",
@@ -71,6 +76,7 @@
     ]
   },
   "yalugu": {
+    "cluster": "guizhou",
     "name_zh": "匠庐·雅路古",
     "name_en": "Jianglu Yalugu",
     "region_zh": "贵州",
@@ -83,6 +89,7 @@
     ]
   },
   "yueshan": {
+    "cluster": "guizhou",
     "name_zh": "匠庐·阅山",
     "name_en": "Jianglu Yueshan",
     "region_zh": "贵州",
@@ -99,6 +106,7 @@
     ]
   },
   "shaga": {
+    "cluster": "guizhou",
     "name_zh": "匠庐·沙嘎",
     "name_en": "Jianglu Shaga",
     "region_zh": "贵州 · 六盘水",

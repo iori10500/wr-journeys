@@ -9,6 +9,18 @@ function textQuery(value, max = 180) {
   return String(value || '').trim().slice(0, max);
 }
 
+function analyticsLandingPath(value) {
+  const candidate = textQuery(value, 180);
+  return /^\/(?:[a-z0-9_-]+\/)*[a-z0-9_-]*$/i.test(candidate) ? candidate : '';
+}
+
+function analyticsContentGroup(value) {
+  const candidate = textQuery(value, 80);
+  return ['china_inbound', 'australia_luxury_travel', 'wr_journeys'].includes(candidate)
+    ? candidate
+    : '';
+}
+
 function extractBrochureContent(html) {
   // Extract <style> blocks (may be multiple)
   const styleMatches = html.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || [];
@@ -1227,10 +1239,14 @@ app.get('/advisor', (req, res) => {
   const lang = req.lang;
   const routeSlug = textQuery(req.query.route, 180);
   const route = routeSlug ? routesIndex[routeSlug] : null;
+  const analyticsLandingPathValue = analyticsLandingPath(req.query.landing_path);
+  const analyticsContentGroupValue = analyticsContentGroup(req.query.content_group);
   res.render('advisor', {
     lang,
     route,
     source: textQuery(req.query.source, 180) || 'advisor-page',
+    analyticsLandingPath: analyticsLandingPathValue,
+    contentGroup: analyticsContentGroupValue || 'wr_journeys',
     title: lang === 'en' ? 'Talk to your travel advisor | WR Journeys' : '与旅行顾问聊聊 | WR Journeys',
   });
 });

@@ -10,6 +10,12 @@
     content_group: '<%= typeof contentGroup !== "undefined" ? contentGroup : "wr_journeys" %>',
     brand: 'WR Travel'
   });
+  window.WRAnalyticsContext = {
+    content_group: '<%= typeof contentGroup !== "undefined" ? contentGroup : "wr_journeys" %>',
+    landing_path: '<%= typeof analyticsLandingPath !== "undefined" && analyticsLandingPath ? analyticsLandingPath : "" %>' || location.pathname,
+    page_path: location.pathname,
+    page_language: '<%= lang %>'
+  };
   gtag('config', 'G-XKZF4QMVD4');
   (function () {
     try {
@@ -28,6 +34,7 @@
         ai_source: provider[0],
         referral_method: utmSource ? 'utm' : 'referrer',
         landing_path: location.pathname,
+        content_group: window.WRAnalyticsContext.content_group,
         non_interaction: true
       });
     } catch (_) {}

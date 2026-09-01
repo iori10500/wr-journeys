@@ -32,9 +32,44 @@
     return copy[lang].failed;
   }
 
+  function analyticsContext() {
+    const context = window.WRAnalyticsContext || {};
+    return {
+      content_group: context.content_group || 'wr_journeys',
+      landing_path: context.landing_path || location.pathname,
+      page_path: context.page_path || location.pathname,
+      page_language: context.page_language || document.documentElement.lang || 'zh',
+    };
+  }
+
+  function trackedDestination(href) {
+    try {
+      const url = new URL(href, location.origin);
+      if (url.origin !== location.origin) return { href, destination: href };
+      const context = analyticsContext();
+      if (!url.searchParams.has('landing_path')) url.searchParams.set('landing_path', context.landing_path);
+      if (!url.searchParams.has('content_group')) url.searchParams.set('content_group', context.content_group);
+      return { href: url.pathname + url.search + url.hash, destination: url.pathname + url.search };
+    } catch (_) {
+      return { href, destination: href };
+    }
+  }
+
   document.querySelectorAll('[data-enquiry-form]').forEach(function (form) {
     const started = form.elements.started_at;
+    let formStarted = false;
     if (started) started.value = String(Date.now());
+
+    form.addEventListener('focusin', function () {
+      if (formStarted || typeof window.gtag !== 'function') return;
+      formStarted = true;
+      const context = analyticsContext();
+      window.gtag('event', 'enquiry_form_start', Object.assign({
+        enquiry_variant: form.elements.variant ? form.elements.variant.value : 'unknown',
+        journey_route: form.elements.route ? form.elements.route.value || 'general' : 'general',
+        lead_source: form.elements.source ? form.elements.source.value || 'unknown' : 'unknown',
+      }, context));
+    });
 
     form.addEventListener('submit', async function (event) {
       event.preventDefault();
@@ -49,6 +84,7 @@
 
       const data = new FormData(form);
       const payload = Object.fromEntries(data.entries());
+      Object.assign(payload, analyticsContext());
       payload.interests = data.getAll('interests').join(', ');
       const turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
       payload.turnstile_token = turnstileInput ? turnstileInput.value : '';
@@ -71,12 +107,12 @@
         if (started) started.value = String(Date.now());
         if (window.turnstile) window.turnstile.reset(form.querySelector('.cf-turnstile'));
         if (typeof window.gtag === 'function') {
-          window.gtag('event', 'generate_lead', {
+          window.gtag('event', 'generate_lead', Object.assign({
             currency: 'CNY', value: 0,
             enquiry_variant: payload.variant,
             journey_route: payload.route || 'general',
             lead_source: payload.source || 'unknown',
-          });
+          }, analyticsContext()));
         }
       } catch (error) {
         status.className = 'enquiry-status is-error';
@@ -93,7 +129,10 @@
     const cta = event.target.closest('[data-enquiry-cta]');
     if (!cta || typeof window.gtag !== 'function') return;
 
-    const href = cta.href || cta.getAttribute('href') || '';
+    const originalHref = cta.href || cta.getAttribute('href') || '';
+    const target = trackedDestination(originalHref);
+    const href = target.href;
+    if (href && href !== originalHref) cta.href = href;
     const isPlainSameTabClick = event.button === 0
       && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
       && (!cta.target || cta.target === '_self') && Boolean(href);
@@ -106,10 +145,11 @@
 
     const params = {
       cta_location: cta.dataset.enquiryCta || 'unknown',
-      destination: cta.getAttribute('href') || '',
+      destination: target.destination || '',
       transport_type: 'beacon',
     };
     if (cta.dataset.journeyId) params.journey_id = cta.dataset.journeyId;
+    Object.assign(params, analyticsContext());
     if (isPlainSameTabClick) {
       event.preventDefault();
       params.event_callback = followLink;

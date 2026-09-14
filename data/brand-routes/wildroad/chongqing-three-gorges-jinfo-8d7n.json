@@ -1,0 +1,183 @@
+{
+  "country_slugs": [
+    "china"
+  ],
+  "city_slugs": [
+    "chongqing"
+  ],
+  "region_zh": "重庆 · 长江与金佛山",
+  "region_en": "Chongqing · Yangtze & Jinfo Mountain",
+  "days": 8,
+  "nights": 7,
+  "duration_zh": "8天7晚",
+  "duration_en": "8 Days / 7 Nights",
+  "sample": true,
+  "destination_path": "/destinations/china/chongqing",
+  "destination_zh": "重庆",
+  "destination_en": "Chongqing",
+  "sample_code": "C",
+  "slug": "chongqing-three-gorges-jinfo-8d7n",
+  "title_zh": "重庆山水全景深度线",
+  "title_en": "Chongqing, Three Gorges & Jinfo",
+  "subtitle_zh": "从江上峡谷到山林温泉，接受更长的转场，换取更完整的山水层次",
+  "subtitle_en": "River gorges and a mountain retreat, with longer transfers for a broader journey",
+  "pace_zh": "紧凑全景 · 有长转场日",
+  "pace_en": "Active panorama · A long transfer day",
+  "fit_zh": "体力较好、能接受长交通且返程时间有弹性的旅人；不主推老人及幼儿家庭",
+  "fit_en": "Fit travellers comfortable with long connections and flexible flights; not our first choice for older guests or young children",
+  "route_zh": "重庆1晚 → 游轮3晚 → 宜昌1晚 → 金佛山1–2晚 → 重庆0–1晚",
+  "route_en": "Chongqing 1 night → Cruise 3 → Yichang 1 → Jinfo 1–2 → Chongqing 0–1",
+  "lodge_zh": "重庆1晚＋游轮3晚＋宜昌1晚＋金佛山2晚；或末晚改住重庆",
+  "lodge_en": "Chongqing 1 + Cruise 3 + Yichang 1 + Jinfo 2 nights; alternatively move the final night to Chongqing",
+  "hero_image": "/images/chongqing/gorges.jpg",
+  "tags": [
+    {
+      "zh": "参考线路 C",
+      "en": "Sample C"
+    },
+    {
+      "zh": "私家定制",
+      "en": "Bespoke travel"
+    },
+    {
+      "zh": "8天7晚",
+      "en": "8 days / 7 nights"
+    }
+  ],
+  "intro_zh": "从江上峡谷到山林温泉，接受更长的转场，换取更完整的山水层次。这是一条可按出行日期、同行者和预算调整的参考线路。体力较好、能接受长交通且返程时间有弹性的旅人；不主推老人及幼儿家庭。酒店与船只、舱型及体验另行甄选报价，未列固定价格，也不代表已确认预订。",
+  "intro_en": "River gorges and a mountain retreat, with longer transfers for a broader journey. This sample is tailored to dates, your party and budget. Best suited to: Fit travellers comfortable with long connections and flexible flights; not our first choice for older guests or young children. Hotels, ship and cabin, and experiences are selected and quoted individually; no fixed price or booking is implied.",
+  "overview": [
+    {
+      "items": [
+        {
+          "title_zh": "抵达重庆，轻松看夜景",
+          "title_en": "Arrive in Chongqing",
+          "desc_zh": "入住解放碑或朝天门附近，按抵达时间轻松散步，看看来福士外观和洪崖洞夜景。今天以适应与休息为主。",
+          "desc_en": "Stay near Jiefangbei or Chaotianmen. If arrival time allows, enjoy a gentle walk past Raffles City and the illuminated Hongyadong exterior. Keep the emphasis on settling in."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第1天",
+      "day_en": "Day 1"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "半日重庆，登船看江",
+          "title_en": "A city morning before embarkation",
+          "desc_zh": "上午山城步道或三峡博物馆二选一。午后取行李，按船公司确认的集合时间和码头登船；如需公路中转，提前压缩城市游览。",
+          "desc_en": "Choose either Shancheng Lane or the Three Gorges Museum in the morning. Collect luggage and follow the operator’s confirmed meeting time and pier. Shorten the city visit if a coach transfer is required."
+        }
+      ],
+      "stay_zh": "游轮",
+      "stay_en": "On board",
+      "day_zh": "第2天",
+      "day_en": "Day 2"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "江上度假，与一段上岸时光",
+          "title_en": "River time and a shore visit",
+          "desc_zh": "以船上休闲为主，上岸参考丰都、双桂山或石宝寨等航次项目之一。具体停靠、顺序、门票是否包含和自费选择均按所选船只与航次确认。",
+          "desc_en": "Enjoy time on board with a possible shore visit such as Fengdu, Shuanggui Hill or Shibaozhai. These are examples, not a promised list. Stops, sequence, included admissions and optional excursions depend on the selected ship and sailing."
+        }
+      ],
+      "stay_zh": "游轮",
+      "stay_en": "On board",
+      "day_zh": "第3天",
+      "day_en": "Day 3"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "三峡核心景观日",
+          "title_en": "Through the Three Gorges scenery",
+          "desc_zh": "按航次安排船观瞿塘峡、巫峡，并选择神女溪或白帝城等可能的上岸项目。峡谷观赏时段受水位、天气、航速和航道安排影响，不承诺固定时间或全部景点。",
+          "desc_en": "Follow the sailing’s programme for views of Qutang and Wu gorges and possible excursions such as Goddess Stream or White Emperor City. Water level, weather, cruising speed and navigation controls shape viewing times; no fixed hour or complete set of stops is promised."
+        }
+      ],
+      "stay_zh": "游轮",
+      "stay_en": "On board",
+      "day_zh": "第4天",
+      "day_en": "Day 4"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "宜昌与三峡大坝，住一晚再走",
+          "title_en": "Yichang and the Three Gorges Dam",
+          "desc_zh": "按船公司安排衔接下船、三峡大坝参观与宜昌接送，实际先后及结束时间以航次通知为准。下午或傍晚入住宜昌，不衔接当天返回重庆的紧张车次。",
+          "desc_en": "Coordinate disembarkation, the Three Gorges Dam visit and transfers with the operator; sequence and finishing time follow the actual sailing. Stay in Yichang this evening instead of connecting to a tight same-day train back to Chongqing."
+        }
+      ],
+      "stay_zh": "宜昌",
+      "stay_en": "Yichang",
+      "day_zh": "第5天",
+      "day_en": "Day 5"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "宜昌 → 重庆 → 金佛山：长转场日",
+          "title_en": "Yichang → Chongqing → Jinfo: a long transfer day",
+          "desc_zh": "选择可衔接的动车返回重庆，再由专车前往天星小镇。铁路及车站衔接预留半天，山路转场再参考约 2–2.5 小时，另留拥堵余量。这是全程最累的一天，只安排入住与可选温泉，不再进景区。",
+          "desc_en": "Take a suitably timed train back to Chongqing, then a private car to Tianxing Town. Keep half a day for rail and station connections, followed by roughly 2–2.5 hours on the road to the mountain, plus traffic contingency. This is the hardest travel day: check in and perhaps use the hot springs, with no scenic-area visit."
+        }
+      ],
+      "stay_zh": "金佛山天星小镇",
+      "stay_en": "Tianxing Town, Jinfo Mountain",
+      "day_zh": "第6天",
+      "day_en": "Day 6"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "金佛山重点游览，住宿跟着航班走",
+          "title_en": "Jinfo highlights; the flight determines tonight’s base",
+          "desc_zh": "按天气、开放与体力，在绝壁栈道、古佛洞、草甸或生态石林中择重点。只有 D8 晚班机且转场缓冲足够，才考虑继续住天星小镇；早班、中午或下午较早航班，今天游览后返回重庆主城住宿。",
+          "desc_en": "Choose selected cliff-walkway, cave, meadow or stone-forest visits around access, weather and fitness. A second Tianxing night is considered only with a late D8 flight and sufficient transfer margin. For morning, midday or early-afternoon flights, return to a Chongqing hotel after today’s visit."
+        }
+      ],
+      "stay_zh": "天星小镇或重庆主城（按返程航班确认）",
+      "stay_en": "Tianxing Town or Chongqing, confirmed against the departure flight",
+      "day_zh": "第7天",
+      "day_en": "Day 7"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "按已确认的返程方案离开",
+          "title_en": "Depart using the agreed transfer plan",
+          "desc_zh": "若昨晚住重庆，按航班时间直接送机。若住金佛山，早些返回主城，为约 2–2.5 小时山路、城市交通及值机另留充足缓冲，只衔接已核定可行的晚航班；不在返程日追加景点。",
+          "desc_en": "If staying in Chongqing, transfer directly for your flight. If staying at Jinfo, return early and allow for roughly 2–2.5 hours on the road, city traffic and check-in. This version requires a late flight with a verified connection; add no sightseeing on departure day."
+        }
+      ],
+      "stay_zh": "不住宿",
+      "stay_en": "Departure",
+      "day_zh": "第8天",
+      "day_en": "Day 8"
+    }
+  ],
+  "planning_notes": [
+    {
+      "zh": "住宿按以上七晚结构安排，具体酒店、房型、餐食、门票、接送及取消条件以最终报价与确认为准。",
+      "en": "The seven-night plan is a framework. Hotels, room types, meals, admissions, transfers and cancellation terms follow the final quotation and confirmation."
+    },
+    {
+      "zh": "重庆多坡道与台阶；顾问需了解同行者步行能力，并按日期核定天气、景区与温泉开放、车次及转场。",
+      "en": "Chongqing involves slopes and steps. Your advisor checks walking tolerance, weather, scenic-area and hot-spring access, rail services and transfers for the actual dates."
+    },
+    {
+      "zh": "游轮参考重庆至宜昌4天3晚下水航程。实际码头、中转、上岸项目、是否含票及自费安排以所选航次通知为准；不保证固定观峡时间。",
+      "en": "The cruise sample follows a four-day, three-night downstream Chongqing–Yichang sailing. The selected operator confirms piers, coach transfers, excursions, inclusions and optional charges; gorge-viewing times are not guaranteed."
+    }
+  ],
+  "important_zh": "D6 是铁路＋山路长转场日；D7 是否返回重庆，必须先看 D8 航班。只有已核定可行的晚航班才考虑在金佛山连住两晚。",
+  "important_en": "D6 combines rail and a long mountain transfer. D7 accommodation must be set around the D8 flight: a second Jinfo night is considered only for a verified late-flight connection.",
+  "photo_credit": "Tan Wei Liang Byorn / Wikimedia Commons",
+  "photo_url": "https://commons.wikimedia.org/wiki/File:Qutang_Gorge_on_Changjiang.jpg",
+  "photo_license": "CC BY 3.0",
+  "photo_license_url": "https://creativecommons.org/licenses/by/3.0"
+}

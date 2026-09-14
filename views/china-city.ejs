@@ -16,9 +16,10 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/main.css?v=20260801">
+  <link rel="stylesheet" href="/main.css?v=20260810a">
   <link rel="stylesheet" href="/enquiry.css?v=20260806">
   <link rel="stylesheet" href="/china-inbound.css?v=20260806d">
+  <% if (cityRoutes.length) { %><link rel="stylesheet" href="/chongqing.css?v=20260914"><% } %>
   <%- include('partials/jsonld') %>
   <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
@@ -41,10 +42,10 @@
         <p class="china-city-hero__lead"><%= lang === 'en' ? city.lead_en : city.lead_zh %></p>
         <div class="china-actions">
           <a class="china-button china-button--primary" href="<%= advisorUrl(lang, { source: 'china-city-' + city.slug }) %>" data-enquiry-cta="china-city-hero"><%= lang === 'en' ? 'Plan my ' + city.name_en + ' stay' : '规划我的' + city.name_zh + '旅程' %> <span>→</span></a>
-          <a class="china-button china-button--ghost" href="#city-rhythm"><%= lang === 'en' ? 'See our approach' : '查看我们的安排方式' %></a>
+          <a class="china-button china-button--ghost" href="<%= cityRoutes.length ? '#sample-journeys' : '#city-rhythm' %>"><%= cityRoutes.length ? (lang === 'en' ? 'Compare three journeys' : '比较三条参考线路') : (lang === 'en' ? 'See our approach' : '查看我们的安排方式') %></a>
         </div>
       </div>
-      <a class="china-photo-credit" href="<%= city.photo_url %>" target="_blank" rel="noopener"><%= city.photo_credit %></a>
+      <div class="china-photo-credit"><a href="<%= city.photo_url %>" target="_blank" rel="noopener"><%= city.photo_credit %></a><% if (city.photo_license_url) { %> · <a href="<%= city.photo_license_url %>" target="_blank" rel="noopener"><%= lang === 'en' ? 'License · resized / display crop' : '许可 · 已缩放及版面裁切' %></a><% } %></div>
     </section>
 
     <section class="china-city-facts" aria-label="<%= lang === 'en' ? 'Planning summary' : '规划摘要' %>">
@@ -57,6 +58,8 @@
       <div class="china-city-overview__title"><p class="china-kicker"><%= lang === 'en' ? 'HOW TO READ THE CITY' : '如何进入这座城市' %></p><h2><%= lang === 'en' ? 'Give the city enough time to change register.' : '给城市足够时间，显露不同层次。' %></h2></div>
       <div class="china-city-overview__copy"><% (lang === 'en' ? city.overview_en : city.overview_zh).forEach(function(p) { %><p><%= p %></p><% }); %></div>
     </section>
+
+    <% if (cityRoutes.length) { %><%- include('partials/city-samples', { cityRoutes, city, lang }) %><% } %>
 
     <section class="china-city-moments">
       <header><p class="china-kicker"><%= lang === 'en' ? 'THREE CHAPTERS' : '三个章节' %></p><h2><%= lang === 'en' ? 'What belongs in a considered stay.' : '一段经过取舍的停留，应当包含什么。' %></h2></header>
@@ -73,7 +76,7 @@
     </section>
 
     <section class="china-city-links">
-      <header><p class="china-kicker"><%= lang === 'en' ? 'BUILD THE NEXT CHAPTER' : '连接下一章节' %></p><h2><%= lang === 'en' ? 'Three city openings. One coherent China journey.' : '三座城市入口，组成一段连贯的中国旅程。' %></h2></header>
+      <header><p class="china-kicker"><%= lang === 'en' ? 'BUILD THE NEXT CHAPTER' : '连接下一章节' %></p><h2><%= lang === 'en' ? 'Different city openings. One coherent China journey.' : '从不同城市出发，组成一段连贯的中国旅程。' %></h2></header>
       <div class="china-city-links__grid">
         <% Object.entries(cities).forEach(function(entry) { var slug = entry[0], other = entry[1]; %>
         <a class="<%= slug === city.slug ? 'is-current' : '' %>" href="<%= lang === 'en' ? '/en' : '' %>/destinations/china/<%= slug %>"><span><%= slug === city.slug ? (lang === 'en' ? 'YOU ARE HERE' : '当前位置') : (lang === 'en' ? 'EXPLORE' : '继续探索') %></span><h3><%= lang === 'en' ? other.name_en : other.name_zh %></h3><p><%= lang === 'en' ? other.role_en : other.role_zh %></p><i>↗</i></a>

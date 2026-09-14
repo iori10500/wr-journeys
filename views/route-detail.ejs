@@ -18,7 +18,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/main.css?v=20260801">
+  <link rel="stylesheet" href="/main.css?v=20260810a">
   <link rel="stylesheet" href="/enquiry.css">
   <%- include('partials/jsonld') %>
   <style>
@@ -63,10 +63,11 @@
     .lodge-shot figcaption { font-size:11px; color:rgba(255,255,255,0.85); background:rgba(0,0,0,0.55); padding:6px 10px; position:absolute; bottom:0; left:0; right:0; }
     @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } .lodge-shot picture, .lodge-shot img { height:140px; } .lodge-shot-hero picture, .lodge-shot-hero img { height:200px; } }
   </style>
+  <% if (route.sample) { %><link rel="stylesheet" href="/chongqing.css?v=20260914"><% } %>
 <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
 </head>
-<body>
+<body class="<%= route.sample ? 'cq-route' : '' %>">
   <%- include("partials/header") %>
   <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %>"><%= lang === 'en' ? '中' : 'EN' %></a>
 
@@ -103,6 +104,14 @@
     </div>
 
     <div class="r-intro"><%= lang === 'en' ? route.intro_en : route.intro_zh %></div>
+
+    <% if (route.sample) { %>
+    <section class="cq-route-summary" aria-label="<%= lang === 'en' ? 'Sample planning summary' : '参考线路规划摘要' %>">
+      <dl><div><dt><%= lang === 'en' ? 'PACE' : '行程节奏' %></dt><dd><%= lang === 'en' ? route.pace_en : route.pace_zh %></dd></div><div><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合人群' %></dt><dd><%= lang === 'en' ? route.fit_en : route.fit_zh %></dd></div></dl>
+      <% if (route.important_zh) { %><p class="cq-route-notice"><%= lang === 'en' ? route.important_en : route.important_zh %></p><% } %>
+      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %>#sample-journeys">← <%= lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路' %></a><a href="#plan-this-journey" data-enquiry-cta="chongqing-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
+    </section>
+    <% } %>
 
     <% if (typeof lodgesWithGallery !== 'undefined' && lodgesWithGallery && lodgesWithGallery.length) { %>
     <h2 class="r-section-title"><%= lang === 'en' ? 'Where You Stay' : '住宿巡礼' %></h2>
@@ -141,9 +150,13 @@
         <p><%= lang === 'en' ? item.desc_en : item.desc_zh %></p>
       </div>
       <% }); %>
+      <% if (day.stay_zh) { %><p class="cq-stay"><strong><%= lang === 'en' ? 'Tonight · ' : '当晚住宿 · ' %></strong><%= lang === 'en' ? day.stay_en : day.stay_zh %></p><% } %>
     </div>
     <% }); %>
     <% } %>
+
+    <% if (route.planning_notes) { %><section class="cq-planning"><h2><%= lang === 'en' ? 'Before this becomes your journey' : '从参考行程，到你的旅程' %></h2><ul><% route.planning_notes.forEach(function(note) { %><li><%= lang === 'en' ? note.en : note.zh %></li><% }); %></ul></section><% } %>
+    <% if (route.photo_credit) { %><p class="cq-photo"><a href="<%= route.photo_url %>" target="_blank" rel="noopener"><%= route.photo_credit %></a> · <a href="<%= route.photo_license_url %>" target="_blank" rel="noopener"><%= route.photo_license %></a> · <%= lang === 'en' ? 'Resized; display crop' : '已缩放，按版面裁切显示' %></p><% } %>
 
     <section class="route-enquiry" id="plan-this-journey">
       <div class="advisor-form-heading">

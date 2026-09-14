@@ -74,7 +74,7 @@
     </section>
 
     <section class="china-section china-hub-cities">
-      <header class="china-section__head"><p><%= lang === 'en' ? 'THREE GATEWAY CITIES' : '三座门户城市' %></p><h2><%= lang === 'en' ? 'Begin with the China you want to understand.' : '从你最想理解的中国开始。' %></h2></header>
+      <header class="china-section__head"><p><%= lang === 'en' ? 'GATEWAY CITIES' : '门户城市' %></p><h2><%= lang === 'en' ? 'Begin with the China you want to understand.' : '从你最想理解的中国开始。' %></h2></header>
       <div class="china-hub-city-grid">
         <% Object.entries(cities).forEach(function(entry) { var slug = entry[0], city = entry[1]; %>
         <a href="<%= lang === 'en' ? '/en' : '' %>/destinations/china/<%= slug %>"><span><%= lang === 'en' ? 'PRIVATE CITY JOURNEY' : '城市私人旅程' %></span><h3><%= lang === 'en' ? city.name_en : city.name_zh %></h3><p><%= lang === 'en' ? city.role_en : city.role_zh %> →</p></a>

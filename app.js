@@ -872,6 +872,9 @@ app.get('/destinations/china/:region', (req, res) => {
   const city = chinaCitiesData[req.params.region];
   if (city) {
     const isEn = lang === 'en';
+    const cityRoutes = Object.values(routesIndex)
+      .filter(route => (route.city_slugs || []).includes(req.params.region))
+      .sort((a, b) => (a.sample_code || '').localeCompare(b.sample_code || ''));
     const canonicalPath = `${isEn ? '/en' : ''}/destinations/china/${req.params.region}`;
     const title = isEn
       ? `Luxury ${city.name_en} Private Tours & Travel Guide | WR Journeys`
@@ -881,9 +884,13 @@ app.get('/destinations/china/:region', (req, res) => {
       : `由真人顾问规划${city.name_zh}私人定制旅行。建议停留${city.stay_zh}，结合合理节奏、可信在地协调与从开始到结束的持续服务。`;
     return res.render('china-city', {
       city: { slug: req.params.region, ...city }, lang, title, metaDescription,
-      cities: chinaCitiesData,
+      cities: chinaCitiesData, cityRoutes,
       contentGroup: 'china_inbound',
       schemas: [
+        ...(cityRoutes.length ? [schemas.itemList(cityRoutes.map(route => ({
+          name: isEn ? route.title_en : route.title_zh,
+          url: `${isEn ? '/en' : ''}/routes/${route.slug}`,
+        })), isEn ? 'Chongqing sample journeys' : '重庆参考线路')] : []),
         schemas.breadcrumbList([
           { name: isEn ? 'Home' : '首页', path: '/' },
           { name: isEn ? 'Destinations' : '目的地', path: '/destinations' },

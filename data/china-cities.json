@@ -133,5 +133,103 @@
       {"q": "Is Shanghai better at the start or end of a China trip?", "a": "Either works. Strong international connections and mature city services make it useful for easing into jet lag or finishing with dining, shopping and a calm departure."},
       {"q": "Should I visit Suzhou, Hangzhou and a water town?", "a": "Usually not all in one short stay. Your advisor chooses the most relevant extension around season, interests, weekend crowds and the next stage of the route."}
     ]
+  },
+  "chongqing": {
+    "name_zh": "重庆",
+    "name_en": "Chongqing",
+    "hero": "/images/chongqing/city.jpg",
+    "photo_credit": "Junyi Lou / Wikimedia Commons · CC BY-SA 4.0",
+    "photo_url": "https://commons.wikimedia.org/wiki/File:Raffles_City_Chongqing_from_Yangtze_River.jpg",
+    "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "headline_zh": "重庆，沿着江流与山色，找到自己的节奏。",
+    "headline_en": "Chongqing. City lights, river gorges, mountain quiet.",
+    "lead_zh": "用八天七晚，选择一段真正适合你的山城旅程：城市与金佛山的从容、三晚三峡游轮的度假，或把江与山连起来的全景深游。",
+    "lead_en": "Three ways to shape eight days and seven nights: city life with a mountain retreat, three nights cruising the Yangtze, or a fuller journey bringing river and mountain together.",
+    "stay_zh": "8天7晚 · 三种参考路线",
+    "stay_en": "8 days / 7 nights · Three samples",
+    "role_zh": "城市烟火与长江山水的交汇",
+    "role_en": "City life meets the Yangtze landscape",
+    "pair_zh": "金佛山、长江三峡与宜昌",
+    "pair_en": "Jinfo Mountain, Three Gorges & Yichang",
+    "overview_zh": [
+      "重庆的立体街巷值得按区域慢走：渝中的步道与江边、沙坪坝的老街、鹅岭的城市视角，不必挤在同一天。夜景只留给合适的晚上，白天也能有一顿长午餐与酒店休息。",
+      "三条参考线路都从重庆开始、回重庆结束。A 留出城市与山居的余量；B 用三晚游轮换来连住的安定；C 把三峡与金佛山连在一起，需要接受更长交通。先选节奏，再决定酒店、船只与出发日期。"
+    ],
+    "overview_en": [
+      "Read Chongqing district by district: the lanes and waterfront of Yuzhong, the old streets of Shapingba and the city views from Eling deserve separate moments. Save night views for the right evenings, with time for a long lunch and a hotel pause.",
+      "All three samples start and finish in Chongqing. A leaves room for city and mountain stays; B settles into three consecutive cruise nights; C combines gorges and Jinfo with longer connections. Choose the rhythm first, then the hotels, ship and travel dates."
+    ],
+    "moments_zh": [
+      {
+        "title": "山城的日常",
+        "text": "步道、江边、火锅与老街，按区域安排，也按同行者的体力取舍。"
+      },
+      {
+        "title": "江上的三晚",
+        "text": "B与C参考四天三晚下水游轮，用同一间舱房连接不同江岸风景。"
+      },
+      {
+        "title": "山林与温泉",
+        "text": "A与C加入金佛山，按天气和开放选择步道，把晚上留给休息与可选温泉。"
+      }
+    ],
+    "moments_en": [
+      {
+        "title": "A city lived in",
+        "text": "Lanes, waterfronts, hotpot and old streets, grouped by district and shaped around walking tolerance."
+      },
+      {
+        "title": "Three river nights",
+        "text": "B and C reference a four-day downstream sailing, with one cabin connecting changing river landscapes."
+      },
+      {
+        "title": "Mountain time",
+        "text": "A and C include Jinfo, choosing paths around weather and access, with evenings for rest or optional hot springs."
+      }
+    ],
+    "faq_zh": [
+      {
+        "q": "A、B、C 三条路线怎么选？",
+        "a": "不想坐船、希望弹性较多，先看A；第一次看三峡并喜欢船上度假，选B；体力好、希望同时看三峡和金佛山，可考虑C，但要接受D6长转场。"
+      },
+      {
+        "q": "带老人孩子可以吗？",
+        "a": "通常先讨论A或B，同时确认步行能力、台阶和上下船条件。A的山路与景区也需要取舍；C不作为老人或幼儿家庭的首选。"
+      },
+      {
+        "q": "游轮景点、船名和价格确定了吗？",
+        "a": "目前展示的是参考结构。顾问会按日期确认航次、码头、是否需要中转、船只和舱型，并逐项说明餐食、上岸游览及自费项目，随后提供定制报价。"
+      },
+      {
+        "q": "C线最后一晚为什么有两个住法？",
+        "a": "D8是晚班机且转场缓冲充足，才考虑D7继续住金佛山；早班、中午或下午较早航班，D7必须回重庆主城住。顾问会在确认前把车站、车次和送机时间串起来。"
+      },
+      {
+        "q": "可以保证云海、日出或所有栈道吗？",
+        "a": "不能。金佛山和三峡观景受天气影响，山上步道、索道与温泉以实际营业及开放通知为准，行程会保留替代和休息安排。"
+      }
+    ],
+    "faq_en": [
+      {
+        "q": "Which sample should I choose?",
+        "a": "Start with A for a cruise-free trip with more flexibility, or B for a first Three Gorges cruise. C combines the gorges and Jinfo for fit travellers who accept a long D6 connection."
+      },
+      {
+        "q": "Does this work for children or older travellers?",
+        "a": "We generally discuss A or B first, then check steps, walking tolerance and embarkation access. A still needs tailoring on the mountain. C is not our first choice for older travellers or families with young children."
+      },
+      {
+        "q": "Are the ship, stops and price fixed?",
+        "a": "These are sample structures. Your advisor confirms the sailing, pier, possible coach connection, ship and cabin for your dates, then explains meals, shore visits and optional charges in a tailored quotation."
+      },
+      {
+        "q": "Why does C have two options for the final night?",
+        "a": "A second Jinfo night is considered only with a late D8 flight and adequate connection margin. For morning, midday or early-afternoon flights, D7 must end at a Chongqing hotel. Rail, road and airport timings are checked before confirmation."
+      },
+      {
+        "q": "Are sunrise, clouds or all mountain paths guaranteed?",
+        "a": "No. Weather affects Jinfo and the gorges; paths, cableways and hot springs follow operating notices. The plan keeps alternatives and room to rest."
+      }
+    ]
   }
 }

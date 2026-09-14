@@ -1,0 +1,20 @@
+<section class="cq-samples" id="sample-journeys">
+  <header class="cq-samples__heading">
+    <div><p class="china-kicker">CHONGQING / THREE WAYS TO STAY</p><h2><%= lang === 'en' ? 'The same eight days. Three different rhythms.' : '同样八天，三种不同的节奏。' %></h2></div>
+    <p><%= lang === 'en' ? 'Begin with A or B for more room to unwind. Choose C when seeing both river and mountain matters more than keeping transfers short. Each is a starting point for a private quotation.' : '希望从容，先看 A 或 B；想把三峡与金佛山都走到，再考虑 C 的交通强度。三条均为定制起点，按日期、同行者与住宿偏好另行报价。' %></p>
+  </header>
+  <div class="cq-samples__grid">
+    <% cityRoutes.forEach(function(sample) { %>
+    <article class="cq-sample cq-sample--<%= sample.sample_code.toLowerCase() %>">
+      <div class="cq-sample__top"><span class="cq-sample__letter"><%= sample.sample_code %></span><span><%= lang === 'en' ? 'SAMPLE JOURNEY' : '参考线路' %><br>8 DAYS / 7 NIGHTS</span></div>
+      <p class="cq-sample__pace"><%= lang === 'en' ? sample.pace_en : sample.pace_zh %></p>
+      <h3><a href="<%= urlFor('/routes/' + sample.slug, lang) %>"><%= lang === 'en' ? sample.title_en : sample.title_zh %></a></h3>
+      <p class="cq-sample__intro"><%= lang === 'en' ? sample.subtitle_en : sample.subtitle_zh %></p>
+      <dl><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合谁' %></dt><dd><%= lang === 'en' ? sample.fit_en : sample.fit_zh %></dd><dt><%= lang === 'en' ? 'SEVEN NIGHTS' : '七晚怎么住' %></dt><dd><%= lang === 'en' ? sample.route_en : sample.route_zh %></dd></dl>
+      <% if (sample.important_zh) { %><p class="cq-sample__condition"><%= lang === 'en' ? sample.important_en : sample.important_zh %></p><% } %>
+      <div class="cq-sample__actions"><a href="<%= urlFor('/routes/' + sample.slug, lang) %>"><%= lang === 'en' ? 'Explore all eight days' : '查看完整八天安排' %> <span>↗</span></a><a href="<%= urlFor('/routes/' + sample.slug, lang) %>#plan-this-journey" data-enquiry-cta="chongqing-sample-<%= sample.sample_code.toLowerCase() %>"><%= lang === 'en' ? 'Tailor sample ' + sample.sample_code : '定制 ' + sample.sample_code + ' 线' %> →</a></div>
+    </article>
+    <% }); %>
+  </div>
+  <p class="cq-samples__footnote"><%= lang === 'en' ? 'The cruise is a reference four-day, three-night downstream sailing. The operator confirms piers, transfers, shore visits and inclusions for your dates. Mountain access and hot springs depend on operating conditions.' : '游轮参考四天三晚下水航程，实际码头、中转、上岸项目和费用包含以所选航次确认为准。金佛山步道、索道与温泉按实际开放安排。' %></p>
+</section>

@@ -1,0 +1,177 @@
+{
+  "country_slugs": [
+    "china"
+  ],
+  "city_slugs": [
+    "chongqing"
+  ],
+  "region_zh": "重庆 · 长江与金佛山",
+  "region_en": "Chongqing · Yangtze & Jinfo Mountain",
+  "days": 8,
+  "nights": 7,
+  "duration_zh": "8天7晚",
+  "duration_en": "8 Days / 7 Nights",
+  "sample": true,
+  "destination_path": "/destinations/china/chongqing",
+  "destination_zh": "重庆",
+  "destination_en": "Chongqing",
+  "sample_code": "A",
+  "slug": "chongqing-city-jinfo-8d7n",
+  "title_zh": "山城森氧休闲线",
+  "title_en": "Chongqing & Jinfo Mountain Retreat",
+  "subtitle_zh": "城市烟火、两晚山居与一个真正留白的自由日",
+  "subtitle_en": "City life, two mountain nights and a day left deliberately open",
+  "pace_zh": "相对舒缓 · 不坐游轮",
+  "pace_en": "Gentler pace · No cruise",
+  "fit_zh": "不爱坐船、家庭与多代同行；山路及台阶仍需按体力调整",
+  "fit_en": "Cruise-free stays, families and mixed generations; mountain paths and steps still need tailoring",
+  "route_zh": "重庆2晚 → 金佛山2晚 → 重庆3晚",
+  "route_en": "Chongqing 2 nights → Jinfo 2 → Chongqing 3",
+  "lodge_zh": "重庆主城5晚＋天星小镇2晚",
+  "lodge_en": "Chongqing 5 nights + Tianxing Town 2 nights",
+  "hero_image": "/images/chongqing/city.jpg",
+  "tags": [
+    {
+      "zh": "参考线路 A",
+      "en": "Sample A"
+    },
+    {
+      "zh": "私家定制",
+      "en": "Bespoke travel"
+    },
+    {
+      "zh": "8天7晚",
+      "en": "8 days / 7 nights"
+    }
+  ],
+  "intro_zh": "城市烟火、两晚山居与一个真正留白的自由日。这是一条可按出行日期、同行者和预算调整的参考线路。不爱坐船、家庭与多代同行；山路及台阶仍需按体力调整。酒店与体验另行甄选报价，未列固定价格，也不代表已确认预订。",
+  "intro_en": "City life, two mountain nights and a day left deliberately open. This sample is tailored to dates, your party and budget. Best suited to: Cruise-free stays, families and mixed generations; mountain paths and steps still need tailoring. Hotels, and experiences are selected and quoted individually; no fixed price or booking is implied.",
+  "overview": [
+    {
+      "items": [
+        {
+          "title_zh": "抵达山城，江边入夜",
+          "title_en": "Arrival and the city after dark",
+          "desc_zh": "抵达后入住解放碑、洪崖洞或较场口附近。傍晚散步，按抵达时间安排洪崖洞外观与一顿火锅；避开拥挤楼内动线，当天不赶远处景点。",
+          "desc_en": "Settle into a hotel around Jiefangbei, Hongyadong or Jiaochangkou. If arrival time allows, take an evening walk for the illuminated Hongyadong exterior and a hotpot dinner. Keep the day local and skip crowded indoor routes."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第1天",
+      "day_en": "Day 1"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "渝中半岛，慢慢走",
+          "title_en": "An unhurried day on the Yuzhong peninsula",
+          "desc_zh": "山城步道、湖广会馆与朝天门江边按体力串联，来福士以外观为主。长江索道视预约和排队情况安排；若等待太久，可改两江小渡或南滨路散步。",
+          "desc_en": "Connect Shancheng Lane, Huguang Guild Hall and the Chaotianmen waterfront at a comfortable pace, with an exterior view of Raffles City. Take the Yangtze cableway if booking and queues allow; a river ferry or Nanbin Road walk is an alternative."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第2天",
+      "day_en": "Day 2"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "离开城市，住进金佛山",
+          "title_en": "From the city to Jinfo Mountain",
+          "desc_zh": "上午出发前往天星小镇，公路交通参考约 2–2.5 小时，景区换乘与索道另计。抵达后视时间在西坡绝壁栈道与金龟朝阳中择一轻游，晚上可安排温泉；若抵达偏晚，就先休息。",
+          "desc_en": "Leave in the morning for Tianxing Town, allowing roughly 2–2.5 hours on the road plus separate time for scenic-area shuttles and the cableway. If time permits, choose one short west-slope visit, such as the cliff walkway or Jingui Chaoyang viewpoint. Consider hot springs in the evening; rest first if arrival is late."
+        }
+      ],
+      "stay_zh": "金佛山天星小镇",
+      "stay_en": "Tianxing Town, Jinfo Mountain",
+      "day_zh": "第3天",
+      "day_en": "Day 3"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "给山林一整天",
+          "title_en": "A full day for the mountain",
+          "desc_zh": "古佛洞、生态石林、药池坝或高山草甸按当天开放和体力择重点，不强行跑完西坡与北坡。南川东街作为傍晚可选短途；也可以直接回酒店休息。",
+          "desc_en": "Choose among Gufo Cave, the stone forest, Yaochiba and upland meadows according to access and energy. Do not try to cover both slopes in full. Nanchuan East Street is an optional evening outing, with returning to the hotel equally welcome."
+        }
+      ],
+      "stay_zh": "金佛山天星小镇",
+      "stay_en": "Tianxing Town, Jinfo Mountain",
+      "day_zh": "第4天",
+      "day_en": "Day 4"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "回到重庆，留一个缓冲日",
+          "title_en": "Return to Chongqing with breathing space",
+          "desc_zh": "早餐后按自己的节奏返回主城，公路交通参考约 2–2.5 小时。下午休息；傍晚可选南山一棵树或南滨路，也可只安排一顿好饭，不重复夜景打卡。",
+          "desc_en": "Return to the city after breakfast, allowing roughly 2–2.5 hours on the road. Leave the afternoon for rest. Choose the Nanshan viewpoint or Nanbin Road later, or simply enjoy a good dinner without another night-view checklist."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第5天",
+      "day_en": "Day 5"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "自由日，或选择大足石刻",
+          "title_en": "A free day, with Dazu as an option",
+          "desc_zh": "基础版保留老街、美食、咖啡与休息时间。对石刻文化感兴趣，可另行安排大足石刻一日游；这是较长的往返交通与参观日，需要单独确认车程、门票和费用，不计作休息日。",
+          "desc_en": "The base sample keeps today open for neighbourhoods, food, coffee and rest. Add a Dazu Rock Carvings day trip if the cultural interest justifies a longer outing. Driving, admissions and costs are confirmed separately; this option is not a rest day."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第6天",
+      "day_en": "Day 6"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "磁器口与鹅岭，分区慢游",
+          "title_en": "Ciqikou, Liziba and Eling",
+          "desc_zh": "上午磁器口，下午按体力安排李子坝与鹅岭二厂。黄桷坪涂鸦街距离较远，仅作为备选；通过分区与专车衔接，减少跨城折返。",
+          "desc_en": "Visit Ciqikou in the morning, then Liziba and Eling Second Factory as energy allows. Huangjueping Graffiti Street is farther away and stays optional. Group visits by district and use transfers to reduce backtracking."
+        }
+      ],
+      "stay_zh": "重庆主城",
+      "stay_en": "Chongqing city",
+      "day_zh": "第7天",
+      "day_en": "Day 7"
+    },
+    {
+      "items": [
+        {
+          "title_zh": "自由活动与返程",
+          "title_en": "A gentle departure",
+          "desc_zh": "按航班或高铁时刻安排早餐、伴手礼和送机送站，不再加入排队景点。顾问会把路况、航站楼和航空公司值机要求一起纳入离店时间。",
+          "desc_en": "Plan breakfast, last purchases and your airport or station transfer around the actual departure. Avoid queue-dependent visits. Your advisor sets hotel departure time around traffic, terminal and airline check-in requirements."
+        }
+      ],
+      "stay_zh": "不住宿",
+      "stay_en": "Departure",
+      "day_zh": "第8天",
+      "day_en": "Day 8"
+    }
+  ],
+  "planning_notes": [
+    {
+      "zh": "住宿按以上七晚结构安排，具体酒店、房型、餐食、门票、接送及取消条件以最终报价与确认为准。",
+      "en": "The seven-night plan is a framework. Hotels, room types, meals, admissions, transfers and cancellation terms follow the final quotation and confirmation."
+    },
+    {
+      "zh": "重庆多坡道与台阶；顾问需了解同行者步行能力，并按日期核定天气、景区与温泉开放、车次及转场。",
+      "en": "Chongqing involves slopes and steps. Your advisor checks walking tolerance, weather, scenic-area and hot-spring access, rail services and transfers for the actual dates."
+    }
+  ],
+  "photo_credit": "Junyi Lou / Wikimedia Commons",
+  "photo_url": "https://commons.wikimedia.org/wiki/File:Raffles_City_Chongqing_from_Yangtze_River.jpg",
+  "photo_license": "CC BY-SA 4.0",
+  "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+}

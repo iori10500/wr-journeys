@@ -59,7 +59,7 @@ function cdnImage(assetPath, width) {
 
   // Chongqing assets deploy with this app and are not in the separate image
   // CDN library. Serve them directly instead of waiting for a CDN 404 fallback.
-  if (localPath.startsWith('images/chongqing/')) return `/${localPath}`;
+  if (localPath.startsWith('images/chongqing/')) return `https://itinerary.wildroadgroup.com/${localPath}`;
 
   const cdnUrl = `${JOURNEYS_CDN_BASE}/${localPath}`;
   if (!width || /\.(?:gif|svg)$/i.test(localPath)) return cdnUrl;

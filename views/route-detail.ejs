@@ -63,13 +63,13 @@
     .lodge-shot figcaption { font-size:11px; color:rgba(255,255,255,0.85); background:rgba(0,0,0,0.55); padding:6px 10px; position:absolute; bottom:0; left:0; right:0; }
     @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } .lodge-shot picture, .lodge-shot img { height:140px; } .lodge-shot-hero picture, .lodge-shot-hero img { height:200px; } }
   </style>
-  <% if (route.sample) { %><link rel="stylesheet" href="/chongqing.css?v=20260914"><% } %>
+  <% if (route.sample) { %><link rel="stylesheet" href="/chongqing.css?v=20260914b"><% } %>
 <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
 </head>
 <body class="<%= route.sample ? 'cq-route' : '' %>">
   <%- include("partials/header") %>
-  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %>"><%= lang === 'en' ? '中' : 'EN' %></a>
+  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %><%= route.sample ? '?v=20260914-cq' : '' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
 
   <section class="r-hero">
     <picture>
@@ -109,7 +109,7 @@
     <section class="cq-route-summary" aria-label="<%= lang === 'en' ? 'Sample planning summary' : '参考线路规划摘要' %>">
       <dl><div><dt><%= lang === 'en' ? 'PACE' : '行程节奏' %></dt><dd><%= lang === 'en' ? route.pace_en : route.pace_zh %></dd></div><div><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合人群' %></dt><dd><%= lang === 'en' ? route.fit_en : route.fit_zh %></dd></div></dl>
       <% if (route.important_zh) { %><p class="cq-route-notice"><%= lang === 'en' ? route.important_en : route.important_zh %></p><% } %>
-      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %>#sample-journeys">← <%= lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路' %></a><a href="#plan-this-journey" data-enquiry-cta="chongqing-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
+      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %>?v=20260914-cq#sample-journeys">← <%= lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路' %></a><a href="#plan-this-journey" data-enquiry-cta="chongqing-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
     </section>
     <% } %>
 

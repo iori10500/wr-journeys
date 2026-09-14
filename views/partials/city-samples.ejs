@@ -8,11 +8,11 @@
     <article class="cq-sample cq-sample--<%= sample.sample_code.toLowerCase() %>">
       <div class="cq-sample__top"><span class="cq-sample__letter"><%= sample.sample_code %></span><span><%= lang === 'en' ? 'SAMPLE JOURNEY' : '参考线路' %><br>8 DAYS / 7 NIGHTS</span></div>
       <p class="cq-sample__pace"><%= lang === 'en' ? sample.pace_en : sample.pace_zh %></p>
-      <h3><a href="<%= urlFor('/routes/' + sample.slug, lang) %>"><%= lang === 'en' ? sample.title_en : sample.title_zh %></a></h3>
+      <h3><a href="<%= urlFor('/routes/' + sample.slug, lang) %>?v=20260914-cq"><%= lang === 'en' ? sample.title_en : sample.title_zh %></a></h3>
       <p class="cq-sample__intro"><%= lang === 'en' ? sample.subtitle_en : sample.subtitle_zh %></p>
       <dl><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合谁' %></dt><dd><%= lang === 'en' ? sample.fit_en : sample.fit_zh %></dd><dt><%= lang === 'en' ? 'SEVEN NIGHTS' : '七晚怎么住' %></dt><dd><%= lang === 'en' ? sample.route_en : sample.route_zh %></dd></dl>
       <% if (sample.important_zh) { %><p class="cq-sample__condition"><%= lang === 'en' ? sample.important_en : sample.important_zh %></p><% } %>
-      <div class="cq-sample__actions"><a href="<%= urlFor('/routes/' + sample.slug, lang) %>"><%= lang === 'en' ? 'Explore all eight days' : '查看完整八天安排' %> <span>↗</span></a><a href="<%= urlFor('/routes/' + sample.slug, lang) %>#plan-this-journey" data-enquiry-cta="chongqing-sample-<%= sample.sample_code.toLowerCase() %>"><%= lang === 'en' ? 'Tailor sample ' + sample.sample_code : '定制 ' + sample.sample_code + ' 线' %> →</a></div>
+      <div class="cq-sample__actions"><a href="<%= urlFor('/routes/' + sample.slug, lang) %>?v=20260914-cq"><%= lang === 'en' ? 'Explore all eight days' : '查看完整八天安排' %> <span>↗</span></a><a href="<%= urlFor('/routes/' + sample.slug, lang) %>?v=20260914-cq#plan-this-journey" data-enquiry-cta="chongqing-sample-<%= sample.sample_code.toLowerCase() %>"><%= lang === 'en' ? 'Tailor sample ' + sample.sample_code : '定制 ' + sample.sample_code + ' 线' %> →</a></div>
     </article>
     <% }); %>
   </div>

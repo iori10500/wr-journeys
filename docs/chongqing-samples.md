@@ -13,3 +13,5 @@ Do not publish fixed piers, rail durations, excursion inclusions or opening hour
 Images: see `public/images/chongqing/ATTRIBUTION.md`; page credits link to source and licence. Public text contains no internal sales ranking, private contacts or source-file paths.
 
 Validation: local bilingual HTTP checks, 1440/390/375px browser layout, images, eight days and daily overnight labels, route form context, canonical/hreflang, structured data, China/Wildroad discovery links and sitemap. No production enquiry submission is needed for content validation.
+
+Release links use `?v=20260914-cq` because the edge retained initial HTML despite an origin `no-store` header. Canonicals remain clean. Chongqing images are served from the site because the separate image CDN has no copy of these new assets.

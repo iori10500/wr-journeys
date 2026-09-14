@@ -19,14 +19,14 @@
   <link rel="stylesheet" href="/main.css?v=20260810a">
   <link rel="stylesheet" href="/enquiry.css?v=20260806">
   <link rel="stylesheet" href="/china-inbound.css?v=20260806d">
-  <% if (cityRoutes.length) { %><link rel="stylesheet" href="/chongqing.css?v=20260914"><% } %>
+  <% if (cityRoutes.length) { %><link rel="stylesheet" href="/chongqing.css?v=20260914b"><% } %>
   <%- include('partials/jsonld') %>
   <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
 </head>
 <body class="china-page china-city-page china-city-page--<%= city.slug %>">
   <%- include('partials/header') %>
-  <a class="lang-toggle" href="<%= lang === 'en' ? '' : '/en' %>/destinations/china/<%= city.slug %>" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
+  <a class="lang-toggle" href="<%= lang === 'en' ? '' : '/en' %>/destinations/china/<%= city.slug %><%= cityRoutes.length ? '?v=20260914-cq' : '' %>" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
 
   <main>
     <section class="china-city-hero">

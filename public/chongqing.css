@@ -52,3 +52,6 @@
 .cq-route .enquiry-interests input:focus-visible+span{outline:2px solid #947440;outline-offset:3px}
 @media(max-width:950px){.cq-samples__grid{grid-template-columns:1fr}.cq-sample{padding:26px}.cq-sample__top{justify-content:space-between}.cq-sample dl{display:grid;grid-template-columns:130px 1fr;gap:14px;margin:20px 0}.cq-sample dt{margin:3px 0}.cq-samples__heading{gap:24px}.cq-sample__actions{max-width:480px;width:100%}}
 @media(max-width:600px){.cq-samples{padding:50px 20px}.cq-samples__heading{grid-template-columns:1fr;gap:14px}.cq-samples__heading>p{margin:0}.cq-sample dl{display:block}.cq-sample dt{margin:16px 0 6px}.cq-route .r-hero{height:auto;min-height:500px}.cq-route .r-hero .inner{padding-top:90px;min-height:500px;box-sizing:border-box}.cq-route-summary dl{grid-template-columns:1fr;gap:16px}.cq-route .r-meta-inner{gap:15px}.cq-route .r-hero .subtitle{font-size:14px}}
+
+.china-city-page--chongqing .china-photo-credit a{color:inherit;text-underline-offset:3px}
+.china-city-page--chongqing .china-city-hero__media img{object-position:20% 70%}

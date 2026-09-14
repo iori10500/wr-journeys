@@ -57,6 +57,10 @@ function cdnImage(assetPath, width) {
     .replace(/^\/+/, '');
   if (!/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(localPath)) return original;
 
+  // Chongqing assets deploy with this app and are not in the separate image
+  // CDN library. Serve them directly instead of waiting for a CDN 404 fallback.
+  if (localPath.startsWith('images/chongqing/')) return `/${localPath}`;
+
   const cdnUrl = `${JOURNEYS_CDN_BASE}/${localPath}`;
   if (!width || /\.(?:gif|svg)$/i.test(localPath)) return cdnUrl;
   return `${cdnUrl}?imageView2/2/w/${Math.round(width)}/format/webp/q/82`;

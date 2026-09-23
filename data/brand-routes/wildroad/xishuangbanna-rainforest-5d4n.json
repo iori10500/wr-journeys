@@ -1,0 +1,195 @@
+{
+  "slug": "xishuangbanna-rainforest-5d4n",
+  "country_slugs": [
+    "china"
+  ],
+  "city_slugs": [
+    "xishuangbanna"
+  ],
+  "region_zh": "云南 · 西双版纳",
+  "region_en": "Yunnan · Xishuangbanna",
+  "days": 5,
+  "nights": 4,
+  "duration_zh": "5天4晚",
+  "duration_en": "5 Days / 4 Nights",
+  "sample": true,
+  "sample_code": "A",
+  "destination_path": "/destinations/china/xishuangbanna",
+  "destination_zh": "西双版纳",
+  "destination_en": "Xishuangbanna",
+  "title_zh": "雨林与傣乡，五日版纳",
+  "title_en": "Five Days in Xishuangbanna",
+  "subtitle_zh": "基诺山的绿意、澜沧江的风，与四晚泳池别墅时光",
+  "subtitle_en": "Jinuo rainforest, the Lancang River and four nights in a pool villa",
+  "pace_zh": "三天主题出游 · 首尾只安排接送与入住",
+  "pace_en": "Three excursion days · Arrival and departure kept clear",
+  "fit_zh": "12–16人私家团队，适合朋友结伴与小型团队；徒步和水上活动按体力调整",
+  "fit_en": "Private groups of 12–16; friends and small teams, with walking and water activities tailored to ability",
+  "route_zh": "景洪连住4晚 · 基诺山 / 野象谷 / 勐仑 / 傣族园",
+  "route_en": "4 nights in Jinghong · Jinuo Mountain / Wild Elephant Valley / Menglun / Dai Garden",
+  "lodge_zh": "西双版纳万达文华度假酒店 · 泳池双床别墅参考方案",
+  "lodge_en": "Wanda Vista Resort Xishuangbanna · Proposed twin-bed pool villa",
+  "hero_image": "/images/xishuangbanna/botanical.jpg",
+  "tags": [
+    {
+      "zh": "5天4晚",
+      "en": "5 days / 4 nights"
+    },
+    {
+      "zh": "12–16人私家团",
+      "en": "Private group of 12–16"
+    },
+    {
+      "zh": "两人一房",
+      "en": "Two guests per room"
+    },
+    {
+      "zh": "中文导游",
+      "en": "Mandarin-speaking guide"
+    }
+  ],
+  "intro_zh": "四晚住在同一家酒店，把中间三天交给雨林、江风与傣乡。跟随独立向导走进基诺山，到野象谷了解亚洲象，在植物园里读懂热带植物，再把傍晚留给泳池或夜市。这是一条可按出行日期与同行者调整的公开参考线路，不设固定出发团期。",
+  "intro_en": "Stay in one hotel for four nights, with three days for rainforest, river life and Dai culture. Walk Jinuo Mountain with a private local guide, learn about Asian elephants at Wild Elephant Valley and explore tropical plants in the botanical garden. Leave evenings for the pool or night market. This is a tailor-made sample, with no fixed group departure.",
+  "price_reference": 8000,
+  "price_currency": "CNY",
+  "price_note_zh": "参考价约人民币8,000元／人，按12–16人、两人一房测算。不含往返大交通及机票；具体日期、房态、人数与项目安排确定后另行报价。",
+  "price_note_en": "Indicative price: approximately CNY 8,000 per person, based on 12–16 guests sharing two to a room. Flights and intercity transport to/from Xishuangbanna are excluded. Final pricing depends on dates, availability, group size and confirmed experiences.",
+  "overview": [
+    {
+      "day_zh": "第1天",
+      "day_en": "Day 1",
+      "stay_zh": "西双版纳万达文华度假酒店（参考）",
+      "stay_en": "Wanda Vista Resort Xishuangbanna (proposed)",
+      "items": [
+        {
+          "title_zh": "抵达版纳，入住休息",
+          "title_en": "Arrive and settle in",
+          "desc_zh": "按实际航班安排接机，前往酒店入住。当天不安排景点，把时间留给休息与熟悉酒店。",
+          "desc_en": "Meet your driver on arrival and transfer to the hotel. No sightseeing is scheduled; settle in and rest."
+        }
+      ]
+    },
+    {
+      "day_zh": "第2天",
+      "day_en": "Day 2",
+      "stay_zh": "西双版纳万达文华度假酒店（参考）",
+      "stay_en": "Wanda Vista Resort Xishuangbanna (proposed)",
+      "items": [
+        {
+          "title_zh": "基诺山雨林，星光夜市",
+          "title_en": "Jinuo rainforest and the Starlight Night Market",
+          "desc_zh": "独立向导带领轻徒步与植物探索。竹筏、下河摸虾、捞螃蟹和溯溪按天气、水位及参与条件选择安排。晚间前往星光夜市，自由感受夜间市集，餐食自理。",
+          "desc_en": "A private local guide leads a gentle rainforest walk and plant exploration. Bamboo rafting, stream walks and shrimp/crab activities are selected according to conditions and suitability. Visit the Starlight Night Market in the evening; dinner is at your own expense."
+        }
+      ]
+    },
+    {
+      "day_zh": "第3天",
+      "day_en": "Day 3",
+      "stay_zh": "西双版纳万达文华度假酒店（参考）",
+      "stay_en": "Wanda Vista Resort Xishuangbanna (proposed)",
+      "items": [
+        {
+          "title_zh": "野象谷与澜沧江",
+          "title_en": "Wild Elephant Valley and the Lancang River",
+          "desc_zh": "上午前往野象谷，安排雨林探访及拟议的“牧象”体验，具体内容由景区或运营方确认。随后安排澜沧江快艇上岛与骑马体验，按当日开放、天气和体力调整；不保证看到野生亚洲象。",
+          "desc_en": "Visit Wild Elephant Valley for rainforest interpretation and a proposed managed elephant-care/herding experience, with details confirmed by the operator. Continue with a proposed Lancang River speedboat trip to an island and horse riding, subject to weather, operation and fitness. Wild elephant sightings are not guaranteed."
+        }
+      ]
+    },
+    {
+      "day_zh": "第4天",
+      "day_en": "Day 4",
+      "stay_zh": "西双版纳万达文华度假酒店（参考）",
+      "stay_en": "Wanda Vista Resort Xishuangbanna (proposed)",
+      "items": [
+        {
+          "title_zh": "植物园的课堂，傣乡的水花",
+          "title_en": "A botanical garden and Dai traditions",
+          "desc_zh": "前往中国科学院西双版纳热带植物园，拟预约研究员带队讲解，并安排西区电瓶车。之后游览傣族园，按当日场次体验泼水活动。两站的讲解与活动时间须提前衔接。",
+          "desc_en": "Visit the Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences, with a requested researcher-led programme and west-zone shuttle. Continue to Dai Garden for its scheduled water-splashing activity. Guiding and activity times are coordinated in advance."
+        }
+      ]
+    },
+    {
+      "day_zh": "第5天",
+      "day_en": "Day 5",
+      "stay_zh": "返程，不住宿",
+      "stay_en": "Departure; no overnight stay",
+      "items": [
+        {
+          "title_zh": "早餐后，按航班返程",
+          "title_en": "Departure at your own pace",
+          "desc_zh": "按航班时间安排早餐、退房与送机，不再加入景点。",
+          "desc_en": "Plan breakfast, check-out and your airport transfer around the flight. No sightseeing is added."
+        }
+      ]
+    }
+  ],
+  "arrangements": [
+    {
+      "title_zh": "四晚同住，泳池别墅",
+      "title_en": "Four nights, one pool-villa base",
+      "text_zh": "参考西双版纳万达文华度假酒店的私享庭院泳池双床别墅，含早餐，两人一房。最终房型名称、双床配置和房数按酒店确认；12–16人按两人一房安排6–8间房。",
+      "text_en": "The proposed stay is a private-courtyard pool villa with twin beds at Wanda Vista Resort Xishuangbanna, with breakfast and two guests per room. Confirm the exact villa category, twin setup and availability. A group of 12–16 needs 6–8 rooms."
+    },
+    {
+      "title_zh": "19座，2+1座椅布局",
+      "title_en": "19-seat coach with a 2+1 layout",
+      "text_zh": "参考19座车型，过道一侧双座、另一侧单座。图片仅作车型与座椅布局参考；实际车辆、行李空间，以及司机和导游席位须在出行前核实。",
+      "text_en": "The reference coach has 19 seats arranged as two seats on one side of the aisle and one on the other. Photos illustrate the proposed layout, not an assigned vehicle. Luggage space and seats for the driver and guide are checked before confirmation."
+    },
+    {
+      "title_zh": "有人带路，也有人协调",
+      "title_en": "Guiding and coordination throughout",
+      "text_zh": "配置中文导游、雨林独立向导及行程协调服务。植物园拟安排研究员带队，人员身份、档期与讲解内容需预约确认；如需英语或其他语言服务，另行确认安排及费用。",
+      "text_en": "A Mandarin-speaking guide, a private rainforest guide and itinerary coordination are proposed. A researcher-led botanical garden visit is requested, subject to the named specialist, availability and programme being confirmed. Other guiding languages are arranged and priced separately."
+    }
+  ],
+  "included_zh": [
+    "酒店4晚及早餐，两人一房",
+    "参考19座2+1车型及行程内接送",
+    "中文导游、雨林向导及行程协调",
+    "按最终确认单列明的景区门票、体验及植物园西区电瓶车",
+    "旅行社责任险（不等同个人旅游意外险）"
+  ],
+  "included_en": [
+    "Four hotel nights with breakfast, two guests per room",
+    "Proposed 19-seat 2+1 coach and itinerary transfers",
+    "Mandarin-speaking guide, rainforest guiding and trip coordination",
+    "Admissions, experiences and botanical garden west-zone shuttle as itemised in the final confirmation",
+    "Travel agency liability insurance; not personal travel accident cover"
+  ],
+  "excluded_zh": [
+    "往返西双版纳的大交通及机票",
+    "酒店早餐以外的餐食",
+    "个人消费、个人旅游保险及未确认的额外项目"
+  ],
+  "excluded_en": [
+    "Flights and intercity transport to/from Xishuangbanna",
+    "Meals other than hotel breakfast",
+    "Personal expenses, personal travel insurance and unconfirmed extras"
+  ],
+  "planning_notes": [
+    {
+      "zh": "此为参考行程，所有项目、房型及服务以最终报价和确认单为准；不代表房间、研究员或车辆已锁定。",
+      "en": "This is a sample itinerary. The final quotation and confirmation specify all experiences, rooms and services; no room, researcher or vehicle is held by this page."
+    },
+    {
+      "zh": "竹筏、溯溪、摸虾、捞螃蟹及快艇按天气、水位、开放情况和体力安排；不适合参与时可由顾问调整为陆上活动。",
+      "en": "Rafting, stream walks, shrimp/crab activities and speedboats depend on weather, water levels, access and fitness. Your advisor can arrange land-based alternatives."
+    },
+    {
+      "zh": "“牧象”与骑马为供应商提出的体验选项，需另核项目内容、参与条件与当日安排；野生动物出现不可保证，不将“牧象”表述为野象近距离接触。",
+      "en": "The proposed elephant-care/herding and horse-riding experiences require confirmation of the programme, participation conditions and daily arrangements. Wild sightings are not guaranteed; managed elephant activities are not encounters with wild elephants."
+    },
+    {
+      "zh": "植物园位于勐仑，D4还安排傣族园，属于较完整的出游日；研究员讲解和泼水活动时段须一起核对，必要时调整停留顺序。",
+      "en": "The garden is in Menglun and Day 4 also includes Dai Garden, making this a full excursion day. Specialist guiding and water-splashing times need to be checked together; the order may change."
+    }
+  ],
+  "photo_credit": "Yumeto / Wikimedia Commons",
+  "photo_url": "https://commons.wikimedia.org/wiki/File:20251225_Victoria_flowers_in_the_Xishuangbanna_Tropical_Botanical_Garden,_Chinese_Academy_of_Sciences.jpg",
+  "photo_license": "CC BY-SA 4.0",
+  "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

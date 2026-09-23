@@ -22,11 +22,21 @@
     "name_zh": "云南",
     "name_en": "Yunnan",
     "parent": "china",
-    "headline_zh": "云南 — 苍洱之间的隐逸慢游",
-    "headline_en": "Yunnan — slow journeys between Cangshan and Erhai",
-    "manifesto_zh": "云南是中国最被旅人爱过的省份，但真正的好酒店多到难选。我们在大理（金梭岛匠庐·蜜湾、木夕大里伙山）、丽江、香格里拉沿线深挖，按你的亲子、伴侣或独行画像配伍线路。\n\n匠庐·蜜湾把整个金梭岛包了，洱海日出日落都在你窗外；木夕大里把白族建筑语汇做到当代极简的程度。大理适合把节奏放慢，丽江适合连接山地与古城，继续向北则要为海拔和长距离转场留出余量。\n\n春秋通常最稳妥，雨季的云层和冬季的干燥光线各有价值。WR 顾问不会只按“热门景点”排列，而会先听你更在意住宿、风景、饮食还是亲子便利，再决定住几晚、删掉哪些转场，并由同一位真人从首次沟通跟到旅行归来。",
-    "manifesto_en": "Yunnan is China's most romanticised province, with more good hotels than easy to choose from. We anchor on Dali (Jianglu Miwan on Jinsuo Island, MUXI Dali Houshan), Lijiang, and the Shangri-la corridor — paired to your family, couple or solo profile.\n\nJianglu Miwan occupies all of Jinsuo Island, with Erhai sunrise and sunset framing the windows. MUXI takes Bai architectural vocabulary into contemporary minimalism. Dali rewards a slower stay; Lijiang works as a bridge between old-town texture and mountain country; continuing north requires deliberate altitude and transfer planning.\n\nSpring and autumn are usually the most forgiving, while summer cloudscapes and dry winter light each suit different travellers. A WR advisor first listens for what matters most — lodging, landscape, food, photography or family ease — then decides where to stay longer and which transfers to remove. The same real person follows the journey from first conversation to return.",
-    "matchTags": ["大理", "dali", "云南", "yunnan", "丽江", "lijiang"]
+    "headline_zh": "云南 — 从苍洱山居到版纳雨林",
+    "headline_en": "Yunnan — from highland stays to tropical forests",
+    "manifesto_zh": "云南是中国最被旅人爱过的省份，但真正的好酒店多到难选。我们在大理（金梭岛匠庐·蜜湾、木夕大里伙山）、丽江、香格里拉沿线深挖，按你的亲子、伴侣或独行画像配伍线路。\n\n匠庐·蜜湾把整个金梭岛包了，洱海日出日落都在你窗外；木夕大里把白族建筑语汇做到当代极简的程度。大理适合把节奏放慢，丽江适合连接山地与古城，继续向北则要为海拔和长距离转场留出余量。\n\n春秋通常最稳妥，雨季的云层和冬季的干燥光线各有价值。WR 顾问不会只按“热门景点”排列，而会先听你更在意住宿、风景、饮食还是亲子便利，再决定住几晚、删掉哪些转场，并由同一位真人从首次沟通跟到旅行归来。\n\n向南来到西双版纳，云南换成雨林、澜沧江与傣乡的节奏。以景洪连住为基地，把基诺山、植物园和河流体验分在不同日子，适合另起一段五天四晚的度假。",
+    "manifesto_en": "Yunnan is China's most romanticised province, with more good hotels than easy to choose from. We anchor on Dali (Jianglu Miwan on Jinsuo Island, MUXI Dali Houshan), Lijiang, and the Shangri-la corridor — paired to your family, couple or solo profile.\n\nJianglu Miwan occupies all of Jinsuo Island, with Erhai sunrise and sunset framing the windows. MUXI takes Bai architectural vocabulary into contemporary minimalism. Dali rewards a slower stay; Lijiang works as a bridge between old-town texture and mountain country; continuing north requires deliberate altitude and transfer planning.\n\nSpring and autumn are usually the most forgiving, while summer cloudscapes and dry winter light each suit different travellers. A WR advisor first listens for what matters most — lodging, landscape, food, photography or family ease — then decides where to stay longer and which transfers to remove. The same real person follows the journey from first conversation to return.\n\nFarther south, Xishuangbanna offers a different Yunnan: rainforest, the Lancang River and Dai culture. A single base in Jinghong supports separate days for Jinuo Mountain, the botanical garden and river experiences, forming a standalone five-day, four-night stay.",
+    "matchTags": [
+      "大理",
+      "dali",
+      "云南",
+      "yunnan",
+      "丽江",
+      "lijiang"
+    ],
+    "destinations": [
+      "xishuangbanna"
+    ]
   },
   "shangri-la": {
     "name_zh": "香格里拉",

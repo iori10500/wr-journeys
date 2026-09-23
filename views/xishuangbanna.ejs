@@ -1,0 +1,44 @@
+<% const en = lang === 'en'; const sample = cityRoutes[0]; const t = (zh, eng) => en ? eng : zh; %>
+<!DOCTYPE html>
+<html lang="<%= t('zh-CN', 'en') %>">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title><meta name="description" content="<%= metaDescription %>">
+  <link rel="canonical" href="https://itinerary.wildroadgroup.com<%= urlFor('/destinations/china/xishuangbanna', lang) %>">
+  <link rel="alternate" hreflang="zh-CN" href="https://itinerary.wildroadgroup.com/destinations/china/xishuangbanna">
+  <link rel="alternate" hreflang="en" href="https://itinerary.wildroadgroup.com/en/destinations/china/xishuangbanna">
+  <link rel="alternate" hreflang="x-default" href="https://itinerary.wildroadgroup.com/en/destinations/china/xishuangbanna">
+  <meta property="og:title" content="<%= title %>"><meta property="og:description" content="<%= metaDescription %>"><meta property="og:type" content="website">
+  <meta property="og:url" content="https://itinerary.wildroadgroup.com<%= urlFor('/destinations/china/xishuangbanna', lang) %>">
+  <meta property="og:image" content="https://itinerary.wildroadgroup.com<%= city.hero %>">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/main.css?v=20260810a"><link rel="stylesheet" href="/enquiry.css?v=20260806"><link rel="stylesheet" href="/xishuangbanna.css?v=20260923">
+  <%- include('partials/jsonld') %><%- include('partials/ga') %>
+</head>
+<body class="xb-page">
+  <%- include('partials/header') %>
+  <a class="lang-toggle" href="<%= en ? '' : '/en' %>/destinations/china/xishuangbanna" hreflang="<%= en ? 'zh-CN' : 'en' %>"><%= en ? '中' : 'EN' %></a>
+  <main>
+    <section class="xb-hero">
+      <div class="xb-hero-copy"><nav aria-label="Breadcrumb"><a href="<%= urlFor('/destinations/china', lang) %>"><%= t('中国','China') %></a> / <a href="<%= urlFor('/destinations/china/yunnan', lang) %>"><%= t('云南','Yunnan') %></a> / <%= t('西双版纳','Xishuangbanna') %></nav>
+        <p class="xb-eyebrow">YUNNAN / XISHUANGBANNA</p><h1><%= en ? city.headline_en : city.headline_zh %></h1><p class="xb-lead"><%= en ? city.lead_en : city.lead_zh %></p>
+        <a class="xb-button" href="#sample-journeys"><%= t('看看这五天怎么过','Explore the five-day journey') %> <span>↗</span></a><p class="xb-hero-note"><%= t('私家定制 · 雨林与在地文化','PRIVATE JOURNEYS · NATURE & CULTURE') %></p>
+      </div>
+      <figure class="xb-hero-image"><picture><source srcset="/images/xishuangbanna/rainforest.webp" type="image/webp"><img src="<%= city.hero %>" alt="<%= t('西双版纳热带植物园林下步道','A forest path in Xishuangbanna Tropical Botanical Garden') %>" fetchpriority="high"></picture><figcaption><%= t('林下，是另一种时间。','Time moves differently beneath the canopy.') %></figcaption></figure>
+    </section>
+    <section class="xb-facts" aria-label="<%= t('旅程摘要','Journey at a glance') %>"><div><span>01 / <%= t('停留','STAY') %></span><strong><%= t('五天四晚','Five days, four nights') %></strong></div><div><span>02 / <%= t('同行','PARTY') %></span><strong><%= t('12–16人私家团','A private group of 12–16') %></strong></div><div><span>03 / <%= t('节奏','RHYTHM') %></span><strong><%= t('一处住下，三天出游','One base, three excursion days') %></strong></div></section>
+    <section class="xb-editorial xb-section"><div><p class="xb-eyebrow"><%= t('云南的另一面','A DIFFERENT YUNNAN') %></p><h2><%= t('山居之外，\n还有雨林与江风。','Beyond the highlands,\na greener kind of stay.') %></h2></div><div><% (en ? city.overview_en : city.overview_zh).forEach(function(text) { %><p><%= text %></p><% }); %></div></section>
+    <section class="xb-chapters xb-section"><% (en ? city.moments_en : city.moments_zh).forEach(function(item,i) { %><article><span class="xb-number">0<%= i+1 %></span><h3><%= item.title %></h3><p><%= item.text %></p></article><% }); %></section>
+    <% if (sample) { %>
+    <section class="xb-sample xb-section" id="sample-journeys"><header><p class="xb-eyebrow"><%= t('一条可以改成你的参考行程','A JOURNEY TO MAKE YOUR OWN') %></p><h2><%= en ? sample.title_en : sample.title_zh %></h2><p><%= en ? sample.subtitle_en : sample.subtitle_zh %></p></header>
+      <div class="xb-sample-layout"><figure><picture><source srcset="/images/xishuangbanna/botanical.webp" type="image/webp"><img src="/images/xishuangbanna/botanical.jpg" alt="<%= t('西双版纳热带植物园水生植物','Aquatic plants in Xishuangbanna Tropical Botanical Garden') %>" loading="lazy"></picture><figcaption><%= t('四晚连住，让每天都有一个熟悉的归处。','Four nights in one place. A familiar return each evening.') %></figcaption></figure>
+      <ol class="xb-days"><% sample.overview.forEach(function(day,i) { %><li><span>0<%= i+1 %></span><div><h3><%= en ? day.items[0].title_en : day.items[0].title_zh %></h3><p><%= i===0 || i===4 ? t('只安排接送，不加景点。','Transfers only, with no sightseeing.') : t('独立出游日，具体体验按日期确认。','A dedicated excursion day, with experiences confirmed for your dates.') %></p></div></li><% }); %></ol></div>
+      <%- include('partials/sample-price', { sample, lang }) %>
+      <div class="xb-sample-actions"><a class="xb-button" href="<%= urlFor('/routes/'+sample.slug,lang) %>"><%= t('查看每天安排与费用包含','View the itinerary and inclusions') %> ↗</a><a href="<%= urlFor('/routes/'+sample.slug,lang) %>#plan-this-journey" data-enquiry-cta="xishuangbanna-sample"><%= t('定制这条线路','Tailor this journey') %> →</a></div>
+    </section><% } %>
+    <section class="xb-stay xb-section"><p class="xb-eyebrow"><%= t('住得安稳，才有心情出发','A GOOD PLACE TO RETURN TO') %></p><h2><%= t('四晚泳池别墅，\n不必每天整理行李。','Four nights in a pool villa.\nNo daily packing.') %></h2><p><%= t('参考西双版纳万达文华度假酒店，泳池双床别墅、早餐与两人一房。中文导游和19座2+1车型串联每日行程；具体房型、车辆与体验按你的日期逐项确认。','The proposed base is Wanda Vista Resort Xishuangbanna, with a twin-bed pool villa, breakfast and two guests per room. A Mandarin-speaking guide and proposed 19-seat 2+1 coach connect the daily excursions. Rooms, vehicles and experiences are confirmed for your dates.') %></p></section>
+    <section class="xb-faq xb-section"><div><p class="xb-eyebrow">BEFORE YOU GO</p><h2><%= t('出发之前，\n先聊清楚。','A few useful\nstarting points.') %></h2></div><div><% (en ? city.faq_en : city.faq_zh).forEach(function(item) { %><details><summary><%= item.q %></summary><p><%= item.a %></p></details><% }); %></div></section>
+    <section class="xb-enquiry xb-section" id="plan"><div><p class="xb-eyebrow"><%= t('从一段对话开始','START WITH A CONVERSATION') %></p><h2><%= t('你的版纳，\n可以慢慢商量。','Let’s shape\nyour Xishuangbanna.') %></h2><p><%= t('告诉我们出行月份、人数与最想保留的体验。由同一位真人顾问，把住宿、行程和接送接起来。','Share your month, group size and the experiences you care about. One real advisor connects the stay, excursions and transfers.') %></p></div><div><%- include('partials/enquiry-form', { variant:'short', source:'china-city-xishuangbanna', route:sample || null }) %></div></section>
+    <p class="xb-credits"><%= t('图片：','Photography: ') %><a href="<%= city.photo_url %>" target="_blank" rel="noopener">Yumeto / <%= t('雨林','Rainforest') %></a> · <a href="<%= sample ? sample.photo_url : city.photo_url %>" target="_blank" rel="noopener"><%= t('植物园','Botanical garden') %></a> · <a href="<%= city.photo_license_url %>" target="_blank" rel="noopener">CC BY-SA 4.0</a> · <%= t('已缩放及版面裁切','Resized and cropped for display') %></p>
+  </main><%- include('partials/footer') %>
+</body></html>

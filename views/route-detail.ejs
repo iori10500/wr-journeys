@@ -64,12 +64,13 @@
     @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } .lodge-shot picture, .lodge-shot img { height:140px; } .lodge-shot-hero picture, .lodge-shot-hero img { height:200px; } }
   </style>
   <% if (route.sample) { %><link rel="stylesheet" href="/chongqing.css?v=20260914b"><% } %>
+  <% if (route.city_slugs && route.city_slugs.includes('xishuangbanna')) { %><link rel="stylesheet" href="/xishuangbanna.css?v=20260923"><% } %>
 <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
 </head>
 <body class="<%= route.sample ? 'cq-route' : '' %>">
   <%- include("partials/header") %>
-  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %><%= route.sample ? '?v=20260914-cq' : '' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
+  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %><%= route.sample && route.destination_zh === '重庆' ? '?v=20260914-cq' : '' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
 
   <section class="r-hero">
     <picture>
@@ -109,9 +110,10 @@
     <section class="cq-route-summary" aria-label="<%= lang === 'en' ? 'Sample planning summary' : '参考线路规划摘要' %>">
       <dl><div><dt><%= lang === 'en' ? 'PACE' : '行程节奏' %></dt><dd><%= lang === 'en' ? route.pace_en : route.pace_zh %></dd></div><div><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合人群' %></dt><dd><%= lang === 'en' ? route.fit_en : route.fit_zh %></dd></div></dl>
       <% if (route.important_zh) { %><p class="cq-route-notice"><%= lang === 'en' ? route.important_en : route.important_zh %></p><% } %>
-      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %>?v=20260914-cq#sample-journeys">← <%= lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路' %></a><a href="#plan-this-journey" data-enquiry-cta="chongqing-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
+      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %><%= route.destination_zh === '重庆' ? '?v=20260914-cq' : '' %>#sample-journeys">← <%= route.destination_zh === '重庆' ? (lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路') : (lang === 'en' ? 'Explore ' + route.destination_en : '返回' + route.destination_zh + '目的地') %></a><a href="#plan-this-journey" data-enquiry-cta="<%= route.destination_zh === '重庆' ? 'chongqing' : 'xishuangbanna' %>-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
     </section>
     <% } %>
+    <% if (route.price_reference) { %><%- include('partials/sample-price', { sample: route, lang }) %><% } %>
 
     <% if (typeof lodgesWithGallery !== 'undefined' && lodgesWithGallery && lodgesWithGallery.length) { %>
     <h2 class="r-section-title"><%= lang === 'en' ? 'Where You Stay' : '住宿巡礼' %></h2>
@@ -155,6 +157,13 @@
     <% }); %>
     <% } %>
 
+    <% if (route.arrangements) { %>
+    <section class="xb-arrangements"><h2 class="r-section-title"><%= lang === 'en' ? 'Stay, travel and support' : '住宿、用车与服务' %></h2>
+      <% route.arrangements.forEach(function(item) { %><article><h3><%= lang === 'en' ? item.title_en : item.title_zh %></h3><p><%= lang === 'en' ? item.text_en : item.text_zh %></p></article><% }); %>
+      <details class="xb-coach"><summary><%= lang === 'en' ? 'View the reference coach and 2+1 seating' : '查看参考车型与2+1座椅布局' %></summary><figure><a href="/images/xishuangbanna/coach-reference.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/xishuangbanna/coach-reference.webp" type="image/webp"><img src="/images/xishuangbanna/coach-reference.jpg" alt="<%= lang === 'en' ? 'Reference coach collage showing exterior and two-plus-one seats' : '参考客车外观、2+1座椅及车内设施拼图' %>" loading="lazy"></picture></a><figcaption><%= lang === 'en' ? 'Reference photos supplied for this sample; the actual vehicle is confirmed separately.' : '本线路提供的车型参考图，实际车辆另行确认。' %></figcaption></figure></details>
+    </section>
+    <section class="xb-inclusions"><div><h2><%= lang === 'en' ? 'Reference inclusions' : '参考包含' %></h2><ul><% (lang === 'en' ? route.included_en : route.included_zh).forEach(function(item) { %><li><%= item %></li><% }); %></ul></div><div><h2><%= lang === 'en' ? 'Not included' : '不包含' %></h2><ul><% (lang === 'en' ? route.excluded_en : route.excluded_zh).forEach(function(item) { %><li><%= item %></li><% }); %></ul></div></section>
+    <% } %>
     <% if (route.planning_notes) { %><section class="cq-planning"><h2><%= lang === 'en' ? 'Before this becomes your journey' : '从参考行程，到你的旅程' %></h2><ul><% route.planning_notes.forEach(function(note) { %><li><%= lang === 'en' ? note.en : note.zh %></li><% }); %></ul></section><% } %>
     <% if (route.photo_credit) { %><p class="cq-photo"><a href="<%= route.photo_url %>" target="_blank" rel="noopener"><%= route.photo_credit %></a> · <a href="<%= route.photo_license_url %>" target="_blank" rel="noopener"><%= route.photo_license %></a> · <%= lang === 'en' ? 'Resized; display crop' : '已缩放，按版面裁切显示' %></p><% } %>
 

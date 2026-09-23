@@ -1,0 +1,4 @@
+<aside class="xb-price" aria-label="<%= lang === 'en' ? 'Indicative price' : '参考价格' %>">
+  <div><span><%= lang === 'en' ? 'INDICATIVE · PER PERSON' : '参考价 · 每人' %></span><strong><%= lang === 'en' ? 'Approx. CNY ' : '约人民币 ' %><%= sample.price_reference.toLocaleString('en-US') %><%= lang === 'en' ? '' : ' 元' %></strong></div>
+  <p><%= lang === 'en' ? sample.price_note_en : sample.price_note_zh %></p>
+</aside>

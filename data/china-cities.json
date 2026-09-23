@@ -231,5 +231,96 @@
         "a": "No. Weather affects Jinfo and the gorges; paths, cableways and hot springs follow operating notices. The plan keeps alternatives and room to rest."
       }
     ]
+  },
+  "xishuangbanna": {
+    "name_zh": "西双版纳",
+    "name_en": "Xishuangbanna",
+    "parent_region": "yunnan",
+    "hero": "/images/xishuangbanna/rainforest.jpg",
+    "photo_credit": "Yumeto / Wikimedia Commons",
+    "photo_url": "https://commons.wikimedia.org/wiki/File:20251225_Tropical_rainforest_in_the_Xishuangbanna_Tropical_Botanical_Garden,_Chinese_Academy_of_Sciences.jpg",
+    "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "headline_zh": "在云南的南方，\n把日子交给雨林。",
+    "headline_en": "Yunnan,\na little more tropical.",
+    "lead_zh": "沿着林间小径、澜沧江与傣乡村落，走进云南的另一种节奏。四晚连住，让出游与度假各有自己的时间。",
+    "lead_en": "Forest paths, the Lancang River and Dai culture reveal another rhythm of Yunnan. Stay four nights in one place, with time for both exploration and retreat.",
+    "stay_zh": "5天4晚",
+    "stay_en": "5 days / 4 nights",
+    "role_zh": "雨林、河流与傣族文化",
+    "role_en": "Rainforest, river and Dai culture",
+    "pair_zh": "云南南部的独立度假",
+    "pair_en": "A standalone southern Yunnan stay",
+    "overview_zh": [
+      "西双版纳的好，在于离开一张景点清单。林下听向导辨认植物，江上感受风，再回到有庭院与泳池的住处，让同一片风景慢慢变得熟悉。",
+      "以景洪为住宿基地，基诺山、野象谷与勐仑各留出清楚的出游段落。首尾两天留给抵离，中间三天各有主题；不把远处景点塞进接机或送机的间隙。"
+    ],
+    "overview_en": [
+      "Xishuangbanna rewards attention: a guide identifying plants beneath the canopy, a breeze on the river, then a return to a courtyard and pool. The landscape becomes familiar when you stay a little longer.",
+      "Use Jinghong as a base, with distinct excursions to Jinuo Mountain, Wild Elephant Valley and Menglun. Keep arrival and departure days clear and give each of the three middle days its own theme."
+    ],
+    "moments_zh": [
+      {
+        "title": "走进林下",
+        "text": "基诺山轻徒步，以独立向导和植物探索为核心；水上与溪流项目根据当日条件调整。"
+      },
+      {
+        "title": "顺着江风",
+        "text": "澜沧江与野象谷串起河流和雨林体验，为天气、体力和活动开放留出弹性。"
+      },
+      {
+        "title": "读懂傣乡",
+        "text": "把植物园讲解、傣族园与夜市放在不同的旅程片段里，从自然与日常进入地方文化。"
+      }
+    ],
+    "moments_en": [
+      {
+        "title": "Beneath the canopy",
+        "text": "A private guide and plant exploration anchor the Jinuo walk. Water and stream activities adapt to conditions."
+      },
+      {
+        "title": "Along the river",
+        "text": "The Lancang River and Wild Elephant Valley connect river and rainforest, with room for weather and changing plans."
+      },
+      {
+        "title": "A sense of Dai culture",
+        "text": "Botanical interpretation, Dai Garden and an evening market offer different ways into the landscape and local life."
+      }
+    ],
+    "faq_zh": [
+      {
+        "q": "五天四晚如何安排？",
+        "a": "四晚连住景洪，D1接机入住、D5送机，中间三天分别安排基诺山、野象谷与澜沧江、植物园与傣族园。"
+      },
+      {
+        "q": "参考价包含机票吗？",
+        "a": "不含。约人民币8,000元／人为12–16人、两人一房的参考价，含酒店早餐，不含往返大交通及机票和其他餐食；实际以最终报价为准。"
+      },
+      {
+        "q": "研究员带队和水上项目一定能安排吗？",
+        "a": "研究员身份和档期需预约确认。竹筏、溯溪、快艇、骑马、牧象及泼水活动按开放情况、天气和参与条件确认，不作为无条件保证。"
+      },
+      {
+        "q": "可以调整为家庭或更小团队吗？",
+        "a": "可以重新设计。人数变化会影响车辆、房数、向导安排及人均价格；提供出行月份、人数和步行偏好后，由顾问重新报价。"
+      }
+    ],
+    "faq_en": [
+      {
+        "q": "How do five days and four nights work?",
+        "a": "Stay four nights in Jinghong. Days 1 and 5 are for transfers; the three middle days cover Jinuo Mountain, Wild Elephant Valley and the Lancang River, then the botanical garden and Dai Garden."
+      },
+      {
+        "q": "Are flights included in the reference price?",
+        "a": "No. Approximately CNY 8,000 per person is based on 12–16 guests sharing two to a room. Hotel breakfast is included; flights, intercity travel and other meals are excluded. The final quotation confirms the total."
+      },
+      {
+        "q": "Are the researcher and water activities guaranteed?",
+        "a": "The named specialist and date require confirmation. Rafting, stream walks, speedboats, horse riding, managed elephant activities and water-splashing depend on access, conditions and participant suitability."
+      },
+      {
+        "q": "Can this be adapted for a family or smaller group?",
+        "a": "Yes. Group size changes the vehicle, rooms, guiding arrangements and per-person cost. Share your month, group size and walking preferences for a revised proposal."
+      }
+    ]
   }
 }

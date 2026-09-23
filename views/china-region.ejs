@@ -57,6 +57,7 @@
       </div>
     </section>
 
+    <% if (region.slug === 'yunnan') { %><section class="china-section" aria-label="<%= lang === 'en' ? 'Southern Yunnan' : '云南南部' %>"><header class="china-section__head"><p><%= lang === 'en' ? 'ANOTHER SIDE OF YUNNAN' : '云南的另一面' %></p><h2><%= lang === 'en' ? 'Head south, into the rainforest.' : '一路向南，走进西双版纳。' %></h2></header><a class="china-button china-button--primary" href="<%= urlFor('/destinations/china/xishuangbanna', lang) %>"><%= lang === 'en' ? 'Explore Xishuangbanna · 5 days / 4 nights' : '探索西双版纳 · 5天4晚参考行程' %> →</a></section><% } %>
     <section class="china-section china-routes" id="routes">
       <header class="china-section__head"><p><%= lang === 'en' ? 'CURATED STARTING POINTS' : '甄选出发点' %></p><h2><%= routes && routes.length ? (lang === 'en' ? 'Routes to make your own.' : '把参考线路，改成你的旅程。') : (lang === 'en' ? 'Built privately, on request.' : '暂不设标准路线，一事一议设计。') %></h2></header>
       <% if (routes && routes.length) { %>

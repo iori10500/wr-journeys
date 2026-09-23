@@ -60,6 +60,7 @@ function cdnImage(assetPath, width) {
   // Chongqing assets deploy with this app and are not in the separate image
   // CDN library. Serve them directly instead of waiting for a CDN 404 fallback.
   if (localPath.startsWith('images/chongqing/')) return `https://itinerary.wildroadgroup.com/${localPath}`;
+  if (localPath.startsWith('images/xishuangbanna/')) return `/${localPath}`;
 
   const cdnUrl = `${JOURNEYS_CDN_BASE}/${localPath}`;
   if (!width || /\.(?:gif|svg)$/i.test(localPath)) return cdnUrl;
@@ -886,7 +887,7 @@ app.get('/destinations/china/:region', (req, res) => {
     const metaDescription = isEn
       ? `Plan a private ${city.name_en} journey with a real human advisor. ${city.stay_en}, thoughtful pacing, trusted local coordination and a route shaped around you.`
       : `由真人顾问规划${city.name_zh}私人定制旅行。建议停留${city.stay_zh}，结合合理节奏、可信在地协调与从开始到结束的持续服务。`;
-    return res.render('china-city', {
+    return res.render(req.params.region === 'xishuangbanna' ? 'xishuangbanna' : 'china-city', {
       city: { slug: req.params.region, ...city }, lang, title, metaDescription,
       cities: chinaCitiesData, cityRoutes,
       contentGroup: 'china_inbound',
@@ -894,7 +895,7 @@ app.get('/destinations/china/:region', (req, res) => {
         ...(cityRoutes.length ? [schemas.itemList(cityRoutes.map(route => ({
           name: isEn ? route.title_en : route.title_zh,
           url: `${isEn ? '/en' : ''}/routes/${route.slug}`,
-        })), isEn ? 'Chongqing sample journeys' : '重庆参考线路')] : []),
+        })), isEn ? `${city.name_en} sample journeys` : `${city.name_zh}参考线路`)] : []),
         schemas.breadcrumbList([
           { name: isEn ? 'Home' : '首页', path: '/' },
           { name: isEn ? 'Destinations' : '目的地', path: '/destinations' },

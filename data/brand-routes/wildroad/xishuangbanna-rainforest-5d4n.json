@@ -67,6 +67,17 @@
           "desc_zh": "按实际航班安排接机，前往酒店入住。当天不安排景点，把时间留给休息与熟悉酒店。",
           "desc_en": "Meet your driver on arrival and transfer to the hotel. No sightseeing is scheduled; settle in and rest."
         }
+      ],
+      "gallery": [
+        {
+          "path": "/images/xishuangbanna/wanda-resort.jpg",
+          "caption_zh": "西双版纳万达文华 · 酒店公共空间，非所订别墅房型",
+          "caption_en": "Wanda Vista Xishuangbanna · public spaces, not the proposed villa category",
+          "credit": "Wanda Hotels & Resorts",
+          "source": "https://www.wandahotels.com/index.php?a=show&c=index&catid=7&id=3&m=wap&siteid=1",
+          "license": "",
+          "license_url": ""
+        }
       ]
     },
     {
@@ -80,6 +91,26 @@
           "title_en": "Jinuo rainforest and the Starlight Night Market",
           "desc_zh": "独立向导带领轻徒步与植物探索。竹筏、下河摸虾、捞螃蟹和溯溪按天气、水位及参与条件选择安排。晚间前往星光夜市，自由感受夜间市集，餐食自理。",
           "desc_en": "A private local guide leads a gentle rainforest walk and plant exploration. Bamboo rafting, stream walks and shrimp/crab activities are selected according to conditions and suitability. Visit the Starlight Night Market in the evening; dinner is at your own expense."
+        }
+      ],
+      "gallery": [
+        {
+          "path": "/images/xishuangbanna/starlight-market.jpg",
+          "caption_zh": "星光夜市 · 暮色里的水岸",
+          "caption_en": "Starlight Night Market · the waterfront at dusk",
+          "credit": "Liuxingy",
+          "source": "https://commons.wikimedia.org/wiki/File:景洪_湄公河星光夜市之夜景.jpg",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+          "path": "/images/xishuangbanna/gao-zhuang.jpg",
+          "caption_zh": "告庄西双景 · 街巷里的灯笼",
+          "caption_en": "Gaozhuang Xishuangjing · lantern-lined streets",
+          "credit": "Liuxingy",
+          "source": "https://commons.wikimedia.org/wiki/File:景洪_告庄西双景之悬挂灯笼的街道.jpg",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
         }
       ]
     },
@@ -95,6 +126,26 @@
           "desc_zh": "上午前往野象谷，安排雨林探访及拟议的“牧象”体验，具体内容由景区或运营方确认。随后安排澜沧江快艇上岛与骑马体验，按当日开放、天气和体力调整；不保证看到野生亚洲象。",
           "desc_en": "Visit Wild Elephant Valley for rainforest interpretation and a proposed managed elephant-care/herding experience, with details confirmed by the operator. Continue with a proposed Lancang River speedboat trip to an island and horse riding, subject to weather, operation and fitness. Wild elephant sightings are not guaranteed."
         }
+      ],
+      "gallery": [
+        {
+          "path": "/images/xishuangbanna/wild-elephants.jpg",
+          "caption_zh": "野象谷历史实景 · 野象出没不可保证",
+          "caption_en": "Wild Elephant Valley, archive photograph · sightings are not guaranteed",
+          "credit": "Hanno Böck",
+          "source": "https://commons.wikimedia.org/wiki/File:Elephantvalley-elephants.jpg",
+          "license": "CC0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        {
+          "path": "/images/xishuangbanna/forest-walkway.jpg",
+          "caption_zh": "野象谷 · 林间栈道",
+          "caption_en": "Wild Elephant Valley · forest walkway",
+          "credit": "Hanno Böck",
+          "source": "https://commons.wikimedia.org/wiki/File:Elephantvalley-walkway.jpg",
+          "license": "CC0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
       ]
     },
     {
@@ -108,6 +159,26 @@
           "title_en": "A botanical garden and Dai traditions",
           "desc_zh": "前往中国科学院西双版纳热带植物园，拟预约研究员带队讲解，并安排西区电瓶车。之后游览傣族园，按当日场次体验泼水活动。两站的讲解与活动时间须提前衔接。",
           "desc_en": "Visit the Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences, with a requested researcher-led programme and west-zone shuttle. Continue to Dai Garden for its scheduled water-splashing activity. Guiding and activity times are coordinated in advance."
+        }
+      ],
+      "gallery": [
+        {
+          "path": "/images/xishuangbanna/botanical.jpg",
+          "caption_zh": "中科院西双版纳热带植物园 · 水生植物",
+          "caption_en": "Xishuangbanna Tropical Botanical Garden · aquatic plants",
+          "credit": "Yumeto",
+          "source": "https://commons.wikimedia.org/wiki/File:20251225_Victoria_flowers_in_the_Xishuangbanna_Tropical_Botanical_Garden,_Chinese_Academy_of_Sciences.jpg",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+          "path": "/images/xishuangbanna/rainforest.jpg",
+          "caption_zh": "中科院西双版纳热带植物园 · 林下步道",
+          "caption_en": "Xishuangbanna Tropical Botanical Garden · forest path",
+          "credit": "Yumeto",
+          "source": "https://commons.wikimedia.org/wiki/File:20251225_Tropical_rainforest_in_the_Xishuangbanna_Tropical_Botanical_Garden,_Chinese_Academy_of_Sciences.jpg",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
         }
       ]
     },
@@ -191,5 +262,45 @@
   "photo_credit": "Yumeto / Wikimedia Commons",
   "photo_url": "https://commons.wikimedia.org/wiki/File:20251225_Victoria_flowers_in_the_Xishuangbanna_Tropical_Botanical_Garden,_Chinese_Academy_of_Sciences.jpg",
   "photo_license": "CC BY-SA 4.0",
-  "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "photo_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "destination_gallery": [
+    {
+      "path": "/images/xishuangbanna/wild-elephants.jpg",
+      "caption_zh": "野象谷历史实景 · 野象出没不可保证",
+      "caption_en": "Wild Elephant Valley, archive photograph · sightings are not guaranteed",
+      "credit": "Hanno Böck",
+      "source": "https://commons.wikimedia.org/wiki/File:Elephantvalley-elephants.jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "path": "/images/xishuangbanna/starlight-market.jpg",
+      "caption_zh": "星光夜市 · 暮色里的水岸",
+      "caption_en": "Starlight Night Market · the waterfront at dusk",
+      "credit": "Liuxingy",
+      "source": "https://commons.wikimedia.org/wiki/File:景洪_湄公河星光夜市之夜景.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "path": "/images/xishuangbanna/gao-zhuang.jpg",
+      "caption_zh": "告庄西双景 · 街巷里的灯笼",
+      "caption_en": "Gaozhuang Xishuangjing · lantern-lined streets",
+      "credit": "Liuxingy",
+      "source": "https://commons.wikimedia.org/wiki/File:景洪_告庄西双景之悬挂灯笼的街道.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "stay_gallery": [
+    {
+      "path": "/images/xishuangbanna/wanda-resort.jpg",
+      "caption_zh": "西双版纳万达文华 · 酒店公共空间，非所订别墅房型",
+      "caption_en": "Wanda Vista Xishuangbanna · public spaces, not the proposed villa category",
+      "credit": "Wanda Hotels & Resorts",
+      "source": "https://www.wandahotels.com/index.php?a=show&c=index&catid=7&id=3&m=wap&siteid=1",
+      "license": "",
+      "license_url": ""
+    }
+  ]
 }

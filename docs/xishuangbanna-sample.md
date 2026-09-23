@@ -11,3 +11,9 @@ Researcher-led guiding, managed elephant experience, riding, bamboo raft/stream 
 Verification context (not supplier booking confirmations): [XTBG visitor guidance](https://xtbg.ac.cn/2022/ykfw/ryxz/), [XTBG visitor services](https://xtbg.cas.cn/2022/ykfw/dzsw/), [Wild Elephant Valley official site](https://www.xsbnyxg.cn/?lang=zh_CN), [Wanda official Xishuangbanna destination](https://www.wandahotels.com/index.php?a=show&c=index&catid=7&id=3&m=wap&siteid=1). Hotel room wording follows the supplied proposal and still requires confirmation of the current official room category and twin setup.
 
 See image attribution in `public/images/xishuangbanna/ATTRIBUTION.md`. No random or AI-generated destination/hotel images. Vehicle collage is user-supplied and clearly marked reference only.
+
+## Photography expansion — 2026-09-23
+
+Added five verified photographs: Wild Elephant Valley elephants and walkway, Starlight Night Market at dusk, Gaozhuang lantern street, and Wanda Vista Xishuangbanna public spaces. Each gallery image carries a bilingual caption and source/licence link; adaptations documented in `public/images/xishuangbanna/ATTRIBUTION.md`. The Commons derivatives retain their original licences. Hotel image is an official marketing photograph, not a confirmed twin-villa photograph. No imagery is labelled as Jinuo Mountain, Dai Garden or the Lancang speedboat unless verified for that location. Wildlife photo is archival and does not promise sightings.
+
+Destination has an editorial three-photo sequence and hotel image; itinerary has photos for Days 1–4. Departure day remains transfers only. Coach exterior and seating use CSS crops of the supplied reference collage, with the complete original reference available on demand. All images open individually at full size; JPEG/WebP pairs and lazy loading supported.

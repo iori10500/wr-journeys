@@ -64,7 +64,7 @@
     @media (max-width:640px) { .r-hero h1 { font-size:26px; } .r-hero { height:50vh; } .r-body { padding:32px 20px 60px; } .lodge-shot picture, .lodge-shot img { height:140px; } .lodge-shot-hero picture, .lodge-shot-hero img { height:200px; } }
   </style>
   <% if (route.sample) { %><link rel="stylesheet" href="/chongqing.css?v=20260914b"><% } %>
-  <% if (route.city_slugs && route.city_slugs.includes('xishuangbanna')) { %><link rel="stylesheet" href="/xishuangbanna.css?v=20260923"><% } %>
+  <% if (route.city_slugs && route.city_slugs.includes('xishuangbanna')) { %><link rel="stylesheet" href="/xishuangbanna.css?v=20260923-photos"><% } %>
 <%- include('partials/ga') %>
   <script src="/cdn-fallback.js" defer></script>
 </head>
@@ -152,6 +152,7 @@
         <p><%= lang === 'en' ? item.desc_en : item.desc_zh %></p>
       </div>
       <% }); %>
+      <% if (day.gallery && day.gallery.length) { %><%- include('partials/journey-gallery', { photos: day.gallery, lang }) %><% } %>
       <% if (day.stay_zh) { %><p class="cq-stay"><strong><%= lang === 'en' ? 'Tonight · ' : '当晚住宿 · ' %></strong><%= lang === 'en' ? day.stay_en : day.stay_zh %></p><% } %>
     </div>
     <% }); %>
@@ -160,6 +161,7 @@
     <% if (route.arrangements) { %>
     <section class="xb-arrangements"><h2 class="r-section-title"><%= lang === 'en' ? 'Stay, travel and support' : '住宿、用车与服务' %></h2>
       <% route.arrangements.forEach(function(item) { %><article><h3><%= lang === 'en' ? item.title_en : item.title_zh %></h3><p><%= lang === 'en' ? item.text_en : item.text_zh %></p></article><% }); %>
+      <div class="xb-coach-panels"><% [{cls:'',zh:'参考车型外观',en:'Reference coach exterior'},{cls:'interior',zh:'2+1座椅布局参考',en:'Reference 2+1 seating'}].forEach(function(shot) { %><figure><a class="xb-coach-crop <%= shot.cls %>" href="/images/xishuangbanna/coach-reference.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/xishuangbanna/coach-reference.webp" type="image/webp"><img src="/images/xishuangbanna/coach-reference.jpg" alt="<%= lang === 'en' ? shot.en : shot.zh %>" loading="lazy"></picture></a><figcaption><%= lang === 'en' ? shot.en : shot.zh %></figcaption></figure><% }); %></div><p><%= lang === 'en' ? 'Reference configuration; the actual vehicle is confirmed separately.' : '车型与座椅为参考配置，实际车辆另行确认。' %></p>
       <details class="xb-coach"><summary><%= lang === 'en' ? 'View the reference coach and 2+1 seating' : '查看参考车型与2+1座椅布局' %></summary><figure><a href="/images/xishuangbanna/coach-reference.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/xishuangbanna/coach-reference.webp" type="image/webp"><img src="/images/xishuangbanna/coach-reference.jpg" alt="<%= lang === 'en' ? 'Reference coach collage showing exterior and two-plus-one seats' : '参考客车外观、2+1座椅及车内设施拼图' %>" loading="lazy"></picture></a><figcaption><%= lang === 'en' ? 'Reference photos supplied for this sample; the actual vehicle is confirmed separately.' : '本线路提供的车型参考图，实际车辆另行确认。' %></figcaption></figure></details>
     </section>
     <section class="xb-inclusions"><div><h2><%= lang === 'en' ? 'Reference inclusions' : '参考包含' %></h2><ul><% (lang === 'en' ? route.included_en : route.included_zh).forEach(function(item) { %><li><%= item %></li><% }); %></ul></div><div><h2><%= lang === 'en' ? 'Not included' : '不包含' %></h2><ul><% (lang === 'en' ? route.excluded_en : route.excluded_zh).forEach(function(item) { %><li><%= item %></li><% }); %></ul></div></section>

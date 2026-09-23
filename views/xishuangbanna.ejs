@@ -17,7 +17,7 @@
 </head>
 <body class="xb-page">
   <%- include('partials/header') %>
-  <a class="lang-toggle" href="<%= en ? '' : '/en' %>/destinations/china/xishuangbanna" hreflang="<%= en ? 'zh-CN' : 'en' %>"><%= en ? '中' : 'EN' %></a>
+  <a class="lang-toggle" href="<%= en ? '' : '/en' %>/destinations/china/xishuangbanna?v=20260923-photos" hreflang="<%= en ? 'zh-CN' : 'en' %>"><%= en ? '中' : 'EN' %></a>
   <main>
     <section class="xb-hero">
       <div class="xb-hero-copy"><nav aria-label="Breadcrumb"><a href="<%= urlFor('/destinations/china', lang) %>"><%= t('中国','China') %></a> / <a href="<%= urlFor('/destinations/china/yunnan', lang) %>"><%= t('云南','Yunnan') %></a> / <%= t('西双版纳','Xishuangbanna') %></nav>
@@ -35,7 +35,7 @@
       <div class="xb-sample-layout"><figure><picture><source srcset="/images/xishuangbanna/botanical.webp" type="image/webp"><img src="/images/xishuangbanna/botanical.jpg" alt="<%= t('西双版纳热带植物园水生植物','Aquatic plants in Xishuangbanna Tropical Botanical Garden') %>" loading="lazy"></picture><figcaption><%= t('四晚连住，让每天都有一个熟悉的归处。','Four nights in one place. A familiar return each evening.') %></figcaption></figure>
       <ol class="xb-days"><% sample.overview.forEach(function(day,i) { %><li><span>0<%= i+1 %></span><div><h3><%= en ? day.items[0].title_en : day.items[0].title_zh %></h3><p><%= i===0 || i===4 ? t('只安排接送，不加景点。','Transfers only, with no sightseeing.') : t('独立出游日，具体体验按日期确认。','A dedicated excursion day, with experiences confirmed for your dates.') %></p></div></li><% }); %></ol></div>
       <%- include('partials/sample-price', { sample, lang }) %>
-      <div class="xb-sample-actions"><a class="xb-button" href="<%= urlFor('/routes/'+sample.slug,lang) %>"><%= t('查看每天安排与费用包含','View the itinerary and inclusions') %> ↗</a><a href="<%= urlFor('/routes/'+sample.slug,lang) %>#plan-this-journey" data-enquiry-cta="xishuangbanna-sample"><%= t('定制这条线路','Tailor this journey') %> →</a></div>
+      <div class="xb-sample-actions"><a class="xb-button" href="<%= urlFor('/routes/'+sample.slug,lang) %>?v=20260923-photos"><%= t('查看每天安排与费用包含','View the itinerary and inclusions') %> ↗</a><a href="<%= urlFor('/routes/'+sample.slug,lang) %>?v=20260923-photos#plan-this-journey" data-enquiry-cta="xishuangbanna-sample"><%= t('定制这条线路','Tailor this journey') %> →</a></div>
     </section><% } %>
     <section class="xb-stay xb-section"><p class="xb-eyebrow"><%= t('住得安稳，才有心情出发','A GOOD PLACE TO RETURN TO') %></p><h2><%= t('四晚泳池别墅，\n不必每天整理行李。','Four nights in a pool villa.\nNo daily packing.') %></h2><p><%= t('参考西双版纳万达文华度假酒店，泳池双床别墅、早餐与两人一房。中文导游和19座2+1车型串联每日行程；具体房型、车辆与体验按你的日期逐项确认。','The proposed base is Wanda Vista Resort Xishuangbanna, with a twin-bed pool villa, breakfast and two guests per room. A Mandarin-speaking guide and proposed 19-seat 2+1 coach connect the daily excursions. Rooms, vehicles and experiences are confirmed for your dates.') %></p></section>
     <% if (sample && sample.stay_gallery) { %><section class="xb-hotel-photos xb-section"><%- include('partials/journey-gallery', { photos: sample.stay_gallery, lang }) %></section><% } %>

@@ -70,7 +70,7 @@
 </head>
 <body class="<%= route.sample ? 'cq-route' : '' %>">
   <%- include("partials/header") %>
-  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %><%= route.sample && route.destination_zh === '重庆' ? '?v=20260914-cq' : '' %>"><%= lang === 'en' ? '中' : 'EN' %></a>
+  <a id="langToggle" class="lang-toggle" hreflang="<%= lang === 'en' ? 'zh-CN' : 'en' %>" href="<%= lang === 'en' ? '/routes/' + route.slug : '/en/routes/' + route.slug %><%= route.sample && route.destination_zh === '重庆' ? '?v=20260914-cq' : (route.city_slugs && route.city_slugs.includes('xishuangbanna') ? '?v=20260923-photos' : '') %>"><%= lang === 'en' ? '中' : 'EN' %></a>
 
   <section class="r-hero">
     <picture>
@@ -110,7 +110,7 @@
     <section class="cq-route-summary" aria-label="<%= lang === 'en' ? 'Sample planning summary' : '参考线路规划摘要' %>">
       <dl><div><dt><%= lang === 'en' ? 'PACE' : '行程节奏' %></dt><dd><%= lang === 'en' ? route.pace_en : route.pace_zh %></dd></div><div><dt><%= lang === 'en' ? 'WHO IT SUITS' : '适合人群' %></dt><dd><%= lang === 'en' ? route.fit_en : route.fit_zh %></dd></div></dl>
       <% if (route.important_zh) { %><p class="cq-route-notice"><%= lang === 'en' ? route.important_en : route.important_zh %></p><% } %>
-      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %><%= route.destination_zh === '重庆' ? '?v=20260914-cq' : '' %>#sample-journeys">← <%= route.destination_zh === '重庆' ? (lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路') : (lang === 'en' ? 'Explore ' + route.destination_en : '返回' + route.destination_zh + '目的地') %></a><a href="#plan-this-journey" data-enquiry-cta="<%= route.destination_zh === '重庆' ? 'chongqing' : 'xishuangbanna' %>-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
+      <nav class="cq-route-nav"><a href="<%= urlFor(route.destination_path, lang) %><%= route.destination_zh === '重庆' ? '?v=20260914-cq' : (route.city_slugs && route.city_slugs.includes('xishuangbanna') ? '?v=20260923-photos' : '') %>#sample-journeys">← <%= route.destination_zh === '重庆' ? (lang === 'en' ? 'Compare all three Chongqing journeys' : '返回重庆，比较三条线路') : (lang === 'en' ? 'Explore ' + route.destination_en : '返回' + route.destination_zh + '目的地') %></a><a href="#plan-this-journey" data-enquiry-cta="<%= route.destination_zh === '重庆' ? 'chongqing' : 'xishuangbanna' %>-route-summary"><%= lang === 'en' ? 'Tailor this journey' : '定制这条线路' %> →</a></nav>
     </section>
     <% } %>
     <% if (route.price_reference) { %><%- include('partials/sample-price', { sample: route, lang }) %><% } %>
